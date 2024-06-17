@@ -1,5 +1,3 @@
-# CSS-Notes4Pros
-CSS Notes For Professionals - intermediate level CSS learning course.  All on-line.  No money, unless you'd like to donate. I'm game for that.
 ---
 title: |
   CSS Notes for Professionals
@@ -10,6 +8,9 @@ output:
   markdown:
     with some style
 ---
+
+<h1>CSS-Notes4Pros</h1>
+CSS Notes For Professionals - intermediate level CSS learning course.  All on-line.  No money, unless you'd like to donate. I'm game for that.
 
 <h1 align="center">Advanced CSS Notes for Professionals</h1>
 
@@ -24,7 +25,7 @@ output:
   style="width:20%"
   title="JavaScript coffee cup logo version"
   alt="JavaScript coffee cup logo version." />
-<img src="./images/image002.jpg"
+<img src="./images/image002.png"
   style="width:20%"
   title=" logo"
   alt=" logo." />
@@ -940,16 +941,17 @@ layout]
 
 [[222](#credits)](#credits)
 
-# About
+## About
 
 > Please feel free to share this PDF with anyone for free, latest
 > version of this book can be downloaded from:
-> [[https://goalkicker.com/CSSBook]](https://goalkicker.com/CSSBook)
+> <a href="https://goalkicker.com/CSSBook">(https://goalkicker.com/CSSBook)</a>
 >
-> This *CSS Notes for Professionals* book is compiled from [[Stack
-> Overflow]](https://archive.org/details/documentation-dump.7z)
+> This *CSS Notes for Professionals* book is compiled from 
+> <a href="https://archive.org/details/documentation-dump.7z">Stack
+> Overflow</a>
 >
-> [[Documentation]](https://archive.org/details/documentation-dump.7z),
+> <a href="https://archive.org/details/documentation-dump.7z">Documentation</a>,
 > the content is written by the beautiful people at Stack Overflow.
 >
 > Text content is released under Creative Commons BY-SA, see credits at
@@ -977,12 +979,12 @@ layout]
 > and the href attribute to the relative or absolute path to the
 > stylesheet. While using relative URL paths is generally considered
 > good practice, absolute paths can be used, too. In HTML5 the type
-> attribute [[can be
-> omitted]](https://html.spec.whatwg.org/multipage/semantics.html#the-link-element).
+> attribute <a href="https://html.spec.whatwg.org/multipage/semantics.html#the-link-element">
+> can be omitted</a>.
 >
 > It is recommended that the styles are loaded before the elements they
-> style are utilized. Otherwise, [[users will see a flash of unstyled
-> content]](http://stackoverflow.com/a/1642259/2397327).
+> style are utilized. Otherwise, <a href="http://stackoverflow.com/a/1642259/2397327">users will see a flash of unstyled
+> content</a>.
 >
 > **Example hello-world.html**
 
@@ -1093,7 +1095,7 @@ p {
 > style sheets. These rules must precede all other types of rules,
 > except &commat;charset rules; as it is not a nested statement, &commat;import
 > cannot be used inside conditional group at-rules.
-> [[&commat;import]](https://developer.mozilla.org/en/docs/Web/CSS/@import).
+> <a href="https://developer.mozilla.org/en/docs/Web/CSS/@import">[[&commat;import]]</a>.
 >
 > **How to use &commat;import**
 >
@@ -1389,20 +1391,21 @@ div {
 
 **Selector(1) Matched element Selects elements&period;.. CSS Version**
 
-| <b>Selector(1) | Matched element | Selects elements... |
-| [attr]         | <div attr> | With attribute attr |
-| [attr='val'] | <div attr="val"> | Where attribute attr has value val |
-| [attr~='val'] | <div attr="val val2 val3"> | Where val appears in the |
-|               |                            | whitespace-separated list of attr |
-| [attr^='val'] | <div attr="val1 val2">     | Where attr's value begins with val |
-| [attr$='val'] | <div attr="sth aval">     | Where attr's value ends with val |
-| [attr='val']  | <div attr="somevalhere">  | Where attr contains val anywhere |
-| [attr|='val'] | <div attr="val-sth etc"> | Where attr's value is exactly val, |
-|               |                          | or starts with val and immediately |
-|               |                          | followed by - (U+002D) |
-| [attr|='val' i] | <div attr="val"> | Where attr has val, |
-|               |                          | ignoring val's letter casing. |
-|               |                          | followed by - (U+002D) |
+| Selector(1)     | Matched element            | Selects elements...                |
+|-----------------|:--------------------------:|------------------------------------|
+| [attr]          | <div attr>                 | With attribute attr                |
+| [attr='val']    | <div attr="val">           | Where attribute attr has value val |
+| [attr~='val']   | <div attr="val val2 val3"> | Where val appears in the           |
+|                 |                            | whitespace-separated list of attr  |
+| [attr^='val']   | <div attr="val1 val2">     | Where attr's value begins with val |
+| [attr$='val']   | <div attr="sth aval">      | Where attr's value ends with val   |
+| [attr='val']    | <div attr="somevalhere">   | Where attr contains val anywhere   |
+| [attr|='val']   | <div attr="val-sth etc">   | Where attr's value is exactly val, |
+|                 |                            | or starts with val and immediately |
+|                 |                            | followed by - (U+002D) |
+| [attr|='val' i] | <div attr="val">           | Where attr has val, |
+|                 |                            | ignoring val's letter casing. |
+|                 |                            | followed by - (U+002D) |
 
 ***Notes:***
 
@@ -1513,102 +1516,52 @@ div[data-color="red"] {
 [attribute|="value"]
 ```
 
-
-  **attribute&dollar;**                         **=**   **&quot;value&quot;**
-
+**attribute&dollar;**                         **=**   **&quot;value&quot;**
 
 **&lbrack;&rbrack;**
 
 > Selects elements with the given attribute and value where the given
 > attribute ends with the given value.
 
-&lbrack;
-
-class&dollar;
-
-=
-
-&quot;file&quot;
-
-&rbrack;
-
+&lbrack;class&dollar;=&quot;file&quot;&rbrack;
 {
-
 **color**
-
 :
-
 red
-
 ;
-
 }
-
 **&lt;**
-
 **div**
-
 class
-
 =
-
 &quot;foobar-file&quot;
-
 **&gt;**
-
 This will be red
-
 **&lt;**
-
 **/div**
-
 **&gt;**
-
 **&lt;**
-
 **div**
-
 class
-
 =
-
 &quot;foobar-file&quot;
-
 **&gt;**
-
 This will be red
-
 **&lt;**
-
 **/div**
-
 **&gt;**
-
 **&lt;**
-
 **div**
-
 class
-
 =
-
 &quot;foobar-input&quot;
-
 **&gt;**
-
 This will NOT be red
-
 **&lt;**
-
 **/div**
-
 **&gt;**
-
-[[Live Demo on
-JSBin]](http://jsbin.com/yowihi/2/edit?html,css,output)
-
-  **attribute&vertbar;**                         **=**   **&quot;value&quot;**
-
+<a href="http://jsbin.com/yowihi/2/edit?html,css,output">Live Demo on JSBin</a>
+**attribute&vertbar;**                         **=**   **&quot;value&quot;**
 
 **&lbrack;&rbrack;**
 
@@ -1617,94 +1570,49 @@ JSBin]](http://jsbin.com/yowihi/2/edit?html,css,output)
 > value followed by - (U+002D)
 
 &lbrack;
-
 lang
-
 &vertbar;
-
 =
-
 &quot;EN&quot;
-
 &rbrack;
-
 {
-
 **color**
-
 :
-
 red
-
 ;
-
 }
-
 **&lt;**
-
 **div**
-
 lang
-
 =
-
 &quot;EN-us&quot;
-
 **&gt;**
-
 This will be red
-
 **&lt;**
-
 **/div**
-
 **&gt;**
-
 **&lt;**
-
 **div**
-
 lang
-
 =
-
 &quot;EN-gb&quot;
-
 **&gt;**
-
 This will be red
-
 **&lt;**
-
 **/div**
-
 **&gt;**
-
 **&lt;**
-
 **div**
-
 lang
-
 =
-
 &quot;PT-pt&quot;
-
 **&gt;**
-
 This will NOT be red
-
 **&lt;**
-
 **/div**
-
 **&gt;**
-
-[[Live Demo on
-JSBin]](http://jsbin.com/yowihi/3/edit?html,css,output)
-
-  **attribute**                     **=**   **&quot;value&quot; i**
-
+<a href="http://jsbin.com/yowihi/3/edit?html,css,output">Live Demo on JSBin</a>
+**attribute**                     **=**   **&quot;value&quot; i**
 
 **&lbrack;&rbrack;**
 
@@ -1725,39 +1633,22 @@ JSBin]](http://jsbin.com/yowihi/3/edit?html,css,output)
 This will be red
 
 **&lt;**
-
 **/div**
-
 **&gt;**
-
 **&lt;**
-
 **div**
-
 lang
-
 =
-
 &quot;en&quot;
-
 **&gt;**
-
 This will be red
-
 **&lt;**
-
 **/div**
-
 **&gt;**
-
 **&lt;**
-
 div lang="PT">This will NOT be red
-
 **&lt;**
-
 **/div**
-
 **&gt;**
 
 <a href="http://jsbin.com/yowihi/4/edit?html,css,output">Live Demo on JSBin</a>
@@ -1786,7 +1677,6 @@ div lang="PT">This will NOT be red
 
   **&lt;span**   **&gt;**s that are descendants of a                    **&lt;div**
 
-
  div span   Descendant selector (all **&gt;**)
 | div span | &bsol; | s   | > Child selector | *   | **&gt;**s that are a direct   | * |
 | i | > | pan | > (all           | *&lt; | child of a                  | * |
@@ -1813,9 +1703,8 @@ div lang="PT">This will NOT be red
 > **Note:** Sibling selectors target elements that come after them in
 > the source document. CSS, by its nature (it cascades), cannot target
 > *previous* or *parent* elements. However, using the flex order
-> property, [[a] [previous sibling selector can be simulated
-> on visual
-> media]](http://stackoverflow.com/a/36118012/3597276).
+> property, [[a] <a href="http://stackoverflow.com/a/36118012/3597276">
+previous sibling selector can be simulated on visual media</a>.
 >
 > **Descendant Combinator: selector selector**
 >
@@ -1825,87 +1714,47 @@ div lang="PT">This will NOT be red
 > elements on down).
 
 div p
-
 {
-
 **color**
-
 :
-
 red
-
 ;
-
 }
-
 **&lt;**
-
 **div**
-
 **&gt;**
-
 **&lt;**
-
 **p**
-
 **&gt;**
-
 My text is red
-
 **&lt;**
-
 **/p**
-
 **&gt;**
-
 **&lt;**
-
 **section**
-
 **&gt;**
-
 **&lt;**
-
 **p**
-
 **&gt;**
-
 My text is red
-
 **&lt;**
-
 **/p**
-
 **&gt;**
-
 **&lt;**
-
 **/section**
-
 **&gt;**
-
 **&lt;**
-
 **/div**
-
 **&gt;**
-
 **&lt;**
-
 **p**
-
 **&gt;**
-
 My text is not red
-
 **&lt;**
-
 **/p**
-
 **&gt;**
 
-[[Live Demo on
-JSBin]](http://jsbin.com/xonafuz/2/edit?html,css,output)
+<a href="http://jsbin.com/xonafuz/2/edit?html,css,output">Live Demo on JSBin</a>
 
   **&lt;p**   **&gt;** elements are selected since they are both descendants of **&lt;div**
             the                                                             
@@ -1922,77 +1771,42 @@ JSBin]](http://jsbin.com/xonafuz/2/edit?html,css,output)
 > **children**, or **direct descendants**, of the specified element.
 
 div
-
 &gt;
-
 p
-
 {
-
 **color**
-
 :
-
 red
-
 ;
-
 }
-
 **&lt;**
-
 **div**
-
 **&gt;**
-
 **&lt;**
-
 **p**
-
 **&gt;**
-
 My text is red
-
 **&lt;**
-
 **/p**
-
 **&gt;**
-
 **&lt;**
-
 **section**
-
 **&gt;**
-
 **&lt;**
-
 **p**
-
 **&gt;**
-
 My text is not red
-
 **&lt;**
-
 **/p**
-
 **&gt;**
-
 **&lt;**
-
 **/section**
-
 **&gt;**
-
 **&lt;**
-
 **/div**
-
 **&gt;**
 
-[[Live Demo on
-JSBin]](http://jsbin.com/xonafuz/3/edit?html,css,output)
+<a href="http://jsbin.com/xonafuz/3/edit?html,css,output">Live Demo on JSBin</a>
 
   **&lt;p**   **&gt;** element, as it is the only paragraph directly descended   **&lt;div**
             from a                                                           
@@ -2015,87 +1829,47 @@ JSBin]](http://jsbin.com/xonafuz/3/edit?html,css,output)
 > immediate follows a specified element.
 
 p
-
 &plus;
-
 p
-
 {
-
 **color**
-
 :
-
 red
-
 ;
-
 }
-
 **&lt;**
-
 **p**
-
 **&gt;**
-
 My text is not red
-
 **&lt;**
-
 **/p**
-
 **&gt;**
-
 **&lt;**
-
 **p**
-
 **&gt;**
-
 My text is red
-
 **&lt;**
-
 **/p**
-
 **&gt;**
-
 **&lt;**
-
 **p**
-
 **&gt;**
-
 My text is red
-
 **&lt;**
-
 **/p**
-
 **&gt;**
-
 **&lt;**
-
 **hr**
-
 **&gt;**
-
 **&lt;**
-
 **p**
-
 **&gt;**
-
 My text is not red
-
 **&lt;**
-
 **/p**
-
 **&gt;**
 
-[[Live Demo on
-JSBin]](http://jsbin.com/xonafuz/4/edit?html,css,output)
+<a href="http://jsbin.com/xonafuz/4/edit?html,css,output">Live Demo on JSBin</a>
 
   **&lt;p**   **&gt;** elements which are *directly preceded* by another         **&lt;p**
 
@@ -2108,93 +1882,51 @@ JSBin]](http://jsbin.com/xonafuz/4/edit?html,css,output)
 > the specified element.
 
 p &#126; p
-
 {
-
 **color**
-
 :
-
 red
-
 ;
-
 }
-
 **&lt;**
-
 **p**
-
 **&gt;**
-
 My text is not red
-
 **&lt;**
-
 **/p**
-
 **&gt;**
-
 **&lt;**
-
 **p**
-
 **&gt;**
-
 My text is red
-
 **&lt;**
-
 **/p**
-
 **&gt;**
-
 **&lt;**
-
 **hr**
-
 **&gt;**
-
 **&lt;**
-
 **h**
-
 **1**
-
 **&gt;**
-
 And now a title
-
 **&lt;**
-
 **/h**
-
 **1**
-
 **&gt;**
-
 **&lt;**
-
 **p**
-
 **&gt;**
-
 My text is red
-
 **&lt;**
-
 **/p**
-
 **&gt;**
 
 [[Live Demo on
 JSBin]](http://jsbin.com/xonafuz/5/edit?html,css,output)
 
-  -----------------------------------------------------------------------------------
   **&lt;p**   **&gt;** elements that are *preceded* by another                  **&lt;p**
-  --------- --------------------------------------------------------------- ---------
 
-  -----------------------------------------------------------------------------------
 
 > The above example selects all **&gt;** element, whether or not they are
 > immediately adjacent.
@@ -2215,12 +1947,9 @@ JSBin]](http://jsbin.com/xonafuz/5/edit?html,css,output)
 > [[target]](https://www.w3.org/TR/selectors/#target-pseudo)
 > pseudo-classes), to negations of the former
 
-  --------------------------------------------------------------------------------
   visited   ), the mouse is over an       hover   ), a checkbox is       checked
             element (:                            checked (:             
-  --------- ----------------------------- ------- ---------------------- ---------
 
-  --------------------------------------------------------------------------------
 
 > ([[negation]](https://www.w3.org/TR/selectors/#negation)
 > pseudo-class) or to languages
@@ -2231,23 +1960,14 @@ JSBin]](http://jsbin.com/xonafuz/5/edit?html,css,output)
 > **Syntax**
 
 selector:pseudo
-
 &minus;
-
 class
-
 {
-
 property:
-
 **VALUE**
-
 ;
-
 }
-
 > **List of pseudo-classes:**
-
 **Name Description**
 
 [[:active](https://www.w3.org/TR/css3-selectors/#the-user-action-pseudo-classes-hover-act)]
@@ -2331,11 +2051,8 @@ Represents any element that is the first child element of its parent.
 > unchecked, but are in an indeterminate state. This can be due to an
 > element&apos;s attribute or DOM manipulation.
 
-  -----------------------------------------------------------------------
   in-range
-  -----------------------------------------------------------------------
 
-  -----------------------------------------------------------------------
 
 > The : CSS pseudo-class matches when an element has
 >
@@ -2347,36 +2064,24 @@ Represents any element that is the first child element of its parent.
 > It allows the page to give a feedback that the value currently defined
 > using the element is inside the range limits.
 
-  -----------------------------------------------------------------------
   **&lt;input**
-  -----------------------------------------------------------------------
 
-  -----------------------------------------------------------------------
 
 > Applies to **&gt;** elements whose values are invalid according to
 
-  -----------------------------------------------------------------------
   type
-  -----------------------------------------------------------------------
 
-  -----------------------------------------------------------------------
 
 > [[:invalid]](http://tympanus.net/codrops/css_reference/invalid/)
 > the type specified in the = attribute.
 
-  -----------------------------------------------------------------------
   **&lt;body**
-  -----------------------------------------------------------------------
 
-  -----------------------------------------------------------------------
 
 > Applies to any element who&apos;s wrapping **&gt;** element has a properly
 
-  -----------------------------------------------------------------------
   lang
-  -----------------------------------------------------------------------
 
-  -----------------------------------------------------------------------
 
 > [[:lang](https://www.w3.org/TR/css3-selectors/#lang-pseudo)]
 > designated = attribute. For the pseudo-class to be valid, it must
@@ -2403,23 +2108,14 @@ Applies to any links which haven&apos;t been visited by the user.
 
 > Applies to all elements which **do not** match the value passed to
 
-  -------------------------------------------------------------------------
   not      &lpar;p&rpar; or :          not      (   .class-name
-  -------- ------------------- -------- --- -------------------------------
 
-  -------------------------------------------------------------------------
 
-  --------------------------------------------------------------------------------
   [[not]](https://www.w3.org/wiki/CSS/Selectors/pseudo-classes/:not)
-  --------------------------------------------------------------------------------
 
-  --------------------------------------------------------------------------------
 
-  -----------------------------------------------------------------------
   not
-  -----------------------------------------------------------------------
 
-  -----------------------------------------------------------------------
 
 > (:) for example. It must have a value to be
 >
@@ -2440,30 +2136,21 @@ Applies to any links which haven&apos;t been visited by the user.
 > same element type, where n can be an integer, a mathematical
 > expression (e.g n+3) or the keywords odd or even.
 
-  -----------------------------------------------------------------------
   only-child
-  -----------------------------------------------------------------------
 
-  -----------------------------------------------------------------------
 
 > The : CSS pseudo-class represents any element which is the only child
 > of its parent. This is the same as
 >
 > [[:only-child]](https://developer.mozilla.org/en-US/docs/Web/CSS/:only-child)
 
-  -----------------------------------------------------------------------------
   first-child    :   last-child    or :  nth-child    (1):   nth-last-child
-  -------------- --- ------------- ----- ------------ ------ ------------------
 
-  -----------------------------------------------------------------------------
 
 > :(1), but with a lower specificity.
 
-  -----------------------------------------------------------------------
   optional
-  -----------------------------------------------------------------------
 
-  -----------------------------------------------------------------------
 
 > The : CSS pseudo-class represents any element
 
@@ -2473,11 +2160,8 @@ that does not have the required attribute set on it. This allows
 > forms to easily indicate optional fields and to style them
 > accordingly.
 
-  -----------------------------------------------------------------------
   out-of-range
-  -----------------------------------------------------------------------
 
-  -----------------------------------------------------------------------
 
 > The : CSS pseudo-class matches when an element has its value attribute
 > outside the specified range limitations for this element.
@@ -2488,11 +2172,8 @@ that does not have the required attribute set on it. This allows
 > of a range if it is either smaller or larger than maximum and minimum
 > set values.
 
-  --------------------------------------------------------------------------------------------------------
   [[placeholder-shown]](https://developer.mozilla.org/en-US/docs/Web/CSS/:placeholder-shown)
-  --------------------------------------------------------------------------------------------------------
 
-  --------------------------------------------------------------------------------------------------------
 
 > [[:]](https://developer.mozilla.org/en-US/docs/Web/CSS/:placeholder-shown)**Experimental.**
 > Applies to any form element currently displaying placeholder text.
@@ -2500,11 +2181,8 @@ that does not have the required attribute set on it. This allows
 [[:read-only](https://developer.mozilla.org/en-US/docs/Web/CSS/:read-only)]
 Applies to any element which is not editable by the user.
 
-  -----------------------------------------------------------------------
   **&lt;input**
-  -----------------------------------------------------------------------
 
-  -----------------------------------------------------------------------
 
 [[:read-write](https://developer.mozilla.org/en-US/docs/Web/CSS/:read-write)]
 Applies to any element that is editable by a user, such as **&gt;**
@@ -2532,11 +2210,8 @@ matches the root element of a tree representing the document.
 [[:visited](https://www.w3.org/TR/css3-selectors/#the-link-pseudo-classes-link-and-visited)]
 Applies to any links which have has been visited by the user.
 
-  -----------------------------------------------------------------------
   visited
-  -----------------------------------------------------------------------
 
-  -----------------------------------------------------------------------
 
 > The : pseudoclass can&apos;t be used for most styling in a lot of modern
 > browsers anymore because it&apos;s a security hole. See this
@@ -2556,86 +2231,58 @@ Applies to any links which have has been visited by the user.
 
 :first-child ✔
 
-  -----------------------------------------------------------------------
   nth-child
-  -----------------------------------------------------------------------
 
-  -----------------------------------------------------------------------
 
 :(3) ✔
 
-  -----------------------------------------------------------------------
   nth-child
-  -----------------------------------------------------------------------
 
-  -----------------------------------------------------------------------
 
 :(n+3) ✔ ✔ ✔ ✔ ✔ ✔ ✔ ✔
 
-  -----------------------------------------------------------------------
   nth-child                                             (     3n
-  ----------------------------------------------------- ----- -----------
 
-  -----------------------------------------------------------------------
 
 :) ✔ ✔ ✔
 
-  -----------------------------------------------------------------------
   nth-child                                             (     3n
-  ----------------------------------------------------- ----- -----------
 
-  -----------------------------------------------------------------------
 
 :+1) ✔ ✔ ✔ ✔
 
-  -----------------------------------------------------------------------
   nth-child                                             (     -n
-  ----------------------------------------------------- ----- -----------
 
-  -----------------------------------------------------------------------
 
 > :+3) ✔ ✔ ✔
 
-  ------------------------------------------------------------------------
   nth-child                                         (     odd
-  ------------------------------------------------- ----- ----------------
 
-  ------------------------------------------------------------------------
 
 :) ✔ ✔ ✔ ✔ ✔
 
-  ------------------------------------------------------------------------
   nth-child                                     (     even
-  --------------------------------------------- ----- --------------------
 
-  ------------------------------------------------------------------------
 
 :) ✔ ✔ ✔ ✔ ✔
 
 :last-child ✔
 
-  -----------------------------------------------------------------------
   nth-last-child
-  -----------------------------------------------------------------------
 
-  -----------------------------------------------------------------------
 
 :(3) ✔
 
 ## Section 4.6: Class Name Selectors
 
-  -----------------------------------------------------------------------
   **&lt;div**
-  -----------------------------------------------------------------------
 
-  -----------------------------------------------------------------------
 
 > The class name selector select all elements with the targeted class
 > name. For example, the class name .warning would select the following
 > **&gt;** element:
 
 **&lt;**
-
 **div**
 
 class
@@ -2645,25 +2292,15 @@ class
 &quot;warning&quot;
 
 **&gt;**
-
 **&lt;**
-
 **p**
-
 **&gt;**
-
 This would be some warning copy.
-
 **&lt;**
-
 **/p**
-
 **&gt;**
-
 **&lt;**
-
 **/div**
-
 **&gt;**
 
 > You can also combine class names to target elements more specifically.
@@ -2679,113 +2316,59 @@ This would be some warning copy.
 **color**
 
 :
-
 orange
-
 ;
-
 }
-
 .warning
-
 {
-
 **color**
-
 :
-
 blue
-
 ;
-
 }
-
 .warning
-
 .important
-
 {
-
 **color**
-
 :
-
 red
-
 ;
-
 }
-
 > **HTML**
-
 **&lt;**
-
 **div**
-
 class
-
 =
-
 &quot;warning&quot;
-
 **&gt;**
-
 **&lt;**
-
 **p**
-
 **&gt;**
-
 This would be some warning copy.
-
 **&lt;**
-
 **/p**
-
 **&gt;**
-
 **&lt;**
-
 **/div**
-
 **&gt;**
-
 **&lt;**
-
 **div**
-
 class
-
 =
-
 &quot;important warning&quot;
-
 **&gt;**
-
 **&lt;**
-
 **p**
-
 class
-
 =
-
 &quot;important&quot;
-
 **&gt;**
-
 This is some really important warning copy.
-
 **&lt;**
-
 **/p**
-
 **&gt;**
-
 **&lt;**
-
 **/div**
-
 **&gt;**
 
 > In this example, all elements with the .warning class will have a blue
@@ -2793,11 +2376,8 @@ This is some really important warning copy.
 > text color, and all elements that have *both* the .important and
 > .warning class name will have a red text color.
 
-  -----------------------------------------------------------------------
   .warning.important
-  -----------------------------------------------------------------------
 
-  -----------------------------------------------------------------------
 
 > Notice that within the CSS, the declaration did not have any spaces
 > between the two class names. This means it will only find elements
@@ -2817,209 +2397,97 @@ This is some really important warning copy.
 > HTML:
 
 **&lt;**
-
 **div**
-
 id
-
 =
-
 &quot;element&quot;
-
 **&gt;**
-
 &period;..
-
 **&lt;**
-
 **/div**
-
 **&gt;**
-
 > CSS
-
 &num;
-
 element
-
 {
-
 &period;..
-
 }
-
 */&ast; High specificity will override many selectors &ast;/*
-
 &lbrack;
-
 id
-
 =
-
 &quot;element&quot;
-
 &rbrack;
-
 {
-
 &period;..
-
 }
 
 */&ast; Low specificity, can be overridden easily &ast;/*
 
 ## Section 4.8: The :last-of-type selector
 
-  -----------------------------------------------------------------------
   :last-of-type
-  -----------------------------------------------------------------------
 
-  -----------------------------------------------------------------------
 
 > The selects the element that is the last child, of a particular type,
 > of its parent. In the example below, the css selects the last
 > paragraph and the last heading h1.
 
-p
-
-:
-
-last-of-type
-
-{
-
-**background**
-
-:
-
-#C5CAE9
-
-;
-
+p: last-of-type {
+  background: #C5CAE9;
 }
 
-h1
-
-:
-
-last-of-type
-
-{
-
-**background**
-
-:
-
-#CDDC39
-
-;
-
+h1: last-of-type {
+  background: #CDDC39;
 }
 
-**&lt;**
+&lt;div class= &quot;container&quot;&gt;
 
-**div**
-
-class
-
-=
-
-&quot;container&quot;
-
-**&gt;**
-
-**&lt;**
-
-**p**
-
-**&gt;**
+&lt;p&gt;
 
 First paragraph
 
-**&lt;**
-
-**/p**
-
-**&gt;**
+&lt;/p&gt;
 
 **p**
-
 **&lt;**
-
 **&gt;**
-
 Second paragraph
-
 **&lt;**
-
 **/p**
-
 **&gt;**
-
 **&lt;**
-
 **p**
-
 **&gt;**
-
 Last paragraph
-
 **&lt;**
-
 **/p**
-
 **&gt;**
-
 **&lt;**
-
 **h**
-
 **1**
-
 **&gt;**
-
 Heading 1
-
 **&lt;**
-
 **/h**
-
 **1**
-
 **&gt;**
-
 **&lt;**
-
 **h**
-
 **2**
-
 **&gt;**
-
 First heading 2
-
 **&lt;**
-
 **/h**
-
 **2**
-
 **&gt;**
-
 **&lt;**
-
 **h**
-
 **2**
-
 **&gt;**
-
 Last heading 2
-
 **&lt;**
-
 **/h**
-
 **2**
 
 **&gt;**
@@ -3047,62 +2515,33 @@ input:in-range
 border: 1px solid blue;
 
 }
-
 **&lt;**
-
 **/style**
-
 **&gt;**
-
 **&lt;**
-
 **input**
-
 type
-
 =
-
 &quot;number&quot;
-
 min
-
 =
-
 &quot;10&quot;
-
 max
-
 =
-
 &quot;20&quot;
-
 value
-
 =
-
 &quot;15&quot;
-
 **&gt;**
-
 **&lt;**
-
 **p**
-
 **&gt;**
-
 The border for this value will be blue
-
 **&lt;**
-
 **/p**
-
 **&gt;**
-
-  -----------------------------------------------------------------------
   in-range
-  -----------------------------------------------------------------------
 
-  -----------------------------------------------------------------------
 
 > The : CSS pseudo-class matches when an element has its value attribute
 > inside the specified range limitations for this element. It allows the
@@ -3114,11 +2553,8 @@ The border for this value will be blue
 
 A.  The syntax is presented above.
 
-  -----------------------------------------------------------------------
   **&lt;input**
-  -----------------------------------------------------------------------
 
-  -----------------------------------------------------------------------
 
 > The following selector matches all **&gt;** elements in an HTML document
 > that are not disabled and don&apos;t have the class .example:
@@ -3126,116 +2562,62 @@ A.  The syntax is presented above.
 > HTML:
 
 **&lt;**
-
 **form**
-
 **&gt;**
-
 Phone:
-
 **&lt;**
-
 **input**
-
 type
-
 =
-
 &quot;tel&quot;
-
 class
-
 =
-
 &quot;example&quot;
-
 **&gt;**
-
 E-mail:
-
 **&lt;**
-
 **input**
-
 type
-
 =
-
 &quot;email&quot;
-
 disabled
-
 =
-
 &quot;disabled&quot;
-
 **&gt;**
-
 Password:
-
 **&lt;**
-
 **input**
-
 type
-
 =
-
 &quot;password&quot;
-
 **&gt;**
-
 **&lt;**
-
 **/form**
-
 **&gt;**
 
 > CSS:
-
 input
-
 :
-
 not
-
 (
-
 &lbrack;
-
 disabled
-
 &rbrack;
-
 )
-
 :
-
 not
-
 (
-
 .example
-
 )
-
 {
-
 **background-color**
-
 :
-
 #ccc
-
 ;
-
 }
 
-  -----------------------------------------------------------------------
   not
-  -----------------------------------------------------------------------
 
-  -----------------------------------------------------------------------
 
 > The :() pseudo-class will also support comma-separated selectors in
 > Selectors Level 4:
@@ -3243,136 +2625,73 @@ not
 > CSS:
 
 input
-
 :
-
 not
-
 (
-
 &lbrack;
-
 disabled
-
 &rbrack;
-
 ,
-
 .example
-
 )
-
 {
-
 **background-color**
-
 :
-
 #ccc
-
 ;
-
 }
-
-[[Live Demo on
-JSBin]](http://jsbin.com/japere/edit?html,css,output)
+<a href="http://jsbin.com/japere/edit?html,css,output">Live Demo on JSBin</a>
 
 > See background syntax here.
 
 B.  The :focus-within CSS pseudo-classHTML:
 
 **&lt;**
-
 **h**
-
 **3**
-
 **&gt;**
-
 Background is blue if the input is focused .
-
 **&lt;**
-
 **/p**
-
 **&gt;**
-
 **&lt;**
-
 **div**
-
 **&gt;**
-
 **&lt;**
-
 **input**
-
 type
-
 =
-
 &quot;text&quot;
-
 **&gt;**
-
 **&lt;**
-
 **/div**
-
 **&gt;**
-
 > CSS:
-
 div
-
 {
-
 **height**
-
 :
-
 80
-
 px
-
 ;
-
 }
-
 input
-
 {
-
 **margin**
-
 :
-
 30
-
 px
-
 ;
-
 }
-
 div
-
 :
-
 focus-within
-
 {
-
 **background-color**
-
 :
-
 #1565C0
-
 ;
-
 }
-
 ## Section 4.11: Global boolean with checkbox:checked and &#126; (general sibling combinator)
 
 > With the &#126; selector, you can easily implement a global accessible
@@ -3384,117 +2703,61 @@ focus-within
 > want with a unique id and the hidden attribute set:
 
 **&lt;**
-
 **input**
-
 type
-
 =
-
 &quot;checkbox&quot;
-
 id
-
 =
-
 &quot;sidebarShown&quot;
-
 hidden
-
 **/&gt;**
-
 **&lt;**
-
 **input**
-
 type
-
 =
-
 &quot;checkbox&quot;
-
 id
-
 =
-
 &quot;darkThemeUsed&quot;
-
 hidden
-
 **/&gt;**
-
 *&lt;!&minus;-*
-
 *here begins actual content, for example*
-
 *: &minus;-&gt;*
-
 **&lt;**
-
 **div**
-
 id
-
 =
-
 &quot;container&quot;
-
 **&gt;**
-
 **&lt;**
-
 **div**
-
 id
-
 =
-
 &quot;sidebar&quot;
-
 **&gt;**
-
 *&lt;!&minus;-*
-
 *Menu, Search, &period;..*
-
 *&minus;-&gt;*
-
 **&lt;**
-
 **/div**
-
 **&gt;**
-
 *&lt;!&minus;-*
-
 *Some more content &period;..*
-
 *&minus;-&gt;*
-
 **&lt;**
-
 **/div**
-
 **&gt;**
-
 **&lt;**
-
 **div**
-
 id
-
 =
-
 &quot;footer&quot;
-
 **&gt;**
-
 *&lt;!&minus;- &period;.. &minus;-&gt;*
-
 **&lt;**
-
 **/div**
-
 **&gt;**
 
 > **Change the boolean&apos;s value**
@@ -3575,29 +2838,18 @@ checked
 )
 
 &#126;
-
 &lbrack;
-
 sibling of
-
 checkbox
-
 & parent of
-
 target
-
 &rbrack;
-
 &lt;target
-
 &gt;
 
-  -----------------------------------------------------------------------------------------------------
   **&lt;checkbox**   **&gt;**,   sibling   &rbrack;    **&lt;target**   **&gt;** should be replaced by the  sibling
                    &lbrack;        &period;..      and                  proper selectors. &lbrack;              &period;..
-  ---------------- --------- --------- ----- -------------- --------------------------------- ---------
 
-  -----------------------------------------------------------------------------------------------------
 
 > Note that &rbrack;
 >
@@ -3611,53 +2863,29 @@ target
 :
 
 checked
-
 &#126;
-
 #container
-
 #sidebar
-
 {
-
 **margin-left**
-
 :
-
 300
-
 px
-
 ;
-
 }
-
 #darkThemeUsed
-
 :
-
 checked
-
 &#126;
-
 #container
-
 ,
-
 #darkThemeUsed
-
 :
-
 checked
-
 &#126;
-
 #footer
-
 {
-
 **background**
-
 :
 
 #333
@@ -3766,40 +2994,28 @@ type
 
 **Effect Pseudo Selector**
 
-  ------------------------------------------------------------------------------------------
   input&lbrack;type=range&rbrack;::-webkit-slider-thumb,   
   input&lbrack;type=range&rbrack;::-moz-range-thumb,       
-  -------------------------------------------- ---------------------------------------------
   input&lbrack;type=range&rbrack;::-ms-thumb               
 
-  ------------------------------------------------------------------------------------------
 
 > Thumb
 
-  -----------------------------------------------------------------------------------------------------
   input&lbrack;type=range&rbrack;::-webkit-slider-runnable-track,   
   input&lbrack;type=range&rbrack;::-moz-range-track,                
-  ----------------------------------------------------- -----------------------------------------------
   input&lbrack;type=range&rbrack;::-ms-track                        
 
-  -----------------------------------------------------------------------------------------------------
 
 > Track
 
-  -----------------------------------------------------------------------
   input&lbrack;type=range&rbrack;:focus
-  -----------------------------------------------------------------------
 
-  -----------------------------------------------------------------------
 
 > OnFocus
 
-  -----------------------------------------------------------------------
   input&lbrack;type=range&rbrack;::-moz-range-progress,
   input&lbrack;type=range&rbrack;::-ms-fill-lower
-  -----------------------------------------------------------------------
 
-  -----------------------------------------------------------------------
 
 > Lower part of (not possible
 
@@ -3807,11 +3023,8 @@ the track in WebKit browsers currently - JS needed)
 
 ## Section 4.14: The :only-child pseudo-class selector example
 
-  -----------------------------------------------------------------------
   :only-child
-  -----------------------------------------------------------------------
 
-  -----------------------------------------------------------------------
 
 > The CSS pseudo-class represents any element which is the only child of
 > its parent.
@@ -3904,12 +3117,9 @@ blue
 
 }
 
-  ---------------------------------------------------------------------------------------
   **&lt;p&gt;**   element that is the unique child from its parent, in this     **&lt;div&gt;**
               case a                                                        
-  ----------- ------------------------------------------------------------- -------------
 
-  ---------------------------------------------------------------------------------------
 
 > The above example selects the .
 
@@ -3936,11 +3146,8 @@ JSBin]](https://jsbin.com/dizosi/edit?html,css)
 > its parent element. **initial**, sets this property to its default
 > value.
 
-  -------------------------------------------------------------------------
   ::first-letter                        /   ::first-line
-  ------------------------------------- --- -------------------------------
 
-  -------------------------------------------------------------------------
 
 > This can be applied to all elements, and pseudo-elements.
 >
@@ -4150,49 +3357,25 @@ hsl
 &percnt;
 
 )
-
 ;
-
 */&ast; green &ast;/*
-
 }
-
 #p1
-
 {
-
 **background-color**
-
 :
-
 hsla
-
 (
-
-120
-
-,
-
-100
-
+120,100
 &percnt;
-
 ,
-
 50
-
 &percnt;
-
 ,
-
 .3
-
 )
-
 ;
-
 */&ast; green with 30% opacity &ast;/*
-
 }
 
 > **Interaction with background-image**
@@ -4200,107 +3383,56 @@ hsla
 > The following statements are all equivalent:
 
 body
-
 {
-
 **background**
-
 :
-
 red
-
 ;
-
 **background-image**
-
 :
-
 url
-
 (
-
 *partiallytransparentimage.png*
-
 )
-
 ;
-
 }
-
 body
-
 {
-
 **background-color**
-
 :
-
 red
-
 ;
-
 **background-image**
-
 :
-
 url
-
 (
-
 *partiallytransparentimage.png*
-
 )
-
 ;
-
 }
-
 body
-
 {
-
 **background-image**
-
 :
-
 url
-
 (
-
 *partiallytransparentimage.png*
-
 )
-
 ;
-
 **background-color**
-
 :
-
 red
-
 ;
-
 }
-
 body
-
 {
-
 **background**
-
 :
-
 red
-
 url
-
 (
-
 *partiallytransparentimage.png*
-
 )
-
 ;
 
 }
@@ -4312,31 +3444,18 @@ url
 > Note that the following is not equivalent:
 
 body
-
 {
-
 **background-image**
-
 :
-
 url
-
 (
-
 *partiallytransparentimage.png*
-
 )
-
 ;
-
 **background**
-
 :
-
 red
-
 ;
-
 }
 
 > Here, the value of background overrides your background-image.
@@ -4352,29 +3471,17 @@ red
 > There are two types of gradient functions, linear and radial. Each
 > type has a non-repeating variant and a repeating variant:
 
-  -----------------------------------------------------------------------
   linear-gradient
-  -----------------------------------------------------------------------
 
-  -----------------------------------------------------------------------
 
-  -----------------------------------------------------------------------
   repeating-linear-gradient
-  -----------------------------------------------------------------------
 
-  -----------------------------------------------------------------------
 
-  -----------------------------------------------------------------------
   radial-gradient
-  -----------------------------------------------------------------------
 
-  -----------------------------------------------------------------------
 
-  -----------------------------------------------------------------------
   repeating-radial-gradient
-  -----------------------------------------------------------------------
 
-  -----------------------------------------------------------------------
 
 > ()
 >
@@ -4392,21 +3499,15 @@ linear-gradient( &lt;direction&gt;?, &lt;color-stop-1&gt;, &lt;color-stop-2&gt;,
 
 **Value Meaning**
 
-  -----------------------------------------------------------------------------
   to top       ,   to bottom          ,   to right         or    to left
-  ------------ --- ------------------ --- ---------------- ----- --------------
 
-  -----------------------------------------------------------------------------
 
 > Could be an argument like ; or an
 > [[angle]](https://www.w3.org/TR/css3-values/#angles) as
 > 0deg,
 
-  -----------------------------------------------------------------------
   **&lt;direction**
-  -----------------------------------------------------------------------
 
-  -----------------------------------------------------------------------
 
 > **&gt;** 90deg&period;.. . The angle starts from to top and rotates clockwise.
 > Can be specified in
@@ -4416,17 +3517,11 @@ linear-gradient( &lt;direction&gt;?, &lt;color-stop-1&gt;, &lt;color-stop-2&gt;,
 > [[turn]](https://www.w3.org/TR/css3-values/#turn). If
 > omitted, the gradient flows from top to bottom
 
-  -----------------------------------------------------------------------
   **&lt;color-stop-list**
-  -----------------------------------------------------------------------
 
-  -----------------------------------------------------------------------
 
-  ---------------------------------------------------------------------------------
   yellow 10%        ,   rgba    (0,0,0,      .5   )   40px     ,   #fff 100%
-  ----------------- --- ------- ------------ ---- --- -------- --- ----------------
 
-  ---------------------------------------------------------------------------------
 
 > List of colors, optionally followed each one by a percentage or
 > [[length]](https://www.w3.org/TR/css3-values/#lengths) to
@@ -4438,74 +3533,42 @@ linear-gradient( &lt;direction&gt;?, &lt;color-stop-1&gt;, &lt;color-stop-2&gt;,
 > and transitions from red to blue
 
 .linear-gradient
-
 {
-
 **background**
-
 :
-
 linear-gradient
-
 (
-
 to
-
 left
-
 ,
-
 red
-
 ,
-
 blue
-
 )
-
 ;
-
 */&ast; you can also use 270deg &ast;/*
-
 }
 
 > You can create a diagonal gradient by declaring both a horizontal and
 > vertical starting position.
 
 .diagonal-linear-gradient
-
 {
-
 **background**
-
 :
-
 linear-gradient
-
 (
-
 to
-
 left
-
 top
-
 ,
-
 red
-
 ,
-
 yellow
-
 10
-
 &percnt;
-
 )
-
 ;
-
 }
 
 > It is possible to specify any number of color stops in a gradient by
@@ -4519,45 +3582,25 @@ yellow
 **background**
 
 :
-
 linear-gradient
-
 (
-
 to
-
 left
-
 ,
-
 red
-
 ,
-
 orange
-
 ,
-
 yellow
-
 ,
-
 green
-
 ,
-
 blue
-
 ,
-
 indigo
-
 ,
-
 violet
-
 )
-
 }
 
 **radial-gradient()**
@@ -4565,23 +3608,14 @@ violet
 .radial-gradient-simple
 
 {
-
 **background**
-
 :
-
 radial-gradient
-
 (
-
 red
-
 ,
-
 blue
-
 )
-
 ;
 
 }
@@ -36596,7 +35630,7 @@ em
 
 }
 
-[[Normalize CSS]](http://normalize.css/)
+<a href="http://normalize.css/">Normalize CSS</a>
 
 # Chapter 55: Internet Explorer Hacks
 
@@ -36760,8 +35794,7 @@ white-on-black
 >
 > **More Information:**
 
-[[Microsoft
-Documentation]](https://msdn.microsoft.com/en-us/library/windows/apps/hh465764.aspx)
+<a href="https://msdn.microsoft.com/en-us/library/windows/apps/hh465764.aspx">Microsoft Documentation</a>
 on -ms-high-contrast
 
 ## Section 55.3: Internet Explorer 6 & Internet Explorer 7 only
