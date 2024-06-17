@@ -1,922 +1,950 @@
-# CSS Notes 4 Professionals
+# CSS-Notes4Pros
+CSS Notes For Professionals - intermediate level CSS learning course.  All on-line.  No money, unless you'd like to donate. I'm game for that.
+---
+title: |
+  CSS Notes for Professionals
+  by somebody, somewhere
+author: "bbauska"
+date last editted: "5/24/2024 Fri 12+pm"
+output: 
+  markdown:
+    with some style
+---
 
-**Contents**
+<h1 align="center">Advanced CSS Notes for Professionals</h1>
 
-[**[About]{.underline}** [9](#about)](#about)
+<h6 align="center">(by somebody, lecturer - somewhere @someplace)</h6>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~ readme.md of CSS Advanced - Notes for Professionals ~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ CSS-Notes4Pros.bauska.github.io ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~ 01/02. CSS Logos  (01) ~~~~~~~~~~~~~~~~~~~-->
+<p align="center" width="100%">
+<img src="./images/image001.jpeg"
+  style="width:20%"
+  title="JavaScript coffee cup logo version"
+  alt="JavaScript coffee cup logo version." />
+<img src="./images/image002.png"
+  style="width:20%"
+  title="UC Davis logo"
+  alt="UC Davis logo." />
+</p>
 
-[**[Chapter 1: Getting started with CSS]{.underline}**
+[**[About]** [9](#about)](#about)
+
+[**[Chapter 1: Getting started with CSS]**
 [10](#section)](#section)
 
-[[Section 1.1: External Stylesheet]{.underline}
+[[Section 1.1: External Stylesheet]
 [10](#section-1.1-external-stylesheet)](#section-1.1-external-stylesheet)
 
-[[Section 1.2: Internal Styles]{.underline}
+[[Section 1.2: Internal Styles]
 [11](#section-1.2-internal-styles)](#section-1.2-internal-styles)
 
-[[Section 1.3: CSS \@import rule (one of CSS at-rule)]{.underline}
+[[Section 1.3: CSS \@import rule (one of CSS at-rule)]
 [11](#section-1.3-css-import-rule-one-of-css-at-rule)](#section-1.3-css-import-rule-one-of-css-at-rule)
 
-[[Section 1.4: Inline Styles]{.underline}
+[[Section 1.4: Inline Styles]
 [12](#section-1.4-inline-styles)](#section-1.4-inline-styles)
 
-[[Section 1.5: Changing CSS with JavaScript]{.underline}
+[[Section 1.5: Changing CSS with JavaScript]
 [12](#section-1.5-changing-css-with-javascript)](#section-1.5-changing-css-with-javascript)
 
-[[Section 1.6: Styling Lists with CSS]{.underline}
+[[Section 1.6: Styling Lists with CSS]
 [13](#section-1.6-styling-lists-with-css)](#section-1.6-styling-lists-with-css)
 
-[**[Chapter 2: Structure and Formatting of a CSS Rule]{.underline}**
+[**[Chapter 2: Structure and Formatting of a CSS Rule]**
 [14](#chapter-2-structure-and-formatting-of-a-css-rule)](#chapter-2-structure-and-formatting-of-a-css-rule)
 
-[[Section 2.1: Property Lists]{.underline}
+[[Section 2.1: Property Lists]
 [14](#section-2.1-property-lists)](#section-2.1-property-lists)
 
-[[Section 2.2: Multiple Selectors]{.underline}
+[[Section 2.2: Multiple Selectors]
 [14](#section-2.2-multiple-selectors)](#section-2.2-multiple-selectors)
 
-[[Section 2.3: Rules, Selectors, and Declaration Blocks]{.underline}
+[[Section 2.3: Rules, Selectors, and Declaration Blocks]
 [14](#section-9)](#section-9)
 
-[**[Chapter 3: Comments]{.underline}**
+[**[Chapter 3: Comments]**
 [14](#chapter-3-comments)](#chapter-3-comments)
 
-[[Section 3.1: Single Line]{.underline}
+[[Section 3.1: Single Line]
 [14](#section-3.1-single-line)](#section-3.1-single-line)
 
-[[Section 3.2: Multiple Line]{.underline}
+[[Section 3.2: Multiple Line]
 [15](#section-3.2-multiple-line)](#section-3.2-multiple-line)
 
-[**[Chapter 4: Selectors]{.underline}**
+[**[Chapter 4: Selectors]**
 [16](#chapter-4-selectors)](#chapter-4-selectors)
 
-[[Section 4.1: Basic selectors]{.underline}
+[[Section 4.1: Basic selectors]
 [16](#section-4.1-basic-selectors)](#section-4.1-basic-selectors)
 
-[[Section 4.2: Attribute Selectors]{.underline}
+[[Section 4.2: Attribute Selectors]
 [16](#section-4.2-attribute-selectors)](#section-4.2-attribute-selectors)
 
-[[Section 4.3: Combinators]{.underline}
+[[Section 4.3: Combinators]
 [19](#section-4.3-combinators)](#section-4.3-combinators)
 
-[[Section 4.4: Pseudo-classes]{.underline}
+[[Section 4.4: Pseudo-classes]
 [20](#section-4.4-pseudo-classes)](#section-4.4-pseudo-classes)
 
-[[Section 4.5: Child Pseudo Class]{.underline}
+[[Section 4.5: Child Pseudo Class]
 [22](#section-4.5-child-pseudo-class)](#section-4.5-child-pseudo-class)
 
-[[Section 4.6: Class Name Selectors]{.underline}
+[[Section 4.6: Class Name Selectors]
 [23](#section-4.6-class-name-selectors)](#section-4.6-class-name-selectors)
 
 [[Section 4.7: Select element using its ID without the high specificity
-of the ID selector]{.underline}
+of the ID selector]
 [23](#section-4.7-select-element-using-its-id-without-the-high-specificity-of-the-id-selector)](#section-4.7-select-element-using-its-id-without-the-high-specificity-of-the-id-selector)
 
-[[Section 4.8: The :last-of-type selector]{.underline}
+[[Section 4.8: The :last-of-type selector]
 [24](#section-4.8-the-last-of-type-selector)](#section-4.8-the-last-of-type-selector)
 
-[[Section 4.9: CSS3 :in-range selector example]{.underline}
+[[Section 4.9: CSS3 :in-range selector example]
 [24](#section-4.9-css3-in-range-selector-example)](#section-4.9-css3-in-range-selector-example)
 
 [[Section 4.10: A. The :not pseudo-class example & B. :focus-within CSS
-pseudo-class]{.underline}
+pseudo-class]
 [24](#section-4.10-a.-the-not-pseudo-class-example-b.-focuswithin-css-pseudo-class)](#section-4.10-a.-the-not-pseudo-class-example-b.-focuswithin-css-pseudo-class)
 
 [[Section 4.11: Global boolean with checkbox:checked and \~ (general
-sibling combinator)]{.underline}
+sibling combinator)]
 [26](#section-4.11-global-boolean-with-checkboxchecked-and-general-sibling-combinator)](#section-4.11-global-boolean-with-checkboxchecked-and-general-sibling-combinator)
 
-[[Section 4.12: ID selectors]{.underline}
+[[Section 4.12: ID selectors]
 [27](#section-4.12-id-selectors)](#section-4.12-id-selectors)
 
-[[Section 4.13: How to style a Range input]{.underline}
+[[Section 4.13: How to style a Range input]
 [27](#section-4.13-how-to-style-a-range-input)](#section-4.13-how-to-style-a-range-input)
 
 [[Section 4.14: The :only-child pseudo-class selector
-example]{.underline}
+example]
 [28](#section-4.14-the-only-child-pseudo-class-selector-example)](#section-4.14-the-only-child-pseudo-class-selector-example)
 
-[**[Chapter 5: Backgrounds]{.underline}**
+[**[Chapter 5: Backgrounds]**
 [28](#chapter-5-backgrounds)](#chapter-5-backgrounds)
 
-[[Section 5.1: Background Color]{.underline}
+[[Section 5.1: Background Color]
 [28](#section-5.1-background-color)](#section-5.1-background-color)
 
-[[Section 5.2: Background Gradients]{.underline}
+[[Section 5.2: Background Gradients]
 [30](#section-5.2-background-gradients)](#section-5.2-background-gradients)
 
-[[Section 5.3: Background Image]{.underline}
+[[Section 5.3: Background Image]
 [32](#section-5.3-background-image)](#section-5.3-background-image)
 
-[[Section 5.4: Background Shorthand]{.underline}
+[[Section 5.4: Background Shorthand]
 [32](#section-5.4-background-shorthand)](#section-5.4-background-shorthand)
 
-[[Section 5.5: Background Size]{.underline}
+[[Section 5.5: Background Size]
 [33](#section-5.5-background-size)](#section-5.5-background-size)
 
-[[Section 5.6: Background Position]{.underline}
+[[Section 5.6: Background Position]
 [37](#section-5.6-background-position)](#section-5.6-background-position)
 
-[[Section 5.7: The background-origin property]{.underline}
+[[Section 5.7: The background-origin property]
 [38](#section-5.7-the-background-origin-property)](#section-5.7-the-background-origin-property)
 
-[[Section 5.8: Multiple Background Image]{.underline}
+[[Section 5.8: Multiple Background Image]
 [40](#section-5.8-multiple-background-image)](#section-5.8-multiple-background-image)
 
-[[Section 5.9: Background Attachment]{.underline}
+[[Section 5.9: Background Attachment]
 [41](#section-5.9-background-attachment)](#section-5.9-background-attachment)
 
-[[Section 5.10: Background Clip]{.underline}
+[[Section 5.10: Background Clip]
 [42](#section-5.10-background-clip)](#section-5.10-background-clip)
 
-[[Section 5.11: Background Repeat]{.underline}
+[[Section 5.11: Background Repeat]
 [42](#section-5.11-background-repeat)](#section-5.11-background-repeat)
 
-[[Section 5.12: background-blend-mode Property]{.underline}
+[[Section 5.12: background-blend-mode Property]
 [43](#section-5.12-background-blend-mode-property)](#section-5.12-background-blend-mode-property)
 
-[[Section 5.13: Background Color with Opacity]{.underline}
+[[Section 5.13: Background Color with Opacity]
 [43](#section-5.13-background-color-with-opacity)](#section-5.13-background-color-with-opacity)
 
-[**[Chapter 6: Centering]{.underline}**
+[**[Chapter 6: Centering]**
 [45](#chapter-6-centering)](#chapter-6-centering)
 
-[[Section 6.1: Using Flexbox]{.underline}
+[[Section 6.1: Using Flexbox]
 [45](#section-6.1-using-flexbox)](#section-6.1-using-flexbox)
 
-[[Section 6.2: Using CSS transform]{.underline}
+[[Section 6.2: Using CSS transform]
 [45](#section-6.2-using-css-transform)](#section-6.2-using-css-transform)
 
-[[Section 6.3: Using margin: 0 auto;]{.underline}
+[[Section 6.3: Using margin: 0 auto;]
 [46](#section-6.3-using-margin-0-auto)](#section-6.3-using-margin-0-auto)
 
-[[Section 6.4: Using text-align]{.underline}
+[[Section 6.4: Using text-align]
 [48](#section-6.4-using-text-align)](#section-6.4-using-text-align)
 
-[[Section 6.5: Using position: absolute]{.underline}
+[[Section 6.5: Using position: absolute]
 [48](#section-6.5-using-position-absolute)](#section-6.5-using-position-absolute)
 
-[[Section 6.6: Using calc()]{.underline}
+[[Section 6.6: Using calc()]
 [49](#section-6.6-using-calc)](#section-6.6-using-calc)
 
-[[Section 6.7: Using line-height]{.underline}
+[[Section 6.7: Using line-height]
 [49](#section-6.7-using-line-height)](#section-6.7-using-line-height)
 
-[[Section 6.8: Vertical align anything with 3 lines of code]{.underline}
+[[Section 6.8: Vertical align anything with 3 lines of code]
 [49](#section-6.8-vertical-align-anything-with-3-lines-of-code)](#section-6.8-vertical-align-anything-with-3-lines-of-code)
 
-[[Section 6.9: Centering in relation to another item]{.underline}
+[[Section 6.9: Centering in relation to another item]
 [50](#section-6.9-centering-in-relation-to-another-item)](#section-6.9-centering-in-relation-to-another-item)
 
 [[Section 6.10: Ghost element technique (Michał Czernow\'s
-hack)]{.underline}
+hack)]
 [51](#section-6.10-ghost-element-technique-michał-czernows-hack)](#section-6.10-ghost-element-technique-michał-czernows-hack)
 
 [[Section 6.11: Centering vertically and horizontally without worrying
-about height or width]{.underline}
+about height or width]
 [52](#section-6.11-centering-vertically-and-horizontally-without-worrying-about-height-or-width)](#section-6.11-centering-vertically-and-horizontally-without-worrying-about-height-or-width)
 
-[[Section 6.12: Vertically align an image inside div]{.underline}
+[[Section 6.12: Vertically align an image inside div]
 [53](#section-6.12-vertically-align-an-image-inside-div)](#section-6.12-vertically-align-an-image-inside-div)
 
-[[Section 6.13: Centering with fixed size]{.underline}
+[[Section 6.13: Centering with fixed size]
 [53](#section-6.13-centering-with-fixed-size)](#section-6.13-centering-with-fixed-size)
 
-[[Section 6.14: Vertically align dynamic height elements]{.underline}
+[[Section 6.14: Vertically align dynamic height elements]
 [54](#section-6.14-vertically-align-dynamic-height-elements)](#section-6.14-vertically-align-dynamic-height-elements)
 
 [[Section 6.15: Horizontal and Vertical centering using table
-layout]{.underline}
+layout]
 [55](#section-6.15-horizontal-and-vertical-centering-using-table-layout)](#section-6.15-horizontal-and-vertical-centering-using-table-layout)
 
-[**[Chapter 7: The Box Model]{.underline}**
+[**[Chapter 7: The Box Model]**
 [57](#chapter-7-the-box-model)](#chapter-7-the-box-model)
 
-[[Section 7.1: What is the Box Model?]{.underline}
+[[Section 7.1: What is the Box Model?]
 [57](#section-7.1-what-is-the-box-model)](#section-7.1-what-is-the-box-model)
 
-[[Section 7.2: box-sizing]{.underline}
+[[Section 7.2: box-sizing]
 [58](#section-7.2-box-sizing)](#section-7.2-box-sizing)
 
-[**[Chapter 8: Margins]{.underline}**
+[**[Chapter 8: Margins]**
 [60](#chapter-8-margins)](#chapter-8-margins)
 
-[[Section 8.1: Margin Collapsing]{.underline}
+[[Section 8.1: Margin Collapsing]
 [60](#section-8.1-margin-collapsing)](#section-8.1-margin-collapsing)
 
-[[Section 8.2: Apply Margin on a Given Side]{.underline}
+[[Section 8.2: Apply Margin on a Given Side]
 [62](#section-8.2-apply-margin-on-a-given-side)](#section-8.2-apply-margin-on-a-given-side)
 
-[[Section 8.3: Margin property simplification]{.underline}
+[[Section 8.3: Margin property simplification]
 [63](#section-8.3-margin-property-simplification)](#section-8.3-margin-property-simplification)
 
 [[Section 8.4: Horizontally center elements on a page using
-margin]{.underline}
+margin]
 [63](#section-8.4-horizontally-center-elements-on-a-page-using-margin)](#section-8.4-horizontally-center-elements-on-a-page-using-margin)
 
-[[Section 8.5: Example 1:]{.underline}
+[[Section 8.5: Example 1:]
 [64](#section-8.5-example-1)](#section-8.5-example-1)
 
-[[Section 8.6: Negative margins]{.underline}
+[[Section 8.6: Negative margins]
 [64](#section-8.6-negative-margins)](#section-8.6-negative-margins)
 
-[**[Chapter 9: Padding]{.underline}**
+[**[Chapter 9: Padding]**
 [65](#chapter-9-padding)](#chapter-9-padding)
 
-[[Section 9.1: Padding Shorthand]{.underline}
+[[Section 9.1: Padding Shorthand]
 [65](#section-9.1-padding-shorthand)](#section-9.1-padding-shorthand)
 
-[[Section 9.2: Padding on a given side]{.underline}
+[[Section 9.2: Padding on a given side]
 [66](#section-9.2-padding-on-a-given-side)](#section-9.2-padding-on-a-given-side)
 
-[**[Chapter 10: Border]{.underline}**
+[**[Chapter 10: Border]**
 [66](#chapter-10-border)](#chapter-10-border)
 
-[[Section 10.1: border-radius]{.underline}
+[[Section 10.1: border-radius]
 [66](#section-10.1-border-radius)](#section-10.1-border-radius)
 
-[[Section 10.2: border-style]{.underline}
+[[Section 10.2: border-style]
 [67](#section-10.2-border-style)](#section-10.2-border-style)
 
-[[Section 10.3: Multiple Borders]{.underline}
+[[Section 10.3: Multiple Borders]
 [68](#section-10.3-multiple-borders)](#section-10.3-multiple-borders)
 
-[[Section 10.4: border (shorthands)]{.underline}
+[[Section 10.4: border (shorthands)]
 [69](#section-10.4-border-shorthands)](#section-10.4-border-shorthands)
 
-[[Section 10.5: border-collapse]{.underline}
+[[Section 10.5: border-collapse]
 [70](#section-10.5-border-collapse)](#section-10.5-border-collapse)
 
-[[Section 10.6: border-image]{.underline}
+[[Section 10.6: border-image]
 [70](#section-10.6-border-image)](#section-10.6-border-image)
 
 [[Section 10.7: Creating a multi-colored border using
-border-image]{.underline}
+border-image]
 [70](#section-10.7-creating-a-multi-colored-border-using-borderimage)](#section-10.7-creating-a-multi-colored-border-using-borderimage)
 
-[[Section 10.8: border-\[left\|right\|top\|bottom\]]{.underline}
+[[Section 10.8: border-\[left\|right\|top\|bottom\]]
 [71](#section-10.8-border-leftrighttopbottom)](#section-10.8-border-leftrighttopbottom)
 
-[**[Chapter 11: Outlines]{.underline}**
+[**[Chapter 11: Outlines]**
 [71](#chapter-11-outlines)](#chapter-11-outlines)
 
-[[Section 11.1: Overview]{.underline}
+[[Section 11.1: Overview]
 [72](#section-11.1-overview)](#section-11.1-overview)
 
-[[Section 11.2: outline-style]{.underline}
+[[Section 11.2: outline-style]
 [72](#section-11.2-outline-style)](#section-11.2-outline-style)
 
-[**[Chapter 12: Overflow]{.underline}**
+[**[Chapter 12: Overflow]**
 [73](#chapter-12-overflow)](#chapter-12-overflow)
 
-[[Section 12.1: overflow-wrap]{.underline}
+[[Section 12.1: overflow-wrap]
 [73](#section-12.1-overflow-wrap)](#section-12.1-overflow-wrap)
 
-[[Section 12.2: overflow-x and overflow-y]{.underline}
+[[Section 12.2: overflow-x and overflow-y]
 [74](#section-12.2-overflow-x-and-overflow-y)](#section-12.2-overflow-x-and-overflow-y)
 
-[[Section 12.3: overflow: scroll]{.underline}
+[[Section 12.3: overflow: scroll]
 [75](#section-12.3-overflow-scroll)](#section-12.3-overflow-scroll)
 
-[[Section 12.4: overflow: visible]{.underline}
+[[Section 12.4: overflow: visible]
 [75](#section-12.4-overflow-visible)](#section-12.4-overflow-visible)
 
 [[Section 12.5: Block Formatting Context Created with
-Overflow]{.underline}
+Overflow]
 [76](#section-12.5-block-formatting-context-created-with-overflow)](#section-12.5-block-formatting-context-created-with-overflow)
 
-[**[Chapter 13: Media Queries]{.underline}**
+[**[Chapter 13: Media Queries]**
 [78](#chapter-13-media-queries)](#chapter-13-media-queries)
 
-[[Section 13.1: Terminology and Structure]{.underline}
+[[Section 13.1: Terminology and Structure]
 [78](#section-13.1-terminology-and-structure)](#section-13.1-terminology-and-structure)
 
-[[Section 13.2: Basic Example]{.underline}
+[[Section 13.2: Basic Example]
 [79](#section-13.2-basic-example)](#section-13.2-basic-example)
 
-[[Section 13.3: mediatype]{.underline}
+[[Section 13.3: mediatype]
 [79](#section-13.3-mediatype)](#section-13.3-mediatype)
 
 [[Section 13.4: Media Queries for Retina and Non Retina
-Screens]{.underline}
+Screens]
 [80](#section-13.4-media-queries-for-retina-and-non-retina-screens)](#section-13.4-media-queries-for-retina-and-non-retina-screens)
 
-[[Section 13.5: Width vs Viewport]{.underline}
+[[Section 13.5: Width vs Viewport]
 [80](#section-13.5-width-vs-viewport)](#section-13.5-width-vs-viewport)
 
 [[Section 13.6: Using Media Queries to Target Dierent Screen
-Sizes]{.underline}
+Sizes]
 [81](#section-13.6-using-media-queries-to-target-dierent-screen-sizes)](#section-13.6-using-media-queries-to-target-dierent-screen-sizes)
 
-[[Section 13.7: Use on link tag]{.underline}
+[[Section 13.7: Use on link tag]
 [81](#section-13.7-use-on-link-tag)](#section-13.7-use-on-link-tag)
 
-[[Section 13.8: Media queries and IE8]{.underline}
+[[Section 13.8: Media queries and IE8]
 [82](#section-13.8-media-queries-and-ie8)](#section-13.8-media-queries-and-ie8)
 
-[**[Chapter 14: Floats]{.underline}**
+[**[Chapter 14: Floats]**
 [82](#chapter-14-floats)](#chapter-14-floats)
 
-[[Section 14.1: Float an Image Within Text]{.underline}
+[[Section 14.1: Float an Image Within Text]
 [82](#section-14.1-float-an-image-within-text)](#section-14.1-float-an-image-within-text)
 
-[[Section 14.2: clear property]{.underline}
+[[Section 14.2: clear property]
 [83](#section-14.2-clear-property)](#section-14.2-clear-property)
 
-[[Section 14.3: Clearfix]{.underline}
+[[Section 14.3: Clearfix]
 [84](#section-14.3-clearfix)](#section-14.3-clearfix)
 
-[[Section 14.4: In-line DIV using float]{.underline}
+[[Section 14.4: In-line DIV using float]
 [85](#section-14.4-in-line-div-using-float)](#section-14.4-in-line-div-using-float)
 
-[[Section 14.5: Use of overflow property to clear floats]{.underline}
+[[Section 14.5: Use of overflow property to clear floats]
 [87](#section-14.5-use-of-overflow-property-to-clear-floats)](#section-14.5-use-of-overflow-property-to-clear-floats)
 
-[[Section 14.6: Simple Two Fixed-Width Column Layout]{.underline}
+[[Section 14.6: Simple Two Fixed-Width Column Layout]
 [87](#section-14.6-simple-two-fixed-width-column-layout)](#section-14.6-simple-two-fixed-width-column-layout)
 
-[[Section 14.7: Simple Three Fixed-Width Column Layout]{.underline}
+[[Section 14.7: Simple Three Fixed-Width Column Layout]
 [88](#section-14.7-simple-three-fixed-width-column-layout)](#section-14.7-simple-three-fixed-width-column-layout)
 
-[[Section 14.8: Two-Column Lazy/Greedy Layout]{.underline}
+[[Section 14.8: Two-Column Lazy/Greedy Layout]
 [88](#section-14.8-two-column-lazygreedy-layout)](#section-14.8-two-column-lazygreedy-layout)
 
-[**[Chapter 15: Typography]{.underline}**
+[**[Chapter 15: Typography]**
 [89](#chapter-15-typography)](#chapter-15-typography)
 
-[[Section 15.1: The Font Shorthand]{.underline}
+[[Section 15.1: The Font Shorthand]
 [89](#section-15.1-the-font-shorthand)](#section-15.1-the-font-shorthand)
 
-[[Section 15.2: Quotes]{.underline}
+[[Section 15.2: Quotes]
 [90](#section-15.2-quotes)](#section-15.2-quotes)
 
-[[Section 15.3: Font Size]{.underline}
+[[Section 15.3: Font Size]
 [90](#section-15.3-font-size)](#section-15.3-font-size)
 
-[[Section 15.4: Text Direction]{.underline}
+[[Section 15.4: Text Direction]
 [91](#section-15.4-text-direction)](#section-15.4-text-direction)
 
-[[Section 15.5: Font Stacks]{.underline}
+[[Section 15.5: Font Stacks]
 [91](#section-15.5-font-stacks)](#section-15.5-font-stacks)
 
-[[Section 15.6: Text Overflow]{.underline}
+[[Section 15.6: Text Overflow]
 [91](#section-15.6-text-overflow)](#section-15.6-text-overflow)
 
-[[Section 15.7: Text Shadow]{.underline}
+[[Section 15.7: Text Shadow]
 [92](#section-15.7-text-shadow)](#section-15.7-text-shadow)
 
-[[Section 15.8: Text Transform]{.underline}
+[[Section 15.8: Text Transform]
 [92](#section-15.8-text-transform)](#section-15.8-text-transform)
 
-[[Section 15.9: Letter Spacing]{.underline}
+[[Section 15.9: Letter Spacing]
 [93](#section-15.9-letter-spacing)](#section-15.9-letter-spacing)
 
-[[Section 15.10: Text Indent]{.underline}
+[[Section 15.10: Text Indent]
 [93](#section-15.10-text-indent)](#section-15.10-text-indent)
 
-[[Section 15.11: Text Decoration]{.underline}
+[[Section 15.11: Text Decoration]
 [93](#section-15.11-text-decoration)](#section-15.11-text-decoration)
 
-[[Section 15.12: Word Spacing]{.underline}
+[[Section 15.12: Word Spacing]
 [94](#section-15.12-word-spacing)](#section-15.12-word-spacing)
 
-[[Section 15.13: Font Variant]{.underline}
+[[Section 15.13: Font Variant]
 [94](#section-15.13-font-variant)](#section-15.13-font-variant)
 
-[**[Chapter 16: Flexible Box Layout (Flexbox)]{.underline}**
+[**[Chapter 16: Flexible Box Layout (Flexbox)]**
 [96](#chapter-16-flexible-box-layout-flexbox)](#chapter-16-flexible-box-layout-flexbox)
 
 [[Section 16.1: Dynamic Vertical and Horizontal Centering (align-items,
-justify-content)]{.underline}
+justify-content)]
 [96](#section-16.1-dynamic-vertical-and-horizontal-centering-alignitems-justify-content)](#section-16.1-dynamic-vertical-and-horizontal-centering-alignitems-justify-content)
 
-[[Section 16.2: Sticky Variable-Height Footer]{.underline}
+[[Section 16.2: Sticky Variable-Height Footer]
 [102](#section-16.2-sticky-variable-height-footer)](#section-16.2-sticky-variable-height-footer)
 
-[[Section 16.3: Optimally fit elements to their container]{.underline}
+[[Section 16.3: Optimally fit elements to their container]
 [103](#section-16.3-optimally-fit-elements-to-their-container)](#section-16.3-optimally-fit-elements-to-their-container)
 
-[[Section 16.4: Holy Grail Layout using Flexbox]{.underline}
+[[Section 16.4: Holy Grail Layout using Flexbox]
 [104](#section-16.4-holy-grail-layout-using-flexbox)](#section-16.4-holy-grail-layout-using-flexbox)
 
 [[Section 16.5: Perfectly aligned buttons inside cards with
-flexbox]{.underline}
+flexbox]
 [105](#section-16.5-perfectly-aligned-buttons-inside-cards-with-flexbox)](#section-16.5-perfectly-aligned-buttons-inside-cards-with-flexbox)
 
-[[Section 16.6: Same height on nested containers]{.underline}
+[[Section 16.6: Same height on nested containers]
 [107](#section-16.6-same-height-on-nested-containers)](#section-16.6-same-height-on-nested-containers)
 
-[**[Chapter 17: Cascading and Specificity]{.underline}**
+[**[Chapter 17: Cascading and Specificity]**
 [108](#chapter-17-cascading-and-specificity)](#chapter-17-cascading-and-specificity)
 
-[[Section 17.1: Calculating Selector Specificity]{.underline}
+[[Section 17.1: Calculating Selector Specificity]
 [108](#section-17.1-calculating-selector-specificity)](#section-17.1-calculating-selector-specificity)
 
-[[Section 17.2: The !important declaration]{.underline}
+[[Section 17.2: The !important declaration]
 [110](#section-17.2-the-important-declaration)](#section-17.2-the-important-declaration)
 
-[[Section 17.3: Cascading]{.underline}
+[[Section 17.3: Cascading]
 [111](#section-17.3-cascading)](#section-17.3-cascading)
 
-[[Section 17.4: More complex specificity example]{.underline}
+[[Section 17.4: More complex specificity example]
 [112](#section-17.4-more-complex-specificity-example)](#section-17.4-more-complex-specificity-example)
 
-[**[Chapter 18: Colors]{.underline}**
+[**[Chapter 18: Colors]**
 [113](#chapter-18-colors)](#chapter-18-colors)
 
-[[Section 18.1: currentColor]{.underline}
+[[Section 18.1: currentColor]
 [113](#section-18.1-currentcolor)](#section-18.1-currentcolor)
 
-[[Section 18.2: Color Keywords]{.underline}
+[[Section 18.2: Color Keywords]
 [114](#section-18.2-color-keywords)](#section-18.2-color-keywords)
 
-[[Section 18.3: Hexadecimal Value]{.underline}
+[[Section 18.3: Hexadecimal Value]
 [120](#section-18.3-hexadecimal-value)](#section-18.3-hexadecimal-value)
 
-[[Section 18.4: rgb() Notation]{.underline}
+[[Section 18.4: rgb() Notation]
 [121](#section-18.4-rgb-notation)](#section-18.4-rgb-notation)
 
-[[Section 18.5: rgba() Notation]{.underline}
+[[Section 18.5: rgba() Notation]
 [122](#section-18.5-rgba-notation)](#section-18.5-rgba-notation)
 
-[[Section 18.6: hsl() Notation]{.underline}
+[[Section 18.6: hsl() Notation]
 [122](#section-18.6-hsl-notation)](#section-18.6-hsl-notation)
 
-[[Section 18.7: hsla() Notation]{.underline}
+[[Section 18.7: hsla() Notation]
 [123](#section-18.7-hsla-notation)](#section-18.7-hsla-notation)
 
-[**[Chapter 19: Opacity]{.underline}**
+[**[Chapter 19: Opacity]**
 [125](#chapter-19-opacity)](#chapter-19-opacity)
 
-[[Section 19.1: Opacity Property]{.underline}
+[[Section 19.1: Opacity Property]
 [125](#section-19.1-opacity-property)](#section-19.1-opacity-property)
 
-[[Section 19.2: IE Compatibility for \`opacity\`]{.underline}
+[[Section 19.2: IE Compatibility for \`opacity\`]
 [125](#section-19.2-ie-compatibility-for-opacity)](#section-19.2-ie-compatibility-for-opacity)
 
-[**[Chapter 20: Length Units]{.underline}**
+[**[Chapter 20: Length Units]**
 [125](#chapter-20-length-units)](#chapter-20-length-units)
 
 [[Section 20.1: Creating scalable elements using rems and
-ems]{.underline}
+ems]
 [125](#section-20.1-creating-scalable-elements-using-rems-and-ems)](#section-20.1-creating-scalable-elements-using-rems-and-ems)
 
-[[Section 20.2: Font size with rem]{.underline}
+[[Section 20.2: Font size with rem]
 [126](#section-20.2-font-size-with-rem)](#section-20.2-font-size-with-rem)
 
-[[Section 20.3: vmin and vmax]{.underline}
+[[Section 20.3: vmin and vmax]
 [127](#section-20.3-vmin-and-vmax)](#section-20.3-vmin-and-vmax)
 
-[[Section 20.4: vh and vw]{.underline}
+[[Section 20.4: vh and vw]
 [127](#section-20.4-vh-and-vw)](#section-20.4-vh-and-vw)
 
-[[Section 20.5: using percent %]{.underline}
+[[Section 20.5: using percent %]
 [128](#section-20.5-using-percent)](#section-20.5-using-percent)
 
-[**[Chapter 21: Pseudo-Elements]{.underline}**
+[**[Chapter 21: Pseudo-Elements]**
 [128](#chapter-21-pseudo-elements)](#chapter-21-pseudo-elements)
 
-[[Section 21.1: Pseudo-Elements]{.underline}
+[[Section 21.1: Pseudo-Elements]
 [129](#section-21.1-pseudo-elements)](#section-21.1-pseudo-elements)
 
-[[Section 21.2: Pseudo-Elements in Lists]{.underline}
+[[Section 21.2: Pseudo-Elements in Lists]
 [129](#section-21.2-pseudo-elements-in-lists)](#section-21.2-pseudo-elements-in-lists)
 
-[**[Chapter 22: Positioning]{.underline}**
+[**[Chapter 22: Positioning]**
 [130](#chapter-22-positioning)](#chapter-22-positioning)
 
-[[Section 22.1: Overlapping Elements with z-index]{.underline}
+[[Section 22.1: Overlapping Elements with z-index]
 [130](#section-22.1-overlapping-elements-with-z-index)](#section-22.1-overlapping-elements-with-z-index)
 
-[[Section 22.2: Absolute Position]{.underline}
+[[Section 22.2: Absolute Position]
 [132](#section-22.2-absolute-position)](#section-22.2-absolute-position)
 
-[[Section 22.3: Fixed position]{.underline}
+[[Section 22.3: Fixed position]
 [132](#section-22.3-fixed-position)](#section-22.3-fixed-position)
 
-[[Section 22.4: Relative Position]{.underline}
+[[Section 22.4: Relative Position]
 [132](#section-22.4-relative-position)](#section-22.4-relative-position)
 
-[[Section 22.5: Static positioning]{.underline}
+[[Section 22.5: Static positioning]
 [133](#section-22.5-static-positioning)](#section-22.5-static-positioning)
 
-[**[Chapter 23: Layout Control]{.underline}**
+[**[Chapter 23: Layout Control]**
 [134](#chapter-23-layout-control)](#chapter-23-layout-control)
 
-[[Section 23.1: The display property]{.underline}
+[[Section 23.1: The display property]
 [134](#section-23.1-the-display-property)](#section-23.1-the-display-property)
 
-[[Section 23.2: To get old table structure using div]{.underline}
+[[Section 23.2: To get old table structure using div]
 [136](#section-23.2-to-get-old-table-structure-using-div)](#section-23.2-to-get-old-table-structure-using-div)
 
-[**[Chapter 24: Grid]{.underline}**
+[**[Chapter 24: Grid]**
 [137](#chapter-24-grid)](#chapter-24-grid)
 
-[[Section 24.1: Basic Example]{.underline}
+[[Section 24.1: Basic Example]
 [137](#section-24.1-basic-example)](#section-24.1-basic-example)
 
-[**[Chapter 25: Tables]{.underline}**
+[**[Chapter 25: Tables]**
 [139](#chapter-25-tables)](#chapter-25-tables)
 
-[[Section 25.1: table-layout]{.underline}
+[[Section 25.1: table-layout]
 [139](#section-25.1-table-layout)](#section-25.1-table-layout)
 
-[[Section 25.2: empty-cells]{.underline}
+[[Section 25.2: empty-cells]
 [139](#section-25.2-empty-cells)](#section-25.2-empty-cells)
 
-[[Section 25.3: border-collapse]{.underline}
+[[Section 25.3: border-collapse]
 [139](#section-25.3-border-collapse)](#section-25.3-border-collapse)
 
-[[Section 25.4: border-spacing]{.underline}
+[[Section 25.4: border-spacing]
 [140](#section-25.4-border-spacing)](#section-25.4-border-spacing)
 
-[[Section 25.5: caption-side]{.underline}
+[[Section 25.5: caption-side]
 [140](#section-25.5-caption-side)](#section-25.5-caption-side)
 
-[**[Chapter 26: Transitions]{.underline}**
+[**[Chapter 26: Transitions]**
 [140](#chapter-26-transitions)](#chapter-26-transitions)
 
-[[Section 26.1: Transition shorthand]{.underline}
+[[Section 26.1: Transition shorthand]
 [141](#section-26.1-transition-shorthand)](#section-26.1-transition-shorthand)
 
-[[Section 26.2: cubic-bezier]{.underline}
+[[Section 26.2: cubic-bezier]
 [141](#section-26.2-cubic-bezier)](#section-26.2-cubic-bezier)
 
-[[Section 26.3: Transition (longhand)]{.underline}
+[[Section 26.3: Transition (longhand)]
 [142](#section-26.3-transition-longhand)](#section-26.3-transition-longhand)
 
-[**[Chapter 27: Animations]{.underline}**
+[**[Chapter 27: Animations]**
 [144](#chapter-27-animations)](#chapter-27-animations)
 
-[[Section 27.1: Animations with keyframes]{.underline}
+[[Section 27.1: Animations with keyframes]
 [144](#section-27.1-animations-with-keyframes)](#section-27.1-animations-with-keyframes)
 
-[[Section 27.2: Animations with the transition property]{.underline}
+[[Section 27.2: Animations with the transition property]
 [145](#section-27.2-animations-with-the-transition-property)](#section-27.2-animations-with-the-transition-property)
 
-[[Section 27.3: Syntax Examples]{.underline}
+[[Section 27.3: Syntax Examples]
 [146](#section-27.3-syntax-examples)](#section-27.3-syntax-examples)
 
 [[Section 27.4: Increasing Animation Performance Using the
-\`will-change\` Attribute]{.underline}
+\`will-change\` Attribute]
 [147](#section-27.4-increasing-animation-performance-using-the-will-change-attribute)](#section-27.4-increasing-animation-performance-using-the-will-change-attribute)
 
-[**[Chapter 28: 2D Transforms]{.underline}**
+[**[Chapter 28: 2D Transforms]**
 [147](#chapter-28-2d-transforms)](#chapter-28-2d-transforms)
 
-[[Section 28.1: Rotate]{.underline}
+[[Section 28.1: Rotate]
 [148](#section-28.1-rotate)](#section-28.1-rotate)
 
-[[Section 28.2: Scale]{.underline}
+[[Section 28.2: Scale]
 [148](#section-28.2-scale)](#section-28.2-scale)
 
-[[Section 28.3: Skew]{.underline}
+[[Section 28.3: Skew]
 [148](#section-28.3-skew)](#section-28.3-skew)
 
-[[Section 28.4: Multiple transforms]{.underline}
+[[Section 28.4: Multiple transforms]
 [149](#section-28.4-multiple-transforms)](#section-28.4-multiple-transforms)
 
-[[Section 28.5: Translate]{.underline}
+[[Section 28.5: Translate]
 [149](#section-28.5-translate)](#section-28.5-translate)
 
-[[Section 28.6: Transform Origin]{.underline}
+[[Section 28.6: Transform Origin]
 [150](#section-28.6-transform-origin)](#section-28.6-transform-origin)
 
-[**[Chapter 29: 3D Transforms]{.underline}**
+[**[Chapter 29: 3D Transforms]**
 [151](#chapter-29-3d-transforms)](#chapter-29-3d-transforms)
 
 [[Section 29.1: Compass pointer or needle shape using 3D
-transforms]{.underline}
+transforms]
 [151](#section-29.1-compass-pointer-or-needle-shape-using-3d-transforms)](#section-29.1-compass-pointer-or-needle-shape-using-3d-transforms)
 
-[[Section 29.2: 3D text eect with shadow]{.underline}
+[[Section 29.2: 3D text eect with shadow]
 [152](#section-29.2-3d-text-eect-with-shadow)](#section-29.2-3d-text-eect-with-shadow)
 
-[[Section 29.3: backface-visibility]{.underline}
+[[Section 29.3: backface-visibility]
 [153](#section-29.3-backface-visibility)](#section-29.3-backface-visibility)
 
-[[Section 29.4: 3D cube]{.underline}
+[[Section 29.4: 3D cube]
 [154](#section-29.4-3d-cube)](#section-29.4-3d-cube)
 
-[**[Chapter 30: Filter Property]{.underline}**
+[**[Chapter 30: Filter Property]**
 [155](#chapter-30-filter-property)](#chapter-30-filter-property)
 
-[[Section 30.1: Blur]{.underline}
+[[Section 30.1: Blur]
 [156](#section-30.1-blur)](#section-30.1-blur)
 
 [[Section 30.2: Drop Shadow (use box-shadow instead if
-possible)]{.underline}
+possible)]
 [156](#section-30.2-drop-shadow-use-box-shadow-instead-if-possible)](#section-30.2-drop-shadow-use-box-shadow-instead-if-possible)
 
-[[Section 30.3: Hue Rotate]{.underline}
+[[Section 30.3: Hue Rotate]
 [156](#section-30.3-hue-rotate)](#section-30.3-hue-rotate)
 
-[[Section 30.4: Multiple Filter Values]{.underline}
+[[Section 30.4: Multiple Filter Values]
 [157](#section-30.4-multiple-filter-values)](#section-30.4-multiple-filter-values)
 
-[[Section 30.5: Invert Color]{.underline}
+[[Section 30.5: Invert Color]
 [157](#section-30.5-invert-color)](#section-30.5-invert-color)
 
-[**[Chapter 31: Cursor Styling]{.underline}**
+[**[Chapter 31: Cursor Styling]**
 [158](#chapter-31-cursor-styling)](#chapter-31-cursor-styling)
 
-[[Section 31.1: Changing cursor type]{.underline}
+[[Section 31.1: Changing cursor type]
 [158](#section-31.1-changing-cursor-type)](#section-31.1-changing-cursor-type)
 
-[[Section 31.2: pointer-events]{.underline}
+[[Section 31.2: pointer-events]
 [158](#section-31.2-pointer-events)](#section-31.2-pointer-events)
 
-[[Section 31.3: caret-color]{.underline}
+[[Section 31.3: caret-color]
 [159](#section-31.3-caret-color)](#section-31.3-caret-color)
 
-[**[Chapter 32: box-shadow]{.underline}**
+[**[Chapter 32: box-shadow]**
 [160](#chapter-32-box-shadow)](#chapter-32-box-shadow)
 
 [[Section 32.1: bottom-only drop shadow using a
-pseudo-element]{.underline}
+pseudo-element]
 [160](#section-32.1-bottom-only-drop-shadow-using-a-pseudoelement)](#section-32.1-bottom-only-drop-shadow-using-a-pseudoelement)
 
-[[Section 32.2: drop shadow]{.underline}
+[[Section 32.2: drop shadow]
 [161](#section-32.2-drop-shadow)](#section-32.2-drop-shadow)
 
-[[Section 32.3: inner drop shadow]{.underline}
+[[Section 32.3: inner drop shadow]
 [161](#section-32.3-inner-drop-shadow)](#section-32.3-inner-drop-shadow)
 
-[[Section 32.4: multiple shadows]{.underline}
+[[Section 32.4: multiple shadows]
 [162](#section-32.4-multiple-shadows)](#section-32.4-multiple-shadows)
 
-[**[Chapter 33: Shapes for Floats]{.underline}**
+[**[Chapter 33: Shapes for Floats]**
 [163](#chapter-33-shapes-for-floats)](#chapter-33-shapes-for-floats)
 
-[[Section 33.1: Shape Outside with Basic Shape -- circle()]{.underline}
+[[Section 33.1: Shape Outside with Basic Shape -- circle()]
 [163](#section-33.1-shape-outside-with-basic-shape-circle)](#section-33.1-shape-outside-with-basic-shape-circle)
 
-[[Section 33.2: Shape margin]{.underline}
+[[Section 33.2: Shape margin]
 [164](#section-33.2-shape-margin)](#section-33.2-shape-margin)
 
-[**[Chapter 34: List Styles]{.underline}**
+[**[Chapter 34: List Styles]**
 [166](#chapter-34-list-styles)](#chapter-34-list-styles)
 
-[[Section 34.1: Bullet Position]{.underline}
+[[Section 34.1: Bullet Position]
 [166](#section-34.1-bullet-position)](#section-34.1-bullet-position)
 
-[[Section 34.2: Removing Bullets / Numbers]{.underline}
+[[Section 34.2: Removing Bullets / Numbers]
 [166](#section-34.2-removing-bullets-numbers)](#section-34.2-removing-bullets-numbers)
 
-[[Section 34.3: Type of Bullet or Numbering]{.underline}
+[[Section 34.3: Type of Bullet or Numbering]
 [166](#section-34.3-type-of-bullet-or-numbering)](#section-34.3-type-of-bullet-or-numbering)
 
-[**[Chapter 35: Counters]{.underline}**
+[**[Chapter 35: Counters]**
 [168](#chapter-35-counters)](#chapter-35-counters)
 
 [[Section 35.1: Applying roman numerals styling to the counter
-output]{.underline}
+output]
 [168](#section-35.1-applying-roman-numerals-styling-to-the-counter-output)](#section-35.1-applying-roman-numerals-styling-to-the-counter-output)
 
-[[Section 35.2: Number each item using CSS Counter]{.underline}
+[[Section 35.2: Number each item using CSS Counter]
 [169](#section-35.2-number-each-item-using-css-counter)](#section-35.2-number-each-item-using-css-counter)
 
 [[Section 35.3: Implementing multi-level numbering using CSS
-counters]{.underline}
+counters]
 [170](#section-35.3-implementing-multi-level-numbering-using-css-counters)](#section-35.3-implementing-multi-level-numbering-using-css-counters)
 
-[**[Chapter 36: Functions]{.underline}**
+[**[Chapter 36: Functions]**
 [171](#chapter-36-functions)](#chapter-36-functions)
 
-[[Section 36.1: calc() function]{.underline}
+[[Section 36.1: calc() function]
 [171](#section-36.1-calc-function)](#section-36.1-calc-function)
 
-[[Section 36.2: attr() function]{.underline}
+[[Section 36.2: attr() function]
 [171](#section-36.2-attr-function)](#section-36.2-attr-function)
 
-[[Section 36.3: var() function]{.underline}
+[[Section 36.3: var() function]
 [171](#section-36.3-var-function)](#section-36.3-var-function)
 
-[[Section 36.4: radial-gradient() function]{.underline}
+[[Section 36.4: radial-gradient() function]
 [172](#section-36.4-radial-gradient-function)](#section-36.4-radial-gradient-function)
 
-[[Section 36.5: linear-gradient() function]{.underline}
+[[Section 36.5: linear-gradient() function]
 [172](#section-36.5-linear-gradient-function)](#section-36.5-linear-gradient-function)
 
-[**[Chapter 37: Custom Properties (Variables)]{.underline}**
+[**[Chapter 37: Custom Properties (Variables)]**
 [173](#chapter-37-custom-properties-variables)](#chapter-37-custom-properties-variables)
 
-[[Section 37.1: Variable Color]{.underline}
+[[Section 37.1: Variable Color]
 [173](#section-37.1-variable-color)](#section-37.1-variable-color)
 
-[[Section 37.2: Variable Dimensions]{.underline}
+[[Section 37.2: Variable Dimensions]
 [173](#section-37.2-variable-dimensions)](#section-37.2-variable-dimensions)
 
-[[Section 37.3: Variable Cascading]{.underline}
+[[Section 37.3: Variable Cascading]
 [173](#section-37.3-variable-cascading)](#section-37.3-variable-cascading)
 
-[[Section 37.4: Valid/Invalids]{.underline}
+[[Section 37.4: Valid/Invalids]
 [174](#section-37.4-validinvalids)](#section-37.4-validinvalids)
 
-[[Section 37.5: With media queries]{.underline}
+[[Section 37.5: With media queries]
 [175](#section-37.5-with-media-queries)](#section-37.5-with-media-queries)
 
-[**[Chapter 38: Single Element Shapes]{.underline}**
+[**[Chapter 38: Single Element Shapes]**
 [176](#chapter-38-single-element-shapes)](#chapter-38-single-element-shapes)
 
-[[Section 38.1: Trapezoid]{.underline}
+[[Section 38.1: Trapezoid]
 [176](#section-38.1-trapezoid)](#section-38.1-trapezoid)
 
-[[Section 38.2: Triangles]{.underline}
+[[Section 38.2: Triangles]
 [177](#section-38.2-triangles)](#section-38.2-triangles)
 
-[[Section 38.3: Circles and Ellipses]{.underline}
+[[Section 38.3: Circles and Ellipses]
 [180](#section-38.3-circles-and-ellipses)](#section-38.3-circles-and-ellipses)
 
-[[Section 38.4: Bursts]{.underline}
+[[Section 38.4: Bursts]
 [181](#section-38.4-bursts)](#section-38.4-bursts)
 
-[[Section 38.5: Square]{.underline}
+[[Section 38.5: Square]
 [183](#section-38.5-square)](#section-38.5-square)
 
-[[Section 38.6: Cube]{.underline}
+[[Section 38.6: Cube]
 [183](#section-38.6-cube)](#section-38.6-cube)
 
-[[Section 38.7: Pyramid]{.underline}
+[[Section 38.7: Pyramid]
 [184](#section-38.7-pyramid)](#section-38.7-pyramid)
 
-[**[Chapter 39: Columns]{.underline}**
+[**[Chapter 39: Columns]**
 [186](#chapter-39-columns)](#chapter-39-columns)
 
-[[Section 39.1: Simple Example (column-count)]{.underline}
+[[Section 39.1: Simple Example (column-count)]
 [186](#section-39.1-simple-example-column-count)](#section-39.1-simple-example-column-count)
 
-[[Section 39.2: Column Width]{.underline}
+[[Section 39.2: Column Width]
 [186](#section-39.2-column-width)](#section-39.2-column-width)
 
-[**[Chapter 40: Multiple columns]{.underline}**
+[**[Chapter 40: Multiple columns]**
 [188](#chapter-40-multiple-columns)](#chapter-40-multiple-columns)
 
-[[Section 40.1: Create Multiple Columns]{.underline}
+[[Section 40.1: Create Multiple Columns]
 [188](#section-40.1-create-multiple-columns)](#section-40.1-create-multiple-columns)
 
-[[Section 40.2: Basic example]{.underline}
+[[Section 40.2: Basic example]
 [188](#section-40.2-basic-example)](#section-40.2-basic-example)
 
-[**[Chapter 41: Inline-Block Layout]{.underline}**
+[**[Chapter 41: Inline-Block Layout]**
 [188](#chapter-41-inline-block-layout)](#chapter-41-inline-block-layout)
 
-[[Section 41.1: Justified navigation bar]{.underline}
+[[Section 41.1: Justified navigation bar]
 [188](#section-41.1-justified-navigation-bar)](#section-41.1-justified-navigation-bar)
 
-[**[Chapter 42: Inheritance]{.underline}**
+[**[Chapter 42: Inheritance]**
 [189](#chapter-42-inheritance)](#chapter-42-inheritance)
 
-[[Section 42.1: Automatic inheritance]{.underline}
+[[Section 42.1: Automatic inheritance]
 [189](#section-42.1-automatic-inheritance)](#section-42.1-automatic-inheritance)
 
-[[Section 42.2: Enforced inheritance]{.underline}
+[[Section 42.2: Enforced inheritance]
 [190](#section-42.2-enforced-inheritance)](#section-42.2-enforced-inheritance)
 
-[**[Chapter 43: CSS Image Sprites]{.underline}**
+[**[Chapter 43: CSS Image Sprites]**
 [190](#chapter-43-css-image-sprites)](#chapter-43-css-image-sprites)
 
-[[Section 43.1: A Basic Implementation]{.underline}
+[[Section 43.1: A Basic Implementation]
 [190](#section-43.1-a-basic-implementation)](#section-43.1-a-basic-implementation)
 
-[**[Chapter 44: Clipping and Masking]{.underline}**
+[**[Chapter 44: Clipping and Masking]**
 [191](#chapter-44-clipping-and-masking)](#chapter-44-clipping-and-masking)
 
 [[Section 44.1: Clipping and Masking: Overview and
-Dierence]{.underline}
+Dierence]
 [192](#section-44.1-clipping-and-masking-overview-and-dierence)](#section-44.1-clipping-and-masking-overview-and-dierence)
 
 [[Section 44.2: Simple mask that fades an image from solid to
-transparent]{.underline}
+transparent]
 [193](#section-44.2-simple-mask-that-fades-an-image-from-solid-to-transparent)](#section-44.2-simple-mask-that-fades-an-image-from-solid-to-transparent)
 
-[[Section 44.3: Clipping (Circle)]{.underline}
+[[Section 44.3: Clipping (Circle)]
 [194](#section-44.3-clipping-circle)](#section-44.3-clipping-circle)
 
-[[Section 44.4: Clipping (Polygon)]{.underline}
+[[Section 44.4: Clipping (Polygon)]
 [195](#section-44.4-clipping-polygon)](#section-44.4-clipping-polygon)
 
 [[Section 44.5: Using masks to cut a hole in the middle of an
-image]{.underline}
+image]
 [195](#section-44.5-using-masks-to-cut-a-hole-in-the-middle-of-an-image)](#section-44.5-using-masks-to-cut-a-hole-in-the-middle-of-an-image)
 
 [[Section 44.6: Using masks to create images with irregular
-shapes]{.underline}
+shapes]
 [196](#section-44.6-using-masks-to-create-images-with-irregular-shapes)](#section-44.6-using-masks-to-create-images-with-irregular-shapes)
 
-[**[Chapter 45: Fragmentation]{.underline}**
+[**[Chapter 45: Fragmentation]**
 [198](#chapter-45-fragmentation)](#chapter-45-fragmentation)
 
-[[Section 45.1: Media print page-break]{.underline}
+[[Section 45.1: Media print page-break]
 [198](#section-45.1-media-print-page-break)](#section-45.1-media-print-page-break)
 
-[**[Chapter 46: CSS Object Model (CSSOM)]{.underline}**
+[**[Chapter 46: CSS Object Model (CSSOM)]**
 [198](#chapter-46-css-object-model-cssom)](#chapter-46-css-object-model-cssom)
 
 [[Section 46.1: Adding a background-image rule via the
-CSSOM]{.underline}
+CSSOM]
 [198](#section-46.1-adding-a-background-image-rule-via-the-cssom)](#section-46.1-adding-a-background-image-rule-via-the-cssom)
 
-[[Section 46.2: Introduction]{.underline}
+[[Section 46.2: Introduction]
 [198](#section-46.2-introduction)](#section-46.2-introduction)
 
-[**[Chapter 47: Feature Queries]{.underline}**
+[**[Chapter 47: Feature Queries]**
 [199](#chapter-47-feature-queries)](#chapter-47-feature-queries)
 
-[[Section 47.1: Basic \@supports usage]{.underline}
+[[Section 47.1: Basic \@supports usage]
 [199](#section-47.1-basic-supports-usage)](#section-47.1-basic-supports-usage)
 
-[[Section 47.2: Chaining feature detections]{.underline}
+[[Section 47.2: Chaining feature detections]
 [199](#section-47.2-chaining-feature-detections)](#section-47.2-chaining-feature-detections)
 
-[**[Chapter 48: Stacking Context]{.underline}**
+[**[Chapter 48: Stacking Context]**
 [200](#chapter-48-stacking-context)](#chapter-48-stacking-context)
 
-[[Section 48.1: Stacking Context]{.underline}
+[[Section 48.1: Stacking Context]
 [200](#section-48.1-stacking-context)](#section-48.1-stacking-context)
 
-[**[Chapter 49: Block Formatting Contexts]{.underline}**
+[**[Chapter 49: Block Formatting Contexts]**
 [205](#chapter-49-block-formatting-contexts)](#chapter-49-block-formatting-contexts)
 
 [[Section 49.1: Using the overflow property with a value dierent to
-visible]{.underline}
+visible]
 [205](#section-49.1-using-the-overflow-property-with-a-value-dierent-to-visible)](#section-49.1-using-the-overflow-property-with-a-value-dierent-to-visible)
 
-[**[Chapter 50: Vertical Centering]{.underline}**
+[**[Chapter 50: Vertical Centering]**
 [205](#chapter-50-vertical-centering)](#chapter-50-vertical-centering)
 
-[[Section 50.1: Centering with display: table]{.underline}
+[[Section 50.1: Centering with display: table]
 [205](#section-50.1-centering-with-display-table)](#section-50.1-centering-with-display-table)
 
-[[Section 50.2: Centering with Flexbox]{.underline}
+[[Section 50.2: Centering with Flexbox]
 [206](#section-50.2-centering-with-flexbox)](#section-50.2-centering-with-flexbox)
 
-[[Section 50.3: Centering with Transform]{.underline}
+[[Section 50.3: Centering with Transform]
 [206](#section-50.3-centering-with-transform)](#section-50.3-centering-with-transform)
 
-[[Section 50.4: Centering Text with Line Height]{.underline}
+[[Section 50.4: Centering Text with Line Height]
 [207](#section-50.4-centering-text-with-line-height)](#section-50.4-centering-text-with-line-height)
 
-[[Section 50.5: Centering with Position: absolute]{.underline}
+[[Section 50.5: Centering with Position: absolute]
 [207](#section-50.5-centering-with-position-absolute)](#section-50.5-centering-with-position-absolute)
 
-[[Section 50.6: Centering with pseudo element]{.underline}
+[[Section 50.6: Centering with pseudo element]
 [208](#section-50.6-centering-with-pseudo-element)](#section-50.6-centering-with-pseudo-element)
 
-[**[Chapter 51: Object Fit and Placement]{.underline}**
+[**[Chapter 51: Object Fit and Placement]**
 [209](#chapter-51-object-fit-and-placement)](#chapter-51-object-fit-and-placement)
 
-[[Section 51.1: object-fit]{.underline}
+[[Section 51.1: object-fit]
 [209](#section-51.1-object-fit)](#section-51.1-object-fit)
 
-[**[Chapter 52: CSS design patterns]{.underline}**
+[**[Chapter 52: CSS design patterns]**
 [212](#chapter-52-css-design-patterns)](#chapter-52-css-design-patterns)
 
-[[Section 52.1: BEM]{.underline}
+[[Section 52.1: BEM]
 [212](#section-52.1-bem)](#section-52.1-bem)
 
-[**[Chapter 53: Browser Support & Prefixes]{.underline}**
+[**[Chapter 53: Browser Support & Prefixes]**
 [214](#chapter-53-browser-support-prefixes)](#chapter-53-browser-support-prefixes)
 
-[[Section 53.1: Transitions]{.underline}
+[[Section 53.1: Transitions]
 [214](#section-53.1-transitions)](#section-53.1-transitions)
 
-[[Section 53.2: Transform]{.underline}
+[[Section 53.2: Transform]
 [214](#section-53.2-transform)](#section-53.2-transform)
 
-[**[Chapter 54: Normalizing Browser Styles]{.underline}**
+[**[Chapter 54: Normalizing Browser Styles]**
 [214](#chapter-54-normalizing-browser-styles)](#chapter-54-normalizing-browser-styles)
 
-[[Section 54.1: normalize.css]{.underline}
+[[Section 54.1: normalize.css]
 [214](#section-54.1-normalize.css)](#section-54.1-normalize.css)
 
-[[Section 54.2: Approaches and Examples]{.underline}
+[[Section 54.2: Approaches and Examples]
 [215](#section-54.2-approaches-and-examples)](#section-54.2-approaches-and-examples)
 
-[**[Chapter 55: Internet Explorer Hacks]{.underline}**
+[**[Chapter 55: Internet Explorer Hacks]**
 [217](#chapter-55-internet-explorer-hacks)](#chapter-55-internet-explorer-hacks)
 
-[[Section 55.1: Adding Inline Block support to IE6 and IE7]{.underline}
+[[Section 55.1: Adding Inline Block support to IE6 and IE7]
 [217](#section-55.1-adding-inline-block-support-to-ie6-and-ie7)](#section-55.1-adding-inline-block-support-to-ie6-and-ie7)
 
 [[Section 55.2: High Contrast Mode in Internet Explorer 10 and
-greater]{.underline}
+greater]
 [217](#section-55.2-high-contrast-mode-in-internet-explorer-10-and-greater)](#section-55.2-high-contrast-mode-in-internet-explorer-10-and-greater)
 
 [[Section 55.3: Internet Explorer 6 & Internet Explorer 7
-only]{.underline}
+only]
 [217](#section-55.3-internet-explorer-6-internet-explorer-7-only)](#section-55.3-internet-explorer-6-internet-explorer-7-only)
 
-[[Section 55.4: Internet Explorer 8 only]{.underline}
+[[Section 55.4: Internet Explorer 8 only]
 [218](#section-55.4-internet-explorer-8-only)](#section-55.4-internet-explorer-8-only)
 
-[**[Chapter 56: Performance]{.underline}**
+[**[Chapter 56: Performance]**
 [219](#chapter-56-performance)](#chapter-56-performance)
 
 [[Section 56.1: Use transform and opacity to avoid trigger
-layout]{.underline}
+layout]
 [219](#section-56.1-use-transform-and-opacity-to-avoid-trigger-layout)](#section-56.1-use-transform-and-opacity-to-avoid-trigger-layout)
 
-[**[Credits]{.underline}**](#credits)
+[**[Credits]**](#credits)
 
 [[222](#credits)](#credits)
 
@@ -924,12 +952,12 @@ layout]{.underline}
 
 > Please feel free to share this PDF with anyone for free, latest
 > version of this book can be downloaded from:
-> [[https://goalkicker.com/CSSBook]{.underline}](https://goalkicker.com/CSSBook)
+> [[https://goalkicker.com/CSSBook]](https://goalkicker.com/CSSBook)
 >
 > This *CSS Notes for Professionals* book is compiled from [[Stack
-> Overflow]{.underline}](https://archive.org/details/documentation-dump.7z)
+> Overflow]](https://archive.org/details/documentation-dump.7z)
 >
-> [[Documentation]{.underline}](https://archive.org/details/documentation-dump.7z),
+> [[Documentation]](https://archive.org/details/documentation-dump.7z),
 > the content is written by the beautiful people at Stack Overflow.
 >
 > Text content is released under Creative Commons BY-SA, see credits at
@@ -944,7 +972,7 @@ layout]{.underline}
 > The information presented in this book is not guaranteed to be correct
 > nor accurate, use at your own risk
 >
-> Please send feedback and corrections to [web@petercv.com]{.underline}
+> Please send feedback and corrections to [web@petercv.com]
 
 # 
 
@@ -976,179 +1004,44 @@ layout]{.underline}
 > stylesheet. While using relative URL paths is generally considered
 > good practice, absolute paths can be used, too. In HTML5 the type
 > attribute [[can be
-> omitted]{.underline}](https://html.spec.whatwg.org/multipage/semantics.html#the-link-element).
+> omitted]](https://html.spec.whatwg.org/multipage/semantics.html#the-link-element).
 >
 > It is recommended that the styles are loaded before the elements they
 > style are utilized. Otherwise, [[users will see a flash of unstyled
-> content]{.underline}](http://stackoverflow.com/a/1642259/2397327).
+> content]](http://stackoverflow.com/a/1642259/2397327).
 >
 > **Example hello-world.html**
 
-\<!
-
-DOCTYPE html
-
-**\>**
-
-**\<**
-
-**html**
-
-**\>**
-
-**\<**
-
-**head**
-
-**\>**
-
-**\<**
-
-**meta**
-
-charset
-
-=
-
-\"utf-8\"
-
-**/\>**
-
-**\<**
-
-**link**
-
-rel
-
-=
-
-\"stylesheet\"
-
-type
-
-=
-
-\"text/css\"
-
-href
-
-=
-
-\"style.css\"
-
-**\>**
-
-**\<**
-
-**/head**
-
-**\>**
-
-**\<**
-
-**body**
-
-**\>**
-
-**\<**
-
-**h**
-
-**1**
-
-**\>**
-
+\<! DOCTYPE html**\>**
+**\<****html****\>**
+**\<****head****\>**
+**\<****meta**charset=\"utf-8\"**/\>**
+**\<****link**rel=\"stylesheet\"type=\"text/css\"href=\"style.css\"**\>**
+**\<****/head****\>**
+**\<****body****\>**
+**\<****h****1****\>**
 Hello world!
-
-**\<**
-
-**/h**
-
-**1**
-
-**\>**
-
-**\<**
-
-**p**
-
-**\>**
-
+**\<****/h****1****\>**
+**\<****p****\>**
 I
-
 ♥
-
 CSS
+**\<****/p****\>**
+**\<****/body****\>**
+**\<****/html****\>**
 
-**\<**
-
-**/p**
-
-**\>**
-
-**\<**
-
-**/body**
-
-**\>**
-
-**\<**
-
-**/html**
-
-**\>**
-
-> **style.css**
-
-h1
-
-{
-
-**color**
-
-:
-
-green
-
-;
-
-**text-decoration**
-
-:
-
-underline
-
-;
-
+```
+> style.css
+h1 {
+color: green;
+text-decoration: underline;
 }
 
-p
-
-{
-
-**font-size**
-
-:
-
-25
-
-px
-
-;
-
-**font-family**
-
-:
-
-\'Trebuchet MS\'
-
-,
-
-sans-serif
-
-;
-
+p {
+font-size: 25px;
+font-family: 'Trebuchet MS', sans-serif;
 }
+```
 
 > Make sure you include the correct path to your CSS file in the href.
 > If the CSS file is in the same folder as your HTML file then no path
@@ -1156,11 +1049,13 @@ sans-serif
 > then specify it like this;
 >
 > href="foldername/style.css".
+
 >
 > \<link rel="stylesheet" type="text/css" href="foldername/style.css"\>
 >
 > **\<link** rel=\"stylesheet\" type=\"text/css\"
 > href=\"foldername/style.css\"**\>**
+
 >
 > External stylesheets are considered the best way to handle your CSS.
 > There\'s a very simple reason for this: when you\'re managing a site
@@ -1220,7 +1115,7 @@ sans-serif
 > style sheets. These rules must precede all other types of rules,
 > except \@charset rules; as it is not a nested statement, \@import
 > cannot be used inside conditional group at-rules.
-> [[\@import]{.underline}](https://developer.mozilla.org/en/docs/Web/CSS/@import).
+> [[\@import]](https://developer.mozilla.org/en/docs/Web/CSS/@import).
 >
 > **How to use \@import**
 >
@@ -1245,22 +1140,15 @@ B.  **With external stylesheet**
 
 ## Section 1.4: Inline Styles
 
-  -----------------------------------------------------------------------
   **\<style**
-  -----------------------------------------------------------------------
-
-  -----------------------------------------------------------------------
 
 > Use inline styles to apply styling to a specific element. Note that
 > this is ***not*** optimal. Placing style rules in a **\>** tag or
 > external CSS file is encouraged in order to maintain a distinction
 > between content and presentation.
 
-  -----------------------------------------------------------------------
   **\<style**
-  -----------------------------------------------------------------------
 
-  -----------------------------------------------------------------------
 
 > Inline styles override any CSS in a **\>** tag or external style
 > sheet. While this can be useful in some circumstances, this fact more
@@ -1288,65 +1176,22 @@ B.  **With external stylesheet**
 
 **var**
 
-el
+```
+el=document.getElementById ("element");
 
-=
-
-document.
-
-getElementById
-
-(
-
-\"element\"
-
-)
-
-;
-
-el.
-
-style
-
-.
-
-opacity
-
-=
-
-0.5
-
-;
-
-el.
-
-style
-
-.
-
-fontFamily
-
-=
-
-\'sans-serif\'
-
-;
+el.style.opacity=0.5;
+el.style.fontFamily='sans-serif';
+```
 
 > Note that style properties are named in lower camel case style. In the
 > example you see that the css property fontfamily becomes fontFamily in
 > javascript.
 
-  -----------------------------------------------------------------------
   **\<style**                  **\>** or          **\<link**
-  ---------------------------- ------------------ -----------------------
 
-  -----------------------------------------------------------------------
 
-  -----------------------------------------------------------------------
   **\<body**                **\>** or           **\<head**
-  ------------------------- ------------------- -------------------------
 
-  -----------------------------------------------------------------------
 
 > As an alternative to working directly on elements, you can create a
 > **\>** element in JavaScript and append it to the **\>** of the HTML
@@ -1356,71 +1201,27 @@ fontFamily
 >
 > Modifying CSS properties with jQuery is even simpler.
 
-\$
+```
+$('#element').css(
 
-(
-
-\'#element\'
-
-)
-
-.css
-
-(
-
-\'margin\'
-
-,
-
-\'5px\'
-
-)
-
-;
+'margin','5px'
+);
+```
 
 > If you need to change more than one style rule:
 
-\$
-
+```
+$
 (
-
-\'#element\'
-
+'#element'
 )
-
 .css
-
 (
-
 {
-
-**margin**
-
-:
-
-\"5px\"
-
-,
-
-**padding**
-
-:
-
-\"10px\"
-
-,
-
-**color**
-
-:
-
-\"black\"
-
+margin:"5px",padding:"10px",color:"black"
 }
-
-)
-
-;
+);
+```
 
 > jQuery includes two ways to change css rules that have hyphens in them
 > (i.e. font-size). You can put them in quotes or camel-case the style
@@ -1490,7 +1291,7 @@ fontSize
 > square decimal lower-roman upper-roman none
 >
 > (For an exhaustive list, see the [[W3C specification
-> wiki]{.underline}](https://www.w3.org/wiki/CSS/Properties/list-style-type))
+> wiki]](https://www.w3.org/wiki/CSS/Properties/list-style-type))
 >
 > To use square bullet points for each list-item, for example, you would
 > use the following property-value pair:
@@ -1850,12 +1651,12 @@ headline)
 >
 > **Note:** The value of an ID must be unique in a web page. It is a
 > violation of the [[HTML
-> standard]{.underline}](https://www.w3.org/TR/html/dom.html#the-id-attribute)
+> standard]](https://www.w3.org/TR/html/dom.html#the-id-attribute)
 > to use the value of an ID more than once in the same document tree.
 >
 > A complete list of selectors can be found in the [[CSS Selectors Level
 > 3
-> specification]{.underline}](https://www.w3.org/TR/css3-selectors/#selectors).
+> specification]](https://www.w3.org/TR/css3-selectors/#selectors).
 
 ## Section 4.2: Attribute Selectors
 
@@ -2011,7 +1812,7 @@ headline)
 2.  There is no single, integrated CSS4 specification, because it is
     split into separate modules. However, there are \"level 4\" modules.
     [[See browser
-    support]{.underline}](http://caniuse.com/#feat=css-case-insensitive).
+    support]](http://caniuse.com/#feat=css-case-insensitive).
 
 > **Details**
 
@@ -2106,7 +1907,7 @@ This will NOT be red
 **\>**
 
 [[Live Demo on
-JSBin]{.underline}](http://jsbin.com/cezale/1/edit?html,css,output)
+JSBin]](http://jsbin.com/cezale/1/edit?html,css,output)
 
   ---------------------------------------------------------------------------
   **attribute**                         **=**   **\"value\"**
@@ -2203,7 +2004,7 @@ This will NOT be red
 **\>**
 
 [[Live Demo on
-JSBin]{.underline}](http://jsbin.com/waxoked/1/edit?html,css,output)
+JSBin]](http://jsbin.com/waxoked/1/edit?html,css,output)
 
   -----------------------------------------------------------------------
   **attribute\*=\"value\"**
@@ -2339,7 +2140,7 @@ This will NOT be red
 **\>**
 
 [[Live Demo on
-JSBin]{.underline}](http://jsbin.com/dazige/1/edit?html,css,output)
+JSBin]](http://jsbin.com/dazige/1/edit?html,css,output)
 
   ---------------------------------------------------------------------------
   **attribute\~**                         **=**   **\"value\"**
@@ -2415,7 +2216,7 @@ This will NOT be red
 **\>**
 
 [[Live Demo on
-JSBin]{.underline}](http://jsbin.com/posuhim/1/edit?html,css,output)
+JSBin]](http://jsbin.com/posuhim/1/edit?html,css,output)
 
   -----------------------------------------------------------------------
   **attribute\^=\"value\"**
@@ -2511,7 +2312,7 @@ This will NOT be red
 **\>**
 
 [[Live Demo on
-JSBin]{.underline}](http://jsbin.com/yowihi/1/edit?html,css,output)
+JSBin]](http://jsbin.com/yowihi/1/edit?html,css,output)
 
   ---------------------------------------------------------------------------
   **attribute\$**                         **=**   **\"value\"**
@@ -2607,7 +2408,7 @@ This will NOT be red
 **\>**
 
 [[Live Demo on
-JSBin]{.underline}](http://jsbin.com/yowihi/2/edit?html,css,output)
+JSBin]](http://jsbin.com/yowihi/2/edit?html,css,output)
 
   ---------------------------------------------------------------------------
   **attribute\|**                         **=**   **\"value\"**
@@ -2706,7 +2507,7 @@ This will NOT be red
 **\>**
 
 [[Live Demo on
-JSBin]{.underline}](http://jsbin.com/yowihi/3/edit?html,css,output)
+JSBin]](http://jsbin.com/yowihi/3/edit?html,css,output)
 
   ---------------------------------------------------------------------------
   **attribute**                     **=**   **\"value\" i**
@@ -2805,7 +2606,7 @@ This will NOT be red
 **\>**
 
 [[Live Demo on
-JSBin]{.underline}](http://jsbin.com/yowihi/4/edit?html,css,output)
+JSBin]](http://jsbin.com/yowihi/4/edit?html,css,output)
 
 > **Specificity of attribute selectors 0-1-0**
 >
@@ -2897,9 +2698,9 @@ checkbox
 > **Note:** Sibling selectors target elements that come after them in
 > the source document. CSS, by its nature (it cascades), cannot target
 > *previous* or *parent* elements. However, using the flex order
-> property, [[a]{.underline} [previous sibling selector can be simulated
+> property, [[a] [previous sibling selector can be simulated
 > on visual
-> media]{.underline}](http://stackoverflow.com/a/36118012/3597276).
+> media]](http://stackoverflow.com/a/36118012/3597276).
 >
 > **Descendant Combinator: selector selector**
 >
@@ -2989,7 +2790,7 @@ My text is not red
 **\>**
 
 [[Live Demo on
-JSBin]{.underline}](http://jsbin.com/xonafuz/2/edit?html,css,output)
+JSBin]](http://jsbin.com/xonafuz/2/edit?html,css,output)
 
   -------------------------------------------------------------------------------------
   **\<p**   **\>** elements are selected since they are both descendants of **\<div**
@@ -3082,7 +2883,7 @@ My text is not red
 **\>**
 
 [[Live Demo on
-JSBin]{.underline}](http://jsbin.com/xonafuz/3/edit?html,css,output)
+JSBin]](http://jsbin.com/xonafuz/3/edit?html,css,output)
 
   --------------------------------------------------------------------------------------
   **\<p**   **\>** element, as it is the only paragraph directly descended   **\<div**
@@ -3194,7 +2995,7 @@ My text is not red
 **\>**
 
 [[Live Demo on
-JSBin]{.underline}](http://jsbin.com/xonafuz/4/edit?html,css,output)
+JSBin]](http://jsbin.com/xonafuz/4/edit?html,css,output)
 
   ------------------------------------------------------------------------------------
   **\<p**   **\>** elements which are *directly preceded* by another         **\<p**
@@ -3290,7 +3091,7 @@ My text is red
 **\>**
 
 [[Live Demo on
-JSBin]{.underline}](http://jsbin.com/xonafuz/5/edit?html,css,output)
+JSBin]](http://jsbin.com/xonafuz/5/edit?html,css,output)
 
   -----------------------------------------------------------------------------------
   **\<p**   **\>** elements that are *preceded* by another                  **\<p**
@@ -3303,18 +3104,18 @@ JSBin]{.underline}](http://jsbin.com/xonafuz/5/edit?html,css,output)
 
 ## Section 4.4: Pseudo-classes
 
-> [[Pseudo-classes]{.underline}](https://www.w3.org/TR/selectors/#pseudo-classes)
+> [[Pseudo-classes]](https://www.w3.org/TR/selectors/#pseudo-classes)
 > are **keywords** which allow selection based on information that lies
 > outside of the document tree or that cannot be expressed by other
 > selectors or combinators. This information can be associated to a
 > certain state
 >
-> ([[state]{.underline}](https://www.w3.org/TR/selectors/#UIstates) and
-> [[dynamic]{.underline}](https://www.w3.org/TR/selectors/#dynamic-pseudos)
+> ([[state]](https://www.w3.org/TR/selectors/#UIstates) and
+> [[dynamic]](https://www.w3.org/TR/selectors/#dynamic-pseudos)
 > pseudo-classes), to locations
-> ([[structural]{.underline}](https://www.w3.org/TR/selectors/#structural-pseudos)
+> ([[structural]](https://www.w3.org/TR/selectors/#structural-pseudos)
 > and
-> [[target]{.underline}](https://www.w3.org/TR/selectors/#target-pseudo)
+> [[target]](https://www.w3.org/TR/selectors/#target-pseudo)
 > pseudo-classes), to negations of the former
 
   --------------------------------------------------------------------------------
@@ -3324,9 +3125,9 @@ JSBin]{.underline}](http://jsbin.com/xonafuz/5/edit?html,css,output)
 
   --------------------------------------------------------------------------------
 
-> ([[negation]{.underline}](https://www.w3.org/TR/selectors/#negation)
+> ([[negation]](https://www.w3.org/TR/selectors/#negation)
 > pseudo-class) or to languages
-> ([[lang]{.underline}](https://www.w3.org/TR/selectors/#lang-pseudo)
+> ([[lang]](https://www.w3.org/TR/selectors/#lang-pseudo)
 > pseudo-class). Examples include whether or not a link has been
 > followed (:), etc.
 >
@@ -3352,84 +3153,84 @@ property:
 
 **Name Description**
 
-[[:active](https://www.w3.org/TR/css3-selectors/#the-user-action-pseudo-classes-hover-act)]{.underline}
+[[:active](https://www.w3.org/TR/css3-selectors/#the-user-action-pseudo-classes-hover-act)]
 Applies to any element being activated (i.e. clicked) by the user.
 
 > Allows you to build sets of related selectors by creating groups that
 > the
 >
-> [[:any]{.underline}](https://developer.mozilla.org/en-US/docs/Web/CSS/:any)
+> [[:any]](https://developer.mozilla.org/en-US/docs/Web/CSS/:any)
 > included items will match. This is an alternative to repeating an
 > entire selector.
 >
 > Selects the current active #news element (clicked on a URL
 >
-> [[:target]{.underline}](https://developer.mozilla.org/en-US/docs/Web/CSS/:target)
+> [[:target]](https://developer.mozilla.org/en-US/docs/Web/CSS/:target)
 > containing that anchor name)
 >
 > Applies to radio, checkbox, or option elements that are checked
 >
-> [[:checked]{.underline}](https://www.w3.org/TR/css3-selectors/#checked)
+> [[:checked]](https://www.w3.org/TR/css3-selectors/#checked)
 > or toggled into an \"on\" state.
 >
 > Represents any user interface element that is the default among a
 > group of
 >
-> [[:default]{.underline}](https://developer.mozilla.org/en-US/docs/Web/CSS/:default)
+> [[:default]](https://developer.mozilla.org/en-US/docs/Web/CSS/:default)
 >
 > similar elements.
 
-[[:disabled](https://www.w3.org/TR/css3-selectors/#enableddisabled)]{.underline}
+[[:disabled](https://www.w3.org/TR/css3-selectors/#enableddisabled)]
 Applies to any UI element which is in a disabled state.
 
-[[:empty](https://www.w3.org/TR/selectors/#empty-pseudo)]{.underline}
+[[:empty](https://www.w3.org/TR/selectors/#empty-pseudo)]
 Applies to any element which has no children.
 
-[[:enabled](https://www.w3.org/TR/css3-selectors/#enableddisabled)]{.underline}
+[[:enabled](https://www.w3.org/TR/css3-selectors/#enableddisabled)]
 Applies to any UI element which is in an enabled state.
 
 > Used in conjunction with the \@page rule, this selects the first page
 > in a
 >
-> [[:first]{.underline}](http://tympanus.net/codrops/css_reference/first)
+> [[:first]](http://tympanus.net/codrops/css_reference/first)
 > printed document.
 
-[[:first-child](https://developer.mozilla.org/en-US/docs/Web/CSS/:first-child)]{.underline}
+[[:first-child](https://developer.mozilla.org/en-US/docs/Web/CSS/:first-child)]
 Represents any element that is the first child element of its parent.
 
 > Applies when an element is the first of the selected element type
 >
-> [[:first-of-type]{.underline}](https://www.w3.org/TR/css3-selectors/#first-of-type-pseudo)
+> [[:first-of-type]](https://www.w3.org/TR/css3-selectors/#first-of-type-pseudo)
 > inside its parent. This may or may not be the first-child.
 >
 > Applies to any element which has the user\'s focus. This can be given
 > by the
 >
-> [[:focus]{.underline}](https://www.w3.org/TR/css3-selectors/#the-user-action-pseudo-classes-hover-act)
+> [[:focus]](https://www.w3.org/TR/css3-selectors/#the-user-action-pseudo-classes-hover-act)
 > user\'s keyboard, mouse events, or other forms of input.
 >
 > Can be used to highlight a whole section when one element inside it is
 > focused. It matches
 >
-> [[:focus-within]{.underline}](https://developer.mozilla.org/en-US/docs/Web/CSS/:focus-within)
+> [[:focus-within]](https://developer.mozilla.org/en-US/docs/Web/CSS/:focus-within)
 > any element that the :focus pseudo-class matches or that has a
 > descendant focused.
 >
 > Applies to any element displayed in full-screen mode. It selects the
 > whole stack
 >
-> [[:full-screen]{.underline}](https://developer.mozilla.org/en-US/docs/Web/CSS/:fullscreen)
+> [[:full-screen]](https://developer.mozilla.org/en-US/docs/Web/CSS/:fullscreen)
 > of elements and not just the top level element.
 >
 > Applies to any element being hovered by the user\'s pointing device,
 > but
 >
-> [[:hover]{.underline}](https://www.w3.org/TR/css3-selectors/#the-user-action-pseudo-classes-hover-act)
+> [[:hover]](https://www.w3.org/TR/css3-selectors/#the-user-action-pseudo-classes-hover-act)
 > not activated.
 >
 > Applies radio or checkbox UI elements which are neither checked nor
 >
-> [[:indeterminate](https://www.w3.org/TR/css3-selectors/#indeterminate)]{.underline}
+> [[:indeterminate](https://www.w3.org/TR/css3-selectors/#indeterminate)]
 > unchecked, but are in an indeterminate state. This can be due to an
 > element\'s attribute or DOM manipulation.
 
@@ -3444,7 +3245,7 @@ Represents any element that is the first child element of its parent.
 > its value attribute inside the specified range limitations for this
 > element.
 >
-> [[:in-range]{.underline}](https://developer.mozilla.org/en-US/docs/Web/CSS/:in-range)
+> [[:in-range]](https://developer.mozilla.org/en-US/docs/Web/CSS/:in-range)
 >
 > It allows the page to give a feedback that the value currently defined
 > using the element is inside the range limits.
@@ -3463,7 +3264,7 @@ Represents any element that is the first child element of its parent.
 
   -----------------------------------------------------------------------
 
-> [[:invalid]{.underline}](http://tympanus.net/codrops/css_reference/invalid/)
+> [[:invalid]](http://tympanus.net/codrops/css_reference/invalid/)
 > the type specified in the = attribute.
 
   -----------------------------------------------------------------------
@@ -3480,27 +3281,27 @@ Represents any element that is the first child element of its parent.
 
   -----------------------------------------------------------------------
 
-> [[:lang](https://www.w3.org/TR/css3-selectors/#lang-pseudo)]{.underline}
+> [[:lang](https://www.w3.org/TR/css3-selectors/#lang-pseudo)]
 > designated = attribute. For the pseudo-class to be valid, it must
 > contain a [[valid two or three letter language
-> code.]{.underline}](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes)
+> code.]](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes)
 
-[[:last-child](https://developer.mozilla.org/en-US/docs/Web/CSS/:last-child)]{.underline}
+[[:last-child](https://developer.mozilla.org/en-US/docs/Web/CSS/:last-child)]
 Represents any element that is the last child element of its parent.
 
 > Applies when an element is the last of the selected element type
 > inside
 >
-> [[:last-of-type]{.underline}](https://www.w3.org/TR/css3-selectors/#last-of-type-pseudo)
+> [[:last-of-type]](https://www.w3.org/TR/css3-selectors/#last-of-type-pseudo)
 > its parent. This may or may not be the last-child.
 >
 > Used in conjunction with the \@page rule, this selects all the left
 >
-> [[:left]{.underline}](http://tympanus.net/codrops/css_reference/left_pseudo-class/)
+> [[:left]](http://tympanus.net/codrops/css_reference/left_pseudo-class/)
 >
 > pages in a printed document.
 
-[[:link](https://www.w3.org/TR/css3-selectors/#the-link-pseudo-classes-link-and-visited)]{.underline}
+[[:link](https://www.w3.org/TR/css3-selectors/#the-link-pseudo-classes-link-and-visited)]
 Applies to any links which haven\'t been visited by the user.
 
 > Applies to all elements which **do not** match the value passed to
@@ -3512,7 +3313,7 @@ Applies to any links which haven\'t been visited by the user.
   -------------------------------------------------------------------------
 
   --------------------------------------------------------------------------------
-  [[not]{.underline}](https://www.w3.org/wiki/CSS/Selectors/pseudo-classes/:not)
+  [[not]](https://www.w3.org/wiki/CSS/Selectors/pseudo-classes/:not)
   --------------------------------------------------------------------------------
 
   --------------------------------------------------------------------------------
@@ -3525,20 +3326,20 @@ Applies to any links which haven\'t been visited by the user.
 
 > (:) for example. It must have a value to be
 >
-> [[:()]{.underline}](https://www.w3.org/wiki/CSS/Selectors/pseudo-classes/:not)
+> [[:()]](https://www.w3.org/wiki/CSS/Selectors/pseudo-classes/:not)
 >
 > valid and it can only contain one selector. However, you can chain
 > multiple : selectors together.
 >
 > Applies when an element is the n-th element of its parent, where n
 >
-> [[:nth-child](https://www.w3.org/TR/css3-selectors/#nth-child-pseudo)]{.underline}
+> [[:nth-child](https://www.w3.org/TR/css3-selectors/#nth-child-pseudo)]
 > can be an integer, a mathematical expression (e.g n+3) or the keywords
 > odd or even.
 >
 > Applies when an element is the n-th element of its parent of the
 >
-> [[:nth-of-type](https://www.w3.org/TR/css3-selectors/#nth-of-type-pseudo)]{.underline}
+> [[:nth-of-type](https://www.w3.org/TR/css3-selectors/#nth-of-type-pseudo)]
 > same element type, where n can be an integer, a mathematical
 > expression (e.g n+3) or the keywords odd or even.
 
@@ -3551,7 +3352,7 @@ Applies to any links which haven\'t been visited by the user.
 > The : CSS pseudo-class represents any element which is the only child
 > of its parent. This is the same as
 >
-> [[:only-child]{.underline}](https://developer.mozilla.org/en-US/docs/Web/CSS/:only-child)
+> [[:only-child]](https://developer.mozilla.org/en-US/docs/Web/CSS/:only-child)
 
   -----------------------------------------------------------------------------
   first-child    :   last-child    or :  nth-child    (1):   nth-last-child
@@ -3569,7 +3370,7 @@ Applies to any links which haven\'t been visited by the user.
 
 > The : CSS pseudo-class represents any element
 
-[[:optional](https://developer.mozilla.org/en-US/docs/Web/CSS/:optional)]{.underline}
+[[:optional](https://developer.mozilla.org/en-US/docs/Web/CSS/:optional)]
 that does not have the required attribute set on it. This allows
 
 > forms to easily indicate optional fields and to style them
@@ -3584,22 +3385,22 @@ that does not have the required attribute set on it. This allows
 > The : CSS pseudo-class matches when an element has its value attribute
 > outside the specified range limitations for this element.
 >
-> [[:out-of-range](https://developer.mozilla.org/en-US/docs/Web/CSS/:out-of-range)]{.underline}
+> [[:out-of-range](https://developer.mozilla.org/en-US/docs/Web/CSS/:out-of-range)]
 > It allows the page to give a feedback that the value currently defined
 > using the element is outside the range limits. A value can be outside
 > of a range if it is either smaller or larger than maximum and minimum
 > set values.
 
   --------------------------------------------------------------------------------------------------------
-  [[placeholder-shown]{.underline}](https://developer.mozilla.org/en-US/docs/Web/CSS/:placeholder-shown)
+  [[placeholder-shown]](https://developer.mozilla.org/en-US/docs/Web/CSS/:placeholder-shown)
   --------------------------------------------------------------------------------------------------------
 
   --------------------------------------------------------------------------------------------------------
 
-> [[:]{.underline}](https://developer.mozilla.org/en-US/docs/Web/CSS/:placeholder-shown)**Experimental.**
+> [[:]](https://developer.mozilla.org/en-US/docs/Web/CSS/:placeholder-shown)**Experimental.**
 > Applies to any form element currently displaying placeholder text.
 
-[[:read-only](https://developer.mozilla.org/en-US/docs/Web/CSS/:read-only)]{.underline}
+[[:read-only](https://developer.mozilla.org/en-US/docs/Web/CSS/:read-only)]
 Applies to any element which is not editable by the user.
 
   -----------------------------------------------------------------------
@@ -3608,30 +3409,30 @@ Applies to any element which is not editable by the user.
 
   -----------------------------------------------------------------------
 
-[[:read-write](https://developer.mozilla.org/en-US/docs/Web/CSS/:read-write)]{.underline}
+[[:read-write](https://developer.mozilla.org/en-US/docs/Web/CSS/:read-write)]
 Applies to any element that is editable by a user, such as **\>**
 elements.
 
 > Used in conjunction with the \@page rule, this selects all the right
 > pages in a
 >
-> [[:right]{.underline}](http://tympanus.net/codrops/css_reference/right_pseudo-class)
+> [[:right]](http://tympanus.net/codrops/css_reference/right_pseudo-class)
 > printed document.
 
-[[:root](https://developer.mozilla.org/en-US/docs/Web/CSS/:root)]{.underline}
+[[:root](https://developer.mozilla.org/en-US/docs/Web/CSS/:root)]
 matches the root element of a tree representing the document.
 
 > CSS pseudo-class matches the elements that are a reference
 >
-> [[:scope]{.underline}](https://developer.mozilla.org/en-US/docs/Web/CSS/:scope)
+> [[:scope]](https://developer.mozilla.org/en-US/docs/Web/CSS/:scope)
 > point for selectors to match against.
 >
 > Selects the current active #news element (clicked on a URL
 >
-> [[:target]{.underline}](https://developer.mozilla.org/en-US/docs/Web/CSS/:target)
+> [[:target]](https://developer.mozilla.org/en-US/docs/Web/CSS/:target)
 > containing that anchor name)
 
-[[:visited](https://www.w3.org/TR/css3-selectors/#the-link-pseudo-classes-link-and-visited)]{.underline}
+[[:visited](https://www.w3.org/TR/css3-selectors/#the-link-pseudo-classes-link-and-visited)]
 Applies to any links which have has been visited by the user.
 
   -----------------------------------------------------------------------
@@ -3642,14 +3443,14 @@ Applies to any links which have has been visited by the user.
 
 > The : pseudoclass can\'t be used for most styling in a lot of modern
 > browsers anymore because it\'s a security hole. See this
-> [[link]{.underline}](https://hacks.mozilla.org/2010/03/privacy-related-changes-coming-to-css-vistited/)
+> [[link]](https://hacks.mozilla.org/2010/03/privacy-related-changes-coming-to-css-vistited/)
 > for reference.
 
 ## Section 4.5: Child Pseudo Class
 
 > \"The :nth-child(an+b) CSS pseudo-class matches an element that has
 > an+b-1 siblings before it in the document tree, for a given positive
-> **or zero value** for n\" - [MDN :nth-child]{.underline}
+> **or zero value** for n\" - [MDN :nth-child]
 
 +------------------------------+---------------------------------------+
 | **pseudo-selector**          | > **1 2 3 4 5 6 7 8 9 10**            |
@@ -4132,7 +3933,7 @@ Last heading 2
 
 **\>**
 
-[[jsFiddle]{.underline}](http://jsfiddle.net/MadalinaTn/YmMZZ/113/)
+[[jsFiddle]](http://jsfiddle.net/MadalinaTn/YmMZZ/113/)
 
 ## Section 4.9: CSS3 :in-range selector example
 
@@ -4210,7 +4011,7 @@ The border for this value will be blue
 > inside the specified range limitations for this element. It allows the
 > page to give a feedback that the value currently defined using the
 > element is inside the range
-> limits.[[\[1\]]{.underline}](https://developer.mozilla.org/en-US/docs/Web/CSS/:in-range)
+> limits.[[\[1\]]](https://developer.mozilla.org/en-US/docs/Web/CSS/:in-range)
 
 ## Section 4.10: A. The :not pseudo-class example & B. :focuswithin CSS pseudo-class
 
@@ -4377,7 +4178,7 @@ disabled
 }
 
 [[Live Demo on
-JSBin]{.underline}](http://jsbin.com/japere/edit?html,css,output)
+JSBin]](http://jsbin.com/japere/edit?html,css,output)
 
 > See background syntax here.
 
@@ -4770,7 +4571,7 @@ checked
 
 > **In action**
 >
-> See [[this fiddle]{.underline}](https://jsfiddle.net/yokosbm0/1/) for
+> See [[this fiddle]](https://jsfiddle.net/yokosbm0/1/) for
 > a implementation of these global booleans.
 
 ## Section 4.12: ID selectors
@@ -5016,7 +4817,7 @@ blue
 > The above example selects the .
 
 [[Live Demo on
-JSBin]{.underline}](https://jsbin.com/dizosi/edit?html,css)
+JSBin]](https://jsbin.com/dizosi/edit?html,css)
 
 # Chapter 5: Backgrounds
 
@@ -5501,7 +5302,7 @@ linear-gradient( \<direction\>?, \<color-stop-1\>, \<color-stop-2\>,
   -----------------------------------------------------------------------------
 
 > Could be an argument like ; or an
-> [[angle]{.underline}](https://www.w3.org/TR/css3-values/#angles) as
+> [[angle]](https://www.w3.org/TR/css3-values/#angles) as
 > 0deg,
 
   -----------------------------------------------------------------------
@@ -5512,10 +5313,10 @@ linear-gradient( \<direction\>?, \<color-stop-1\>, \<color-stop-2\>,
 
 > **\>** 90deg\... . The angle starts from to top and rotates clockwise.
 > Can be specified in
-> [[deg]{.underline}](https://www.w3.org/TR/css3-values/#deg),
-> [[grad]{.underline}](https://www.w3.org/TR/css3-values/#grad),
-> [[rad]{.underline}](https://www.w3.org/TR/css3-values/#rad), or
-> [[turn]{.underline}](https://www.w3.org/TR/css3-values/#turn). If
+> [[deg]](https://www.w3.org/TR/css3-values/#deg),
+> [[grad]](https://www.w3.org/TR/css3-values/#grad),
+> [[rad]](https://www.w3.org/TR/css3-values/#rad), or
+> [[turn]](https://www.w3.org/TR/css3-values/#turn). If
 > omitted, the gradient flows from top to bottom
 
   -----------------------------------------------------------------------
@@ -5531,7 +5332,7 @@ linear-gradient( \<direction\>?, \<color-stop-1\>, \<color-stop-2\>,
   ---------------------------------------------------------------------------------
 
 > List of colors, optionally followed each one by a percentage or
-> [[length]{.underline}](https://www.w3.org/TR/css3-values/#lengths) to
+> [[length]](https://www.w3.org/TR/css3-values/#lengths) to
 > display it at. For
 >
 > **\>** example, \...
@@ -5732,11 +5533,7 @@ ellipse.
 >
 > farthest-corner side, closest-corner, farthest-corner
 
-  -----------------------------------------------------------------------
   top left
-  -----------------------------------------------------------------------
-
-  -----------------------------------------------------------------------
 
 > Sets the position of the gradient center, in the same way as
 > background-position.
@@ -5842,44 +5639,26 @@ black
 
 **Value Meaning**
 
-> [[Angle unit]{.underline}](https://www.w3.org/TR/css3-values/#angles).
+> [[Angle unit]](https://www.w3.org/TR/css3-values/#angles).
 > The angle starts from to top and rotates clockwise. Can be specified
-> in [[deg]{.underline}](https://www.w3.org/TR/css3-values/#deg),
-> [[grad]{.underline}](https://www.w3.org/TR/css3-values/#grad),
-> [[rad]{.underline}](https://www.w3.org/TR/css3-values/#rad), or -45deg
-> [[turn]{.underline}](https://www.w3.org/TR/css3-values/#turn).
+> in [[deg]](https://www.w3.org/TR/css3-values/#deg),
+> [[grad]](https://www.w3.org/TR/css3-values/#grad),
+> [[rad]](https://www.w3.org/TR/css3-values/#rad), or -45deg
+> [[turn]](https://www.w3.org/TR/css3-values/#turn).
 
-  ------------------------------------------------------------------------------
   to bottom       . Syntax:     to    \[   y-axis     (   top OR bottom
-  --------------- ------------- ----- ---- ---------- --- ----------------------
 
-  ------------------------------------------------------------------------------
-
-  ------------------------------------------------------------------------
   x-axis                         (     left OR
-  ------------------------------ ----- -----------------------------------
 
-  ------------------------------------------------------------------------
 
-  -----------------------------------------------------------------------
   to left
-  -----------------------------------------------------------------------
 
-  -----------------------------------------------------------------------
 
-  -----------------------------------------------------------------------
   right            )\] ie         to top right
-  ---------------- -------------- ---------------------------------------
-
-  -----------------------------------------------------------------------
 
 > Direction of gradient, default is )\] \[
 
-  -----------------------------------------------------------------------
   yellow 10%
-  -----------------------------------------------------------------------
-
-  -----------------------------------------------------------------------
 
 > Color, optionally followed by a percentage or length to display it at.
 > Repeated two or more times.
@@ -5889,7 +5668,7 @@ black
 > illustration. Also note that the radial-gradient syntax is much more
 > complex than linear-gradient, and a simplified version is shown here.
 > For a full explanation and specs, see the [[MDN
-> Docs]{.underline}](https://developer.mozilla.org/en-US/docs/Web/CSS/radial-gradient)
+> Docs]](https://developer.mozilla.org/en-US/docs/Web/CSS/radial-gradient)
 
 ## Section 5.3: Background Image
 
@@ -5917,11 +5696,7 @@ url
 
 }
 
-  -----------------------------------------------------------------------
   url
-  -----------------------------------------------------------------------
-
-  -----------------------------------------------------------------------
 
 > To use multiple images as background-image, define comma separated ()
 
@@ -5960,11 +5735,7 @@ url
 
 **Value Result**
 
-  ------------------------------------------------------------------------
   url      (   \'/path/to/image.jpg\'
-  -------- --- -----------------------------------------------------------
-
-  ------------------------------------------------------------------------
 
 > Specify background image\'s path(s) or an image resource specified
 > with data URI
@@ -5973,13 +5744,11 @@ url
 >
 > schema (apostrophes can be omitted), separate multiples by comma
 
-  -----------------------------------------------------------------------
   none                                     No background image
-  ---------------------------------------- ------------------------------
+
   initial                                  Default value
 
   inherit                                  Inherit parent\'s value
-  -----------------------------------------------------------------------
 
 > **More CSS for Background Image**
 >
@@ -6151,7 +5920,7 @@ green
 > **General overview**
 >
 > The
-> [[background-size]{.underline}](https://www.w3.org/TR/2014/CR-css3-background-20140909/#the-background-size)
+> [[background-size]](https://www.w3.org/TR/2014/CR-css3-background-20140909/#the-background-size)
 > property enables one to control the scaling of the background-image.
 > It takes up to two values, which determine the scale/size of the
 > resulting image in vertical and and horizontal direction. If the
@@ -6294,9 +6063,9 @@ px
 
 The behaviour depends on the
 
-[background-origi]{.underline}
+[background-origi]
 
-[[n]{.underline}](https://www.w3.org/TR/2014/CR-css3-background-20140909/#the-background-origin)
+[[n]](https://www.w3.org/TR/2014/CR-css3-background-20140909/#the-background-origin)
 
 .
 
@@ -6318,7 +6087,7 @@ The behaviour depends on the
 >
 > Sorry for the bad pun, but we\'re going to use a [[picture of the day
 > by Biswarup
-> Ganguly]{.underline}](https://commons.wikimedia.org/wiki/File:Chicken_Egg_without_Eggshell_5859.jpg)
+> Ganguly]](https://commons.wikimedia.org/wiki/File:Chicken_Egg_without_Eggshell_5859.jpg)
 > for demonstration. Lets say that this is your screen, and the gray
 > area is outside of your visible screen. For demonstration, We\'re
 > going to assume a 16 × 9 ratio.
@@ -6815,7 +6584,7 @@ div
 ## Section 5.6: Background Position
 
 > The
-> [[background-position]{.underline}](https://drafts.csswg.org/css-backgrounds-3/#background-position)
+> [[background-position]](https://drafts.csswg.org/css-backgrounds-3/#background-position)
 > property is used to specify the starting position for a background
 > image or gradient
 
@@ -6880,11 +6649,11 @@ url
 >
 > **NOTE:** This is supported in all browsers except Firefox (versions
 > 31-48)
-> [[2]{.underline}](http://caniuse.com/#search=background-position-x).
+> [[2]](http://caniuse.com/#search=background-position-x).
 > Firefox 49, to be released September 2016, *will* support these
 > properties. Until then, [[there is a Firefox hack within this
-> Stack]{.underline} [Overflow
-> answer.]{.underline}](http://stackoverflow.com/questions/14844407/background-position-y-doesnt-work-in-firefox-via-css/29282573#29282573)
+> Stack] [Overflow
+> answer.]](http://stackoverflow.com/questions/14844407/background-position-y-doesnt-work-in-firefox-via-css/29282573#29282573)
 
 ## Section 5.7: The background-origin property
 
@@ -7050,8 +6819,8 @@ height="6.0841666666666665in"}
 
 > More:
 
-[[https://www.w3.org/TR/css3-background/#the-background-origin]{.underline}](https://www.w3.org/TR/css3-background/#the-background-origin)
-[[https://developer.mozilla.org/en-US/docs/Web/CSS/background-origin]{.underline}](https://developer.mozilla.org/en-US/docs/Web/CSS/background-origin)
+[[https://www.w3.org/TR/css3-background/#the-background-origin]](https://www.w3.org/TR/css3-background/#the-background-origin)
+[[https://developer.mozilla.org/en-US/docs/Web/CSS/background-origin]](https://developer.mozilla.org/en-US/docs/Web/CSS/background-origin)
 
 ## Section 5.8: Multiple Background Image
 
@@ -7261,9 +7030,9 @@ bottom
 
 }
 
-[Dem]{.underline}
+[Dem]
 
-[[o]{.underline}](https://jsfiddle.net/z30up2un/)
+[[o]](https://jsfiddle.net/z30up2un/)
 
 ## Section 5.9: Background Attachment
 
@@ -7778,11 +7547,7 @@ repeat-y
 
 }
 
-  -----------------------------------------------------------------------
   **background-repeat**: repeat-y
-  -----------------------------------------------------------------------
-
-  -----------------------------------------------------------------------
 
 > Here\'s how a looks like:
 
@@ -7906,7 +7671,7 @@ Lorem ipsum
 **\>**
 
 See result here:
-[[https://jsfiddle.net/MadalinaTn/y69d28Lb/]{.underline}](https://jsfiddle.net/MadalinaTn/y69d28Lb/)
+[[https://jsfiddle.net/MadalinaTn/y69d28Lb/]](https://jsfiddle.net/MadalinaTn/y69d28Lb/)
 
 > CSS Syntax: background-blend-mode: normal \| multiply \| screen \|
 > overlay \| darken \| lighten \| color-dodge \| saturation \| color \|
@@ -8123,7 +7888,7 @@ center
 
 }
 
-[[View Result]{.underline}](https://jsfiddle.net/aLu05kjy/1/) **HTML:**
+[[View Result]](https://jsfiddle.net/aLu05kjy/1/) **HTML:**
 
 **\<**
 
@@ -8193,7 +7958,7 @@ center
 
 }
 
-[[View Result]{.underline}](https://jsfiddle.net/ttp0bzfm/1/)
+[[View Result]](https://jsfiddle.net/ttp0bzfm/1/)
 
 > See Dynamic Vertical and Horizontal Centering under the Flexbox
 > documentation for more details on flexbox and what the styles mean.
@@ -8201,21 +7966,21 @@ center
 > **Browser Support**
 >
 > Flexbox is supported by all major browsers, [[except IE versions
-> before 10]{.underline}](http://caniuse.com/#search=flex).
+> before 10]](http://caniuse.com/#search=flex).
 >
 > Some recent browser versions, such as Safari 8 and IE10, require
 > [[vendor
-> prefixes]{.underline}](https://developer.mozilla.org/en-US/docs/Glossary/Vendor_Prefix).
+> prefixes]](https://developer.mozilla.org/en-US/docs/Glossary/Vendor_Prefix).
 >
 > For a quick way to generate prefixes there is
-> [[Autoprefixer]{.underline}](https://autoprefixer.github.io/), a
+> [[Autoprefixer]](https://autoprefixer.github.io/), a
 > third-party tool.
 >
 > For older browsers (like IE 8 & 9) a [[Polyfill is
-> available]{.underline}](https://github.com/jonathantneal/flexibility).
+> available]](https://github.com/jonathantneal/flexibility).
 >
 > For a more detailed look at flexbox browser support, see [[this
-> answer]{.underline}](http://stackoverflow.com/a/35137869/3597276).
+> answer]](http://stackoverflow.com/a/35137869/3597276).
 
 ## Section 6.2: Using CSS transform
 
@@ -8227,7 +7992,7 @@ center
 > Keep in mind that with this technique, the element could end being
 > rendered at a non-integer pixel boundary, making it look blurry. See
 > [[this answer in
-> SO]{.underline}](http://stackoverflow.com/a/32329785/1385678) for a
+> SO]](http://stackoverflow.com/a/32329785/1385678) for a
 > workaround.
 >
 > **HTML**
@@ -8341,7 +8106,7 @@ translate
 }
 
 [[View example in
-JSFiddle]{.underline}](https://jsfiddle.net/webtiki/rz3p3ufs/)
+JSFiddle]](https://jsfiddle.net/webtiki/rz3p3ufs/)
 
 > **CROSS BROWSER COMPATIBILITY**
 >
@@ -8359,55 +8124,37 @@ JSFiddle]{.underline}](https://jsfiddle.net/webtiki/rz3p3ufs/)
 > translate(-50%, -50%);
 >
 > For more information see
-> [[canIuse]{.underline}](http://caniuse.com/#feat=transforms2d).
+> [[canIuse]](http://caniuse.com/#feat=transforms2d).
 >
 > **MORE INFORMATION**
 
-  -----------------------------------------------------------------------
   **position**                    :   relative
-  ------------------------------- --- -----------------------------------
-
-  -----------------------------------------------------------------------
 
 > The element is being positioned according to the first non-static
 > parent ( , absolute, or fixed). Explore more in this
-> [[fiddle]{.underline}](https://jsfiddle.net/siavasfiroozbakht/ox8kyypa/)
+> [[fiddle]](https://jsfiddle.net/siavasfiroozbakht/ox8kyypa/)
 > and this documentation topic.
 
-  -----------------------------------------------------------------------------------
   **left**   :   50%     and     **transform**    :   translateX          (   -50%
-  ---------- --- ------- ------- ---------------- --- ------------------- --- -------
 
-  -----------------------------------------------------------------------------------
-
-  -----------------------------------------------------------------------------------
   **top**   :   50%     and     **transform**    :   translateY           (   -50%
-  --------- --- ------- ------- ---------------- --- -------------------- --- -------
-
-  -----------------------------------------------------------------------------------
 
 > For horizontal-only centering, use ). The same goes for verticalonly
 > centering: center with ).
 
-  -------------------------------------------------------------------------------
   **right**   :   -50%       ; and      **margin-bottom**          :   -50%
-  ----------- --- ---------- ---------- -------------------------- --- ----------
 
-  -------------------------------------------------------------------------------
 
 > Using a non-static width/height elements with this method of centering
 > can cause the centered element to appear squished. This mostly happens
 > with elements containing text, and can be fixed by adding:
 > **margin**;. View this
-> [[fiddle]{.underline}](https://jsfiddle.net/4xxmxca0/) for more
+> [[fiddle]](https://jsfiddle.net/4xxmxca0/) for more
 > information.
 
 ## Section 6.3: Using margin: 0 auto;
 
-+---------------------------------------+------------------------------+
 | **margin**: 0                         | > auto;                      |
-+=======================================+==============================+
-+---------------------------------------+------------------------------+
 
 > Objects can be centered by using if they are block elements and have a
 > defined width.
@@ -8682,15 +8429,11 @@ auto
 height="4.120708661417323in"}
 
 JSFiddle example: [[Centering objects with margin: 0
-auto;]{.underline}](https://jsfiddle.net/xf1ze3v9/)
+auto;]](https://jsfiddle.net/xf1ze3v9/)
 
 ## Section 6.4: Using text-align
 
-  -----------------------------------------------------------------------
   **text-align**
-  -----------------------------------------------------------------------
-
-  -----------------------------------------------------------------------
 
 > The most common and easiest type of centering is that of lines of text
 > in an element. CSS has the rule :
@@ -8743,7 +8486,7 @@ center
 > or top and bottom offsets, will center an absolutely positioned
 > elements within its parent.
 
-[[View Result]{.underline}](https://jsfiddle.net/stuttufu/sj2m0oo2/1/)
+[[View Result]](https://jsfiddle.net/stuttufu/sj2m0oo2/1/)
 
 > **HTML**
 
@@ -8867,7 +8610,7 @@ auto
 > images do, will need those values defined.
 
 Other resources: [[Absolute Centering in
-CSS]{.underline}](http://codepen.io/shshaw/details/gEiDt)
+CSS]](http://codepen.io/shshaw/details/gEiDt)
 
 ## Section 6.6: Using calc()
 
@@ -9034,11 +8777,8 @@ px
 
 }
 
-  -----------------------------------------------------------------------
   **\<input** **/\>**
-  -----------------------------------------------------------------------
 
-  -----------------------------------------------------------------------
 
 > That\'s quite ugly, but can be useful inside an element. The
 > line-height property works only when the text to be centered spans a
@@ -9047,9 +8787,9 @@ px
 
 ## Section 6.8: Vertical align anything with 3 lines of code
 
-[[Supported by IE11+]{.underline}](http://caniuse.com/#search=transform)
+[[Supported by IE11+]](http://caniuse.com/#search=transform)
 
-[[View Result]{.underline}](https://jsfiddle.net/bnqrLgk9/1/)
+[[View Result]](https://jsfiddle.net/bnqrLgk9/1/)
 
 > Use these 3 lines to vertical align practically everything. Just make
 > sure the div/image you apply the code to has a parent with a height.
@@ -9410,41 +9150,27 @@ img
 }
 
 > Link to
-> [[JSFiddle]{.underline}](https://jsfiddle.net/gasp10/6bv92mko/4/)
+> [[JSFiddle]](https://jsfiddle.net/gasp10/6bv92mko/4/)
 >
 > The main points are the 3 .thumb, .details and .position-container
 > containers:
 
-  ------------------------------------------------------------------------
   **display**                         :     table
-  ----------------------------------- ----- ------------------------------
 
-  ------------------------------------------------------------------------
 
-  -----------------------------------------------------------------------------------------
   **width**   :   \....   and    **display**   :   table-cell      ,   **vertical-align**
-  ----------- --- ------- ------ ------------- --- --------------- --- --------------------
 
-  -----------------------------------------------------------------------------------------
 
 > The .position-container must have .
 >
 > The .details must have the real width set : middle.
 
-  ------------------------------------------------------------------------
   **width**                        :      100%
-  -------------------------------- ------ --------------------------------
-
-  ------------------------------------------------------------------------
 
 > The .thumb must have if you want that it will take all the remaining
 > space and it will be influenced by the .details width.
 
-  ------------------------------------------------------------------------
   **width**                        :      100%
-  -------------------------------- ------ --------------------------------
-
-  ------------------------------------------------------------------------
 
 > The image (if you have an image) inside .thumb should have , but it is
 > not necessary if you have correct proportions.
@@ -9454,11 +9180,7 @@ img
 > This technique works even when the container\'s dimensions are
 > unknown.
 
-  -----------------------------------------------------------------------
   **vertical-align**
-  -----------------------------------------------------------------------
-
-  -----------------------------------------------------------------------
 
 > Set up a \"ghost\" element inside the container to be centered that is
 > 100% height, then use :
@@ -9649,49 +9371,25 @@ class
 > element and center it both horizontally and vertically **without
 > worrying about its height or width**.
 
-  -----------------------------------------------------------------------
   **display**: table;
-  -----------------------------------------------------------------------
-
-  -----------------------------------------------------------------------
 
 > **The outer container** should have
 >
 > **The inner container**
 
-  -----------------------------------------------------------------------
   **display**: table-cell;
-  -----------------------------------------------------------------------
 
-  -----------------------------------------------------------------------
-
-  -----------------------------------------------------------------------
   **vertical-align**: middle;
-  -----------------------------------------------------------------------
 
-  -----------------------------------------------------------------------
-
-  -----------------------------------------------------------------------
   **text-align**: center;
-  -----------------------------------------------------------------------
-
-  -----------------------------------------------------------------------
 
 > should have should have should have
 >
 > **The content box**
 
-  -----------------------------------------------------------------------
   **display**: inline-block;
-  -----------------------------------------------------------------------
 
-  -----------------------------------------------------------------------
-
-  -----------------------------------------------------------------------
   **text-align**: left;           or    **text-align**: right;
-  ------------------------------- ----- ---------------------------------
-
-  -----------------------------------------------------------------------
 
 > should have
 >
@@ -9913,7 +9611,7 @@ solid
 }
 
 See also [**[this
-Fiddle]{.underline}**](http://jsfiddle.net/WXLsY/621/)!
+Fiddle]**](http://jsfiddle.net/WXLsY/621/)!
 
 ## Section 6.12: Vertically align an image inside div
 
@@ -10355,32 +10053,21 @@ px
 
 > Applying css intuitively doesn\'t produce the desired results because
 
-  -----------------------------------------------------------------------
   **vertical-align**:middle
-  -----------------------------------------------------------------------
 
-  -----------------------------------------------------------------------
-
-  ------------------------------------------------------------------------
   **margin-top**:auto          and      **margin-bottom**:auto
-  ---------------------------- -------- ----------------------------------
 
-  ------------------------------------------------------------------------
-
-  -----------------------------------------------------------------------
   **margin-top**:-50%
-  -----------------------------------------------------------------------
 
-  -----------------------------------------------------------------------
 
-> [***[isn\'t]{.underline}*** [applicable to block-level
-> elements]{.underline}](http://www.w3.org/TR/CSS21/visudet.html#propdef-vertical-align)
-> [[used values would compute as]{.underline}
-> ***[zero]{.underline}***](http://www.w3.org/TR/CSS2/visudet.html#Computing_heights_and_margins)
+> [***[isn\'t]*** [applicable to block-level
+> elements]](http://www.w3.org/TR/CSS21/visudet.html#propdef-vertical-align)
+> [[used values would compute as]
+> ***[zero]***](http://www.w3.org/TR/CSS2/visudet.html#Computing_heights_and_margins)
 >
 > [[percentage-based margin values are calculated relative to
-> the]{.underline} ***[width]{.underline}*** [of containing
-> block]{.underline}](http://www.w3.org/TR/CSS2/box.html#margin-properties)
+> the] ***[width]*** [of containing
+> block]](http://www.w3.org/TR/CSS2/box.html#margin-properties)
 >
 > For widest browser support, a workaround with helper elements:
 >
@@ -10558,9 +10245,9 @@ px
 
 }
 
-[[jsfiddle]{.underline}](http://jsfiddle.net/ovfiddle/yVAW9/) from
+[[jsfiddle]](http://jsfiddle.net/ovfiddle/yVAW9/) from
 [[original
-question]{.underline}](http://stackoverflow.com/a/12417336/1081234).
+question]](http://stackoverflow.com/a/12417336/1081234).
 This approach
 
 > works with dynamic height elements respects content flow is supported
@@ -10788,7 +10475,7 @@ teal
 height="3.5416666666666665in"}
 
 *Diagram from [[CSS2.2 Working
-Draft]{.underline}](https://www.w3.org/TR/CSS22/box.html#mpb-examples)*
+Draft]](https://www.w3.org/TR/CSS22/box.html#mpb-examples)*
 
 > The perimeter of each of the four areas is called an *edge*. Each edge
 > defines a *box.*
@@ -11036,11 +10723,7 @@ inherit
 
 }
 
-  -----------------------------------------------------------------------
   **box-sizing**                    :   border-box
-  --------------------------------- --- ---------------------------------
-
-  -----------------------------------------------------------------------
 
 > In this coding ; is not directly applied to \*, so you can easily
 > overwrite this property on individual elements.
@@ -11568,7 +11251,7 @@ px
 >
 > The following code would apply a margin of 30 pixels to the left side
 > of the selected div. [*[View
-> Result]{.underline}*](https://jsfiddle.net/wm0100x9/1/)
+> Result]*](https://jsfiddle.net/wm0100x9/1/)
 >
 > **HTML**
 
@@ -11673,7 +11356,7 @@ red
 > The following example applies a zero-width margin to the top of the
 > div, a 10px margin to the right side, a 50px margin to the left side,
 > and a 100px margin to the left side. [*[View
-> Result]{.underline}*](https://jsfiddle.net/1979c947/)
+> Result]*](https://jsfiddle.net/1979c947/)
 >
 > **HTML**
 
@@ -12726,11 +12409,7 @@ dashed
 > border-style can also have the values none and hidden. They have the
 > same effect, except hidden works for
 
-  ------------------------------------------------------------------------
   **\<table**      **\>** elements. In a                  **\<table**
-  ---------------- -------------------------------------- ----------------
-
-  ------------------------------------------------------------------------
 
 > border conflict resolution for **\>** with multiple borders, none has
 > the lowest priority
@@ -13035,7 +12714,7 @@ px
 ![](./images/media/image27.jpg){width="1.4583333333333333in"
 height="4.020833333333333in"}
 
-[[http://jsfiddle.net/MadalinaTn/bvqpcohm/2/]{.underline}](http://jsfiddle.net/MadalinaTn/bvqpcohm/2/)
+[[http://jsfiddle.net/MadalinaTn/bvqpcohm/2/]](http://jsfiddle.net/MadalinaTn/bvqpcohm/2/)
 
 ## Section 10.4: border (shorthands)
 
@@ -13107,11 +12786,7 @@ double
 
 ## Section 10.5: border-collapse
 
-  ------------------------------------------------------------------------
   **display**                         :     table
-  ----------------------------------- ----- ------------------------------
-
-  ------------------------------------------------------------------------
 
 > The border-collapse property applies only to tables (and elements
 > displayed as or inlinetable) and sets whether the table borders are
@@ -13165,11 +12840,7 @@ px
 > Consider the following example wheras border.png is a image of 90x90
 > pixels:
 
-  -------------------------------------------------------------------------------
   **border-image**     :   url    (   \"border.png\"       )   30 stretch
-  -------------------- --- ------ --- -------------------- --- ------------------
-
-  -------------------------------------------------------------------------------
 
 > ;
 >
@@ -13321,17 +12992,9 @@ height="1.4375in"}
 > padding and content areas, thus making it look as though only the
 > border has the gradient.
 
-  -----------------------------------------------------------------------
   to right
-  -----------------------------------------------------------------------
 
-  -----------------------------------------------------------------------
-
-  -----------------------------------------------------------------------
   to bottom
-  -----------------------------------------------------------------------
-
-  -----------------------------------------------------------------------
 
 > Which border(s) have a single color is dependant on the gradient
 > definition. If the gradient is a gradient, the left border would be
@@ -13379,11 +13042,8 @@ px
 
 ## Section 10.8: border-\[left\|right\|top\|bottom\]
 
-  -----------------------------------------------------------------------------------
   border-           \[   left      \|   right        \|   top     \|   bottom
-  ----------------- ---- --------- ---- ------------ ---- ------- ---- --------------
 
-  -----------------------------------------------------------------------------------
 
 > The \] property is used to add a border to a specific side of an
 > element.
@@ -13417,9 +13077,8 @@ black
 
 **Parameter Details**
 
-  -----------------------------------------------------------------------
   dotted       dotted outline
-  ------------ ----------------------------------------------------------
+
   dashed       dashed outline
 
   solid        solid outline
@@ -13437,7 +13096,6 @@ black
   none         no outline
 
   hidden       hidden outline
-  -----------------------------------------------------------------------
 
 ## Section 11.1: Overview
 
@@ -13797,9 +13455,7 @@ An outset outline
 
 **Overflow Value Details**
 
-  -----------------------------------------------------------------------
   visible     Shows all overflowing content outside the element
-  ----------- -----------------------------------------------------------
   scroll      Hides the overflowing content and adds a scroll bar
 
   hidden      Hides the overflowing content, both scroll bars disappear
@@ -13809,7 +13465,6 @@ An outset outline
               scroll bar if content fits
 
   inherit     Inherit\'s the parent element\'s value for this property
-  -----------------------------------------------------------------------
 
 ## Section 12.1: overflow-wrap
 
@@ -14593,11 +14248,7 @@ skyblue
 
 ## Section 13.3: mediatype
 
-  -----------------------------------------------------------------------
   **\@media** mediatype
-  -----------------------------------------------------------------------
-
-  -----------------------------------------------------------------------
 
 > Media queries have an optional mediatype parameter. This parameter is
 > placed directly after the \@media declaration (), for example:
@@ -14842,11 +14493,7 @@ dpi
 
 ## Section 13.5: Width vs Viewport
 
-  -----------------------------------------------------------------------
   **\<head**
-  -----------------------------------------------------------------------
-
-  -----------------------------------------------------------------------
 
 > When we are using \"width\" with media queries it is important to set
 > the meta tag correctly. Basic meta tag looks like this and it needs to
@@ -15045,14 +14692,14 @@ px
 ## Section 13.8: Media queries and IE8
 
 > [**[Media
-> queries]{.underline}**](http://www.brianhadaway.com/responsive-web-design-using-css3-media-queries/)
+> queries]**](http://www.brianhadaway.com/responsive-web-design-using-css3-media-queries/)
 > are not supported at all in IE8 and below.
 >
 > **A Javascript based workaround**
 >
 > To add support for IE8, you could use one of several JS solutions. For
 > example,
-> [**[Respond]{.underline}**](https://github.com/scottjehl/Respond) can
+> [**[Respond]**](https://github.com/scottjehl/Respond) can
 > be added to add media query support for IE8 only with the following
 > code :
 
@@ -15097,7 +14744,7 @@ endif
 **\>**
 
 > [**[CSS
-> Mediaqueries]{.underline}**](https://code.google.com/p/css3-mediaqueries-js/)
+> Mediaqueries]**](https://code.google.com/p/css3-mediaqueries-js/)
 > is another library that does the same thing. The code for adding that
 > library to your HTML would be identical :
 
@@ -15202,7 +14849,7 @@ endif
 > **Note :**
 >
 > Technically it\'s one more alternative: using [**[CSS
-> hacks]{.underline}**](http://browserhacks.com/) to target IE\<9. It
+> hacks]**](http://browserhacks.com/) to target IE\<9. It
 > has the same impact as an IE\<9 only stylesheet, but you don\'t need a
 > separate stylesheet for that. I do not recommend this option, though,
 > as they produce invalid CSS code (which is but one of several reasons
@@ -15264,7 +14911,7 @@ rem
 height="7.052389545056868in"}
 
 [[Codepen
-Link]{.underline}](http://codepen.io/vishak-kavalur/pen/pbxvLx)
+Link]](http://codepen.io/vishak-kavalur/pen/pbxvLx)
 
 ## Section 14.2: clear property
 
@@ -15415,9 +15062,9 @@ The clearfix hack is a popular way to contain floats (N. Gallagher aka
 >
 > 3 versions with slightly different effects (sources :[[A new micro
 > clearfix
-> hack]{.underline}](http://nicolasgallagher.com/micro-clearfix-hack/)
+> hack]](http://nicolasgallagher.com/micro-clearfix-hack/)
 > by N. Gallagher and [[clearfix
-> reloaded]{.underline}](http://yuiblog.com/blog/2010/09/27/clearfix-reloaded-overflowhidden-demystified/)
+> reloaded]](http://yuiblog.com/blog/2010/09/27/clearfix-reloaded-overflowhidden-demystified/)
 > by T. J. Koblentz):
 >
 > **Clearfix (with top margin collapsing of contained floats still
@@ -15625,10 +15272,10 @@ zoom
 }
 
 [[Codepen showing clearfix
-effect]{.underline}](http://codepen.io/PhilippeVay/pen/OXEqgW?editors=0100)
+effect]](http://codepen.io/PhilippeVay/pen/OXEqgW?editors=0100)
 
 > Other resource: [[Everything you know about clearfix is
-> wrong]{.underline}](http://www.cssmojo.com/clearfix_block-formatting-context_and_hasLayout/)
+> wrong]](http://www.cssmojo.com/clearfix_block-formatting-context_and_hasLayout/)
 > (clearfix and BFC - Block Formatting Context while hasLayout relates
 > to outdated browsers IE6 maybe 7)
 
@@ -15913,18 +15560,14 @@ center
 height="0.9774857830271216in"}
 
 [[Codepen
-Link]{.underline}](http://codepen.io/vishak-kavalur/pen/bZxbBy)
+Link]](http://codepen.io/vishak-kavalur/pen/bZxbBy)
 
 ## Section 14.5: Use of overflow property to clear floats
 
 > Setting overflow value to hidden,auto or scroll to an element, will
 > clear all the floats within that element.
 
-  -----------------------------------------------------------------------
   **overflow**:scroll
-  -----------------------------------------------------------------------
-
-  -----------------------------------------------------------------------
 
 **Note:** using will always show the scrollbox
 
@@ -16603,15 +16246,13 @@ yellow
 
 }
 
-[[Fiddle]{.underline}](https://jsfiddle.net/ooprqsL0/)
+[[Fiddle]](https://jsfiddle.net/ooprqsL0/)
 
 # Chapter 15: Typography
 
 **Parameter Details**
 
-  ---------------------------------------------------------------------------
   *font-style*     italics or oblique
-  ---------------- ----------------------------------------------------------
   *font-variant*   normal or small-caps
 
   *font-weight*    normal, bold or numeric from 100 to 900.
@@ -16623,25 +16264,16 @@ yellow
                    measurement
 
   *font-family*    This is for defining the family\'s name.
-  ---------------------------------------------------------------------------
-
-  -----------------------------------------------------------------------
   hsl         (   240         ,   100%                ,   50%
-  ----------- --- ----------- --- ------------------- --- ---------------
-
-  -----------------------------------------------------------------------
 
 *color* Any valid CSS color representation, like red, #00FF00, ) etc.
 
-  ------------------------------------------------------------------------------
   *font-stretch*   Whether or not to use a confenced or expanded face from font.
                    Valid values are normal, ultracondensed, extra-condensed,
                    condensed, semi-condensed, semi-expanded, expanded,
                    extraexpanded or ultra-expanded
-  ---------------- -------------------------------------------------------------
   *text-align*     start, end, left, right, center, justify, match-parent
 
-  ------------------------------------------------------------------------------
 
 > *text-decoration* none, underline, overline, line-through, initial,
 > inherit;
@@ -16770,23 +16402,10 @@ sans-serif
 >
 > Initial value for each of the properties:
 
-  -----------------------------------------------------------------------
   **font-style**                          :   normal
-  --------------------------------------- --- ---------------------------
 
-  -----------------------------------------------------------------------
-
-  -----------------------------------------------------------------------
   **font-variant**                           :   normal
-  ------------------------------------------ --- ------------------------
-
-  -----------------------------------------------------------------------
-
-  ------------------------------------------------------------------------
   **font-weight**                           :   normal
-  ----------------------------------------- --- --------------------------
-
-  ------------------------------------------------------------------------
 
 > ;
 >
@@ -16796,23 +16415,12 @@ sans-serif
 >
 > ;
 
-  -----------------------------------------------------------------------
   **font-stretch**                           :   normal
-  ------------------------------------------ --- ------------------------
 
-  -----------------------------------------------------------------------
 
-  ------------------------------------------------------------------------
   **font-size**                         :    medium
-  ------------------------------------- ---- -----------------------------
 
-  ------------------------------------------------------------------------
-
-  ------------------------------------------------------------------------
   **line-height**                           :   normal
-  ----------------------------------------- --- --------------------------
-
-  ------------------------------------------------------------------------
 
 > ;
 >
@@ -16822,11 +16430,7 @@ sans-serif
 
 ## Section 15.2: Quotes
 
-  -----------------------------------------------------------------------
   **\<q**
-  -----------------------------------------------------------------------
-
-  -----------------------------------------------------------------------
 
 > The quotes property is used to customize the opening and closing
 > quotation marks of the **\>** tag.
@@ -17021,11 +16625,8 @@ vertical-rl
 > The direction property is used to change the horizontal text direction
 > of an element.
 
-  -------------------------------------------------------------------------
   **direction**   :   ltr \| rtl \| initial \| inherit
-  --------------- --- -----------------------------------------------------
 
-  -------------------------------------------------------------------------
 
 > Syntax: ;
 >
@@ -17033,11 +16634,7 @@ vertical-rl
 > read from top-to-bottom or from left-to-right, depending on the
 > language.
 
-  -----------------------------------------------------------------------------
   **direction**   :   horizontal-tb \| vertical-rl \| vertical-lr
-  --------------- --- ---------------------------------------------------------
-
-  -----------------------------------------------------------------------------
 
 Syntax: ;
 
@@ -17117,11 +16714,7 @@ ellipsis
 
 }
 
-  ------------------------------------------------------------------------
   **text-overflow**                        :   ellipsis
-  ---------------------------------------- --- ---------------------------
-
-  ------------------------------------------------------------------------
 
 > Unfortunately, only works on a single line of text. There is no way to
 > support ellipsis on the last line in standard CSS, but it can be
@@ -17201,11 +16794,11 @@ N
 
 > Example (open in Chrome or Safari):
 
-[[http://jsfiddle.net/csYjC/1131/]{.underline}](http://jsfiddle.net/csYjC/1131/)
+[[http://jsfiddle.net/csYjC/1131/]](http://jsfiddle.net/csYjC/1131/)
 
 > Resources:
 
-[[https://www.w3.org/TR/2012/WD-css3-ui-20120117/#text-overflow0]{.underline}](https://www.w3.org/TR/2012/WD-css3-ui-20120117/#text-overflow0)
+[[https://www.w3.org/TR/2012/WD-css3-ui-20120117/#text-overflow0]](https://www.w3.org/TR/2012/WD-css3-ui-20120117/#text-overflow0)
 
 ## Section 15.7: Text Shadow
 
@@ -17488,7 +17081,7 @@ px
 }
 
 Resources:
-[[https://developer.mozilla.org/en-US/docs/Web/CSS/letter-spacing]{.underline}](https://developer.mozilla.org/en-US/docs/Web/CSS/letter-spacing)
+[[https://developer.mozilla.org/en-US/docs/Web/CSS/letter-spacing]](https://developer.mozilla.org/en-US/docs/Web/CSS/letter-spacing)
 
 ## Section 15.10: Text Indent
 
@@ -17515,10 +17108,10 @@ px
 > Resources:
 >
 > [[Indenting only the first line of text in a
-> paragraph?]{.underline}](http://stackoverflow.com/questions/5856952/indenting-only-the-first-line-of-text-in-a-paragraph)
+> paragraph?]](http://stackoverflow.com/questions/5856952/indenting-only-the-first-line-of-text-in-a-paragraph)
 
-[[https://www.w3.org/TR/CSS21/text.html#propdef-text-indent]{.underline}](https://www.w3.org/TR/CSS21/text.html#propdef-text-indent)
-[[https://developer.mozilla.org/en-US/docs/Web/CSS/text-indent]{.underline}](https://developer.mozilla.org/en-US/docs/Web/CSS/text-indent)
+[[https://www.w3.org/TR/CSS21/text.html#propdef-text-indent]](https://www.w3.org/TR/CSS21/text.html#propdef-text-indent)
+[[https://developer.mozilla.org/en-US/docs/Web/CSS/text-indent]](https://developer.mozilla.org/en-US/docs/Web/CSS/text-indent)
 
 ## Section 15.11: Text Decoration
 
@@ -17716,14 +17309,14 @@ px
 >
 > **Online-Demo**
 
-[[Try it yourself]{.underline}](https://jsfiddle.net/91742Lxt/)
+[[Try it yourself]](https://jsfiddle.net/91742Lxt/)
 
 > **Further reading:**
 
-[[word-spacing]{.underline} [--]{.underline}
-[MDN]{.underline}](https://developer.mozilla.org/de/docs/Web/CSS/word-spacing)
-[[word-spacing]{.underline} [--]{.underline}
-[w3.org]{.underline}](https://www.w3.org/wiki/CSS/Properties/word-spacing)
+[[word-spacing] [--]
+[MDN]](https://developer.mozilla.org/de/docs/Web/CSS/word-spacing)
+[[word-spacing] [--]
+[w3.org]](https://www.w3.org/wiki/CSS/Properties/word-spacing)
 
 ## Section 15.13: Font Variant
 
@@ -17895,7 +17488,7 @@ center
 }
 
 > Here is a
-> [[demo]{.underline}](http://codepen.io/asim-coder/pen/ZOobqz).
+> [[demo]](http://codepen.io/asim-coder/pen/ZOobqz).
 >
 > **Reasoning**
 
@@ -17910,17 +17503,8 @@ center
 > This centers the elements along the axis specified by flex-direction.
 > I.e., for a
 
-  -----------------------------------------------------------------------
   **flex-direction**                                   :   row
-  ---------------------------------------------------- --- --------------
-
-  -----------------------------------------------------------------------
-
-  ------------------------------------------------------------------------
   **flex-direction**                            :   column
-  --------------------------------------------- --- ----------------------
-
-  ------------------------------------------------------------------------
 
 > justify-contentcenter horizontal () flexbox, this centers
 > horizontally, and for a vertical flexbox () flexbox, this centers
@@ -17994,11 +17578,7 @@ flex-box
 
 .
 
-  ----------------------------------------------------------------------------
   **justify-content**                            **:**   **center**
-  ---------------------------------------------- ------- ---------------------
-
-  ----------------------------------------------------------------------------
 
 > **Example: on a horizontal flexbox**
 >
@@ -18041,13 +17621,9 @@ center
 ![](./images/media/image40.jpg){width="6.90625in"
 height="6.135416666666667in"}
 
-> Here is a [[demo]{.underline}](https://jsfiddle.net/d6pc5bmd/).
+> Here is a [[demo]](https://jsfiddle.net/d6pc5bmd/).
 
-  ----------------------------------------------------------------------------
   **justify-content**                            **:**   **center**
-  ---------------------------------------------- ------- ---------------------
-
-  ----------------------------------------------------------------------------
 
 > **Example: on a vertical flexbox**
 >
@@ -18089,13 +17665,9 @@ center
 
 ![](./images/media/image41.jpg){width="6.9375in" height="6.15625in"}
 
-> Here is a [[demo]{.underline}](https://jsfiddle.net/d6pc5bmd/1/).
+> Here is a [[demo]](https://jsfiddle.net/d6pc5bmd/1/).
 
-  ---------------------------------------------------------------------------
   **align-content**                           **:**   **center**
-  ------------------------------------------- ------- -----------------------
-
-  ---------------------------------------------------------------------------
 
 > **Example: on a horizontal flexbox**
 >
@@ -18138,13 +17710,9 @@ center
 ![](./images/media/image42.jpg){width="6.947916666666667in"
 height="6.145833333333333in"}
 
-> Here is a [[demo]{.underline}](https://jsfiddle.net/d6pc5bmd/2/).
+> Here is a [[demo]](https://jsfiddle.net/d6pc5bmd/2/).
 
-  ---------------------------------------------------------------------------
   **align-content**                           **:**   **center**
-  ------------------------------------------- ------- -----------------------
-
-  ---------------------------------------------------------------------------
 
 > **Example: on a vertical flexbox**
 >
@@ -18187,7 +17755,7 @@ center
 ![](./images/media/image43.jpg){width="6.979166666666667in"
 height="6.15625in"}
 
-> Here is a [[demo]{.underline}](https://jsfiddle.net/d6pc5bmd/3/).
+> Here is a [[demo]](https://jsfiddle.net/d6pc5bmd/3/).
 >
 > **Example: Combination for centering both on horizontal flexbox**
 
@@ -18236,7 +17804,7 @@ center
 ![](./images/media/image44.jpg){width="6.9375in"
 height="6.135416666666667in"}
 
-> Here is a [[demo]{.underline}](https://jsfiddle.net/d6pc5bmd/4/).
+> Here is a [[demo]](https://jsfiddle.net/d6pc5bmd/4/).
 >
 > **Example: Combination for centering both on vertical flexbox**
 
@@ -18285,7 +17853,7 @@ center
 ![](./images/media/image45.jpg){width="6.9375in"
 height="6.114583333333333in"}
 
-Here is a [[demo]{.underline}](https://jsfiddle.net/d6pc5bmd/5/).
+Here is a [[demo]](https://jsfiddle.net/d6pc5bmd/5/).
 
 ## Section 16.2: Sticky Variable-Height Footer
 
@@ -18293,7 +17861,7 @@ Here is a [[demo]{.underline}](https://jsfiddle.net/d6pc5bmd/5/).
 > end of the viewport, the footer sticks to the bottom of the viewport.
 > When the content extends past the bottom of the viewport, the footer
 > is also pushed out of the viewport. [*[View
-> Result]{.underline}*](https://jsfiddle.net/0t1f84tL/)
+> Result]*](https://jsfiddle.net/0t1f84tL/)
 >
 > **HTML:**
 
@@ -18534,7 +18102,7 @@ none
 > One of the nicest features of flexbox is to allow optimally fitting
 > containers to their parent element.
 
-[[Live demo]{.underline}](https://jsfiddle.net/6gfogoqk/).
+[[Live demo]](https://jsfiddle.net/6gfogoqk/).
 
 > HTML:
 
@@ -18792,7 +18360,7 @@ height="3.182736220472441in"}
 ## Section 16.4: Holy Grail Layout using Flexbox
 
 > [[Holy Grail
-> layout]{.underline}](http://alistapart.com/article/holygrail) is a
+> layout]](http://alistapart.com/article/holygrail) is a
 > layout with a fixed height header and footer, and a center with 3
 > columns. The 3 columns include a fixed width sidenav, a fluid center,
 > and a column for other content like ads (the fluid center appears
@@ -19165,7 +18733,7 @@ px
 
 }
 
-[[Demo]{.underline}](https://jsfiddle.net/adityarb88/hek6ms0x/)
+[[Demo]](https://jsfiddle.net/adityarb88/hek6ms0x/)
 
 ## Section 16.5: Perfectly aligned buttons inside cards with flexbox
 
@@ -19205,11 +18773,8 @@ height="3.3848195538057744in"}
 >
 > **\</div\>**
 
-  ------------------------------------------------------------------------
   **display**                            :     flex
-  -------------------------------------- ----- ---------------------------
 
-  ------------------------------------------------------------------------
 
 > First of all, we use CSS to apply ; to the container. This will create
 > 2 columns equal in height with the content flowing naturally inside it
@@ -19349,11 +18914,8 @@ center
 ![](./images/media/image48.jpg){width="7.48037510936133in"
 height="3.0046391076115486in"}
 
-  ------------------------------------------------------------------------
   **display**                            :     flex
-  -------------------------------------- ----- ---------------------------
 
-  ------------------------------------------------------------------------
 
 > In order to move the buttons to the bottom of the block, we need to
 > apply ; to the card itself with the direction set to column. After
@@ -19520,8 +19082,8 @@ auto
 > This code makes sure that all nested containers are always the same
 > height. This is done by assuring that all nested elements are the same
 > height as the containing parent div. [[See working
-> example]{.underline}](https://jsfiddle.net/3wwh7ewp/):
-> [[https://jsfiddle.net/3wwh7ewp/]{.underline}](https://jsfiddle.net/3wwh7ewp/)
+> example]](https://jsfiddle.net/3wwh7ewp/):
+> [[https://jsfiddle.net/3wwh7ewp/]](https://jsfiddle.net/3wwh7ewp/)
 > This effect is achieved due to the property align-items being set to
 > stretch by default.
 >
@@ -19658,7 +19220,7 @@ value
 }
 
 Note: [[Does not work on IE versions under
-10]{.underline}](http://caniuse.com/#search=flexbox)
+10]](http://caniuse.com/#search=flexbox)
 
 # Chapter 17: Cascading and Specificity
 
@@ -19675,34 +19237,17 @@ Note: [[Does not work on IE versions under
 
 A.  id selectors #foo class selectors .bar
 
-  -----------------------------------------------------------------------
   title
-  -----------------------------------------------------------------------
   hover
-
-  -----------------------------------------------------------------------
-
-  ------------------------------------------------------------------------
   colspan                                       =      \"2\"
-  --------------------------------------------- ------ -------------------
-
-  ------------------------------------------------------------------------
-
-  -----------------------------------------------------------------------
   nth-child
-  -----------------------------------------------------------------------
-
-  -----------------------------------------------------------------------
 
 B.  attribute selectors \[\], \[\] pseudo-classes :, :(2)
 
 type selectors div, li
 
-  ------------------------------------------------------------------------
   ::before                 ,   ::first-letter
-  ------------------------ --- -------------------------------------------
 
-  ------------------------------------------------------------------------
 
 > *c* pseudo-elements
 >
@@ -19903,11 +19448,7 @@ black
 > selectors have a Group *B* specificity. An ID selector outweighs any
 > number of class selectors.
 
-  -----------------------------------------------------------------------------------------
   **color**   :   blue   ; from the #foo selector and the      **background**   :   black
-  ----------- --- ------ ------------------------------------- ---------------- --- -------
-
-  -----------------------------------------------------------------------------------------
 
 > Because of this, ; from the .bar selector will be
 >
@@ -20010,18 +19551,15 @@ span
 
 */\* a=0, b=1, c=0 \*/*
 
-  -----------------------------------------------------------------------
   .bar.bar
-  -----------------------------------------------------------------------
 
-  -----------------------------------------------------------------------
 
 > However it may not always possible to find another common selector
 > which is shared between any element which uses the .bar class. Because
 > of this, CSS allows us to duplicate selectors to increase specificity.
 > Instead of just .bar, we can use instead (See [[The grammar of
 > Selectors, W3C
-> Recommendation]{.underline}](https://www.w3.org/TR/css3-selectors/#grammar)).
+> Recommendation]](https://www.w3.org/TR/css3-selectors/#grammar)).
 > This still selects any element with a class of .bar, but now has
 > double the Group *B* specificity:
 
@@ -20069,11 +19607,8 @@ span
 >
 > **A final note**
 
-  ------------------------------------------------------------------------
   b                    =5,                            c
-  -------------------- ------------------------------ --------------------
 
-  ------------------------------------------------------------------------
 
 > A common misconception about CSS specificity is that the Group *A*,
 > *B* and *c* values should be combined with each other (a=1,=1 =\>
@@ -20110,19 +19645,16 @@ li a
 > This makes future changes harder and pollutes that css page.
 >
 > You can calculate the specificity of your selector
-> [[here]{.underline}](http://specificity.keegan.st/)
+> [[here]](http://specificity.keegan.st/)
 
 ## Section 17.2: The !important declaration
 
 > The !important declaration is used to override the usual specificity
 > in a style sheet by giving a higher priority to a
 
-  ------------------------------------------------------------------------
   property                :   value !important
-  ----------------------- --- --------------------------------------------
-
-  ------------------------------------------------------------------------
-
+ 
+ 
 > rule. Its usage is: ;
 
 #mydiv
@@ -20190,7 +19722,7 @@ normal
 
 [**[W3C - 6 Assigning property values, Cascading, and Inheritance \--
 6.4.2 !important
-rules]{.underline}**](https://www.w3.org/TR/CSS22/cascade.html#important-rules)
+rules]**](https://www.w3.org/TR/CSS22/cascade.html#important-rules)
 
 ## Section 17.3: Cascading
 
@@ -20210,12 +19742,9 @@ rules]{.underline}**](https://www.w3.org/TR/CSS22/cascade.html#important-rules)
 3.  Author stylesheet (Author here means the creator of the
     webpage/website)
 
-  -----------------------------------------------------------------------
   **\<style**
-  -----------------------------------------------------------------------
-
-  -----------------------------------------------------------------------
-
+ 
+ 
 > Maybe one or more .css files
 >
 > In the **\>** element of the HTML document
@@ -20420,12 +19949,9 @@ What color will the background be?
 
 red
 
-  ------------------------------------------------------------------------
   .otherstyle                                        \>   div
-  -------------------------------------------------- ---- ----------------
-
-  ------------------------------------------------------------------------
-
+ 
+ 
 > After applying the specificity rules, there\'s still a conflict
 > between blue and red, so the cascading rules are applied on top of the
 > specificity rules. Cascading looks at the load order of the rules,
@@ -21348,10 +20874,10 @@ can!*
 }
 
 > [[Hexadecimal
-> notation]{.underline}](https://en.wikipedia.org/wiki/Hexadecimal) is
+> notation]](https://en.wikipedia.org/wiki/Hexadecimal) is
 > used to specify color values in the RGB color format, per the [[W3C\'s
-> \'Numerical color]{.underline}
-> [values\']{.underline}](https://www.w3.org/TR/css3-color/#numerical).
+> \'Numerical color]
+> [values\']](https://www.w3.org/TR/css3-color/#numerical).
 >
 > There are a lot of tools available on the Internet for looking up
 > hexadecimal (or simply hex) color values.
@@ -22187,7 +21713,7 @@ height="2.9583333333333335in"}
 ## Section 20.2: Font size with rem
 
 > CSS3 introduces a few new units, including the
-> [[rem]{.underline}](https://www.w3.org/TR/css-values/#font-relative-lengths)
+> [[rem]](https://www.w3.org/TR/css-values/#font-relative-lengths)
 > unit, which stands for \"root em\". Let\'s look at how rem works.
 >
 > First, let\'s look at the differences between em and rem.
@@ -22304,7 +21830,7 @@ em
 > 1 vmax is equal to the larger of *1 vh* and *1 vw*
 
 **Note**: vmax is [[not
-supported]{.underline}](http://caniuse.com/#feat=viewport-units) in:
+supported]](http://caniuse.com/#feat=viewport-units) in:
 
 > any version of Internet Explorer Safari before version 6.1
 
@@ -22847,12 +22373,12 @@ height="1.3125in"}
 > is reached, then it acts as .
 
 unset Combination of initial and inherit. More info
-[[here]{.underline}](https://developer.mozilla.org/en-US/docs/Web/CSS/unset).
+[[here]](https://developer.mozilla.org/en-US/docs/Web/CSS/unset).
 
 ## Section 22.1: Overlapping Elements with z-index
 
 > To change the default [[stack
-> order]{.underline}](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context)
+> order]](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context)
 > positioned elements (position property set to relative, absolute or
 > fixed), use the z-index property.
 >
@@ -23095,7 +22621,7 @@ red
 height="3.8645833333333335in"}
 
 > See a working example at
-> [[JSFiddle]{.underline}](https://jsfiddle.net/esnc10tq/).
+> [[JSFiddle]](https://jsfiddle.net/esnc10tq/).
 >
 > **Syntax**
 
@@ -23130,13 +22656,13 @@ auto Gives the element the same stacking context as its parent.
 > All elements are laid out in a 3D axis in CSS, including a depth axis,
 > measured by the z-index property. z-index only works on positioned
 > elements: (see: [[Why does z-index need a defined position to
-> work?]{.underline}](https://www.sitepoint.com/community/t/why-does-z-index-need-a-defined-position-to-work/46115)).
+> work?]](https://www.sitepoint.com/community/t/why-does-z-index-need-a-defined-position-to-work/46115)).
 > The only value where it is ignored is the default value, static.
 >
 > Read about the z-index property and Stacking Contexts in the [[CSS
-> Specification]{.underline}](https://drafts.csswg.org/css-position/#layered-presentation)
+> Specification]](https://drafts.csswg.org/css-position/#layered-presentation)
 > on layered presentation and at the [[Mozilla Developer
-> Network]{.underline}](https://developer.mozilla.org/en-US/docs/Web/CSS/z-index).
+> Network]](https://developer.mozilla.org/en-US/docs/Web/CSS/z-index).
 
 ## Section 22.2: Absolute Position
 
@@ -23296,7 +22822,7 @@ px
 ## Section 22.5: Static positioning
 
 > The default position of an element is static. To quote
-> [[MDN]{.underline}](https://developer.mozilla.org/en-US/docs/Web/CSS/position#values):
+> [[MDN]](https://developer.mozilla.org/en-US/docs/Web/CSS/position#values):
 
 This keyword lets the element use the normal behavior, that is it is
 laid out in its current position in the
@@ -24262,11 +23788,11 @@ px
 > order within the container.
 >
 > View a working example on
-> [[JSFiddle]{.underline}](https://jsfiddle.net/fexfwkkv/3/). You\'ll
+> [[JSFiddle]](https://jsfiddle.net/fexfwkkv/3/). You\'ll
 > need to view this in IE10, IE11 or Edge for it to work as these are
 > currently the only browsers supporting Grid Layout (with vendor prefix
 > -ms-) or enable a flag in Chrome, Opera and Firefox according to
-> [[caniuse]{.underline}](http://caniuse.com/#feat=css-grid) in order to
+> [[caniuse]](http://caniuse.com/#feat=css-grid) in order to
 > test with them.
 
 # Chapter 25: Tables
@@ -24339,11 +23865,11 @@ height="0.8854166666666666in"}
 >
 > More Information:
 >
-> [[https://www.w3.org/TR/CSS21/tables.html#empty-cells]{.underline}](https://www.w3.org/TR/CSS21/tables.html#empty-cells)
-> [[https://developer.mozilla.org/en-US/docs/Web/CSS/empty-cells]{.underline}](https://developer.mozilla.org/en-US/docs/Web/CSS/empty-cells)
-> [[http://codepen.io/SitePoint/pen/yfhtq]{.underline}](http://codepen.io/SitePoint/pen/yfhtq)
+> [[https://www.w3.org/TR/CSS21/tables.html#empty-cells]](https://www.w3.org/TR/CSS21/tables.html#empty-cells)
+> [[https://developer.mozilla.org/en-US/docs/Web/CSS/empty-cells]](https://developer.mozilla.org/en-US/docs/Web/CSS/empty-cells)
+> [[http://codepen.io/SitePoint/pen/yfhtq]](http://codepen.io/SitePoint/pen/yfhtq)
 
-[[https://css-tricks.com/almanac/properties/e/empty-cells/]{.underline}](https://css-tricks.com/almanac/properties/e/empty-cells/)
+[[https://css-tricks.com/almanac/properties/e/empty-cells/]](https://css-tricks.com/almanac/properties/e/empty-cells/)
 
 ## Section 25.3: border-collapse
 
@@ -24436,7 +23962,7 @@ height="1.1458333333333333in"}
 
 > The specific CSS property whose value change needs to be transitioned
 > (or) all, if all the transition-property [[transitionable
-> properties]{.underline}](https://www.w3.org/TR/css3-transitions/#animatable-properties)
+> properties]](https://www.w3.org/TR/css3-transitions/#animatable-properties)
 > need to be transitioned.
 >
 > The duration (or period) in seconds (s) or milliseconds (ms) over
@@ -24455,7 +23981,7 @@ height="1.1458333333333333in"}
 > (). More information about the various timing functions can be
 >
 > found in the [[W3C
-> specs]{.underline}](https://www.w3.org/TR/css3-transitions/#transition-timing-function).
+> specs]](https://www.w3.org/TR/css3-transitions/#transition-timing-function).
 >
 > The amount of time that must have elapsed before the transition can
 > start. Can be transition-delay
@@ -24574,7 +24100,7 @@ green
 height="2.2083333333333335in"}
 
 > These parameters will be mapped to points which are part of a [[Bézier
-> curve]{.underline}](https://en.wikipedia.org/wiki/B%C3%A9zier_curve#Cubic_B.C3.A9zier_curves):
+> curve]](https://en.wikipedia.org/wiki/B%C3%A9zier_curve#Cubic_B.C3.A9zier_curves):
 
 ![](./images/media/image206.jpg){width="4.96875in"
 height="4.958333333333333in"}
@@ -24780,7 +24306,7 @@ px
 | ming-function | > values for properties are computed. Common values  |
 |               | > are ease, linear, and step-end. Check out the      |
 |               | > [[easing function                                  |
-|               | > cheatsheet]{.underline}](http://easings.net/) for  |
+|               | > cheatsheet]](http://easings.net/) for  |
 |               | > more.                                              |
 +---------------+------------------------------------------------------+
 | delay         | > Amount of time, in seconds or milliseconds, to     |
@@ -25060,7 +24586,7 @@ infinite
 
 }
 
-[*[View Result]{.underline}*](https://jsfiddle.net/s9m3od3p/6/)
+[*[View Result]*](https://jsfiddle.net/s9m3od3p/6/)
 
 > There\'s a few different things to note here. First, the actual
 > \@keyframes syntax.
@@ -25255,7 +24781,7 @@ px
 
 }
 
-[*[View Result]{.underline}*](https://jsfiddle.net/0kcm6rwo/)
+[*[View Result]*](https://jsfiddle.net/0kcm6rwo/)
 
 > By default, hovering over an element with the .Example class would
 > immediately cause the element\'s height to jump to 120px and its
@@ -25286,7 +24812,7 @@ ease
 
 }
 
-[*[View Result]{.underline}*](https://jsfiddle.net/v2j4ggue/1/)
+[*[View Result]*](https://jsfiddle.net/v2j4ggue/1/)
 
 > The all value applies the transition to all compatible (numbers-based)
 > properties. Any compatible property name (such as height or top) can
@@ -25918,7 +25444,7 @@ deg
 > and 50% from top.
 
 See the result
-[[here]{.underline}](https://jsfiddle.net/MadalinaTn/gtt4osms/1/).
+[[here]](https://jsfiddle.net/MadalinaTn/gtt4osms/1/).
 
 ## Section 28.4: Multiple transforms
 
@@ -26563,7 +26089,7 @@ class
 > be along the X-axis instead of along Y-axis. So the transform
 > property\'s value would have to be something like );.
 >
-> [[This pen]{.underline}](http://codepen.io/hari_shanx/pen/YXzoBo) uses
+> [[This pen]](http://codepen.io/hari_shanx/pen/YXzoBo) uses
 > a similar approach to create something that resembles the Safari logo
 > or a compass dial.
 >
@@ -27133,7 +26659,7 @@ deg
 }
 
 [[View example with additional hover
-effect]{.underline}](http://codepen.io/web-tiki/pen/azeKNy)
+effect]](http://codepen.io/web-tiki/pen/azeKNy)
 
 ![](./images/media/image212.jpg){width="7.48037510936133in"
 height="3.642194881889764in"}
@@ -27158,7 +26684,7 @@ height="3.642194881889764in"}
 >
 > For example, this would flip an element away from the screen:
 
-[[JSFIDDLE]{.underline}](https://jsfiddle.net/3z3z843c/)
+[[JSFIDDLE]](https://jsfiddle.net/3z3z843c/)
 
 **\<**
 
@@ -27505,7 +27031,7 @@ rotateX
 height="6.386666666666667in"}
 
 [**[View this
-example]{.underline}**](http://codepen.io/web-tiki/pen/NNwqBa)
+example]**](http://codepen.io/web-tiki/pen/NNwqBa)
 
 > Additional styling is added in the demo and a transform is applied on
 > hover to view the 6 faces of the cube.
@@ -27991,12 +27517,12 @@ HTML element \[\[1\]\]
 > auto; inherit.
 >
 > 1\.
-> [[https://css-tricks.com/almanac/properties/p/pointer-events/]{.underline}](https://css-tricks.com/almanac/properties/p/pointer-events/)
+> [[https://css-tricks.com/almanac/properties/p/pointer-events/]](https://css-tricks.com/almanac/properties/p/pointer-events/)
 >
 > Other resources:
 >
-> [[https://developer.mozilla.org/en-US/docs/Web/CSS/pointer-events]{.underline}](https://developer.mozilla.org/en-US/docs/Web/CSS/pointer-events)
-> [[https://davidwalsh.name/pointer-events]{.underline}](https://davidwalsh.name/pointer-events)
+> [[https://developer.mozilla.org/en-US/docs/Web/CSS/pointer-events]](https://developer.mozilla.org/en-US/docs/Web/CSS/pointer-events)
+> [[https://davidwalsh.name/pointer-events]](https://davidwalsh.name/pointer-events)
 
 ## Section 31.3: caret-color
 
@@ -28036,7 +27562,7 @@ red
 
 > Resources:
 >
-> [[https://developer.mozilla.org/en-US/docs/Web/CSS/caret-color]{.underline}](https://developer.mozilla.org/en-US/docs/Web/CSS/caret-color)
+> [[https://developer.mozilla.org/en-US/docs/Web/CSS/caret-color]](https://developer.mozilla.org/en-US/docs/Web/CSS/caret-color)
 
 # Chapter 32: box-shadow
 
@@ -28064,7 +27590,7 @@ color can be of various notations: a color keyword, hexadecimal,
 ## Section 32.1: bottom-only drop shadow using a pseudoelement
 
 JSFiddle:
-[[https://jsfiddle.net/UnsungHero97/80qod7aL/2/]{.underline}](https://jsfiddle.net/UnsungHero97/80qod7aL/2/)
+[[https://jsfiddle.net/UnsungHero97/80qod7aL/2/]](https://jsfiddle.net/UnsungHero97/80qod7aL/2/)
 
 > **HTML**
 
@@ -28293,7 +27819,7 @@ px
 ## Section 32.2: drop shadow
 
 JSFiddle:
-[[https://jsfiddle.net/UnsungHero97/80qod7aL/]{.underline}](https://jsfiddle.net/UnsungHero97/80qod7aL/)
+[[https://jsfiddle.net/UnsungHero97/80qod7aL/]](https://jsfiddle.net/UnsungHero97/80qod7aL/)
 
 > **HTML**
 
@@ -28547,12 +28073,12 @@ px
 height="1.5416666666666667in"}
 
 JSFiddle:
-[[https://jsfiddle.net/UnsungHero97/80qod7aL/1/]{.underline}](https://jsfiddle.net/UnsungHero97/80qod7aL/1/)
+[[https://jsfiddle.net/UnsungHero97/80qod7aL/1/]](https://jsfiddle.net/UnsungHero97/80qod7aL/1/)
 
 ## Section 32.4: multiple shadows
 
 JSFiddle:
-[[https://jsfiddle.net/UnsungHero97/80qod7aL/5/]{.underline}](https://jsfiddle.net/UnsungHero97/80qod7aL/5/)
+[[https://jsfiddle.net/UnsungHero97/80qod7aL/5/]](https://jsfiddle.net/UnsungHero97/80qod7aL/5/)
 
 > **HTML**
 
@@ -29176,7 +28702,7 @@ outside
 > extend to the left even if it would fall off the page.
 >
 > Showing the result of inside and outside positioning:
-> [[jsfiddle]{.underline}](https://jsfiddle.net/pqh3cxdp/)
+> [[jsfiddle]](https://jsfiddle.net/pqh3cxdp/)
 
 ## Section 34.2: Removing Bullets / Numbers
 
@@ -29833,7 +29359,7 @@ Lorem Ipsum Dolor Sit Amet\....
 > The above example numbers every \"item\" in the page and adds the
 > item\'s number before its header (using content property of
 > .item-header element\'s pseudo). A live demo of this code is available
-> [[here]{.underline}](https://jsfiddle.net/a7rmje3r/).
+> [[here]](https://jsfiddle.net/a7rmje3r/).
 
 ## Section 35.3: Implementing multi-level numbering using CSS counters
 
@@ -30441,7 +29967,7 @@ primary-color
 }
 
 > This feature is currently under development. Check
-> [[caniuse.com]{.underline}](http://caniuse.com/#feat=css-variables)
+> [[caniuse.com]](http://caniuse.com/#feat=css-variables)
 > for the latest browser support.
 
 ## Section 36.4: radial-gradient() function
@@ -31607,7 +31133,7 @@ red
 }
 
 > You can try resizing the window in this [[CodePen
-> Demo]{.underline}](https://codepen.io/mkumaran/pen/BZaXvz)
+> Demo]](https://codepen.io/mkumaran/pen/BZaXvz)
 >
 > Here\'s an animated screenshot of the resizing in action:
 
@@ -33168,7 +32694,7 @@ px
 
 }
 
-[**[See demo]{.underline}**](https://jsfiddle.net/codename0/9po0r1L1/)
+[**[See demo]**](https://jsfiddle.net/codename0/9po0r1L1/)
 
 ## Section 38.7: Pyramid
 
@@ -33649,7 +33175,7 @@ gray
 }
 
 See a [[live sample of this on
-JSFiddle]{.underline}](https://jsfiddle.net/vjL9ewmb/).
+JSFiddle]](https://jsfiddle.net/vjL9ewmb/).
 
 # Chapter 41: Inline-Block Layout
 
@@ -34378,7 +33904,7 @@ px
                  list of possible values are content-box, padding-box, border-box,
                  margin-box, fill-box, stroke-box, view-box. Detailed explanation of how
                  each of those values work is available in the [[W3C
-                 Spec]{.underline}](https://www.w3.org/TR/css-masking/#the-mask-clip).
+                 Spec]](https://www.w3.org/TR/css-masking/#the-mask-clip).
   -------------- -----------------------------------------------------------------------
   bg-size        This represents the size of each mask-image layer and has the same
                  syntax as backgroundsize. The value can be length or percentage or auto
@@ -34393,7 +33919,7 @@ px
 > compositing-operator of compositing operation that should be used for
 > this layer with those below it. Detailed explanation about each value
 > is available in the [[W3C
-> Specs]{.underline}](https://www.w3.org/TR/css-masking/#the-mask-composite).
+> Specs]](https://www.w3.org/TR/css-masking/#the-mask-composite).
 
 ## Section 44.1: Clipping and Masking: Overview and Dierence
 
@@ -34706,7 +34232,7 @@ radius at x y
 
 )
 
-[**[View Example]{.underline}**](https://jsfiddle.net/webtiki/qp69n494/)
+[**[View Example]**](https://jsfiddle.net/webtiki/qp69n494/)
 **Output:**
 
 ![](./images/media/image253.jpg){width="2.46875in"
@@ -34821,7 +34347,7 @@ polygon
 > This can also be used on an element with an image or a gradient as
 > background.
 
-[**[View Example]{.underline}**](https://jsfiddle.net/eoa4a94k/)
+[**[View Example]**](https://jsfiddle.net/eoa4a94k/)
 
 > **Output:**
 
@@ -36238,7 +35764,7 @@ center
 
 > Source:
 
-[[https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context]{.underline}](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context).
+[[https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context]](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context).
 
 # Chapter 49: Block Formatting Contexts
 
@@ -36322,22 +35848,22 @@ hidden
 
 ![](./images/media/image261.jpg){width="6.0in" height="3.0in"}
 
-[[https://jsfiddle.net/MadalinaTn/qkwwmu6m/2/]{.underline}](https://jsfiddle.net/MadalinaTn/qkwwmu6m/2/)
+[[https://jsfiddle.net/MadalinaTn/qkwwmu6m/2/]](https://jsfiddle.net/MadalinaTn/qkwwmu6m/2/)
 
 > [[Using the overflow property with a value different to visible (its
-> default) will create a new block formatting]{.underline} [context.
-> This is technically necessary]{.underline} [---]{.underline} [if a
+> default) will create a new block formatting] [context.
+> This is technically necessary] [---] [if a
 > float intersected with the scrolling element it would
-> forcibly]{.underline} [rewrap the
-> content.]{.underline}](https://css-tricks.com/almanac/properties/o/overflow/)
+> forcibly] [rewrap the
+> content.]](https://css-tricks.com/almanac/properties/o/overflow/)
 >
 > This example that show how a number of paragraphs will interact with a
 > floated image is similar to [[this
-> example]{.underline}](https://css-tricks.com/almanac/properties/o/overflow/),
+> example]](https://css-tricks.com/almanac/properties/o/overflow/),
 > on css-tricks.com.
 
-[[2]{.underline}](https://css-tricks.com/almanac/properties/o/overflow/):
-[[https://developer.mozilla.org/en-US/docs/Web/CSS/overflow]{.underline}](https://developer.mozilla.org/en-US/docs/Web/CSS/overflow)
+[[2]](https://css-tricks.com/almanac/properties/o/overflow/):
+[[https://developer.mozilla.org/en-US/docs/Web/CSS/overflow]](https://developer.mozilla.org/en-US/docs/Web/CSS/overflow)
 MDN
 
 # Chapter 50: Vertical Centering
@@ -37343,13 +36869,13 @@ height="3.6458333333333335in"}
 # Chapter 52: CSS design patterns
 
 > These examples are for documenting CSS-specific design patterns like
-> [[BEM]{.underline}](http://getbem.com/),
-> [[OOCSS]{.underline}](https://www.smashingmagazine.com/2011/12/an-introduction-to-object-oriented-css-oocss/)
-> and [[SMACSS]{.underline}](https://smacss.com/).
+> [[BEM]](http://getbem.com/),
+> [[OOCSS]](https://www.smashingmagazine.com/2011/12/an-introduction-to-object-oriented-css-oocss/)
+> and [[SMACSS]](https://smacss.com/).
 >
 > These examples are NOT for documenting CSS frameworks like
-> [[Bootstrap]{.underline}](http://getbootstrap.com/) or
-> [[Foundation]{.underline}](http://foundation.zurb.com/).
+> [[Bootstrap]](http://getbootstrap.com/) or
+> [[Foundation]](http://foundation.zurb.com/).
 
 ## Section 52.1: BEM
 
@@ -37359,10 +36885,10 @@ height="3.6458333333333335in"}
 
   -------------------------------------------------------------------------
 
-> [[BEM]{.underline}](http://getbem.com/introduction/) stands for .
+> [[BEM]](http://getbem.com/introduction/) stands for .
 > It\'s a methodology initially conceived by Russian tech company
 >
-> [[Yandex]{.underline}](https://en.wikipedia.org/wiki/Yandex), but
+> [[Yandex]](https://en.wikipedia.org/wiki/Yandex), but
 > which gained quite some traction among American & Western-European web
 > developers as well.
 >
@@ -37684,7 +37210,7 @@ deg
 > they can differ from browser to browser.
 >
 > This is where
-> [[normalize.css]{.underline}](http://necolas.github.io/normalize.css/)
+> [[normalize.css]](http://necolas.github.io/normalize.css/)
 > comes into play. It overrides the most common inconsistencies and
 > fixes known bugs.
 >
@@ -37800,7 +37326,7 @@ align: baseline;
 **}**
 
 [[Eric Meyer\'s Reset
-CSS]{.underline}](http://meyerweb.com/eric/tools/css/reset/)
+CSS]](http://meyerweb.com/eric/tools/css/reset/)
 
 > Normalize CSS on the other and deals with many of these separately.
 > The following is a sample from the version (v4.2.0) of the code.
@@ -37973,7 +37499,7 @@ em
 
 }
 
-[[Normalize CSS]{.underline}](http://normalize.css/)
+[[Normalize CSS]](http://normalize.css/)
 
 # Chapter 55: Internet Explorer Hacks
 
@@ -38141,7 +37667,7 @@ white-on-black
 > **More Information:**
 
 [[Microsoft
-Documentation]{.underline}](https://msdn.microsoft.com/en-us/library/windows/apps/hh465764.aspx)
+Documentation]](https://msdn.microsoft.com/en-us/library/windows/apps/hh465764.aspx)
 on -ms-high-contrast
 
 ## Section 55.3: Internet Explorer 6 & Internet Explorer 7 only
@@ -38345,9 +37871,9 @@ px
 
 }
 
-**[Dem]{.underline}**
+**[Dem]**
 
-[**[o]{.underline}**](https://jsfiddle.net/trungdq88/gmpzxLyq/)
+[**[o]**](https://jsfiddle.net/trungdq88/gmpzxLyq/)
 
 took
 
@@ -38500,7 +38026,7 @@ px
 
 }
 
-> [**[Demo]{.underline}**](https://jsfiddle.net/trungdq88/Logdo0rn/)
+> [**[Demo]**](https://jsfiddle.net/trungdq88/Logdo0rn/)
 > same animation, took **1.3ms** for rendering, **2.0ms** for painting.
 
 ![](./images/media/image268.jpg){width="6.48in" height="5.48in"}
@@ -38509,512 +38035,512 @@ px
 
 > Thank you greatly to all the people from Stack Overflow Documentation
 > who helped provide this content, more changes can be sent to
-> [web@petercv.com]{.underline} for new content to be published or
+> [web@petercv.com] for new content to be published or
 > updated
 
   ----------------------------------------------------------------------------------------------------------------
-  [[A B]{.underline}](https://stackoverflow.com/users/167362/)               Chapter 20
+  [[A B]](https://stackoverflow.com/users/167362/)               Chapter 20
   -------------------------------------------------------------------------- -------------------------------------
-  [[A.J]{.underline}](https://stackoverflow.com/users/2720743/)              Chapter 4
+  [[A.J]](https://stackoverflow.com/users/2720743/)              Chapter 4
 
-  [[Aaron]{.underline}](https://stackoverflow.com/users/1676224/)            Chapter 4
+  [[Aaron]](https://stackoverflow.com/users/1676224/)            Chapter 4
 
-  [[abaracedo]{.underline}](https://stackoverflow.com/users/2993458/)        Chapter 4
+  [[abaracedo]](https://stackoverflow.com/users/2993458/)        Chapter 4
 
-  [[Abhishek Singh]{.underline}](https://stackoverflow.com/users/5716106/)   Chapter 22
+  [[Abhishek Singh]](https://stackoverflow.com/users/5716106/)   Chapter 22
 
-  [[adamboro]{.underline}](https://stackoverflow.com/users/3772847/)         Chapter 1
+  [[adamboro]](https://stackoverflow.com/users/3772847/)         Chapter 1
 
-  [[Aeolingamenfel]{.underline}](https://stackoverflow.com/users/3681236/)   Chapters 27 and 55
+  [[Aeolingamenfel]](https://stackoverflow.com/users/3681236/)   Chapters 27 and 55
 
-  [[Ahmad Alfy]{.underline}](https://stackoverflow.com/users/497828/)        Chapters 4, 5 and 16
+  [[Ahmad Alfy]](https://stackoverflow.com/users/497828/)        Chapters 4, 5 and 16
 
-  [[Alohci]{.underline}](https://stackoverflow.com/users/42585/)             Chapter 15
+  [[Alohci]](https://stackoverflow.com/users/42585/)             Chapter 15
 
-  [[amflare]{.underline}](https://stackoverflow.com/users/5937428/)          Chapters 13 and 17
+  [[amflare]](https://stackoverflow.com/users/5937428/)          Chapters 13 and 17
 
-  [[Andre Lopes]{.underline}](https://stackoverflow.com/users/2816342/)      Chapter 44
+  [[Andre Lopes]](https://stackoverflow.com/users/2816342/)      Chapter 44
 
-  [[andre mcgruder]{.underline}](https://stackoverflow.com/users/4257303/)   Chapter 54
+  [[andre mcgruder]](https://stackoverflow.com/users/4257303/)   Chapter 54
 
-  [[andreas]{.underline}](https://stackoverflow.com/users/4952806/)          Chapters 15 and 38
+  [[andreas]](https://stackoverflow.com/users/4952806/)          Chapters 15 and 38
 
-  [[Andrew]{.underline}](https://stackoverflow.com/users/5410688/)           Chapters 12, 19 and 53
+  [[Andrew]](https://stackoverflow.com/users/5410688/)           Chapters 12, 19 and 53
 
-  [[Andrew Myers]{.underline}](https://stackoverflow.com/users/5764553/)     Chapter 47
+  [[Andrew Myers]](https://stackoverflow.com/users/5764553/)     Chapter 47
 
-  [[Anil]{.underline}](https://stackoverflow.com/users/711308/)              Chapter 4
+  [[Anil]](https://stackoverflow.com/users/711308/)              Chapter 4
 
-  [[animuson]{.underline}](https://stackoverflow.com/users/246246/)          Chapters 4, 50 and 53
+  [[animuson]](https://stackoverflow.com/users/246246/)          Chapters 4, 50 and 53
 
-  [[apaul]{.underline}](https://stackoverflow.com/users/1947286/)            Chapters 6 and 27
+  [[apaul]](https://stackoverflow.com/users/1947286/)            Chapters 6 and 27
 
-  [[Araknid]{.underline}](https://stackoverflow.com/users/4268627/)          Chapter 4
+  [[Araknid]](https://stackoverflow.com/users/4268627/)          Chapter 4
 
-  [[Arif]{.underline}](https://stackoverflow.com/users/6254638/)             Chapter 11
+  [[Arif]](https://stackoverflow.com/users/6254638/)             Chapter 11
 
-  [[Arjan Einbu]{.underline}](https://stackoverflow.com/users/19594/)        Chapters 4, 7, 8, 15 and 17
+  [[Arjan Einbu]](https://stackoverflow.com/users/19594/)        Chapters 4, 7, 8, 15 and 17
 
-  [[Ashwin Ramaswami]{.underline}](https://stackoverflow.com/users/1950269/) Chapters 1 and 4
+  [[Ashwin Ramaswami]](https://stackoverflow.com/users/1950269/) Chapters 1 and 4
 
-  [[Asim K T]{.underline}](https://stackoverflow.com/users/4015856/)         Chapters 5 and 16
+  [[Asim K T]](https://stackoverflow.com/users/4015856/)         Chapters 5 and 16
 
-  [[AVAVT]{.underline}](https://stackoverflow.com/users/1645830/)            Chapter 50
+  [[AVAVT]](https://stackoverflow.com/users/1645830/)            Chapter 50
 
-  [[awe]{.underline}](https://stackoverflow.com/users/109392/)               Chapter 1
+  [[awe]](https://stackoverflow.com/users/109392/)               Chapter 1
 
-  [[bdkopen]{.underline}](https://stackoverflow.com/users/7214959/)          Chapter 3
+  [[bdkopen]](https://stackoverflow.com/users/7214959/)          Chapter 3
 
-  [[Ben Rhys]{.underline}](https://stackoverflow.com/users/4509121/)         Chapter 5
+  [[Ben Rhys]](https://stackoverflow.com/users/4509121/)         Chapter 5
 
-  [[Bipon]{.underline}](https://stackoverflow.com/users/3764366/)            Chapter 40
+  [[Bipon]](https://stackoverflow.com/users/3764366/)            Chapter 40
 
-  [[BiscuitBaker]{.underline}](https://stackoverflow.com/users/1482673/)     Chapter 7
+  [[BiscuitBaker]](https://stackoverflow.com/users/1482673/)     Chapter 7
 
-  [[Boris]{.underline}](https://stackoverflow.com/users/6442082/)            Chapter 5
+  [[Boris]](https://stackoverflow.com/users/6442082/)            Chapter 5
 
-  [[Boysenb3rry]{.underline}](https://stackoverflow.com/users/6049524/)      Chapter 1
+  [[Boysenb3rry]](https://stackoverflow.com/users/6049524/)      Chapter 1
 
-  [[brandaemon]{.underline}](https://stackoverflow.com/users/4561047/)       Chapter 17
+  [[brandaemon]](https://stackoverflow.com/users/4561047/)       Chapter 17
 
-  [[Brett DeWoody]{.underline}](https://stackoverflow.com/users/438581/)     Chapters 18, 38 and 39
+  [[Brett DeWoody]](https://stackoverflow.com/users/438581/)     Chapters 18, 38 and 39
 
-  [[CalvT]{.underline}](https://stackoverflow.com/users/1873567/)            Chapters 5 and 9
+  [[CalvT]](https://stackoverflow.com/users/1873567/)            Chapters 5 and 9
 
-  [[Casey]{.underline}](https://stackoverflow.com/users/3969494/)            Chapter 11
+  [[Casey]](https://stackoverflow.com/users/3969494/)            Chapter 11
 
-  [[Cassidy Williams]{.underline}](https://stackoverflow.com/users/1950503/) Chapters 10 and 22
+  [[Cassidy Williams]](https://stackoverflow.com/users/1950503/) Chapters 10 and 22
 
-  [[cdm]{.underline}](https://stackoverflow.com/users/4663542/)              Chapters 5 and 8
+  [[cdm]](https://stackoverflow.com/users/4663542/)              Chapters 5 and 8
 
-  [[Charlie H]{.underline}](https://stackoverflow.com/users/4185234/)        Chapters 4 and 28
+  [[Charlie H]](https://stackoverflow.com/users/4185234/)        Chapters 4 and 28
 
   [[Chathuranga                                                              Chapters 11, 13 and 23
-  Jayanath]{.underline}](https://stackoverflow.com/users/1037793/)           
+  Jayanath]](https://stackoverflow.com/users/1037793/)           
 
-  [[Chiller]{.underline}](https://stackoverflow.com/users/3844188/)          Chapter 38
+  [[Chiller]](https://stackoverflow.com/users/3844188/)          Chapter 38
 
-  [[Chris]{.underline}](https://stackoverflow.com/users/2030321/)            Chapters 1, 4, 23, 25, 42 and 50
+  [[Chris]](https://stackoverflow.com/users/2030321/)            Chapters 1, 4, 23, 25, 42 and 50
 
-  [[Chris Spittles]{.underline}](https://stackoverflow.com/users/493762/)    Chapters 8 and 24
+  [[Chris Spittles]](https://stackoverflow.com/users/493762/)    Chapters 8 and 24
 
-  [[Christiaan Maks]{.underline}](https://stackoverflow.com/users/3710120/)  Chapter 28
+  [[Christiaan Maks]](https://stackoverflow.com/users/3710120/)  Chapter 28
 
-  [[CocoaBean]{.underline}](https://stackoverflow.com/users/1165357/)        Chapter 5
+  [[CocoaBean]](https://stackoverflow.com/users/1165357/)        Chapter 5
 
-  [[coderfin]{.underline}](https://stackoverflow.com/users/2344083/)         Chapter 3
+  [[coderfin]](https://stackoverflow.com/users/2344083/)         Chapter 3
 
-  [[cone56]{.underline}](https://stackoverflow.com/users/2229579/)           Chapters 31 and 36
+  [[cone56]](https://stackoverflow.com/users/2229579/)           Chapters 31 and 36
 
-  [[CPHPython]{.underline}](https://stackoverflow.com/users/6225838/)        Chapter 4
+  [[CPHPython]](https://stackoverflow.com/users/6225838/)        Chapter 4
   ----------------------------------------------------------------------------------------------------------------
 
   -----------------------------------------------------------------------------------------------------------------------
-  [[csx.cc]{.underline}](https://stackoverflow.com/users/5650428/)              Chapter 1
+  [[csx.cc]](https://stackoverflow.com/users/5650428/)              Chapter 1
   ----------------------------------------------------------------------------- -----------------------------------------
-  [[cuervoo]{.underline}](https://stackoverflow.com/users/4230661/)             Chapter 18
+  [[cuervoo]](https://stackoverflow.com/users/4230661/)             Chapter 18
 
-  [[Daniel G. Blázquez]{.underline}](https://stackoverflow.com/users/321480/)   Chapter 5
+  [[Daniel G. Blázquez]](https://stackoverflow.com/users/321480/)   Chapter 5
 
-  [[Daniel Käfer]{.underline}](https://stackoverflow.com/users/1079174/)        Chapter 6
+  [[Daniel Käfer]](https://stackoverflow.com/users/1079174/)        Chapter 6
 
-  [[Daniel Stradowski]{.underline}](https://stackoverflow.com/users/5449709/)   Chapter 5
+  [[Daniel Stradowski]](https://stackoverflow.com/users/5449709/)   Chapter 5
 
-  [[DarkAjax]{.underline}](https://stackoverflow.com/users/1046057/)            Chapter 17
+  [[DarkAjax]](https://stackoverflow.com/users/1046057/)            Chapter 17
 
-  [[darrylyeo]{.underline}](https://stackoverflow.com/users/5545315/)           Chapters 2, 13 and 18
+  [[darrylyeo]](https://stackoverflow.com/users/5545315/)           Chapters 2, 13 and 18
 
-  [[Darthstroke]{.underline}](https://stackoverflow.com/users/3241847/)         Chapter 5
+  [[Darthstroke]](https://stackoverflow.com/users/3241847/)         Chapter 5
 
-  [[Dave Everitt]{.underline}](https://stackoverflow.com/users/123033/)         Chapter 4
+  [[Dave Everitt]](https://stackoverflow.com/users/123033/)         Chapter 4
 
-  [[David Fullerton]{.underline}](https://stackoverflow.com/users/91687/)       Chapter 4
+  [[David Fullerton]](https://stackoverflow.com/users/91687/)       Chapter 4
 
-  [[Demeter Dimitri]{.underline}](https://stackoverflow.com/users/2172975/)     Chapter 4
+  [[Demeter Dimitri]](https://stackoverflow.com/users/2172975/)     Chapter 4
 
-  [[demonofthemist]{.underline}](https://stackoverflow.com/users/3375368/)      Chapter 14
+  [[demonofthemist]](https://stackoverflow.com/users/3375368/)      Chapter 14
 
-  [[designcise]{.underline}](https://stackoverflow.com/users/2382283/)          Chapters 4, 5 and 18
+  [[designcise]](https://stackoverflow.com/users/2382283/)          Chapters 4, 5 and 18
 
-  [[Devid Farinelli]{.underline}](https://stackoverflow.com/users/4695325/)     Chapters 4 and 6
+  [[Devid Farinelli]](https://stackoverflow.com/users/4695325/)     Chapters 4 and 6
 
-  [[Devon Bernard]{.underline}](https://stackoverflow.com/users/1407020/)       Chapter 4
+  [[Devon Bernard]](https://stackoverflow.com/users/1407020/)       Chapter 4
 
-  [[Dex Star]{.underline}](https://stackoverflow.com/users/3562241/)            Chapter 27
+  [[Dex Star]](https://stackoverflow.com/users/3562241/)            Chapter 27
 
-  [[Diego V]{.underline}](https://stackoverflow.com/users/1385678/)             Chapter 6
+  [[Diego V]](https://stackoverflow.com/users/1385678/)             Chapter 6
 
-  [[Dinidu Hewage]{.underline}](https://stackoverflow.com/users/1615830/)       Chapter 4
+  [[Dinidu Hewage]](https://stackoverflow.com/users/1615830/)       Chapter 4
 
-  [[dippas]{.underline}](https://stackoverflow.com/users/3448527/)              Chapters 4, 17 and 21
+  [[dippas]](https://stackoverflow.com/users/3448527/)              Chapters 4, 17 and 21
 
-  [[doctorsherlock]{.underline}](https://stackoverflow.com/users/5128879/)      Chapter 10
+  [[doctorsherlock]](https://stackoverflow.com/users/5128879/)      Chapter 10
 
-  [[dodopok]{.underline}](https://stackoverflow.com/users/2480653/)             Chapters 13, 36 and 45
+  [[dodopok]](https://stackoverflow.com/users/2480653/)             Chapters 13, 36 and 45
 
-  [[Elegant.Scripting]{.underline}](https://stackoverflow.com/users/4497067/)   Chapter 43
+  [[Elegant.Scripting]](https://stackoverflow.com/users/4497067/)   Chapter 43
 
-  [[Eliran Malka]{.underline}](https://stackoverflow.com/users/547020/)         Chapter 6
+  [[Eliran Malka]](https://stackoverflow.com/users/547020/)         Chapter 6
 
-  [[Emanuele Parisio]{.underline}](https://stackoverflow.com/users/2550659/)    Chapter 6
+  [[Emanuele Parisio]](https://stackoverflow.com/users/2550659/)    Chapter 6
 
-  [[Evgeny]{.underline}](https://stackoverflow.com/users/1189546/)              Chapter 15
+  [[Evgeny]](https://stackoverflow.com/users/1189546/)              Chapter 15
 
-  [[Farzad YZ]{.underline}](https://stackoverflow.com/users/2784512/)           Chapter 6
+  [[Farzad YZ]](https://stackoverflow.com/users/2784512/)           Chapter 6
 
-  [[fcalderan]{.underline}](https://stackoverflow.com/users/1098851/)           Chapter 5
+  [[fcalderan]](https://stackoverflow.com/users/1098851/)           Chapter 5
 
-  [[feeela]{.underline}](https://stackoverflow.com/users/341201/)               Chapters 46 and 55
+  [[feeela]](https://stackoverflow.com/users/341201/)               Chapters 46 and 55
 
-  [[FelipeAls]{.underline}](https://stackoverflow.com/users/137626/)            Chapters 1, 5, 10, 11, 14, 16, 24 and 25
+  [[FelipeAls]](https://stackoverflow.com/users/137626/)            Chapters 1, 5, 10, 11, 14, 16, 24 and 25
 
-  [[Felix A J]{.underline}](https://stackoverflow.com/users/1155876/)           Chapter 15
+  [[Felix A J]](https://stackoverflow.com/users/1155876/)           Chapter 15
 
-  [[Felix Edelmann]{.underline}](https://stackoverflow.com/users/2796524/)      Chapter 4
+  [[Felix Edelmann]](https://stackoverflow.com/users/2796524/)      Chapter 4
 
-  [[Felix Schütz]{.underline}](https://stackoverflow.com/users/4362643/)        Chapter 4
+  [[Felix Schütz]](https://stackoverflow.com/users/4362643/)        Chapter 4
 
-  [[Forty]{.underline}](https://stackoverflow.com/users/5900863/)               Chapter 4
+  [[Forty]](https://stackoverflow.com/users/5900863/)               Chapter 4
 
-  [[fracz]{.underline}](https://stackoverflow.com/users/878514/)                Chapter 4
+  [[fracz]](https://stackoverflow.com/users/878514/)                Chapter 4
 
-  [[fzzylogic]{.underline}](https://stackoverflow.com/users/2198632/)           Chapter 16
+  [[fzzylogic]](https://stackoverflow.com/users/2198632/)           Chapter 16
 
-  [[G]{.underline}](https://stackoverflow.com/users/29805/)                     Chapters 1 and 17
+  [[G]](https://stackoverflow.com/users/29805/)                     Chapters 1 and 17
 
-  [[Gabriel R.]{.underline}](https://stackoverflow.com/users/170091/)           Chapter 1
+  [[Gabriel R.]](https://stackoverflow.com/users/170091/)           Chapter 1
 
-  [[gandreadis]{.underline}](https://stackoverflow.com/users/6171547/)          Chapter 4
+  [[gandreadis]](https://stackoverflow.com/users/6171547/)          Chapter 4
 
-  [[geek1011]{.underline}](https://stackoverflow.com/users/5139282/)            Chapter 21
+  [[geek1011]](https://stackoverflow.com/users/5139282/)            Chapter 21
 
-  [[geeksal]{.underline}](https://stackoverflow.com/users/3212574/)             Chapter 17
+  [[geeksal]](https://stackoverflow.com/users/3212574/)             Chapter 17
 
-  [[Gerardas]{.underline}](https://stackoverflow.com/users/2948417/)            Chapter 1
+  [[Gerardas]](https://stackoverflow.com/users/2948417/)            Chapter 1
 
-  [[Gnietschow]{.underline}](https://stackoverflow.com/users/1339365/)          Chapter 10
+  [[Gnietschow]](https://stackoverflow.com/users/1339365/)          Chapter 10
 
-  [[GoatsWearHats]{.underline}](https://stackoverflow.com/users/5299938/)       Chapter 1
+  [[GoatsWearHats]](https://stackoverflow.com/users/5299938/)       Chapter 1
 
-  [[Gofilord]{.underline}](https://stackoverflow.com/users/3448251/)            Chapter 21
+  [[Gofilord]](https://stackoverflow.com/users/3448251/)            Chapter 21
 
-  [[Grant Palin]{.underline}](https://stackoverflow.com/users/68763/)           Chapter 54
+  [[Grant Palin]](https://stackoverflow.com/users/68763/)           Chapter 54
 
-  [[H. Pauwelyn]{.underline}](https://stackoverflow.com/users/4551041/)         Chapters 4, 18 and 36
+  [[H. Pauwelyn]](https://stackoverflow.com/users/4551041/)         Chapters 4, 18 and 36
 
-  [[HansCz]{.underline}](https://stackoverflow.com/users/173679/)               Chapter 4
+  [[HansCz]](https://stackoverflow.com/users/173679/)               Chapter 4
 
-  [[Harish Gyanani]{.underline}](https://stackoverflow.com/users/1495703/)      Chapter 1
+  [[Harish Gyanani]](https://stackoverflow.com/users/1495703/)      Chapter 1
 
-  [[Harry]{.underline}](https://stackoverflow.com/users/2606013/)               Chapters 10, 26, 28, 29, 33, 35 and 44
+  [[Harry]](https://stackoverflow.com/users/2606013/)               Chapters 10, 26, 28, 29, 33, 35 and 44
 
-  [[henry]{.underline}](https://stackoverflow.com/users/1241736/)               Chapter 4
+  [[henry]](https://stackoverflow.com/users/1241736/)               Chapter 4
 
-  [[Horst Jahns]{.underline}](https://stackoverflow.com/users/2661301/)         Chapter 5
+  [[Horst Jahns]](https://stackoverflow.com/users/2661301/)         Chapter 5
 
-  [[Hristo]{.underline}](https://stackoverflow.com/users/196921/)               Chapter 32
+  [[Hristo]](https://stackoverflow.com/users/196921/)               Chapter 32
 
-  [[Hugo Buff]{.underline}](https://stackoverflow.com/users/3392335/)           Chapter 4
+  [[Hugo Buff]](https://stackoverflow.com/users/3392335/)           Chapter 4
   -----------------------------------------------------------------------------------------------------------------------
 
   ----------------------------------------------------------------------------------------------------------------------------------
-  [[Hynes]{.underline}](https://stackoverflow.com/users/2640230/)                Chapters 4, 5 and 15
+  [[Hynes]](https://stackoverflow.com/users/2640230/)                Chapters 4, 5 and 15
   ------------------------------------------------------------------------------ ---------------------------------------------------
-  [[insertusernamehere]{.underline}](https://stackoverflow.com/users/1456376/)   Chapter 15
+  [[insertusernamehere]](https://stackoverflow.com/users/1456376/)   Chapter 15
 
-  [[J Atkin]{.underline}](https://stackoverflow.com/users/4683264/)              Chapters 1 and 4
+  [[J Atkin]](https://stackoverflow.com/users/4683264/)              Chapters 1 and 4
 
-  [[J F]{.underline}](https://stackoverflow.com/users/5244995/)                  Chapters 4 and 20
+  [[J F]](https://stackoverflow.com/users/5244995/)                  Chapters 4 and 20
 
-  [[Jacob Gray]{.underline}](https://stackoverflow.com/users/3285730/)           Chapters 4, 5 and 22
+  [[Jacob Gray]](https://stackoverflow.com/users/3285730/)           Chapters 4, 5 and 22
 
-  [[James Donnelly]{.underline}](https://stackoverflow.com/users/1317805/)       Chapters 7 and 17
+  [[James Donnelly]](https://stackoverflow.com/users/1317805/)       Chapters 7 and 17
 
-  [[James Taylor]{.underline}](https://stackoverflow.com/users/1944335/)         Chapter 5
+  [[James Taylor]](https://stackoverflow.com/users/1944335/)         Chapter 5
 
-  [[jaredsk]{.underline}](https://stackoverflow.com/users/2378918/)              Chapters 10, 36 and 50
+  [[jaredsk]](https://stackoverflow.com/users/2378918/)              Chapters 10, 36 and 50
 
-  [[JedaiCoder]{.underline}](https://stackoverflow.com/users/5826535/)           Chapter 6
+  [[JedaiCoder]](https://stackoverflow.com/users/5826535/)           Chapter 6
 
-  [[Jef]{.underline}](https://stackoverflow.com/users/4142458/)                  Chapter 16
+  [[Jef]](https://stackoverflow.com/users/4142458/)                  Chapter 16
 
-  [[Jeffery Tang]{.underline}](https://stackoverflow.com/users/6454135/)         Chapter 30
+  [[Jeffery Tang]](https://stackoverflow.com/users/6454135/)         Chapter 30
 
-  [[jehna1]{.underline}](https://stackoverflow.com/users/2697279/)               Chapter 6
+  [[jehna1]](https://stackoverflow.com/users/2697279/)               Chapter 6
 
-  [[jgh]{.underline}](https://stackoverflow.com/users/7861554/)                  Chapter 12
+  [[jgh]](https://stackoverflow.com/users/7861554/)                  Chapter 12
 
-  [[JHS]{.underline}](https://stackoverflow.com/users/3538313/)                  Chapter 25
+  [[JHS]](https://stackoverflow.com/users/3538313/)                  Chapter 25
 
-  [[Jmh2013]{.underline}](https://stackoverflow.com/users/1284810/)              Chapters 13, 23 and 43
+  [[Jmh2013]](https://stackoverflow.com/users/1284810/)              Chapters 13, 23 and 43
 
-  [[joejoe31b]{.underline}](https://stackoverflow.com/users/3213602/)            Chapters 4 and 13
+  [[joejoe31b]](https://stackoverflow.com/users/3213602/)            Chapters 4 and 13
 
-  [[JoelBonetR]{.underline}](https://stackoverflow.com/users/6479108/)           Chapter 4
+  [[JoelBonetR]](https://stackoverflow.com/users/6479108/)           Chapter 4
 
-  [[joe_young]{.underline}](https://stackoverflow.com/users/4206206/)            Chapters 1 and 15
+  [[joe_young]](https://stackoverflow.com/users/4206206/)            Chapters 1 and 15
 
-  [[John Slegers]{.underline}](https://stackoverflow.com/users/1946501/)         Chapters 4, 5, 6, 13, 17, 18, 28, 52 and 55
+  [[John Slegers]](https://stackoverflow.com/users/1946501/)         Chapters 4, 5, 6, 13, 17, 18, 28, 52 and 55
 
-  [[Jon Chan]{.underline}](https://stackoverflow.com/users/1043674/)             Chapters 5 and 15
+  [[Jon Chan]](https://stackoverflow.com/users/1043674/)             Chapters 5 and 15
 
-  [[Jonathan Argentiero]{.underline}](https://stackoverflow.com/users/1679414/)  Chapter 6
+  [[Jonathan Argentiero]](https://stackoverflow.com/users/1679414/)  Chapter 6
 
-  [[Jonathan Lam]{.underline}](https://stackoverflow.com/users/2397327/)         Chapters 1, 6, 7, 16 and 22
+  [[Jonathan Lam]](https://stackoverflow.com/users/2397327/)         Chapters 1, 6, 7, 16 and 22
 
-  [[Jonathan Zúñiga]{.underline}](https://stackoverflow.com/users/1560233/)      Chapter 5
+  [[Jonathan Zúñiga]](https://stackoverflow.com/users/1560233/)      Chapter 5
 
-  [[Jose Gomez]{.underline}](https://stackoverflow.com/users/6530221/)           Chapter 1
+  [[Jose Gomez]](https://stackoverflow.com/users/6530221/)           Chapter 1
 
-  [[Just a student]{.underline}](https://stackoverflow.com/users/962603/)        Chapter 1
+  [[Just a student]](https://stackoverflow.com/users/962603/)        Chapter 1
 
-  [[Kevin Katzke]{.underline}](https://stackoverflow.com/users/1280289/)         Chapter 23
+  [[Kevin Katzke]](https://stackoverflow.com/users/1280289/)         Chapter 23
 
-  [[kingcobra1986]{.underline}](https://stackoverflow.com/users/3942863/)        Chapter 17
+  [[kingcobra1986]](https://stackoverflow.com/users/3942863/)        Chapter 17
 
-  [[Kuhan]{.underline}](https://stackoverflow.com/users/3214177/)                Chapter 18
+  [[Kuhan]](https://stackoverflow.com/users/3214177/)                Chapter 18
 
-  [[Kyle Ratliff]{.underline}](https://stackoverflow.com/users/4446898/)         Chapter 6
+  [[Kyle Ratliff]](https://stackoverflow.com/users/4446898/)         Chapter 6
 
-  [[leo_ap]{.underline}](https://stackoverflow.com/users/1644937/)               Chapter 50
+  [[leo_ap]](https://stackoverflow.com/users/1644937/)               Chapter 50
 
-  [[LiLacTac]{.underline}](https://stackoverflow.com/users/5375837/)             Chapter 55
+  [[LiLacTac]](https://stackoverflow.com/users/5375837/)             Chapter 55
 
-  [[Luka Kerr]{.underline}](https://stackoverflow.com/users/6523193/)            Chapter 29
+  [[Luka Kerr]](https://stackoverflow.com/users/6523193/)            Chapter 29
 
-  [[Luke Taylor]{.underline}](https://stackoverflow.com/users/4414003/)          Chapter 28
+  [[Luke Taylor]](https://stackoverflow.com/users/4414003/)          Chapter 28
 
-  [[Madalina Taina]{.underline}](https://stackoverflow.com/users/3830698/)       Chapters 4, 5, 6, 8, 9, 10, 11, 12, 14, 15, 19, 25,
+  [[Madalina Taina]](https://stackoverflow.com/users/3830698/)       Chapters 4, 5, 6, 8, 9, 10, 11, 12, 14, 15, 19, 25,
                                                                                  29, 31, 32, 34, 39, 45 and 49
 
-  [[Marc]{.underline}](https://stackoverflow.com/users/4382892/)                 Chapter 20
+  [[Marc]](https://stackoverflow.com/users/4382892/)                 Chapter 20
 
-  [[Marcatectura]{.underline}](https://stackoverflow.com/users/1592764/)         Chapter 21
+  [[Marcatectura]](https://stackoverflow.com/users/1592764/)         Chapter 21
 
-  [[Marjorie Pickard]{.underline}](https://stackoverflow.com/users/7855318/)     Chapter 2
+  [[Marjorie Pickard]](https://stackoverflow.com/users/7855318/)     Chapter 2
 
-  [[Mark Perera]{.underline}](https://stackoverflow.com/users/6574064/)          Chapter 4
+  [[Mark Perera]](https://stackoverflow.com/users/6574064/)          Chapter 4
 
-  [[Marten Koetsier]{.underline}](https://stackoverflow.com/users/2286722/)      Chapters 34 and 41
+  [[Marten Koetsier]](https://stackoverflow.com/users/2286722/)      Chapters 34 and 41
 
-  [[Matas Vaitkevicius]{.underline}](https://stackoverflow.com/users/1509764/)   Chapters 4 and 13
+  [[Matas Vaitkevicius]](https://stackoverflow.com/users/1509764/)   Chapters 4 and 13
 
-  [[Mattia Astorino]{.underline}](https://stackoverflow.com/users/1490860/)      Chapter 22
+  [[Mattia Astorino]](https://stackoverflow.com/users/1490860/)      Chapter 22
 
   [[Maximillian                                                                  Chapters 5 and 13
-  Laumeister]{.underline}](https://stackoverflow.com/users/2234742/)             
+  Laumeister]](https://stackoverflow.com/users/2234742/)             
 
-  [[Maxouhell]{.underline}](https://stackoverflow.com/users/4022806/)            Chapter 6
+  [[Maxouhell]](https://stackoverflow.com/users/4022806/)            Chapter 6
 
-  [[Michael Moriarty]{.underline}](https://stackoverflow.com/users/4515471/)     Chapters 5, 15 and 18
+  [[Michael Moriarty]](https://stackoverflow.com/users/4515471/)     Chapters 5, 15 and 18
 
-  [[Michael_B]{.underline}](https://stackoverflow.com/users/3597276/)            Chapters 4 and 6
+  [[Michael_B]](https://stackoverflow.com/users/3597276/)            Chapters 4 and 6
 
-  [[Mifeet]{.underline}](https://stackoverflow.com/users/2032064/)               Chapter 6
+  [[Mifeet]](https://stackoverflow.com/users/2032064/)               Chapter 6
 
-  [[Mike McCaughan]{.underline}](https://stackoverflow.com/users/215552/)        Chapter 24
+  [[Mike McCaughan]](https://stackoverflow.com/users/215552/)        Chapter 24
 
-  [[Miles]{.underline}](https://stackoverflow.com/users/4075712/)                Chapters 12 and 51
+  [[Miles]](https://stackoverflow.com/users/4075712/)                Chapters 12 and 51
 
-  [[Miro]{.underline}](https://stackoverflow.com/users/559079/)                  Chapter 18
+  [[Miro]](https://stackoverflow.com/users/559079/)                  Chapter 18
 
-  [[MMachinegun]{.underline}](https://stackoverflow.com/users/2102463/)          Chapter 54
+  [[MMachinegun]](https://stackoverflow.com/users/2102463/)          Chapter 54
 
-  [[mmativ]{.underline}](https://stackoverflow.com/users/5321188/)               Chapter 50
+  [[mmativ]](https://stackoverflow.com/users/5321188/)               Chapter 50
 
-  [[Mod Proxy]{.underline}](https://stackoverflow.com/users/6571865/)            Chapter 6
+  [[Mod Proxy]](https://stackoverflow.com/users/6571865/)            Chapter 6
 
-  [[Mr. Alien]{.underline}](https://stackoverflow.com/users/1542290/)            Chapter 5
+  [[Mr. Alien]](https://stackoverflow.com/users/1542290/)            Chapter 5
   ----------------------------------------------------------------------------------------------------------------------------------
 
   ------------------------------------------------------------------------------------------------------------------------------
-  [[Mr. Meeseeks]{.underline}](https://stackoverflow.com/users/1270656/)        Chapter 29
+  [[Mr. Meeseeks]](https://stackoverflow.com/users/1270656/)        Chapter 29
   ----------------------------------------------------------------------------- ------------------------------------------------
-  [[Mr_Green]{.underline}](https://stackoverflow.com/users/1577396/)            Chapter 8
+  [[Mr_Green]](https://stackoverflow.com/users/1577396/)            Chapter 8
 
-  [[Muthu Kumaran]{.underline}](https://stackoverflow.com/users/615746/)        Chapter 37
+  [[Muthu Kumaran]](https://stackoverflow.com/users/615746/)        Chapter 37
 
-  [[Naeem Shaikh]{.underline}](https://stackoverflow.com/users/3556874/)        Chapter 4
+  [[Naeem Shaikh]](https://stackoverflow.com/users/3556874/)        Chapter 4
 
-  [[Nate]{.underline}](https://stackoverflow.com/users/420006/)                 Chapter 5
+  [[Nate]](https://stackoverflow.com/users/420006/)                 Chapter 5
 
-  [[Nathan Arthur]{.underline}](https://stackoverflow.com/users/937377/)        Chapters 1, 4, 6, 8, 13, 14, 15 and 16
+  [[Nathan Arthur]](https://stackoverflow.com/users/937377/)        Chapters 1, 4, 6, 8, 13, 14, 15 and 16
 
-  [[Nemanja Trifunovic]{.underline}](https://stackoverflow.com/users/4004007/)  Chapter 48
+  [[Nemanja Trifunovic]](https://stackoverflow.com/users/4004007/)  Chapter 48
 
-  [[Niek Brouwer]{.underline}](https://stackoverflow.com/users/5347689/)        Chapter 23
+  [[Niek Brouwer]](https://stackoverflow.com/users/5347689/)        Chapter 23
 
-  [[niyasc]{.underline}](https://stackoverflow.com/users/1520248/)              Chapter 18
+  [[niyasc]](https://stackoverflow.com/users/1520248/)              Chapter 18
 
-  [[Nobal Mohan]{.underline}](https://stackoverflow.com/users/1004972/)         Chapter 10
+  [[Nobal Mohan]](https://stackoverflow.com/users/1004972/)         Chapter 10
 
-  [[o.v.]{.underline}](https://stackoverflow.com/users/1081234/)                Chapter 6
+  [[o.v.]](https://stackoverflow.com/users/1081234/)                Chapter 6
 
-  [[Obsidian]{.underline}](https://stackoverflow.com/users/2120261/)            Chapters 37 and 53
+  [[Obsidian]](https://stackoverflow.com/users/2120261/)            Chapters 37 and 53
 
-  [[Ortomala Lokni]{.underline}](https://stackoverflow.com/users/1807667/)      Chapters 6, 7 and 17
+  [[Ortomala Lokni]](https://stackoverflow.com/users/1807667/)      Chapters 6, 7 and 17
 
-  [[Pat]{.underline}](https://stackoverflow.com/users/5712587/)                 Chapter 21
+  [[Pat]](https://stackoverflow.com/users/5712587/)                 Chapter 21
 
-  [[patelarpan]{.underline}](https://stackoverflow.com/users/3710481/)          Chapters 1 and 50
+  [[patelarpan]](https://stackoverflow.com/users/3710481/)          Chapters 1 and 50
 
-  [[Paul Kozlovitch]{.underline}](https://stackoverflow.com/users/1923755/)     Chapter 6
+  [[Paul Kozlovitch]](https://stackoverflow.com/users/1923755/)     Chapter 6
 
-  [[Paul Sweatte]{.underline}](https://stackoverflow.com/users/1113772/)        Chapter 46
+  [[Paul Sweatte]](https://stackoverflow.com/users/1113772/)        Chapter 46
 
-  [[Persijn]{.underline}](https://stackoverflow.com/users/3999748/)             Chapters 4 and 5
+  [[Persijn]](https://stackoverflow.com/users/3999748/)             Chapters 4 and 5
 
-  [[Phil]{.underline}](https://stackoverflow.com/users/6429774/)                Chapter 50
+  [[Phil]](https://stackoverflow.com/users/6429774/)                Chapter 50
 
-  [[pixelbandito]{.underline}](https://stackoverflow.com/users/2555029/)        Chapter 9
+  [[pixelbandito]](https://stackoverflow.com/users/2555029/)        Chapter 9
 
-  [[Praveen Kumar]{.underline}](https://stackoverflow.com/users/462627/)        Chapters 4, 6, 13, 15, 26, 28, 50 and 55
+  [[Praveen Kumar]](https://stackoverflow.com/users/462627/)        Chapters 4, 6, 13, 15, 26, 28, 50 and 55
 
-  [[Qaz]{.underline}](https://stackoverflow.com/users/2421026/)                 Chapter 12
+  [[Qaz]](https://stackoverflow.com/users/2421026/)                 Chapter 12
 
-  [[Rahul Nanwani]{.underline}](https://stackoverflow.com/users/2314308/)       Chapter 22
+  [[Rahul Nanwani]](https://stackoverflow.com/users/2314308/)       Chapter 22
 
-  [[RamenChef]{.underline}](https://stackoverflow.com/users/6392939/)           Chapter 43
+  [[RamenChef]](https://stackoverflow.com/users/6392939/)           Chapter 43
 
-  [[rdans]{.underline}](https://stackoverflow.com/users/2617732/)               Chapter 4
+  [[rdans]](https://stackoverflow.com/users/2617732/)               Chapter 4
 
-  [[RedRiderX]{.underline}](https://stackoverflow.com/users/982259/)            Chapter 37
+  [[RedRiderX]](https://stackoverflow.com/users/982259/)            Chapter 37
 
-  [[rejnev]{.underline}](https://stackoverflow.com/users/3764165/)              Chapter 8
+  [[rejnev]](https://stackoverflow.com/users/3764165/)              Chapter 8
 
-  [[Richard Hamilton]{.underline}](https://stackoverflow.com/users/4703663/)    Chapters 4, 5, 15, 18, 20 and 27
+  [[Richard Hamilton]](https://stackoverflow.com/users/4703663/)    Chapters 4, 5, 15, 18, 20 and 27
 
-  [[Rion Williams]{.underline}](https://stackoverflow.com/users/557445/)        Chapter 4
+  [[Rion Williams]](https://stackoverflow.com/users/557445/)        Chapter 4
 
-  [[rishabh dev]{.underline}](https://stackoverflow.com/users/4114117/)         Chapter 46
+  [[rishabh dev]](https://stackoverflow.com/users/4114117/)         Chapter 46
 
-  [[rmondesilva]{.underline}](https://stackoverflow.com/users/4672534/)         Chapters 15 and 20
+  [[rmondesilva]](https://stackoverflow.com/users/4672534/)         Chapters 15 and 20
 
-  [[Robotnicka]{.underline}](https://stackoverflow.com/users/4534949/)          Chapter 20
+  [[Robotnicka]](https://stackoverflow.com/users/4534949/)          Chapter 20
 
-  [[Rocket Risa]{.underline}](https://stackoverflow.com/users/5220880/)         Chapter 1
+  [[Rocket Risa]](https://stackoverflow.com/users/5220880/)         Chapter 1
 
-  [[Sandeep Tuniki]{.underline}](https://stackoverflow.com/users/4937439/)      Chapter 6
+  [[Sandeep Tuniki]](https://stackoverflow.com/users/4937439/)      Chapter 6
 
-  [[Saroj Sasmal]{.underline}](https://stackoverflow.com/users/5293076/)        Chapter 1
+  [[Saroj Sasmal]](https://stackoverflow.com/users/5293076/)        Chapter 1
 
-  [[ScientiaEtVeritas]{.underline}](https://stackoverflow.com/users/2612484/)   Chapters 1, 4, 6, 7, 10, 11, 18, 20, 21, 23, 26,
+  [[ScientiaEtVeritas]](https://stackoverflow.com/users/2612484/)   Chapters 1, 4, 6, 7, 10, 11, 18, 20, 21, 23, 26,
                                                                                 31, 33, 44 and 53
 
-  [[Sebastian Zartner]{.underline}](https://stackoverflow.com/users/432681/)    Chapter 40
+  [[Sebastian Zartner]](https://stackoverflow.com/users/432681/)    Chapter 40
 
-  [[SeinopSys]{.underline}](https://stackoverflow.com/users/1344955/)           Chapters 18, 23, 36 and 54
+  [[SeinopSys]](https://stackoverflow.com/users/1344955/)           Chapters 18, 23, 36 and 54
 
-  [[Sergey Denisov]{.underline}](https://stackoverflow.com/users/2570353/)      Chapters 5 and 26
+  [[Sergey Denisov]](https://stackoverflow.com/users/2570353/)      Chapters 5 and 26
 
-  [[Shaggy]{.underline}](https://stackoverflow.com/users/4768433/)              Chapters 5, 21 and 53
+  [[Shaggy]](https://stackoverflow.com/users/4768433/)              Chapters 5, 21 and 53
 
-  [[Siavas]{.underline}](https://stackoverflow.com/users/5838198/)              Chapter 6
+  [[Siavas]](https://stackoverflow.com/users/5838198/)              Chapter 6
 
-  [[Someone]{.underline}](https://stackoverflow.com/users/1410735/)             Chapter 6
+  [[Someone]](https://stackoverflow.com/users/1410735/)             Chapter 6
 
-  [[Sourav Ghosh]{.underline}](https://stackoverflow.com/users/4040525/)        Chapters 5 and 22
+  [[Sourav Ghosh]](https://stackoverflow.com/users/4040525/)        Chapters 5 and 22
 
-  [[Squazz]{.underline}](https://stackoverflow.com/users/1955317/)              Chapters 16 and 31
+  [[Squazz]](https://stackoverflow.com/users/1955317/)              Chapters 16 and 31
 
-  [[srikarg]{.underline}](https://stackoverflow.com/users/1042093/)             Chapter 13
+  [[srikarg]](https://stackoverflow.com/users/1042093/)             Chapter 13
 
-  [[StefanBob]{.underline}](https://stackoverflow.com/users/3317728/)           Chapter 9
+  [[StefanBob]](https://stackoverflow.com/users/3317728/)           Chapter 9
 
-  [[Stewartside]{.underline}](https://stackoverflow.com/users/2889988/)         Chapters 4, 5, 6, 18, 20 and 21
+  [[Stewartside]](https://stackoverflow.com/users/2889988/)         Chapters 4, 5, 6, 18, 20 and 21
 
-  [[Stratboy]{.underline}](https://stackoverflow.com/users/551357/)             Chapter 5
+  [[Stratboy]](https://stackoverflow.com/users/551357/)             Chapter 5
 
-  [[sudo bangbang]{.underline}](https://stackoverflow.com/users/3951782/)       Chapter 4
+  [[sudo bangbang]](https://stackoverflow.com/users/3951782/)       Chapter 4
 
-  [[Sumner Evans]{.underline}](https://stackoverflow.com/users/2319844/)        Chapter 4
+  [[Sumner Evans]](https://stackoverflow.com/users/2319844/)        Chapter 4
 
-  [[Sun Qingyao]{.underline}](https://stackoverflow.com/users/5399734/)         Chapter 8
+  [[Sun Qingyao]](https://stackoverflow.com/users/5399734/)         Chapter 8
 
-  [[Sunnyok]{.underline}](https://stackoverflow.com/users/4290193/)             Chapters 4, 6 and 8
+  [[Sunnyok]](https://stackoverflow.com/users/4290193/)             Chapters 4, 6 and 8
 
-  [[Sverri M. Olsen]{.underline}](https://stackoverflow.com/users/1300892/)     Chapter 1
+  [[Sverri M. Olsen]](https://stackoverflow.com/users/1300892/)     Chapter 1
   ------------------------------------------------------------------------------------------------------------------------------
 
   ------------------------------------------------------------------------------------------------------------
-  [[takeradi]{.underline}](https://stackoverflow.com/users/3538394/)      Chapter 16
+  [[takeradi]](https://stackoverflow.com/users/3538394/)      Chapter 16
   ----------------------------------------------------------------------- ------------------------------------
-  [[Taylor]{.underline}](https://stackoverflow.com/users/3311859/)        Chapter 6
+  [[Taylor]](https://stackoverflow.com/users/3311859/)        Chapter 6
 
-  [[Ted Goas]{.underline}](https://stackoverflow.com/users/734487/)       Chapters 12, 15, 34 and 43
+  [[Ted Goas]](https://stackoverflow.com/users/734487/)       Chapters 12, 15, 34 and 43
 
-  [[Teo Dragovic]{.underline}](https://stackoverflow.com/users/2382115/)  Chapters 1 and 13
+  [[Teo Dragovic]](https://stackoverflow.com/users/2382115/)  Chapters 1 and 13
 
-  [[ThatWeirdo]{.underline}](https://stackoverflow.com/users/2566065/)    Chapter 4
+  [[ThatWeirdo]](https://stackoverflow.com/users/2566065/)    Chapter 4
 
   [[TheGenie                                                              Chapter 36
-  OfTruth]{.underline}](https://stackoverflow.com/users/5931915/)         
+  OfTruth]](https://stackoverflow.com/users/5931915/)         
 
-  [[Theodore K.]{.underline}](https://stackoverflow.com/users/2667686/)   Chapter 22
+  [[Theodore K.]](https://stackoverflow.com/users/2667686/)   Chapter 22
 
-  [[think123]{.underline}](https://stackoverflow.com/users/1136709/)      Chapter 5
+  [[think123]](https://stackoverflow.com/users/1136709/)      Chapter 5
 
-  [[Timothy Miller]{.underline}](https://stackoverflow.com/users/934019/) Chapter 55
+  [[Timothy Miller]](https://stackoverflow.com/users/934019/) Chapter 55
 
-  [[Toby]{.underline}](https://stackoverflow.com/users/4008056/)          Chapters 15 and 20
+  [[Toby]](https://stackoverflow.com/users/4008056/)          Chapters 15 and 20
 
-  [[Todd]{.underline}](https://stackoverflow.com/users/7026544/)          Chapter 1
+  [[Todd]](https://stackoverflow.com/users/7026544/)          Chapter 1
 
-  [[ToniB]{.underline}](https://stackoverflow.com/users/3614064/)         Chapter 15
+  [[ToniB]](https://stackoverflow.com/users/3614064/)         Chapter 15
 
-  [[Tot Zam]{.underline}](https://stackoverflow.com/users/4660897/)       Chapter 8
+  [[Tot Zam]](https://stackoverflow.com/users/4660897/)       Chapter 8
 
-  [[Trevor Clarke]{.underline}](https://stackoverflow.com/users/3998484/) Chapters 5, 8, 10 and 15
+  [[Trevor Clarke]](https://stackoverflow.com/users/3998484/) Chapters 5, 8, 10 and 15
 
-  [[TrungDQ]{.underline}](https://stackoverflow.com/users/1420186/)       Chapter 56
+  [[TrungDQ]](https://stackoverflow.com/users/1420186/)       Chapter 56
 
-  [[TylerH]{.underline}](https://stackoverflow.com/users/2756409/)        Chapters 1, 4, 5, 36 and 53
+  [[TylerH]](https://stackoverflow.com/users/2756409/)        Chapters 1, 4, 5, 36 and 53
 
-  [[Ulrich Schwarz]{.underline}](https://stackoverflow.com/users/505649/) Chapter 43
+  [[Ulrich Schwarz]](https://stackoverflow.com/users/505649/) Chapter 43
 
-  [[user007]{.underline}](https://stackoverflow.com/users/2642959/)       Chapter 18
+  [[user007]](https://stackoverflow.com/users/2642959/)       Chapter 18
 
-  [[user2622348]{.underline}](https://stackoverflow.com/users/2622348/)   Chapter 20
+  [[user2622348]](https://stackoverflow.com/users/2622348/)   Chapter 20
 
-  [[vishak]{.underline}](https://stackoverflow.com/users/1161892/)        Chapter 14
+  [[vishak]](https://stackoverflow.com/users/1161892/)        Chapter 14
 
-  [[vkopio]{.underline}](https://stackoverflow.com/users/5047630/)        Chapter 7
+  [[vkopio]](https://stackoverflow.com/users/5047630/)        Chapter 7
 
-  [[Vlusion]{.underline}](https://stackoverflow.com/users/5539376/)       Chapter 15
+  [[Vlusion]](https://stackoverflow.com/users/5539376/)       Chapter 15
 
-  [[Volker E.]{.underline}](https://stackoverflow.com/users/1696030/)     Chapter 15
+  [[Volker E.]](https://stackoverflow.com/users/1696030/)     Chapter 15
 
-  [[web]{.underline}](https://stackoverflow.com/users/1811992/)           Chapters 6, 26, 28, 29 and 44
+  [[web]](https://stackoverflow.com/users/1811992/)           Chapters 6, 26, 28, 29 and 44
 
   [[Will                                                                  Chapter 9
-  DiFruscio]{.underline}](https://stackoverflow.com/users/6598808/)       
+  DiFruscio]](https://stackoverflow.com/users/6598808/)       
 
-  [[Wolfgang]{.underline}](https://stackoverflow.com/users/1979340/)      Chapter 18
+  [[Wolfgang]](https://stackoverflow.com/users/1979340/)      Chapter 18
 
-  [[X]{.underline}](https://stackoverflow.com/users/1305794/)             Chapter 18
+  [[X]](https://stackoverflow.com/users/1305794/)             Chapter 18
 
-  [[Xinyang Li]{.underline}](https://stackoverflow.com/users/2226315/)    Chapter 1
+  [[Xinyang Li]](https://stackoverflow.com/users/2226315/)    Chapter 1
 
-  [[xpy]{.underline}](https://stackoverflow.com/users/1982831/)           Chapter 4
+  [[xpy]](https://stackoverflow.com/users/1982831/)           Chapter 4
 
-  [[Yury Fedorov]{.underline}](https://stackoverflow.com/users/4378400/)  Chapter 4
+  [[Yury Fedorov]](https://stackoverflow.com/users/4378400/)  Chapter 4
 
-  [[Zac]{.underline}](https://stackoverflow.com/users/2096845/)           Chapters 5 and 12
+  [[Zac]](https://stackoverflow.com/users/2096845/)           Chapters 5 and 12
 
-  [[Zaffy]{.underline}](https://stackoverflow.com/users/823738/)          Chapter 4
+  [[Zaffy]](https://stackoverflow.com/users/823738/)          Chapter 4
 
   [[Zakaria                                                               Chapter 20
-  Acharki]{.underline}](https://stackoverflow.com/users/4281779/)         
+  Acharki]](https://stackoverflow.com/users/4281779/)         
 
-  [[Zaz]{.underline}](https://stackoverflow.com/users/405550/)            Chapter 4
+  [[Zaz]](https://stackoverflow.com/users/405550/)            Chapter 4
 
-  [[Ze Rubeus]{.underline}](https://stackoverflow.com/users/4232386/)     Chapter 4
+  [[Ze Rubeus]](https://stackoverflow.com/users/4232386/)     Chapter 4
 
-  [[zeel]{.underline}](https://stackoverflow.com/users/765036/)           Chapter 6
+  [[zeel]](https://stackoverflow.com/users/765036/)           Chapter 6
 
-  [[zer00ne]{.underline}](https://stackoverflow.com/users/2813224/)       Chapter 20
+  [[zer00ne]](https://stackoverflow.com/users/2813224/)       Chapter 20
 
-  [[Zeta]{.underline}](https://stackoverflow.com/users/1139697/)          Chapter 5
+  [[Zeta]](https://stackoverflow.com/users/1139697/)          Chapter 5
 
-  [[Zze]{.underline}](https://stackoverflow.com/users/3509591/)           Chapter 5
+  [[Zze]](https://stackoverflow.com/users/3509591/)           Chapter 5
   ------------------------------------------------------------------------------------------------------------
