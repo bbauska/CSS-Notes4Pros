@@ -18,7 +18,7 @@ output:
 <!--~~~~~~~~~~~~~~~~~~~ readme.md of CSS Advanced - Notes for Professionals ~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ CSS-Notes4Pros.bauska.github.io ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<!--~~~~~~~~~~~~~~~~ 01/02. CSS Logos  (01) ~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 01/02. CSS Logos (01) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="center" width="100%">
 <img src="./images/image001.jpeg"
   style="width:20%"
@@ -26,8 +26,8 @@ output:
   alt="JavaScript coffee cup logo version." />
 <img src="./images/image002.png"
   style="width:20%"
-  title="UC Davis logo"
-  alt="UC Davis logo." />
+  title=" logo"
+  alt=" logo." />
 </p>
 
 [**[About]** [9](#about)](#about)
@@ -38,7 +38,7 @@ output:
 
 [[Section 1.2: Internal Styles] [11](#section-1.2-internal-styles)](#section-1.2-internal-styles)
 
-[[Section 1.3: CSS \@import rule (one of CSS at-rule)] [11](#section-1.3-css-import-rule-one-of-css-at-rule)](#section-1.3-css-import-rule-one-of-css-at-rule)
+[[Section 1.3: CSS &commat;import rule (one of CSS at-rule)] [11](#section-1.3-css-import-rule-one-of-css-at-rule)](#section-1.3-css-import-rule-one-of-css-at-rule)
 
 [[Section 1.4: Inline Styles] [12](#section-1.4-inline-styles)](#section-1.4-inline-styles)
 
@@ -101,7 +101,7 @@ of the ID selector]
 pseudo-class]
 [24](#section-4.10-a.-the-not-pseudo-class-example-b.-focuswithin-css-pseudo-class)](#section-4.10-a.-the-not-pseudo-class-example-b.-focuswithin-css-pseudo-class)
 
-[[Section 4.11: Global boolean with checkbox:checked and \~ (general
+[[Section 4.11: Global boolean with checkbox:checked and &#126; (general
 sibling combinator)]
 [26](#section-4.11-global-boolean-with-checkboxchecked-and-general-sibling-combinator)](#section-4.11-global-boolean-with-checkboxchecked-and-general-sibling-combinator)
 
@@ -187,7 +187,7 @@ example]
 [[Section 6.9: Centering in relation to another item]
 [50](#section-6.9-centering-in-relation-to-another-item)](#section-6.9-centering-in-relation-to-another-item)
 
-[[Section 6.10: Ghost element technique (Michał Czernow\'s
+[[Section 6.10: Ghost element technique (Michał Czernow&apos;s
 hack)]
 [51](#section-6.10-ghost-element-technique-michał-czernows-hack)](#section-6.10-ghost-element-technique-michał-czernows-hack)
 
@@ -273,7 +273,7 @@ margin]
 border-image]
 [70](#section-10.7-creating-a-multi-colored-border-using-borderimage)](#section-10.7-creating-a-multi-colored-border-using-borderimage)
 
-[[Section 10.8: border-\[left\|right\|top\|bottom\]]
+[[Section 10.8: border-&lbrack;left&vertbar;right&vertbar;top&vertbar;bottom&rbrack;]
 [71](#section-10.8-border-leftrighttopbottom)](#section-10.8-border-leftrighttopbottom)
 
 [**[Chapter 11: Outlines]**
@@ -470,7 +470,7 @@ flexbox]
 [[Section 19.1: Opacity Property]
 [125](#section-19.1-opacity-property)](#section-19.1-opacity-property)
 
-[[Section 19.2: IE Compatibility for \`opacity\`]
+[[Section 19.2: IE Compatibility for &apos;opacity&apos;]
 [125](#section-19.2-ie-compatibility-for-opacity)](#section-19.2-ie-compatibility-for-opacity)
 
 [**[Chapter 20: Length Units]**
@@ -577,7 +577,7 @@ ems]
 [146](#section-27.3-syntax-examples)](#section-27.3-syntax-examples)
 
 [[Section 27.4: Increasing Animation Performance Using the
-\`will-change\` Attribute]
+&apos;will-change&apos; Attribute]
 [147](#section-27.4-increasing-animation-performance-using-the-will-change-attribute)](#section-27.4-increasing-animation-performance-using-the-will-change-attribute)
 
 [**[Chapter 28: 2D Transforms]**
@@ -842,7 +842,7 @@ CSSOM]
 [**[Chapter 47: Feature Queries]**
 [199](#chapter-47-feature-queries)](#chapter-47-feature-queries)
 
-[[Section 47.1: Basic \@supports usage]
+[[Section 47.1: Basic &commat;supports usage]
 [199](#section-47.1-basic-supports-usage)](#section-47.1-basic-supports-usage)
 
 [[Section 47.2: Chaining feature detections]
@@ -966,32 +966,14 @@ layout]
 >
 > Please send feedback and corrections to [web@petercv.com]
 
-# 
-
-# 
-
-# 
-
-# 
-
-# 
-
-# 
-
-# 
-
-# 
-
-# 
-
 # Chapter 1: Getting started with CSS
 
 ## Section 1.1: External Stylesheet
 
 > An external CSS stylesheet can be applied to any number of HTML
-> documents by placing a \<link**\>** element in each HTML document.
+> documents by placing a &lt;link**&gt;** element in each HTML document.
 >
-> The attribute rel of the \<link\> tag has to be set to \"stylesheet\",
+> The attribute rel of the &lt;link&gt; tag has to be set to &quot;stylesheet&quot;,
 > and the href attribute to the relative or absolute path to the
 > stylesheet. While using relative URL paths is generally considered
 > good practice, absolute paths can be used, too. In HTML5 the type
@@ -1004,56 +986,54 @@ layout]
 >
 > **Example hello-world.html**
 
-\<! DOCTYPE html**\>**
-**\<****html****\>**
-**\<****head****\>**
-**\<****meta**charset=\"utf-8\"**/\>**
-**\<****link**rel=\"stylesheet\"type=\"text/css\"href=\"style.css\"**\>**
-**\<****/head****\>**
-**\<****body****\>**
-**\<****h****1****\>**
-Hello world!
-**\<****/h****1****\>**
-**\<****p****\>**
-I
-♥
-CSS
-**\<****/p****\>**
-**\<****/body****\>**
-**\<****/html****\>**
+```
+<! DOCTYPE html>
+<html>
+  <head>
+    <metacharset="utf-8"/>
+    <linkrel="stylesheet"type="text/css"href="style.css">
+  </head>
+<body>
+  <h1>Hello world!</h1>
+  <p>I ♥ CSS</p>
+</body>
+</html>
 
 ```
+
 > style.css
+
+```
 h1 {
-color: green;
-text-decoration: underline;
+  color: green;
+  text-decoration: underline;
 }
 
 p {
-font-size: 25px;
-font-family: 'Trebuchet MS', sans-serif;
+  font-size: 25px;
+  font-family: 'Trebuchet MS', sans-serif;
 }
 ```
 
 > Make sure you include the correct path to your CSS file in the href.
 > If the CSS file is in the same folder as your HTML file then no path
-> is required (like the example above) but if it\'s saved in a folder,
+> is required (like the example above) but if it's saved in a folder,
 > then specify it like this;
 >
 > href="foldername/style.css".
 
+```
+> <link rel="stylesheet" type="text/css" href="foldername/style.css">
 >
-> \<link rel="stylesheet" type="text/css" href="foldername/style.css"\>
->
-> **\<link** rel=\"stylesheet\" type=\"text/css\"
-> href=\"foldername/style.css\"**\>**
+> <link rel="stylesheet" type="text/css" href="foldername/style.css">
+```
 
 >
 > External stylesheets are considered the best way to handle your CSS.
-> There\'s a very simple reason for this: when you\'re managing a site
+> There&apos;s a very simple reason for this: when you&apos;re managing a site
 > of, say, 100 pages, all controlled by a single stylesheet, and you
-> want to change your link colors from blue to green, it\'s a lot easier
-> to make the change in your CSS file and let the changes \"cascade\"
+> want to change your link colors from blue to green, it&apos;s a lot easier
+> to make the change in your CSS file and let the changes &quot;cascade&quot;
 > throughout all 100 pages than it is to go into 100 separate pages and
 > make the same change 100 times. Again, if you want to completely
 > change the look of your website, you only need to update this one
@@ -1061,28 +1041,34 @@ font-family: 'Trebuchet MS', sans-serif;
 >
 > You can load as many CSS files in your HTML page as needed.
 >
-> **\<link** rel=\"stylesheet\" type=\"text/css\"
-> href=\"main.css\"**\>**
+
+```
+> <link rel="stylesheet" type="text/css" href="main.css">
 >
-> **\<link** rel=\"stylesheet\" type=\"text/css\"
-> href=\"override.css\"**\>**
+> <link rel="stylesheet" type="text/css" href="override.css">
+```
+
 >
 > CSS rules are applied with some basic rules, and order does matter.
 > For example, if you have a main.css file with some code in it:
 >
+```
 > p.green { color: #00ff00; }
+```
 >
-> All your paragraphs with the \'green\' class will be written in light
+> All your paragraphs with the &apos;green&apos; class will be written in light
 > green, but you can override this with another .css file just by
 > including it *after* main.css. You can have override.css with the
 > following code follow main.css, for example:
 >
+```
 > p.green { color: #006600; }
+```
 >
-> Now all your paragraphs with the \'green\' class will be written in
+> Now all your paragraphs with the &apos;green&apos; class will be written in
 > darker green rather than light green.
 >
-> Other principles apply, such as the \'!important\' rule, specificity,
+> Other principles apply, such as the &apos;!important&apos; rule, specificity,
 > and inheritance.
 >
 > When someone first visits your website, their browser downloads the
@@ -1094,24 +1080,24 @@ font-family: 'Trebuchet MS', sans-serif;
 
 ## Section 1.2: Internal Styles
 
-> CSS enclosed in **\>** tags within an HTML document function like an
+> CSS enclosed in **&gt;** tags within an HTML document function like an
 > external stylesheet, except that it lives in the HTML document it
 > styles instead of in a separate file, and therefore can only be
 > applied to the document in which it lives. Note that this element
-> *must* be inside the **\>** element for HTML validation (though it
-> will work in all current \<head\> browsers if placed in body).
+> *must* be inside the **&gt;** element for HTML validation (though it
+> will work in all current &lt;head&gt; browsers if placed in body).
 
-## Section 1.3: CSS \@import rule (one of CSS at-rule)
+## Section 1.3: CSS &commat;import rule (one of CSS at-rule)
 
-> The \@import CSS at-rule is used to import style rules from other
+> The &commat;import CSS at-rule is used to import style rules from other
 > style sheets. These rules must precede all other types of rules,
-> except \@charset rules; as it is not a nested statement, \@import
+> except &commat;charset rules; as it is not a nested statement, &commat;import
 > cannot be used inside conditional group at-rules.
-> [[\@import]](https://developer.mozilla.org/en/docs/Web/CSS/@import).
+> [[&commat;import]](https://developer.mozilla.org/en/docs/Web/CSS/@import).
 >
-> **How to use \@import**
+> **How to use &commat;import**
 >
-> You can use \@import rule in following ways:
+> You can use &commat;import rule in following ways:
 
 A.  **With internal style tag**
 
@@ -1123,38 +1109,39 @@ B.  **With external stylesheet**
 > Importing external CSS is also possible. A common use case are font
 > files.
 >
-> An optional second argument to \@import rule is a list of media
+> An optional second argument to &commat;import rule is a list of media
 > queries:
 >
-> \@import '/print-styles.css' print;
+
+```
+> @import '/print-styles.css' print;
 >
-> \@import url('landscap.css') screen and (orientation: landscape);
+> @import url('landscap.css') screen and (orientation: landscape);
+```
 
 ## Section 1.4: Inline Styles
 
-  **\<style**
+  **&lt;style**
 
 > Use inline styles to apply styling to a specific element. Note that
-> this is ***not*** optimal. Placing style rules in a **\>** tag or
+> this is ***not*** optimal. Placing style rules in a **&gt;** tag or
 > external CSS file is encouraged in order to maintain a distinction
 > between content and presentation.
 
-  **\<style**
+  **&lt;style**
 
-
-> Inline styles override any CSS in a **\>** tag or external style
+> Inline styles override any CSS in a **&gt;** tag or external style
 > sheet. While this can be useful in some circumstances, this fact more
-> often than not reduces a project\'s maintainability.
+> often than not reduces a project&apos;s maintainability.
 >
 > The styles in the following example apply directly to the elements to
 > which they are attached.
+```
+> **<h1** style="color: green; text-decoration:
+> underline;"**>**Hello world!**</h1>**
 >
-> **\<h1** style=\"color: green; text-decoration:
-> underline;\"**\>**Hello world!**\</h1\>**
->
-> **\<p** style=\"font-size: 25px; font-family: \'Trebuchet
-> MS\';\"**\>**I ♥ CSS**\</p\>**
->
+> **<p** style="font-size: 25px; font-family: 'Trebuchet MS';"**>**I ♥ CSS**</p>**
+```
 > Inline styles are generally the safest way to ensure rendering
 > compatibility across various email clients, programs and devices, but
 > can be time-consuming to write and a bit challenging to manage.
@@ -1163,14 +1150,13 @@ B.  **With external stylesheet**
 
 > **Pure JavaScript**
 >
-> It\'s possible to add, remove or change CSS property values with
-> JavaScript through an element\'s style property.
+> It&apos;s possible to add, remove or change CSS property values with
+> JavaScript through an element&apos;s style property.
 
 **var**
 
 ```
 el=document.getElementById ("element");
-
 el.style.opacity=0.5;
 el.style.fontFamily='sans-serif';
 ```
@@ -1179,92 +1165,53 @@ el.style.fontFamily='sans-serif';
 > example you see that the css property fontfamily becomes fontFamily in
 > javascript.
 
-  **\<style**                  **\>** or          **\<link**
+  **<style**                  **>** or          **<link**
 
 
-  **\<body**                **\>** or           **\<head**
+  **<body**                **>** or           **<head**
 
 
 > As an alternative to working directly on elements, you can create a
-> **\>** element in JavaScript and append it to the **\>** of the HTML
+> **&gt;** element in JavaScript and append it to the **&gt;** of the HTML
 > document.
 >
-> **jQuery**
->
+
+###jQuery
+
 > Modifying CSS properties with jQuery is even simpler.
 
 ```
 $('#element').css(
-
-'margin','5px'
+  margin,'5px'
 );
 ```
 
 > If you need to change more than one style rule:
 
 ```
-$
-(
-'#element'
-)
-.css
-(
-{
-margin:"5px",padding:"10px",color:"black"
-}
-);
+$('#element').css({
+  margin:"5px",
+  padding:"10px",
+  color:"black"
+});
 ```
 
 > jQuery includes two ways to change css rules that have hyphens in them
 > (i.e. font-size). You can put them in quotes or camel-case the style
 > rule name.
 >
-> \$('.example-class').css({.css({
->
-> "background-color" : "blue",
->
-> fontSize: "10px"
->
-> });
 
-\$
-
-(
-
-\'.example-class\'
-
-)
-
-.css
-
-(
-
-{
-
-\"background-color\"
-
-:
-
-\"blue\"
-
-,
-
-fontSize
-
-:
-
-\"10px\"
-
-}
-
-)
-
-;
+```
+> $('.example-class').css({
+>   "background-color": "blue", 
+>   fontSize: "10px" 
+});
+```
 
 > **See also**
->
-> JavaScript documentation -- Reading and Changing CSS Style. jQuery
-> documentation -- CSS Manipulation
+
+  - JavaScript documentation -- Reading and Changing CSS Style. 
+  - jQuery documentation -- CSS Manipulation
 
 ## Section 1.6: Styling Lists with CSS
 
@@ -1273,14 +1220,19 @@ fontSize
 > should be declared in that order. The default values are disc,
 > outside, and none, respectively. Each property can be declared
 > separately, or using the list-style shorthand property.
+>
 > **list-style-type** defines the shape or type of bullet point used for
 > each list-item.
 >
 > Some of the acceptable values for list-style-type:
->
-> disc circle
->
-> square decimal lower-roman upper-roman none
+
+  - disc 
+  - circle
+  - square 
+  - decimal 
+  - lower-roman 
+  - upper-roman 
+  - none
 >
 > (For an exhaustive list, see the [[W3C specification
 > wiki]](https://www.w3.org/wiki/CSS/Properties/list-style-type))
@@ -1288,61 +1240,30 @@ fontSize
 > To use square bullet points for each list-item, for example, you would
 > use the following property-value pair:
 
-li
-
-{
-
-**list-style-type**
-
-:
-
-square
-
-;
-
+```
+li {
+  list-style-type: square;
 }
+```
 
 > The **list-style-image** property determines whether the list-item
 > icon is set with an image, and accepts a value of none or a URL that
 > points to an image.
 
-li
-
-{
-
-**list-style-image**
-
-:
-
-url
-
-(
-
-*images/bullet.png*
-
-)
-
-;
-
+````
+li {
+list-style-image: url (images/bullet.png);
 }
+```
 
 > The **list-style-position** property defines where to position the
-> list-item marker, and it accepts one of two values: \"inside\" or
-> \"outside\".
+> list-item marker, and it accepts one of two values: &quot;inside&quot; or
+> &quot;outside&quot;.
 
-li
-
-{
-
-**list-style-position**
-
-:
-
-inside
-
-;
-
+```
+li {list-style-position: inside;
 }
+```
 
 # Chapter 2: Structure and Formatting of a CSS Rule
 
@@ -1351,231 +1272,84 @@ inside
 > Some properties can take multiple values, collectively known as a
 > **property list**.
 
-*/\* Two values in this property list \*/*
+*/* Two values in this property list */*
 
-span
-
-{
-
-**text-shadow**
-
-:
-
-yellow
-
-0
-
-0
-
-3
-
-px
-
-,
-
-green
-
-4
-
-px
-
-4
-
-px
-
-10
-
-px
-
-;
-
+```
+span {
+  text-shadow: yellow 0 0 3px, green 4px 4px 10px;
 }
 
-*/\* Alternate Formatting \*/*
-
-span
-
-{
-
-**text-shadow**
-
-:
-
-yellow
-
-0
-
-0
-
-3
-
-px
-
-,
-
-green
-
-4
-
-px
-
-4
-
-px
-
-10
-
-px
-
-;
-
+/* Alternate Formatting */
+span {
+  text-shadow:
+    yellow 0 0 3px,
+    green 4px 4px 10px;
 }
+```
 
 ## Section 2.2: Multiple Selectors
 
 > When you group CSS selectors, you apply the same styles to several
 > different elements without repeating the styles in your style sheet.
 > Use a comma to separate multiple grouped selectors.
+```
+div, p {color: blue }
+```
 
-div
-
-,
-
-p
-
-{
-
-**color**
-
-:
-
-blue
-
-}
-
-  -----------------------------------------------------------------------------------------------
-  **\<div\>**   elements and all   **\<p\>**   elements. Without the comma only       **\<p\>**
-  ------------- ------------------ ----------- -------------------------------------- -----------
-
-  -----------------------------------------------------------------------------------------------
-
-  -----------------------------------------------------------------------
-  **\<div\>**
-  -----------------------------------------------------------------------
-
-  -----------------------------------------------------------------------
+/*  **<div>**   elements and all   **<p>**   elements. */
+/*  Without the comma only       **<p>** */
+/*  **<div>** */
 
 > So the blue color applies to all elements that are a child of a would
 > be red.
 >
 > This also applies to all types of selectors.
-
-p
-
-,
-
-.blue
-
-,
-
-\#
-
-first
-
-,
-
-div span
-
-{
-
-**color**
-
-:
-
-blue
-
-}
+```
+p, .blue, #first, div span{ color : blue }
+```
 
 > This rule applies to:
 
-  -----------------------------------------------------------------------
-  **\<p\>**
-  -----------------------------------------------------------------------
-
-  -----------------------------------------------------------------------
-
-  ------------------------------------------------------------------------
-  **\<span\>**         inside of a                       **\<div\>**
-  -------------------- --------------------------------- -----------------
-
-  ------------------------------------------------------------------------
-
-elements of the blue class element with the ID first every
-
-## 
+  - <p>
+  - elements of the blue class 
+  - element with the ID first 
+  - every <span> inside of a <div>
 
 ## Section 2.3: Rules, Selectors, and Declaration Blocks
 
-> A CSS **rule** consists of a **selector** (e.g. h1) and **declaration
-> block** ({}).
+```
+> A CSS rule consists of a selector (e.g. h1) and declaration block ({}).
+```
 
-h1
-
-{
-
-}
+```
+h1 {}
+```
 
 # Chapter 3: Comments
 
 ## Section 3.1: Single Line
 
-*/\* This is a CSS comment \*/*
-
-div
-
-{
-
-**color**
-
-:
-
-red
-
-;
-
-*/\* This is a CSS comment \*/*
-
+```
+*/&ast; This is a CSS comment &ast;/*
+div {
+  color: red; /* This is a CSS comment */
 }
+```
 
 ## Section 3.2: Multiple Line
 
-*/\**
-
-*This*
-
-*is*
-
-*a*
-
-*CSS*
-
-*comment*
-
-*\*/*
-
-div
-
-{
-
-**color**
-
-:
-
-red
-
-;
-
+```
+/*
+  This
+  is
+  a
+  CSS
+  comment
+*/
+div {
+  color: red;
 }
+```
 
 # Chapter 4: Selectors
 
@@ -1587,57 +1361,39 @@ red
 
 ## Section 4.1: Basic selectors
 
-  -----------------------------------------------------------------------
   **Selector**           **Description**
-  ---------------------- ------------------------------------------------
-  \*                     Universal selector (all elements)
+  &ast;                     Universal selector (all elements)
 
-  -----------------------------------------------------------------------
 
-  -----------------------------------------------------------------------
-  **\<div**
-  -----------------------------------------------------------------------
+  **&lt;div**
 
-  -----------------------------------------------------------------------
 
-div Tag selector (all **\>** elements)
+div Tag selector (all **&gt;** elements)
 
-  -----------------------------------------------------------------------
   .blue                 Class selector (all elements with class blue)
-  --------------------- -------------------------------------------------
 
-  -----------------------------------------------------------------------
 
 .blue.red All elements with class blue **and** red (a type of Compound
 selector)
 
-#headline ID selector (the element with \"id\" attribute set to
+#headline ID selector (the element with &quot;id&quot; attribute set to
 headline)
 
 :pseudo-class All elements with pseudo-class
 
-  -----------------------------------------------------------------------
   ::pseudo-element
-  -----------------------------------------------------------------------
 
-  -----------------------------------------------------------------------
 
 > Element that matches pseudo-element
 
-  --------------------------------------------------------------------------------------------
-  lang   (   en   ) Element that matches :lang declaration, for      **\<span**   =   \"en\"
+  lang   (   en   ) Element that matches :lang declaration, for      **&lt;span**   =   &quot;en&quot;
                   example                                            lang             
-  ------ --- ---- -------------------------------------------------- ------------ --- --------
 
-  --------------------------------------------------------------------------------------------
 
-> :**\>**
+> :**&gt;**
 
-  ------------------------------------------------------------------------
-  div                                      \>         p
-  ---------------------------------------- ---------- --------------------
+  div                                      &gt;         p
 
-  ------------------------------------------------------------------------
 
 > child selector
 >
@@ -1658,173 +1414,117 @@ headline)
 > change the selection criteria accordingly. They select an element
 > using the presence of a given attribute or attribute value.
 
-**Selector(1) Matched element Selects elements\... CSS Version**
+**Selector(1) Matched element Selects elements&period;.. CSS Version**
 
-  -----------------------------------------------------------------------
   attr
-  -----------------------------------------------------------------------
+  **&lt;div** attr                          
 
-  -----------------------------------------------------------------------
+  **&lt;div**                               attr
 
-  -----------------------------------------------------------------------
-  **\<div** attr                          
-  --------------------------------------- -------------------------------
-                                          
 
-  **\<div**                               attr
+  **&lt;div**                               attr
 
-                                          
 
-  **\<div**                               attr
+  **&lt;div**                               attr
 
-                                          
 
-  **\<div**                               attr
+  **&lt;div**                               attr
 
-                                          
 
-  **\<div**                               attr
+  **&lt;div**                               attr
 
-                                          
 
-  **\<div**                               attr
+  **&lt;div**                               attr
 
-                                          
+  &quot;val&quot;
 
-  **\<div**                               attr
-  -----------------------------------------------------------------------
 
-  -----------------------------------------------------------------------
-  \"val\"
-  -----------------------------------------------------------------------
+  attr                         =       &apos;val&apos;
 
-  -----------------------------------------------------------------------
 
-  ------------------------------------------------------------------------
-  attr                         =       \'val\'
-  ---------------------------- ------- -----------------------------------
+  &quot;val val2 val3&quot;
 
-  ------------------------------------------------------------------------
 
-  -----------------------------------------------------------------------
-  \"val val2 val3\"
-  -----------------------------------------------------------------------
+  attr                      &#126;=          &apos;val&apos;
 
-  -----------------------------------------------------------------------
 
-  -----------------------------------------------------------------------
-  attr                      \~=          \'val\'
-  ------------------------- ------------ --------------------------------
+  attr&Hat;=&apos;val&apos;
 
-  -----------------------------------------------------------------------
 
-  -----------------------------------------------------------------------
-  attr\^=\'val\'
-  -----------------------------------------------------------------------
+  &quot;val1 val2&quot;
 
-  -----------------------------------------------------------------------
 
-  -----------------------------------------------------------------------
-  \"val1 val2\"
-  -----------------------------------------------------------------------
+  &quot;sth aval&quot;
 
-  -----------------------------------------------------------------------
 
-  -----------------------------------------------------------------------
-  \"sth aval\"
-  -----------------------------------------------------------------------
+  attr                      &dollar;=          &apos;val&apos;
 
-  -----------------------------------------------------------------------
 
-  -----------------------------------------------------------------------
-  attr                      \$=          \'val\'
-  ------------------------- ------------ --------------------------------
+  &quot;somevalhere&quot;
 
-  -----------------------------------------------------------------------
 
-  -----------------------------------------------------------------------
-  \"somevalhere\"
-  -----------------------------------------------------------------------
+  attr&ast;=&apos;val&apos;
 
-  -----------------------------------------------------------------------
 
-  -----------------------------------------------------------------------
-  attr\*=\'val\'
-  -----------------------------------------------------------------------
+  &quot;val-sth etc&quot;
 
-  -----------------------------------------------------------------------
 
-  -----------------------------------------------------------------------
-  \"val-sth etc\"
-  -----------------------------------------------------------------------
+  attr                      &vertbar;=          &apos;val&apos;
 
-  -----------------------------------------------------------------------
 
-  -----------------------------------------------------------------------
-  attr                      \|=          \'val\'
-  ------------------------- ------------ --------------------------------
+&lbrack;&rbrack;**&gt;** With attribute attr 2
 
-  -----------------------------------------------------------------------
-
-\[\]**\>** With attribute attr 2
-
-\[\]=**\>** Where attribute attr has value val 2
+&lbrack;&rbrack;=**&gt;** Where attribute attr has value val 2
 
 > Where val appears in the
 >
-> \[\]=**\>** 2 whitespace-separated list of attr
+> &lbrack;&rbrack;=**&gt;** 2 whitespace-separated list of attr
 
-\[\]=**\>** Where attr\'s value *begins* with val 3
+&lbrack;&rbrack;=**&gt;** Where attr&apos;s value *begins* with val 3
 
-> \[\]=**\>** Where the attr\'s value *ends* with val 3 \[\]=**\>**
+> &lbrack;&rbrack;=**&gt;** Where the attr&apos;s value *ends* with val 3 &lbrack;&rbrack;=**&gt;**
 > Where attr contains val anywhere 3
 >
-> Where attr\'s value is exactly val,
+> Where attr&apos;s value is exactly val,
 
-\[\]=**\>** or starts with val and immediately 2
+&lbrack;&rbrack;=**&gt;** or starts with val and immediately 2
 
 > followed by - (U+002D)
 
-  ---------------------------------------------------------------------------
-  attr       =   \'val\' i        \]   **\<div** attr        =   \"val\"
-  ---------- --- ---------------- ---- --------------------- --- ------------
+  attr       =   &apos;val&apos; i        &rbrack;   **&lt;div** attr        =   &quot;val&quot;
 
-  ---------------------------------------------------------------------------
 
 > Where attr has value val,
 >
-> \[**\>** 4(2) ignoring val\'s letter casing.
+> &lbrack;**&gt;** 4(2) ignoring val&apos;s letter casing.
 
 ***Notes:***
 
 1.  The attribute value can be surrounded by either single-quotes or
-    double-quotes. No quotes at all may also work, but it\'s not valid
+    double-quotes. No quotes at all may also work, but it&apos;s not valid
     according to the CSS standard, and is discouraged.
 
 2.  There is no single, integrated CSS4 specification, because it is
-    split into separate modules. However, there are \"level 4\" modules.
+    split into separate modules. However, there are &quot;level 4&quot; modules.
     [[See browser
     support]](http://caniuse.com/#feat=css-case-insensitive).
 
 > **Details**
 
-  -----------------------------------------------------------------------
   **attribute**
-  -----------------------------------------------------------------------
 
-  -----------------------------------------------------------------------
 
-**\[\]**
+**&lbrack;&rbrack;**
 
 > Selects elements with the given attribute.
 
 div
 
-\[
+&lbrack;
 
 data-color
 
-\]
+&rbrack;
 
 {
 
@@ -1838,7 +1538,7 @@ red
 
 }
 
-**\<**
+**&lt;**
 
 **div**
 
@@ -1846,19 +1546,19 @@ data-color
 
 =
 
-\"red\"
+&quot;red&quot;
 
-**\>**
+**&gt;**
 
 This will be red
 
-**\<**
+**&lt;**
 
 **/div**
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **div**
 
@@ -1866,19 +1566,19 @@ data-color
 
 =
 
-\"green\"
+&quot;green&quot;
 
-**\>**
+**&gt;**
 
 This will be red
 
-**\<**
+**&lt;**
 
 **/div**
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **div**
 
@@ -1886,42 +1586,39 @@ data-background
 
 =
 
-\"red\"
+&quot;red&quot;
 
-**\>**
+**&gt;**
 
 This will NOT be red
 
-**\<**
+**&lt;**
 
 **/div**
 
-**\>**
+**&gt;**
 
 [[Live Demo on
 JSBin]](http://jsbin.com/cezale/1/edit?html,css,output)
 
-  ---------------------------------------------------------------------------
-  **attribute**                         **=**   **\"value\"**
-  ------------------------------------- ------- -----------------------------
+  **attribute**                         **=**   **&quot;value&quot;**
 
-  ---------------------------------------------------------------------------
 
-**\[\]**
+**&lbrack;&rbrack;**
 
 > Selects elements with the given attribute and value.
 
 div
 
-\[
+&lbrack;
 
 data-color
 
 =
 
-\"red\"
+&quot;red&quot;
 
-\]
+&rbrack;
 
 {
 
@@ -1935,7 +1632,7 @@ red
 
 }
 
-**\<**
+**&lt;**
 
 **div**
 
@@ -1943,19 +1640,19 @@ data-color
 
 =
 
-\"red\"
+&quot;red&quot;
 
-**\>**
+**&gt;**
 
 This will be red
 
-**\<**
+**&lt;**
 
 **/div**
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **div**
 
@@ -1963,19 +1660,19 @@ data-color
 
 =
 
-\"green\"
+&quot;green&quot;
 
-**\>**
+**&gt;**
 
 This will NOT be red
 
-**\<**
+**&lt;**
 
 **/div**
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **div**
 
@@ -1983,41 +1680,38 @@ data-color
 
 =
 
-\"blue\"
+&quot;blue&quot;
 
-**\>**
+**&gt;**
 
 This will NOT be red
 
-**\<**
+**&lt;**
 
 **/div**
 
-**\>**
+**&gt;**
 
 [[Live Demo on
 JSBin]](http://jsbin.com/waxoked/1/edit?html,css,output)
 
-  -----------------------------------------------------------------------
-  **attribute\*=\"value\"**
-  -----------------------------------------------------------------------
+  **attribute&ast;=&quot;value&quot;**
 
-  -----------------------------------------------------------------------
 
-**\[\]**
+**&lbrack;&rbrack;**
 
 > Selects elements with the given attribute and value where the given
 > attribute contains the given value anywhere (as a substring).
 
-\[
+&lbrack;
 
 class
 
-\*=
+&ast;=
 
-\"foo\"
+&quot;foo&quot;
 
-\]
+&rbrack;
 
 {
 
@@ -2031,7 +1725,7 @@ red
 
 }
 
-**\<**
+**&lt;**
 
 **div**
 
@@ -2039,19 +1733,19 @@ class
 
 =
 
-\"foo-123\"
+&quot;foo-123&quot;
 
-**\>**
+**&gt;**
 
 This will be red
 
-**\<**
+**&lt;**
 
 **/div**
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **div**
 
@@ -2059,19 +1753,19 @@ class
 
 =
 
-\"foo123\"
+&quot;foo123&quot;
 
-**\>**
+**&gt;**
 
 This will be red
 
-**\<**
+**&lt;**
 
 **/div**
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **div**
 
@@ -2079,19 +1773,19 @@ class
 
 =
 
-\"bar123foo\"
+&quot;bar123foo&quot;
 
-**\>**
+**&gt;**
 
 This will be red
 
-**\<**
+**&lt;**
 
 **/div**
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **div**
 
@@ -2099,19 +1793,19 @@ class
 
 =
 
-\"barfooo123\"
+&quot;barfooo123&quot;
 
-**\>**
+**&gt;**
 
 This will be red
 
-**\<**
+**&lt;**
 
 **/div**
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **div**
 
@@ -2119,41 +1813,38 @@ class
 
 =
 
-\"barfo0\"
+&quot;barfo0&quot;
 
-**\>**
+**&gt;**
 
 This will NOT be red
 
-**\<**
+**&lt;**
 
 **/div**
 
-**\>**
+**&gt;**
 
 [[Live Demo on
 JSBin]](http://jsbin.com/dazige/1/edit?html,css,output)
 
-  ---------------------------------------------------------------------------
-  **attribute\~**                         **=**   **\"value\"**
-  --------------------------------------- ------- ---------------------------
+  **attribute&#126;**                         **=**   **&quot;value&quot;**
 
-  ---------------------------------------------------------------------------
 
-**\[\]**
+**&lbrack;&rbrack;**
 
 > Selects elements with the given attribute and value where the given
 > value appears in a whitespace-separated list.
 
-\[
+&lbrack;
 
-class\~
+class&#126;
 
 =
 
-\"color-red\"
+&quot;color-red&quot;
 
-\]
+&rbrack;
 
 {
 
@@ -2167,7 +1858,7 @@ red
 
 }
 
-**\<**
+**&lt;**
 
 **div**
 
@@ -2175,19 +1866,19 @@ class
 
 =
 
-\"color-red foo-bar the-div\"
+&quot;color-red foo-bar the-div&quot;
 
-**\>**
+**&gt;**
 
 This will be red
 
-**\<**
+**&lt;**
 
 **/div**
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **div**
 
@@ -2195,41 +1886,38 @@ class
 
 =
 
-\"color-blue foo-bar the-div\"
+&quot;color-blue foo-bar the-div&quot;
 
-**\>**
+**&gt;**
 
 This will NOT be red
 
-**\<**
+**&lt;**
 
 **/div**
 
-**\>**
+**&gt;**
 
 [[Live Demo on
 JSBin]](http://jsbin.com/posuhim/1/edit?html,css,output)
 
-  -----------------------------------------------------------------------
-  **attribute\^=\"value\"**
-  -----------------------------------------------------------------------
+  **attribute&Hat;=&quot;value&quot;**
 
-  -----------------------------------------------------------------------
 
-**\[\]**
+**&lbrack;&rbrack;**
 
 > Selects elements with the given attribute and value where the given
 > attribute begins with the value.
 
-\[
+&lbrack;
 
 class
 
-\^=
+&Hat;=
 
-\"foo-\"
+&quot;foo-&quot;
 
-\]
+&rbrack;
 
 {
 
@@ -2243,7 +1931,7 @@ red
 
 }
 
-**\<**
+**&lt;**
 
 **div**
 
@@ -2251,19 +1939,19 @@ class
 
 =
 
-\"foo-123\"
+&quot;foo-123&quot;
 
-**\>**
+**&gt;**
 
 This will be red
 
-**\<**
+**&lt;**
 
 **/div**
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **div**
 
@@ -2271,19 +1959,19 @@ class
 
 =
 
-\"foo-234\"
+&quot;foo-234&quot;
 
-**\>**
+**&gt;**
 
 This will be red
 
-**\<**
+**&lt;**
 
 **/div**
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **div**
 
@@ -2291,41 +1979,38 @@ class
 
 =
 
-\"bar-123\"
+&quot;bar-123&quot;
 
-**\>**
+**&gt;**
 
 This will NOT be red
 
-**\<**
+**&lt;**
 
 **/div**
 
-**\>**
+**&gt;**
 
 [[Live Demo on
 JSBin]](http://jsbin.com/yowihi/1/edit?html,css,output)
 
-  ---------------------------------------------------------------------------
-  **attribute\$**                         **=**   **\"value\"**
-  --------------------------------------- ------- ---------------------------
+  **attribute&dollar;**                         **=**   **&quot;value&quot;**
 
-  ---------------------------------------------------------------------------
 
-**\[\]**
+**&lbrack;&rbrack;**
 
 > Selects elements with the given attribute and value where the given
 > attribute ends with the given value.
 
-\[
+&lbrack;
 
-class\$
+class&dollar;
 
 =
 
-\"file\"
+&quot;file&quot;
 
-\]
+&rbrack;
 
 {
 
@@ -2339,7 +2024,7 @@ red
 
 }
 
-**\<**
+**&lt;**
 
 **div**
 
@@ -2347,19 +2032,19 @@ class
 
 =
 
-\"foobar-file\"
+&quot;foobar-file&quot;
 
-**\>**
+**&gt;**
 
 This will be red
 
-**\<**
+**&lt;**
 
 **/div**
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **div**
 
@@ -2367,19 +2052,19 @@ class
 
 =
 
-\"foobar-file\"
+&quot;foobar-file&quot;
 
-**\>**
+**&gt;**
 
 This will be red
 
-**\<**
+**&lt;**
 
 **/div**
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **div**
 
@@ -2387,44 +2072,41 @@ class
 
 =
 
-\"foobar-input\"
+&quot;foobar-input&quot;
 
-**\>**
+**&gt;**
 
 This will NOT be red
 
-**\<**
+**&lt;**
 
 **/div**
 
-**\>**
+**&gt;**
 
 [[Live Demo on
 JSBin]](http://jsbin.com/yowihi/2/edit?html,css,output)
 
-  ---------------------------------------------------------------------------
-  **attribute\|**                         **=**   **\"value\"**
-  --------------------------------------- ------- ---------------------------
+  **attribute&vertbar;**                         **=**   **&quot;value&quot;**
 
-  ---------------------------------------------------------------------------
 
-**\[\]**
+**&lbrack;&rbrack;**
 
 > Selects elements with a given attribute and value where the
-> attribute\'s value is exactly the given value or is exactly the given
+> attribute&apos;s value is exactly the given value or is exactly the given
 > value followed by - (U+002D)
 
-\[
+&lbrack;
 
 lang
 
-\|
+&vertbar;
 
 =
 
-\"EN\"
+&quot;EN&quot;
 
-\]
+&rbrack;
 
 {
 
@@ -2438,7 +2120,7 @@ red
 
 }
 
-**\<**
+**&lt;**
 
 **div**
 
@@ -2446,19 +2128,19 @@ lang
 
 =
 
-\"EN-us\"
+&quot;EN-us&quot;
 
-**\>**
+**&gt;**
 
 This will be red
 
-**\<**
+**&lt;**
 
 **/div**
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **div**
 
@@ -2466,19 +2148,19 @@ lang
 
 =
 
-\"EN-gb\"
+&quot;EN-gb&quot;
 
-**\>**
+**&gt;**
 
 This will be red
 
-**\<**
+**&lt;**
 
 **/div**
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **div**
 
@@ -2486,78 +2168,49 @@ lang
 
 =
 
-\"PT-pt\"
+&quot;PT-pt&quot;
 
-**\>**
+**&gt;**
 
 This will NOT be red
 
-**\<**
+**&lt;**
 
 **/div**
 
-**\>**
+**&gt;**
 
 [[Live Demo on
 JSBin]](http://jsbin.com/yowihi/3/edit?html,css,output)
 
-  ---------------------------------------------------------------------------
-  **attribute**                     **=**   **\"value\" i**
-  --------------------------------- ------- ---------------------------------
+  **attribute**                     **=**   **&quot;value&quot; i**
 
-  ---------------------------------------------------------------------------
 
-**\[\]**
+**&lbrack;&rbrack;**
 
 > Selects elements with a given attribute and value where the
-> attribute\'s value can be represented as Value, VALUE, vAlUe or any
+> attribute&apos;s value can be represented as Value, VALUE, vAlUe or any
 > other case-insensitive possibility.
 
-\[
-
-lang
-
-=
-
-\"EN\"
-
-i
-
-\]
-
-{
-
-**color**
-
-:
-
-red
-
-;
-
+```
+[lang|="EN"] {
+  color: red;
 }
+```
 
-**\<**
+<div lang="EN-us"
 
-**div**
-
-lang
-
-=
-
-\"EN\"
-
-**\>**
+**&gt;**
 
 This will be red
 
-**\<**
+**&lt;**
 
 **/div**
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **div**
 
@@ -2565,78 +2218,42 @@ lang
 
 =
 
-\"en\"
+&quot;en&quot;
 
-**\>**
+**&gt;**
 
 This will be red
 
-**\<**
+**&lt;**
 
 **/div**
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
-**div**
+div lang="PT">This will NOT be red
 
-lang
-
-=
-
-\"PT\"
-
-**\>**
-
-This will NOT be red
-
-**\<**
+**&lt;**
 
 **/div**
 
-**\>**
+**&gt;**
 
-[[Live Demo on
-JSBin]](http://jsbin.com/yowihi/4/edit?html,css,output)
+<a href="http://jsbin.com/yowihi/4/edit?html,css,output">Live Demo on JSBin</a>
 
-> **Specificity of attribute selectors 0-1-0**
->
+> Specificity of attribute selectors
+  0-1-0
+
 > Same as class selector and pseudoclass.
 
-\*
-
-\[
-
-type
-
-=
-
-checkbox
-
-\]
-
-//
-
-0
-
-\-
-
-1
-
-\-
-
-0
-
-  ------------------------------------------------------------------------
-  id             =       \"my-ID\"
-  -------------- ------- -------------------------------------------------
-
-  ------------------------------------------------------------------------
+```
+*[type=checkbox] // 0-1-0
+```
 
 > Note that this means an attribute selector can be used to select an
 > element by its ID at a lower level of specificity than if it was
-> selected with an ID selector: \[\] targets the same element as #my-ID
+> selected with an ID selector: &lbrack;&rbrack; targets the same element as #my-ID
 > but with lower specificity.
 >
 > See the Syntax Section for more details.
@@ -2647,45 +2264,31 @@ checkbox
 
 **Selector Description**
 
-  -----------------------------------------------------------------------------
-  **\<span**   **\>**s that are descendants of a                    **\<div**
-  ------------ ---------------------------------------------------- -----------
+  **&lt;span**   **&gt;**s that are descendants of a                    **&lt;div**
 
-  -----------------------------------------------------------------------------
 
-> div span Descendant selector (all **\>**)
-
-+---+---+-----+------------------+-----+-----------------------------+---+
-| d | \ | s   | > Child selector | *   | **\>**s that are a direct   | * |
-| i | > | pan | > (all           | *\< | child of a                  | * |
-| v |   |     |                  | spa |                             | \ |
+ div span   Descendant selector (all **&gt;**)
+| div span | &bsol; | s   | > Child selector | *   | **&gt;**s that are a direct   | * |
+| i | > | pan | > (all           | *&lt; | child of a                  | * |
+| v |   |     |                  | spa |                             | &bsol; |
 |   |   |     |                  | n** |                             | < |
 |   |   |     |                  |     |                             | d |
 |   |   |     |                  |     |                             | i |
 |   |   |     |                  |     |                             | v |
 |   |   |     |                  |     |                             | * |
 |   |   |     |                  |     |                             | * |
-+===+===+=====+==================+=====+=============================+===+
-+---+---+-----+------------------+-----+-----------------------------+---+
 
-> **\>**)
+> **&gt;**)
 
-  -----------------------------------------------------------------------------
-  **\<span**   **\>**s that are siblings after an                     **\<a**
-  ------------ ------------------------------------------------------ ---------
+  **&lt;span**   **&gt;**s that are siblings after an                     **&lt;a**
 
-  -----------------------------------------------------------------------------
 
-> a \~ span General Sibling selector (all **\>**)
+> a &#126; span General Sibling selector (all **&gt;**)
 
-  -----------------------------------------------------------------------------------------------
-  a   \+   span   Adjacent Sibling selector   **\<span**   **\>**s that are immediately **\<a**
+  a   &plus;   span   Adjacent Sibling selector   **&lt;span**   **&gt;**s that are immediately **&lt;a**
                   (all                                     after an                     
-  --- ---- ------ --------------------------- ------------ ---------------------------- ---------
 
-  -----------------------------------------------------------------------------------------------
-
-> **\>**)
+> **&gt;**)
 >
 > **Note:** Sibling selectors target elements that come after them in
 > the source document. CSS, by its nature (it cascades), cannot target
@@ -2715,98 +2318,92 @@ red
 
 }
 
-**\<**
+**&lt;**
 
 **div**
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **p**
 
-**\>**
+**&gt;**
 
 My text is red
 
-**\<**
+**&lt;**
 
 **/p**
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **section**
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **p**
 
-**\>**
+**&gt;**
 
 My text is red
 
-**\<**
+**&lt;**
 
 **/p**
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **/section**
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **/div**
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **p**
 
-**\>**
+**&gt;**
 
 My text is not red
 
-**\<**
+**&lt;**
 
 **/p**
 
-**\>**
+**&gt;**
 
 [[Live Demo on
 JSBin]](http://jsbin.com/xonafuz/2/edit?html,css,output)
 
-  -------------------------------------------------------------------------------------
-  **\<p**   **\>** elements are selected since they are both descendants of **\<div**
+  **&lt;p**   **&gt;** elements are selected since they are both descendants of **&lt;div**
             the                                                             
-  --------- --------------------------------------------------------------- -----------
 
-  -------------------------------------------------------------------------------------
 
-> In the above example, the first two **\>**.
+> In the above example, the first two **&gt;**.
 
-  ----------------------------------------------------------------------------
-  **selector**                      **\>**   **selector**
-  --------------------------------- -------- ---------------------------------
+  **selector**                      **&gt;**   **selector**
 
-  ----------------------------------------------------------------------------
 
 > **Child Combinator:**
 >
-> The child (\>) combinator is used to select elements that are
+> The child (&gt;) combinator is used to select elements that are
 > **children**, or **direct descendants**, of the specified element.
 
 div
 
-\>
+&gt;
 
 p
 
@@ -2822,84 +2419,75 @@ red
 
 }
 
-**\<**
+**&lt;**
 
 **div**
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **p**
 
-**\>**
+**&gt;**
 
 My text is red
 
-**\<**
+**&lt;**
 
 **/p**
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **section**
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **p**
 
-**\>**
+**&gt;**
 
 My text is not red
 
-**\<**
+**&lt;**
 
 **/p**
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **/section**
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **/div**
 
-**\>**
+**&gt;**
 
 [[Live Demo on
 JSBin]](http://jsbin.com/xonafuz/3/edit?html,css,output)
 
-  --------------------------------------------------------------------------------------
-  **\<p**   **\>** element, as it is the only paragraph directly descended   **\<div**
+  **&lt;p**   **&gt;** element, as it is the only paragraph directly descended   **&lt;div**
             from a                                                           
-  --------- ---------------------------------------------------------------- -----------
 
-  --------------------------------------------------------------------------------------
 
-> The above CSS selects only the first **\>**.
+> The above CSS selects only the first **&gt;**.
 
-  -------------------------------------------------------------------------------------
-  **\<p**   **\>** element is not selected because it is not a direct child **\<div**
+  **&lt;p**   **&gt;** element is not selected because it is not a direct child **&lt;div**
             of the                                                          
-  --------- --------------------------------------------------------------- -----------
 
-  -------------------------------------------------------------------------------------
 
-> The second **\>**.
+> The second **&gt;**.
 
-  ---------------------------------------------------------------------------
   **selector**                      **+**   **selector**
-  --------------------------------- ------- ---------------------------------
 
-  ---------------------------------------------------------------------------
 
 > **Adjacent Sibling Combinator:**
 >
@@ -2908,7 +2496,7 @@ JSBin]](http://jsbin.com/xonafuz/3/edit?html,css,output)
 
 p
 
-\+
+&plus;
 
 p
 
@@ -2924,85 +2512,82 @@ red
 
 }
 
-**\<**
+**&lt;**
 
 **p**
 
-**\>**
+**&gt;**
 
 My text is not red
 
-**\<**
+**&lt;**
 
 **/p**
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **p**
 
-**\>**
+**&gt;**
 
 My text is red
 
-**\<**
+**&lt;**
 
 **/p**
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **p**
 
-**\>**
+**&gt;**
 
 My text is red
 
-**\<**
+**&lt;**
 
 **/p**
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **hr**
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **p**
 
-**\>**
+**&gt;**
 
 My text is not red
 
-**\<**
+**&lt;**
 
 **/p**
 
-**\>**
+**&gt;**
 
 [[Live Demo on
 JSBin]](http://jsbin.com/xonafuz/4/edit?html,css,output)
 
-  ------------------------------------------------------------------------------------
-  **\<p**   **\>** elements which are *directly preceded* by another         **\<p**
-  --------- ---------------------------------------------------------------- ---------
+  **&lt;p**   **&gt;** elements which are *directly preceded* by another         **&lt;p**
 
-  ------------------------------------------------------------------------------------
 
-> The above example selects only those **\>** element.
+> The above example selects only those **&gt;** element.
 >
-> **General Sibling Combinator: selector \~ selector**
+> **General Sibling Combinator: selector &#126; selector**
 >
-> The general sibling (\~) combinator selects *all* siblings that follow
+> The general sibling (&#126;) combinator selects *all* siblings that follow
 > the specified element.
 
-p \~ p
+p &#126; p
 
 {
 
@@ -3016,82 +2601,82 @@ red
 
 }
 
-**\<**
+**&lt;**
 
 **p**
 
-**\>**
+**&gt;**
 
 My text is not red
 
-**\<**
+**&lt;**
 
 **/p**
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **p**
 
-**\>**
+**&gt;**
 
 My text is red
 
-**\<**
+**&lt;**
 
 **/p**
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **hr**
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **h**
 
 **1**
 
-**\>**
+**&gt;**
 
 And now a title
 
-**\<**
+**&lt;**
 
 **/h**
 
 **1**
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **p**
 
-**\>**
+**&gt;**
 
 My text is red
 
-**\<**
+**&lt;**
 
 **/p**
 
-**\>**
+**&gt;**
 
 [[Live Demo on
 JSBin]](http://jsbin.com/xonafuz/5/edit?html,css,output)
 
   -----------------------------------------------------------------------------------
-  **\<p**   **\>** elements that are *preceded* by another                  **\<p**
+  **&lt;p**   **&gt;** elements that are *preceded* by another                  **&lt;p**
   --------- --------------------------------------------------------------- ---------
 
   -----------------------------------------------------------------------------------
 
-> The above example selects all **\>** element, whether or not they are
+> The above example selects all **&gt;** element, whether or not they are
 > immediately adjacent.
 
 ## Section 4.4: Pseudo-classes
@@ -3127,7 +2712,7 @@ JSBin]](http://jsbin.com/xonafuz/5/edit?html,css,output)
 
 selector:pseudo
 
-\-
+&minus;
 
 class
 
@@ -3163,7 +2748,7 @@ Applies to any element being activated (i.e. clicked) by the user.
 > Applies to radio, checkbox, or option elements that are checked
 >
 > [[:checked]](https://www.w3.org/TR/css3-selectors/#checked)
-> or toggled into an \"on\" state.
+> or toggled into an &quot;on&quot; state.
 >
 > Represents any user interface element that is the default among a
 > group of
@@ -3181,7 +2766,7 @@ Applies to any element which has no children.
 [[:enabled](https://www.w3.org/TR/css3-selectors/#enableddisabled)]
 Applies to any UI element which is in an enabled state.
 
-> Used in conjunction with the \@page rule, this selects the first page
+> Used in conjunction with the &commat;page rule, this selects the first page
 > in a
 >
 > [[:first]](http://tympanus.net/codrops/css_reference/first)
@@ -3195,11 +2780,11 @@ Represents any element that is the first child element of its parent.
 > [[:first-of-type]](https://www.w3.org/TR/css3-selectors/#first-of-type-pseudo)
 > inside its parent. This may or may not be the first-child.
 >
-> Applies to any element which has the user\'s focus. This can be given
+> Applies to any element which has the user&apos;s focus. This can be given
 > by the
 >
 > [[:focus]](https://www.w3.org/TR/css3-selectors/#the-user-action-pseudo-classes-hover-act)
-> user\'s keyboard, mouse events, or other forms of input.
+> user&apos;s keyboard, mouse events, or other forms of input.
 >
 > Can be used to highlight a whole section when one element inside it is
 > focused. It matches
@@ -3214,7 +2799,7 @@ Represents any element that is the first child element of its parent.
 > [[:full-screen]](https://developer.mozilla.org/en-US/docs/Web/CSS/:fullscreen)
 > of elements and not just the top level element.
 >
-> Applies to any element being hovered by the user\'s pointing device,
+> Applies to any element being hovered by the user&apos;s pointing device,
 > but
 >
 > [[:hover]](https://www.w3.org/TR/css3-selectors/#the-user-action-pseudo-classes-hover-act)
@@ -3224,7 +2809,7 @@ Represents any element that is the first child element of its parent.
 >
 > [[:indeterminate](https://www.w3.org/TR/css3-selectors/#indeterminate)]
 > unchecked, but are in an indeterminate state. This can be due to an
-> element\'s attribute or DOM manipulation.
+> element&apos;s attribute or DOM manipulation.
 
   -----------------------------------------------------------------------
   in-range
@@ -3243,12 +2828,12 @@ Represents any element that is the first child element of its parent.
 > using the element is inside the range limits.
 
   -----------------------------------------------------------------------
-  **\<input**
+  **&lt;input**
   -----------------------------------------------------------------------
 
   -----------------------------------------------------------------------
 
-> Applies to **\>** elements whose values are invalid according to
+> Applies to **&gt;** elements whose values are invalid according to
 
   -----------------------------------------------------------------------
   type
@@ -3260,12 +2845,12 @@ Represents any element that is the first child element of its parent.
 > the type specified in the = attribute.
 
   -----------------------------------------------------------------------
-  **\<body**
+  **&lt;body**
   -----------------------------------------------------------------------
 
   -----------------------------------------------------------------------
 
-> Applies to any element who\'s wrapping **\>** element has a properly
+> Applies to any element who&apos;s wrapping **&gt;** element has a properly
 
   -----------------------------------------------------------------------
   lang
@@ -3287,19 +2872,19 @@ Represents any element that is the last child element of its parent.
 > [[:last-of-type]](https://www.w3.org/TR/css3-selectors/#last-of-type-pseudo)
 > its parent. This may or may not be the last-child.
 >
-> Used in conjunction with the \@page rule, this selects all the left
+> Used in conjunction with the &commat;page rule, this selects all the left
 >
 > [[:left]](http://tympanus.net/codrops/css_reference/left_pseudo-class/)
 >
 > pages in a printed document.
 
 [[:link](https://www.w3.org/TR/css3-selectors/#the-link-pseudo-classes-link-and-visited)]
-Applies to any links which haven\'t been visited by the user.
+Applies to any links which haven&apos;t been visited by the user.
 
 > Applies to all elements which **do not** match the value passed to
 
   -------------------------------------------------------------------------
-  not      \(p\) or :          not      (   .class-name
+  not      &lpar;p&rpar; or :          not      (   .class-name
   -------- ------------------- -------- --- -------------------------------
 
   -------------------------------------------------------------------------
@@ -3396,16 +2981,16 @@ that does not have the required attribute set on it. This allows
 Applies to any element which is not editable by the user.
 
   -----------------------------------------------------------------------
-  **\<input**
+  **&lt;input**
   -----------------------------------------------------------------------
 
   -----------------------------------------------------------------------
 
 [[:read-write](https://developer.mozilla.org/en-US/docs/Web/CSS/:read-write)]
-Applies to any element that is editable by a user, such as **\>**
+Applies to any element that is editable by a user, such as **&gt;**
 elements.
 
-> Used in conjunction with the \@page rule, this selects all the right
+> Used in conjunction with the &commat;page rule, this selects all the right
 > pages in a
 >
 > [[:right]](http://tympanus.net/codrops/css_reference/right_pseudo-class)
@@ -3433,16 +3018,16 @@ Applies to any links which have has been visited by the user.
 
   -----------------------------------------------------------------------
 
-> The : pseudoclass can\'t be used for most styling in a lot of modern
-> browsers anymore because it\'s a security hole. See this
+> The : pseudoclass can&apos;t be used for most styling in a lot of modern
+> browsers anymore because it&apos;s a security hole. See this
 > [[link]](https://hacks.mozilla.org/2010/03/privacy-related-changes-coming-to-css-vistited/)
 > for reference.
 
 ## Section 4.5: Child Pseudo Class
 
-> \"The :nth-child(an+b) CSS pseudo-class matches an element that has
+> &quot;The :nth-child(an+b) CSS pseudo-class matches an element that has
 > an+b-1 siblings before it in the document tree, for a given positive
-> **or zero value** for n\" - [MDN :nth-child]
+> **or zero value** for n&quot; - [MDN :nth-child]
 
 +------------------------------+---------------------------------------+
 | **pseudo-selector**          | > **1 2 3 4 5 6 7 8 9 10**            |
@@ -3520,16 +3105,16 @@ Applies to any links which have has been visited by the user.
 ## Section 4.6: Class Name Selectors
 
   -----------------------------------------------------------------------
-  **\<div**
+  **&lt;div**
   -----------------------------------------------------------------------
 
   -----------------------------------------------------------------------
 
 > The class name selector select all elements with the targeted class
 > name. For example, the class name .warning would select the following
-> **\>** element:
+> **&gt;** element:
 
-**\<**
+**&lt;**
 
 **div**
 
@@ -3537,32 +3122,32 @@ class
 
 =
 
-\"warning\"
+&quot;warning&quot;
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **p**
 
-**\>**
+**&gt;**
 
 This would be some warning copy.
 
-**\<**
+**&lt;**
 
 **/p**
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **/div**
 
-**\>**
+**&gt;**
 
 > You can also combine class names to target elements more specifically.
-> Let\'s build on the example above to showcase a more complicated class
+> Let&apos;s build on the example above to showcase a more complicated class
 > selection.
 >
 > **CSS**
@@ -3613,7 +3198,7 @@ red
 
 > **HTML**
 
-**\<**
+**&lt;**
 
 **div**
 
@@ -3621,31 +3206,31 @@ class
 
 =
 
-\"warning\"
+&quot;warning&quot;
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **p**
 
-**\>**
+**&gt;**
 
 This would be some warning copy.
 
-**\<**
+**&lt;**
 
 **/p**
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **/div**
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **div**
 
@@ -3653,11 +3238,11 @@ class
 
 =
 
-\"important warning\"
+&quot;important warning&quot;
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **p**
 
@@ -3665,23 +3250,23 @@ class
 
 =
 
-\"important\"
+&quot;important&quot;
 
-**\>**
+**&gt;**
 
 This is some really important warning copy.
 
-**\<**
+**&lt;**
 
 **/p**
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **/div**
 
-**\>**
+**&gt;**
 
 > In this example, all elements with the .warning class will have a blue
 > text color, elements with the .important class with have an orange
@@ -3711,7 +3296,7 @@ This is some really important warning copy.
 >
 > HTML:
 
-**\<**
+**&lt;**
 
 **div**
 
@@ -3719,49 +3304,49 @@ id
 
 =
 
-\"element\"
+&quot;element&quot;
 
-**\>**
+**&gt;**
 
-\...
+&period;..
 
-**\<**
+**&lt;**
 
 **/div**
 
-**\>**
+**&gt;**
 
 > CSS
 
-\#
+&num;
 
 element
 
 {
 
-\...
+&period;..
 
 }
 
-*/\* High specificity will override many selectors \*/*
+*/&ast; High specificity will override many selectors &ast;/*
 
-\[
+&lbrack;
 
 id
 
 =
 
-\"element\"
+&quot;element&quot;
 
-\]
+&rbrack;
 
 {
 
-\...
+&period;..
 
 }
 
-*/\* Low specificity, can be overridden easily \*/*
+*/&ast; Low specificity, can be overridden easily &ast;/*
 
 ## Section 4.8: The :last-of-type selector
 
@@ -3811,7 +3396,7 @@ last-of-type
 
 }
 
-**\<**
+**&lt;**
 
 **div**
 
@@ -3819,121 +3404,121 @@ class
 
 =
 
-\"container\"
+&quot;container&quot;
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **p**
 
-**\>**
+**&gt;**
 
 First paragraph
 
-**\<**
+**&lt;**
 
 **/p**
 
-**\>**
+**&gt;**
 
 **p**
 
-**\<**
+**&lt;**
 
-**\>**
+**&gt;**
 
 Second paragraph
 
-**\<**
+**&lt;**
 
 **/p**
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **p**
 
-**\>**
+**&gt;**
 
 Last paragraph
 
-**\<**
+**&lt;**
 
 **/p**
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **h**
 
 **1**
 
-**\>**
+**&gt;**
 
 Heading 1
 
-**\<**
+**&lt;**
 
 **/h**
 
 **1**
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **h**
 
 **2**
 
-**\>**
+**&gt;**
 
 First heading 2
 
-**\<**
+**&lt;**
 
 **/h**
 
 **2**
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **h**
 
 **2**
 
-**\>**
+**&gt;**
 
 Last heading 2
 
-**\<**
+**&lt;**
 
 **/h**
 
 **2**
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **/div**
 
-**\>**
+**&gt;**
 
 [[jsFiddle]](http://jsfiddle.net/MadalinaTn/YmMZZ/113/)
 
 ## Section 4.9: CSS3 :in-range selector example
 
-**\<**
+**&lt;**
 
 **style**
 
-**\>**
+**&gt;**
 
 input:in-range
 
@@ -3943,13 +3528,13 @@ border: 1px solid blue;
 
 }
 
-**\<**
+**&lt;**
 
 **/style**
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **input**
 
@@ -3957,41 +3542,41 @@ type
 
 =
 
-\"number\"
+&quot;number&quot;
 
 min
 
 =
 
-\"10\"
+&quot;10&quot;
 
 max
 
 =
 
-\"20\"
+&quot;20&quot;
 
 value
 
 =
 
-\"15\"
+&quot;15&quot;
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **p**
 
-**\>**
+**&gt;**
 
 The border for this value will be blue
 
-**\<**
+**&lt;**
 
 **/p**
 
-**\>**
+**&gt;**
 
   -----------------------------------------------------------------------
   in-range
@@ -4003,32 +3588,32 @@ The border for this value will be blue
 > inside the specified range limitations for this element. It allows the
 > page to give a feedback that the value currently defined using the
 > element is inside the range
-> limits.[[\[1\]]](https://developer.mozilla.org/en-US/docs/Web/CSS/:in-range)
+> limits.[[&lbrack;1&rbrack;]](https://developer.mozilla.org/en-US/docs/Web/CSS/:in-range)
 
 ## Section 4.10: A. The :not pseudo-class example & B. :focuswithin CSS pseudo-class
 
 A.  The syntax is presented above.
 
   -----------------------------------------------------------------------
-  **\<input**
+  **&lt;input**
   -----------------------------------------------------------------------
 
   -----------------------------------------------------------------------
 
-> The following selector matches all **\>** elements in an HTML document
-> that are not disabled and don\'t have the class .example:
+> The following selector matches all **&gt;** elements in an HTML document
+> that are not disabled and don&apos;t have the class .example:
 >
 > HTML:
 
-**\<**
+**&lt;**
 
 **form**
 
-**\>**
+**&gt;**
 
 Phone:
 
-**\<**
+**&lt;**
 
 **input**
 
@@ -4036,19 +3621,19 @@ type
 
 =
 
-\"tel\"
+&quot;tel&quot;
 
 class
 
 =
 
-\"example\"
+&quot;example&quot;
 
-**\>**
+**&gt;**
 
 E-mail:
 
-**\<**
+**&lt;**
 
 **input**
 
@@ -4056,19 +3641,19 @@ type
 
 =
 
-\"email\"
+&quot;email&quot;
 
 disabled
 
 =
 
-\"disabled\"
+&quot;disabled&quot;
 
-**\>**
+**&gt;**
 
 Password:
 
-**\<**
+**&lt;**
 
 **input**
 
@@ -4076,15 +3661,15 @@ type
 
 =
 
-\"password\"
+&quot;password&quot;
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **/form**
 
-**\>**
+**&gt;**
 
 > CSS:
 
@@ -4096,11 +3681,11 @@ not
 
 (
 
-\[
+&lbrack;
 
 disabled
 
-\]
+&rbrack;
 
 )
 
@@ -4145,11 +3730,11 @@ not
 
 (
 
-\[
+&lbrack;
 
 disabled
 
-\]
+&rbrack;
 
 ,
 
@@ -4176,29 +3761,29 @@ JSBin]](http://jsbin.com/japere/edit?html,css,output)
 
 B.  The :focus-within CSS pseudo-classHTML:
 
-**\<**
+**&lt;**
 
 **h**
 
 **3**
 
-**\>**
+**&gt;**
 
 Background is blue if the input is focused .
 
-**\<**
+**&lt;**
 
 **/p**
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **div**
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **input**
 
@@ -4206,15 +3791,15 @@ type
 
 =
 
-\"text\"
+&quot;text&quot;
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **/div**
 
-**\>**
+**&gt;**
 
 > CSS:
 
@@ -4268,9 +3853,9 @@ focus-within
 
 }
 
-## Section 4.11: Global boolean with checkbox:checked and \~ (general sibling combinator)
+## Section 4.11: Global boolean with checkbox:checked and &#126; (general sibling combinator)
 
-> With the \~ selector, you can easily implement a global accessible
+> With the &#126; selector, you can easily implement a global accessible
 > boolean without using JavaScript.
 >
 > **Add boolean as a checkbox**
@@ -4278,7 +3863,7 @@ focus-within
 > To the very beginning of your document, add as much booleans as you
 > want with a unique id and the hidden attribute set:
 
-**\<**
+**&lt;**
 
 **input**
 
@@ -4286,19 +3871,19 @@ type
 
 =
 
-\"checkbox\"
+&quot;checkbox&quot;
 
 id
 
 =
 
-\"sidebarShown\"
+&quot;sidebarShown&quot;
 
 hidden
 
-**/\>**
+**/&gt;**
 
-**\<**
+**&lt;**
 
 **input**
 
@@ -4306,37 +3891,25 @@ type
 
 =
 
-\"checkbox\"
+&quot;checkbox&quot;
 
 id
 
 =
 
-\"darkThemeUsed\"
+&quot;darkThemeUsed&quot;
 
 hidden
 
-**/\>**
+**/&gt;**
 
-*\<!\--*
+*&lt;!&minus;-*
 
 *here begins actual content, for example*
 
-*: \--\>*
+*: &minus;-&gt;*
 
-**\<**
-
-**div**
-
-id
-
-=
-
-\"container\"
-
-**\>**
-
-**\<**
+**&lt;**
 
 **div**
 
@@ -4344,35 +3917,11 @@ id
 
 =
 
-\"sidebar\"
+&quot;container&quot;
 
-**\>**
+**&gt;**
 
-*\<!\--*
-
-*Menu, Search, \...*
-
-*\--\>*
-
-**\<**
-
-**/div**
-
-**\>**
-
-*\<!\--*
-
-*Some more content \...*
-
-*\--\>*
-
-**\<**
-
-**/div**
-
-**\>**
-
-**\<**
+**&lt;**
 
 **div**
 
@@ -4380,24 +3929,60 @@ id
 
 =
 
-\"footer\"
+&quot;sidebar&quot;
 
-**\>**
+**&gt;**
 
-*\<!\-- \... \--\>*
+*&lt;!&minus;-*
 
-**\<**
+*Menu, Search, &period;..*
+
+*&minus;-&gt;*
+
+**&lt;**
 
 **/div**
 
-**\>**
+**&gt;**
 
-> **Change the boolean\'s value**
+*&lt;!&minus;-*
+
+*Some more content &period;..*
+
+*&minus;-&gt;*
+
+**&lt;**
+
+**/div**
+
+**&gt;**
+
+**&lt;**
+
+**div**
+
+id
+
+=
+
+&quot;footer&quot;
+
+**&gt;**
+
+*&lt;!&minus;- &period;.. &minus;-&gt;*
+
+**&lt;**
+
+**/div**
+
+**&gt;**
+
+> **Change the boolean&apos;s value**
 >
 > You can toggle the boolean by adding a label with the for attribute
 > set:
 
-**\<**
+**&lt;**
 
 **label**
 
@@ -4405,17 +3990,17 @@ for
 
 =
 
-\"sidebarShown\"
+&quot;sidebarShown&quot;
 
-**\>**
+**&gt;**
 
 Show/Hide the sidebar!
 
-**\<**
+**&lt;**
 
 **/label**
 
-**\>**
+**&gt;**
 
 > **Accessing boolean value with CSS**
 >
@@ -4423,19 +4008,19 @@ Show/Hide the sidebar!
 > properties. They can be overridden by following true / false
 > selectors:
 
-*/\* true: \*/*
+*/&ast; true: &ast;/*
 
-\<
+&lt;
 
 checkbox
 
-\>:
+&gt;:
 
 checked
 
-\~
+&#126;
 
-\[
+&lbrack;
 
 sibling of
 
@@ -4445,19 +4030,19 @@ checkbox
 
 target
 
-\]
+&rbrack;
 
-\<target
+&lt;target
 
-\>
+&gt;
 
-*/\* false: \*/*
+*/&ast; false: &ast;/*
 
-\<
+&lt;
 
 checkbox
 
-\>:
+&gt;:
 
 not
 
@@ -4469,9 +4054,9 @@ checked
 
 )
 
-\~
+&#126;
 
-\[
+&lbrack;
 
 sibling of
 
@@ -4481,22 +4066,22 @@ checkbox
 
 target
 
-\]
+&rbrack;
 
-\<target
+&lt;target
 
-\>
+&gt;
 
   -----------------------------------------------------------------------------------------------------
-  **\<checkbox**   **\>**,   sibling   \]    **\<target**   **\>** should be replaced by the  sibling
-                   \[        \...      and                  proper selectors. \[              \...
+  **&lt;checkbox**   **&gt;**,   sibling   &rbrack;    **&lt;target**   **&gt;** should be replaced by the  sibling
+                   &lbrack;        &period;..      and                  proper selectors. &lbrack;              &period;..
   ---------------- --------- --------- ----- -------------- --------------------------------- ---------
 
   -----------------------------------------------------------------------------------------------------
 
-> Note that \]
+> Note that &rbrack;
 >
-> can be a specific selector, (often if you\'re lazy) simply \* or
+> can be a specific selector, (often if you&apos;re lazy) simply &ast; or
 > nothing if the target is already a sibling of the checkbox.
 >
 > Examples for the above HTML structure would be:
@@ -4507,7 +4092,7 @@ target
 
 checked
 
-\~
+&#126;
 
 #container
 
@@ -4533,7 +4118,7 @@ px
 
 checked
 
-\~
+&#126;
 
 #container
 
@@ -4545,7 +4130,7 @@ checked
 
 checked
 
-\~
+&#126;
 
 #footer
 
@@ -4569,11 +4154,11 @@ checked
 ## Section 4.12: ID selectors
 
 > ID selectors select DOM elements with the targeted ID. To select an
-> element by a specific ID in CSS, the \# prefix is used.
+> element by a specific ID in CSS, the &num; prefix is used.
 >
 > For example, the following HTML div element...
 
-**\<**
+**&lt;**
 
 **div**
 
@@ -4581,29 +4166,29 @@ id
 
 =
 
-\"exampleID\"
+&quot;exampleID&quot;
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **p**
 
-**\>**
+**&gt;**
 
 Example
 
-**\<**
+**&lt;**
 
 **/p**
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **/div**
 
-**\>**
+**&gt;**
 
 ...
 
@@ -4639,7 +4224,7 @@ The HTML specs do not allow multiple elements with the same ID
 
 > HTML
 
-**\<**
+**&lt;**
 
 **input**
 
@@ -4647,42 +4232,42 @@ type
 
 =
 
-\"range\"
+&quot;range&quot;
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **/input**
 
-**\>**
+**&gt;**
 
 > CSS
 
 **Effect Pseudo Selector**
 
   ------------------------------------------------------------------------------------------
-  input\[type=range\]::-webkit-slider-thumb,   
-  input\[type=range\]::-moz-range-thumb,       
+  input&lbrack;type=range&rbrack;::-webkit-slider-thumb,   
+  input&lbrack;type=range&rbrack;::-moz-range-thumb,       
   -------------------------------------------- ---------------------------------------------
-  input\[type=range\]::-ms-thumb               
+  input&lbrack;type=range&rbrack;::-ms-thumb               
 
   ------------------------------------------------------------------------------------------
 
 > Thumb
 
   -----------------------------------------------------------------------------------------------------
-  input\[type=range\]::-webkit-slider-runnable-track,   
-  input\[type=range\]::-moz-range-track,                
+  input&lbrack;type=range&rbrack;::-webkit-slider-runnable-track,   
+  input&lbrack;type=range&rbrack;::-moz-range-track,                
   ----------------------------------------------------- -----------------------------------------------
-  input\[type=range\]::-ms-track                        
+  input&lbrack;type=range&rbrack;::-ms-track                        
 
   -----------------------------------------------------------------------------------------------------
 
 > Track
 
   -----------------------------------------------------------------------
-  input\[type=range\]:focus
+  input&lbrack;type=range&rbrack;:focus
   -----------------------------------------------------------------------
 
   -----------------------------------------------------------------------
@@ -4690,8 +4275,8 @@ type
 > OnFocus
 
   -----------------------------------------------------------------------
-  input\[type=range\]::-moz-range-progress,
-  input\[type=range\]::-ms-fill-lower
+  input&lbrack;type=range&rbrack;::-moz-range-progress,
+  input&lbrack;type=range&rbrack;::-ms-fill-lower
   -----------------------------------------------------------------------
 
   -----------------------------------------------------------------------
@@ -4713,71 +4298,71 @@ the track in WebKit browsers currently - JS needed)
 >
 > HTML:
 
-**\<**
+**&lt;**
 
 **div**
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **p**
 
-**\>**
+**&gt;**
 
 This paragraph is the only child of the div, it will have the color blue
 
-**\<**
+**&lt;**
 
 **/p**
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **/div**
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **div**
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **p**
 
-**\>**
+**&gt;**
 
 This paragraph is one of the two children of the div
 
-**\<**
+**&lt;**
 
 **/p**
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **p**
 
-**\>**
+**&gt;**
 
 This paragraph is one of the two children of its parent
 
-**\<**
+**&lt;**
 
 **/p**
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **/div**
 
-**\>**
+**&gt;**
 
 > CSS:
 
@@ -4800,7 +4385,7 @@ blue
 }
 
   ---------------------------------------------------------------------------------------
-  **\<p\>**   element that is the unique child from its parent, in this     **\<div\>**
+  **&lt;p&gt;**   element that is the unique child from its parent, in this     **&lt;div&gt;**
               case a                                                        
   ----------- ------------------------------------------------------------- -------------
 
@@ -4857,25 +4442,25 @@ red
 
 ;
 
-*/\* red \*/*
+*/&ast; red &ast;/*
 
 }
 
 > **HTML**
 
-**\<**
+**&lt;**
 
 **div**
 
-**\>**
+**&gt;**
 
 This will have a red background
 
-**\<**
+**&lt;**
 
 **/div**
 
-**\>**
+**&gt;**
 
 The example used above is one of several ways that CSS has to represent
 a single color.
@@ -4906,7 +4491,7 @@ body
 
 ;
 
-*/\* red \*/*
+*/&ast; red &ast;/*
 
 }
 
@@ -4922,7 +4507,7 @@ body
 
 ;
 
-*/\* blue \*/*
+*/&ast; blue &ast;/*
 
 }
 
@@ -4963,7 +4548,7 @@ rgb
 
 ;
 
-*/\* black \*/*
+*/&ast; black &ast;/*
 
 }
 
@@ -4997,7 +4582,7 @@ rgba
 
 ;
 
-*/\* black with 50% opacity \*/*
+*/&ast; black with 50% opacity &ast;/*
 
 }
 
@@ -5036,19 +4621,19 @@ hsl
 
 100
 
-\%
+&percnt;
 
 ,
 
 50
 
-\%
+&percnt;
 
 )
 
 ;
 
-*/\* green \*/*
+*/&ast; green &ast;/*
 
 }
 
@@ -5070,13 +4655,13 @@ hsla
 
 100
 
-\%
+&percnt;
 
 ,
 
 50
 
-\%
+&percnt;
 
 ,
 
@@ -5086,7 +4671,7 @@ hsla
 
 ;
 
-*/\* green with 30% opacity \*/*
+*/&ast; green with 30% opacity &ast;/*
 
 }
 
@@ -5282,8 +4867,8 @@ red
 > **linear-gradient()**
 
 A linear-gradient has the following syntax **background**:
-linear-gradient( \<direction\>?, \<color-stop-1\>, \<color-stop-2\>,
-\...);
+linear-gradient( &lt;direction&gt;?, &lt;color-stop-1&gt;, &lt;color-stop-2&gt;,
+&period;..);
 
 **Value Meaning**
 
@@ -5298,12 +4883,12 @@ linear-gradient( \<direction\>?, \<color-stop-1\>, \<color-stop-2\>,
 > 0deg,
 
   -----------------------------------------------------------------------
-  **\<direction**
+  **&lt;direction**
   -----------------------------------------------------------------------
 
   -----------------------------------------------------------------------
 
-> **\>** 90deg\... . The angle starts from to top and rotates clockwise.
+> **&gt;** 90deg&period;.. . The angle starts from to top and rotates clockwise.
 > Can be specified in
 > [[deg]](https://www.w3.org/TR/css3-values/#deg),
 > [[grad]](https://www.w3.org/TR/css3-values/#grad),
@@ -5312,7 +4897,7 @@ linear-gradient( \<direction\>?, \<color-stop-1\>, \<color-stop-2\>,
 > omitted, the gradient flows from top to bottom
 
   -----------------------------------------------------------------------
-  **\<color-stop-list**
+  **&lt;color-stop-list**
   -----------------------------------------------------------------------
 
   -----------------------------------------------------------------------
@@ -5327,7 +4912,7 @@ linear-gradient( \<direction\>?, \<color-stop-1\>, \<color-stop-2\>,
 > [[length]](https://www.w3.org/TR/css3-values/#lengths) to
 > display it at. For
 >
-> **\>** example, \...
+> **&gt;** example, &period;..
 >
 > For example, this creates a linear gradient that starts from the right
 > and transitions from red to blue
@@ -5360,7 +4945,7 @@ blue
 
 ;
 
-*/\* you can also use 270deg \*/*
+*/&ast; you can also use 270deg &ast;/*
 
 }
 
@@ -5395,7 +4980,7 @@ yellow
 
 10
 
-\%
+&percnt;
 
 )
 
@@ -5555,7 +5140,7 @@ red
 
 10
 
-\%
+&percnt;
 
 ,
 
@@ -5563,7 +5148,7 @@ white
 
 10
 
-\%
+&percnt;
 
 ,
 
@@ -5571,7 +5156,7 @@ white
 
 20
 
-\%
+&percnt;
 
 )
 
@@ -5605,7 +5190,7 @@ yellow
 
 10
 
-\%
+&percnt;
 
 ,
 
@@ -5613,7 +5198,7 @@ black
 
 10
 
-\%
+&percnt;
 
 ,
 
@@ -5621,7 +5206,7 @@ black
 
 20
 
-\%
+&percnt;
 
 )
 
@@ -5638,7 +5223,7 @@ black
 > [[rad]](https://www.w3.org/TR/css3-values/#rad), or -45deg
 > [[turn]](https://www.w3.org/TR/css3-values/#turn).
 
-  to bottom       . Syntax:     to    \[   y-axis     (   top OR bottom
+  to bottom       . Syntax:     to    &lbrack;   y-axis     (   top OR bottom
 
   x-axis                         (     left OR
 
@@ -5646,9 +5231,9 @@ black
   to left
 
 
-  right            )\] ie         to top right
+  right            )&rbrack; ie         to top right
 
-> Direction of gradient, default is )\] \[
+> Direction of gradient, default is )&rbrack; &lbrack;
 
   yellow 10%
 
@@ -5680,7 +5265,7 @@ url
 
 (
 
-\'/path/to/image.jpg\'
+&apos;/path/to/image.jpg&apos;
 
 )
 
@@ -5704,7 +5289,7 @@ url
 
 (
 
-\'/path/to/image.jpg\'
+&apos;/path/to/image.jpg&apos;
 
 )
 
@@ -5714,7 +5299,7 @@ url
 
 (
 
-\'/path/to/image2.jpg\'
+&apos;/path/to/image2.jpg&apos;
 
 )
 
@@ -5727,9 +5312,9 @@ url
 
 **Value Result**
 
-  url      (   \'/path/to/image.jpg\'
+  url      (   &apos;/path/to/image.jpg&apos;
 
-> Specify background image\'s path(s) or an image resource specified
+> Specify background image&apos;s path(s) or an image resource specified
 > with data URI
 >
 > )
@@ -5740,15 +5325,15 @@ url
 
   initial                                  Default value
 
-  inherit                                  Inherit parent\'s value
+  inherit                                  Inherit parent&apos;s value
 
 > **More CSS for Background Image**
 >
 > This following attributes are very useful and almost essential too.
 >
-> **background-size**: xpx ypx \| x% y%; **background-repeat**:
-> no-repeat \| repeat \| repeat-x \| repeat-y; **background-position**:
-> left offset (px/%) right offset (px/%) \| center center \| left top \|
+> **background-size**: xpx ypx &vertbar; x% y%; **background-repeat**:
+> no-repeat &vertbar; repeat &vertbar; repeat-x &vertbar; repeat-y; **background-position**:
+> left offset (px/%) right offset (px/%) &vertbar; center center &vertbar; left top &vertbar;
 > right bottom;
 
 ## Section 5.4: Background Shorthand
@@ -5770,10 +5355,10 @@ url
 | back         | Background color to apply                        | 1+ |
 | ground-color |                                                  |    |
 +--------------+--------------------------------------------------+----+
-| backgro      | Background image\'s position                     | 1+ |
+| backgro      | Background image&apos;s position                     | 1+ |
 | und-position |                                                  |    |
 +--------------+--------------------------------------------------+----+
-| bac          | Background image\'s size                         | 3+ |
+| bac          | Background image&apos;s size                         | 3+ |
 | kground-size |                                                  |    |
 +--------------+--------------------------------------------------+----+
 | backg        | How to repeat background image                   | 1+ |
@@ -5820,12 +5405,12 @@ url
 >
 > The syntax of the background shorthand declaration is:
 >
-> **background**: \[\<background-image\>\] \[\<background-color\>\]
-> \[\<background-position\>\]/\[\<background-size\>\]
+> **background**: &lbrack;&lt;background-image&gt;&rbrack; &lbrack;&lt;background-color&gt;&rbrack;
+> &lbrack;&lt;background-position&gt;&rbrack;/&lbrack;&lt;background-size&gt;&rbrack;
 >
-> \[\<background-repeat\>\] \[\<background-origin\>\]
-> \[\<background-clip\>\] \[\<background-attachment\>\]
-> \[\<initial\|inherit\>\];
+> &lbrack;&lt;background-repeat&gt;&rbrack; &lbrack;&lt;background-origin&gt;&rbrack;
+> &lbrack;&lt;background-clip&gt;&rbrack; &lbrack;&lt;background-attachment&gt;&rbrack;
+> &lbrack;&lt;initial&vertbar;inherit&gt;&rbrack;;
 >
 > **Examples**
 
@@ -5863,7 +5448,7 @@ url
 
 (
 
-\"somepng.jpg\"
+&quot;somepng.jpg&quot;
 
 )
 
@@ -5880,7 +5465,7 @@ url
 
 (
 
-\'pattern.png\'
+&apos;pattern.png&apos;
 
 )
 
@@ -5892,11 +5477,11 @@ green
 > green with pattern.png, if it is available, overlayed on the colour,
 > repeating as often as necessary to fill the element. If pattern.png
 > includes any transparency then the green colour will be visible behind
-> it. **background**: #000000 url(\"picture.png\") top left / 600px auto
+> it. **background**: #000000 url(&quot;picture.png&quot;) top left / 600px auto
 > no-repeat;
 >
 > In this example we have a black background with an image
-> \'picture.png\' on top, the image does not repeat in either axis and
+> &apos;picture.png&apos; on top, the image does not repeat in either axis and
 > is positioned in the top left corner. The / after the position is to
 > be able to include the size of the background image which in this case
 > is set as 600px width and auto for the height. This example could work
@@ -5918,7 +5503,7 @@ green
 > resulting image in vertical and and horizontal direction. If the
 > property is missing, its deemed auto in both width and height.
 >
-> auto will keep the image\'s aspect ratio, if it can be determined. The
+> auto will keep the image&apos;s aspect ratio, if it can be determined. The
 > height is optional and can be considered auto. Therefore, on a 256 px
 > × 256 px image, all the following background-size settings would yield
 > an image with height and width of 50 px:
@@ -5945,7 +5530,7 @@ auto
 
 ;
 
-*/\* same as above \*/*
+*/&ast; same as above &ast;/*
 
 **background-size**
 
@@ -5976,7 +5561,7 @@ px
 > So if we started with the following picture (which has the mentioned
 > size of 256 px × 256 px),
 >
-> we\'ll end up with a 50 px × 50 px on the user\'s screen, contained in
+> we&apos;ll end up with a 50 px × 50 px on the user&apos;s screen, contained in
 > the background of our element:
 >
 > One can also use percentage values to scale the image with respect of
@@ -6007,11 +5592,11 @@ url
 
 100
 
-\%
+&percnt;
 
 66
 
-\%
+&percnt;
 
 ;
 
@@ -6067,8 +5652,8 @@ The behaviour depends on the
 > ratio. The circle got into an ellipse, the square into a rectangle,
 > the triangle into another triangle.
 >
-> The length or percentage approach isn\'t flexible enough to keep the
-> aspect ratio at all times. auto doesn\'t help, since you might not
+> The length or percentage approach isn&apos;t flexible enough to keep the
+> aspect ratio at all times. auto doesn&apos;t help, since you might not
 > know which dimension of your element will be larger. However, to cover
 > certain areas with an image (and correct aspect ratio) completely or
 > to contain an image with correct aspect ratio completely in a
@@ -6077,11 +5662,11 @@ The behaviour depends on the
 >
 > **Eggsplanation for contain and cover**
 >
-> Sorry for the bad pun, but we\'re going to use a [[picture of the day
+> Sorry for the bad pun, but we&apos;re going to use a [[picture of the day
 > by Biswarup
 > Ganguly]](https://commons.wikimedia.org/wiki/File:Chicken_Egg_without_Eggshell_5859.jpg)
 > for demonstration. Lets say that this is your screen, and the gray
-> area is outside of your visible screen. For demonstration, We\'re
+> area is outside of your visible screen. For demonstration, We&apos;re
 > going to assume a 16 × 9 ratio.
 
 ![](./images/media/image7.png){width="4.958333333333333in"
@@ -6090,7 +5675,7 @@ height="2.7916666666666665in"}
 > We want to use the aforementioned picture of the day as a background.
 > However, we cropped the image to 4x3 for some reason. We could set the
 > background-size property to some fixed length, but we will focus on
-> contain and cover. Note that I also assume that we didn\'t mangle the
+> contain and cover. Note that I also assume that we didn&apos;t mangle the
 > width and/or height of body.
 
 **contain**
@@ -6121,7 +5706,7 @@ area.
 
 > This makes sure that the background image is covering everything.
 > There will be no visible background-color, however depending on the
-> screen\'s ratio a great part of your image could be cut off:
+> screen&apos;s ratio a great part of your image could be cut off:
 
 ![](./images/media/image11.png){width="4.958333333333333in"
 height="2.7916666666666665in"}
@@ -6130,7 +5715,7 @@ height="2.7916666666666665in"}
 
 div
 
-\>
+&gt;
 
 div
 
@@ -6242,15 +5827,15 @@ cover
 
 }
 
-*/\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\**
+*/&ast;&ast;&ast;&ast;&ast;&ast;&ast;&ast;&ast;&ast;&ast;&ast;&ast;&ast;&ast;&ast;&ast;&ast;&ast;&ast;&ast;&ast;&ast;&ast;&ast;&ast;&ast;&ast;&ast;&ast;&ast;&ast;&ast;&ast;&ast;&ast;&ast;&ast;&ast;&ast;&ast;&ast;&ast;&ast;*
 
 *Additional styles for the explanation boxes*
 
-*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*/*
+*&ast;&ast;&ast;&ast;&ast;&ast;&ast;&ast;&ast;&ast;&ast;&ast;&ast;&ast;&ast;&ast;&ast;&ast;&ast;&ast;&ast;&ast;&ast;&ast;&ast;&ast;&ast;&ast;&ast;&ast;&ast;&ast;&ast;&ast;&ast;&ast;&ast;&ast;&ast;&ast;&ast;&ast;&ast;&ast;&ast;/*
 
 div
 
-\>
+&gt;
 
 div
 
@@ -6286,7 +5871,7 @@ left
 
 div
 
-\+
+&plus;
 
 div
 
@@ -6328,7 +5913,7 @@ ex
 
 div
 
-\>
+&gt;
 
 div
 
@@ -6426,13 +6011,13 @@ class
 
 }
 
-**\<**
+**&lt;**
 
 **div**
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **div**
 
@@ -6440,60 +6025,60 @@ class
 
 =
 
-\"contain\"
+&quot;contain&quot;
 
-**\>**
+**&gt;**
 
 **/div**
 
-**\<**
+**&lt;**
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **p**
 
-**\>**
+**&gt;**
 
 Note the grey background. The image does not cover the whole region, but
-it\'s fully
+it&apos;s fully
 
-**\<**
+**&lt;**
 
 **em**
 
-**\>**
+**&gt;**
 
 contained
 
-**\<**
+**&lt;**
 
 **/em**
 
-**\>**
+**&gt;**
 
 .
 
 **/p**
 
-**\<**
+**&lt;**
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **/div**
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **div**
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **div**
 
@@ -6501,51 +6086,51 @@ class
 
 =
 
-\"cover\"
+&quot;cover&quot;
 
-**\>**
+**&gt;**
 
 **/div**
 
-**\<**
+**&lt;**
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **p**
 
-**\>**
+**&gt;**
 
 Note the ducks/geese at the bottom of the image. Most of the water is
 cut, as well as a part
 
-of the sky. You don\'t see the complete image anymore, but neither do
+of the sky. You don&apos;t see the complete image anymore, but neither do
 you see any background color;
 
 the image
 
-**\<**
+**&lt;**
 
 **em**
 
-**\>**
+**&gt;**
 
 covers
 
-**\<**
+**&lt;**
 
 **/em**
 
-**\>**
+**&gt;**
 
 all of the
 
-**\<**
+**&lt;**
 
 **code**
 
-**\>**
+**&gt;**
 
 &lt;
 
@@ -6553,25 +6138,25 @@ div
 
 &gt;
 
-**\<**
+**&lt;**
 
 **/code**
 
-**\>**
+**&gt;**
 
 .
 
-**\<**
+**&lt;**
 
 **/p**
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **/div**
 
-**\>**
+**&gt;**
 
 ## Section 5.6: Background Position
 
@@ -6592,7 +6177,7 @@ url
 
 (
 
-\'path/to/image.jpg\'
+&apos;path/to/image.jpg&apos;
 
 )
 
@@ -6604,11 +6189,11 @@ url
 
 50
 
-\%
+&percnt;
 
 50
 
-\%
+&percnt;
 
 ;
 
@@ -6761,50 +6346,50 @@ content-box
 
 > **HTML**
 
-**\<**
+**&lt;**
 
 **p**
 
-**\>**
+**&gt;**
 
 No background-origin (padding-box is default):
 
-**\<**
+**&lt;**
 
 **/p**
 
-**\>**
+**&gt;**
 
-> **\<div** class=\"example example1\"**\>**
+> **&lt;div** class=&quot;example example1&quot;**&gt;**
 >
-> **\<h2\>**Lorem Ipsum Dolor**\</h2\>** **\<p\>**Lorem ipsum dolor sit
+> **&lt;h2&gt;**Lorem Ipsum Dolor**&lt;/h2&gt;** **&lt;p&gt;**Lorem ipsum dolor sit
 > amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod
-> tincidunt ut laoreet dolore magna aliquam erat volutpat.**\</p\>**
-> **\<p\>**Ut wisi enim ad minim veniam, quis nostrud exerci tation
+> tincidunt ut laoreet dolore magna aliquam erat volutpat.**&lt;/p&gt;**
+> **&lt;p&gt;**Ut wisi enim ad minim veniam, quis nostrud exerci tation
 > ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo
-> consequat.**\</p\> \</div\>**
+> consequat.**&lt;/p&gt; &lt;/div&gt;**
 >
-> **\<p\>**background-origin: border-box:**\</p\>**
+> **&lt;p&gt;**background-origin: border-box:**&lt;/p&gt;**
 >
-> **\<div** class=\"example example2\"**\>**
+> **&lt;div** class=&quot;example example2&quot;**&gt;**
 >
-> **\<h2\>**Lorem Ipsum Dolor**\</h2\>** **\<p\>**Lorem ipsum dolor sit
+> **&lt;h2&gt;**Lorem Ipsum Dolor**&lt;/h2&gt;** **&lt;p&gt;**Lorem ipsum dolor sit
 > amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod
-> tincidunt ut laoreet dolore magna aliquam erat volutpat.**\</p\>**
-> **\<p\>**Ut wisi enim ad minim veniam, quis nostrud exerci tation
+> tincidunt ut laoreet dolore magna aliquam erat volutpat.**&lt;/p&gt;**
+> **&lt;p&gt;**Ut wisi enim ad minim veniam, quis nostrud exerci tation
 > ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo
-> consequat.**\</p\> \</div\>**
+> consequat.**&lt;/p&gt; &lt;/div&gt;**
 >
-> **\<p\>**background-origin: content-box:**\</p\>**
+> **&lt;p&gt;**background-origin: content-box:**&lt;/p&gt;**
 >
-> **\<div** class=\"example example3\"**\>**
+> **&lt;div** class=&quot;example example3&quot;**&gt;**
 
-**\<h2\>**Lorem Ipsum Dolor**\</h2\>** **\<p\>**Lorem ipsum dolor sit
+**&lt;h2&gt;**Lorem Ipsum Dolor**&lt;/h2&gt;** **&lt;p&gt;**Lorem ipsum dolor sit
 amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod
-tincidunt ut laoreet dolore magna aliquam erat volutpat.**\</p\>**
-**\<p\>**Ut wisi enim ad minim veniam, quis nostrud exerci tation
+tincidunt ut laoreet dolore magna aliquam erat volutpat.**&lt;/p&gt;**
+**&lt;p&gt;**Ut wisi enim ad minim veniam, quis nostrud exerci tation
 ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo
-consequat.**\</p\> \</div\>** Result:
+consequat.**&lt;/p&gt; &lt;/div&gt;** Result:
 
 ![](./images/media/image13.jpg){width="7.48037510936133in"
 height="6.0841666666666665in"}
@@ -6836,7 +6421,7 @@ img_1.png
 
 ,
 
-*/\* top image \*/*
+*/&ast; top image &ast;/*
 
 url
 
@@ -6848,7 +6433,7 @@ img_2.png
 
 ,
 
-*/\* middle image \*/*
+*/&ast; middle image &ast;/*
 
 url
 
@@ -6860,7 +6445,7 @@ img_3.png
 
 ;
 
-*/\* bottom image \*/*
+*/&ast; bottom image &ast;/*
 
 **background-position**
 
@@ -7006,7 +6591,7 @@ bottom
 
 0
 
-\%
+&percnt;
 
 ,
 
@@ -7014,7 +6599,7 @@ bottom
 
 100
 
-\%
+&percnt;
 
 )
 
@@ -7043,7 +6628,7 @@ url
 
 (
 
-\'img.jpg\'
+&apos;img.jpg&apos;
 
 )
 
@@ -7063,7 +6648,7 @@ fixed
 
 > scroll The background scrolls along with the element. This is default.
 > fixed The background is fixed with regard to the viewport. local The
-> background scrolls along with the element\'s contents. initial Sets
+> background scrolls along with the element&apos;s contents. initial Sets
 > this property to its default value. inherit Inherits this property
 > from its parent element.
 >
@@ -7086,7 +6671,7 @@ url
 
 (
 
-\'image.jpg\'
+&apos;image.jpg&apos;
 
 )
 
@@ -7119,7 +6704,7 @@ url
 
 (
 
-\'image.jpg\'
+&apos;image.jpg&apos;
 
 )
 
@@ -7152,7 +6737,7 @@ url
 
 (
 
-\'image.jpg\'
+&apos;image.jpg&apos;
 
 )
 
@@ -7178,8 +6763,8 @@ local
 > Values
 >
 > border-box is the default value. This allows the background to extend
-> all the way to the outside edge of the element\'s border. padding-box
-> clips the background at the outside edge of the element\'s padding and
+> all the way to the outside edge of the element&apos;s border. padding-box
+> clips the background at the outside edge of the element&apos;s padding and
 > does not let it extend into the border; content-box clips the
 > background at the edge of the content box.
 >
@@ -7285,21 +6870,21 @@ content-box
 
 > **HTML**
 
-**\<**
+**&lt;**
 
 **p**
 
-**\>**
+**&gt;**
 
 No background-origin (padding-box is default):
 
-**\<**
+**&lt;**
 
 **/p**
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **div**
 
@@ -7307,83 +6892,83 @@ class
 
 =
 
-\"example example1\"
+&quot;example example1&quot;
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **h**
 
 **2**
 
-**\>**
+**&gt;**
 
 Lorem Ipsum Dolor
 
-**\<**
+**&lt;**
 
 **/h**
 
 **2**
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **p**
 
-**\>**
+**&gt;**
 
 Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
 nonummy nibh euismod
 
 tincidunt ut laoreet dolore magna aliquam erat volutpat.
 
-**\<**
+**&lt;**
 
 **/p**
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **p**
 
-**\>**
+**&gt;**
 
 Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper
 suscipit lobortis nisl ut
 
 aliquip ex ea commodo consequat.
 
-**\<**
+**&lt;**
 
 **/p**
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **/div**
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **p**
 
-**\>**
+**&gt;**
 
 background-origin: border-box:
 
-**\<**
+**&lt;**
 
 **/p**
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **div**
 
@@ -7391,83 +6976,83 @@ class
 
 =
 
-\"example example2\"
+&quot;example example2&quot;
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **h**
 
 **2**
 
-**\>**
+**&gt;**
 
 Lorem Ipsum Dolor
 
-**\<**
+**&lt;**
 
 **/h**
 
 **2**
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **p**
 
-**\>**
+**&gt;**
 
 Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
 nonummy nibh euismod
 
 tincidunt ut laoreet dolore magna aliquam erat volutpat.
 
-**\<**
+**&lt;**
 
 **/p**
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **p**
 
-**\>**
+**&gt;**
 
 Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper
 suscipit lobortis nisl ut
 
 aliquip ex ea commodo consequat.
 
-**\<**
+**&lt;**
 
 **/p**
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **/div**
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **p**
 
-**\>**
+**&gt;**
 
 background-origin: content-box:
 
-**\<**
+**&lt;**
 
 **/p**
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **div**
 
@@ -7475,33 +7060,33 @@ class
 
 =
 
-\"example example3\"
+&quot;example example3&quot;
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **h**
 
 **2**
 
-**\>**
+**&gt;**
 
 Lorem Ipsum Dolor
 
-**\<**
+**&lt;**
 
 **/h**
 
 **2**
 
-**\>**
+**&gt;**
 
-> **\<p\>**Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed
+> **&lt;p&gt;**Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed
 > diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam
-> erat volutpat.**\</p\>** **\<p\>**Ut wisi enim ad minim veniam, quis
+> erat volutpat.**&lt;/p&gt;** **&lt;p&gt;**Ut wisi enim ad minim veniam, quis
 > nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex
-> ea commodo consequat.**\</p\> \</div\>**
+> ea commodo consequat.**&lt;/p&gt; &lt;/div&gt;**
 
 ## Section 5.11: Background Repeat
 
@@ -7523,7 +7108,7 @@ url
 
 (
 
-\"img.jpg\"
+&quot;img.jpg&quot;
 
 )
 
@@ -7541,7 +7126,7 @@ repeat-y
 
   **background-repeat**: repeat-y
 
-> Here\'s how a looks like:
+> Here&apos;s how a looks like:
 
 ![](./images/media/image14.jpg){width="7.48037510936133in"
 height="4.302722003499563in"}
@@ -7578,7 +7163,7 @@ px
 
 100
 
-\%
+&percnt;
 
 ;
 
@@ -7608,7 +7193,7 @@ black
 
 0
 
-\%
+&percnt;
 
 ,
 
@@ -7616,7 +7201,7 @@ white
 
 100
 
-\%
+&percnt;
 
 )
 
@@ -7626,7 +7211,7 @@ url
 
 (
 
-\'https://static.pexels.com/photos/54624/strawberry-fruit-red-sweet-54624-medium.jpeg\'
+&apos;https://static.pexels.com/photos/54624/strawberry-fruit-red-sweet-54624-medium.jpeg&apos;
 
 )
 
@@ -7642,7 +7227,7 @@ saturation
 
 }
 
-**\<**
+**&lt;**
 
 **div**
 
@@ -7650,23 +7235,23 @@ class
 
 =
 
-\"my-div\"
+&quot;my-div&quot;
 
-**\>**
+**&gt;**
 
 Lorem ipsum
 
-**\<**
+**&lt;**
 
 **/div**
 
-**\>**
+**&gt;**
 
 See result here:
 [[https://jsfiddle.net/MadalinaTn/y69d28Lb/]](https://jsfiddle.net/MadalinaTn/y69d28Lb/)
 
-> CSS Syntax: background-blend-mode: normal \| multiply \| screen \|
-> overlay \| darken \| lighten \| color-dodge \| saturation \| color \|
+> CSS Syntax: background-blend-mode: normal &vertbar; multiply &vertbar; screen &vertbar;
+> overlay &vertbar; darken &vertbar; lighten &vertbar; color-dodge &vertbar; saturation &vertbar; color &vertbar;
 > luminosity;
 
 ## Section 5.13: Background Color with Opacity
@@ -7676,7 +7261,7 @@ See result here:
 > will have to use RGBA colors. Following example will have a black
 > background with 0.6 opacity.
 
-*/\* Fallback for web browsers that don\'t support RGBa \*/*
+*/&ast; Fallback for web browsers that don&apos;t support RGBa &ast;/*
 
 **background-color**
 
@@ -7700,7 +7285,7 @@ rgb
 
 ;
 
-*/\* RGBa with 0.6 opacity \*/*
+*/&ast; RGBa with 0.6 opacity &ast;/*
 
 **background-color**
 
@@ -7728,7 +7313,7 @@ rgba
 
 ;
 
-*/\* For IE 5.5 - 7\*/*
+*/&ast; For IE 5.5 - 7&ast;/*
 
 **filter**
 
@@ -7764,17 +7349,17 @@ endColorstr
 
 ;
 
-*/\* For IE 8\*/*
+*/&ast; For IE 8&ast;/*
 
-\-
+&minus;
 
 ms-filter
 
 :
 
-\"progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000,
+&quot;progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000,
 
-endColorstr=#99000000)\"
+endColorstr=#99000000)&quot;
 
 ;
 
@@ -7784,7 +7369,7 @@ endColorstr=#99000000)\"
 
 > **HTML:**
 
-**\<**
+**&lt;**
 
 **div**
 
@@ -7792,11 +7377,11 @@ class
 
 =
 
-\"container\"
+&quot;container&quot;
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **img**
 
@@ -7804,15 +7389,15 @@ src
 
 =
 
-\"http://lorempixel.com/400/200\"
+&quot;http://lorempixel.com/400/200&quot;
 
-**/\>**
+**/&gt;**
 
-**\<**
+**&lt;**
 
 **/div**
 
-**\>**
+**&gt;**
 
 > **CSS:**
 
@@ -7834,7 +7419,7 @@ body
 
 100
 
-\%
+&percnt;
 
 ;
 
@@ -7860,7 +7445,7 @@ center
 
 ;
 
-*/\* horizontal center \*/*
+*/&ast; horizontal center &ast;/*
 
 }
 
@@ -7876,13 +7461,13 @@ center
 
 ;
 
-*/\* vertical center \*/*
+*/&ast; vertical center &ast;/*
 
 }
 
 [[View Result]](https://jsfiddle.net/aLu05kjy/1/) **HTML:**
 
-**\<**
+**&lt;**
 
 **img**
 
@@ -7890,9 +7475,9 @@ src
 
 =
 
-\"http://lorempixel.com/400/200\"
+&quot;http://lorempixel.com/400/200&quot;
 
-**/\>**
+**/&gt;**
 
 > **CSS:**
 
@@ -7910,7 +7495,7 @@ body
 
 100
 
-\%
+&percnt;
 
 ;
 
@@ -7936,7 +7521,7 @@ center
 
 ;
 
-*/\* horizontal center \*/*
+*/&ast; horizontal center &ast;/*
 
 **align-items**
 
@@ -7946,7 +7531,7 @@ center
 
 ;
 
-*/\* vertical center \*/*
+*/&ast; vertical center &ast;/*
 
 }
 
@@ -7976,7 +7561,7 @@ center
 
 ## Section 6.2: Using CSS transform
 
-> CSS transforms are based on the size of the elements so if you don\'t
+> CSS transforms are based on the size of the elements so if you don&apos;t
 > know how tall or wide your element is, you can position it absolutely
 > 50% from the top and left of a relative container and translate it by
 > 50% left and upwards to center it vertically and horizontally.
@@ -7989,7 +7574,7 @@ center
 >
 > **HTML**
 
-**\<**
+**&lt;**
 
 **div**
 
@@ -7997,11 +7582,11 @@ class
 
 =
 
-\"container\"
+&quot;container&quot;
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **div**
 
@@ -8009,21 +7594,21 @@ class
 
 =
 
-\"element\"
+&quot;element&quot;
 
-**\>**
+**&gt;**
 
-**\<**
-
-**/div**
-
-**\>**
-
-**\<**
+**&lt;**
 
 **/div**
 
-**\>**
+**&gt;**
+
+**&lt;**
+
+**/div**
+
+**&gt;**
 
 > **CSS**
 
@@ -8059,7 +7644,7 @@ absolute
 
 50
 
-\%
+&percnt;
 
 ;
 
@@ -8069,7 +7654,7 @@ absolute
 
 50
 
-\%
+&percnt;
 
 ;
 
@@ -8083,13 +7668,13 @@ translate
 
 -50
 
-\%
+&percnt;
 
 ,
 
 -50
 
-\%
+&percnt;
 
 )
 
@@ -8103,16 +7688,16 @@ JSFiddle]](https://jsfiddle.net/webtiki/rz3p3ufs/)
 > **CROSS BROWSER COMPATIBILITY**
 >
 > The transform property needs prefixes to be supported by older
-> browsers. Prefixes are needed for Chrome\<=35, Safari\<=8, Opera\<=22,
-> Android Browser\<=4.4.4, and IE9. CSS transforms are not supported by
+> browsers. Prefixes are needed for Chrome&lt;=35, Safari&lt;=8, Opera&lt;=22,
+> Android Browser&lt;=4.4.4, and IE9. CSS transforms are not supported by
 > IE8 and older versions.
 >
 > Here is a common transform declaration for the previous example:
 >
-> -webkit-transform: translate(-50%, -50%); */\* Chrome, Safari, Opera,
-> Android \*/*
+> -webkit-transform: translate(-50%, -50%); */&ast; Chrome, Safari, Opera,
+> Android &ast;/*
 >
-> -ms-transform: translate(-50%, -50%); */\* IE 9 \*/* **transform**:
+> -ms-transform: translate(-50%, -50%); */&ast; IE 9 &ast;/* **transform**:
 > translate(-50%, -50%);
 >
 > For more information see
@@ -8153,7 +7738,7 @@ JSFiddle]](https://jsfiddle.net/webtiki/rz3p3ufs/)
 >
 > **HTML**
 
-**\<**
+**&lt;**
 
 **div**
 
@@ -8161,11 +7746,11 @@ class
 
 =
 
-\"containerDiv\"
+&quot;containerDiv&quot;
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **div**
 
@@ -8173,23 +7758,23 @@ id
 
 =
 
-\"centeredDiv\"
+&quot;centeredDiv&quot;
 
-**\>**
+**&gt;**
 
-**\<**
-
-**/div**
-
-**\>**
-
-**\<**
+**&lt;**
 
 **/div**
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
+
+**/div**
+
+**&gt;**
+
+**&lt;**
 
 **div**
 
@@ -8197,11 +7782,11 @@ class
 
 =
 
-\"containerDiv\"
+&quot;containerDiv&quot;
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **p**
 
@@ -8209,25 +7794,25 @@ id
 
 =
 
-\"centeredParagraph\"
+&quot;centeredParagraph&quot;
 
-**\>**
+**&gt;**
 
 This is a centered paragraph.
 
-**\<**
+**&lt;**
 
 **/p**
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **/div**
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **div**
 
@@ -8235,11 +7820,11 @@ class
 
 =
 
-\"containerDiv\"
+&quot;containerDiv&quot;
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **img**
 
@@ -8247,25 +7832,25 @@ id
 
 =
 
-\"centeredImage\"
+&quot;centeredImage&quot;
 
 src
 
 =
 
-\"https://i.kinja-img.com/gawker-media/image/upload/s\--c7Q9b4Eh\--/c_scale,fl_progressive,q_80,w\_
+&quot;https://i.kinja-img.com/gawker-media/image/upload/s&minus;-c7Q9b4Eh&minus;-/c_scale,fl_progressive,q_80,w&lowbar;
 
 800
 
-/qqyvc3bkpyl3mfhr8all.jpg\"
+/qqyvc3bkpyl3mfhr8all.jpg&quot;
 
-**/\>**
+**/&gt;**
 
-**\<**
+**&lt;**
 
 **/div**
 
-**\>**
+**&gt;**
 
 > **CSS**
 
@@ -8279,7 +7864,7 @@ src
 
 100
 
-\%
+&percnt;
 
 ;
 
@@ -8434,19 +8019,19 @@ auto;]](https://jsfiddle.net/xf1ze3v9/)
 >
 > **HTML**
 
-**\<**
+**&lt;**
 
 **p**
 
-**\>**
+**&gt;**
 
 Lorem ipsum
 
-**\<**
+**&lt;**
 
 **/p**
 
-**\>**
+**&gt;**
 
 > **CSS**
 
@@ -8472,7 +8057,7 @@ center
 
 ## Section 6.5: Using position: absolute
 
-> *Working in old browsers (IE \>= 8)*
+> *Working in old browsers (IE &gt;= 8)*
 >
 > Automatic margins, paired with values of zero for the left and right
 > or top and bottom offsets, will center an absolutely positioned
@@ -8482,7 +8067,7 @@ center
 
 > **HTML**
 
-**\<**
+**&lt;**
 
 **div**
 
@@ -8490,11 +8075,11 @@ class
 
 =
 
-\"parent\"
+&quot;parent&quot;
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **img**
 
@@ -8502,21 +8087,21 @@ class
 
 =
 
-\"center\"
+&quot;center&quot;
 
 src
 
 =
 
-\"http://lorempixel.com/400/200/\"
+&quot;http://lorempixel.com/400/200/&quot;
 
-**/\>**
+**/&gt;**
 
-**\<**
+**&lt;**
 
 **/div**
 
-**\>**
+**&gt;**
 
 > **CSS**
 
@@ -8598,7 +8183,7 @@ auto
 
 }
 
-> Elements that don\'t have their own implicit width and height like
+> Elements that don&apos;t have their own implicit width and height like
 > images do, will need those values defined.
 
 Other resources: [[Absolute Centering in
@@ -8668,9 +8253,9 @@ calc
 
 50
 
-\%
+&percnt;
 
-\-
+&minus;
 
 50
 
@@ -8684,7 +8269,7 @@ px
 
 ;
 
-*/\* height divided by 2\*/*
+*/&ast; height divided by 2&ast;/*
 
 **left**
 
@@ -8696,9 +8281,9 @@ calc
 
 50
 
-\%
+&percnt;
 
-\-
+&minus;
 
 50
 
@@ -8712,13 +8297,13 @@ px
 
 ;
 
-*/\* width divided by 2\*/*
+*/&ast; width divided by 2&ast;/*
 
 }
 
 > **HTML**
 
-**\<**
+**&lt;**
 
 **div**
 
@@ -8726,15 +8311,15 @@ class
 
 =
 
-\"center\"
+&quot;center&quot;
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **/div**
 
-**\>**
+**&gt;**
 
 ## Section 6.7: Using line-height
 
@@ -8769,13 +8354,13 @@ px
 
 }
 
-  **\<input** **/\>**
+  **&lt;input** **/&gt;**
 
 
-> That\'s quite ugly, but can be useful inside an element. The
+> That&apos;s quite ugly, but can be useful inside an element. The
 > line-height property works only when the text to be centered spans a
 > single line. If the text wraps into multiple lines, the resulting
-> output won\'t be centered.
+> output won&apos;t be centered.
 
 ## Section 6.8: Vertical align anything with 3 lines of code
 
@@ -8808,7 +8393,7 @@ relative
 
 50
 
-\%
+&percnt;
 
 ;
 
@@ -8822,7 +8407,7 @@ translateY
 
 -50
 
-\%
+&percnt;
 
 )
 
@@ -8832,7 +8417,7 @@ translateY
 
 > **HTML**
 
-**\<**
+**&lt;**
 
 **div**
 
@@ -8840,17 +8425,17 @@ class
 
 =
 
-\"vertical\"
+&quot;vertical&quot;
 
-**\>**
+**&gt;**
 
 Vertical aligned text!
 
-**\<**
+**&lt;**
 
 **/div**
 
-**\>**
+**&gt;**
 
 ## Section 6.9: Centering in relation to another item
 
@@ -8861,7 +8446,7 @@ Vertical aligned text!
 >
 > **HTML**
 
-**\<**
+**&lt;**
 
 **div**
 
@@ -8869,23 +8454,11 @@ class
 
 =
 
-\"content\"
+&quot;content&quot;
 
-**\>**
+**&gt;**
 
-**\<**
-
-**div**
-
-class
-
-=
-
-\"position-container\"
-
-**\>**
-
-**\<**
+**&lt;**
 
 **div**
 
@@ -8893,11 +8466,23 @@ class
 
 =
 
-\"thumb\"
+&quot;position-container&quot;
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
+
+**div**
+
+class
+
+=
+
+&quot;thumb&quot;
+
+**&gt;**
+
+**&lt;**
 
 **img**
 
@@ -8905,17 +8490,17 @@ src
 
 =
 
-\"http://lorempixel.com/400/200/\"
+&quot;http://lorempixel.com/400/200/&quot;
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **/div**
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **div**
 
@@ -8923,11 +8508,11 @@ class
 
 =
 
-\"details\"
+&quot;details&quot;
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **p**
 
@@ -8935,19 +8520,19 @@ class
 
 =
 
-\"banner-title\"
+&quot;banner-title&quot;
 
-**\>**
+**&gt;**
 
 text 1
 
-**\<**
+**&lt;**
 
 **/p**
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **p**
 
@@ -8955,21 +8540,21 @@ class
 
 =
 
-\"banner-text\"
+&quot;banner-text&quot;
 
-**\>**
+**&gt;**
 
 content content content content content content content content
 
 content content content content content content
 
-**\<**
+**&lt;**
 
 **/p**
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **button**
 
@@ -8977,41 +8562,41 @@ class
 
 =
 
-\"btn\"
+&quot;btn&quot;
 
-**\>**
+**&gt;**
 
 button
 
-**\<**
+**&lt;**
 
 **/button**
 
-**\>**
+**&gt;**
 
-**\<**
-
-**/div**
-
-**\>**
-
-**\<**
+**&lt;**
 
 **/div**
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **/div**
 
-**\>**
+**&gt;**
+
+**&lt;**
+
+**/div**
+
+**&gt;**
 
 > **CSS**
 
 .content
 
-\*
+&ast;
 
 {
 
@@ -9069,7 +8654,7 @@ middle
 
 33.333333
 
-\%
+&percnt;
 
 ;
 
@@ -9115,7 +8700,7 @@ center
 
 100
 
-\%
+&percnt;
 
 ;
 
@@ -9135,7 +8720,7 @@ img
 
 100
 
-\%
+&percnt;
 
 ;
 
@@ -9150,7 +8735,7 @@ img
   **display**                         :     table
 
 
-  **width**   :   \....   and    **display**   :   table-cell      ,   **vertical-align**
+  **width**   :   &period;...   and    **display**   :   table-cell      ,   **vertical-align**
 
 
 > The .position-container must have .
@@ -9167,21 +8752,21 @@ img
 > The image (if you have an image) inside .thumb should have , but it is
 > not necessary if you have correct proportions.
 
-## Section 6.10: Ghost element technique (Michał Czernow\'s hack)
+## Section 6.10: Ghost element technique (Michał Czernow&apos;s hack)
 
-> This technique works even when the container\'s dimensions are
+> This technique works even when the container&apos;s dimensions are
 > unknown.
 
   **vertical-align**
 
-> Set up a \"ghost\" element inside the container to be centered that is
+> Set up a &quot;ghost&quot; element inside the container to be centered that is
 > 100% height, then use :
 >
 > middle on both that and the element to be centered.
 >
 > **CSS**
 
-*/\* This parent can be any width and height \*/*
+*/&ast; This parent can be any width and height &ast;/*
 
 .block
 
@@ -9195,8 +8780,8 @@ center
 
 ;
 
-*/\* May want to do this if there is risk the container may be narrower
-than the element inside \*/*
+*/&ast; May want to do this if there is risk the container may be narrower
+than the element inside &ast;/*
 
 **white-space**
 
@@ -9208,7 +8793,7 @@ nowrap
 
 }
 
-*/\* The ghost element \*/*
+*/&ast; The ghost element &ast;/*
 
 .block
 
@@ -9222,7 +8807,7 @@ before
 
 :
 
-\'\'
+&apos;&apos;
 
 ;
 
@@ -9240,7 +8825,7 @@ inline-block
 
 100
 
-\%
+&percnt;
 
 ;
 
@@ -9252,7 +8837,7 @@ middle
 
 ;
 
-*/\* There is a gap between ghost element and .centered,*
+*/&ast; There is a gap between ghost element and .centered,*
 
 *caused by space character rendered. Could be eliminated by*
 
@@ -9260,7 +8845,7 @@ middle
 
 *or by zeroing font-size in .parent and resetting it back*
 
-*(probably to 1rem) in .centered. \*/*
+*(probably to 1rem) in .centered. &ast;/*
 
 **margin-right**
 
@@ -9274,8 +8859,8 @@ em
 
 }
 
-*/\* The element to be centered, can also be of any width and height
-\*/*
+*/&ast; The element to be centered, can also be of any width and height
+&ast;/*
 
 .centered
 
@@ -9315,13 +8900,13 @@ normal
 
 ;
 
-*/\* Resetting inherited nowrap behavior \*/*
+*/&ast; Resetting inherited nowrap behavior &ast;/*
 
 }
 
 > **HTML**
 
-**\<**
+**&lt;**
 
 **div**
 
@@ -9329,11 +8914,11 @@ class
 
 =
 
-\"block\"
+&quot;block&quot;
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **div**
 
@@ -9341,21 +8926,21 @@ class
 
 =
 
-\"centered\"
+&quot;centered&quot;
 
-**\>**
+**&gt;**
 
-**\<**
-
-**/div**
-
-**\>**
-
-**\<**
+**&lt;**
 
 **/div**
 
-**\>**
+**&gt;**
+
+**&lt;**
+
+**/div**
+
+**&gt;**
 
 ## Section 6.11: Centering vertically and horizontally without worrying about height or width
 
@@ -9392,7 +8977,7 @@ class
 >
 > **HTML**
 
-**\<**
+**&lt;**
 
 **div**
 
@@ -9400,23 +8985,11 @@ class
 
 =
 
-\"outer-container\"
+&quot;outer-container&quot;
 
-**\>**
+**&gt;**
 
-**\<**
-
-**div**
-
-class
-
-=
-
-\"inner-container\"
-
-**\>**
-
-**\<**
+**&lt;**
 
 **div**
 
@@ -9424,29 +8997,41 @@ class
 
 =
 
-\"centered-content\"
+&quot;inner-container&quot;
 
-**\>**
+**&gt;**
+
+**&lt;**
+
+**div**
+
+class
+
+=
+
+&quot;centered-content&quot;
+
+**&gt;**
 
 You can put anything here!
 
-**\<**
+**&lt;**
 
 **/div**
 
-**\>**
+**&gt;**
 
-**\<**
-
-**/div**
-
-**\>**
-
-**\<**
+**&lt;**
 
 **/div**
 
-**\>**
+**&gt;**
+
+**&lt;**
+
+**/div**
+
+**&gt;**
 
 > **CSS**
 
@@ -9490,11 +9075,11 @@ table
 
 100
 
-\%
+&percnt;
 
 ;
 
-*/\* This could be ANY width \*/*
+*/&ast; This could be ANY width &ast;/*
 
 **height**
 
@@ -9502,11 +9087,11 @@ table
 
 100
 
-\%
+&percnt;
 
 ;
 
-*/\* This could be ANY height \*/*
+*/&ast; This could be ANY height &ast;/*
 
 **background**
 
@@ -9609,7 +9194,7 @@ Fiddle]**](http://jsfiddle.net/WXLsY/621/)!
 
 > **HTML**
 
-**\<**
+**&lt;**
 
 **div**
 
@@ -9617,11 +9202,11 @@ class
 
 =
 
-\"wrap\"
+&quot;wrap&quot;
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **img**
 
@@ -9629,15 +9214,15 @@ src
 
 =
 
-\"http://lorempixel.com/400/200/\"
+&quot;http://lorempixel.com/400/200/&quot;
 
-**/\>**
+**/&gt;**
 
-**\<**
+**&lt;**
 
 **/div**
 
-**\>**
+**&gt;**
 
 > **CSS**
 
@@ -9655,7 +9240,7 @@ px
 
 ;
 
-*/\* max image height \*/*
+*/&ast; max image height &ast;/*
 
 **width**
 
@@ -9703,7 +9288,7 @@ before
 
 :
 
-\"\"
+&quot;&quot;
 
 ;
 
@@ -9721,7 +9306,7 @@ inline-block
 
 100
 
-\%
+&percnt;
 
 ;
 
@@ -9762,12 +9347,12 @@ middle
 ## Section 6.13: Centering with fixed size
 
 > If the size of your content is fixed, you can use absolute positioning
-> to 50% with margin that reduces half of your content\'s width and
+> to 50% with margin that reduces half of your content&apos;s width and
 > height:
 >
 > **HTML**
 
-**\<**
+**&lt;**
 
 **div**
 
@@ -9775,17 +9360,17 @@ class
 
 =
 
-\"center\"
+&quot;center&quot;
 
-**\>**
+**&gt;**
 
 Center vertically and horizontally
 
-**\<**
+**&lt;**
 
 **/div**
 
-**\>**
+**&gt;**
 
 > **CSS**
 
@@ -9815,7 +9400,7 @@ absolute
 
 50
 
-\%
+&percnt;
 
 ;
 
@@ -9839,7 +9424,7 @@ px
 
 ;
 
-*/\* width \* -0.5 \*/*
+*/&ast; width &ast; -0.5 &ast;/*
 
 **top**
 
@@ -9847,7 +9432,7 @@ px
 
 50
 
-\%
+&percnt;
 
 ;
 
@@ -9871,18 +9456,18 @@ px
 
 ;
 
-*/\* height \* -0.5 \*/*
+*/&ast; height &ast; -0.5 &ast;/*
 
 }
 
 > **Horizontal centering with only fixed width**
 >
-> You can center the element horizontally even if you don\'t know the
+> You can center the element horizontally even if you don&apos;t know the
 > height of the content:
 >
 > **HTML**
 
-**\<**
+**&lt;**
 
 **div**
 
@@ -9890,17 +9475,17 @@ class
 
 =
 
-\"center\"
+&quot;center&quot;
 
-**\>**
+**&gt;**
 
 Center only horizontally
 
-**\<**
+**&lt;**
 
 **/div**
 
-**\>**
+**&gt;**
 
 > **CSS**
 
@@ -9930,7 +9515,7 @@ absolute
 
 50
 
-\%
+&percnt;
 
 ;
 
@@ -9954,18 +9539,18 @@ px
 
 ;
 
-*/\* width \* -0.5 \*/*
+*/&ast; width &ast; -0.5 &ast;/*
 
 }
 
 > **Vertical centering with fixed height**
 >
-> You can center the element vertically if you know the element\'s
+> You can center the element vertically if you know the element&apos;s
 > height:
 >
 > **HTML**
 
-**\<**
+**&lt;**
 
 **div**
 
@@ -9973,17 +9558,17 @@ class
 
 =
 
-\"center\"
+&quot;center&quot;
 
-**\>**
+**&gt;**
 
 Center only vertically
 
-**\<**
+**&lt;**
 
 **/div**
 
-**\>**
+**&gt;**
 
 > **CSS**
 
@@ -10013,7 +9598,7 @@ absolute
 
 50
 
-\%
+&percnt;
 
 ;
 
@@ -10037,13 +9622,13 @@ px
 
 ;
 
-*/\* width \* -0.5 \*/*
+*/&ast; width &ast; -0.5 &ast;/*
 
 }
 
 ## Section 6.14: Vertically align dynamic height elements
 
-> Applying css intuitively doesn\'t produce the desired results because
+> Applying css intuitively doesn&apos;t produce the desired results because
 
   **vertical-align**:middle
 
@@ -10052,7 +9637,7 @@ px
   **margin-top**:-50%
 
 
-> [***[isn\'t]*** [applicable to block-level
+> [***[isn&apos;t]*** [applicable to block-level
 > elements]](http://www.w3.org/TR/CSS21/visudet.html#propdef-vertical-align)
 > [[used values would compute as]
 > ***[zero]***](http://www.w3.org/TR/CSS2/visudet.html#Computing_heights_and_margins)
@@ -10065,7 +9650,7 @@ px
 >
 > **HTML**
 
-**\<**
+**&lt;**
 
 **div**
 
@@ -10073,23 +9658,11 @@ class
 
 =
 
-\"vcenter\--container\"
+&quot;vcenter&minus;-container&quot;
 
-**\>**
+**&gt;**
 
-**\<**
-
-**div**
-
-class
-
-=
-
-\"vcenter\--helper\"
-
-**\>**
-
-**\<**
+**&lt;**
 
 **div**
 
@@ -10097,39 +9670,51 @@ class
 
 =
 
-\"vcenter\--content\"
+&quot;vcenter&minus;-helper&quot;
 
-**\>**
+**&gt;**
 
-*\<!\--*
+**&lt;**
+
+**div**
+
+class
+
+=
+
+&quot;vcenter&minus;-content&quot;
+
+**&gt;**
+
+*&lt;!&minus;-*
 
 *stuff*
 
-*\--\>*
+*&minus;-&gt;*
 
-**\<**
-
-**/div**
-
-**\>**
-
-**\<**
+**&lt;**
 
 **/div**
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **/div**
 
-**\>**
+**&gt;**
+
+**&lt;**
+
+**/div**
+
+**&gt;**
 
 > **CSS**
 
 .vcenter
 
-\--
+&minus;-
 
 container
 
@@ -10149,7 +9734,7 @@ table
 
 100
 
-\%
+&percnt;
 
 ;
 
@@ -10175,7 +9760,7 @@ hidden
 
 100
 
-\%
+&percnt;
 
 ;
 
@@ -10183,7 +9768,7 @@ hidden
 
 .vcenter
 
-\--
+&minus;-
 
 helper
 
@@ -10209,7 +9794,7 @@ middle
 
 .vcenter
 
-\--
+&minus;-
 
 content
 
@@ -10251,7 +9836,7 @@ This approach
 >
 > **HTML**
 
-**\<**
+**&lt;**
 
 **div**
 
@@ -10259,23 +9844,11 @@ class
 
 =
 
-\"wrapper\"
+&quot;wrapper&quot;
 
-**\>**
+**&gt;**
 
-**\<**
-
-**div**
-
-class
-
-=
-
-\"parent\"
-
-**\>**
-
-**\<**
+**&lt;**
 
 **div**
 
@@ -10283,27 +9856,39 @@ class
 
 =
 
-\"child\"
+&quot;parent&quot;
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
+
+**div**
+
+class
+
+=
+
+&quot;child&quot;
+
+**&gt;**
+
+**&lt;**
 
 **/div**
 
-**\>**
+**&gt;**
 
-**\<**
-
-**/div**
-
-**\>**
-
-**\<**
+**&lt;**
 
 **/div**
 
-**\>**
+**&gt;**
+
+**&lt;**
+
+**/div**
+
+**&gt;**
 
 > **CSS**
 
@@ -10473,7 +10058,7 @@ Draft]](https://www.w3.org/TR/CSS22/box.html#mpb-examples)*
 > defines a *box.*
 >
 > The innermost rectangle is the **content box**. The width and height
-> of this depends on the element\'s rendered content (text, images and
+> of this depends on the element&apos;s rendered content (text, images and
 > any child elements it may have).
 >
 > Next is the **padding box**, as defined by the padding property. If
@@ -10534,31 +10119,31 @@ px
 ![](./images/media/image17.jpg){width="1.8229166666666667in"
 height="1.5416666666666667in"}
 
-> *Screenshot of Google Chrome\'s Element Styles panel*
+> *Screenshot of Google Chrome&apos;s Element Styles panel*
 >
 > As there is no content, the content region (the blue box in the
 > middle) has no height or width (0px by 0px). The padding box by
 > default is the same size as the content box, plus the 20px width on
-> all four edges we\'re defining above with the padding property (40px
+> all four edges we&apos;re defining above with the padding property (40px
 > by 40px).
 >
 > The border box is the same size as the padding box, plus the 5px width
-> we\'re defining above with the border property (50px by 50px).
+> we&apos;re defining above with the border property (50px by 50px).
 >
 > Finally the margin box is the same size as the border box, plus the
-> 50px width we\'re defining above with the margin property (giving our
+> 50px width we&apos;re defining above with the margin property (giving our
 > element a total size of 150px by 150px).
 >
 > Now lets give our element a sibling with the same style. The browser
 > looks at the Box Model of both elements to work out where in relation
-> to the previous element\'s content the new element should be
+> to the previous element&apos;s content the new element should be
 > positioned:
 
 ![](./images/media/image18.jpg){width="3.6354166666666665in"
 height="1.5416666666666667in"}
 
 > The content of each of element is separated by a 150px gap, but the
-> two elements\' boxes touch each other.
+> two elements&apos; boxes touch each other.
 >
 > If we then modify our first element to have no right margin, the right
 > margin edge would be in the same position as the right border edge,
@@ -10587,7 +10172,7 @@ textarea
 
 100
 
-\%
+&percnt;
 
 ;
 
@@ -10609,7 +10194,7 @@ content-box
 
 ;
 
-*/\* default value \*/*
+*/&ast; default value &ast;/*
 
 }
 
@@ -10650,7 +10235,7 @@ textarea
 
 100
 
-\%
+&percnt;
 
 ;
 
@@ -10691,15 +10276,15 @@ border-box
 
 }
 
-\*,
+&ast;,
 
-\*:
+&ast;:
 
 before
 
 ,
 
-\*:
+&ast;:
 
 after
 
@@ -10717,7 +10302,7 @@ inherit
 
   **box-sizing**                    :   border-box
 
-> In this coding ; is not directly applied to \*, so you can easily
+> In this coding ; is not directly applied to &ast;, so you can easily
 > overwrite this property on individual elements.
 
 # Chapter 8: Margins
@@ -10756,33 +10341,33 @@ px
 
 }
 
-**\<**
+**&lt;**
 
 **div**
 
-**\>**
+**&gt;**
 
 some content
 
-**\<**
+**&lt;**
 
 **/div**
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **div**
 
-**\>**
+**&gt;**
 
 some more content
 
-**\<**
+**&lt;**
 
 **/div**
 
-**\>**
+**&gt;**
 
 > They will be 10px apart since vertical margins collapse over one and
 > other. (The spacing will not be the sum of two margins.)
@@ -10807,35 +10392,35 @@ px
 
 }
 
-**\<**
+**&lt;**
 
 **span**
 
-**\>**
+**&gt;**
 
 some
 
-**\<**
+**&lt;**
 
 **/span**
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **span**
 
-**\>**
+**&gt;**
 
 content
 
-**\<**
+**&lt;**
 
 **/span**
 
-**\>**
+**&gt;**
 
-> They will be 20px apart since horizontal margins don\'t collapse over
+> They will be 20px apart since horizontal margins don&apos;t collapse over
 > one and other. (The spacing will be the sum of two margins.)
 >
 > **Overlapping with different sizes**
@@ -10872,7 +10457,7 @@ px
 
 }
 
-**\<**
+**&lt;**
 
 **div**
 
@@ -10880,19 +10465,19 @@ class
 
 =
 
-\"top\"
+&quot;top&quot;
 
-**\>**
+**&gt;**
 
 some content
 
-**\<**
+**&lt;**
 
 **/div**
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **div**
 
@@ -10900,17 +10485,17 @@ class
 
 =
 
-\"bottom\"
+&quot;bottom&quot;
 
-**\>**
+**&gt;**
 
 some more content
 
-**\<**
+**&lt;**
 
 **/div**
 
-**\>**
+**&gt;**
 
 > These elements will be spaced 15px apart vertically. The margins
 > overlap as much as they can, but the larger margin will determine the
@@ -10982,7 +10567,7 @@ px
 
 }
 
-**\<**
+**&lt;**
 
 **div**
 
@@ -10990,11 +10575,11 @@ class
 
 =
 
-\"outer-top\"
+&quot;outer-top&quot;
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **div**
 
@@ -11002,25 +10587,25 @@ class
 
 =
 
-\"inner-top\"
+&quot;inner-top&quot;
 
-**\>**
+**&gt;**
 
 some content
 
-**\<**
+**&lt;**
 
 **/div**
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **/div**
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **div**
 
@@ -11028,11 +10613,11 @@ class
 
 =
 
-\"outer-bottom\"
+&quot;outer-bottom&quot;
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **div**
 
@@ -11040,23 +10625,23 @@ class
 
 =
 
-\"inner-bottom\"
+&quot;inner-bottom&quot;
 
-**\>**
+**&gt;**
 
 some more content
 
-**\<**
+**&lt;**
 
 **/div**
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **/div**
 
-**\>**
+**&gt;**
 
 > What will be the spacing between the two texts? (hover to see answer)
 >
@@ -11091,56 +10676,56 @@ red
 > .outer-bottom touch each other, and are the only collapsed margins.
 > The remaining margins are separated by the borders. So we have 1px +
 >
-> 10px + 1px + 15px + 20px + 1px + 25px + 1px. (The 1px\'s are the
-> borders\...)
+> 10px + 1px + 15px + 20px + 1px + 25px + 1px. (The 1px&apos;s are the
+> borders&period;..)
 >
 > **Collapsing Margins Between Parent and Child Elements:**
 >
 > HTML:
 
-**\<**
+**&lt;**
 
 **h**
 
 **1**
 
-**\>**
+**&gt;**
 
 Title
 
-**\<**
+**&lt;**
 
 **/h**
 
 **1**
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **div**
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **p**
 
-**\>**
+**&gt;**
 
 Paragraph
 
-**\<**
+**&lt;**
 
 **/p**
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **/div**
 
-**\>**
+**&gt;**
 
 > CSS
 
@@ -11247,7 +10832,7 @@ px
 >
 > **HTML**
 
-**\<**
+**&lt;**
 
 **div**
 
@@ -11255,15 +10840,15 @@ id
 
 =
 
-\"myDiv\"
+&quot;myDiv&quot;
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **/div**
 
-**\>**
+**&gt;**
 
 > **CSS**
 
@@ -11327,21 +10912,21 @@ red
 
 :
 
-\<top
+&lt;top
 
-\>
+&gt;
 
-\<right
+&lt;right
 
-\>
+&gt;
 
-\<bottom
+&lt;bottom
 
-\>
+&gt;
 
-\<left
+&lt;left
 
-\>
+&gt;
 
 ;
 
@@ -11352,7 +10937,7 @@ red
 >
 > **HTML**
 
-**\<**
+**&lt;**
 
 **div**
 
@@ -11360,15 +10945,15 @@ id
 
 =
 
-\"myDiv\"
+&quot;myDiv&quot;
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **/div**
 
-**\>**
+**&gt;**
 
 > **CSS**
 
@@ -11442,9 +11027,9 @@ px
 
 ;
 
-*/\* 1px margin in all directions \*/*
+*/&ast; 1px margin in all directions &ast;/*
 
-*/\*equals to:\*/*
+*/&ast;equals to:&ast;/*
 
 **margin**
 
@@ -11460,7 +11045,7 @@ px
 
 ;
 
-*/\*equals to:\*/*
+*/&ast;equals to:&ast;/*
 
 **margin**
 
@@ -11480,7 +11065,7 @@ px
 
 ;
 
-*/\*equals to:\*/*
+*/&ast;equals to:&ast;/*
 
 **margin**
 
@@ -11526,9 +11111,9 @@ px
 
 ;
 
-*/\* 10px margin-top & bottom And 15px margin-right & left\*/*
+*/&ast; 10px margin-top & bottom And 15px margin-right & left&ast;/*
 
-*/\*equals to:\*/*
+*/&ast;equals to:&ast;/*
 
 **margin**
 
@@ -11552,7 +11137,7 @@ px
 
 ;
 
-*/\*equals to:\*/*
+*/&ast;equals to:&ast;/*
 
 **margin**
 
@@ -11572,8 +11157,8 @@ px
 
 ;
 
-*/\* margin left will be calculated from the margin right value (=15px)
-\*/*
+*/&ast; margin left will be calculated from the margin right value (=15px)
+&ast;/*
 
 }
 
@@ -11597,7 +11182,7 @@ px
 
 80
 
-\%
+&percnt;
 
 ;
 
@@ -11685,16 +11270,16 @@ px
 
 10
 
-\%
+&percnt;
 
 ;
 
-*/\* (parentWidth \* 10/100) =\> 50px \*/*
+*/&ast; (parentWidth &ast; 10/100) =&gt; 50px &ast;/*
 
 }
 
 > But that is not the case, when comes to margin-top and margin-bottom.
-> Both these properties, in percentages, aren\'t relative to the height
+> Both these properties, in percentages, aren&apos;t relative to the height
 > of the parent container but to the **width** of the parent container.
 >
 > So,
@@ -11755,11 +11340,11 @@ px
 
 10
 
-\%
+&percnt;
 
 ;
 
-*/\* (parentWidth \* 10/100) =\> 50px \*/*
+*/&ast; (parentWidth &ast; 10/100) =&gt; 50px &ast;/*
 
 **margin-top**
 
@@ -11767,11 +11352,11 @@ px
 
 20
 
-\%
+&percnt;
 
 ;
 
-*/\* (parentWidth \* 20/100) =\> 100px \*/*
+*/&ast; (parentWidth &ast; 20/100) =&gt; 100px &ast;/*
 
 }
 
@@ -11811,29 +11396,29 @@ px
 
 }
 
-\<
+&lt;
 
 div
 
-\>
+&gt;
 
-Base div\</div
+Base div&lt;/div
 
-\>
+&gt;
 
-\<
+&lt;
 
 div id
 
 =
 
-\"over\"
+&quot;over&quot;
 
-\>
+&gt;
 
-Overlapping div\</div
+Overlapping div&lt;/div
 
-\>
+&gt;
 
 # Chapter 9: Padding
 
@@ -11848,25 +11433,25 @@ Overlapping div\</div
 >
 > **Four values**:
 
-**\<**
+**&lt;**
 
 **style**
 
-**\>**
+**&gt;**
 
 .myDiv {
 
-padding: 25px 50px 75px 100px; /\* top right bottom left; \*/
+padding: 25px 50px 75px 100px; /&ast; top right bottom left; &ast;/
 
 }
 
-**\<**
+**&lt;**
 
 **/style**
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **div**
 
@@ -11874,39 +11459,39 @@ class
 
 =
 
-\"myDiv\"
+&quot;myDiv&quot;
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **/div**
 
-**\>**
+**&gt;**
 
 > **Three values**:
 
-**\<**
+**&lt;**
 
 **style**
 
-**\>**
+**&gt;**
 
 .myDiv
 
 {
 
-padding: 25px 50px 75px; /\* top left/right bottom \*/
+padding: 25px 50px 75px; /&ast; top left/right bottom &ast;/
 
 }
 
-**\<**
+**&lt;**
 
 **/style**
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **div**
 
@@ -11914,39 +11499,39 @@ class
 
 =
 
-\"myDiv\"
+&quot;myDiv&quot;
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **/div**
 
-**\>**
+**&gt;**
 
 > **Two values**:
 
-**\<**
+**&lt;**
 
 **style**
 
-**\>**
+**&gt;**
 
 .myDiv
 
 {
 
-padding: 25px 50px; /\* top/bottom left/right \*/
+padding: 25px 50px; /&ast; top/bottom left/right &ast;/
 
 }
 
-**\<**
+**&lt;**
 
 **/style**
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **div**
 
@@ -11954,39 +11539,39 @@ class
 
 =
 
-\"myDiv\"
+&quot;myDiv&quot;
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **/div**
 
-**\>**
+**&gt;**
 
 > **One value**:
 
-**\<**
+**&lt;**
 
 **style**
 
-**\>**
+**&gt;**
 
 .myDiv
 
 {
 
-padding: 25px; /\* top/right/bottom/left \*/
+padding: 25px; /&ast; top/right/bottom/left &ast;/
 
 }
 
-**\<**
+**&lt;**
 
 **/style**
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **div**
 
@@ -11994,15 +11579,15 @@ class
 
 =
 
-\"myDiv\"
+&quot;myDiv&quot;
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **/div**
 
-**\>**
+**&gt;**
 
 ## Section 9.2: Padding on a given side
 
@@ -12016,11 +11601,11 @@ class
 >
 > The following code would add a padding of 5px to the top of the div:
 
-**\<**
+**&lt;**
 
 **style**
 
-**\>**
+**&gt;**
 
 .myClass {
 
@@ -12028,13 +11613,13 @@ padding-top: 5px;
 
 }
 
-**\<**
+**&lt;**
 
 **/style**
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **div**
 
@@ -12042,15 +11627,15 @@ class
 
 =
 
-\"myClass\"
+&quot;myClass&quot;
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **/div**
 
-**\>**
+**&gt;**
 
 # Chapter 10: Border
 
@@ -12080,7 +11665,7 @@ px
 
 5
 
-\%
+&percnt;
 
 /
 
@@ -12104,7 +11689,7 @@ em
 
 > The 10px is the horizontal radius of the top-left-and-bottom-right.
 > And the 5% is the horizontal radius of the topright-and-bottom-left.
-> The other four values after \'/\' are the vertical radii for top-left,
+> The other four values after &apos;/&apos; are the vertical radii for top-left,
 > top-right, bottom-right and bottom-left.
 >
 > As with many CSS properties, shorthands can be used for any or all
@@ -12114,7 +11699,7 @@ em
 >
 > HTML:
 
-**\<**
+**&lt;**
 
 **div**
 
@@ -12122,15 +11707,15 @@ class
 
 =
 
-\'box\'
+&apos;box&apos;
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **/div**
 
-**\>**
+**&gt;**
 
 > CSS:
 
@@ -12251,7 +11836,7 @@ px
 
 50
 
-\%
+&percnt;
 
 ;
 
@@ -12372,7 +11957,7 @@ px
 
 ## Section 10.2: border-style
 
-> The border-style property sets the style of an element\'s border. This
+> The border-style property sets the style of an element&apos;s border. This
 > property can have from one to four values (for every side of the
 > element one value.) Examples:
 
@@ -12401,9 +11986,9 @@ dashed
 > border-style can also have the values none and hidden. They have the
 > same effect, except hidden works for
 
-  **\<table**      **\>** elements. In a                  **\<table**
+  **&lt;table**      **&gt;** elements. In a                  **&lt;table**
 
-> border conflict resolution for **\>** with multiple borders, none has
+> border conflict resolution for **&gt;** with multiple borders, none has
 > the lowest priority
 >
 > (meaning in a conflict, the border would show), and hidden has the
@@ -12625,7 +12210,7 @@ before
 
 :
 
-\" \"
+&quot; &quot;
 
 ;
 
@@ -12655,7 +12240,7 @@ blue
 
 :
 
-\-
+&minus;
 
 1
 
@@ -12796,7 +12381,7 @@ separate
 
 ;
 
-*/\* default \*/*
+*/&ast; default &ast;/*
 
 **border-spacing**
 
@@ -12808,7 +12393,7 @@ px
 
 ;
 
-*/\* Only works if border-collapse is separate \*/*
+*/&ast; Only works if border-collapse is separate &ast;/*
 
 }
 
@@ -12832,7 +12417,7 @@ px
 > Consider the following example wheras border.png is a image of 90x90
 > pixels:
 
-  **border-image**     :   url    (   \"border.png\"       )   30 stretch
+  **border-image**     :   url    (   &quot;border.png&quot;       )   30 stretch
 
 > ;
 >
@@ -12868,7 +12453,7 @@ red
 
 20
 
-\%
+&percnt;
 
 ,
 
@@ -12876,7 +12461,7 @@ green
 
 20
 
-\%
+&percnt;
 
 ,
 
@@ -12884,7 +12469,7 @@ green
 
 40
 
-\%
+&percnt;
 
 ,
 
@@ -12892,7 +12477,7 @@ blue
 
 40
 
-\%
+&percnt;
 
 ,
 
@@ -12900,7 +12485,7 @@ blue
 
 60
 
-\%
+&percnt;
 
 ,
 
@@ -12908,7 +12493,7 @@ maroon
 
 60
 
-\%
+&percnt;
 
 ,
 
@@ -12916,7 +12501,7 @@ maroon
 
 80
 
-\%
+&percnt;
 
 ,
 
@@ -12924,13 +12509,13 @@ chocolate
 
 80
 
-\%
+&percnt;
 
 )
 
 ;
 
-*/\* gradient with required colors \*/*
+*/&ast; gradient with required colors &ast;/*
 
 **border-image-slice**
 
@@ -12944,7 +12529,7 @@ chocolate
 
 > **HTML**
 
-**\<**
+**&lt;**
 
 **div**
 
@@ -12952,17 +12537,17 @@ class
 
 =
 
-\'bordered\'
+&apos;bordered&apos;
 
-**\>**
+**&gt;**
 
 Border on all sides
 
-**\<**
+**&lt;**
 
 **/div**
 
-**\>**
+**&gt;**
 
 > The above example would produce a border that comprises of 5 different
 > colors. The colors are defined through a linear-gradient (you can find
@@ -12976,9 +12561,9 @@ height="1.4375in"}
 > (*Note: Additional properties were added to the element for
 > presentational purpose.*)
 >
-> You\'d have noticed that the left border has only a single color (the
+> You&apos;d have noticed that the left border has only a single color (the
 > start color of the gradient) while the right border also has only a
-> single color (the gradient\'s end color). This is because of the way
+> single color (the gradient&apos;s end color). This is because of the way
 > that border image property works. It is as though the gradient is
 > applied to the entire box and then the colors are masked from the
 > padding and content areas, thus making it look as though only the
@@ -12992,7 +12577,7 @@ height="1.4375in"}
 > definition. If the gradient is a gradient, the left border would be
 > the start color of the gradient and right border would be the end
 > color. If it was a to bottom gradient the top border would be the
-> gradient\'s start color and bottom border would be end color. Below is
+> gradient&apos;s start color and bottom border would be end color. Below is
 > the output of a 5 colored gradient.
 
 ![](./images/media/image29.jpg){width="3.4895833333333335in"
@@ -13025,25 +12610,25 @@ px
 
 ;
 
-> Note that, any element that has border-image property **won\'t respect
-> the** border-radius (that is the border won\'t curve). This is based
+> Note that, any element that has border-image property **won&apos;t respect
+> the** border-radius (that is the border won&apos;t curve). This is based
 > on the below statement in the spec:
 >
-> A box\'s backgrounds, but not its border-image, are clipped to the
+> A box&apos;s backgrounds, but not its border-image, are clipped to the
 > appropriate curve (as determined by 'background-clip').
 
-## Section 10.8: border-\[left\|right\|top\|bottom\]
+## Section 10.8: border-&lbrack;left&vertbar;right&vertbar;top&vertbar;bottom&rbrack;
 
-  border-           \[   left      \|   right        \|   top     \|   bottom
+  border-           &lbrack;   left      &vertbar;   right        &vertbar;   top     &vertbar;   bottom
 
 
-> The \] property is used to add a border to a specific side of an
+> The &rbrack; property is used to add a border to a specific side of an
 > element.
 >
 > For example if you wanted to add a border to the left side of an
 > element, you could do:
 
-\#
+&num;
 
 element
 
@@ -13283,7 +12868,7 @@ outset
 
 > **HTML**
 
-**\<**
+**&lt;**
 
 **p**
 
@@ -13291,19 +12876,19 @@ class
 
 =
 
-\"p1\"
+&quot;p1&quot;
 
-**\>**
+**&gt;**
 
 A dotted outline
 
-**\<**
+**&lt;**
 
 **/p**
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **p**
 
@@ -13311,19 +12896,19 @@ class
 
 =
 
-\"p2\"
+&quot;p2&quot;
 
-**\>**
+**&gt;**
 
 A dashed outline
 
 **/p**
 
-**\<**
+**&lt;**
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **p**
 
@@ -13331,19 +12916,19 @@ class
 
 =
 
-\"p3\"
+&quot;p3&quot;
 
-**\>**
+**&gt;**
 
 A solid outline
 
-**\<**
+**&lt;**
 
 **/p**
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **p**
 
@@ -13351,19 +12936,19 @@ class
 
 =
 
-\"p4\"
+&quot;p4&quot;
 
-**\>**
+**&gt;**
 
 A double outline
 
 **/p**
 
-**\<**
+**&lt;**
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **p**
 
@@ -13371,19 +12956,19 @@ class
 
 =
 
-\"p5\"
+&quot;p5&quot;
 
-**\>**
+**&gt;**
 
 A groove outline
 
 **/p**
 
-**\<**
+**&lt;**
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **p**
 
@@ -13391,19 +12976,19 @@ class
 
 =
 
-\"p6\"
+&quot;p6&quot;
 
-**\>**
+**&gt;**
 
 A ridge outline
 
 **/p**
 
-**\<**
+**&lt;**
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **p**
 
@@ -13411,19 +12996,19 @@ class
 
 =
 
-\"p7\"
+&quot;p7&quot;
 
-**\>**
+**&gt;**
 
 An inset outline
 
-**\<**
+**&lt;**
 
 **/p**
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **p**
 
@@ -13431,17 +13016,17 @@ class
 
 =
 
-\"p8\"
+&quot;p8&quot;
 
-**\>**
+**&gt;**
 
 An outset outline
 
-**\<**
+**&lt;**
 
 **/p**
 
-**\>**
+**&gt;**
 
 # Chapter 12: Overflow
 
@@ -13453,17 +13038,17 @@ An outset outline
   hidden      Hides the overflowing content, both scroll bars disappear
               and the page becomes fixed
 
-  auto        Same as scroll if content overflows, but doesn\'t add
+  auto        Same as scroll if content overflows, but doesn&apos;t add
               scroll bar if content fits
 
-  inherit     Inherit\'s the parent element\'s value for this property
+  inherit     Inherit&apos;s the parent element&apos;s value for this property
 
 ## Section 12.1: overflow-wrap
 
 > overflow-wrap tells a browser that it can break a line of text inside
 > a targeted element onto multiple lines in an otherwise unbreakable
 > place. Helpful in preventing an long string of text causing layout
-> problems due to overflowing it\'s container.
+> problems due to overflowing it&apos;s container.
 >
 > **CSS**
 
@@ -13527,7 +13112,7 @@ break-word
 
 > **HTML**
 
-**\<**
+**&lt;**
 
 **div**
 
@@ -13535,29 +13120,29 @@ id
 
 =
 
-\"div1\"
+&quot;div1&quot;
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **strong**
 
-**\>**
+**&gt;**
 
 #div1
 
-**\<**
+**&lt;**
 
 **/strong**
 
-**\>**
+**&gt;**
 
 :
 
 Small words are displayed normally, but a long word like
 
-**\<**
+**&lt;**
 
 **span**
 
@@ -13565,29 +13150,29 @@ style
 
 =
 
-\"red;\"
+&quot;red;&quot;
 
-**\>**
+**&gt;**
 
 supercalifragilisticexpialidocious
 
-**\<**
+**&lt;**
 
 **/span**
 
-**\>**
+**&gt;**
 
 is too long so it will overflow past the
 
 edge of the line-break
 
-**\<**
+**&lt;**
 
 **/div**
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **div**
 
@@ -13595,29 +13180,29 @@ id
 
 =
 
-\"div2\"
+&quot;div2&quot;
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **strong**
 
-**\>**
+**&gt;**
 
 #div2
 
-**\<**
+**&lt;**
 
 **/strong**
 
-**\>**
+**&gt;**
 
 :
 
 Small words are displayed normally, but a long word like
 
-**\<**
+**&lt;**
 
 **span**
 
@@ -13625,27 +13210,27 @@ style
 
 =
 
-\"red;\"
+&quot;red;&quot;
 
-**\>**
+**&gt;**
 
 supercalifragilisticexpialidocious
 
-**\<**
+**&lt;**
 
 **/span**
 
-**\>**
+**&gt;**
 
 will be split at the line break and continue
 
 on the next line.
 
-**\<**
+**&lt;**
 
 **/div**
 
-**\>**
+**&gt;**
 
 ![](./images/media/image32.jpg){width="7.48037510936133in"
 height="4.271902887139108in"}
@@ -13654,7 +13239,7 @@ height="4.271902887139108in"}
 
 > normal Lets a word overflow if it is longer than the line break-word
 > Will split a word into multiple lines, if necessary inherit Inherits
-> the parent element\'s value for this property
+> the parent element&apos;s value for this property
 
 ## Section 12.2: overflow-x and overflow-y
 
@@ -13665,7 +13250,7 @@ height="4.271902887139108in"}
 >
 > **HTML**
 
-**\<**
+**&lt;**
 
 **div**
 
@@ -13673,21 +13258,21 @@ id
 
 =
 
-\"div-x\"
+&quot;div-x&quot;
 
-**\>**
+**&gt;**
 
 If this div is too small to display its contents,
 
 the content to the left and right will be clipped.
 
-**\<**
+**&lt;**
 
 **/div**
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **div**
 
@@ -13695,19 +13280,19 @@ id
 
 =
 
-\"div-y\"
+&quot;div-y&quot;
 
-**\>**
+**&gt;**
 
 If this div is too small to display its contents,
 
 the content to the top and bottom will be clipped.
 
-**\<**
+**&lt;**
 
 **/div**
 
-**\>**
+**&gt;**
 
 > **CSS**
 
@@ -13769,20 +13354,20 @@ hidden
 
 > **HTML**
 
-**\<**
+**&lt;**
 
 **div**
 
-**\>**
+**&gt;**
 
 This div is too small to display its contents to display the effects of
 the overflow property.
 
-**\<**
+**&lt;**
 
 **/div**
 
-**\>**
+**&gt;**
 
 > **CSS**
 
@@ -13837,20 +13422,20 @@ height="1.1875in"}
 
 > **HTML**
 
-**\<**
+**&lt;**
 
 **div**
 
-**\>**
+**&gt;**
 
 Even if this div is too small to display its contents, the content is
 not clipped.
 
-**\<**
+**&lt;**
 
 **/div**
 
-**\>**
+**&gt;**
 
 > **CSS**
 
@@ -13940,13 +13525,13 @@ hidden
 
 ;
 
-*/\* creates block formatting context \*/*
+*/&ast; creates block formatting context &ast;/*
 
 }
 
 > **HTML**
 
-**\<**
+**&lt;**
 
 **img**
 
@@ -13954,50 +13539,50 @@ src
 
 =
 
-\"http://placehold.it/100x100\"
+&quot;http://placehold.it/100x100&quot;
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **div**
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **p**
 
-**\>**
+**&gt;**
 
 Lorem ipsum dolor sit amet, cum no paulo mollis pertinacia.
 
-**\<**
+**&lt;**
 
 **/p**
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **p**
 
-**\>**
+**&gt;**
 
 Ad case omnis nam, mutat deseruisse persequeris eos ad, in tollit
 debitis sea.
 
-**\<**
+**&lt;**
 
 **/p**
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **/div**
 
-**\>**
+**&gt;**
 
 > **Result**
 
@@ -14016,7 +13601,7 @@ height="3.7604166666666665in"}
 | mediatype   | (Optional) This is the type of media. Could be         |
 |             | anything in the range of all to screen.                |
 +-------------+--------------------------------------------------------+
-| not         | (Optional) Doesn\'t apply the CSS for this particular  |
+| not         | (Optional) Doesn&apos;t apply the CSS for this particular  |
 |             | media type and applies for everything else.            |
 +-------------+--------------------------------------------------------+
 | media       | Logic to identify use case for CSS. Options outlined   |
@@ -14039,7 +13624,7 @@ height="3.7604166666666665in"}
 |             | or a bitmap device.                                    |
 +-------------+--------------------------------------------------------+
 | height      | The height media feature describes the height of the   |
-|             | output device\'s rendering surface.                    |
+|             | output device&apos;s rendering surface.                    |
 +-------------+--------------------------------------------------------+
 | max-width   | CSS will not apply on a screen width wider than        |
 |             | specified.                                             |
@@ -14110,35 +13695,35 @@ height="3.7604166666666665in"}
 >
 > **General Structure of a Media Query**
 
-**\@media**
+**&commat;media**
 
-\[
+&lbrack;
 
-\...
+&period;..
 
-\]
+&rbrack;
 
 {
 
-*/\* One or more CSS rules to apply when the query is satisfied \*/*
+*/&ast; One or more CSS rules to apply when the query is satisfied &ast;/*
 
 }
 
 > **A Media Query containing a Media Type**
 
-**\@media**
+**&commat;media**
 
 print
 
 {
 
-*/\* One or more CSS rules to apply when the query is satisfied \*/*
+*/&ast; One or more CSS rules to apply when the query is satisfied &ast;/*
 
 }
 
 **A Media Query containing a Media Type and a Media Feature**
 
-**\@media**
+**&commat;media**
 
 screen and
 
@@ -14156,14 +13741,14 @@ px
 
 {
 
-*/\* One or more CSS rules to apply when the query is satisfied \*/*
+*/&ast; One or more CSS rules to apply when the query is satisfied &ast;/*
 
 }
 
 **A Media Query containing a Media Feature (and an implicit Media Type
-of \"all\")**
+of &quot;all&quot;)**
 
-**\@media**
+**&commat;media**
 
 (
 
@@ -14177,13 +13762,13 @@ portrait
 
 {
 
-*/\* One or more CSS rules to apply when the query is satisfied \*/*
+*/&ast; One or more CSS rules to apply when the query is satisfied &ast;/*
 
 }
 
 ## Section 13.2: Basic Example
 
-**\@media**
+**&commat;media**
 
 screen and
 
@@ -14222,7 +13807,7 @@ skyblue
 1.  The page must be viewed on a normal screen (not a printed page,
     projector, etc).
 
-2.  The width of the user\'s view port must be at least 720 pixels.
+2.  The width of the user&apos;s view port must be at least 720 pixels.
 
 > If these conditions are met, the styles inside the media query will be
 > active, and the background color of the page will be sky blue.
@@ -14233,19 +13818,19 @@ skyblue
 > Conversely, if the conditions are initially not met, the CSS will not
 > be applied until the specified conditions are met.
 >
-> In our example, if the user\'s view port width is initially greater
-> than 720 pixels, but the user shrinks the browser\'s width, the
+> In our example, if the user&apos;s view port width is initially greater
+> than 720 pixels, but the user shrinks the browser&apos;s width, the
 > background color will cease to be sky blue as soon as the user has
 > resized the view port to less than 720 pixels in width.
 
 ## Section 13.3: mediatype
 
-  **\@media** mediatype
+  **&commat;media** mediatype
 
 > Media queries have an optional mediatype parameter. This parameter is
-> placed directly after the \@media declaration (), for example:
+> placed directly after the &commat;media declaration (), for example:
 
-**\@media**
+**&commat;media**
 
 print
 
@@ -14276,7 +13861,7 @@ white
 > following code example will apply the style to every media type except
 > print.
 
-**\@media**
+**&commat;media**
 
 not
 
@@ -14303,7 +13888,7 @@ green
 > And the same way, for just showing it only on the screen, this can be
 > used:
 
-**\@media**
+**&commat;media**
 
 only screen
 
@@ -14333,7 +13918,7 @@ block
 > all Apply to all devices screen Default computers
 >
 > print Printers in general. Used to style print-versions of websites
-> handheld PDA\'s, cellphones and hand-held devices with a small screen
+> handheld PDA&apos;s, cellphones and hand-held devices with a small screen
 > projection For projected presentation, for example projectors
 
 aural Speech Systems
@@ -14346,9 +13931,9 @@ aural Speech Systems
 
 > Although this works only for WebKit based browsers, this is helpful:
 
-*/\* \-\-\-\-\-\-\-\-\-\-- Non-Retina Screens \-\-\-\-\-\-\-\-\-\-- \*/*
+*/&ast; &minus;&minus;&minus;&minus;&minus;&minus;&minus;&minus;&minus;&minus;- Non-Retina Screens &minus;&minus;&minus;&minus;&minus;&minus;&minus;&minus;&minus;&minus;- &ast;/*
 
-**\@media**
+**&commat;media**
 
 screen
 
@@ -14384,7 +13969,7 @@ and
 
 (
 
-\-
+&minus;
 
 webkit-min-device-pixel-ratio
 
@@ -14398,9 +13983,9 @@ webkit-min-device-pixel-ratio
 
 }
 
-*/\* \-\-\-\-\-\-\-\-\-\-- Retina Screens \-\-\-\-\-\-\-\-\-\-- \*/*
+*/&ast; &minus;&minus;&minus;&minus;&minus;&minus;&minus;&minus;&minus;&minus;- Retina Screens &minus;&minus;&minus;&minus;&minus;&minus;&minus;&minus;&minus;&minus;- &ast;/*
 
-**\@media**
+**&commat;media**
 
 screen
 
@@ -14436,7 +14021,7 @@ and
 
 (
 
-\-
+&minus;
 
 webkit-min-device-pixel-ratio
 
@@ -14481,22 +14066,22 @@ dpi
 >
 > The vendor prefix -webkit- before the rule.
 >
-> This hasn\'t been implemented in engines other than WebKit and Blink.
+> This hasn&apos;t been implemented in engines other than WebKit and Blink.
 
 ## Section 13.5: Width vs Viewport
 
-  **\<head**
+  **&lt;head**
 
-> When we are using \"width\" with media queries it is important to set
+> When we are using &quot;width&quot; with media queries it is important to set
 > the meta tag correctly. Basic meta tag looks like this and it needs to
-> be put inside the **\>** tag.
+> be put inside the **&gt;** tag.
 >
-> **\<meta** name=\"viewport\"
-> content=\"width=device-width,initial-scale=1\"**\>**
+> **&lt;meta** name=&quot;viewport&quot;
+> content=&quot;width=device-width,initial-scale=1&quot;**&gt;**
 >
 > **Why this is important?**
 >
-> Based on MDN\'s definition \"width\" is
+> Based on MDN&apos;s definition &quot;width&quot; is
 >
 > The width media feature describes the width of the rendering surface
 > of the output device (such as the width of the document window, or the
@@ -14505,7 +14090,7 @@ dpi
 > What does that mean?
 >
 > View-port is the width of the device itself. If your screen resolution
-> says the resolution is 1280 x 720, your view-port width is \"1280px\".
+> says the resolution is 1280 x 720, your view-port width is &quot;1280px&quot;.
 >
 > More often many devices allocate different pixel amount to display one
 > pixel. For an example iPhone 6 Plus has 1242 x 2208 resolution. But
@@ -14524,7 +14109,7 @@ dpi
 > specify different CSS styles for the mobile version of your website
 > versus the desktop version.
 
-**\@media**
+**&commat;media**
 
 only screen and
 
@@ -14566,20 +14151,20 @@ px
 
 80
 
-\%
+&percnt;
 
 ;
 
 }
 
-*/\* Styles in this block are only applied if the screen size is atleast
+*/&ast; Styles in this block are only applied if the screen size is atleast
 300px wide, but no more*
 
-*than 767px \*/*
+*than 767px &ast;/*
 
 }
 
-**\@media**
+**&commat;media**
 
 only screen and
 
@@ -14621,20 +14206,20 @@ px
 
 90
 
-\%
+&percnt;
 
 ;
 
 }
 
-*/\* Styles in this block are only applied if the screen size is atleast
+*/&ast; Styles in this block are only applied if the screen size is atleast
 768px wide, but no more*
 
-*than 1023px \*/*
+*than 1023px &ast;/*
 
 }
 
-**\@media**
+**&commat;media**
 
 only screen and
 
@@ -14662,21 +14247,21 @@ px
 
 120
 
-\%
+&percnt;
 
 ;
 
 }
 
-*/\* Styles in this block are only applied if the screen size is over
-1024px wide. \*/*
+*/&ast; Styles in this block are only applied if the screen size is over
+1024px wide. &ast;/*
 
 }
 
 ## Section 13.7: Use on link tag
 
-> **\<link** rel=\"stylesheet\" media=\"min-width: 600px\"
-> href=\"example.css\" **/\>**
+> **&lt;link** rel=&quot;stylesheet&quot; media=&quot;min-width: 600px&quot;
+> href=&quot;example.css&quot; **/&gt;**
 >
 > This stylesheet is still downloaded but is applied only on devices
 > with screen width larger than 600px.
@@ -14695,17 +14280,17 @@ px
 > be added to add media query support for IE8 only with the following
 > code :
 
-\<!\--
+&lt;!&minus;-
 
-\[
+&lbrack;
 
 if lt IE 9
 
-\]
+&rbrack;
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **script**
 
@@ -14713,44 +14298,44 @@ src
 
 =
 
-\"respond.min.js\"
+&quot;respond.min.js&quot;
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **/script**
 
-**\>**
+**&gt;**
 
-\<!
+&lt;!
 
-\[
+&lbrack;
 
 endif
 
-\]
+&rbrack;
 
-\--
+&minus;-
 
-**\>**
+**&gt;**
 
 > [**[CSS
 > Mediaqueries]**](https://code.google.com/p/css3-mediaqueries-js/)
 > is another library that does the same thing. The code for adding that
 > library to your HTML would be identical :
 
-\<!\--
+&lt;!&minus;-
 
-\[
+&lbrack;
 
 if lt IE 9
 
-\]
+&rbrack;
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **script**
 
@@ -14758,45 +14343,45 @@ src
 
 =
 
-\"css3-mediaqueries.js\"
+&quot;css3-mediaqueries.js&quot;
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **/script**
 
-**\>**
+**&gt;**
 
-\<!
+&lt;!
 
-\[
+&lbrack;
 
 endif
 
-\]
+&rbrack;
 
-\--
+&minus;-
 
-**\>**
+**&gt;**
 
 > **The alternative**
 >
-> If you don\'t like a JS based solution, you should also consider
-> adding an IE\<9 only stylesheet where you adjust your styling specific
-> to IE\<9. For that, you should add the following HTML to your code:
+> If you don&apos;t like a JS based solution, you should also consider
+> adding an IE&lt;9 only stylesheet where you adjust your styling specific
+> to IE&lt;9. For that, you should add the following HTML to your code:
 
-\<!\--
+&lt;!&minus;-
 
-\[
+&lbrack;
 
 if lt IE 9
 
-\]
+&rbrack;
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **link**
 
@@ -14804,45 +14389,45 @@ rel
 
 =
 
-\"stylesheet\"
+&quot;stylesheet&quot;
 
 type
 
 =
 
-\"text/css\"
+&quot;text/css&quot;
 
 media
 
 =
 
-\"all\"
+&quot;all&quot;
 
 href
 
 =
 
-\"style-ielt9.css\"
+&quot;style-ielt9.css&quot;
 
-**/\>**
+**/&gt;**
 
-\<!
+&lt;!
 
-\[
+&lbrack;
 
 endif
 
-\]
+&rbrack;
 
-\--
+&minus;-
 
-**\>**
+**&gt;**
 
 > **Note :**
 >
-> Technically it\'s one more alternative: using [**[CSS
-> hacks]**](http://browserhacks.com/) to target IE\<9. It
-> has the same impact as an IE\<9 only stylesheet, but you don\'t need a
+> Technically it&apos;s one more alternative: using [**[CSS
+> hacks]**](http://browserhacks.com/) to target IE&lt;9. It
+> has the same impact as an IE&lt;9 only stylesheet, but you don&apos;t need a
 > separate stylesheet for that. I do not recommend this option, though,
 > as they produce invalid CSS code (which is but one of several reasons
 > why the use of CSS hacks is generally frowned upon today).
@@ -14858,20 +14443,20 @@ endif
 >
 > HTML:
 >
-> **\<p\>**Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+> **&lt;p&gt;**Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 > Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed
 > nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum.
 > Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris
-> massa. Vestibulum lacinia arcu eget nulla. **\</p\> \<img**
-> src=\"http://lorempixel.com/200/100/\" **/\>**
+> massa. Vestibulum lacinia arcu eget nulla. **&lt;/p&gt; &lt;img**
+> src=&quot;http://lorempixel.com/200/100/&quot; **/&gt;**
 
-**\<p\>**Class aptent taciti sociosqu ad litora torquent per conubia
+**&lt;p&gt;**Class aptent taciti sociosqu ad litora torquent per conubia
 nostra, per inceptos himenaeos. Curabitur sodales ligula in libero. Sed
 dignissim lacinia nunc. Curabitur tortor. Pellentesque nibh. Aenean
 quam. In scelerisque sem at dolor. Maecenas mattis. Sed convallis
 tristique sem. Proin ut ligula vel nunc egestas porttitor. Morbi lectus
 risus, iaculis vel, suscipit quis, luctus non, massa. Fusce ac turpis
-quis ligula lacinia aliquet. **\</p\>** CSS:
+quis ligula lacinia aliquet. **&lt;/p&gt;** CSS:
 
 img
 
@@ -14922,23 +14507,23 @@ initial - Sets this property to its default value. Read about initial
 inherit - Inherits this property from its parent element. Read about
 inherit
 
-**\<**
+**&lt;**
 
 **html**
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **head**
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **style**
 
-**\>**
+**&gt;**
 
 img {
 
@@ -14952,25 +14537,25 @@ clear: both;
 
 }
 
-**\<**
+**&lt;**
 
 **/style**
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **/head**
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **body**
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **img**
 
@@ -14978,34 +14563,34 @@ src
 
 =
 
-\"https://static.pexels.com/photos/69372/pexels-photo-69372-medium.jpeg\"
+&quot;https://static.pexels.com/photos/69372/pexels-photo-69372-medium.jpeg&quot;
 
 width
 
 =
 
-\"100\"
+&quot;100&quot;
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **p**
 
-**\>**
+**&gt;**
 
 Lorem ipsoum Lorem ipsoum Lorem ipsoum Lorem ipsoum Lorem ipsoum Lorem
 ipsoum Lorem ipsoum Lorem
 
 ipsoum Lorem ipsoum Lorem ipsoum Lorem ipsoum Lorem ipsoum
 
-**\<**
+**&lt;**
 
 **/p**
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **p**
 
@@ -15013,42 +14598,42 @@ class
 
 =
 
-\"clear\"
+&quot;clear&quot;
 
-**\>**
-
-Lorem ipsoum Lorem ipsoum Lorem ipsoum Lorem ipsoum Lorem ipsoum Lorem
-ipsoum
+**&gt;**
 
 Lorem ipsoum Lorem ipsoum Lorem ipsoum Lorem ipsoum Lorem ipsoum Lorem
 ipsoum
 
-**\<**
+Lorem ipsoum Lorem ipsoum Lorem ipsoum Lorem ipsoum Lorem ipsoum Lorem
+ipsoum
+
+**&lt;**
 
 **/p**
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **/body**
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **/html**
 
-**\>**
+**&gt;**
 
 ## Section 14.3: Clearfix
 
 The clearfix hack is a popular way to contain floats (N. Gallagher aka
-\@necolas)
+&commat;necolas)
 
 > Not to be confused with the clear property, clearfix is a *concept*
 > (that is also related to floats, thus the possible confusion). To
-> *contain floats*, you\'ve to add .cf or .clearfix class on the
+> *contain floats*, you&apos;ve to add .cf or .clearfix class on the
 > container (**the parent**) and style this class with a few rules
 > described below.
 >
@@ -15074,7 +14659,7 @@ after
 
 :
 
-\"\"
+&quot;&quot;
 
 ;
 
@@ -15108,26 +14693,26 @@ both
 
 > **Clearfix also preventing top margin collapsing of contained floats**
 
-*/\*\**
+*/&ast;&ast;*
 
-*\* For modern browsers*
+*&ast; For modern browsers*
 
-*\* 1. The space content is one way to avoid an Opera bug when the*
+*&ast; 1. The space content is one way to avoid an Opera bug when the*
 
-*\* contenteditable attribute is included anywhere else in the
+*&ast; contenteditable attribute is included anywhere else in the
 document.*
 
-*\* Otherwise it causes space to appear at the top and bottom of
+*&ast; Otherwise it causes space to appear at the top and bottom of
 elements*
 
-*\* that are clearfixed.*
+*&ast; that are clearfixed.*
 
-*\* 2. The use of \`table\` rather than \`block\` is only necessary if
+*&ast; 2. The use of &apos;table&apos; rather than &apos;block&apos; is only necessary if
 using*
 
-*\* \`:before\` to contain the top-margins of child elements.*
+*&ast; &apos;:before&apos; to contain the top-margins of child elements.*
 
-*\*/*
+*&ast;/*
 
 .cf
 
@@ -15149,11 +14734,11 @@ after
 
 :
 
-\" \"
+&quot; &quot;
 
 ;
 
-*/\* 1 \*/*
+*/&ast; 1 &ast;/*
 
 **display**
 
@@ -15163,7 +14748,7 @@ table
 
 ;
 
-*/\* 2 \*/*
+*/&ast; 2 &ast;/*
 
 }
 
@@ -15207,7 +14792,7 @@ after
 
 :
 
-\" \"
+&quot; &quot;
 
 ;
 
@@ -15239,19 +14824,19 @@ both
 
 }
 
-*/\*\**
+*/&ast;&ast;*
 
-*\* For IE 6/7 only*
+*&ast; For IE 6/7 only*
 
-*\* Include this rule to trigger hasLayout and contain floats.*
+*&ast; Include this rule to trigger hasLayout and contain floats.*
 
-*\*/*
+*&ast;/*
 
 .cf
 
 {
 
-\*
+&ast;
 
 zoom
 
@@ -15277,57 +14862,57 @@ effect]](http://codepen.io/PhilippeVay/pen/OXEqgW?editors=0100)
 > page width and the siblings are place one below the other irrespective
 > of their width.
 
-**\<**
+**&lt;**
 
 **div**
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **p**
 
-**\>**
+**&gt;**
 
 This is DIV 1
 
-**\<**
+**&lt;**
 
 **/p**
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **/div**
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **div**
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **p**
 
-**\>**
+**&gt;**
 
 This is DIV 2
 
-**\<**
+**&lt;**
 
 **/p**
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **/div**
 
-**\>**
+**&gt;**
 
 > The output of the following code will be
 
@@ -15338,7 +14923,7 @@ height="3.613208661417323in"}
 >
 > HTML:
 
-**\<**
+**&lt;**
 
 **div**
 
@@ -15346,11 +14931,11 @@ class
 
 =
 
-\"outer-div\"
+&quot;outer-div&quot;
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **div**
 
@@ -15358,31 +14943,31 @@ class
 
 =
 
-\"inner-div1\"
+&quot;inner-div1&quot;
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **p**
 
-**\>**
+**&gt;**
 
 This is DIV 1
 
-**\<**
+**&lt;**
 
 **/p**
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **/div**
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **div**
 
@@ -15390,35 +14975,35 @@ class
 
 =
 
-\"inner-div2\"
+&quot;inner-div2&quot;
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **p**
 
-**\>**
+**&gt;**
 
 This is DIV 2
 
-**\<**
+**&lt;**
 
 **/p**
 
-**\>**
+**&gt;**
 
-**\<**
-
-**/div**
-
-**\>**
-
-**\<**
+**&lt;**
 
 **/div**
 
-**\>**
+**&gt;**
+
+**&lt;**
+
+**/div**
+
+**&gt;**
 
 > CSS
 
@@ -15432,7 +15017,7 @@ This is DIV 2
 
 50
 
-\%
+&percnt;
 
 ;
 
@@ -15488,7 +15073,7 @@ px
 
 50
 
-\%
+&percnt;
 
 ;
 
@@ -15573,7 +15158,7 @@ Link]](http://codepen.io/vishak-kavalur/pen/bZxbBy)
 >
 > HTML:
 
-**\<**
+**&lt;**
 
 **div**
 
@@ -15581,11 +15166,11 @@ class
 
 =
 
-\"wrapper\"
+&quot;wrapper&quot;
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **div**
 
@@ -15593,50 +15178,50 @@ class
 
 =
 
-\"sidebar\"
+&quot;sidebar&quot;
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **h**
 
 **2**
 
-**\>**
+**&gt;**
 
 Sidebar
 
-**\<**
+**&lt;**
 
 **/h**
 
 **2**
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **p**
 
-**\>**
+**&gt;**
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec
 odio.
 
-**\<**
+**&lt;**
 
 **/p**
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **/div**
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **div**
 
@@ -15644,33 +15229,33 @@ class
 
 =
 
-\"content\"
+&quot;content&quot;
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **h**
 
 **1**
 
-**\>**
+**&gt;**
 
 Content
 
-**\<**
+**&lt;**
 
 **/h**
 
 **1**
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **p**
 
-**\>**
+**&gt;**
 
 Class aptent taciti sociosqu ad litora torquent per conubia nostra, per
 inceptos himenaeos.
@@ -15686,23 +15271,23 @@ suscipit quis, luctus non,
 
 massa. Fusce ac turpis quis ligula lacinia aliquet.
 
-**\<**
+**&lt;**
 
 **/p**
 
-**\>**
+**&gt;**
 
-**\<**
-
-**/div**
-
-**\>**
-
-**\<**
+**&lt;**
 
 **/div**
 
-**\>**
+**&gt;**
+
+**&lt;**
+
+**/div**
+
+**&gt;**
 
 > CSS:
 
@@ -15738,10 +15323,10 @@ pink
 
 ;
 
-*/\* Floated elements don\'t use any height. Adding \"overflow:hidden;\"
+*/&ast; Floated elements don&apos;t use any height. Adding &quot;overflow:hidden;&quot;
 forces the*
 
-*parent element to expand to contain its floated children. \*/*
+*parent element to expand to contain its floated children. &ast;/*
 
 **overflow**
 
@@ -15821,7 +15406,7 @@ yellow
 
 > HTML:
 
-**\<**
+**&lt;**
 
 **div**
 
@@ -15829,11 +15414,11 @@ class
 
 =
 
-\"wrapper\"
+&quot;wrapper&quot;
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **div**
 
@@ -15841,49 +15426,49 @@ class
 
 =
 
-\"left-sidebar\"
+&quot;left-sidebar&quot;
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **h**
 
 **1**
 
-**\>**
+**&gt;**
 
 Left Sidebar
 
-**\<**
+**&lt;**
 
 **/h**
 
 **1**
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **p**
 
-**\>**
+**&gt;**
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 
-**\<**
+**&lt;**
 
 **/p**
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **/div**
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **div**
 
@@ -15891,33 +15476,33 @@ class
 
 =
 
-\"content\"
+&quot;content&quot;
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **h**
 
 **1**
 
-**\>**
+**&gt;**
 
 Content
 
-**\<**
+**&lt;**
 
 **/h**
 
 **1**
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **p**
 
-**\>**
+**&gt;**
 
 Class aptent taciti sociosqu ad litora torquent per conubia nostra, per
 inceptos himenaeos.
@@ -15933,19 +15518,19 @@ suscipit quis, luctus non,
 
 massa.
 
-**\<**
+**&lt;**
 
 **/p**
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **/div**
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **div**
 
@@ -15953,53 +15538,53 @@ class
 
 =
 
-\"right-sidebar\"
+&quot;right-sidebar&quot;
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **h**
 
 **1**
 
-**\>**
+**&gt;**
 
 Right Sidebar
 
-**\<**
+**&lt;**
 
 **/h**
 
 **1**
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **p**
 
-**\>**
+**&gt;**
 
 Fusce ac turpis quis ligula lacinia aliquet.
 
-**\<**
+**&lt;**
 
 **/p**
 
-**\>**
+**&gt;**
 
-**\<**
-
-**/div**
-
-**\>**
-
-**\<**
+**&lt;**
 
 **/div**
 
-**\>**
+**&gt;**
+
+**&lt;**
+
+**/div**
+
+**&gt;**
 
 > CSS:
 
@@ -16035,10 +15620,10 @@ px
 
 ;
 
-*/\* Floated elements don\'t use any height. Adding \"overflow:hidden;\"
+*/&ast; Floated elements don&apos;t use any height. Adding &quot;overflow:hidden;&quot;
 forces the*
 
-*parent element to expand to contain its floated children. \*/*
+*parent element to expand to contain its floated children. &ast;/*
 
 **overflow**
 
@@ -16149,43 +15734,43 @@ right
 ## Section 14.8: Two-Column Lazy/Greedy Layout
 
 > This layout uses one floated column to create a two-column layout with
-> no defined widths. In this example the left sidebar is \"lazy,\" in
+> no defined widths. In this example the left sidebar is &quot;lazy,&quot; in
 > that it only takes up as much space as it needs. Another way to say
-> this is that the left sidebar is \"shrink-wrapped.\" The right content
-> column is \"greedy,\" in that it takes up all the remaining space.
+> this is that the left sidebar is &quot;shrink-wrapped.&quot; The right content
+> column is &quot;greedy,&quot; in that it takes up all the remaining space.
 >
 > HTML:
 >
-> **\<div** class=\"sidebar\"**\>**
+> **&lt;div** class=&quot;sidebar&quot;**&gt;**
 >
-> **\<h1\>**Sidebar**\</h1\>**
+> **&lt;h1&gt;**Sidebar**&lt;/h1&gt;**
 >
-> **\<img** src=\"http://lorempixel.com/150/200/\" **/\>**
+> **&lt;img** src=&quot;http://lorempixel.com/150/200/&quot; **/&gt;**
 >
-> **\</div\>**
+> **&lt;/div&gt;**
 >
-> **\<div** class=\"content\"**\>**
+> **&lt;div** class=&quot;content&quot;**&gt;**
 
-**\<h1\>**Content**\</h1\> \<p\>**Lorem ipsum dolor sit amet,
+**&lt;h1&gt;**Content**&lt;/h1&gt; &lt;p&gt;**Lorem ipsum dolor sit amet,
 consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed
 cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum
 imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed
 augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla.
-**\</p\> \<p\>**Class aptent taciti sociosqu ad litora torquent per
+**&lt;/p&gt; &lt;p&gt;**Class aptent taciti sociosqu ad litora torquent per
 conubia nostra, per inceptos himenaeos. Curabitur sodales ligula in
 libero. Sed dignissim lacinia nunc. Curabitur tortor. Pellentesque nibh.
 Aenean quam. In scelerisque sem at dolor. Maecenas mattis. Sed convallis
 tristique sem. Proin ut ligula vel nunc egestas porttitor. Morbi lectus
 risus, iaculis vel, suscipit quis, luctus non, massa. Fusce ac turpis
 quis ligula lacinia aliquet. Mauris ipsum. Nulla metus metus,
-ullamcorper vel, tincidunt sed, euismod in, nibh. **\</p\> \</div\>**
+ullamcorper vel, tincidunt sed, euismod in, nibh. **&lt;/p&gt; &lt;/div&gt;**
 CSS:
 
 .sidebar
 
 {
 
-*/\* \`display:table;\` shrink-wraps the column \*/*
+*/&ast; &apos;display:table;&apos; shrink-wraps the column &ast;/*
 
 **display**
 
@@ -16217,8 +15802,8 @@ blue
 
 {
 
-*/\* \`overflow:hidden;\` prevents \`.content\` from flowing under
-\`.sidebar\` \*/*
+*/&ast; &apos;overflow:hidden;&apos; prevents &apos;.content&apos; from flowing under
+&apos;.sidebar&apos; &ast;/*
 
 **overflow**
 
@@ -16255,7 +15840,7 @@ yellow
   *line-height*    The line height given in %, px, em, or any other valid CSS
                    measurement
 
-  *font-family*    This is for defining the family\'s name.
+  *font-family*    This is for defining the family&apos;s name.
   hsl         (   240         ,   100%                ,   50%
 
 *color* Any valid CSS color representation, like red, #00FF00, ) etc.
@@ -16282,35 +15867,35 @@ element
 
 :
 
-\[
+&lbrack;
 
 font-style
 
-\]
+&rbrack;
 
-\[
+&lbrack;
 
 font-variant
 
-\]
+&rbrack;
 
-\[
+&lbrack;
 
 font-weight
 
-\]
+&rbrack;
 
-\[
+&lbrack;
 
 font-size/line-height
 
-\]
+&rbrack;
 
-\[
+&lbrack;
 
 font-family
 
-\]
+&rbrack;
 
 ;
 
@@ -16422,10 +16007,10 @@ sans-serif
 
 ## Section 15.2: Quotes
 
-  **\<q**
+  **&lt;q**
 
 > The quotes property is used to customize the opening and closing
-> quotation marks of the **\>** tag.
+> quotation marks of the **&gt;** tag.
 
 q
 
@@ -16435,17 +16020,17 @@ q
 
 :
 
-\"
+&quot;
 
 «
 
-\"
+&quot;
 
-\"
+&quot;
 
 »
 
-\"
+&quot;
 
 ;
 
@@ -16455,7 +16040,7 @@ q
 
 > **HTML:**
 
-**\<**
+**&lt;**
 
 **div**
 
@@ -16463,19 +16048,19 @@ id
 
 =
 
-\"element-one\"
+&quot;element-one&quot;
 
-**\>**
+**&gt;**
 
 Hello I am some text.
 
-**\<**
+**&lt;**
 
 **/div**
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **div**
 
@@ -16483,17 +16068,17 @@ id
 
 =
 
-\"element-two\"
+&quot;element-two&quot;
 
-**\>**
+**&gt;**
 
 Hello I am some smaller text.
 
-**\<**
+**&lt;**
 
 **/div**
 
-**\>**
+**&gt;**
 
 > **CSS:**
 
@@ -16546,7 +16131,7 @@ ltr
 
 ;
 
-*/\* Default, text read read from left-to-right \*/*
+*/&ast; Default, text read read from left-to-right &ast;/*
 
 }
 
@@ -16562,7 +16147,7 @@ rtl
 
 ;
 
-*/\* text read from right-to-left \*/*
+*/&ast; text read from right-to-left &ast;/*
 
 }
 
@@ -16578,7 +16163,7 @@ horizontal-tb
 
 ;
 
-*/\* Default, text read from left-to-right and top-to-bottom. \*/*
+*/&ast; Default, text read from left-to-right and top-to-bottom. &ast;/*
 
 }
 
@@ -16594,7 +16179,7 @@ vertical-rl
 
 ;
 
-*/\* text read from right-to-left and top-to-bottom \*/*
+*/&ast; text read from right-to-left and top-to-bottom &ast;/*
 
 }
 
@@ -16610,14 +16195,14 @@ vertical-rl
 
 ;
 
-*/\* text read from left-to-right and top to bottom \*/*
+*/&ast; text read from left-to-right and top to bottom &ast;/*
 
 }
 
 > The direction property is used to change the horizontal text direction
 > of an element.
 
-  **direction**   :   ltr \| rtl \| initial \| inherit
+  **direction**   :   ltr &vertbar; rtl &vertbar; initial &vertbar; inherit
 
 
 > Syntax: ;
@@ -16626,7 +16211,7 @@ vertical-rl
 > read from top-to-bottom or from left-to-right, depending on the
 > language.
 
-  **direction**   :   horizontal-tb \| vertical-rl \| vertical-lr
+  **direction**   :   horizontal-tb &vertbar; vertical-rl &vertbar; vertical-lr
 
 Syntax: ;
 
@@ -16636,7 +16221,7 @@ Syntax: ;
 
 :
 
-\'Segoe UI\'
+&apos;Segoe UI&apos;
 
 ,
 
@@ -16648,12 +16233,12 @@ sans-serif
 
 ;
 
-> The browser will attempt to apply the font face \"Segoe UI\" to the
+> The browser will attempt to apply the font face &quot;Segoe UI&quot; to the
 > characters within the elements targeted by the above property. If this
 > font is not available, or the font does not contain a glyph for the
 > required character, the browser will fall back to Tahoma, and, if
-> necessary, any sans-serif font on the user\'s computer. Note that any
-> font names with more than one word such as \"Segoe UI\" need to have
+> necessary, any sans-serif font on the user&apos;s computer. Note that any
+> font names with more than one word such as &quot;Segoe UI&quot; need to have
 > single or double quotes around them.
 
 **font-family**
@@ -16664,7 +16249,7 @@ Consolas
 
 ,
 
-\'Courier New\'
+&apos;Courier New&apos;
 
 ,
 
@@ -16672,11 +16257,11 @@ monospace
 
 ;
 
-> The browser will attempt to apply the font face \"Consolas\" to the
+> The browser will attempt to apply the font face &quot;Consolas&quot; to the
 > characters within the elements targeted by the above property. If this
 > font is not available, or the font does not contain a glyph for the
-> required character, the browser will fall back to \"Courier New,\"
-> and, if necessary, any monospace font on the user\'s computer.
+> required character, the browser will fall back to &quot;Courier New,&quot;
+> and, if necessary, any monospace font on the user&apos;s computer.
 
 ## Section 15.6: Text Overflow
 
@@ -16756,7 +16341,7 @@ N
 
 ;
 
-*/\* number of lines to show \*/*
+*/&ast; number of lines to show &ast;/*
 
 **line-height**
 
@@ -16766,7 +16351,7 @@ X
 
 ;
 
-*/\* fallback \*/*
+*/&ast; fallback &ast;/*
 
 **max-height**
 
@@ -16774,13 +16359,13 @@ X
 
 X
 
-\*
+&ast;
 
 N
 
 ;
 
-*/\* fallback \*/*
+*/&ast; fallback &ast;/*
 
 }
 
@@ -16951,7 +16536,7 @@ lowercase
 
 > **HTML**
 
-**\<**
+**&lt;**
 
 **p**
 
@@ -16959,25 +16544,25 @@ class
 
 =
 
-\"example1\"
+&quot;example1&quot;
 
-**\>**
+**&gt;**
 
 all letters in uppercase
 
-*\<!\--*
+*&lt;!&minus;-*
 
-*\"ALL LETTERS IN UPPERCASE\"*
+*&quot;ALL LETTERS IN UPPERCASE&quot;*
 
-*\--\>*
+*&minus;-&gt;*
 
-**\<**
+**&lt;**
 
 **/p**
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **p**
 
@@ -16985,25 +16570,25 @@ class
 
 =
 
-\"example2\"
+&quot;example2&quot;
 
-**\>**
+**&gt;**
 
 all letters in capitalize
 
-*\<!\--*
+*&lt;!&minus;-*
 
-*\"All Letters In Capitalize (Sentence Case)\"*
+*&quot;All Letters In Capitalize (Sentence Case)&quot;*
 
-*\--\>*
+*&minus;-&gt;*
 
-**\<**
+**&lt;**
 
 **/p**
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **p**
 
@@ -17011,23 +16596,23 @@ class
 
 =
 
-\"example3\"
+&quot;example3&quot;
 
-**\>**
+**&gt;**
 
 all letters in lowercase
 
-*\<!\--*
+*&lt;!&minus;-*
 
-*\"all letters in lowercase\"*
+*&quot;all letters in lowercase&quot;*
 
-*\--\>*
+*&minus;-&gt;*
 
-**\<**
+**&lt;**
 
 **/p**
 
-**\>**
+**&gt;**
 
 ## Section 15.9: Letter Spacing
 
@@ -17035,9 +16620,9 @@ h2
 
 {
 
-*/\* adds a 1px space horizontally between each letter;*
+*/&ast; adds a 1px space horizontally between each letter;*
 
-*also known as tracking \*/*
+*also known as tracking &ast;/*
 
 **letter-spacing**
 
@@ -17233,7 +16818,7 @@ blue
 > **Possible values**
 >
 > a positive or negative *length* (using em px vh cm etc.) or
-> *percentage* (using %) the keyword normal uses the font\'s default
+> *percentage* (using %) the keyword normal uses the font&apos;s default
 > word spacing the keyword inherit takes the value from the parent
 > element
 >
@@ -17287,17 +16872,17 @@ px
 
 > **HTML**
 >
-> **\<p\>**
+> **&lt;p&gt;**
 >
-> **\<span** class=\"normal\"**\>**This is an example, showing the
-> effect of \"word-spacing\".**\</span\>\<br\>**
+> **&lt;span** class=&quot;normal&quot;**&gt;**This is an example, showing the
+> effect of &quot;word-spacing&quot;.**&lt;/span&gt;&lt;br&gt;**
 >
-> **\<span** class=\"narrow\"**\>**This is an example, showing the
-> effect of \"word-spacing\".**\</span\>\<br\>** **\<span**
-> class=\"extensive\"**\>**This is an example, showing the effect of
-> \"word-spacing\".**\</span\>\<br\>**
+> **&lt;span** class=&quot;narrow&quot;**&gt;**This is an example, showing the
+> effect of &quot;word-spacing&quot;.**&lt;/span&gt;&lt;br&gt;** **&lt;span**
+> class=&quot;extensive&quot;**&gt;**This is an example, showing the effect of
+> &quot;word-spacing&quot;.**&lt;/span&gt;&lt;br&gt;**
 >
-> **\</p\>**
+> **&lt;/p&gt;**
 >
 > **Online-Demo**
 
@@ -17340,7 +16925,7 @@ small-caps
 
 > **HTML:**
 
-**\<**
+**&lt;**
 
 **p**
 
@@ -17348,25 +16933,25 @@ class
 
 =
 
-\"smallcaps\"
+&quot;smallcaps&quot;
 
-**\>**
+**&gt;**
 
 Documentation about CSS Fonts
 
-**\<**
+**&lt;**
 
 **br**
 
-**\>**
+**&gt;**
 
 aNd ExAmpLe
 
-**\<**
+**&lt;**
 
 **/p**
 
-**\>**
+**&gt;**
 
 > **Output:**
 
@@ -17378,7 +16963,7 @@ aNd ExAmpLe
 
 # Chapter 16: Flexible Box Layout (Flexbox)
 
-> The Flexible Box module, or just \'flexbox\' for short, is a box model
+> The Flexible Box module, or just &apos;flexbox&apos; for short, is a box model
 > designed for user interfaces, and it allows users to align and
 > distribute space among items in a container such that elements behave
 > predictably when the page layout must accommodate different, unknown
@@ -17391,7 +16976,7 @@ aNd ExAmpLe
 >
 > **HTML**
 
-**\<**
+**&lt;**
 
 **div**
 
@@ -17399,11 +16984,11 @@ class
 
 =
 
-\"aligner\"
+&quot;aligner&quot;
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **div**
 
@@ -17411,23 +16996,23 @@ class
 
 =
 
-\"aligner-item\"
+&quot;aligner-item&quot;
 
-**\>**
+**&gt;**
 
 ...
 
-**\<**
+**&lt;**
 
 **/div**
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **/div**
 
-**\>**
+**&gt;**
 
 > **CSS**
 
@@ -17471,11 +17056,11 @@ center
 
 50
 
-\%
+&percnt;
 
 ;
 
-*/\*for demo. Use actual width instead.\*/*
+*/&ast;for demo. Use actual width instead.&ast;/*
 
 }
 
@@ -17506,7 +17091,7 @@ center
 >
 > All of the below styles are applied onto this simple layout:
 
-**\<**
+**&lt;**
 
 **div**
 
@@ -17514,51 +17099,51 @@ id
 
 =
 
-\"container\"
+&quot;container&quot;
 
-**\>**
+**&gt;**
 
-**\<**
-
-**div**
-
-**\>**
-
-**\<**
-
-**/div**
-
-**\>**
-
-**\<**
+**&lt;**
 
 **div**
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **/div**
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **div**
 
-**\>**
+**&gt;**
 
-**\<**
-
-**/div**
-
-**\>**
-
-**\<**
+**&lt;**
 
 **/div**
 
-**\>**
+**&gt;**
+
+**&lt;**
+
+**div**
+
+**&gt;**
+
+**&lt;**
+
+**/div**
+
+**&gt;**
+
+**&lt;**
+
+**/div**
+
+**&gt;**
 
 where
 
@@ -17849,7 +17434,7 @@ Here is a [[demo]](https://jsfiddle.net/d6pc5bmd/5/).
 
 ## Section 16.2: Sticky Variable-Height Footer
 
-> This code creates a sticky footer. When the content doesn\'t reach the
+> This code creates a sticky footer. When the content doesn&apos;t reach the
 > end of the viewport, the footer sticks to the bottom of the viewport.
 > When the content extends past the bottom of the viewport, the footer
 > is also pushed out of the viewport. [*[View
@@ -17857,7 +17442,7 @@ Here is a [[demo]](https://jsfiddle.net/d6pc5bmd/5/).
 >
 > **HTML:**
 
-**\<**
+**&lt;**
 
 **div**
 
@@ -17865,35 +17450,35 @@ class
 
 =
 
-\"header\"
+&quot;header&quot;
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **h**
 
 **2**
 
-**\>**
+**&gt;**
 
 Header
 
-**\<**
+**&lt;**
 
 **/h**
 
 **2**
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **/div**
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **div**
 
@@ -17901,33 +17486,33 @@ class
 
 =
 
-\"content\"
+&quot;content&quot;
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **h**
 
 **1**
 
-**\>**
+**&gt;**
 
 Content
 
-**\<**
+**&lt;**
 
 **/h**
 
 **1**
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **p**
 
-**\>**
+**&gt;**
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec
 odio. Praesent libero.
@@ -17943,19 +17528,19 @@ conubia nostra, per inceptos
 
 himenaeos. Curabitur sodales ligula in libero.
 
-**\<**
+**&lt;**
 
 **/p**
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **/div**
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **div**
 
@@ -17963,33 +17548,33 @@ class
 
 =
 
-\"footer\"
+&quot;footer&quot;
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **h**
 
 **4**
 
-**\>**
+**&gt;**
 
 Footer
 
-**\<**
+**&lt;**
 
 **/h**
 
 **4**
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **/div**
 
-**\>**
+**&gt;**
 
 > **CSS:**
 
@@ -18007,7 +17592,7 @@ body
 
 100
 
-\%
+&percnt;
 
 ;
 
@@ -18039,7 +17624,7 @@ column
 
 {
 
-*/\* Include \`0 auto\` for best browser compatibility. \*/*
+*/&ast; Include &apos;0 auto&apos; for best browser compatibility. &ast;/*
 
 **flex**
 
@@ -18098,7 +17683,7 @@ none
 
 > HTML:
 
-**\<**
+**&lt;**
 
 **div**
 
@@ -18106,11 +17691,11 @@ class
 
 =
 
-\"flex-container\"
+&quot;flex-container&quot;
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **div**
 
@@ -18118,19 +17703,19 @@ class
 
 =
 
-\"flex-item\"
+&quot;flex-item&quot;
 
-**\>**
+**&gt;**
 
 1
 
-**\<**
+**&lt;**
 
 **/div**
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **div**
 
@@ -18138,19 +17723,19 @@ class
 
 =
 
-\"flex-item\"
+&quot;flex-item&quot;
 
-**\>**
+**&gt;**
 
 2
 
-**\<**
+**&lt;**
 
 **/div**
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **div**
 
@@ -18158,19 +17743,19 @@ class
 
 =
 
-\"flex-item\"
+&quot;flex-item&quot;
 
-**\>**
+**&gt;**
 
 3
 
-**\<**
+**&lt;**
 
 **/div**
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **div**
 
@@ -18178,19 +17763,19 @@ class
 
 =
 
-\"flex-item\"
+&quot;flex-item&quot;
 
-**\>**
+**&gt;**
 
 4
 
-**\<**
+**&lt;**
 
 **/div**
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **div**
 
@@ -18198,23 +17783,23 @@ class
 
 =
 
-\"flex-item\"
+&quot;flex-item&quot;
 
-**\>**
+**&gt;**
 
 5
 
-**\<**
+**&lt;**
 
 **/div**
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **/div**
 
-**\>**
+**&gt;**
 
 > CSS:
 
@@ -18236,7 +17821,7 @@ class
 
 100
 
-\%
+&percnt;
 
 ;
 
@@ -18338,7 +17923,7 @@ px
 
 ;
 
-*/\* or % could be used to ensure a specific layout \*/*
+*/&ast; or % could be used to ensure a specific layout &ast;/*
 
 }
 
@@ -18361,7 +17946,7 @@ height="3.182736220472441in"}
 >
 > HTML Markup:
 
-**\<**
+**&lt;**
 
 **div**
 
@@ -18369,11 +17954,11 @@ class
 
 =
 
-\"container\"
+&quot;container&quot;
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **header**
 
@@ -18381,19 +17966,19 @@ class
 
 =
 
-\"header\"
+&quot;header&quot;
 
-**\>**
+**&gt;**
 
 Header
 
-**\<**
+**&lt;**
 
 **/header**
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **div**
 
@@ -18401,11 +17986,11 @@ class
 
 =
 
-\"content-body\"
+&quot;content-body&quot;
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **main**
 
@@ -18413,19 +17998,19 @@ class
 
 =
 
-\"content\"
+&quot;content&quot;
 
-**\>**
+**&gt;**
 
 Content
 
-**\<**
+**&lt;**
 
 **/main**
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **nav**
 
@@ -18433,19 +18018,19 @@ class
 
 =
 
-\"sidenav\"
+&quot;sidenav&quot;
 
-**\>**
+**&gt;**
 
 Nav
 
-**\<**
+**&lt;**
 
 **/nav**
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **aside**
 
@@ -18453,25 +18038,25 @@ class
 
 =
 
-\"ads\"
+&quot;ads&quot;
 
-**\>**
+**&gt;**
 
 Ads
 
-**\<**
+**&lt;**
 
 **/aside**
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **/div**
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **footer**
 
@@ -18479,23 +18064,23 @@ class
 
 =
 
-\"footer\"
+&quot;footer&quot;
 
-**\>**
+**&gt;**
 
 Footer
 
-**\<**
+**&lt;**
 
 **/footer**
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **/div**
 
-**\>**
+**&gt;**
 
 > CSS:
 
@@ -18645,7 +18230,7 @@ auto
 
 :
 
-\-
+&minus;
 
 1
 
@@ -18729,7 +18314,7 @@ px
 
 ## Section 16.5: Perfectly aligned buttons inside cards with flexbox
 
-> It\'s a regular pattern in design these days to vertically align
+> It&apos;s a regular pattern in design these days to vertically align
 > **call to actions** inside its containing cards like this:
 
 ![](./images/media/image47.jpg){width="7.48037510936133in"
@@ -18739,31 +18324,31 @@ height="3.3848195538057744in"}
 >
 > HTML
 >
-> **\<div** class=\"cards\"**\>**
+> **&lt;div** class=&quot;cards&quot;**&gt;**
 >
-> **\<div** class=\"card\"**\>** **\<p\>**Lorem ipsum Magna proident ex
+> **&lt;div** class=&quot;card&quot;**&gt;** **&lt;p&gt;**Lorem ipsum Magna proident ex
 > anim dolor ullamco pariatur reprehenderit culpa esse enim mollit
-> labore dolore voluptate ullamco et ut sed qui minim.**\</p\>**
-> **\<p\>\<button\>**Action**\</button\>\</p\>**
+> labore dolore voluptate ullamco et ut sed qui minim.**&lt;/p&gt;**
+> **&lt;p&gt;&lt;button&gt;**Action**&lt;/button&gt;&lt;/p&gt;**
 >
-> **\</div\>**
+> **&lt;/div&gt;**
 >
-> **\<div** class=\"card\"**\>** **\<p\>**Lorem ipsum Magna proident ex
+> **&lt;div** class=&quot;card&quot;**&gt;** **&lt;p&gt;**Lorem ipsum Magna proident ex
 > anim dolor ullamco pariatur reprehenderit culpa esse enim mollit
-> labore dolore voluptate ullamco et ut sed qui minim.**\</p\>**
-> **\<p\>**Lorem ipsum Magna proident ex anim dolor ullamco pariatur
+> labore dolore voluptate ullamco et ut sed qui minim.**&lt;/p&gt;**
+> **&lt;p&gt;**Lorem ipsum Magna proident ex anim dolor ullamco pariatur
 > reprehenderit culpa esse enim mollit labore dolore voluptate ullamco
-> et ut sed qui minim.**\</p\>** **\<p\>**Lorem ipsum Magna proident ex
+> et ut sed qui minim.**&lt;/p&gt;** **&lt;p&gt;**Lorem ipsum Magna proident ex
 > anim dolor ullamco pariatur reprehenderit culpa esse enim mollit
-> labore dolore voluptate ullamco et ut sed qui minim.**\</p\>**
-> **\<p\>**Lorem ipsum Magna proident ex anim dolor ullamco pariatur
+> labore dolore voluptate ullamco et ut sed qui minim.**&lt;/p&gt;**
+> **&lt;p&gt;**Lorem ipsum Magna proident ex anim dolor ullamco pariatur
 > reprehenderit culpa esse enim mollit labore dolore voluptate ullamco
-> et ut sed qui minim.**\</p\>**
-> **\<p\>\<button\>**Action**\</button\>\</p\>**
+> et ut sed qui minim.**&lt;/p&gt;**
+> **&lt;p&gt;&lt;button&gt;**Action**&lt;/button&gt;&lt;/p&gt;**
 >
-> **\</div\>**
+> **&lt;/div&gt;**
 >
-> **\</div\>**
+> **&lt;/div&gt;**
 
   **display**                            :     flex
 
@@ -19081,7 +18666,7 @@ auto
 >
 > **HTML**
 
-**\<**
+**&lt;**
 
 **div**
 
@@ -19089,11 +18674,11 @@ class
 
 =
 
-\"container\"
+&quot;container&quot;
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **div**
 
@@ -19101,49 +18686,49 @@ style
 
 =
 
-\"background-color: red\"
+&quot;background-color: red&quot;
 
-**\>**
+**&gt;**
 
 Some
 
-**\<**
+**&lt;**
 
 **br**
 
-**/\>**
+**/&gt;**
 
 data
 
-**\<**
+**&lt;**
 
 **br**
 
-**/\>**
+**/&gt;**
 
 to make
 
-**\<**
+**&lt;**
 
 **br**
 
-**/\>**
+**/&gt;**
 
 a height
 
-**\<**
+**&lt;**
 
 **br**
 
-**/\>**
+**/&gt;**
 
-**\<**
+**&lt;**
 
 **/div**
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **div**
 
@@ -19151,37 +18736,37 @@ style
 
 =
 
-\"background-color: blue\"
+&quot;background-color: blue&quot;
 
-**\>**
+**&gt;**
 
 Fewer
 
-**\<**
+**&lt;**
 
 **br**
 
-**/\>**
+**/&gt;**
 
 lines
 
-**\<**
+**&lt;**
 
 **br**
 
-**/\>**
+**/&gt;**
 
-**\<**
-
-**/div**
-
-**\>**
-
-**\<**
+**&lt;**
 
 **/div**
 
-**\>**
+**&gt;**
+
+**&lt;**
+
+**/div**
+
+**&gt;**
 
 > **CSS**
 
@@ -19219,7 +18804,7 @@ Note: [[Does not work on IE versions under
 ## Section 17.1: Calculating Selector Specificity
 
 > Each individual CSS Selector has its own specificity value. Every
-> selector in a sequence increases the sequence\'s overall specificity.
+> selector in a sequence increases the sequence&apos;s overall specificity.
 > Selectors fall into one of three different specificity groups: *A*,
 > *B* and *c*. When multiple selector sequences select a given element,
 > the browser uses the styles applied by the sequence with the highest
@@ -19231,10 +18816,10 @@ A.  id selectors #foo class selectors .bar
 
   title
   hover
-  colspan                                       =      \"2\"
+  colspan                                       =      &quot;2&quot;
   nth-child
 
-B.  attribute selectors \[\], \[\] pseudo-classes :, :(2)
+B.  attribute selectors &lbrack;&rbrack;, &lbrack;&rbrack; pseudo-classes :, :(2)
 
 type selectors div, li
 
@@ -19246,7 +18831,7 @@ type selectors div, li
 > Group *A* is the most specific, followed by Group *B*, then finally
 > Group *c*.
 >
-> The universal selector (\*) and combinators (like \> and \~) have no
+> The universal selector (&ast;) and combinators (like &gt; and &#126;) have no
 > specificity.
 >
 > **Example 1: Specificity of various selector sequences**
@@ -19259,7 +18844,7 @@ type selectors div, li
 
 }
 
-*/\* a=2, b=0, c=0 \*/*
+*/&ast; a=2, b=0, c=0 &ast;/*
 
 #foo
 
@@ -19269,7 +18854,7 @@ type selectors div, li
 
 }
 
-*/\* a=1, b=1, c=0 \*/*
+*/&ast; a=1, b=1, c=0 &ast;/*
 
 #foo
 
@@ -19277,7 +18862,7 @@ type selectors div, li
 
 }
 
-*/\* a=1, b=0, c=0 \*/*
+*/&ast; a=1, b=0, c=0 &ast;/*
 
 .bar
 
@@ -19289,7 +18874,7 @@ hover
 
 }
 
-*/\* a=0, b=2, c=0 \*/*
+*/&ast; a=0, b=2, c=0 &ast;/*
 
 div
 
@@ -19299,7 +18884,7 @@ div
 
 }
 
-*/\* a=0, b=1, c=1 \*/*
+*/&ast; a=0, b=1, c=1 &ast;/*
 
 :
 
@@ -19309,19 +18894,19 @@ hover
 
 }
 
-*/\* a=0, b=1, c=0 \*/*
+*/&ast; a=0, b=1, c=0 &ast;/*
 
-\[
+&lbrack;
 
 title
 
-\]
+&rbrack;
 
 {
 
 }
 
-*/\* a=0, b=1, c=0 \*/*
+*/&ast; a=0, b=1, c=0 &ast;/*
 
 .bar
 
@@ -19329,11 +18914,11 @@ title
 
 }
 
-*/\* a=0, b=1, c=0 \*/*
+*/&ast; a=0, b=1, c=0 &ast;/*
 
 div ul
 
-\+
+&plus;
 
 li
 
@@ -19341,7 +18926,7 @@ li
 
 }
 
-*/\* a=0, b=0, c=3 \*/*
+*/&ast; a=0, b=0, c=3 &ast;/*
 
 p
 
@@ -19353,9 +18938,9 @@ after
 
 }
 
-*/\* a=0, b=0, c=2 \*/*
+*/&ast; a=0, b=0, c=2 &ast;/*
 
-\*::
+&ast;::
 
 before
 
@@ -19363,7 +18948,7 @@ before
 
 }
 
-*/\* a=0, b=0, c=1 \*/*
+*/&ast; a=0, b=0, c=1 &ast;/*
 
 ::
 
@@ -19373,7 +18958,7 @@ before
 
 }
 
-*/\* a=0, b=0, c=1 \*/*
+*/&ast; a=0, b=0, c=1 &ast;/*
 
 div
 
@@ -19381,15 +18966,15 @@ div
 
 }
 
-*/\* a=0, b=0, c=1 \*/*
+*/&ast; a=0, b=0, c=1 &ast;/*
 
-\*
+&ast;
 
 {
 
 }
 
-*/\* a=0, b=0, c=0 \*/*
+*/&ast; a=0, b=0, c=0 &ast;/*
 
 > **Example 2: How specificity is used by the browser**
 >
@@ -19445,7 +19030,7 @@ black
 > Because of this, ; from the .bar selector will be
 >
 > applied to the element. The higher specificity of the ID selector will
-> cause the browser to ignore the .bar selector\'s color declaration.
+> cause the browser to ignore the .bar selector&apos;s color declaration.
 >
 > Now imagine a different CSS implementation:
 
@@ -19499,7 +19084,7 @@ white
 > **Example 3: How to manipulate specificity**
 >
 > The last snippet from Example 2 above can be manipulated to ensure our
-> .bar class selector\'s color declaration is used instead of that of
+> .bar class selector&apos;s color declaration is used instead of that of
 > the .baz class selector.
 
 .bar
@@ -19508,7 +19093,7 @@ white
 
 }
 
-*/\* a=0, b=1, c=0 \*/*
+*/&ast; a=0, b=1, c=0 &ast;/*
 
 .baz
 
@@ -19516,13 +19101,13 @@ white
 
 }
 
-*/\* a=0, b=1, c=0 \*/*
+*/&ast; a=0, b=1, c=0 &ast;/*
 
 > The most common way to achieve this would be to find out what other
 > selectors can be applied to the .bar selector sequence. For example,
 > if the .bar class was only ever applied to span elements, we could
 > modify the .bar selector to span.bar. This would give it a new Group
-> *C* specificity, which would override the .baz selector\'s lack
+> *C* specificity, which would override the .baz selector&apos;s lack
 > thereof:
 
 span
@@ -19533,7 +19118,7 @@ span
 
 }
 
-*/\* a=0, b=1, c=1 \*/*
+*/&ast; a=0, b=1, c=1 &ast;/*
 
 .baz
 
@@ -19541,7 +19126,7 @@ span
 
 }
 
-*/\* a=0, b=1, c=0 \*/*
+*/&ast; a=0, b=1, c=0 &ast;/*
 
   .bar.bar
 
@@ -19563,7 +19148,7 @@ span
 
 }
 
-*/\* a=0, b=2, c=0 \*/*
+*/&ast; a=0, b=2, c=0 &ast;/*
 
 .baz
 
@@ -19571,7 +19156,7 @@ span
 
 }
 
-*/\* a=0, b=1, c=0 \*/*
+*/&ast; a=0, b=1, c=0 &ast;/*
 
 > **!important and inline style declarations**
 >
@@ -19587,14 +19172,14 @@ span
 > Because they completely override specificity, the use of !important is
 > frowned upon in most use cases. One should use it as little as
 > possible. To keep CSS code efficient and maintainable in the long run,
-> it\'s almost always better to increase the specificity of the
+> it&apos;s almost always better to increase the specificity of the
 > surrounding selector than to use !important.
 >
 > One of those rare exceptions where !important is not frowned upon, is
 > when implementing generic helper classes like a .hidden or
 > .background-yellow class that are supposed to always override one or
 > more properties wherever they are encountered. And even then, you need
-> to know what you\'re doing. The last thing you want, when writing
+> to know what you&apos;re doing. The last thing you want, when writing
 > maintainable CSS, is to have !important flags throughout your CSS.
 >
 > **A final note**
@@ -19603,7 +19188,7 @@ span
 
 
 > A common misconception about CSS specificity is that the Group *A*,
-> *B* and *c* values should be combined with each other (a=1,=1 =\>
+> *B* and *c* values should be combined with each other (a=1,=1 =&gt;
 > 151). This is **not** the case. If this were the case, having 20 of a
 > Group *B* or *c* selector would be enough to override a single Group
 > *A* or *B* selector respectively. The three groups should be regarded
@@ -19613,7 +19198,7 @@ span
 > When creating your CSS style sheet, you should maintain the lowest
 > specificity as possible. If you need to make the specificity a little
 > higher to overwrite another method, make it higher but as low as
-> possible to make it higher. You shouldn\'t need to have a selector
+> possible to make it higher. You shouldn&apos;t need to have a selector
 > like this:
 
 body
@@ -19663,9 +19248,9 @@ bold
 
 ;
 
-*/\* This property won\'t be overridden*
+*/&ast; This property won&apos;t be overridden*
 
-*by the rule below \*/*
+*by the rule below &ast;/*
 
 }
 
@@ -19683,11 +19268,11 @@ normal
 
 ;
 
-*/\* #mydiv font-weight won\'t be set to normal*
+*/&ast; #mydiv font-weight won&apos;t be set to normal*
 
 *even if it has a higher specificity because*
 
-*of the !important declaration above \*/*
+*of the !important declaration above &ast;/*
 
 }
 
@@ -19701,7 +19286,7 @@ normal
 > Here are some examples where using !important declaration can be
 > justified:
 >
-> If your rules shouldn\'t be overridden by any inline style of the
+> If your rules shouldn&apos;t be overridden by any inline style of the
 > element which is written inside style attribute of the html element.
 >
 > To give the user more control over the web accessibility, like
@@ -19712,7 +19297,7 @@ normal
 >
 > See also:
 
-[**[W3C - 6 Assigning property values, Cascading, and Inheritance \--
+[**[W3C - 6 Assigning property values, Cascading, and Inheritance &minus;-
 6.4.2 !important
 rules]**](https://www.w3.org/TR/CSS22/cascade.html#important-rules)
 
@@ -19734,12 +19319,12 @@ rules]**](https://www.w3.org/TR/CSS22/cascade.html#important-rules)
 3.  Author stylesheet (Author here means the creator of the
     webpage/website)
 
-  **\<style**
+  **&lt;style**
  
  
 > Maybe one or more .css files
 >
-> In the **\>** element of the HTML document
+> In the **&gt;** element of the HTML document
 
 4.  Inline styles (In the style attribute on an HTML element)
 
@@ -19771,7 +19356,7 @@ blue
 
 }
 
-*/\* specificity: 0, 0, 1, 0 \*/*
+*/&ast; specificity: 0, 0, 1, 0 &ast;/*
 
 div
 
@@ -19787,9 +19372,9 @@ red
 
 }
 
-*/\* specificity: 0, 0, 0, 1 \*/*
+*/&ast; specificity: 0, 0, 0, 1 &ast;/*
 
-**\<**
+**&lt;**
 
 **div**
 
@@ -19797,24 +19382,24 @@ class
 
 =
 
-\"mystyle\"
+&quot;mystyle&quot;
 
-**\>**
+**&gt;**
 
 Hello World
 
-**\<**
+**&lt;**
 
 **/div**
 
-**\>**
+**&gt;**
 
 > What color will the text be? (hover to see the answer)
 
 blue
 
 > First the specificity rules are applied, and the one with the highest
-> specificity \"wins\".
+> specificity &quot;wins&quot;.
 >
 > **Example 2 - Cascade rules with identical selectors**
 >
@@ -19836,11 +19421,11 @@ blue
 
 > *Internal css (in HTML file)*
 
-**\<**
+**&lt;**
 
 **style**
 
-**\>**
+**&gt;**
 
 .class {
 
@@ -19848,20 +19433,20 @@ background: #000;
 
 }
 
-**\<**
+**&lt;**
 
 **style**
 
-**\>**
+**&gt;**
 
 > In this case, where you have identical selectors, the cascade kicks
-> in, and determines that the last one loaded \"wins\".
+> in, and determines that the last one loaded &quot;wins&quot;.
 
 **Example 3 - Cascade rules after Specificity rules**
 
 body
 
-\>
+&gt;
 
 .mystyle
 
@@ -19877,11 +19462,11 @@ blue
 
 }
 
-*/\* specificity: 0, 0, 1, 1 \*/*
+*/&ast; specificity: 0, 0, 1, 1 &ast;/*
 
 .otherstyle
 
-\>
+&gt;
 
 div
 
@@ -19897,9 +19482,9 @@ red
 
 }
 
-*/\* specificity: 0, 0, 1, 1 \*/*
+*/&ast; specificity: 0, 0, 1, 1 &ast;/*
 
-**\<**
+**&lt;**
 
 **body**
 
@@ -19907,11 +19492,11 @@ class
 
 =
 
-\"otherstyle\"
+&quot;otherstyle&quot;
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **div**
 
@@ -19919,37 +19504,37 @@ class
 
 =
 
-\"mystyle\"
+&quot;mystyle&quot;
 
-**\>**
+**&gt;**
 
 Hello World
 
-**\<**
+**&lt;**
 
 **/div**
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **/body**
 
-**\>**
+**&gt;**
 
 What color will the background be?
 
 red
 
-  .otherstyle                                        \>   div
+  .otherstyle                                        &gt;   div
  
  
-> After applying the specificity rules, there\'s still a conflict
+> After applying the specificity rules, there&apos;s still a conflict
 > between blue and red, so the cascading rules are applied on top of the
 > specificity rules. Cascading looks at the load order of the rules,
 > whether inside the same .css file or in the collection of style
 > sources. The last one loaded overrides any earlier ones. In this case,
-> the rule \"wins\".
+> the rule &quot;wins&quot;.
 >
 > **A final note**
 >
@@ -20011,7 +19596,7 @@ body
 
 .mystyle
 
-\>
+&gt;
 
 div
 
@@ -20097,7 +19682,7 @@ red
 
 }
 
-**\<**
+**&lt;**
 
 **body**
 
@@ -20105,11 +19690,11 @@ class
 
 =
 
-\"mystyle\"
+&quot;mystyle&quot;
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **div**
 
@@ -20117,40 +19702,40 @@ id
 
 =
 
-\"elmnt1\"
+&quot;elmnt1&quot;
 
 class
 
 =
 
-\"myotherstyle\"
+&quot;myotherstyle&quot;
 
-**\>**
+**&gt;**
 
 Hello, world!
 
-**\<**
+**&lt;**
 
 **/div**
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **/body**
 
-**\>**
+**&gt;**
 
 > What borders, colors, and font-sizes will the text be? font-size:
 
   ------------------------------------------------------------------------------------------
-  **font-size**   :   24   ;, since #elmnt1 rule set has the highest specificity **\<div**
+  **font-size**   :   24   ;, since #elmnt1 rule set has the highest specificity **&lt;div**
                            for the                                               
   --------------- --- ---- ----------------------------------------------------- -----------
 
   ------------------------------------------------------------------------------------------
 
-> **\>** in question, every property here is set.
+> **&gt;** in question, every property here is set.
 >
 > border:
 >
@@ -20169,7 +19754,7 @@ Hello, world!
 > background-color:
 
   ------------------------------------------------------------------------------------------------------
-  **background-color**   :   green   ;. The background-color is   body.mystyle   \>   div.myotherstyle
+  **background-color**   :   green   ;. The background-color is   body.mystyle   &gt;   div.myotherstyle
                                      set in the div,                                  
   ---------------------- --- ------- ---------------------------- -------------- ---- ------------------
 
@@ -20182,7 +19767,7 @@ Hello, world!
   -----------------------------------------------------------------------
 
 > , and rule sets. The specificities are (0, 0, 1) vs. (0, 2, 2) vs. (0,
-> 2, 0), so the middle one \"wins\".
+> 2, 0), so the middle one &quot;wins&quot;.
 >
 > color:
 
@@ -20194,7 +19779,7 @@ Hello, world!
   ----------------------------------------------------------------------------------
 
 > rule sets. The latter has the higher specificity of (0, 2, 0) and
-> \"wins\".
+> &quot;wins&quot;.
 
 # Chapter 18: Colors
 
@@ -20256,7 +19841,7 @@ currentColor
 > use currentColor inside the border property within the same element if
 > it would be overwritten otherwise due to a more specific selector.
 >
-> Since it\'s the computed color, the border will be green in the
+> Since it&apos;s the computed color, the border will be green in the
 > following example due to the second rule overriding the first:
 
 div
@@ -20297,8 +19882,8 @@ green
 
 > **Inherited from parent element**
 >
-> The parent\'s color is inherited, here currentColor evaluates to
-> \'blue\', making the child element\'s border-color blue.
+> The parent&apos;s color is inherited, here currentColor evaluates to
+> &apos;blue&apos;, making the child element&apos;s border-color blue.
 
 .parent-class
 
@@ -20786,7 +20371,7 @@ YellowGreen #9ACD32 rgb(154,205,50)
 > you need to specify that explicitly.
 >
 > The total number of colors that can be represented with hex notation
-> is 256 \^ 3 or 16,777,216.
+> is 256 &Hat; 3 or 16,777,216.
 >
 > **Syntax**
 
@@ -20802,7 +20387,7 @@ YellowGreen #9ACD32 rgb(154,205,50)
 
 :
 
-\#
+&num;
 
 rgb
 
@@ -20814,7 +20399,7 @@ gg
 
 00
 
-\-
+&minus;
 
 FF
 
@@ -20824,7 +20409,7 @@ bb
 
 00
 
-\-
+&minus;
 
 FF
 
@@ -20834,7 +20419,7 @@ for the amount of blue
 
 {
 
-*/\* This is equivalent to using the color keyword \'blue\' \*/*
+*/&ast; This is equivalent to using the color keyword &apos;blue&apos; &ast;/*
 
 **color**
 
@@ -20850,10 +20435,10 @@ for the amount of blue
 
 {
 
-*/\* If you want to specify each range value with a single number, you
+*/&ast; If you want to specify each range value with a single number, you
 can!*
 
-*This is equivalent to \'#0000FF\' (and \'blue\') \*/*
+*This is equivalent to &apos;#0000FF&apos; (and &apos;blue&apos;) &ast;/*
 
 **color**
 
@@ -20867,18 +20452,18 @@ can!*
 
 > [[Hexadecimal
 > notation]](https://en.wikipedia.org/wiki/Hexadecimal) is
-> used to specify color values in the RGB color format, per the [[W3C\'s
-> \'Numerical color]
-> [values\']](https://www.w3.org/TR/css3-color/#numerical).
+> used to specify color values in the RGB color format, per the [[W3C&apos;s
+> &apos;Numerical color]
+> [values&apos;]](https://www.w3.org/TR/css3-color/#numerical).
 >
 > There are a lot of tools available on the Internet for looking up
 > hexadecimal (or simply hex) color values.
 >
-> Search for \"**hex color palette**\" or \"**hex color picker**\" with
+> Search for &quot;**hex color palette**&quot; or &quot;**hex color picker**&quot; with
 > your favorite web browser to find a bunch of options!
 >
 > Hex values always start with a pound sign (#), are up to six
-> \"digits\" long, and are case-insensitive: that is, they don\'t care
+> &quot;digits&quot; long, and are case-insensitive: that is, they don&apos;t care
 > about capitalization. #FFC125 and #ffc125 are the same color.
 
 ## Section 18.4: rgb() Notation
@@ -20893,7 +20478,7 @@ can!*
 
 {
 
-*/\* Scalar RGB, equivalent to \'blue\'\*/*
+*/&ast; Scalar RGB, equivalent to &apos;blue&apos;&ast;/*
 
 **color**
 
@@ -20923,7 +20508,7 @@ rgb
 
 {
 
-*/\* Percentile RGB values\*/*
+*/&ast; Percentile RGB values&ast;/*
 
 **color**
 
@@ -20935,19 +20520,19 @@ rgb
 
 0
 
-\%
+&percnt;
 
 ,
 
 0
 
-\%
+&percnt;
 
 ,
 
 100
 
-\%
+&percnt;
 
 )
 
@@ -20961,49 +20546,49 @@ rgb
 
 (
 
-\<
+&lt;
 
 red
 
-\>
+&gt;
 
 ,
 
-\<green
+&lt;green
 
-\>
+&gt;
 
 ,
 
-\<blue
+&lt;blue
 
-\>
+&gt;
 
 )
 
 **Value Description**
 
   -----------------------------------------------------------------------
-  **\<red**
+  **&lt;red**
   -----------------------------------------------------------------------
 
   -----------------------------------------------------------------------
 
-> **\>** an integer from 0 - 255 or percentage from 0 - 100%
+> **&gt;** an integer from 0 - 255 or percentage from 0 - 100%
 
   -----------------------------------------------------------------------
-  **\<green**
-  -----------------------------------------------------------------------
-
-  -----------------------------------------------------------------------
-
-  -----------------------------------------------------------------------
-  **\<blue**
+  **&lt;green**
   -----------------------------------------------------------------------
 
   -----------------------------------------------------------------------
 
-> **\>** an integer from 0 - 255 or percentage from 0 - 100% **\>** an
+  -----------------------------------------------------------------------
+  **&lt;blue**
+  -----------------------------------------------------------------------
+
+  -----------------------------------------------------------------------
+
+> **&gt;** an integer from 0 - 255 or percentage from 0 - 100% **&gt;** an
 > integer from 0 - 255 or percentage from 0 - 100%
 
 ## Section 18.5: rgba() Notation
@@ -21015,7 +20600,7 @@ red
 
 {
 
-*/\* Opaque red \*/*
+*/&ast; Opaque red &ast;/*
 
 **color**
 
@@ -21049,7 +20634,7 @@ rgba
 
 {
 
-*/\* Half-translucent red. \*/*
+*/&ast; Half-translucent red. &ast;/*
 
 **color**
 
@@ -21085,29 +20670,29 @@ rgba
 
 (
 
-\<
+&lt;
 
 red
 
-\>
+&gt;
 
 ,
 
-\<green
+&lt;green
 
-\>
-
-,
-
-\<blue
-
-\>
+&gt;
 
 ,
 
-\<alpha
+&lt;blue
 
-\>
+&gt;
+
+,
+
+&lt;alpha
+
+&gt;
 
 )
 
@@ -21116,42 +20701,42 @@ red
 **Value Description**
 
   -----------------------------------------------------------------------
-  **\<red**
+  **&lt;red**
   -----------------------------------------------------------------------
 
   -----------------------------------------------------------------------
 
-> **\>** an integer from 0 - 255 or percentage from 0 - 100%
+> **&gt;** an integer from 0 - 255 or percentage from 0 - 100%
 
   -----------------------------------------------------------------------
-  **\<green**
-  -----------------------------------------------------------------------
-
-  -----------------------------------------------------------------------
-
-> **\>** an integer from 0 - 255 or percentage from 0 - 100%
-
-  -----------------------------------------------------------------------
-  **\<blue**
+  **&lt;green**
   -----------------------------------------------------------------------
 
   -----------------------------------------------------------------------
 
-> **\>** an integer from 0 - 255 or percentage from 0 - 100%
+> **&gt;** an integer from 0 - 255 or percentage from 0 - 100%
 
   -----------------------------------------------------------------------
-  **\<alpha**
+  **&lt;blue**
   -----------------------------------------------------------------------
 
   -----------------------------------------------------------------------
 
-> **\>** a number from 0 - 1, where 0.0 is fully transparent and 1.0 is
+> **&gt;** an integer from 0 - 255 or percentage from 0 - 100%
+
+  -----------------------------------------------------------------------
+  **&lt;alpha**
+  -----------------------------------------------------------------------
+
+  -----------------------------------------------------------------------
+
+> **&gt;** a number from 0 - 1, where 0.0 is fully transparent and 1.0 is
 > fully opaque
 
 ## Section 18.6: hsl() Notation
 
-> HSL stands for **hue** (\"which color\"), **saturation** (\"how much
-> color\") and **lightness** (\"how much white\").
+> HSL stands for **hue** (&quot;which color&quot;), **saturation** (&quot;how much
+> color&quot;) and **lightness** (&quot;how much white&quot;).
 >
 > Hue is represented as an angle from 0° to 360° (without units), while
 > saturation and lightness are represented as percentages.
@@ -21174,19 +20759,19 @@ hsl
 
 100
 
-\%
+&percnt;
 
 ,
 
 50
 
-\%
+&percnt;
 
 )
 
 ;
 
-*/\* Blue \*/*
+*/&ast; Blue &ast;/*
 
 }
 
@@ -21203,27 +20788,27 @@ hsl
 
 (
 
-\<
+&lt;
 
 hue
 
-\>
+&gt;
 
 ,
 
-\<saturation
+&lt;saturation
 
-\>
+&gt;
 
-\%
+&percnt;
 
 ,
 
-\<lightness
+&lt;lightness
 
-\>
+&gt;
 
-\%
+&percnt;
 
 )
 
@@ -21232,7 +20817,7 @@ hue
 **Value Description**
 
   -----------------------------------------------------------------------
-  **\<hue**
+  **&lt;hue**
   -----------------------------------------------------------------------
 
   -----------------------------------------------------------------------
@@ -21241,22 +20826,22 @@ hue
 > is red, 60° is yellow, 120° is
 
   -----------------------------------------------------------------------
-  **\<saturation**
+  **&lt;saturation**
   -----------------------------------------------------------------------
 
   -----------------------------------------------------------------------
 
-> **\>** green, 180° is cyan, 240° is blue, 300° is magenta, and 360° is
+> **&gt;** green, 180° is cyan, 240° is blue, 300° is magenta, and 360° is
 > red specified in percentage where 0% is fully desaturated (grayscale)
-> and 100% is fully saturated (vividly **\>** colored)
+> and 100% is fully saturated (vividly **&gt;** colored)
 
   -----------------------------------------------------------------------
-  **\<lightness**
+  **&lt;lightness**
   -----------------------------------------------------------------------
 
   -----------------------------------------------------------------------
 
-> **\>** specified in percentage where 0% is fully black and 100% is
+> **&gt;** specified in percentage where 0% is fully black and 100% is
 > fully white
 >
 > **Notes**
@@ -21271,9 +20856,9 @@ hue
 
 > Similar to hsl() notation, but with an added alpha (opacity) value.
 >
-> hsla(240, 100%, 50%, 0) */\* transparent \*/* hsla(240, 100%, 50%,
-> 0.5) */\* half-translucent blue \*/* hsla(240, 100%, 50%, 1) */\*
-> fully opaque blue \*/*
+> hsla(240, 100%, 50%, 0) */&ast; transparent &ast;/* hsla(240, 100%, 50%,
+> 0.5) */&ast; half-translucent blue &ast;/* hsla(240, 100%, 50%, 1) */&ast;
+> fully opaque blue &ast;/*
 >
 > **Syntax**
 
@@ -21281,33 +20866,33 @@ hsla
 
 (
 
-\<
+&lt;
 
 hue
 
-\>
+&gt;
 
 ,
 
-\<saturation
+&lt;saturation
 
-\>
+&gt;
 
-\%
-
-,
-
-\<lightness
-
-\>
-
-\%
+&percnt;
 
 ,
 
-\<alpha
+&lt;lightness
 
-\>
+&gt;
+
+&percnt;
+
+,
+
+&lt;alpha
+
+&gt;
 
 )
 
@@ -21316,7 +20901,7 @@ hue
 **Value Description**
 
   -----------------------------------------------------------------------
-  **\<hue**
+  **&lt;hue**
   -----------------------------------------------------------------------
 
   -----------------------------------------------------------------------
@@ -21324,44 +20909,44 @@ hue
 > specified in degrees around the color wheel (without units), where 0°
 > is red, 60° is yellow, 120° is
 >
-> **\>** green, 180° is cyan, 240° is blue, 300° is magenta, and 360° is
+> **&gt;** green, 180° is cyan, 240° is blue, 300° is magenta, and 360° is
 > red
 
   -----------------------------------------------------------------------
-  **\<saturation**
+  **&lt;saturation**
   -----------------------------------------------------------------------
 
   -----------------------------------------------------------------------
 
   -----------------------------------------------------------------------
-  **\<lightness**
+  **&lt;lightness**
   -----------------------------------------------------------------------
 
   -----------------------------------------------------------------------
 
-> **\>** percentage where 0% is fully desaturated (grayscale) and 100%
-> is fully saturated (vividly colored) **\>** percentage where 0% is
+> **&gt;** percentage where 0% is fully desaturated (grayscale) and 100%
+> is fully saturated (vividly colored) **&gt;** percentage where 0% is
 > fully black and 100% is fully white
 
   -----------------------------------------------------------------------
-  **\<alpha**
+  **&lt;alpha**
   -----------------------------------------------------------------------
 
   -----------------------------------------------------------------------
 
-**\>** a number from 0 - 1 where 0 is fully transparent and 1 is fully
+**&gt;** a number from 0 - 1 where 0 is fully transparent and 1 is fully
 opaque
 
 # Chapter 19: Opacity
 
 ## Section 19.1: Opacity Property
 
-> An element\'s opacity can be set using the opacity property. Values
+> An element&apos;s opacity can be set using the opacity property. Values
 > can be anywhere from 0.0 (transparent) to 1.0 (opaque).
 >
 > **Example Usage**
 
-**\<**
+**&lt;**
 
 **div**
 
@@ -21369,17 +20954,17 @@ style
 
 =
 
-\"opacity:0.8;\"
+&quot;opacity:0.8;&quot;
 
-**\>**
+**&gt;**
 
 This is a partially transparent element
 
-**\<**
+**&lt;**
 
 **/div**
 
-**\>**
+**&gt;**
 
 **Property Value Transparency**
 
@@ -21421,7 +21006,7 @@ This is a partially transparent element
 
 > 75% transparent (25% Opaque) Transparent
 
-## Section 19.2: IE Compatibility for \`opacity\`
+## Section 19.2: IE Compatibility for &apos;opacity&apos;
 
 To use
 
@@ -21433,19 +21018,19 @@ in all versions of IE, the order is:
 
 {
 
-*/\* for IE 8 & 9 \*/*
+*/&ast; for IE 8 & 9 &ast;/*
 
 -ms-filter
 
 :
 
-\"progid:DXImageTransform.Microsoft.Alpha(Opacity=60)\"
+&quot;progid:DXImageTransform.Microsoft.Alpha(Opacity=60)&quot;
 
 ;
 
 // IE8
 
-*/\* works in IE 8 & 9 too, but also 5, 6, 7 \*/*
+*/&ast; works in IE 8 & 9 too, but also 5, 6, 7 &ast;/*
 
 **filter**
 
@@ -21469,11 +21054,11 @@ opacity
 
 5
 
-\-
+&minus;
 
 7
 
-*/\* Modern Browsers \*/*
+*/&ast; Modern Browsers &ast;/*
 
 **opacity**
 
@@ -21489,12 +21074,12 @@ opacity
 
 **Unit Description**
 
-> \% Define sizes in terms of parent objects or current object dependent
+> &percnt; Define sizes in terms of parent objects or current object dependent
 > on property em Relative to the font-size of the element (2em means 2
 > times the size of the current font) rem Relative to font-size of the
-> root element vw Relative to 1% of the width of the viewport\* vh
-> Relative to 1% of the height of the viewport\* vmin Relative to 1% of
-> viewport\'s\* smaller dimension vmax Relative to 1% of viewport\'s\*
+> root element vw Relative to 1% of the width of the viewport&ast; vh
+> Relative to 1% of the height of the viewport&ast; vmin Relative to 1% of
+> viewport&apos;s&ast; smaller dimension vmax Relative to 1% of viewport&apos;s&ast;
 > larger dimension cm centimeters mm millimeters in inches (1in = 96px =
 > 2.54cm) px pixels (1px = 1/96th of 1in) pt points (1pt = 1/72 of 1in)
 > pc picas (1pc = 12 pt) s seconds (used for animations and transitions)
@@ -21519,7 +21104,7 @@ Version ≥ 3
 >
 > **HTML:**
 
-**\<**
+**&lt;**
 
 **input**
 
@@ -21527,29 +21112,17 @@ type
 
 =
 
-\"button\"
+&quot;button&quot;
 
 value
 
 =
 
-\"Button\"
+&quot;Button&quot;
 
-**\>**
+**&gt;**
 
-**\<**
-
-**input**
-
-type
-
-=
-
-\"range\"
-
-**\>**
-
-**\<**
+**&lt;**
 
 **input**
 
@@ -21557,15 +21130,27 @@ type
 
 =
 
-\"text\"
+&quot;range&quot;
+
+**&gt;**
+
+**&lt;**
+
+**input**
+
+type
+
+=
+
+&quot;text&quot;
 
 value
 
 =
 
-\"Text\"
+&quot;Text&quot;
 
-**\>**
+**&gt;**
 
 > **Relevant CSS:**
 
@@ -21587,15 +21172,15 @@ px
 
 input
 
-\[
+&lbrack;
 
 type
 
 =
 
-\"button\"
+&quot;button&quot;
 
-\]
+&rbrack;
 
 {
 
@@ -21627,15 +21212,15 @@ em
 
 input
 
-\[
+&lbrack;
 
 type
 
 =
 
-\"range\"
+&quot;range&quot;
 
-\]
+&rbrack;
 
 {
 
@@ -21663,7 +21248,7 @@ em
 
 input
 
-\[
+&lbrack;
 
 type
 
@@ -21671,7 +21256,7 @@ type
 
 text
 
-\]
+&rbrack;
 
 {
 
@@ -21706,19 +21291,19 @@ height="2.9583333333333335in"}
 
 > CSS3 introduces a few new units, including the
 > [[rem]](https://www.w3.org/TR/css-values/#font-relative-lengths)
-> unit, which stands for \"root em\". Let\'s look at how rem works.
+> unit, which stands for &quot;root em&quot;. Let&apos;s look at how rem works.
 >
-> First, let\'s look at the differences between em and rem.
+> First, let&apos;s look at the differences between em and rem.
 
   -----------------------------------------------------------------------
-  **\<html**
+  **&lt;html**
   -----------------------------------------------------------------------
 
   -----------------------------------------------------------------------
 
 > **em**: Relative to the font size of the parent. This causes the
 > compounding issue **rem**: Relative to the font size of the root or
-> **\>** element. This means it\'s possible to declare a single font
+> **&gt;** element. This means it&apos;s possible to declare a single font
 > size for the html element and define all rem units to be a percentage
 > of that.
 >
@@ -21772,7 +21357,7 @@ rem
 
 ;
 
-*/\* 32px \*/*
+*/&ast; 32px &ast;/*
 
 }
 
@@ -21790,7 +21375,7 @@ rem
 
 ;
 
-*/\* 16px \*/*
+*/&ast; 16px &ast;/*
 
 }
 
@@ -21808,14 +21393,14 @@ em
 
 ;
 
-*/\* 24px \*/*
+*/&ast; 24px &ast;/*
 
 }
 
 ## Section 20.3: vmin and vmax
 
-> **vmin**: Relative to 1 percent of the viewport\'s smaller dimension
-> **vmax**: Relative to 1 percent of the viewport\'s larger dimension
+> **vmin**: Relative to 1 percent of the viewport&apos;s smaller dimension
+> **vmax**: Relative to 1 percent of the viewport&apos;s larger dimension
 >
 > In other words, 1 vmin is equal to the smaller of *1 vh* and *1 vw*
 >
@@ -21889,18 +21474,18 @@ vh
 >
 > **Equation:**
 
-( Parent Container\`s width ) \* ( Percentage(%) ) = Output
+( Parent Container&apos;s width ) &ast; ( Percentage(%) ) = Output
 
 > **For Example:**
 >
 > *Parent* has **100px** width while the *Child* has **50%**.
 >
-> **On the output**, the *Child*\'s width will be half(50%) of the
-> *Parent*\'s, which is **50px**.
+> **On the output**, the *Child*&apos;s width will be half(50%) of the
+> *Parent*&apos;s, which is **50px**.
 >
 > **HTML**
 
-**\<**
+**&lt;**
 
 **div**
 
@@ -21908,13 +21493,13 @@ class
 
 =
 
-\"parent\"
+&quot;parent&quot;
 
-**\>**
+**&gt;**
 
 PARENT
 
-**\<**
+**&lt;**
 
 **div**
 
@@ -21922,33 +21507,33 @@ class
 
 =
 
-\"child\"
+&quot;child&quot;
 
-**\>**
+**&gt;**
 
 CHILD
 
-**\<**
+**&lt;**
 
 **/div**
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **/div**
 
-**\>**
+**&gt;**
 
 > **CSS**
 
-**\<**
+**&lt;**
 
 **style**
 
-**\>**
+**&gt;**
 
-\*
+&ast;
 
 {
 
@@ -21976,11 +21561,11 @@ width: 50%;
 
 }
 
-**\<**
+**&lt;**
 
 **/style**
 
-**\>**
+**&gt;**
 
 > **OUTPUT**
 
@@ -22005,7 +21590,7 @@ width: 50%;
 ::selection Matches the portion of an element that is selected by a user
 
 > Used to create a backdrop that hides the underlying document for an
-> element in the top layer\'s ::backdrop stack
+> element in the top layer&apos;s ::backdrop stack
 
 ::placeholder Allows you to style the placeholder text of a form element
 (Experimental)
@@ -22047,7 +21632,7 @@ width: 50%;
 > however, the attribute can have an empty value
 
   ------------------------------------------------------------------------
-  **content**                                   :      \"\"
+  **content**                                   :      &quot;&quot;
   --------------------------------------------- ------ -------------------
 
   ------------------------------------------------------------------------
@@ -22066,7 +21651,7 @@ after
 
 :
 
-\'after\'
+&apos;after&apos;
 
 ;
 
@@ -22144,7 +21729,7 @@ before
 
 :
 
-\'before\'
+&apos;before&apos;
 
 ;
 
@@ -22208,7 +21793,7 @@ before
 
 :
 
-\"\"
+&quot;&quot;
 
 ;
 
@@ -22272,45 +21857,45 @@ blue
 
 > **HTML**
 
-**\<**
+**&lt;**
 
 **ul**
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **li**
 
-**\>**
+**&gt;**
 
 Test I
 
-**\<**
+**&lt;**
 
 **/li**
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **li**
 
-**\>**
+**&gt;**
 
 Test II
 
-**\<**
+**&lt;**
 
 **/li**
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **/ul**
 
-**\>**
+**&gt;**
 
 > **Result**
 
@@ -22345,7 +21930,7 @@ height="1.3125in"}
   -------------------------------------------------------------------------
 
 > The element is positioned relative to its normal position, so adds 20
-> pixels to the element\'s
+> pixels to the element&apos;s
 
   ------------------------------------------------------------------------
   **position**                        :    static
@@ -22385,7 +21970,7 @@ unset Combination of initial and inherit. More info
 >
 > **HTML**
 
-**\<**
+**&lt;**
 
 **div**
 
@@ -22393,17 +21978,17 @@ id
 
 =
 
-\"div1\"
+&quot;div1&quot;
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **/div**
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **div**
 
@@ -22411,17 +21996,17 @@ id
 
 =
 
-\"div2\"
+&quot;div2&quot;
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **/div**
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **div**
 
@@ -22429,15 +22014,15 @@ id
 
 =
 
-\"div3\"
+&quot;div3&quot;
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **/div**
 
-**\>**
+**&gt;**
 
 > **CSS**
 
@@ -22621,13 +22206,13 @@ height="3.8645833333333335in"}
 
 :
 
-\[
+&lbrack;
 
 number
 
-\]
+&rbrack;
 
-\|
+&vertbar;
 
 auto
 
@@ -22708,7 +22293,7 @@ px
 }
 
   ------------------------------------------------------------------------
-  class                     =     \"abspos\"
+  class                     =     &quot;abspos&quot;
   ------------------------- ----- ----------------------------------------
 
   ------------------------------------------------------------------------
@@ -22808,7 +22393,7 @@ px
 }
 
 > This code will move the box containing element with attribute
-> class=\"relpos\" 20px down and 30px to the right from where it would
+> class=&quot;relpos&quot; 20px down and 30px to the right from where it would
 > have been in normal flow.
 
 ## Section 22.5: Static positioning
@@ -22866,34 +22451,34 @@ static
 > table Behaves like the HTML table element.
 
   -----------------------------------------------------------------------
-  **\<td**
+  **&lt;td**
   -----------------------------------------------------------------------
 
   -----------------------------------------------------------------------
 
-> table-cell Let the element behave like a **\>** element
+> table-cell Let the element behave like a **&gt;** element
 
   -----------------------------------------------------------------------
-  **\<col**
-  -----------------------------------------------------------------------
-
-  -----------------------------------------------------------------------
-
-  -----------------------------------------------------------------------
-  **\<tr**
+  **&lt;col**
   -----------------------------------------------------------------------
 
   -----------------------------------------------------------------------
 
   -----------------------------------------------------------------------
-  **\<li**
+  **&lt;tr**
   -----------------------------------------------------------------------
 
   -----------------------------------------------------------------------
 
-> table-column Let the element behave like a **\>** element table-row
-> Let the element behave like a **\>** element list-item Let the element
-> behave like a **\>** element.
+  -----------------------------------------------------------------------
+  **&lt;li**
+  -----------------------------------------------------------------------
+
+  -----------------------------------------------------------------------
+
+> table-column Let the element behave like a **&gt;** element table-row
+> Let the element behave like a **&gt;** element list-item Let the element
+> behave like a **&gt;** element.
 
 ## Section 23.1: The display property
 
@@ -22908,78 +22493,78 @@ static
 > horizontally with other elements of the same type and may not contain
 > other non-inline elements.
 
-**\<**
+**&lt;**
 
 **span**
 
-**\>**
+**&gt;**
 
 This is some
 
-**\<**
+**&lt;**
 
 **b**
 
-**\>**
+**&gt;**
 
 bolded
 
-**\<**
+**&lt;**
 
 **/b**
 
-**\>**
+**&gt;**
 
 text!
 
-**\<**
+**&lt;**
 
 **/span**
 
-**\>**
+**&gt;**
 
   -----------------------------------------------------------------------
-  **\<span**                   **\>** and                     **\<b**
+  **&lt;span**                   **&gt;** and                     **&lt;b**
   ---------------------------- ------------------------------ -----------
 
   -----------------------------------------------------------------------
 
-> As demonstrated above, two inline elements, **\>**, are in-line (hence
+> As demonstrated above, two inline elements, **&gt;**, are in-line (hence
 > the name) and do not break the flow of the text.
 >
 > **Block**
 >
-> A block element occupies the maximum available width of its\' parent
+> A block element occupies the maximum available width of its&apos; parent
 > element. It starts with a new line and, in contrast to inline
 > elements, it does not restrict the type of elements it may contain.
 
-**\<**
+**&lt;**
 
 **div**
 
-**\>**
+**&gt;**
 
 Hello world!
 
-**\<**
+**&lt;**
 
 **/div**
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **div**
 
-**\>**
+**&gt;**
 
 This is an example!
 
-**\<**
+**&lt;**
 
 **/div**
 
-**\>**
+**&gt;**
 
 > The div element is block-level by default, and as shown above, the two
 > block elements are vertically stacked and, unlike the inline elements,
@@ -22997,17 +22582,17 @@ This is an example!
 > text-align. By default they are also shrunk to the the smallest size
 > possible to accommodate their content.
 
-*\<!\--*
+*&lt;!&minus;-*
 
 *Inline: unordered list*
 
-*\--\>*
+*&minus;-&gt;*
 
-**\<**
+**&lt;**
 
 **style**
 
-**\>**
+**&gt;**
 
 li {
 
@@ -23025,79 +22610,79 @@ border-style:solid;
 
 }
 
-**\<**
+**&lt;**
 
 **/style**
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **ul**
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **li**
 
-**\>**
+**&gt;**
 
 First Element
 
-**\<**
+**&lt;**
 
 **/li**
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **li**
 
-**\>**
+**&gt;**
 
 Second Element
 
-**\<**
+**&lt;**
 
 **/li**
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **li**
 
-**\>**
+**&gt;**
 
 Third Element
 
-**\<**
+**&lt;**
 
 **/li**
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **/ul**
 
-**\>**
+**&gt;**
 
-\<!\--
+&lt;!&minus;-
 
 block: unordered list
 
-\--
+&minus;-
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **style**
 
-**\>**
+**&gt;**
 
 li
 
@@ -23117,79 +22702,79 @@ border-style:solid;
 
 }
 
-**\<**
+**&lt;**
 
 **/style**
 
-**\>**
+**&gt;**
 
 **ul**
 
-**\<**
+**&lt;**
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **li**
 
-**\>**
+**&gt;**
 
 First Element
 
-**\<**
+**&lt;**
 
 **/li**
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **li**
 
-**\>**
+**&gt;**
 
 Second Element
 
-**\<**
+**&lt;**
 
 **/li**
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **li**
 
-**\>**
+**&gt;**
 
 Third Element
 
-**\<**
+**&lt;**
 
 **/li**
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **/ul**
 
-**\>**
+**&gt;**
 
-\<!\--
+&lt;!&minus;-
 
 Inline-block: unordered list
 
-\--
+&minus;-
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **style**
 
-**\>**
+**&gt;**
 
 li
 
@@ -23209,74 +22794,74 @@ border-style:solid;
 
 }
 
-**\<**
+**&lt;**
 
 **/style**
 
-**\>**
+**&gt;**
 
 **ul**
 
-**\<**
+**&lt;**
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **li**
 
-**\>**
+**&gt;**
 
 First Element
 
-**\<**
+**&lt;**
 
 **/li**
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **li**
 
-**\>**
+**&gt;**
 
 Second Element
 
-**\<**
+**&lt;**
 
 **/li**
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **li**
 
-**\>**
+**&gt;**
 
 Third Element
 
-**\<**
+**&lt;**
 
 **/li**
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **/ul**
 
-**\>**
+**&gt;**
 
 > **none**
 >
 > An element that is given the none value to its display property will
 > not be displayed at all.
 >
-> For example let\'s create a div-element that has an id of myDiv:
+> For example let&apos;s create a div-element that has an id of myDiv:
 
-**\<**
+**&lt;**
 
 **div**
 
@@ -23284,15 +22869,15 @@ id
 
 =
 
-\"myDiv\"
+&quot;myDiv&quot;
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **/div**
 
-**\>**
+**&gt;**
 
 > This can now be marked as not being displayed by the following CSS
 > rule:
@@ -23342,11 +22927,11 @@ none
 
 > This is the normal HTML table structure
 
-**\<**
+**&lt;**
 
 **style**
 
-**\>**
+**&gt;**
 
 table {
 
@@ -23354,57 +22939,57 @@ width: 100%;
 
 }
 
-**\<**
+**&lt;**
 
 **/style**
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **table**
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **tr**
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **td**
 
-**\>**
+**&gt;**
 
-I\'m a table
+I&apos;m a table
 
-**\<**
+**&lt;**
 
 **/td**
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **/tr**
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **/table**
 
-**\>**
+**&gt;**
 
 > You can do same implementation like this
 
-**\<**
+**&lt;**
 
 **style**
 
-**\>**
+**&gt;**
 
 .table-div
 
@@ -23430,25 +23015,13 @@ display: table-cell;
 
 }
 
-**\<**
+**&lt;**
 
 **/style**
 
-**\>**
+**&gt;**
 
-**\<**
-
-**div**
-
-class
-
-=
-
-\"table-div\"
-
-**\>**
-
-**\<**
+**&lt;**
 
 **div**
 
@@ -23456,11 +23029,11 @@ class
 
 =
 
-\"table-row-div\"
+&quot;table-div&quot;
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **div**
 
@@ -23468,29 +23041,41 @@ class
 
 =
 
-\"table-cell-div\"
+&quot;table-row-div&quot;
 
-**\>**
+**&gt;**
+
+**&lt;**
+
+**div**
+
+class
+
+=
+
+&quot;table-cell-div&quot;
+
+**&gt;**
 
 I behave like a table now
 
-**\<**
+**&lt;**
 
 **/div**
 
-**\>**
+**&gt;**
 
-**\<**
-
-**/div**
-
-**\>**
-
-**\<**
+**&lt;**
 
 **/div**
 
-**\>**
+**&gt;**
+
+**&lt;**
+
+**/div**
+
+**&gt;**
 
 # Chapter 24: Grid
 
@@ -23506,7 +23091,7 @@ I behave like a table now
 >
 > Consider the following markup:
 
-**\<**
+**&lt;**
 
 **section**
 
@@ -23514,11 +23099,11 @@ class
 
 =
 
-\"container\"
+&quot;container&quot;
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **div**
 
@@ -23526,19 +23111,19 @@ class
 
 =
 
-\"item1\"
+&quot;item1&quot;
 
-**\>**
+**&gt;**
 
 item1
 
-**\<**
+**&lt;**
 
 **/div**
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **div**
 
@@ -23546,19 +23131,19 @@ class
 
 =
 
-\"item2\"
+&quot;item2&quot;
 
-**\>**
+**&gt;**
 
 item2
 
-**\<**
+**&lt;**
 
 **/div**
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **div**
 
@@ -23566,19 +23151,19 @@ class
 
 =
 
-\"item3\"
+&quot;item3&quot;
 
-**\>**
+**&gt;**
 
 item3
 
-**\<**
+**&lt;**
 
 **/div**
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **div**
 
@@ -23586,23 +23171,23 @@ class
 
 =
 
-\"item4\"
+&quot;item4&quot;
 
-**\>**
+**&gt;**
 
 item4
 
-**\<**
+**&lt;**
 
 **/div**
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **/section**
 
-**\>**
+**&gt;**
 
 > The easiest way to define the markup structure above as a grid is to
 > simply set its display property to grid:
@@ -23676,7 +23261,7 @@ px
 
 }
 
-> However, that still doesn\'t help us much because we need to give an
+> However, that still doesn&apos;t help us much because we need to give an
 > order to each child element. We can do this by specifying the grid-row
 > and grid-column values which will tell it where it sits in the grid:
 
@@ -23780,7 +23365,7 @@ px
 > order within the container.
 >
 > View a working example on
-> [[JSFiddle]](https://jsfiddle.net/fexfwkkv/3/). You\'ll
+> [[JSFiddle]](https://jsfiddle.net/fexfwkkv/3/). You&apos;ll
 > need to view this in IE10, IE11 or Edge for it to work as these are
 > currently the only browsers supporting Grid Layout (with vendor prefix
 > -ms-) or enable a flag in Chrome, Opera and Firefox according to
@@ -23820,7 +23405,7 @@ px
 **Value Description**
 
 *auto* This is the default value. It defines the layout of the table to
-be determined by the contents of its\' cells.
+be determined by the contents of its&apos; cells.
 
 > This value sets the table layout to be determined by the width
 > property provided to the table. If the content
@@ -23865,7 +23450,7 @@ height="0.8854166666666666in"}
 
 ## Section 25.3: border-collapse
 
-> The border-collapse property determines if a tables\' borders should
+> The border-collapse property determines if a tables&apos; borders should
 > be separated or merged.
 >
 > Below an example of two tables with different values to the
@@ -23910,22 +23495,22 @@ height="0.9270833333333334in"}
 
 **Value Description**
 
-*\<length\>* This is the default behavior, though the exact value can
+*&lt;length&gt;* This is the default behavior, though the exact value can
 vary between browsers.
 
-> \<length\> \<length\> This syntax allows specifying separate
+> &lt;length&gt; &lt;length&gt; This syntax allows specifying separate
 > horizontal and vertical values respectively.
 
 ## Section 25.5: caption-side
 
   -----------------------------------------------------------------------
-  **\<caption**
+  **&lt;caption**
   -----------------------------------------------------------------------
 
   -----------------------------------------------------------------------
 
 > The caption-side property determines the vertical positioning of the
-> **\>** element within a table. This has no effect if such element does
+> **&gt;** element within a table. This has no effect if such element does
 > not exist.
 >
 > Below an example with two tables with different values set to the
@@ -24050,17 +23635,17 @@ green
 
 > **HTML**
 
-**\<**
+**&lt;**
 
 **div**
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **/div**
 
-**\>**
+**&gt;**
 
 > This example will change the background color when the div is hovered
 > the background-color change will last 1 second.
@@ -24101,7 +23686,7 @@ height="4.958333333333333in"}
 > (0,0) and P3 is at (1,1), which menas that the parameters passed to
 > the cubic-bezier function can only be between 0 and 1.
 >
-> If you pass parameters which aren\'t in this interval the function
+> If you pass parameters which aren&apos;t in this interval the function
 > will default to a linear transition.
 >
 > Since cubic-bezier is the most flexible transition in CSS, you can
@@ -24262,7 +23847,7 @@ px
 
 > **HTML**
 >
-> **\<div\>\</div\>**
+> **&lt;div&gt;&lt;/div&gt;**
 >
 > **transition-property**: Specifies the CSS properties the transition
 > effect is for. In this case, the div will expand both horizontally and
@@ -24307,11 +23892,11 @@ px
 |               |                                                      |
 +---------------+------------------------------------------------------+
 | **            |                                                      |
-| \@keyframes** |                                                      |
+| &commat;keyframes** |                                                      |
 +---------------+------------------------------------------------------+
 
   -----------------------------------------------------------------------
-  **\<percentage**
+  **&lt;percentage**
   -----------------------------------------------------------------------
 
   -----------------------------------------------------------------------
@@ -24325,24 +23910,24 @@ px
 > You can either specify a set time with a percentage value, or two
 > percentage values, ie
 >
-> \[ from \| to \| **\>** \]
+> &lbrack; from &vertbar; to &vertbar; **&gt;** &rbrack;
 >
-> , for a period of time where the keyframe\'s set attributes are set.
+> , for a period of time where the keyframe&apos;s set attributes are set.
 >
 > block Any amount of CSS attributes for the keyframe.
 
 ## Section 27.1: Animations with keyframes
 
-> For multi-stage CSS animations, you can create CSS \@keyframes.
+> For multi-stage CSS animations, you can create CSS &commat;keyframes.
 > Keyframes allow you to define multiple animation points, called a
 > keyframe, to define more complex animations.
 >
 > **Basic Example**
 >
-> In this example, we\'ll make a basic background animation that cycles
+> In this example, we&apos;ll make a basic background animation that cycles
 > between all colors.
 
-**\@keyframes**
+**&commat;keyframes**
 
 rainbow-background
 
@@ -24350,7 +23935,7 @@ rainbow-background
 
 0
 
-\%
+&percnt;
 
 {
 
@@ -24366,7 +23951,7 @@ rainbow-background
 
 8.333
 
-\%
+&percnt;
 
 {
 
@@ -24382,7 +23967,7 @@ rainbow-background
 
 16.667
 
-\%
+&percnt;
 
 {
 
@@ -24398,7 +23983,7 @@ rainbow-background
 
 25.000
 
-\%
+&percnt;
 
 {
 
@@ -24414,7 +23999,7 @@ rainbow-background
 
 33.333
 
-\%
+&percnt;
 
 {
 
@@ -24430,7 +24015,7 @@ rainbow-background
 
 41.667
 
-\%
+&percnt;
 
 {
 
@@ -24446,7 +24031,7 @@ rainbow-background
 
 50.000
 
-\%
+&percnt;
 
 {
 
@@ -24462,7 +24047,7 @@ rainbow-background
 
 58.333
 
-\%
+&percnt;
 
 {
 
@@ -24478,7 +24063,7 @@ rainbow-background
 
 66.667
 
-\%
+&percnt;
 
 {
 
@@ -24494,7 +24079,7 @@ rainbow-background
 
 75.000
 
-\%
+&percnt;
 
 {
 
@@ -24510,7 +24095,7 @@ rainbow-background
 
 83.333
 
-\%
+&percnt;
 
 {
 
@@ -24526,7 +24111,7 @@ rainbow-background
 
 91.667
 
-\%
+&percnt;
 
 {
 
@@ -24542,7 +24127,7 @@ rainbow-background
 
 100.00
 
-\%
+&percnt;
 
 {
 
@@ -24580,10 +24165,10 @@ infinite
 
 [*[View Result]*](https://jsfiddle.net/s9m3od3p/6/)
 
-> There\'s a few different things to note here. First, the actual
-> \@keyframes syntax.
+> There&apos;s a few different things to note here. First, the actual
+> &commat;keyframes syntax.
 
-**\@keyframes**
+**&commat;keyframes**
 
 rainbow-background
 
@@ -24593,7 +24178,7 @@ rainbow-background
 
 0
 
-\%
+&percnt;
 
 {
 
@@ -24674,13 +24259,13 @@ infinite
 
 0
 
-\%
+&percnt;
 
 ,
 
 100
 
-\%
+&percnt;
 
 {
 
@@ -24696,8 +24281,8 @@ infinite
 
 > **Cross-browser compatibility**
 >
-> For older WebKit-based browsers, you\'ll need to use the vendor prefix
-> on both the \@keyframes declaration and the animation property, like
+> For older WebKit-based browsers, you&apos;ll need to use the vendor prefix
+> on both the &commat;keyframes declaration and the animation property, like
 > so:
 
 **@-webkit-keyframes**
@@ -24706,13 +24291,13 @@ infinite
 
 }
 
-\-
+&minus;
 
 webkit-animation
 
 :
 
-\...
+&period;..
 
 ## Section 27.2: Animations with the transition property
 
@@ -24776,7 +24361,7 @@ px
 [*[View Result]*](https://jsfiddle.net/0kcm6rwo/)
 
 > By default, hovering over an element with the .Example class would
-> immediately cause the element\'s height to jump to 120px and its
+> immediately cause the element&apos;s height to jump to 120px and its
 > background color to red (#ff0000).
 >
 > By adding the transition property, we can cause these changes to occur
@@ -24786,7 +24371,7 @@ px
 
 {
 
-\...
+&period;..
 
 **transition**
 
@@ -24811,7 +24396,7 @@ ease
 > be substituted for this keyword.
 >
 > 400ms specifies the amount of time the transition takes. In this case,
-> the element\'s change in height will take 400 milliseconds to
+> the element&apos;s change in height will take 400 milliseconds to
 > complete.
 >
 > Finally, the value ease is the animation function, which determines
@@ -24876,7 +24461,7 @@ ease
 > numerical values, regardless of unit. It can also transition between
 > units, such as 100px to 50vh. However, it cannot transition between a
 > number and a default or automatic value, such as transitioning an
-> element\'s height from 100px to auto.
+> element&apos;s height from 100px to auto.
 
 ## Section 27.3: Syntax Examples
 
@@ -24885,14 +24470,14 @@ ease
 >
 > **animation**: 3s ease-in 1s 2 reverse both paused slidein;
 >
-> */\* duration \| timing-function \| delay \| iteration-count \|
-> direction \| fill-mode \| playstate \| name \*/*
+> */&ast; duration &vertbar; timing-function &vertbar; delay &vertbar; iteration-count &vertbar;
+> direction &vertbar; fill-mode &vertbar; playstate &vertbar; name &ast;/*
 >
 > Our second example is a little more simple, and shows that some
 > properties can be omitted:
 >
-> **animation**: 3s linear 1s slidein; */\* duration \| timing-function
-> \| delay \| name \*/*
+> **animation**: 3s linear 1s slidein; */&ast; duration &vertbar; timing-function
+> &vertbar; delay &vertbar; name &ast;/*
 >
 > Our third example shows the most minimal declaration. Note that the
 > animation-name and animation-duration must be declared:
@@ -24909,13 +24494,13 @@ slidein
 
 ;
 
-*/\* duration \| name \*/*
+*/&ast; duration &vertbar; name &ast;/*
 
-> It\'s also worth mentioning that when using the animation shorthand
+> It&apos;s also worth mentioning that when using the animation shorthand
 > the order of the properties makes a difference. Obviously the browser
 > may confuse your duration with your delay.
 >
-> If brevity isn\'t your thing, you can also skip the shorthand property
+> If brevity isn&apos;t your thing, you can also skip the shorthand property
 > and write out each property individually:
 
 **animation-duration**
@@ -24986,13 +24571,13 @@ slidein
 
 ;
 
-## Section 27.4: Increasing Animation Performance Using the \`will-change\` Attribute
+## Section 27.4: Increasing Animation Performance Using the &apos;will-change&apos; Attribute
 
-> When creating animations and other GPU-heavy actions, it\'s important
+> When creating animations and other GPU-heavy actions, it&apos;s important
 > to understand the will-change attribute.
 >
 > Both CSS keyframes and the transition property use GPU acceleration.
-> Performance is increased by offloading calculations to the device\'s
+> Performance is increased by offloading calculations to the device&apos;s
 > GPU. This is done by creating paint layers (parts of the page that are
 > individually rendered) that are offloaded to the GPU to be calculated.
 > The will-change property tells the browser what will animate, allowing
@@ -25007,7 +24592,7 @@ slidein
 
 {
 
-\...
+&period;..
 
 **will-change**
 
@@ -25038,7 +24623,7 @@ opacity
 
   -----------------------------------------------------------------------
 
-\(x\) Defines a transformation that moves the element around a fixed
+&lpar;x&rpar; Defines a transformation that moves the element around a fixed
 point on the Z axis
 
   -----------------------------------------------------------------------
@@ -25085,7 +24670,7 @@ point on the Z axis
 
   -----------------------------------------------------------------------
 
-> \(x\) Modifies the size of the element on the X axis (y) Modifies the
+> &lpar;x&rpar; Modifies the size of the element on the X axis (y) Modifies the
 > size of the element on the Y axis
 
   -----------------------------------------------------------------------
@@ -25170,7 +24755,7 @@ point on the Z axis
 
 > **HTML**
 
-**\<**
+**&lt;**
 
 **div**
 
@@ -25178,15 +24763,15 @@ class
 
 =
 
-\"rotate\"
+&quot;rotate&quot;
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **/div**
 
-**\>**
+**&gt;**
 
 > **CSS**
 
@@ -25251,11 +24836,11 @@ deg
 
 100
 
-\%
+&percnt;
 
 50
 
-\%
+&percnt;
 
 ;
 
@@ -25266,7 +24851,7 @@ deg
 
 > **HTML**
 
-**\<**
+**&lt;**
 
 **div**
 
@@ -25274,15 +24859,15 @@ class
 
 =
 
-\"scale\"
+&quot;scale&quot;
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **/div**
 
-**\>**
+**&gt;**
 
 > **CSS**
 
@@ -25339,7 +24924,7 @@ scale
 }
 
   --------------------------------------------------------------------------------------
-  100px   \*   0.5    =   50px   on the X axis and to    100px   \*   1.3    =   130px
+  100px   &ast;   0.5    =   50px   on the X axis and to    100px   &ast;   1.3    =   130px
   ------- ---- ------ --- ------ ----------------------- ------- ---- ------ --- -------
 
   --------------------------------------------------------------------------------------
@@ -25353,7 +24938,7 @@ scale
 
 > **HTML**
 
-**\<**
+**&lt;**
 
 **div**
 
@@ -25361,15 +24946,15 @@ class
 
 =
 
-\"skew\"
+&quot;skew&quot;
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **/div**
 
-**\>**
+**&gt;**
 
 > **CSS**
 
@@ -25473,7 +25058,7 @@ px
 > it 200px to the right.
 >
 > In chained transforms, **the coordinate system moves with the
-> element**. This means that the translation won\'t be horizontal but on
+> element**. This means that the translation won&apos;t be horizontal but on
 > an axis rotate 15 degrees clockwise as shown in the following image:
 
 ![](./images/media/image207.jpg){width="7.48037510936133in"
@@ -25508,7 +25093,7 @@ deg
 
 ;
 
-**\<**
+**&lt;**
 
 **div**
 
@@ -25516,15 +25101,15 @@ class
 
 =
 
-\"transform\"
+&quot;transform&quot;
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **/div**
 
-**\>**
+**&gt;**
 
 .transform
 
@@ -25567,7 +25152,7 @@ height="2.7919728783902014in"}
 
 > **HTML**
 
-**\<**
+**&lt;**
 
 **div**
 
@@ -25575,15 +25160,15 @@ class
 
 =
 
-\"translate\"
+&quot;translate&quot;
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **/div**
 
-**\>**
+**&gt;**
 
 > **CSS**
 
@@ -25635,7 +25220,7 @@ px
 
 50
 
-\%
+&percnt;
 
 )
 
@@ -25644,7 +25229,7 @@ px
 }
 
   ------------------------------------------------------------------------
-  100px                   \*   50%                 =   50px
+  100px                   &ast;   50%                 =   50px
   ----------------------- ---- ------------------- --- -------------------
 
   ------------------------------------------------------------------------
@@ -25694,7 +25279,7 @@ translateY
 
 50
 
-\%
+&percnt;
 
 )
 
@@ -25729,11 +25314,11 @@ translateY
 
 > In the following example the first div (.tl) is rotate around the top
 > left corner with : 0 0; and the second (.tr)is transformed around
-> it\'s top right corner with 0. The rotation is applied **on hover** :
+> it&apos;s top right corner with 0. The rotation is applied **on hover** :
 >
 > *HTML:*
 
-**\<**
+**&lt;**
 
 **div**
 
@@ -25741,17 +25326,17 @@ class
 
 =
 
-\"transform originl\"
+&quot;transform originl&quot;
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **/div**
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **div**
 
@@ -25759,15 +25344,15 @@ class
 
 =
 
-\"transform origin2\"
+&quot;transform origin2&quot;
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **/div**
 
-**\>**
+**&gt;**
 
 > *CSS:*
 
@@ -25851,7 +25436,7 @@ s
 
 100
 
-\%
+&percnt;
 
 0
 
@@ -25962,7 +25547,7 @@ deg
 
 ;
 
-*/\* presentational \*/*
+*/&ast; presentational &ast;/*
 
 **background-image**
 
@@ -25984,7 +25569,7 @@ left
 
 0
 
-\%
+&percnt;
 
 ,
 
@@ -25992,7 +25577,7 @@ left
 
 40
 
-\%
+&percnt;
 
 ,
 
@@ -26000,7 +25585,7 @@ left
 
 50
 
-\%
+&percnt;
 
 ,
 
@@ -26008,7 +25593,7 @@ left
 
 97
 
-\%
+&percnt;
 
 )
 
@@ -26044,7 +25629,7 @@ px
 
 > **HTML**
 
-**\<**
+**&lt;**
 
 **div**
 
@@ -26052,15 +25637,15 @@ class
 
 =
 
-\'needle\'
+&apos;needle&apos;
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **/div**
 
-**\>**
+**&gt;**
 
 > In the above example, a needle or compass pointer shape is created
 > using 3D transforms. Generally when we apply the rotate transform on
@@ -26079,7 +25664,7 @@ class
 > The output of the above example would be a needle resting on its tip.
 > For creating a needle that is resting on its base, the rotation should
 > be along the X-axis instead of along Y-axis. So the transform
-> property\'s value would have to be something like );.
+> property&apos;s value would have to be something like );.
 >
 > [[This pen]](http://codepen.io/hari_shanx/pen/YXzoBo) uses
 > a similar approach to create something that resembles the Safari logo
@@ -26104,7 +25689,7 @@ height="2.4791666666666665in"}
 
 ***HTML:***
 
-**\<**
+**&lt;**
 
 **div**
 
@@ -26112,11 +25697,11 @@ id
 
 =
 
-\"title\"
+&quot;title&quot;
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **h**
 
@@ -26126,29 +25711,29 @@ data-content
 
 =
 
-\"HOVER\"
+&quot;HOVER&quot;
 
-**\>**
+**&gt;**
 
 HOVER
 
-**\<**
+**&lt;**
 
 **/h**
 
 **1**
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **/div**
 
-**\>**
+**&gt;**
 
 ***CSS:***
 
-\*
+&ast;
 
 {
 
@@ -26184,7 +25769,7 @@ body
 
 100
 
-\%
+&percnt;
 
 ;
 
@@ -26194,7 +25779,7 @@ body
 
 100
 
-\%
+&percnt;
 
 ;
 
@@ -26234,7 +25819,7 @@ absolute
 
 50
 
-\%
+&percnt;
 
 ;
 
@@ -26244,7 +25829,7 @@ absolute
 
 50
 
-\%
+&percnt;
 
 ;
 
@@ -26258,13 +25843,13 @@ translate
 
 -50
 
-\%
+&percnt;
 
 ,
 
 -50
 
-\%
+&percnt;
 
 )
 
@@ -26276,11 +25861,11 @@ translate
 
 50
 
-\%
+&percnt;
 
 50
 
-\%
+&percnt;
 
 ;
 
@@ -26322,7 +25907,7 @@ vmin
 
 :
 
-\'Open Sans\'
+&apos;Open Sans&apos;
 
 ,
 
@@ -26398,11 +25983,11 @@ px
 
 0
 
-\%
+&percnt;
 
 50
 
-\%
+&percnt;
 
 ;
 
@@ -26460,11 +26045,11 @@ absolute
 
 50
 
-\%
+&percnt;
 
 100
 
-\%
+&percnt;
 
 ;
 
@@ -26506,7 +26091,7 @@ before
 
 :
 
-\'\'
+&apos;&apos;
 
 ;
 
@@ -26524,7 +26109,7 @@ absolute
 
 -150
 
-\%
+&percnt;
 
 ;
 
@@ -26534,7 +26119,7 @@ absolute
 
 -25
 
-\%
+&percnt;
 
 ;
 
@@ -26544,7 +26129,7 @@ absolute
 
 180
 
-\%
+&percnt;
 
 ;
 
@@ -26554,7 +26139,7 @@ absolute
 
 328
 
-\%
+&percnt;
 
 ;
 
@@ -26592,7 +26177,7 @@ rgba
 
 100
 
-\%
+&percnt;
 
 ;
 
@@ -26642,7 +26227,7 @@ deg
 
 100
 
-\%
+&percnt;
 
 0
 
@@ -26661,16 +26246,16 @@ height="3.642194881889764in"}
 >
 > The shadow is transformed accordingly so it follows the text. As it is
 > made with a pseudo element and the data attribute, it inherits the
-> transforms form it\'s parent (the H1 tag).
+> transforms form it&apos;s parent (the H1 tag).
 >
-> The white \"light\" is made with a pseudo element on the #title
+> The white &quot;light&quot; is made with a pseudo element on the #title
 > element. It is skewed and uses border-radius for the rounded corner.
 
 ## Section 29.3: backface-visibility
 
 > The backface-visibility property relates to 3D transforms.
 >
-> With 3D transforms and the backface-visibility property, you\'re able
+> With 3D transforms and the backface-visibility property, you&apos;re able
 > to rotate an element such that the original front of an element no
 > longer faces the screen.
 >
@@ -26678,7 +26263,7 @@ height="3.642194881889764in"}
 
 [[JSFIDDLE]](https://jsfiddle.net/3z3z843c/)
 
-**\<**
+**&lt;**
 
 **div**
 
@@ -26686,19 +26271,19 @@ class
 
 =
 
-\"flip\"
+&quot;flip&quot;
 
-**\>**
+**&gt;**
 
 Loren ipsum
 
-**\<**
+**&lt;**
 
 **/div**
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **div**
 
@@ -26706,17 +26291,17 @@ class
 
 =
 
-\"flip back\"
+&quot;flip back&quot;
 
-**\>**
+**&gt;**
 
 Lorem ipsum
 
-**\<**
+**&lt;**
 
 **/div**
 
-**\>**
+**&gt;**
 
 .flip
 
@@ -26851,7 +26436,7 @@ hidden
 >
 > *HTML:*
 
-**\<**
+**&lt;**
 
 **div**
 
@@ -26859,29 +26444,11 @@ class
 
 =
 
-\"cube\"
+&quot;cube&quot;
 
-**\>**
+**&gt;**
 
-**\<**
-
-**div**
-
-class
-
-=
-
-\"cubeFace\"
-
-**\>**
-
-**\<**
-
-**/div**
-
-**\>**
-
-**\<**
+**&lt;**
 
 **div**
 
@@ -26889,21 +26456,39 @@ class
 
 =
 
-\"cubeFace face2\"
+&quot;cubeFace&quot;
 
-**\>**
+**&gt;**
 
-**\<**
-
-**/div**
-
-**\>**
-
-**\<**
+**&lt;**
 
 **/div**
 
-**\>**
+**&gt;**
+
+**&lt;**
+
+**div**
+
+class
+
+=
+
+&quot;cubeFace face2&quot;
+
+**&gt;**
+
+**&lt;**
+
+**/div**
+
+**&gt;**
+
+**&lt;**
+
+**/div**
+
+**&gt;**
 
 > *CSS:*
 
@@ -26917,11 +26502,11 @@ body
 
 50
 
-\%
+&percnt;
 
 100
 
-\%
+&percnt;
 
 ;
 
@@ -26963,7 +26548,7 @@ relative
 
 20
 
-\%
+&percnt;
 
 ;
 
@@ -26981,11 +26566,11 @@ preserve-3d
 
 50
 
-\%
+&percnt;
 
 100
 
-\%
+&percnt;
 
 ;
 
@@ -27068,8 +26653,8 @@ example]**](http://codepen.io/web-tiki/pen/NNwqBa)
 
 > **HTML**
 >
-> **\<img** src=\'donald-duck.png\' alt=\'Donald Duck\' title=\'Donald
-> Duck\' **/\>**
+> **&lt;img** src=&apos;donald-duck.png&apos; alt=&apos;Donald Duck&apos; title=&apos;Donald
+> Duck&apos; **/&gt;**
 >
 > **CSS**
 
@@ -27122,19 +26707,19 @@ height="2.8125in"}
 
 > **HTML**
 
-**\<**
+**&lt;**
 
 **p**
 
-**\>**
+**&gt;**
 
 My shadow always follows me.
 
-**\<**
+**&lt;**
 
 **/p**
 
-**\>**
+**&gt;**
 
 > **CSS**
 
@@ -27205,8 +26790,8 @@ height="0.5729166666666666in"}
 
 > **HTML**
 >
-> **\<img** src=\'donald-duck.png\' alt=\'Donald Duck\' title=\'Donald
-> Duck\' **/\>**
+> **&lt;img** src=&apos;donald-duck.png&apos; alt=&apos;Donald Duck&apos; title=&apos;Donald
+> Duck&apos; **/&gt;**
 >
 > **CSS**
 
@@ -27259,8 +26844,8 @@ height="2.8125in"}
 >
 > **HTML**
 >
-> **\<img** src=\'donald-duck.png\' alt=\'Donald Duck\' title=\'Donald
-> Duck\' **/\>**
+> **&lt;img** src=&apos;donald-duck.png&apos; alt=&apos;Donald Duck&apos; title=&apos;Donald
+> Duck&apos; **/&gt;**
 >
 > **CSS**
 
@@ -27278,7 +26863,7 @@ brightness
 
 200
 
-\%
+&percnt;
 
 )
 
@@ -27288,7 +26873,7 @@ grayscale
 
 100
 
-\%
+&percnt;
 
 )
 
@@ -27298,7 +26883,7 @@ sepia
 
 100
 
-\%
+&percnt;
 
 )
 
@@ -27308,7 +26893,7 @@ invert
 
 100
 
-\%
+&percnt;
 
 )
 
@@ -27324,7 +26909,7 @@ brightness
 
 200
 
-\%
+&percnt;
 
 )
 
@@ -27334,7 +26919,7 @@ grayscale
 
 100
 
-\%
+&percnt;
 
 )
 
@@ -27344,7 +26929,7 @@ sepia
 
 100
 
-\%
+&percnt;
 
 )
 
@@ -27354,7 +26939,7 @@ invert
 
 100
 
-\%
+&percnt;
 
 )
 
@@ -27371,17 +26956,17 @@ height="2.7083333333333335in"}
 
 > **HTML**
 
-**\<**
+**&lt;**
 
 **div**
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **/div**
 
-**\>**
+**&gt;**
 
 > **CSS**
 
@@ -27427,7 +27012,7 @@ invert
 
 100
 
-\%
+&percnt;
 
 )
 
@@ -27443,7 +27028,7 @@ invert
 
 100
 
-\%
+&percnt;
 
 )
 
@@ -27501,14 +27086,14 @@ none
 
 > In this example,
 
-\'none\' prevents all click, state and cursor options on the specified
-HTML element \[\[1\]\]
+&apos;none&apos; prevents all click, state and cursor options on the specified
+HTML element &lbrack;&lbrack;1&rbrack;&rbrack;
 
 > Other valid values for HTMl elements are:
 >
 > auto; inherit.
 >
-> 1\.
+> 1&period;
 > [[https://css-tricks.com/almanac/properties/p/pointer-events/]](https://css-tricks.com/almanac/properties/p/pointer-events/)
 >
 > Other resources:
@@ -27520,11 +27105,11 @@ HTML element \[\[1\]\]
 
 > The caret-color CSS property specifies the color of the caret, the
 > visible indicator of the insertion point in an element where text and
-> other content is inserted by the user\'s typing or editing.
+> other content is inserted by the user&apos;s typing or editing.
 >
 > **HTML**
 
-**\<**
+**&lt;**
 
 **input**
 
@@ -27532,9 +27117,9 @@ id
 
 =
 
-\"example\"
+&quot;example&quot;
 
-**/\>**
+**/&gt;**
 
 > **CSS**
 
@@ -27586,7 +27171,7 @@ JSFiddle:
 
 > **HTML**
 
-**\<**
+**&lt;**
 
 **div**
 
@@ -27594,15 +27179,15 @@ class
 
 =
 
-\"box_shadow\"
+&quot;box_shadow&quot;
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **/div**
 
-**\>**
+**&gt;**
 
 > **CSS**
 
@@ -27662,7 +27247,7 @@ after
 
 :
 
-\"\"
+&quot;&quot;
 
 ;
 
@@ -27726,7 +27311,7 @@ absolute
 
 :
 
-\-
+&minus;
 
 1
 
@@ -27815,7 +27400,7 @@ JSFiddle:
 
 > **HTML**
 
-**\<**
+**&lt;**
 
 **div**
 
@@ -27823,15 +27408,15 @@ class
 
 =
 
-\"box_shadow\"
+&quot;box_shadow&quot;
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **/div**
 
-**\>**
+**&gt;**
 
 > **CSS**
 
@@ -27917,7 +27502,7 @@ px
 
 > **HTML**
 
-**\<**
+**&lt;**
 
 **div**
 
@@ -27925,15 +27510,15 @@ class
 
 =
 
-\"box_shadow\"
+&quot;box_shadow&quot;
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **/div**
 
-**\>**
+**&gt;**
 
 > **CSS**
 
@@ -28074,7 +27659,7 @@ JSFiddle:
 
 > **HTML**
 
-**\<**
+**&lt;**
 
 **div**
 
@@ -28082,15 +27667,15 @@ class
 
 =
 
-\"box_shadow\"
+&quot;box_shadow&quot;
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **/div**
 
-**\>**
+**&gt;**
 
 > **CSS**
 
@@ -28235,10 +27820,10 @@ height="5.833333333333333in"}
 > basic-shape values the shape is defined.
 >
 > Refers to one among margin-box, border-box, padding-box, content-box.
-> When only \<shape-box\> is
+> When only &lt;shape-box&gt; is
 >
-> shape-box provided (without \<basic-shape\>) this box *is the* shape.
-> When it is used along with \<basic-shape\>, this acts as the reference
+> shape-box provided (without &lt;basic-shape&gt;) this box *is the* shape.
+> When it is used along with &lt;basic-shape&gt;, this acts as the reference
 > box.
 >
 > When an image is provided as value, the shape is computed based on the
@@ -28248,7 +27833,7 @@ height="5.833333333333333in"}
 
 > With the shape-outside CSS property one can define shape values for
 > the float area so that the inline content wraps around the shape
-> instead of the float\'s box.
+> instead of the float&apos;s box.
 >
 > **CSS**
 
@@ -28282,11 +27867,11 @@ at
 
 50
 
-\%
+&percnt;
 
 50
 
-\%
+&percnt;
 
 )
 
@@ -28342,11 +27927,11 @@ at
 
 50
 
-\%
+&percnt;
 
 50
 
-\%
+&percnt;
 
 )
 
@@ -28394,22 +27979,22 @@ px
 
 ;
 
-*/\* purely for demo \*/*
+*/&ast; purely for demo &ast;/*
 
 }
 
 > **HTML**
 >
-> **\<img**
-> src=\"http://images.clipartpanda.com/circle-clip-art-circlergb.jpg\"**\>**
+> **&lt;img**
+> src=&quot;http://images.clipartpanda.com/circle-clip-art-circlergb.jpg&quot;**&gt;**
 >
-> **\<img**
-> src=\"http://images.clipartpanda.com/circle-clip-art-circlergb.jpg\"**\>**
+> **&lt;img**
+> src=&quot;http://images.clipartpanda.com/circle-clip-art-circlergb.jpg&quot;**&gt;**
 >
-> **\<p\>**Some paragraph whose text content is required to be wrapped
+> **&lt;p&gt;**Some paragraph whose text content is required to be wrapped
 > such that it follows the curve of the circle on either side. And then
 > there is some filler text just to make the text long enough. Lorem
-> Ipsum Dolor Sit Amet\....**\</p\>**
+> Ipsum Dolor Sit Amet&period;...**&lt;/p&gt;**
 >
 > In the above example, both the images are actually square images and
 > when the text is placed without the shapeoutside property, it will not
@@ -28420,7 +28005,7 @@ px
 >
 > The *imaginary circle* that is used to re-define the float area is a
 > circle with radius of 80px drawn from the center-mid point of the
-> image\'s reference box.
+> image&apos;s reference box.
 >
 > Below are a couple of screenshots to illustrate how the content would
 > be wrapped around when shape-outside is used and when it is not used.
@@ -28470,11 +28055,11 @@ at
 
 50
 
-\%
+&percnt;
 
 50
 
-\%
+&percnt;
 
 )
 
@@ -28540,11 +28125,11 @@ at
 
 50
 
-\%
+&percnt;
 
 50
 
-\%
+&percnt;
 
 )
 
@@ -28602,22 +28187,22 @@ px
 
 ;
 
-*/\* purely for demo \*/*
+*/&ast; purely for demo &ast;/*
 
 }
 
 > **HTML**
 >
-> **\<img**
-> src=\"http://images.clipartpanda.com/circle-clip-art-circlergb.jpg\"**\>**
+> **&lt;img**
+> src=&quot;http://images.clipartpanda.com/circle-clip-art-circlergb.jpg&quot;**&gt;**
 >
-> **\<img**
-> src=\"http://images.clipartpanda.com/circle-clip-art-circlergb.jpg\"**\>**
+> **&lt;img**
+> src=&quot;http://images.clipartpanda.com/circle-clip-art-circlergb.jpg&quot;**&gt;**
 >
-> **\<p\>**Some paragraph whose text content is required to be wrapped
+> **&lt;p&gt;**Some paragraph whose text content is required to be wrapped
 > such that it follows the curve of the circle on either side. And then
 > there is some filler text just to make the text long enough. Lorem
-> Ipsum Dolor Sit Amet\....**\</p\>**
+> Ipsum Dolor Sit Amet&period;...**&lt;/p&gt;**
 >
 > In this example, a 10px margin is added around the **shape** using
 > shape-margin. This creates a bit more space between the *imaginary
@@ -28641,20 +28226,20 @@ height="1.3958333333333333in"}
 ## Section 34.1: Bullet Position
 
   ---------------------------------------------------------------------------------------------
-  **\<li**   **\>** elements inside a containing element (       **\<ul**   **\>**   **\<ol**
+  **&lt;li**   **&gt;** elements inside a containing element (       **&lt;ul**   **&gt;**   **&lt;ol**
                                                                             or       
   ---------- --------------------------------------------------- ---------- -------- ----------
 
   ---------------------------------------------------------------------------------------------
 
-> A list consists of **\>**). Both the list items and the container can
+> A list consists of **&gt;**). Both the list items and the container can
 >
 > have margins and paddings which influence the exact position of the
 > list item content in the document. The default values for the margin
 > and padding may be different for each browser. In order to get the
 > same layout crossbrowser, these need to be set specifically.
 >
-> Each list item gets a \'marker box\', which contains the bullet
+> Each list item gets a &apos;marker box&apos;, which contains the bullet
 > marker. This box can either be placed inside or outside of the list
 > item box.
 
@@ -28667,12 +28252,12 @@ inside
 ;
 
   -----------------------------------------------------------------------
-  **\<li**
+  **&lt;li**
   -----------------------------------------------------------------------
 
   -----------------------------------------------------------------------
 
-> places the bullet within the **\>** element, pushing the content to
+> places the bullet within the **&gt;** element, pushing the content to
 > the right as needed.
 
 **list-style-position**
@@ -28684,12 +28269,12 @@ outside
 ;
 
   -----------------------------------------------------------------------
-  **\<li**
+  **&lt;li**
   -----------------------------------------------------------------------
 
   -----------------------------------------------------------------------
 
-> places the bullet left of the **\>** element. If there is not enough
+> places the bullet left of the **&gt;** element. If there is not enough
 > space in the padding of the containing element, the marker box will
 > extend to the left even if it would fall off the page.
 >
@@ -28701,45 +28286,45 @@ outside
 > Sometimes, a list should just not display any bullet points or
 > numbers. In that case, remember to specify margin and padding.
 
-**\<**
+**&lt;**
 
 **ul**
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **li**
 
-**\>**
+**&gt;**
 
 first item
 
-**\<**
+**&lt;**
 
 **/li**
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **li**
 
-**\>**
+**&gt;**
 
 second item
 
-**\<**
+**&lt;**
 
 **/li**
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **/ul**
 
-**\>**
+**&gt;**
 
 > CSS
 
@@ -28782,41 +28367,41 @@ li
 ## Section 34.3: Type of Bullet or Numbering
 
   --------------------------------------------------------------------------------
-  **\<li**   **\>** tags within an unordered list (                     **\<ul**
+  **&lt;li**   **&gt;** tags within an unordered list (                     **&lt;ul**
   ---------- ---------------------------------------------------------- ----------
 
   --------------------------------------------------------------------------------
 
-> Specific for **\>**):
+> Specific for **&gt;**):
 >
-> **list-style**: disc; */\* A filled circle (default) \*/*
-> **list-style**: circle; */\* A hollow circle \*/* **list-style**:
-> square; */\* A filled square \*/* **list-style**: \'-\'; */\* any
-> string \*/*
+> **list-style**: disc; */&ast; A filled circle (default) &ast;/*
+> **list-style**: circle; */&ast; A hollow circle &ast;/* **list-style**:
+> square; */&ast; A filled square &ast;/* **list-style**: &apos;-&apos;; */&ast; any
+> string &ast;/*
 
   -------------------------------------------------------------------------------
-  **\<li**   **\>** tags within an ordered list (                      **\<ol**
+  **&lt;li**   **&gt;** tags within an ordered list (                      **&lt;ol**
   ---------- --------------------------------------------------------- ----------
 
   -------------------------------------------------------------------------------
 
-> Specific for **\>**):
+> Specific for **&gt;**):
 
-**list-style**: decimal; */\* Decimal numbers beginning with 1 (default)
-\*/* **list-style**: decimal-leading-zero;*/\* Decimal numbers padded by
-initial zeros (01, 02, 03,* ... *10) \*/* **list-style**: lower-roman;
-*/\* Lowercase roman numerals (i., ii., iii., iv., \...) \*/*
-**list-style**: upper-roman; */\* Uppercase roman numerals (I., II.,
-III., IV., \...) \*/* **list-style-type**: lower-greek; */\* Lowercase
-roman letters (*α*.,* β*.,* γ*.,* δ*., \...) \*/* **list-style-type**:
-lower-alpha; */\* Lowercase letters (a., b., c., d., \...) \*/*
-**list-style-type**: lower-latin; */\* Lowercase letters (a., b., c.,
-d., \...) \*/* **list-style-type**: upper-alpha; */\* Uppercase letters
-(A., B., C., D., \...) \*/* **list-style-type**: upper-latin; */\*
-Uppercase letters (A., B., C., D., \...) \*/* Non-specific:
+**list-style**: decimal; */&ast; Decimal numbers beginning with 1 (default)
+&ast;/* **list-style**: decimal-leading-zero;*/&ast; Decimal numbers padded by
+initial zeros (01, 02, 03,* ... *10) &ast;/* **list-style**: lower-roman;
+*/&ast; Lowercase roman numerals (i., ii., iii., iv., &period;..) &ast;/*
+**list-style**: upper-roman; */&ast; Uppercase roman numerals (I., II.,
+III., IV., &period;..) &ast;/* **list-style-type**: lower-greek; */&ast; Lowercase
+roman letters (*α*.,* β*.,* γ*.,* δ*., &period;..) &ast;/* **list-style-type**:
+lower-alpha; */&ast; Lowercase letters (a., b., c., d., &period;..) &ast;/*
+**list-style-type**: lower-latin; */&ast; Lowercase letters (a., b., c.,
+d., &period;..) &ast;/* **list-style-type**: upper-alpha; */&ast; Uppercase letters
+(A., B., C., D., &period;..) &ast;/* **list-style-type**: upper-latin; */&ast;
+Uppercase letters (A., B., C., D., &period;..) &ast;/* Non-specific:
 
-> **list-style**: none; */\* No visible list marker \*/* **list-style**:
-> inherit; */\* Inherits from parent \*/*
+> **list-style**: none; */&ast; No visible list marker &ast;/* **list-style**:
+> inherit; */&ast; Inherits from parent &ast;/*
 
 # Chapter 35: Counters
 
@@ -28841,7 +28426,7 @@ Uppercase letters (A., B., C., D., \...) \*/* Non-specific:
 
   -----------------------------------------------------------------------
 
-> This is the initial value for all 3 \* properties. When this value is
+> This is the initial value for all 3 &ast; properties. When this value is
 > used for counter-
 
 none increment, the value of none of the counters are affected. When
@@ -28860,7 +28445,7 @@ then the counter value is not printed
 > This represents the string that must be placed between the values of
 > two different counter levels
 >
-> connector-string (like the \".\" in \"2.1.1\").
+> connector-string (like the &quot;.&quot; in &quot;2.1.1&quot;).
 
 ## Section 35.1: Applying roman numerals styling to the counter output
 
@@ -28918,19 +28503,19 @@ upper-roman
 
 )
 
-\". \"
+&quot;. &quot;
 
 ;
 
-*/\* by specifying the upper-roman as style the*
+*/&ast; by specifying the upper-roman as style the*
 
-*output would be in roman numbers \*/*
+*output would be in roman numbers &ast;/*
 
 }
 
 > **HTML**
 
-**\<**
+**&lt;**
 
 **div**
 
@@ -28938,19 +28523,19 @@ class
 
 =
 
-\'item\'
+&apos;item&apos;
 
-**\>**
+**&gt;**
 
 Item No: 1
 
-**\<**
+**&lt;**
 
 **/div**
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **div**
 
@@ -28958,19 +28543,19 @@ class
 
 =
 
-\'item\'
+&apos;item&apos;
 
-**\>**
+**&gt;**
 
 Item No: 2
 
-**\<**
+**&lt;**
 
 **/div**
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **div**
 
@@ -28978,21 +28563,21 @@ class
 
 =
 
-\'item\'
+&apos;item&apos;
 
-**\>**
+**&gt;**
 
 Item No: 3
 
-**\<**
+**&lt;**
 
 **/div**
 
-**\>**
+**&gt;**
 
-> In the above example, the counter\'s output would be displayed as I,
+> In the above example, the counter&apos;s output would be displayed as I,
 > II, III (roman numbers) instead of the usual 1, 2, 3 as the developer
-> has explicitly specified the counter\'s style.
+> has explicitly specified the counter&apos;s style.
 
 ## Section 35.2: Number each item using CSS Counter
 
@@ -29010,7 +28595,7 @@ item-counter
 
 ;
 
-*/\* create the counter \*/*
+*/&ast; create the counter &ast;/*
 
 }
 
@@ -29026,9 +28611,9 @@ item-counter
 
 ;
 
-*/\* increment the counter every time an element with class \"item\"*
+*/&ast; increment the counter every time an element with class &quot;item&quot;*
 
-*is encountered \*/*
+*is encountered &ast;/*
 
 }
 
@@ -29052,17 +28637,17 @@ item-counter
 
 )
 
-\". \"
+&quot;. &quot;
 
 ;
 
-*/\* print the value of the counter before the header and*
+*/&ast; print the value of the counter before the header and*
 
-*append a \".\" to it \*/*
+*append a &quot;.&quot; to it &ast;/*
 
 }
 
-*/\* just for demo \*/*
+*/&ast; just for demo &ast;/*
 
 .item
 
@@ -29168,7 +28753,7 @@ px
 
 > **HTML**
 
-**\<**
+**&lt;**
 
 **div**
 
@@ -29176,11 +28761,11 @@ class
 
 =
 
-\'item\'
+&apos;item&apos;
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **div**
 
@@ -29188,19 +28773,19 @@ class
 
 =
 
-\'item-header\'
+&apos;item-header&apos;
 
-**\>**
+**&gt;**
 
 Item 1 Header
 
-**\<**
+**&lt;**
 
 **/div**
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **div**
 
@@ -29208,25 +28793,25 @@ class
 
 =
 
-\'item-content\'
+&apos;item-content&apos;
 
-**\>**
+**&gt;**
 
-Lorem Ipsum Dolor Sit Amet\....
+Lorem Ipsum Dolor Sit Amet&period;...
 
-**\<**
-
-**/div**
-
-**\>**
-
-**\<**
+**&lt;**
 
 **/div**
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
+
+**/div**
+
+**&gt;**
+
+**&lt;**
 
 **div**
 
@@ -29234,11 +28819,11 @@ class
 
 =
 
-\'item\'
+&apos;item&apos;
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **div**
 
@@ -29246,19 +28831,19 @@ class
 
 =
 
-\'item-header\'
+&apos;item-header&apos;
 
-**\>**
+**&gt;**
 
 Item 2 Header
 
-**\<**
+**&lt;**
 
 **/div**
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **div**
 
@@ -29266,25 +28851,25 @@ class
 
 =
 
-\'item-content\'
+&apos;item-content&apos;
 
-**\>**
+**&gt;**
 
-Lorem Ipsum Dolor Sit Amet\....
+Lorem Ipsum Dolor Sit Amet&period;...
 
-**\<**
-
-**/div**
-
-**\>**
-
-**\<**
+**&lt;**
 
 **/div**
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
+
+**/div**
+
+**&gt;**
+
+**&lt;**
 
 **div**
 
@@ -29292,11 +28877,11 @@ class
 
 =
 
-\'item\'
+&apos;item&apos;
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **div**
 
@@ -29304,19 +28889,19 @@ class
 
 =
 
-\'item-header\'
+&apos;item-header&apos;
 
-**\>**
+**&gt;**
 
 Item 3 Header
 
-**\<**
+**&lt;**
 
 **/div**
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **div**
 
@@ -29324,23 +28909,23 @@ class
 
 =
 
-\'item-content\'
+&apos;item-content&apos;
 
-**\>**
+**&gt;**
 
-Lorem Ipsum Dolor Sit Amet\....
+Lorem Ipsum Dolor Sit Amet&period;...
 
-**\<**
-
-**/div**
-
-**\>**
-
-**\<**
+**&lt;**
 
 **/div**
 
-**\>**
+**&gt;**
+
+**&lt;**
+
+**/div**
+
+**&gt;**
 
   -----------------------------------------------------------------------
   :before
@@ -29348,9 +28933,9 @@ Lorem Ipsum Dolor Sit Amet\....
 
   -----------------------------------------------------------------------
 
-> The above example numbers every \"item\" in the page and adds the
-> item\'s number before its header (using content property of
-> .item-header element\'s pseudo). A live demo of this code is available
+> The above example numbers every &quot;item&quot; in the page and adds the
+> item&apos;s number before its header (using content property of
+> .item-header element&apos;s pseudo). A live demo of this code is available
 > [[here]](https://jsfiddle.net/a7rmje3r/).
 
 ## Section 35.3: Implementing multi-level numbering using CSS counters
@@ -29377,7 +28962,7 @@ list-item-number
 
 ;
 
-*/\* self nesting counter as name is same for all levels \*/*
+*/&ast; self nesting counter as name is same for all levels &ast;/*
 
 }
 
@@ -29415,196 +29000,196 @@ list-item-number
 
 ,
 
-\".\"
+&quot;.&quot;
 
 )
 
-\" \"
+&quot; &quot;
 
 ;
 
-*/\* usage of counters() function means value of*
+*/&ast; usage of counters() function means value of*
 
-*counters at all higher levels are combined before printing \*/*
+*counters at all higher levels are combined before printing &ast;/*
 
 }
 
 **HTML**
 
-**\<**
+**&lt;**
 
 **ul**
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **li**
 
-**\>**
+**&gt;**
 
 Level 1
 
-**\<**
+**&lt;**
 
 **ul**
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **li**
 
-**\>**
+**&gt;**
 
 Level 1.1
 
-**\<**
+**&lt;**
 
 **ul**
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **li**
 
-**\>**
+**&gt;**
 
 Level 1.1.1
 
-**\<**
+**&lt;**
 
 **/li**
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **/ul**
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **/li**
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **/ul**
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **/li**
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **li**
 
-**\>**
+**&gt;**
 
 Level 2
 
-**\<**
+**&lt;**
 
 **ul**
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **li**
 
-**\>**
+**&gt;**
 
 Level 2.1
 
-**\<**
+**&lt;**
 
 **ul**
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **li**
 
-**\>**
+**&gt;**
 
 Level 2.1.1
 
-**\<**
+**&lt;**
 
 **/li**
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **li**
 
-**\>**
+**&gt;**
 
 Level 2.1.2
 
-**\<**
+**&lt;**
 
 **/li**
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **/ul**
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **/li**
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **/ul**
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **/li**
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **li**
 
-**\>**
+**&gt;**
 
 Level 3
 
-**\<**
+**&lt;**
 
 **/li**
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **/ul**
 
-**\>**
+**&gt;**
 
   ------------------------------------------------------------------------------
-  list-item-number   \[1\] (counter for second level) and     list-item-number
+  list-item-number   &lbrack;1&rbrack; (counter for second level) and     list-item-number
                      nests it under                           
   ------------------ ---------------------------------------- ------------------
 
@@ -29617,7 +29202,7 @@ Level 3
 > child of the existing counter. Here, the second level ul already
 > inherits the list-item-number counter from its parent but then has to
 > create its own list-item-number (for its children li) and so creates
-> \[0\] (counter for first level). Thus it achieves the multi-level
+> &lbrack;0&rbrack; (counter for first level). Thus it achieves the multi-level
 > numbering.
 
   ------------------------------------------------------------------------------
@@ -29640,7 +29225,7 @@ Level 3
 > (e.g. subtracting a px value from a percentage) to calculate the value
 > of an attribute.
 >
-> +, -, /, and \* operators can all be used, and parentheses can be
+> +, -, /, and &ast; operators can all be used, and parentheses can be
 > added to specify the order of operations if necessary.
 
 Use
@@ -29685,9 +29270,9 @@ calc
 
 100
 
-\%
+&percnt;
 
-\-
+&minus;
 
 100
 
@@ -29757,9 +29342,9 @@ calc
 
 50
 
-\%
+&percnt;
 
-\+
+&plus;
 
 17
 
@@ -29773,9 +29358,9 @@ calc
 
 50
 
-\%
+&percnt;
 
-\+
+&plus;
 
 10
 
@@ -29787,11 +29372,11 @@ px
 
 50
 
-\%
+&percnt;
 
 50
 
-\%
+&percnt;
 
 ;
 
@@ -29813,9 +29398,9 @@ calc
 
 100
 
-\%
+&percnt;
 
-\-
+&minus;
 
 20
 
@@ -29841,11 +29426,11 @@ px
 
   -----------------------------------------------------------------------
 
-> Below is a blockquote element which contains a character inside a \*
+> Below is a blockquote element which contains a character inside a &ast;
 > attribute which CSS can use (e.g. inside the pseudo-element) using
 > this function.
 
-**\<**
+**&lt;**
 
 **blockquote**
 
@@ -29853,26 +29438,26 @@ data-mark
 
 =
 
-\'\"\'
+&apos;&quot;&apos;
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **/blockquote**
 
-**\>**
+**&gt;**
 
 > In the following CSS block, the character is appended before and after
 > the text inside the element:
 
 blockquote
 
-\[
+&lbrack;
 
 data-mark
 
-\]
+&rbrack;
 
 ::
 
@@ -29882,11 +29467,11 @@ before
 
 blockquote
 
-\[
+&lbrack;
 
 data-mark
 
-\]
+&rbrack;
 
 ::
 
@@ -29914,7 +29499,7 @@ data-mark
 
 > The var() function allows CSS variables to be accessed.
 
-*/\* set a variable \*/*
+*/&ast; set a variable &ast;/*
 
 :
 
@@ -29922,7 +29507,7 @@ root
 
 {
 
-\--
+&minus;-
 
 primary-color
 
@@ -29934,7 +29519,7 @@ blue
 
 }
 
-*/\* access variable \*/*
+*/&ast; access variable &ast;/*
 
 selector
 
@@ -29948,7 +29533,7 @@ var
 
 (
 
-\--
+&minus;-
 
 primary-color
 
@@ -29967,9 +29552,9 @@ primary-color
 > Creates an image representing a gradient of colors radiating from the
 > center of the gradient
 >
-> radial-gradient(red, orange, yellow) */\*A gradient coming out from
+> radial-gradient(red, orange, yellow) */&ast;A gradient coming out from
 > the middle of the gradient, red at the center, then orange, until it
-> is finally yellow at the edges\*/*
+> is finally yellow at the edges&ast;/*
 
 ## Section 36.5: linear-gradient() function
 
@@ -29993,7 +29578,7 @@ yellow
 
 50
 
-\%
+&percnt;
 
 ,
 
@@ -30011,7 +29596,7 @@ blue
 > CSS Variables allow authors to create reusable values which can be
 > used throughout a CSS document.
 >
-> For example, it\'s common in CSS to reuse a single color throughout a
+> For example, it&apos;s common in CSS to reuse a single color throughout a
 > document. Prior to CSS Variables this would mean reusing the same
 > color value many times throughout a document. With CSS Variables the
 > color value can be assigned to a variable and referenced in multiple
@@ -30026,7 +29611,7 @@ root
 
 {
 
-\--
+&minus;-
 
 red
 
@@ -30036,7 +29621,7 @@ red
 
 ;
 
-\--
+&minus;-
 
 blue
 
@@ -30046,7 +29631,7 @@ blue
 
 ;
 
-\--
+&minus;-
 
 grey
 
@@ -30070,7 +29655,7 @@ var
 
 (
 
-\--
+&minus;-
 
 red
 
@@ -30086,7 +29671,7 @@ var
 
 (
 
-\--
+&minus;-
 
 grey
 
@@ -30108,7 +29693,7 @@ var
 
 (
 
-\--
+&minus;-
 
 red
 
@@ -30126,7 +29711,7 @@ root
 
 {
 
-\--W200
+&minus;-W200
 
 :
 
@@ -30136,7 +29721,7 @@ px
 
 ;
 
-\--
+&minus;-
 
 W
 
@@ -30164,7 +29749,7 @@ var
 
 (
 
-\--W200
+&minus;-W200
 
 )
 
@@ -30178,7 +29763,7 @@ var
 
 (
 
-\--W200
+&minus;-W200
 
 )
 
@@ -30192,7 +29777,7 @@ var
 
 (
 
-\--
+&minus;-
 
 W
 
@@ -30214,7 +29799,7 @@ W
 >
 > Assuming this HTML:
 
-**\<**
+**&lt;**
 
 **a**
 
@@ -30222,19 +29807,19 @@ class
 
 =
 
-\"button\"
+&quot;button&quot;
 
-**\>**
+**&gt;**
 
 Button Green
 
-**\<**
+**&lt;**
 
 **/a**
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **a**
 
@@ -30242,19 +29827,19 @@ class
 
 =
 
-\"button button_red\"
+&quot;button button_red&quot;
 
-**\>**
+**&gt;**
 
 Button Red
 
-**\<**
+**&lt;**
 
 **/a**
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **a**
 
@@ -30262,17 +29847,17 @@ class
 
 =
 
-\"button\"
+&quot;button&quot;
 
-**\>**
+**&gt;**
 
 Button Hovered On
 
-**\<**
+**&lt;**
 
 **/a**
 
-**\>**
+**&gt;**
 
 > We can write this CSS:
 
@@ -30280,7 +29865,7 @@ Button Hovered On
 
 {
 
-\--
+&minus;-
 
 color
 
@@ -30314,7 +29899,7 @@ var
 
 (
 
-\--
+&minus;-
 
 color
 
@@ -30330,7 +29915,7 @@ var
 
 (
 
-\--
+&minus;-
 
 color
 
@@ -30348,7 +29933,7 @@ hover
 
 {
 
-\--
+&minus;-
 
 color
 
@@ -30364,7 +29949,7 @@ blue
 
 {
 
-\--
+&minus;-
 
 color
 
@@ -30385,11 +29970,11 @@ height="0.6041666666666666in"}
 
 > **Naming** When naming CSS variables, it contains only letters and
 > dashes just like other CSS properties (eg: lineheight,
-> -moz-box-sizing) but it should start with double dashes (\--)
+> -moz-box-sizing) but it should start with double dashes (&minus;-)
 
 //These are Invalids variable names
 
-\--123
+&minus;-123
 
 color
 
@@ -30399,9 +29984,9 @@ blue
 
 ;
 
-\--
+&minus;-
 
-\#
+&num;
 
 **color**
 
@@ -30411,19 +29996,19 @@ red
 
 ;
 
-\--
+&minus;-
 
 bg
 
-\_color
+&lowbar;color
 
 :
 
 yellow
 
-\--
+&minus;-
 
-\$
+&dollar;
 
 **width**
 
@@ -30437,7 +30022,7 @@ px
 
 //Valid variable names
 
-\--
+&minus;-
 
 color
 
@@ -30447,7 +30032,7 @@ red
 
 ;
 
-\--
+&minus;-
 
 bg-color
 
@@ -30455,7 +30040,7 @@ bg-color
 
 yellow
 
-\--
+&minus;-
 
 width
 
@@ -30469,9 +30054,9 @@ px
 
 > **CSS Variables are case sensitive.**
 
-*/\* The variable names below are all different variables \*/*
+*/&ast; The variable names below are all different variables &ast;/*
 
-\--
+&minus;-
 
 pcolor
 
@@ -30479,7 +30064,7 @@ pcolor
 
 ;
 
-\--
+&minus;-
 
 Pcolor
 
@@ -30487,7 +30072,7 @@ Pcolor
 
 ;
 
-\--
+&minus;-
 
 pColor
 
@@ -30497,19 +30082,9 @@ pColor
 
 > **Empty Vs Space**
 
-*/\* Invalid \*/*
+*/&ast; Invalid &ast;/*
 
-\--
-
-color
-
-:
-
-;
-
-*/\* Valid \*/*
-
-\--
+&minus;-
 
 color
 
@@ -30517,23 +30092,33 @@ color
 
 ;
 
-*/\* space is assigned \*/*
+*/&ast; Valid &ast;/*
+
+&minus;-
+
+color
+
+:
+
+;
+
+*/&ast; space is assigned &ast;/*
 
 > **Concatenations**
 
-*/\* Invalid - CSS doesn\'t support concatenation\*/*
+*/&ast; Invalid - CSS doesn&apos;t support concatenation&ast;/*
 
 .logo
 
 {
 
-\--
+&minus;-
 
 logo-url
 
 :
 
-\'logo\'
+&apos;logo&apos;
 
 ;
 
@@ -30545,19 +30130,19 @@ url
 
 (
 
-\'assets/img/\'
+&apos;assets/img/&apos;
 
 var
 
 (
 
-\--
+&minus;-
 
 logo-url
 
 )
 
-\'.png\'
+&apos;.png&apos;
 
 )
 
@@ -30565,19 +30150,19 @@ logo-url
 
 }
 
-*/\* Invalid - CSS bug \*/*
+*/&ast; Invalid - CSS bug &ast;/*
 
 .logo
 
 {
 
-\--
+&minus;-
 
 logo-url
 
 :
 
-\'assets/img/logo.png\'
+&apos;assets/img/logo.png&apos;
 
 ;
 
@@ -30593,7 +30178,7 @@ var
 
 (
 
-\--
+&minus;-
 
 logo-url
 
@@ -30605,13 +30190,13 @@ logo-url
 
 }
 
-*/\* Valid \*/*
+*/&ast; Valid &ast;/*
 
 .logo
 
 {
 
-\--
+&minus;-
 
 logo-url
 
@@ -30621,7 +30206,7 @@ url
 
 (
 
-\'assets/img/logo.png\'
+&apos;assets/img/logo.png&apos;
 
 )
 
@@ -30635,7 +30220,7 @@ var
 
 (
 
-\--
+&minus;-
 
 logo-url
 
@@ -30647,9 +30232,9 @@ logo-url
 
 > **Careful when using Units**
 
-*/\* Invalid \*/*
+*/&ast; Invalid &ast;/*
 
-\--
+&minus;-
 
 width
 
@@ -30667,7 +30252,7 @@ var
 
 (
 
-\--
+&minus;-
 
 width
 
@@ -30677,9 +30262,9 @@ px
 
 ;
 
-*/\* Valid \*/*
+*/&ast; Valid &ast;/*
 
-\--
+&minus;-
 
 width
 
@@ -30699,7 +30284,7 @@ var
 
 (
 
-\--
+&minus;-
 
 width
 
@@ -30707,9 +30292,9 @@ width
 
 ;
 
-*/\* Valid \*/*
+*/&ast; Valid &ast;/*
 
-\--
+&minus;-
 
 width
 
@@ -30731,13 +30316,13 @@ calc
 
 px
 
-\*
+&ast;
 
 var
 
 (
 
-\--
+&minus;-
 
 width
 
@@ -30747,7 +30332,7 @@ width
 
 ;
 
-*/\* multiply by 1 unit to convert \*/*
+*/&ast; multiply by 1 unit to convert &ast;/*
 
 **width**
 
@@ -30761,13 +30346,13 @@ calc
 
 em
 
-\*
+&ast;
 
 var
 
 (
 
-\--
+&minus;-
 
 width
 
@@ -30780,7 +30365,7 @@ width
 ## Section 37.5: With media queries
 
 > You can re-set variables within media queries and have those new
-> values cascade wherever they are used, something that isn\'t possible
+> values cascade wherever they are used, something that isn&apos;t possible
 > with pre-processor variables.
 >
 > Here, a media query changes the variables used to set up a very simple
@@ -30788,53 +30373,53 @@ width
 >
 > **HTML**
 
-**\<**
+**&lt;**
 
 **div**
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **/div**
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **div**
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **/div**
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **div**
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **/div**
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **div**
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **/div**
 
-**\>**
+**&gt;**
 
 > **CSS**
 
@@ -30844,7 +30429,7 @@ root
 
 {
 
-\--
+&minus;-
 
 width
 
@@ -30852,23 +30437,23 @@ width
 
 25
 
-\%
+&percnt;
 
 ;
 
-\--
+&minus;-
 
 content
 
 :
 
-\'This is desktop\'
+&apos;This is desktop&apos;
 
 ;
 
 }
 
-**\@media**
+**&commat;media**
 
 only screen and
 
@@ -30892,7 +30477,7 @@ root
 
 {
 
-\--
+&minus;-
 
 width
 
@@ -30900,17 +30485,17 @@ width
 
 50
 
-\%
+&percnt;
 
 ;
 
-\--
+&minus;-
 
 content
 
 :
 
-\'This is mobile\'
+&apos;This is mobile&apos;
 
 ;
 
@@ -30918,7 +30503,7 @@ content
 
 }
 
-**\@media**
+**&commat;media**
 
 only screen and
 
@@ -30942,7 +30527,7 @@ root
 
 {
 
-\--
+&minus;-
 
 width
 
@@ -30950,7 +30535,7 @@ width
 
 100
 
-\%
+&percnt;
 
 ;
 
@@ -30974,13 +30559,13 @@ var
 
 (
 
-\--
+&minus;-
 
 width
 
 )
 
-\-
+&minus;
 
 20
 
@@ -31018,7 +30603,7 @@ var
 
 (
 
-\--
+&minus;-
 
 content
 
@@ -31028,7 +30613,7 @@ content
 
 }
 
-*/\* Other Styles \*/*
+*/&ast; Other Styles &ast;/*
 
 body
 
@@ -31127,7 +30712,7 @@ red
 > You can try resizing the window in this [[CodePen
 > Demo]](https://codepen.io/mkumaran/pen/BZaXvz)
 >
-> Here\'s an animated screenshot of the resizing in action:
+> Here&apos;s an animated screenshot of the resizing in action:
 
 ![](./images/media/image227.jpg){width="7.48037510936133in"
 height="4.327166447944007in"}
@@ -31144,7 +30729,7 @@ height="4.327166447944007in"}
 
 > **HTML:**
 
-**\<**
+**&lt;**
 
 **div**
 
@@ -31152,15 +30737,15 @@ class
 
 =
 
-\"trapezoid\"
+&quot;trapezoid&quot;
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **/div**
 
-**\>**
+**&gt;**
 
 > **CSS:**
 
@@ -31238,7 +30823,7 @@ black
 > To create a CSS triangle define an element with a width and height of
 > 0 pixels. The triangle shape will be formed using border properties.
 > For an element with 0 height and width the 4 borders (top, right,
-> bottom, left) each form a triangle. Here\'s an element with 0
+> bottom, left) each form a triangle. Here&apos;s an element with 0
 > height/width and 4 different colored borders.
 
 ![](./images/media/image229.jpg){width="1.6666666666666667in"
@@ -31247,7 +30832,7 @@ height="1.7083333333333333in"}
 > By setting some borders to transparent, and others to a color we can
 > create various triangles. For example, in the Up triangle, we set the
 > bottom border to the desired color, then set the left and right
-> borders to transparent. Here\'s an image with the left and right
+> borders to transparent. Here&apos;s an image with the left and right
 > borders shaded slightly to show how the triangle is being formed.
 
 ![](./images/media/image230.jpg){width="1.1458333333333333in"
@@ -31259,7 +30844,7 @@ height="1.1875in"}
 >
 > **Triangle - Pointing Up**
 
-**\<**
+**&lt;**
 
 **div**
 
@@ -31267,15 +30852,15 @@ class
 
 =
 
-\"triangle-up\"
+&quot;triangle-up&quot;
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **/div**
 
-**\>**
+**&gt;**
 
 .triangle-up
 
@@ -31357,7 +30942,7 @@ rgb
 
 > **Triangle - Pointing Down**
 
-**\<**
+**&lt;**
 
 **div**
 
@@ -31365,15 +30950,15 @@ class
 
 =
 
-\"triangle-down\"
+&quot;triangle-down&quot;
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **/div**
 
-**\>**
+**&gt;**
 
 .triangle-down
 
@@ -31458,7 +31043,7 @@ rgb
 ![](./images/media/image233.jpg){width="1.1458333333333333in"
 height="1.1875in"}
 
-**\<**
+**&lt;**
 
 **div**
 
@@ -31466,15 +31051,15 @@ class
 
 =
 
-\"triangle-right\"
+&quot;triangle-right&quot;
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **/div**
 
-**\>**
+**&gt;**
 
 .triangle-right
 
@@ -31556,7 +31141,7 @@ rgb
 
 > **Triangle - Pointing Left**
 
-**\<**
+**&lt;**
 
 **div**
 
@@ -31564,15 +31149,15 @@ class
 
 =
 
-\"triangle-left\"
+&quot;triangle-left&quot;
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **/div**
 
-**\>**
+**&gt;**
 
 .triangle-left
 
@@ -31654,7 +31239,7 @@ rgb
 
 > **Triangle - Pointing Up/Right**
 
-**\<**
+**&lt;**
 
 **div**
 
@@ -31662,15 +31247,15 @@ class
 
 =
 
-\"triangle-up-right\"
+&quot;triangle-up-right&quot;
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **/div**
 
-**\>**
+**&gt;**
 
 .triangle-up-right
 
@@ -31738,7 +31323,7 @@ transparent
 
 > **Triangle - Pointing Up/Left**
 
-**\<**
+**&lt;**
 
 **div**
 
@@ -31746,15 +31331,15 @@ class
 
 =
 
-\"triangle-up-left\"
+&quot;triangle-up-left&quot;
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **/div**
 
-**\>**
+**&gt;**
 
 .triangle-up-left
 
@@ -31822,7 +31407,7 @@ transparent
 
 > **Triangle - Pointing Down/Right**
 
-**\<**
+**&lt;**
 
 **div**
 
@@ -31830,15 +31415,15 @@ class
 
 =
 
-\"triangle-down-right\"
+&quot;triangle-down-right&quot;
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **/div**
 
-**\>**
+**&gt;**
 
 .triangle-down-right
 
@@ -31906,7 +31491,7 @@ transparent
 
 > **Triangle - Pointing Down/Left**
 
-**\<**
+**&lt;**
 
 **div**
 
@@ -31914,15 +31499,15 @@ class
 
 =
 
-\"triangle-down-left\"
+&quot;triangle-down-left&quot;
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **/div**
 
-**\>**
+**&gt;**
 
 .triangle-down-left
 
@@ -32001,7 +31586,7 @@ height="1.1875in"}
 
 > **HTML**
 
-**\<**
+**&lt;**
 
 **div**
 
@@ -32009,15 +31594,15 @@ class
 
 =
 
-\"circle\"
+&quot;circle&quot;
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **/div**
 
-**\>**
+**&gt;**
 
 > **CSS**
 
@@ -32073,7 +31658,7 @@ rgb
 
 50
 
-\%
+&percnt;
 
 ;
 
@@ -32088,7 +31673,7 @@ rgb
 
 > **HTML**
 
-**\<**
+**&lt;**
 
 **div**
 
@@ -32096,15 +31681,15 @@ class
 
 =
 
-\"oval\"
+&quot;oval&quot;
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **/div**
 
-**\>**
+**&gt;**
 
 > **CSS**
 
@@ -32160,7 +31745,7 @@ rgb
 
 50
 
-\%
+&percnt;
 
 ;
 
@@ -32193,7 +31778,7 @@ rgb
 > pseudo-element. The bottom is rotated 20°, the top square is rotated
 > 135°.
 
-**\<**
+**&lt;**
 
 **div**
 
@@ -32201,15 +31786,15 @@ class
 
 =
 
-\"burst-8\"
+&quot;burst-8&quot;
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **/div**
 
-**\>**
+**&gt;**
 
 .burst-8 {
 
@@ -32231,7 +31816,7 @@ transform: rotate(20eg);
 
 .burst-8::before {
 
-content: \"\";
+content: &quot;&quot;;
 
 position: absolute;
 
@@ -32264,7 +31849,7 @@ transform: rotate(135deg);
 > pseudo-elements. The bottom is rotated 0°, the next square is rotated
 > 30°, and the top is rotated 60°.
 
-**\<**
+**&lt;**
 
 **div**
 
@@ -32272,15 +31857,15 @@ class
 
 =
 
-\"burst-12\"
+&quot;burst-12&quot;
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **/div**
 
-**\>**
+**&gt;**
 
 .burst-12 {
 
@@ -32298,7 +31883,7 @@ background: rgb(246, 156, 85);
 
 .burst-12::before, .burst-12::after {
 
-content: \"\";
+content: &quot;&quot;;
 
 position: absolute;
 
@@ -32336,7 +31921,7 @@ transform: rotate(60deg);
 > the example below, we have an element with a width and height of 100
 > pixels each.
 
-**\<**
+**&lt;**
 
 **div**
 
@@ -32344,15 +31929,15 @@ class
 
 =
 
-\"square\"
+&quot;square&quot;
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **/div**
 
-**\>**
+**&gt;**
 
 .square
 
@@ -32418,7 +32003,7 @@ height="1.9479166666666667in"}
 
 > **HTML:**
 
-**\<**
+**&lt;**
 
 **div**
 
@@ -32426,15 +32011,15 @@ class
 
 =
 
-\"cube\"
+&quot;cube&quot;
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **/div**
 
-**\>**
+**&gt;**
 
 > **CSS:**
 
@@ -32502,7 +32087,7 @@ before
 
 :
 
-\'\'
+&apos;&apos;
 
 ;
 
@@ -32600,7 +32185,7 @@ after
 
 :
 
-\'\'
+&apos;&apos;
 
 ;
 
@@ -32680,7 +32265,7 @@ px
 
 100
 
-\%
+&percnt;
 
 ;
 
@@ -32704,7 +32289,7 @@ height="1.8541666666666667in"}
 
 > **HTML:**
 
-**\<**
+**&lt;**
 
 **div**
 
@@ -32712,15 +32297,15 @@ class
 
 =
 
-\"pyramid\"
+&quot;pyramid&quot;
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **/div**
 
-**\>**
+**&gt;**
 
 > **CSS:**
 
@@ -32788,7 +32373,7 @@ after
 
 :
 
-\'\'
+&apos;&apos;
 
 ;
 
@@ -32963,14 +32548,14 @@ deg
 >
 > **Code**
 >
-> **\<div** id=\"multi-columns\"**\>**Lorem ipsum dolor sit amet,
+> **&lt;div** id=&quot;multi-columns&quot;**&gt;**Lorem ipsum dolor sit amet,
 > consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
 > labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
 > exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
 > Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
 > dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
 > proident, sunt in culpa qui officia deserunt mollit anim id est
-> laborum**\</div\>**
+> laborum**&lt;/div&gt;**
 >
 > .multi-columns {
 >
@@ -32989,7 +32574,7 @@ height="3.572153324584427in"}
 >
 > **Code:**
 >
-> **\<div** id=\"multi-columns\"**\>**
+> **&lt;div** id=&quot;multi-columns&quot;**&gt;**
 >
 > Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
 > eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
@@ -32999,11 +32584,11 @@ height="3.572153324584427in"}
 > pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
 > culpa qui officia deserunt mollit anim id est laborum
 
-**\<**
+**&lt;**
 
 **/div**
 
-**\>**
+**&gt;**
 
 .multi-columns
 
@@ -33053,7 +32638,7 @@ height="3.7083333333333335in"}
 
 ## Section 40.1: Create Multiple Columns
 
-> **\<div** class=\"content\"**\>** Lorem ipsum dolor sit amet,
+> **&lt;div** class=&quot;content&quot;**&gt;** Lorem ipsum dolor sit amet,
 > consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt
 > ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim
 > veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl
@@ -33063,7 +32648,7 @@ height="3.7083333333333335in"}
 > dignissim qui blandit praesent luptatum zzril delenit augue duis
 > dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis
 > eleifend option congue nihil imperdiet doming id quod mazim placerat
-> facer possim assum. **\</div\>**
+> facer possim assum. **&lt;/div&gt;**
 >
 > CSS
 
@@ -33071,7 +32656,7 @@ height="3.7083333333333335in"}
 
 {
 
-\-
+&minus;
 
 webkit-column-count
 
@@ -33081,9 +32666,9 @@ webkit-column-count
 
 ;
 
-*/\* Chrome, Safari, Opera \*/*
+*/&ast; Chrome, Safari, Opera &ast;/*
 
-\-
+&minus;
 
 moz-column-count
 
@@ -33093,7 +32678,7 @@ moz-column-count
 
 ;
 
-*/\* Firefox \*/*
+*/&ast; Firefox &ast;/*
 
 **column-count**
 
@@ -33109,21 +32694,21 @@ moz-column-count
 
 > Consider the following HTML markup:
 >
-> **\<section\>** **\<p\>**Lorem ipsum dolor sit amet, consetetur
+> **&lt;section&gt;** **&lt;p&gt;**Lorem ipsum dolor sit amet, consetetur
 > sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
 > dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam
-> et justo duo dolores et ea rebum.**\</p\>** **\<p\>** Stet clita kasd
+> et justo duo dolores et ea rebum.**&lt;/p&gt;** **&lt;p&gt;** Stet clita kasd
 > gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
 > Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
 > nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
 > sed diam voluptua. At vero eos et accusam et justo duo dolores et ea
 > rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem
-> ipsum dolor sit amet.**\</p\>** **\<p\>**Lorem ipsum dolor sit amet,
+> ipsum dolor sit amet.**&lt;/p&gt;** **&lt;p&gt;**Lorem ipsum dolor sit amet,
 > consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
 > labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos
 > et accusam et justo duo dolores et ea rebum. Stet clita kasd
 > gubergren, no sea takimata sanctus est Lorem ipsum dolor sit
-> amet.**\</p\> \</section\>**
+> amet.**&lt;/p&gt; &lt;/section&gt;**
 >
 > With the following CSS applied the content is split into three columns
 > separated by a gray column rule of two pixels.
@@ -33181,71 +32766,71 @@ JSFiddle]](https://jsfiddle.net/vjL9ewmb/).
 
 **HTML**
 
-**\<**
+**&lt;**
 
 **nav**
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **ul**
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **li**
 
-**\>**
+**&gt;**
 
 abc
 
-**\<**
+**&lt;**
 
 **/li**
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **li**
 
-**\>**
+**&gt;**
 
 abcdefghijkl
 
-**\<**
+**&lt;**
 
 **/li**
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **li**
 
-**\>**
+**&gt;**
 
 abcdef
 
-**\<**
+**&lt;**
 
 **/li**
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **/ul**
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **/nav**
 
-**\>**
+**&gt;**
 
 **CSS**
 
@@ -33259,7 +32844,7 @@ nav
 
 100
 
-\%
+&percnt;
 
 ;
 
@@ -33301,7 +32886,7 @@ block
 
 100
 
-\%
+&percnt;
 
 ;
 
@@ -33353,7 +32938,7 @@ after
 
 :
 
-\"\"
+&quot;&quot;
 
 ;
 
@@ -33371,7 +32956,7 @@ inline-block
 
 100
 
-\%
+&percnt;
 
 ;
 
@@ -33399,11 +32984,11 @@ inline-block
 
   -----------------------------------------------------------------------
 
-> The nav, ul and li tags were chosen for their semantic meaning of \'a
-> list of navigation (menu) items\'. Other tags may also be used of
+> The nav, ul and li tags were chosen for their semantic meaning of &apos;a
+> list of navigation (menu) items&apos;. Other tags may also be used of
 > course.
 >
-> The : pseudo-element causes an extra \'line\' in the ul and thus an
+> The : pseudo-element causes an extra &apos;line&apos; in the ul and thus an
 > extra, empty height of this block, pushing other content down. This is
 > solved by the negative margin-bottom, which has to have the same
 > magnitude as the line-height (but negative).
@@ -33417,7 +33002,7 @@ inline-block
 ## Section 42.1: Automatic inheritance
 
 > Inheritance the a fundamental mechanism of CSS by which the computed
-> values of some properties of an element are applied to its\' children.
+> values of some properties of an element are applied to its&apos; children.
 > This is particularly useful when you want to set a global style to
 > your elements rather than having to set said properties to each and
 > every element in your markup.
@@ -33452,16 +33037,16 @@ px
 }
 
   -----------------------------------------------------------------------------------------------------------
-  **color**   :   red   not only to the  **\<div**   **\>** element but also to **\<h3**   **\>**   **\<p**
+  **color**   :   red   not only to the  **&lt;div**   **&gt;** element but also to **&lt;h3**   **&gt;**   **&lt;p**
                                                      the                                   and      
   ----------- --- ----- ---------------- ----------- -------------------------- ---------- -------- ---------
 
   -----------------------------------------------------------------------------------------------------------
 
-> This will apply **\>** elements. However, due to the nature of padding
+> This will apply **&gt;** elements. However, due to the nature of padding
 > its value will ***not*** be inherited to those elements.
 
-**\<**
+**&lt;**
 
 **div**
 
@@ -33469,52 +33054,52 @@ id
 
 =
 
-\"myContainer\"
+&quot;myContainer&quot;
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **h**
 
 **3**
 
-**\>**
+**&gt;**
 
 Some header
 
-**\<**
+**&lt;**
 
 **/h**
 
 **3**
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **p**
 
-**\>**
+**&gt;**
 
 Some paragraph
 
-**\<**
+**&lt;**
 
 **/p**
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **/div**
 
-**\>**
+**&gt;**
 
 ## Section 42.2: Enforced inheritance
 
 > Some properties are not automatically inherited from an element down
-> to its\' children. This is because those properties are typically
+> to its&apos; children. This is because those properties are typically
 > desired to be unique to the element (or selection of elements) to
 > which the property is applied to. Common such properties are margin,
 > padding, background, display, etc.
@@ -33567,24 +33152,24 @@ inherit
 }
 
   ------------------------------------------------------------------------------------
-  **color**   :   red       to both the              **\<h3**   **\>** and   **\<p**
+  **color**   :   red       to both the              **&lt;h3**   **&gt;** and   **&lt;p**
   ----------- --- --------- ------------------------ ---------- ------------ ---------
 
   ------------------------------------------------------------------------------------
 
-> This will apply **\>** elements due to the inheritance nature of the
+> This will apply **&gt;** elements due to the inheritance nature of the
 > color property.
 
   -----------------------------------------------------------------------
-  **\<p**
+  **&lt;p**
   -----------------------------------------------------------------------
 
   -----------------------------------------------------------------------
 
-> However, the **\>** element will also inherit the padding value from
-> its\' parent because this was specified.
+> However, the **&gt;** element will also inherit the padding value from
+> its&apos; parent because this was specified.
 
-**\<**
+**&lt;**
 
 **div**
 
@@ -33592,53 +33177,53 @@ id
 
 =
 
-\"myContainer\"
+&quot;myContainer&quot;
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **h**
 
 **3**
 
-**\>**
+**&gt;**
 
 Some header
 
-**\<**
+**&lt;**
 
 **/h**
 
 **3**
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **p**
 
-**\>**
+**&gt;**
 
 Some paragraph
 
-**\<**
+**&lt;**
 
 **/p**
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **/div**
 
-**\>**
+**&gt;**
 
 # Chapter 43: CSS Image Sprites
 
 ## Section 43.1: A Basic Implementation
 
-> **What\'s an image sprite?**
+> **What&apos;s an image sprite?**
 >
 > An image sprite is a single asset located within an image sprite
 > sheet. An image sprite sheet is an image file that contains more than
@@ -33653,11 +33238,11 @@ Some paragraph
 > because they improve performance by reducing the number of HTTP
 > requests a browser might have to make.
 >
-> So how do you implement one? Here\'s some example code.
+> So how do you implement one? Here&apos;s some example code.
 >
 > **HTML**
 
-**\<**
+**&lt;**
 
 **div**
 
@@ -33665,17 +33250,17 @@ class
 
 =
 
-\"icon icon1\"
+&quot;icon icon1&quot;
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **/div**
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **div**
 
@@ -33683,17 +33268,17 @@ class
 
 =
 
-\"icon icon2\"
+&quot;icon icon2&quot;
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **/div**
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **div**
 
@@ -33701,15 +33286,15 @@ class
 
 =
 
-\"icon icon3\"
+&quot;icon icon3&quot;
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **/div**
 
-**\>**
+**&gt;**
 
 > **CSS**
 
@@ -33825,7 +33410,7 @@ px
 
 }
 
-> By using setting the sprite\'s width and height and by using the
+> By using setting the sprite&apos;s width and height and by using the
 > background-position property in CSS (with an x and y value) you can
 > easily extract sprites from a sprite sheet using CSS.
 
@@ -33837,7 +33422,7 @@ px
 +=============+========================================================+
 | clip-source | A URL which can point to an inline SVG element (or) an |
 |             | SVG element in an external file that contains the clip |
-|             | path\'s definition.                                    |
+|             | path&apos;s definition.                                    |
 +-------------+--------------------------------------------------------+
 
   -----------------------------------------------------------------------
@@ -33856,9 +33441,9 @@ px
   clip-geometry-box   This can have one among content-box, padding-box,
                       border-box, margin-box, fill-box, stroke-box, view-box
                       as values. When this is provided without any value for
-                      \<basic-shape\>, the edges of the corresponding box is
+                      &lt;basic-shape&gt;, the edges of the corresponding box is
                       used as the path for clipping. When used with a
-                      \<basic-shape\>, this acts as the reference box for the
+                      &lt;basic-shape&gt;, this acts as the reference box for the
                       shape.
 
   mask-reference      This can be none or an image or a reference URL to a
@@ -33892,7 +33477,7 @@ px
   --------------------------------------------------------------------------------------
   geometry-box   This specifies the box to which the mask should be clipped (*mask
                  painting area*) or the box which should be used as reference for the
-                 mask\'s origin (*mask positioning area*) depending on the property. The
+                 mask&apos;s origin (*mask positioning area*) depending on the property. The
                  list of possible values are content-box, padding-box, border-box,
                  margin-box, fill-box, stroke-box, view-box. Detailed explanation of how
                  each of those values work is available in the [[W3C
@@ -33928,7 +33513,7 @@ px
   ------------------------------------------------------------------------
 
 > Clips are vector paths. Outside of this path the element will be
-> transparent, inside it\'s opaque. Therefore you can define a clip-path
+> transparent, inside it&apos;s opaque. Therefore you can define a clip-path
 > property on elements. Every graphical element that also exists in SVG
 > you can use here as a function to define the path. Examples are ().
 
@@ -33967,7 +33552,7 @@ center
 > image what consist of mainly two colors: black and white.
 >
 > **Luminance Mask**: Black means the region is opaque, and white that
-> it\'s transparent, but there is also a grey area which is
+> it&apos;s transparent, but there is also a grey area which is
 > semi-transparent, so you are able to make smooth transitions.
 >
 > **Alpha Mask**: Only on the transparent areas of the mask the element
@@ -34092,17 +33677,17 @@ transparent
 
 > **HTML**
 
-**\<**
+**&lt;**
 
 **div**
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **/div**
 
-**\>**
+**&gt;**
 
 > In the above example there is an element with an image as its
 > background. The mask that is applied on the image (using CSS) makes it
@@ -34172,44 +33757,44 @@ circle
 
 30
 
-\%
+&percnt;
 
 at
 
 50
 
-\%
+&percnt;
 
 50
 
-\%
+&percnt;
 
 )
 
 ;
 
-*/\* refer remarks before usage \*/*
+*/&ast; refer remarks before usage &ast;/*
 
 }
 
 > **HTML**
 
-**\<**
+**&lt;**
 
 **div**
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **/div**
 
-**\>**
+**&gt;**
 
 > This example shows how to clip a div to a circle. The element is
 > clipped into a circle whose radius is 30% based on the dimensions of
 > the reference box with its center point at the center of the reference
-> box. Here since no \<clipgeometry-box\> (in other words, reference
+> box. Here since no &lt;clipgeometry-box&gt; (in other words, reference
 > box) is provided, the border-box of the element will be used as the
 > reference box.
 >
@@ -34284,39 +33869,39 @@ polygon
 
 100
 
-\%
+&percnt;
 
 ,
 
 100
 
-\%
+&percnt;
 
 50
 
-\%
+&percnt;
 
 )
 
 ;
 
-*/\* refer remarks before usage \*/*
+*/&ast; refer remarks before usage &ast;/*
 
 }
 
 **HTML:**
 
-**\<**
+**&lt;**
 
 **div**
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **/div**
 
-**\>**
+**&gt;**
 
 > In the above example, a **polygonal** clipping path is used to clip
 > the square (200 x 200) element into a triangle shape. The output shape
@@ -34324,7 +33909,7 @@ polygon
 > are at) 0 0 - which is the top-left
 
   ------------------------------------------------------------------------
-  100%   \- which is bottom-left corner of the box and then       100% 50%
+  100%   &minus; which is bottom-left corner of the box and then       100% 50%
          finally to                                               
   ------ -------------------------------------------------------- --------
 
@@ -34422,7 +34007,7 @@ transparent
 
 49
 
-\%
+&percnt;
 
 ,
 
@@ -34430,15 +34015,15 @@ white
 
 50
 
-\%
+&percnt;
 
 )
 
 ;
 
-*/\* check*
+*/&ast; check*
 
-*remarks before using \*/*
+*remarks before using &ast;/*
 
 }
 
@@ -34466,7 +34051,7 @@ div
 
 {
 
-*/\* check remarks before usage \*/*
+*/&ast; check remarks before usage &ast;/*
 
 **height**
 
@@ -34536,7 +34121,7 @@ transparent
 
 49.5
 
-\%
+&percnt;
 
 ,
 
@@ -34544,7 +34129,7 @@ white
 
 50.5
 
-\%
+&percnt;
 
 )
 
@@ -34566,7 +34151,7 @@ transparent
 
 49.5
 
-\%
+&percnt;
 
 ,
 
@@ -34574,7 +34159,7 @@ white
 
 50.5
 
-\%
+&percnt;
 
 )
 
@@ -34600,31 +34185,31 @@ white
 
 75
 
-\%
+&percnt;
 
 25
 
-\%
+&percnt;
 
 ,
 
 25
 
-\%
+&percnt;
 
 25
 
-\%
+&percnt;
 
 ,
 
 100
 
-\%
+&percnt;
 
 75
 
-\%
+&percnt;
 
 ;
 
@@ -34662,21 +34247,21 @@ no-repeat
 
 > **HTML**
 
-**\<**
+**&lt;**
 
 **div**
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **/div**
 
-**\>**
+**&gt;**
 
 > In the above example, three linear-gradient images (which when placed
 > in their appropriate positions would cover 100% x 100% of the
-> container\'s size) are used as masks to produce a transparent
+> container&apos;s size) are used as masks to produce a transparent
 > triangular shaped cut at the bottom of the image.
 >
 > **Image without the mask:**
@@ -34702,7 +34287,7 @@ height="2.2083333333333335in"}
 
 ## Section 45.1: Media print page-break
 
-**\@media**
+**&commat;media**
 
 print
 
@@ -34777,11 +34362,11 @@ stylesheet
 
 document.styleSheets
 
-\[
+&lbrack;
 
 0
 
-\]
+&rbrack;
 
 .cssRules
 
@@ -34799,7 +34384,7 @@ stylesheet
 
 .length
 
-\-
+&minus;
 
 1
 
@@ -34808,9 +34393,9 @@ stylesheet
 > Finally, insert a background-image rule for the body element at the
 > end of the stylesheet:
 >
-> stylesheet.insertRule(\"body { background-image:
-> url(\'http://cdn.sstatic.net/Sites/stackoverflow/img/favicon.ico\');
-> }\", end);
+> stylesheet.insertRule(&quot;body { background-image:
+> url(&apos;http://cdn.sstatic.net/Sites/stackoverflow/img/favicon.ico&apos;);
+> }&quot;, end);
 
 ## Section 46.2: Introduction
 
@@ -34855,16 +34440,16 @@ height="3.0871391076115486in"}
 > previous or next condition is true.
 
   -----------------------------------------------------------------------
-  \...
+  &period;..
   -----------------------------------------------------------------------
 
   -----------------------------------------------------------------------
 
 () Groups conditions
 
-## Section 47.1: Basic \@supports usage
+## Section 47.1: Basic &commat;supports usage
 
-**\@supports**
+**&commat;supports**
 
 (
 
@@ -34878,7 +34463,7 @@ flex
 
 {
 
-*/\* Flexbox is available, so use it \*/*
+*/&ast; Flexbox is available, so use it &ast;/*
 
 .my-container
 
@@ -34896,12 +34481,12 @@ flex
 
 }
 
-> In terms of syntax, \@supports is very similar to \@media, but instead
-> of detecting screen size and orientation, \@supports will detect
+> In terms of syntax, &commat;supports is very similar to &commat;media, but instead
+> of detecting screen size and orientation, &commat;supports will detect
 > whether the browser can handle a given CSS rule.
 
   --------------------------------------------------------------------------------------------------
-  **\@supports**   (   flex   ), notice that the rule  **\@supports**   (   **display**   :   flex
+  **&commat;supports**   (   flex   ), notice that the rule  **&commat;supports**   (   **display**   :   flex
                               is                                                              
   ---------------- --- ------ ------------------------ ---------------- --- ------------- --- ------
 
@@ -34913,7 +34498,7 @@ Rather than doing something like ).
 
 > To detect multiple features at once, use the and operator.
 
-**\@supports**
+**&commat;supports**
 
 (
 
@@ -34961,7 +34546,7 @@ px
 
 {
 
-*/\* Probably do some fancy 3d stuff here \*/*
+*/&ast; Probably do some fancy 3d stuff here &ast;/*
 
 }
 
@@ -34975,7 +34560,7 @@ not
 
 operator:
 
-**\@supports**
+**&commat;supports**
 
 (
 
@@ -35001,12 +34586,12 @@ table-cell
 
 {
 
-*/\* Will be used if the browser supports flexbox or display: table-cell
-\*/*
+*/&ast; Will be used if the browser supports flexbox or display: table-cell
+&ast;/*
 
 }
 
-**\@supports**
+**&commat;supports**
 
 not
 
@@ -35014,7 +34599,7 @@ not
 
 webkit-transform
 
-\-
+&minus;
 
 :
 
@@ -35038,15 +34623,15 @@ translate
 
 {
 
-*/\* Will \*not\* be used if the browser supports -webkit-transform:
-translate(\...) \*/*
+*/&ast; Will &ast;not&ast; be used if the browser supports -webkit-transform:
+translate(&period;..) &ast;/*
 
 }
 
-> For the ultimate \@supports experience, try grouping logical
+> For the ultimate &commat;supports experience, try grouping logical
 > expressions with parenthesis:
 
-**\@supports**
+**&commat;supports**
 
 (
 
@@ -35130,7 +34715,7 @@ px
 
 {
 
-*/\* \... \*/*
+*/&ast; &period;.. &ast;/*
 
 }
 
@@ -35186,11 +34771,11 @@ DIV #6
 > DIV #3, so stacking of those elements is completely resolved within
 > DIV#3. Once stacking and rendering within DIV #3 is completed, the
 > whole DIV #3 element is passed for stacking in the root element with
-> respect to its sibling\'s DIV.
+> respect to its sibling&apos;s DIV.
 >
 > **HTML:**
 
-**\<**
+**&lt;**
 
 **div**
 
@@ -35198,57 +34783,57 @@ id
 
 =
 
-\"div1\"
+&quot;div1&quot;
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **h**
 
 **1**
 
-**\>**
+**&gt;**
 
 Division Element #1
 
-**\<**
+**&lt;**
 
 **/h**
 
 **1**
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **code**
 
-**\>**
+**&gt;**
 
 position: relative;
 
-**\<**
+**&lt;**
 
 **br**
 
-**/\>**
+**/&gt;**
 
 z-index: 5;
 
-**\<**
+**&lt;**
 
 **/code**
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **/div**
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **div**
 
@@ -35256,69 +34841,57 @@ id
 
 =
 
-\"div2\"
+&quot;div2&quot;
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **h**
 
 **1**
 
-**\>**
+**&gt;**
 
 Division Element #2
 
-**\<**
+**&lt;**
 
 **/h**
 
 **1**
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **code**
 
-**\>**
+**&gt;**
 
 position: relative;
 
-**\<**
+**&lt;**
 
 **br**
 
-**/\>**
+**/&gt;**
 
 z-index: 2;
 
-**\<**
+**&lt;**
 
 **/code**
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **/div**
 
-**\>**
+**&gt;**
 
-**\<**
-
-**div**
-
-id
-
-=
-
-\"div3\"
-
-**\>**
-
-**\<**
+**&lt;**
 
 **div**
 
@@ -35326,97 +34899,109 @@ id
 
 =
 
-\"div4\"
+&quot;div3&quot;
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
+
+**div**
+
+id
+
+=
+
+&quot;div4&quot;
+
+**&gt;**
+
+**&lt;**
 
 **h**
 
 **1**
 
-**\>**
+**&gt;**
 
 Division Element #4
 
-**\<**
+**&lt;**
 
 **/h**
 
 **1**
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **code**
 
-**\>**
+**&gt;**
 
 position: relative;
 
-**\<**
+**&lt;**
 
 **br**
 
-**/\>**
+**/&gt;**
 
 z-index: 6;
 
-**\<**
+**&lt;**
 
 **/code**
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **/div**
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **h**
 
 **1**
 
-**\>**
+**&gt;**
 
 Division Element #3
 
-**\<**
+**&lt;**
 
 **/h**
 
 **1**
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **code**
 
-**\>**
+**&gt;**
 
 position: absolute;
 
-**\<**
+**&lt;**
 
 **br**
 
-**/\>**
+**/&gt;**
 
 z-index: 4;
 
-**\<**
+**&lt;**
 
 **/code**
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **div**
 
@@ -35424,57 +35009,57 @@ id
 
 =
 
-\"div5\"
+&quot;div5&quot;
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **h**
 
 **1**
 
-**\>**
+**&gt;**
 
 Division Element #5
 
-**\<**
+**&lt;**
 
 **/h**
 
 **1**
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **code**
 
-**\>**
+**&gt;**
 
 position: relative;
 
-**\<**
+**&lt;**
 
 **br**
 
-**/\>**
+**/&gt;**
 
 z-index: 1;
 
-**\<**
+**&lt;**
 
 **/code**
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **/div**
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **div**
 
@@ -35482,61 +35067,61 @@ id
 
 =
 
-\"div6\"
+&quot;div6&quot;
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **h**
 
 **1**
 
-**\>**
+**&gt;**
 
 Division Element #6
 
-**\<**
+**&lt;**
 
 **/h**
 
 **1**
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **code**
 
-**\>**
+**&gt;**
 
 position: absolute;
 
-**\<**
+**&lt;**
 
 **br**
 
-**/\>**
+**/&gt;**
 
 z-index: 3;
 
-**\<**
+**&lt;**
 
 **/code**
 
-**\>**
+**&gt;**
 
-**\<**
-
-**/div**
-
-**\>**
-
-**\<**
+**&lt;**
 
 **/div**
 
-**\>**
+**&gt;**
+
+**&lt;**
+
+**/div**
+
+**&gt;**
 
 > **CSS:**
 
@@ -35810,7 +35395,7 @@ px
 
 ;
 
-*/\* does not create block formatting context \*/*
+*/&ast; does not create block formatting context &ast;/*
 
 }
 
@@ -35834,7 +35419,7 @@ hidden
 
 ;
 
-*/\* creates block formatting context \*/*
+*/&ast; creates block formatting context &ast;/*
 
 }
 
@@ -35864,7 +35449,7 @@ MDN
 
 > **HTML:**
 
-**\<**
+**&lt;**
 
 **div**
 
@@ -35872,23 +35457,11 @@ class
 
 =
 
-\"wrapper\"
+&quot;wrapper&quot;
 
-**\>**
+**&gt;**
 
-**\<**
-
-**div**
-
-class
-
-=
-
-\"outer\"
-
-**\>**
-
-**\<**
+**&lt;**
 
 **div**
 
@@ -35896,29 +35469,41 @@ class
 
 =
 
-\"inner\"
+&quot;outer&quot;
 
-**\>**
+**&gt;**
+
+**&lt;**
+
+**div**
+
+class
+
+=
+
+&quot;inner&quot;
+
+**&gt;**
 
 centered
 
-**\<**
+**&lt;**
 
 **/div**
 
-**\>**
+**&gt;**
 
-**\<**
-
-**/div**
-
-**\>**
-
-**\<**
+**&lt;**
 
 **/div**
 
-**\>**
+**&gt;**
+
+**&lt;**
+
+**/div**
+
+**&gt;**
 
 > **CSS:**
 
@@ -35964,7 +35549,7 @@ table
 
 100
 
-\%
+&percnt;
 
 ;
 
@@ -35974,7 +35559,7 @@ table
 
 100
 
-\%
+&percnt;
 
 ;
 
@@ -36016,7 +35601,7 @@ middle
 
 > **HTML:**
 
-**\<**
+**&lt;**
 
 **div**
 
@@ -36024,11 +35609,11 @@ class
 
 =
 
-\"container\"
+&quot;container&quot;
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **div**
 
@@ -36036,21 +35621,21 @@ class
 
 =
 
-\"child\"
+&quot;child&quot;
 
-**\>**
+**&gt;**
 
-**\<**
-
-**/div**
-
-**\>**
-
-**\<**
+**&lt;**
 
 **/div**
 
-**\>**
+**&gt;**
+
+**&lt;**
+
+**/div**
+
+**&gt;**
 
 > **CSS:**
 
@@ -36156,7 +35741,7 @@ blue
 
 > **HTML:**
 
-**\<**
+**&lt;**
 
 **div**
 
@@ -36164,11 +35749,11 @@ class
 
 =
 
-\"wrapper\"
+&quot;wrapper&quot;
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **div**
 
@@ -36176,23 +35761,23 @@ class
 
 =
 
-\"centered\"
+&quot;centered&quot;
 
-**\>**
+**&gt;**
 
 centered
 
-**\<**
+**&lt;**
 
 **/div**
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **/div**
 
-**\>**
+**&gt;**
 
 > **CSS:**
 
@@ -36250,13 +35835,13 @@ translate
 
 -50
 
-\%
+&percnt;
 
 ,
 
 -50
 
-\%
+&percnt;
 
 )
 
@@ -36268,7 +35853,7 @@ translate
 
 50
 
-\%
+&percnt;
 
 ;
 
@@ -36278,7 +35863,7 @@ translate
 
 50
 
-\%
+&percnt;
 
 ;
 
@@ -36288,7 +35873,7 @@ translate
 
 > **HTML:**
 
-**\<**
+**&lt;**
 
 **div**
 
@@ -36296,29 +35881,29 @@ class
 
 =
 
-\"container\"
+&quot;container&quot;
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **span**
 
-**\>**
+**&gt;**
 
 vertically centered
 
-**\<**
+**&lt;**
 
 **/span**
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **/div**
 
-**\>**
+**&gt;**
 
 > **CSS:**
 
@@ -36336,7 +35921,7 @@ px
 
 ;
 
-*/\* set height \*/*
+*/&ast; set height &ast;/*
 
 **line-height**
 
@@ -36348,7 +35933,7 @@ px
 
 ;
 
-*/\* set line-height equal to the height \*/*
+*/&ast; set line-height equal to the height &ast;/*
 
 **vertical-align**
 
@@ -36358,8 +35943,8 @@ middle
 
 ;
 
-*/\* works without this rule, but it is good having it explicitly set
-\*/*
+*/&ast; works without this rule, but it is good having it explicitly set
+&ast;/*
 
 }
 
@@ -36371,7 +35956,7 @@ middle
 
 > **HTML:**
 
-**\<**
+**&lt;**
 
 **div**
 
@@ -36379,11 +35964,11 @@ class
 
 =
 
-\"wrapper\"
+&quot;wrapper&quot;
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **img**
 
@@ -36391,15 +35976,15 @@ src
 
 =
 
-\"http://cdn.sstatic.net/Sites/stackoverflow/company/img/logos/so/so-icon.png?v=c78bd457575a\"
+&quot;http://cdn.sstatic.net/Sites/stackoverflow/company/img/logos/so/so-icon.png?v=c78bd457575a&quot;
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **/div**
 
-**\>**
+**&gt;**
 
 > **CSS:**
 
@@ -36488,7 +36073,7 @@ auto
 >
 > **HTML:**
 
-**\<**
+**&lt;**
 
 **div**
 
@@ -36496,11 +36081,11 @@ class
 
 =
 
-\"wrapper\"
+&quot;wrapper&quot;
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **div**
 
@@ -36508,23 +36093,23 @@ class
 
 =
 
-\"child\"
+&quot;child&quot;
 
-**\>**
+**&gt;**
 
 make me center
 
-**\<**
+**&lt;**
 
 **/div**
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **/div**
 
-**\>**
+**&gt;**
 
 > **CSS:**
 
@@ -36646,7 +36231,7 @@ solid
 
 > **HTML:**
 
-**\<**
+**&lt;**
 
 **div**
 
@@ -36654,11 +36239,11 @@ class
 
 =
 
-\"wrapper\"
+&quot;wrapper&quot;
 
-**\>**
+**&gt;**
 
-**\<**
+**&lt;**
 
 **div**
 
@@ -36666,21 +36251,21 @@ class
 
 =
 
-\"content\"
+&quot;content&quot;
 
-**\>**
+**&gt;**
 
-**\<**
-
-**/div**
-
-**\>**
-
-**\<**
+**&lt;**
 
 **/div**
 
-**\>**
+**&gt;**
+
+**&lt;**
+
+**/div**
+
+**&gt;**
 
 > **CSS:**
 
@@ -36712,7 +36297,7 @@ before
 
 :
 
-\"\"
+&quot;&quot;
 
 ;
 
@@ -36730,7 +36315,7 @@ inline-block
 
 100
 
-\%
+&percnt;
 
 ;
 
@@ -36777,8 +36362,8 @@ middle
 }
 
 > This method is best used in cases where you have a varied-height
-> .content centered inside .wrapper; and you want .wrapper\'s height to
-> expand when .content\'s height exceed .wrapper\'s min-height.
+> .content centered inside .wrapper; and you want .wrapper&apos;s height to
+> expand when .content&apos;s height exceed .wrapper&apos;s min-height.
 
 # Chapter 51: Object Fit and Placement
 
@@ -36799,7 +36384,7 @@ fill
 ;
 
 > Fill stretches the image to fit the content box without regard to the
-> image\'s original aspect ratio.
+> image&apos;s original aspect ratio.
 >
 > **CONTAIN**
 
@@ -36811,8 +36396,8 @@ contain
 
 ;
 
-> Contain fits the image in the box\'s height or width while maintaining
-> the image\'s aspect ratio.
+> Contain fits the image in the box&apos;s height or width while maintaining
+> the image&apos;s aspect ratio.
 >
 > **COVER**
 
@@ -36878,7 +36463,7 @@ height="3.6458333333333335in"}
   -------------------------------------------------------------------------
 
 > [[BEM]](http://getbem.com/introduction/) stands for .
-> It\'s a methodology initially conceived by Russian tech company
+> It&apos;s a methodology initially conceived by Russian tech company
 >
 > [[Yandex]](https://en.wikipedia.org/wiki/Yandex), but
 > which gained quite some traction among American & Western-European web
@@ -36918,17 +36503,17 @@ height="3.6458333333333335in"}
 > the following rules.
 
   -----------------------------------------------------------------------
-  blockname\--modifiername        and   blockname\_\_elementname\--
+  blockname&minus;-modifiername        and   blockname&lowbar;&lowbar;elementname&minus;-
   ------------------------------- ----- ---------------------------------
 
   -----------------------------------------------------------------------
 
 > Block styles are never dependent on other elements on a page
 >
-> Blocks should have a simple, short name and avoid \_ or - characters
+> Blocks should have a simple, short name and avoid &lowbar; or - characters
 >
 > When styling elements, use selectors of format
-> blockname\_\_elementname When styling modifiers, use selectors of
+> blockname&lowbar;&lowbar;elementname When styling modifiers, use selectors of
 > format modifiername
 >
 > Elements or blocks that have modifiers should inherit everything from
@@ -36942,18 +36527,18 @@ height="3.6458333333333335in"}
 >
 > .form { } // Block
 >
-> .form\--theme-xmas { } // Block + modifier .form\--simple { } //
+> .form&minus;-theme-xmas { } // Block + modifier .form&minus;-simple { } //
 > Block + modifier
 >
-> .form\_\_input { } // Block \> element
+> .form&lowbar;&lowbar;input { } // Block &gt; element
 >
-> .form\_\_submit { } // Block \> element
+> .form&lowbar;&lowbar;submit { } // Block &gt; element
 >
-> .form\_\_submit\--disabled { } // Block \> element + modifier
+> .form&lowbar;&lowbar;submit&minus;-disabled { } // Block &gt; element + modifier
 >
 > The corresponding HTML should look something like this:
 
-**\<**
+**&lt;**
 
 **form**
 
@@ -36961,29 +36546,11 @@ class
 
 =
 
-\"form form\--theme-xmas form\--simple\"
+&quot;form form&minus;-theme-xmas form&minus;-simple&quot;
 
-**\>**
+**&gt;**
 
-**\<**
-
-**input**
-
-class
-
-=
-
-\"form\_\_input\"
-
-type
-
-=
-
-\"text\"
-
-**/\>**
-
-**\<**
+**&lt;**
 
 **input**
 
@@ -36991,21 +36558,39 @@ class
 
 =
 
-\"form\_\_submit form\_\_submit\--disabled\"
+&quot;form&lowbar;&lowbar;input&quot;
 
 type
 
 =
 
-\"submit\"
+&quot;text&quot;
 
-**/\>**
+**/&gt;**
 
-**\<**
+**&lt;**
+
+**input**
+
+class
+
+=
+
+&quot;form&lowbar;&lowbar;submit form&lowbar;&lowbar;submit&minus;-disabled&quot;
+
+type
+
+=
+
+&quot;submit&quot;
+
+**/&gt;**
+
+**&lt;**
 
 **/form**
 
-**\>**
+**&gt;**
 
 # Chapter 53: Browser Support & Prefixes
 
@@ -37193,7 +36778,7 @@ deg
 
 > Browsers have a default set of CSS styles they use for rendering
 > elements. Some of these styles can even be customised using the
-> browser\'s settings to change default font face and size definitions,
+> browser&apos;s settings to change default font face and size definitions,
 > for example. The styles contain the definition of which elements are
 > supposed to be block-level or inline, among other things.
 >
@@ -37223,7 +36808,7 @@ deg
 >
 > **Difference to reset.css**
 >
-> You may have heard of reset.css. What\'s the difference between the
+> You may have heard of reset.css. What&apos;s the difference between the
 > two?
 >
 > While normalize.css provides consistency by setting different
@@ -37238,7 +36823,7 @@ deg
 > CSS resets take separate approaches to browser defaults. Eric Meyer's
 > Reset CSS has been around for a while. His approach nullifies many of
 > the browser elements that have been known to cause problems right off
-> the back. The following is from his version (v2.0 \| 20110126) CSS
+> the back. The following is from his version (v2.0 &vertbar; 20110126) CSS
 > Reset.
 
 html, body, div, span, applet, object, iframe,
@@ -37317,27 +36902,27 @@ align: baseline;
 
 **}**
 
-[[Eric Meyer\'s Reset
+[[Eric Meyer&apos;s Reset
 CSS]](http://meyerweb.com/eric/tools/css/reset/)
 
 > Normalize CSS on the other and deals with many of these separately.
 > The following is a sample from the version (v4.2.0) of the code.
 
-*/\*\**
+*/&ast;&ast;*
 
-*\* 1. Change the default font family in all browsers (opinionated).*
+*&ast; 1. Change the default font family in all browsers (opinionated).*
 
-*\* 2. Correct the line height in all browsers.*
+*&ast; 2. Correct the line height in all browsers.*
 
-*\* 3. Prevent adjustments of font size after orientation changes in IE
+*&ast; 3. Prevent adjustments of font size after orientation changes in IE
 and iOS.*
 
-*\*/*
+*&ast;/*
 
-*/\* Document*
+*/&ast; Document*
 
 *==========================================================================
-\*/*
+&ast;/*
 
 html
 
@@ -37351,7 +36936,7 @@ sans-serif
 
 ;
 
-*/\* 1 \*/*
+*/&ast; 1 &ast;/*
 
 **line-height**
 
@@ -37361,7 +36946,7 @@ sans-serif
 
 ;
 
-*/\* 2 \*/*
+*/&ast; 2 &ast;/*
 
 -ms-text-size-adjust
 
@@ -37369,11 +36954,11 @@ sans-serif
 
 100
 
-\%
+&percnt;
 
 ;
 
-*/\* 3 \*/*
+*/&ast; 3 &ast;/*
 
 -webkit-text-size-adjust
 
@@ -37381,24 +36966,24 @@ sans-serif
 
 100
 
-\%
+&percnt;
 
 ;
 
-*/\* 3 \*/*
+*/&ast; 3 &ast;/*
 
 }
 
-*/\* Sections*
+*/&ast; Sections*
 
 *==========================================================================
-\*/*
+&ast;/*
 
-*/\*\**
+*/&ast;&ast;*
 
-*\* Remove the margin in all browsers (opinionated).*
+*&ast; Remove the margin in all browsers (opinionated).*
 
-*\*/*
+*&ast;/*
 
 body
 
@@ -37414,11 +36999,11 @@ body
 
 }
 
-*/\*\**
+*/&ast;&ast;*
 
-*\* Add the correct display in IE 9-.*
+*&ast; Add the correct display in IE 9-.*
 
-*\*/*
+*&ast;/*
 
 article
 
@@ -37454,14 +37039,14 @@ block
 
 }
 
-*/\*\**
+*/&ast;&ast;*
 
-*\* Correct the font size and margin on \`h1\` elements within
-\`section\` and*
+*&ast; Correct the font size and margin on &apos;h1&apos; elements within
+&apos;section&apos; and*
 
-*\* \`article\` contexts in Chrome, Firefox, and Safari.*
+*&ast; &apos;article&apos; contexts in Chrome, Firefox, and Safari.*
 
-*\*/*
+*&ast;/*
 
 h1
 
@@ -37516,7 +37101,7 @@ zoom
 
 ;
 
-\*
+&ast;
 
 **display**
 
@@ -37526,23 +37111,20 @@ inline
 
 ;
 
-  -----------------------------------------------------------------------
   display
-  -----------------------------------------------------------------------
 
-  -----------------------------------------------------------------------
 
 > The zoom property triggers the hasLayout feature of elements, and it
-> is available only in Internet Explorer. The \* makes sure that the
+> is available only in Internet Explorer. The &ast; makes sure that the
 > invalid property executes only on the affected browsers. Other
 > browsers will simply ignore the rule.
 
 ## Section 55.2: High Contrast Mode in Internet Explorer 10 and greater
 
 > In Internet Explorer 10+ and Edge, Microsoft provides the
-> -ms-high-contrast media selector to expose the \"High Contrast\"
+> -ms-high-contrast media selector to expose the &quot;High Contrast&quot;
 > setting from the browser, which allows the programmer to adjust their
-> site\'s styles accordingly.
+> site&apos;s styles accordingly.
 >
 > The -ms-high-contrast selector has 3 states: active, black-on-white,
 > and white-on-black. In IE10+ it also had a none state, but that is no
@@ -37550,13 +37132,13 @@ inline
 >
 > **Examples**
 
-**\@media**
+**&commat;media**
 
 screen and
 
 (
 
-\-
+&minus;
 
 ms-high-contrast
 
@@ -37570,7 +37152,7 @@ active
 
 (
 
-\-
+&minus;
 
 ms-high-contrast
 
@@ -37610,13 +37192,13 @@ black-on-white
 > black when high contrast mode is active *and* it is in black-on-white
 > mode.
 
-**\@media**
+**&commat;media**
 
 screen and
 
 (
 
-\-
+&minus;
 
 ms-high-contrast
 
@@ -37665,13 +37247,13 @@ on -ms-high-contrast
 ## Section 55.3: Internet Explorer 6 & Internet Explorer 7 only
 
 > To target Internet Explorer 6 and Internet Explorer 7, start your
-> properties with \*:
+> properties with &ast;:
 
 .hide-on-ie6-and-ie7
 
 {
 
-\*
+&ast;
 
 **display**
 
@@ -37685,28 +37267,22 @@ none
 
 }
 
-  -----------------------------------------------------------------------
   property: value
-  -----------------------------------------------------------------------
 
-  -----------------------------------------------------------------------
 
 > Non-alphanumeric prefixes (other than hyphens and underscores) are
 > ignored in IE6 and IE7, so this hack works for any unprefixed pair.
 
 ## Section 55.4: Internet Explorer 8 only
 
-  -----------------------------------------------------------------------
-  **\@media** \\                 0 screen { }
-  ------------------------------ ----------------------------------------
+  **&commat;media** &bsol;&bsol;                 0 screen { }
 
-  -----------------------------------------------------------------------
 
 > To target Internet Explorer 8, wrap your selectors inside :
 
-**\@media**
+**&commat;media**
 
-\\
+&bsol;&bsol;
 
 0
 
@@ -37731,8 +37307,7 @@ none
 }
 
 +-----------------------------+----------------------------------------+
-| **\@media** \\0             | > screen { }                           |
-+=============================+========================================+
+| **&commat;media** &bsol;&bsol;0             | > screen { }                           |
 +-----------------------------+----------------------------------------+
 
 > Everything between is processed only by I
@@ -37745,7 +37320,7 @@ none
 > calculate the style and layout, which is a bad thing when you need to
 > animate at 60fps.
 >
-> **DON\'T**
+> **DON&apos;T**
 
 Animate with
 
@@ -38030,9 +37605,8 @@ px
 > [web@petercv.com] for new content to be published or
 > updated
 
-  ----------------------------------------------------------------------------------------------------------------
   [[A B]](https://stackoverflow.com/users/167362/)               Chapter 20
-  -------------------------------------------------------------------------- -------------------------------------
+
   [[A.J]](https://stackoverflow.com/users/2720743/)              Chapter 4
 
   [[Aaron]](https://stackoverflow.com/users/1676224/)            Chapter 4
@@ -38125,11 +37699,9 @@ px
   [[cone56]](https://stackoverflow.com/users/2229579/)           Chapters 31 and 36
 
   [[CPHPython]](https://stackoverflow.com/users/6225838/)        Chapter 4
-  ----------------------------------------------------------------------------------------------------------------
 
-  -----------------------------------------------------------------------------------------------------------------------
   [[csx.cc]](https://stackoverflow.com/users/5650428/)              Chapter 1
-  ----------------------------------------------------------------------------- -----------------------------------------
+
   [[cuervoo]](https://stackoverflow.com/users/4230661/)             Chapter 18
 
   [[Daniel G. Blázquez]](https://stackoverflow.com/users/321480/)   Chapter 5
@@ -38233,11 +37805,9 @@ px
   [[Hristo]](https://stackoverflow.com/users/196921/)               Chapter 32
 
   [[Hugo Buff]](https://stackoverflow.com/users/3392335/)           Chapter 4
-  -----------------------------------------------------------------------------------------------------------------------
 
-  ----------------------------------------------------------------------------------------------------------------------------------
   [[Hynes]](https://stackoverflow.com/users/2640230/)                Chapters 4, 5 and 15
-  ------------------------------------------------------------------------------ ---------------------------------------------------
+
   [[insertusernamehere]](https://stackoverflow.com/users/1456376/)   Chapter 15
 
   [[J Atkin]](https://stackoverflow.com/users/4683264/)              Chapters 1 and 4
@@ -38343,11 +37913,9 @@ px
   [[Mod Proxy]](https://stackoverflow.com/users/6571865/)            Chapter 6
 
   [[Mr. Alien]](https://stackoverflow.com/users/1542290/)            Chapter 5
-  ----------------------------------------------------------------------------------------------------------------------------------
 
-  ------------------------------------------------------------------------------------------------------------------------------
   [[Mr. Meeseeks]](https://stackoverflow.com/users/1270656/)        Chapter 29
-  ----------------------------------------------------------------------------- ------------------------------------------------
+
   [[Mr_Green]](https://stackoverflow.com/users/1577396/)            Chapter 8
 
   [[Muthu Kumaran]](https://stackoverflow.com/users/615746/)        Chapter 37
@@ -38452,11 +38020,9 @@ px
   [[Sunnyok]](https://stackoverflow.com/users/4290193/)             Chapters 4, 6 and 8
 
   [[Sverri M. Olsen]](https://stackoverflow.com/users/1300892/)     Chapter 1
-  ------------------------------------------------------------------------------------------------------------------------------
 
-  ------------------------------------------------------------------------------------------------------------
   [[takeradi]](https://stackoverflow.com/users/3538394/)      Chapter 16
-  ----------------------------------------------------------------------- ------------------------------------
+
   [[Taylor]](https://stackoverflow.com/users/3311859/)        Chapter 6
 
   [[Ted Goas]](https://stackoverflow.com/users/734487/)       Chapters 12, 15, 34 and 43
@@ -38535,4 +38101,3 @@ px
   [[Zeta]](https://stackoverflow.com/users/1139697/)          Chapter 5
 
   [[Zze]](https://stackoverflow.com/users/3509591/)           Chapter 5
-  ------------------------------------------------------------------------------------------------------------
