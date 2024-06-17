@@ -943,50 +943,49 @@ layout]
 
 ## About
 
-> Please feel free to share this PDF with anyone for free, latest
-> version of this book can be downloaded from:
-> <a href="https://goalkicker.com/CSSBook">(https://goalkicker.com/CSSBook)</a>
->
-> This *CSS Notes for Professionals* book is compiled from 
-> <a href="https://archive.org/details/documentation-dump.7z">Stack
-> Overflow</a>
->
-> <a href="https://archive.org/details/documentation-dump.7z">Documentation</a>,
-> the content is written by the beautiful people at Stack Overflow.
->
-> Text content is released under Creative Commons BY-SA, see credits at
-> the end of this book whom contributed to the various chapters. Images
-> may be copyright of their respective owners unless otherwise specified
->
-> This is an unofficial free book created for educational purposes and
-> is not affiliated with official CSS group(s) or company(s) nor Stack
-> Overflow. All trademarks and registered trademarks are the property of
-> their respective company owners
->
-> The information presented in this book is not guaranteed to be correct
-> nor accurate, use at your own risk
->
-> Please send feedback and corrections to [web@petercv.com]
+<p>Please feel free to share this Markdown &amp; website with anyone, latest
+version of this book can be downloaded from:
+<a href="https://goalkicker.com/CSSBook">(https://goalkicker.com/CSSBook)</a></p>
 
-# Chapter 1: Getting started with CSS
+<p>This *CSS Notes for Professionals* book is compiled from 
+<a href="https://archive.org/details/documentation-dump.7z">Stack Overflow</a></p>
 
-## Section 1.1: External Stylesheet
+<p><a href="https://archive.org/details/documentation-dump.7z">Documentation</a>,
+the content is written by the beautiful people at Stack Overflow.</p>
 
-> An external CSS stylesheet can be applied to any number of HTML
-> documents by placing a &lt;link**&gt;** element in each HTML document.
->
-> The attribute rel of the &lt;link&gt; tag has to be set to &quot;stylesheet&quot;,
-> and the href attribute to the relative or absolute path to the
-> stylesheet. While using relative URL paths is generally considered
-> good practice, absolute paths can be used, too. In HTML5 the type
-> attribute <a href="https://html.spec.whatwg.org/multipage/semantics.html#the-link-element">
-> can be omitted</a>.
->
-> It is recommended that the styles are loaded before the elements they
-> style are utilized. Otherwise, <a href="http://stackoverflow.com/a/1642259/2397327">users will see a flash of unstyled
-> content</a>.
->
-> **Example hello-world.html**
+<p>Text content is released under Creative Commons BY-SA, see credits at
+the end of this book whom contributed to the various chapters. Images
+may be copyright of their respective owners unless otherwise specified.</p>
+
+<p>This is an unofficial free book created for educational purposes and
+is not affiliated with official CSS group(s) or company(s) nor Stack
+Overflow. All trademarks and registered trademarks are the property of
+their respective company owners.</p>
+
+<p>The information presented in this book is not guaranteed to be correct
+nor accurate, use at your own risk.</p>
+
+<p>Please send feedback and corrections to [web@petercv.com]</p>
+
+<h1>Chapter 1: Getting started with CSS</h1>
+
+<h2 id="ch1-1">Section 1.1: External Stylesheet</h2>
+
+An external CSS stylesheet can be applied to any number of HTML
+documents by placing a &lt;link**&gt;** element in each HTML document.
+
+The attribute rel of the &lt;link&gt; tag has to be set to &quot;stylesheet&quot;,
+and the href attribute to the relative or absolute path to the
+stylesheet. While using relative URL paths is generally considered
+good practice, absolute paths can be used, too. In HTML5 the type
+attribute <a href="https://html.spec.whatwg.org/multipage/semantics.html#the-link-element">
+can be omitted</a>.
+
+It is recommended that the styles are loaded before the elements they
+style are utilized. Otherwise, <a href="http://stackoverflow.com/a/1642259/2397327">users will see a flash of unstyled
+content</a>.
+
+**Example hello-world.html**
 
 ```
 <! DOCTYPE html>
@@ -1003,7 +1002,7 @@ layout]
 
 ```
 
-> style.css
+<h4>style.css</h4>
 
 ```
 h1 {
@@ -1017,145 +1016,144 @@ p {
 }
 ```
 
-> Make sure you include the correct path to your CSS file in the href.
-> If the CSS file is in the same folder as your HTML file then no path
-> is required (like the example above) but if it's saved in a folder,
-> then specify it like this;
->
-> href="foldername/style.css".
+Make sure you include the correct path to your CSS file in the href.
+If the CSS file is in the same folder as your HTML file then no path
+is required (like the example above) but if it's saved in a folder,
+then specify it like this;
+
+href="foldername/style.css".
 
 ```
-> <link rel="stylesheet" type="text/css" href="foldername/style.css">
->
-> <link rel="stylesheet" type="text/css" href="foldername/style.css">
+<link rel="stylesheet" type="text/css" href="foldername/style.css">
+
+<link rel="stylesheet" type="text/css" href="foldername/style.css">
 ```
 
->
-> External stylesheets are considered the best way to handle your CSS.
-> There&apos;s a very simple reason for this: when you&apos;re managing a site
-> of, say, 100 pages, all controlled by a single stylesheet, and you
-> want to change your link colors from blue to green, it&apos;s a lot easier
-> to make the change in your CSS file and let the changes &quot;cascade&quot;
-> throughout all 100 pages than it is to go into 100 separate pages and
-> make the same change 100 times. Again, if you want to completely
-> change the look of your website, you only need to update this one
-> file.
->
-> You can load as many CSS files in your HTML page as needed.
->
+External stylesheets are considered the best way to handle your CSS.
+There&apos;s a very simple reason for this: when you&apos;re managing a site
+of, say, 100 pages, all controlled by a single stylesheet, and you
+want to change your link colors from blue to green, it&apos;s a lot easier
+to make the change in your CSS file and let the changes &quot;cascade&quot;
+throughout all 100 pages than it is to go into 100 separate pages and
+make the same change 100 times. Again, if you want to completely
+change the look of your website, you only need to update this one
+file.
+
+You can load as many CSS files in your HTML page as needed.
+
 
 ```
-> <link rel="stylesheet" type="text/css" href="main.css">
->
-> <link rel="stylesheet" type="text/css" href="override.css">
+<link rel="stylesheet" type="text/css" href="main.css">
+
+<link rel="stylesheet" type="text/css" href="override.css">
 ```
 
->
-> CSS rules are applied with some basic rules, and order does matter.
-> For example, if you have a main.css file with some code in it:
->
-```
-> p.green { color: #00ff00; }
-```
->
-> All your paragraphs with the &apos;green&apos; class will be written in light
-> green, but you can override this with another .css file just by
-> including it *after* main.css. You can have override.css with the
-> following code follow main.css, for example:
->
-```
-> p.green { color: #006600; }
-```
->
-> Now all your paragraphs with the &apos;green&apos; class will be written in
-> darker green rather than light green.
->
-> Other principles apply, such as the &apos;!important&apos; rule, specificity,
-> and inheritance.
->
-> When someone first visits your website, their browser downloads the
-> HTML of the current page plus the linked CSS file. Then when they
-> navigate to another page, their browser only needs to download the
-> HTML of that page; the CSS file is cached, so it does not need to be
-> downloaded again. Since browsers cache the external stylesheet, your
-> pages load faster.
+CSS rules are applied with some basic rules, and order does matter.
+For example, if you have a main.css file with some code in it:
 
-## Section 1.2: Internal Styles
+```
+p.green { color: #00ff00; }
+```
 
-> CSS enclosed in **&gt;** tags within an HTML document function like an
-> external stylesheet, except that it lives in the HTML document it
-> styles instead of in a separate file, and therefore can only be
-> applied to the document in which it lives. Note that this element
-> *must* be inside the **&gt;** element for HTML validation (though it
-> will work in all current &lt;head&gt; browsers if placed in body).
+All your paragraphs with the &apos;green&apos; class will be written in light
+green, but you can override this with another .css file just by
+including it *after* main.css. You can have override.css with the
+following code follow main.css, for example:
 
-## Section 1.3: CSS &commat;import rule (one of CSS at-rule)
+```
+p.green { color: #006600; }
+```
 
-> The &commat;import CSS at-rule is used to import style rules from other
-> style sheets. These rules must precede all other types of rules,
-> except &commat;charset rules; as it is not a nested statement, &commat;import
-> cannot be used inside conditional group at-rules.
-> <a href="https://developer.mozilla.org/en/docs/Web/CSS/@import">[[&commat;import]]</a>.
->
-> **How to use &commat;import**
->
-> You can use &commat;import rule in following ways:
+Now all your paragraphs with the &apos;green&apos; class will be written in
+darker green rather than light green.
+
+Other principles apply, such as the &apos;!important&apos; rule, specificity,
+and inheritance.
+
+When someone first visits your website, their browser downloads the
+HTML of the current page plus the linked CSS file. Then when they
+navigate to another page, their browser only needs to download the
+HTML of that page; the CSS file is cached, so it does not need to be
+downloaded again. Since browsers cache the external stylesheet, your
+pages load faster.
+
+<h2 id="ch1-2">Section 1.2: Internal Styles</h2>
+
+CSS enclosed in **&gt;** tags within an HTML document function like an
+external stylesheet, except that it lives in the HTML document it
+styles instead of in a separate file, and therefore can only be
+applied to the document in which it lives. Note that this element
+*must* be inside the **&gt;** element for HTML validation (though it
+will work in all current &lt;head&gt; browsers if placed in body).
+
+<h2 id="ch1-3">Section 1.3: CSS &commat;import rule (one of CSS at-rule)</h2>
+
+The &commat;import CSS at-rule is used to import style rules from other
+style sheets. These rules must precede all other types of rules,
+except &commat;charset rules; as it is not a nested statement, &commat;import
+cannot be used inside conditional group at-rules.
+<a href="https://developer.mozilla.org/en/docs/Web/CSS/@import">[[&commat;import]]</a>.
+
+**How to use &commat;import**
+
+You can use &commat;import rule in following ways:
 
 A.  **With internal style tag**
 
 B.  **With external stylesheet**
 
-> The following line imports a CSS file named additional-styles.css in
-> the root directory into the CSS file in which it appears:
->
-> Importing external CSS is also possible. A common use case are font
-> files.
->
-> An optional second argument to &commat;import rule is a list of media
-> queries:
->
+The following line imports a CSS file named additional-styles.css in
+the root directory into the CSS file in which it appears:
+
+Importing external CSS is also possible. A common use case are font
+files.
+
+An optional second argument to &commat;import rule is a list of media
+queries:
 
 ```
-> @import '/print-styles.css' print;
->
-> @import url('landscap.css') screen and (orientation: landscape);
+@import '/print-styles.css' print;
+
+@import url('landscap.css') screen and (orientation: landscape);
 ```
 
-## Section 1.4: Inline Styles
+<h2 id="ch1-4">Section 1.4: Inline Styles</h2>
 
   **&lt;style**
 
-> Use inline styles to apply styling to a specific element. Note that
-> this is ***not*** optimal. Placing style rules in a **&gt;** tag or
-> external CSS file is encouraged in order to maintain a distinction
-> between content and presentation.
+Use inline styles to apply styling to a specific element. Note that
+this is ***not*** optimal. Placing style rules in a **&gt;** tag or
+external CSS file is encouraged in order to maintain a distinction
+between content and presentation.
 
   **&lt;style**
 
-> Inline styles override any CSS in a **&gt;** tag or external style
-> sheet. While this can be useful in some circumstances, this fact more
-> often than not reduces a project&apos;s maintainability.
->
-> The styles in the following example apply directly to the elements to
-> which they are attached.
-```
-> **<h1** style="color: green; text-decoration:
-> underline;"**>**Hello world!**</h1>**
->
-> **<p** style="font-size: 25px; font-family: 'Trebuchet MS';"**>**I ♥ CSS**</p>**
-```
-> Inline styles are generally the safest way to ensure rendering
-> compatibility across various email clients, programs and devices, but
-> can be time-consuming to write and a bit challenging to manage.
+Inline styles override any CSS in a **&gt;** tag or external style
+sheet. While this can be useful in some circumstances, this fact more
+often than not reduces a project&apos;s maintainability.
 
-## Section 1.5: Changing CSS with JavaScript
+The styles in the following example apply directly to the elements to
+which they are attached.
 
-> **Pure JavaScript**
+```
+<h1 style="color: green; 
+  text-decoration: underline;">Hello world!</h1>
+
+<p style="font-size: 25px; 
+  font-family: 'Trebuchet MS';">I ♥ CSS</p>
+```
+Inline styles are generally the safest way to ensure rendering
+compatibility across various email clients, programs and devices, but
+can be time-consuming to write and a bit challenging to manage.
+
+<h2 id="ch1-5">Section 1.5: Changing CSS with JavaScript</h2>
+
+> Pure JavaScript
 >
 > It&apos;s possible to add, remove or change CSS property values with
 > JavaScript through an element&apos;s style property.
 
-**var**
+var
 
 ```
 el=document.getElementById ("element");
@@ -1173,7 +1171,7 @@ el.style.fontFamily='sans-serif';
 ```
 
 > As an alternative to working directly on elements, you can create a
-> **&gt;** element in JavaScript and append it to the **&gt;** of the HTML
+> &gt; element in JavaScript and append it to the &gt; of the HTML
 > document.
 >
 
@@ -1209,7 +1207,7 @@ $('#element').css({
 });
 ```
 
-> **See also**
+> See also
 
   - JavaScript documentation -- Reading and Changing CSS Style. 
   - jQuery documentation -- CSS Manipulation
@@ -1222,7 +1220,7 @@ $('#element').css({
 > outside, and none, respectively. Each property can be declared
 > separately, or using the list-style shorthand property.
 >
-> **list-style-type** defines the shape or type of bullet point used for
+> list-style-type defines the shape or type of bullet point used for
 > each list-item.
 >
 > Some of the acceptable values for list-style-type:
@@ -1247,17 +1245,17 @@ li {
 }
 ```
 
-> The **list-style-image** property determines whether the list-item
+> The <b>list-style-image</b> property determines whether the list-item
 > icon is set with an image, and accepts a value of none or a URL that
 > points to an image.
 
-````
+```
 li {
   list-style-image: url (images/bullet.png);
 }
 ```
 
-> The **list-style-position** property defines where to position the
+> The <b>list-style-position** property defines where to position the
 > list-item marker, and it accepts one of two values: &quot;inside&quot; or
 > &quot;outside&quot;.
 
@@ -1271,7 +1269,7 @@ li {list-style-position: inside;
 ## Section 2.1: Property Lists
 
 > Some properties can take multiple values, collectively known as a
-> **property list**.
+> <b>property list**.
 
 ```
 /* Two values in this property list */
@@ -1297,9 +1295,9 @@ span {
 div, p {color: blue }
 ```
 
-/*  **<div>**   elements and all   **<p>**   elements. */
-/*  Without the comma only       **<p>** */
-/*  **<div>** */
+/*  <b><div>**   elements and all   <b><p>**   elements. */
+/*  Without the comma only       <b><p>** */
+/*  <b><div>** */
 
 > So the blue color applies to all elements that are a child of a would
 > be red.
@@ -1318,9 +1316,7 @@ p, .blue, #first, div span{ color : blue }
 
 ## Section 2.3: Rules, Selectors, and Declaration Blocks
 
-```
 > A CSS rule consists of a selector (e.g. h1) and declaration block ({}).
-```
 
 ```
 h1 {}
@@ -1362,7 +1358,7 @@ div {
 
 ## Section 4.1: Basic selectors
 
-  **Selector**           **Description**
+  <b>Selector**           <b>Description**
   &ast;                     Universal selector (all elements)
   div					Tag selector (all <div> elements)
   .blue					Class selector (all elements with class blue)
@@ -1373,7 +1369,7 @@ div {
   div > p				child selector
   
 
-> **Note:** The value of an ID must be unique in a web page. It is a
+> <b>Note:** The value of an ID must be unique in a web page. It is a
 > violation of the <a href="https://www.w3.org/TR/html/dom.html#the-id-attribute">
 > HTML standard to use the value of an ID more than once in the same document tree.
 >
@@ -1383,13 +1379,13 @@ div {
 
 ## Section 4.2: Attribute Selectors
 
-> **Overview**
+> <b>Overview**
 >
 > Attribute selectors can be used with various types of operators that
 > change the selection criteria accordingly. They select an element
 > using the presence of a given attribute or attribute value.
 
-**Selector(1) Matched element Selects elements&period;.. CSS Version**
+<b>Selector(1) Matched element Selects elements&period;.. CSS Version**
 
 | Selector(1)     | Matched element            | Selects elements...                |
 |-----------------|:--------------------------:|------------------------------------|
@@ -1407,7 +1403,7 @@ div {
 |                 |                            | ignoring val's letter casing. |
 |                 |                            | followed by - (U+002D) |
 
-***Notes:***
+<b>*Notes:***
 
 1.  The attribute value can be surrounded by either single-quotes or
     double-quotes. No quotes at all may also work, but it&apos;s not valid
@@ -1516,32 +1512,33 @@ div[data-color="red"] {
 [attribute|="value"]
 ```
 
-**attribute&dollar;**                         **=**   **&quot;value&quot;**
+<b>attribute&dollar;**                         <b>=**   <b>&quot;value&quot;**
 
-**&lbrack;&rbrack;**
+<b>&lbrack;&rbrack;**
 
 > Selects elements with the given attribute and value where the given
 > attribute ends with the given value.
 
+```
 &lbrack;class&dollar;=&quot;file&quot;&rbrack;
 {
-**color**
+color
 :
 red
 ;
 }
-**&lt;**
-**div**
+&lt;
+div
 class
 =
 &quot;foobar-file&quot;
-**&gt;**
+&gt;
 This will be red
-**&lt;**
-**/div**
-**&gt;**
-**&lt;**
-**div**
+&lt;
+/div
+&gt;
+&lt;
+div
 class
 =
 &quot;foobar-file&quot;
@@ -1560,6 +1557,8 @@ This will NOT be red
 **&lt;**
 **/div**
 **&gt;**
+```
+
 <a href="http://jsbin.com/yowihi/2/edit?html,css,output">Live Demo on JSBin</a>
 **attribute&vertbar;**                         **=**   **&quot;value&quot;**
 
@@ -1569,6 +1568,7 @@ This will NOT be red
 > attribute&apos;s value is exactly the given value or is exactly the given
 > value followed by - (U+002D)
 
+```
 &lbrack;
 lang
 &vertbar;
@@ -1613,8 +1613,8 @@ This will NOT be red
 **&gt;**
 <a href="http://jsbin.com/yowihi/3/edit?html,css,output">Live Demo on JSBin</a>
 **attribute**                     **=**   **&quot;value&quot; i**
-
 **&lbrack;&rbrack;**
+```
 
 > Selects elements with a given attribute and value where the
 > attribute&apos;s value can be represented as Value, VALUE, vAlUe or any
@@ -1626,6 +1626,7 @@ This will NOT be red
 }
 ```
 
+```
 <div lang="EN-us"
 
 **&gt;**
@@ -1650,6 +1651,7 @@ div lang="PT">This will NOT be red
 **&lt;**
 **/div**
 **&gt;**
+```
 
 <a href="http://jsbin.com/yowihi/4/edit?html,css,output">Live Demo on JSBin</a>
 
@@ -1669,7 +1671,7 @@ div lang="PT">This will NOT be red
 >
 > See the Syntax Section for more details.
 
-## Section 4.3: Combinators
+<h2 id="ch4-3">Section 4.3: Combinators</h2>
 
 > **Overview**
 
