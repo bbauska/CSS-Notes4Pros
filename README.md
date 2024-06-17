@@ -5,7 +5,7 @@ title: |
   CSS Notes for Professionals
   by somebody, somewhere
 author: "bbauska"
-date last editted: "5/24/2024 Fri 12+pm"
+date last editted: "6/17/2024 Mon 12+pm"
 output: 
   markdown:
     with some style
@@ -32,29 +32,21 @@ output:
 
 [**[About]** [9](#about)](#about)
 
-[**[Chapter 1: Getting started with CSS]**
-[10](#section)](#section)
+[**[Chapter 1: Getting started with CSS]** [10](#section)](#section)
 
-[[Section 1.1: External Stylesheet]
-[10](#section-1.1-external-stylesheet)](#section-1.1-external-stylesheet)
+[[Section 1.1: External Stylesheet] [10](#section-1.1-external-stylesheet)](#section-1.1-external-stylesheet)
 
-[[Section 1.2: Internal Styles]
-[11](#section-1.2-internal-styles)](#section-1.2-internal-styles)
+[[Section 1.2: Internal Styles] [11](#section-1.2-internal-styles)](#section-1.2-internal-styles)
 
-[[Section 1.3: CSS \@import rule (one of CSS at-rule)]
-[11](#section-1.3-css-import-rule-one-of-css-at-rule)](#section-1.3-css-import-rule-one-of-css-at-rule)
+[[Section 1.3: CSS \@import rule (one of CSS at-rule)] [11](#section-1.3-css-import-rule-one-of-css-at-rule)](#section-1.3-css-import-rule-one-of-css-at-rule)
 
-[[Section 1.4: Inline Styles]
-[12](#section-1.4-inline-styles)](#section-1.4-inline-styles)
+[[Section 1.4: Inline Styles] [12](#section-1.4-inline-styles)](#section-1.4-inline-styles)
 
-[[Section 1.5: Changing CSS with JavaScript]
-[12](#section-1.5-changing-css-with-javascript)](#section-1.5-changing-css-with-javascript)
+[[Section 1.5: Changing CSS with JavaScript] [12](#section-1.5-changing-css-with-javascript)](#section-1.5-changing-css-with-javascript)
 
-[[Section 1.6: Styling Lists with CSS]
-[13](#section-1.6-styling-lists-with-css)](#section-1.6-styling-lists-with-css)
+[[Section 1.6: Styling Lists with CSS] [13](#section-1.6-styling-lists-with-css)](#section-1.6-styling-lists-with-css)
 
-[**[Chapter 2: Structure and Formatting of a CSS Rule]**
-[14](#chapter-2-structure-and-formatting-of-a-css-rule)](#chapter-2-structure-and-formatting-of-a-css-rule)
+[**[Chapter 2: Structure and Formatting of a CSS Rule]** [14](#chapter-2-structure-and-formatting-of-a-css-rule)](#chapter-2-structure-and-formatting-of-a-css-rule)
 
 [[Section 2.1: Property Lists]
 [14](#section-2.1-property-lists)](#section-2.1-property-lists)
