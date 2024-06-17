@@ -941,7 +941,7 @@ layout]
 
 [[222](#credits)](#credits)
 
-## About
+<h2 id="about">About</h2>
 
 <p>Please feel free to share this Markdown &amp; website with anyone, latest
 version of this book can be downloaded from:
@@ -1146,7 +1146,7 @@ Inline styles are generally the safest way to ensure rendering
 compatibility across various email clients, programs and devices, but
 can be time-consuming to write and a bit challenging to manage.
 
-<h2 id="ch1-5">Section 1.5: Changing CSS with JavaScript</h2>
+<h2 id="#ch1-5">Section 1.5: Changing CSS with JavaScript</h2>
 
 > Pure JavaScript
 >
