@@ -24,7 +24,7 @@ output:
   style="width:20%"
   title="JavaScript coffee cup logo version"
   alt="JavaScript coffee cup logo version." />
-<img src="./images/image002.png"
+<img src="./images/image002.jpg"
   style="width:20%"
   title=" logo"
   alt=" logo." />
