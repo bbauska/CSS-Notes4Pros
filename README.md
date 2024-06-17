@@ -1165,11 +1165,10 @@ el.style.fontFamily='sans-serif';
 > example you see that the css property fontfamily becomes fontFamily in
 > javascript.
 
-  **<style**                  **>** or          **<link**
-
-
-  **<body**                **>** or           **<head**
-
+```
+  <style> or <link>
+  <body> or <head>
+```
 
 > As an alternative to working directly on elements, you can create a
 > **&gt;** element in JavaScript and append it to the **&gt;** of the HTML
@@ -1234,8 +1233,8 @@ $('#element').css({
   - upper-roman 
   - none
 >
-> (For an exhaustive list, see the [[W3C specification
-> wiki]](https://www.w3.org/wiki/CSS/Properties/list-style-type))
+> (For an exhaustive list, see the 
+> <a href="https://www.w3.org/wiki/CSS/Properties/list-style-type">W3C specification wiki</a>.
 >
 > To use square bullet points for each list-item, for example, you would
 > use the following property-value pair:
@@ -1252,7 +1251,7 @@ li {
 
 ````
 li {
-list-style-image: url (images/bullet.png);
+  list-style-image: url (images/bullet.png);
 }
 ```
 
@@ -1272,9 +1271,9 @@ li {list-style-position: inside;
 > Some properties can take multiple values, collectively known as a
 > **property list**.
 
-*/* Two values in this property list */*
-
 ```
+/* Two values in this property list */
+
 span {
   text-shadow: yellow 0 0 3px, green 4px 4px 10px;
 }
@@ -1330,7 +1329,7 @@ h1 {}
 ## Section 3.1: Single Line
 
 ```
-*/&ast; This is a CSS comment &ast;/*
+/* This is a CSS comment */
 div {
   color: red; /* This is a CSS comment */
 }
@@ -1363,48 +1362,22 @@ div {
 
   **Selector**           **Description**
   &ast;                     Universal selector (all elements)
+  div					Tag selector (all <div> elements)
+  .blue					Class selector (all elements with class blue)
+  #headline				ID selector (the element with "id" attribute set to headline)
+  :pseudo-class			All Elements with pseudo-class
+  ::pseudo-element		Element that matches pseudo-element
+  :lang(en)				Element that matches :lang declaration, for example <span lang="en">
+  div > p				child selector
+  
 
-
-  **&lt;div**
-
-
-div Tag selector (all **&gt;** elements)
-
-  .blue                 Class selector (all elements with class blue)
-
-
-.blue.red All elements with class blue **and** red (a type of Compound
-selector)
-
-#headline ID selector (the element with &quot;id&quot; attribute set to
-headline)
-
-:pseudo-class All elements with pseudo-class
-
-  ::pseudo-element
-
-
-> Element that matches pseudo-element
-
-  lang   (   en   ) Element that matches :lang declaration, for      **&lt;span**   =   &quot;en&quot;
-                  example                                            lang             
-
-
-> :**&gt;**
-
-  div                                      &gt;         p
-
-
-> child selector
->
 > **Note:** The value of an ID must be unique in a web page. It is a
-> violation of the [[HTML
-> standard]](https://www.w3.org/TR/html/dom.html#the-id-attribute)
-> to use the value of an ID more than once in the same document tree.
+> violation of the <a href="https://www.w3.org/TR/html/dom.html#the-id-attribute">
+> HTML standard to use the value of an ID more than once in the same document tree.
 >
-> A complete list of selectors can be found in the [[CSS Selectors Level
-> 3
-> specification]](https://www.w3.org/TR/css3-selectors/#selectors).
+> A complete list of selectors can be found in the 
+> <a href="https://www.w3.org/TR/css3-selectors/#selectors">CSS Selectors Level
+> 3 specification.
 
 ## Section 4.2: Attribute Selectors
 
@@ -1416,87 +1389,20 @@ headline)
 
 **Selector(1) Matched element Selects elements&period;.. CSS Version**
 
-  attr
-  **&lt;div** attr                          
-
-  **&lt;div**                               attr
-
-
-  **&lt;div**                               attr
-
-
-  **&lt;div**                               attr
-
-
-  **&lt;div**                               attr
-
-
-  **&lt;div**                               attr
-
-
-  **&lt;div**                               attr
-
-  &quot;val&quot;
-
-
-  attr                         =       &apos;val&apos;
-
-
-  &quot;val val2 val3&quot;
-
-
-  attr                      &#126;=          &apos;val&apos;
-
-
-  attr&Hat;=&apos;val&apos;
-
-
-  &quot;val1 val2&quot;
-
-
-  &quot;sth aval&quot;
-
-
-  attr                      &dollar;=          &apos;val&apos;
-
-
-  &quot;somevalhere&quot;
-
-
-  attr&ast;=&apos;val&apos;
-
-
-  &quot;val-sth etc&quot;
-
-
-  attr                      &vertbar;=          &apos;val&apos;
-
-
-&lbrack;&rbrack;**&gt;** With attribute attr 2
-
-&lbrack;&rbrack;=**&gt;** Where attribute attr has value val 2
-
-> Where val appears in the
->
-> &lbrack;&rbrack;=**&gt;** 2 whitespace-separated list of attr
-
-&lbrack;&rbrack;=**&gt;** Where attr&apos;s value *begins* with val 3
-
-> &lbrack;&rbrack;=**&gt;** Where the attr&apos;s value *ends* with val 3 &lbrack;&rbrack;=**&gt;**
-> Where attr contains val anywhere 3
->
-> Where attr&apos;s value is exactly val,
-
-&lbrack;&rbrack;=**&gt;** or starts with val and immediately 2
-
-> followed by - (U+002D)
-
-  attr       =   &apos;val&apos; i        &rbrack;   **&lt;div** attr        =   &quot;val&quot;
-
-
-> Where attr has value val,
->
-> &lbrack;**&gt;** 4(2) ignoring val&apos;s letter casing.
+| <b>Selector(1) | Matched element | Selects elements... |
+| [attr]         | <div attr> | With attribute attr |
+| [attr='val'] | <div attr="val"> | Where attribute attr has value val |
+| [attr~='val'] | <div attr="val val2 val3"> | Where val appears in the |
+|               |                            | whitespace-separated list of attr |
+| [attr^='val'] | <div attr="val1 val2">     | Where attr's value begins with val |
+| [attr$='val'] | <div attr="sth aval">     | Where attr's value ends with val |
+| [attr='val']  | <div attr="somevalhere">  | Where attr contains val anywhere |
+| [attr|='val'] | <div attr="val-sth etc"> | Where attr's value is exactly val, |
+|               |                          | or starts with val and immediately |
+|               |                          | followed by - (U+002D) |
+| [attr|='val' i] | <div attr="val"> | Where attr has val, |
+|               |                          | ignoring val's letter casing. |
+|               |                          | followed by - (U+002D) |
 
 ***Notes:***
 
@@ -1506,493 +1412,107 @@ headline)
 
 2.  There is no single, integrated CSS4 specification, because it is
     split into separate modules. However, there are &quot;level 4&quot; modules.
-    [[See browser
-    support]](http://caniuse.com/#feat=css-case-insensitive).
+    <a href="http://caniuse.com/#feat=css-case-insensitive">See browser support</a>.
 
-> **Details**
-
-  **attribute**
-
-
-**&lbrack;&rbrack;**
+```
+> Details
+> [attribute]
+```
 
 > Selects elements with the given attribute.
 
-div
-
-&lbrack;
-
-data-color
-
-&rbrack;
-
-{
-
-**color**
-
-:
-
-red
-
-;
-
+```
+div[data-color] {
+  color: red;
 }
 
-**&lt;**
+<div data-color="red">This will be red</div>
+<div data-color="green">This will be red</div>
+<div data-background="red">This will NOT be red</div>
+```
 
-**div**
+<a href="http://jsbin.com/cezale/1/edit?html,css,output">Live Demo on JSBin</a>
 
-data-color
-
-=
-
-&quot;red&quot;
-
-**&gt;**
-
-This will be red
-
-**&lt;**
-
-**/div**
-
-**&gt;**
-
-**&lt;**
-
-**div**
-
-data-color
-
-=
-
-&quot;green&quot;
-
-**&gt;**
-
-This will be red
-
-**&lt;**
-
-**/div**
-
-**&gt;**
-
-**&lt;**
-
-**div**
-
-data-background
-
-=
-
-&quot;red&quot;
-
-**&gt;**
-
-This will NOT be red
-
-**&lt;**
-
-**/div**
-
-**&gt;**
-
-[[Live Demo on
-JSBin]](http://jsbin.com/cezale/1/edit?html,css,output)
-
-  **attribute**                         **=**   **&quot;value&quot;**
-
-
-**&lbrack;&rbrack;**
+```
+[attribute="value"]
+```
 
 > Selects elements with the given attribute and value.
 
-div
+```
+div[data-color="red"] {
+  color: red;
+  }
 
-&lbrack;
+<div data-color="red">This will be red</div>
+<div data-color="green">This will be red</div>
+<div data-background="red">This will NOT be red</div>
+```
 
-data-color
+<a href="http://jsbin.com/waxoked/1/edit?html,css,output">Live Demo on JSBin</a>
 
-=
-
-&quot;red&quot;
-
-&rbrack;
-
-{
-
-**color**
-
-:
-
-red
-
-;
-
-}
-
-**&lt;**
-
-**div**
-
-data-color
-
-=
-
-&quot;red&quot;
-
-**&gt;**
-
-This will be red
-
-**&lt;**
-
-**/div**
-
-**&gt;**
-
-**&lt;**
-
-**div**
-
-data-color
-
-=
-
-&quot;green&quot;
-
-**&gt;**
-
-This will NOT be red
-
-**&lt;**
-
-**/div**
-
-**&gt;**
-
-**&lt;**
-
-**div**
-
-data-color
-
-=
-
-&quot;blue&quot;
-
-**&gt;**
-
-This will NOT be red
-
-**&lt;**
-
-**/div**
-
-**&gt;**
-
-[[Live Demo on
-JSBin]](http://jsbin.com/waxoked/1/edit?html,css,output)
-
-  **attribute&ast;=&quot;value&quot;**
-
-
-**&lbrack;&rbrack;**
+```
+[attribute="value"]
+```
 
 > Selects elements with the given attribute and value where the given
 > attribute contains the given value anywhere (as a substring).
 
-&lbrack;
-
-class
-
-&ast;=
-
-&quot;foo&quot;
-
-&rbrack;
-
-{
-
-**color**
-
-:
-
-red
-
-;
-
+```
+[class = "foo"] {
+  color: red;
 }
 
-**&lt;**
+<div class="foo-123">This will be red</div>
+<div class="foo123">This will be red</div>
+<div class="bar123foo">This will be red</div>
+<div class="barfooo123">This will be red</div>
+<div class="barfo0">Ths will NOT be red</div>
+```
 
-**div**
+<a href="http://jsbin.com/dazige/1/edit?html,css,output">Live Demo on JSBin</a>
 
-class
-
-=
-
-&quot;foo-123&quot;
-
-**&gt;**
-
-This will be red
-
-**&lt;**
-
-**/div**
-
-**&gt;**
-
-**&lt;**
-
-**div**
-
-class
-
-=
-
-&quot;foo123&quot;
-
-**&gt;**
-
-This will be red
-
-**&lt;**
-
-**/div**
-
-**&gt;**
-
-**&lt;**
-
-**div**
-
-class
-
-=
-
-&quot;bar123foo&quot;
-
-**&gt;**
-
-This will be red
-
-**&lt;**
-
-**/div**
-
-**&gt;**
-
-**&lt;**
-
-**div**
-
-class
-
-=
-
-&quot;barfooo123&quot;
-
-**&gt;**
-
-This will be red
-
-**&lt;**
-
-**/div**
-
-**&gt;**
-
-**&lt;**
-
-**div**
-
-class
-
-=
-
-&quot;barfo0&quot;
-
-**&gt;**
-
-This will NOT be red
-
-**&lt;**
-
-**/div**
-
-**&gt;**
-
-[[Live Demo on
-JSBin]](http://jsbin.com/dazige/1/edit?html,css,output)
-
-  **attribute&#126;**                         **=**   **&quot;value&quot;**
-
-
-**&lbrack;&rbrack;**
+```
+[attribute~="value"]
+```
 
 > Selects elements with the given attribute and value where the given
 > value appears in a whitespace-separated list.
 
-&lbrack;
-
-class&#126;
-
-=
-
-&quot;color-red&quot;
-
-&rbrack;
-
-{
-
-**color**
-
-:
-
-red
-
-;
-
+```
+[class~="color-red"] {
+  color: red;
 }
 
-**&lt;**
+<div class="color-red foo-bar the-div">This will be red</div>
+<div class="color-blue" foo-bar the-div">This will NOT be red</div>
+```
 
-**div**
+<a href="http://jsbin.com/posuhim/1/edit?html,css,output">Live Demo on JSBin</a>
 
-class
-
-=
-
-&quot;color-red foo-bar the-div&quot;
-
-**&gt;**
-
-This will be red
-
-**&lt;**
-
-**/div**
-
-**&gt;**
-
-**&lt;**
-
-**div**
-
-class
-
-=
-
-&quot;color-blue foo-bar the-div&quot;
-
-**&gt;**
-
-This will NOT be red
-
-**&lt;**
-
-**/div**
-
-**&gt;**
-
-[[Live Demo on
-JSBin]](http://jsbin.com/posuhim/1/edit?html,css,output)
-
-  **attribute&Hat;=&quot;value&quot;**
-
-
-**&lbrack;&rbrack;**
+```
+[attribute^="value"]
+```
 
 > Selects elements with the given attribute and value where the given
 > attribute begins with the value.
 
-&lbrack;
+```
+[class^="foo-"] {
+  color: red;
+  }
 
-class
+<div class="foobar-file">This will be red</div>
+<div class="foobar-file">This will be red</div>
+<div class="foobar-input">This will NOT be red</div>
+```
 
-&Hat;=
+<a href="http://jsbin.com/yowihi/1/edit?html,css,output">Live Demo on JSBin</a>
 
-&quot;foo-&quot;
+```
+[attribute|="value"]
+```
 
-&rbrack;
-
-{
-
-**color**
-
-:
-
-red
-
-;
-
-}
-
-**&lt;**
-
-**div**
-
-class
-
-=
-
-&quot;foo-123&quot;
-
-**&gt;**
-
-This will be red
-
-**&lt;**
-
-**/div**
-
-**&gt;**
-
-**&lt;**
-
-**div**
-
-class
-
-=
-
-&quot;foo-234&quot;
-
-**&gt;**
-
-This will be red
-
-**&lt;**
-
-**/div**
-
-**&gt;**
-
-**&lt;**
-
-**div**
-
-class
-
-=
-
-&quot;bar-123&quot;
-
-**&gt;**
-
-This will NOT be red
-
-**&lt;**
-
-**/div**
-
-**&gt;**
-
-[[Live Demo on
-JSBin]](http://jsbin.com/yowihi/1/edit?html,css,output)
 
   **attribute&dollar;**                         **=**   **&quot;value&quot;**
 
