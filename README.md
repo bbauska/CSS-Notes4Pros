@@ -33,46 +33,44 @@ CSS Notes For Professionals - intermediate level CSS learning course.  All on-li
 
 <h2 id="about">About</h2>
 
-<p>Please feel free to share this Markdown &amp; website with anyone, latest
-version of this book can be downloaded from:
-<a href="https://goalkicker.com/CSSBook">(https://goalkicker.com/CSSBook)</a></p>
+<p align="center">Please feel free to share this Markdown &amp; website with anyone, latest
+version of this book can be downloaded from:<br>
+<a href="https://goalkicker.com/CSSBook">https://goalkicker.com/CSSBook</a></p>
 
-<p>This *CSS Notes for Professionals* book is compiled from 
-<a href="https://archive.org/details/documentation-dump.7z">Stack Overflow</a></p>
-
-<p><a href="https://archive.org/details/documentation-dump.7z">Documentation</a>,
-the content is written by the beautiful people at Stack Overflow.</p>
-
-<p>Text content is released under Creative Commons BY-SA, see credits at
+<p align="center">This <i>CSS Notes for Professionals</i> book is compiled from 
+<a href="https://archive.org/details/documentation-dump.7z">Stack Overflow 
+Documentation</a>, the content is written by the beautiful people at Stack Overflow.<br/>
+Text content is released under Creative Commons BY-SA, see credits at
 the end of this book whom contributed to the various chapters. Images
 may be copyright of their respective owners unless otherwise specified.</p>
 
-<p>This is an unofficial free book created for educational purposes and
+<p align="center">This is an unofficial free book created for educational purposes and
 is not affiliated with official CSS group(s) or company(s) nor Stack
 Overflow. All trademarks and registered trademarks are the property of
 their respective company owners.</p>
 
-<p>The information presented in this book is not guaranteed to be correct
+<p align="center">The information presented in this book is not guaranteed to be correct
 nor accurate, use at your own risk.</p>
 
-<p>Please send feedback and corrections to [web@petercv.com]</p>
+<p align="center">Please send feedback and corrections to <a href="web@petercv.com">web@petercv.com</a></p>
 
 <h1>Chapter 1: Getting started with CSS</h1>
 
 <h3 id="ch1-1">Section 1.1: External Stylesheet</h3>
 
 An external CSS stylesheet can be applied to any number of HTML
-documents by placing a &lt;link**&gt;** element in each HTML document.
+documents by placing a <b>&lt;link&gt;</b> element in each HTML document.
 
-The attribute rel of the &lt;link&gt; tag has to be set to &quot;stylesheet&quot;,
+The attribute rel of the <b>&lt;link&gt;</b> tag has to be set to &quot;stylesheet&quot;,
 and the href attribute to the relative or absolute path to the
 stylesheet. While using relative URL paths is generally considered
 good practice, absolute paths can be used, too. In HTML5 the type
 attribute <a href="https://html.spec.whatwg.org/multipage/semantics.html#the-link-element">
 can be omitted</a>.
 
-It is recommended that the styles are loaded before the elements they
-style are utilized. Otherwise, <a href="http://stackoverflow.com/a/1642259/2397327">
+It is recommended that the <b>&lt;link&gt;</b> tag be placed in the HTML file's <b>&lt;head&gt;</b>
+tag so that the styles are loaded before the elements they style.
+Otherwise, <a href="http://stackoverflow.com/a/1642259/2397327">
 users will see a flash of unstyled content</a>.
 
 <h4>Example</h4>
@@ -255,45 +253,37 @@ can be time-consuming to write and a bit challenging to manage.
 
 <h3 id="#ch1-5">Section 1.5: Changing CSS with JavaScript</h3>
 
-> Pure JavaScript
->
-> It&apos;s possible to add, remove or change CSS property values with
-> JavaScript through an element&apos;s style property.
+<h4>Pure JavaScript</h4>
 
-var
+<p>It&apos;s possible to add, remove or change CSS property values with JavaScript 
+through an element&apos;s style property.</p>
 
 ```
-el=document.getElementById ("element");
-el.style.opacity=0.5;
-el.style.fontFamily='sans-serif';
+var el = document.getElementById("element");
+el.style.opacity = 0.5;
+el.style.fontFamily = 'sans-serif';
 ```
 
-> Note that style properties are named in lower camel case style. In the
-> example you see that the css property fontfamily becomes fontFamily in
-> javascript.
+<p>Note that style properties are named in lower camel case style. In the
+example you see that the css property fontfamily becomes fontFamily in
+javascript.</p>
 
 ```
   <style> or <link>
   <body> or <head>
 ```
 
-> As an alternative to working directly on elements, you can create a
-> &gt; element in JavaScript and append it to the &gt; of the HTML
-> document.
->
+<p>As an alternative to working directly on elements, you can create a 
+<b>&lt;style&gt;</b> or <b>&lt;link&gt;</b> element in JavaScript and append it 
+to the <b>&lt;body&gt;</b> or <b>&lt;head&gt;</b> of the HTML document.</p>
 
 <h4>jQuery</h4>
 
-> Modifying CSS properties with jQuery is even simpler.
-
+<p>Modifying CSS properties with jQuery is even simpler.</p>
 ```
-$('#element').css(
-  margin,'5px'
-);
+$('#element').css('margin', '5px');
 ```
-
-> If you need to change more than one style rule:
-
+<p>If you need to change more than one style rule:</p>
 ```
 $('#element').css({
   margin:"5px",
@@ -301,82 +291,70 @@ $('#element').css({
   color:"black"
 });
 ```
-
-> jQuery includes two ways to change css rules that have hyphens in them
-> (i.e. font-size). You can put them in quotes or camel-case the style
-> rule name.
->
-
+<p>jQuery includes two ways to change css rules that have hyphens in them
+(i.e. font-size). You can put them in quotes or camel-case the style
+rule name.</p>
 ```
-> $('.example-class').css({
->   "background-color": "blue", 
->   fontSize: "10px" 
+$('.example-class').css({
+  "background-color": "blue", 
+  fontSize: "10px" 
 });
 ```
-
-> See also
-
-  - JavaScript documentation -- Reading and Changing CSS Style. 
-  - jQuery documentation -- CSS Manipulation
+<h4>See also</h4>
+<ul>
+  <li>JavaScript documentation -- Reading and Changing CSS Style.</li>
+  <li>jQuery documentation -- CSS Manipulation</li>
+</ul>
 
 <h3 id="ch1-6">Section 1.6: Styling Lists with CSS</h3>
 
-> There are three different properties for styling list-items:
-> list-style-type, list-style-image, and list-style position, which
-> should be declared in that order. The default values are disc,
-> outside, and none, respectively. Each property can be declared
-> separately, or using the list-style shorthand property.
->
-> list-style-type defines the shape or type of bullet point used for
-> each list-item.
->
-> Some of the acceptable values for list-style-type:
+<p>There are three different properties for styling list-items:
+list-style-type, list-style-image, and list-style position, which
+should be declared in that order. The default values are disc,
+outside, and none, respectively. Each property can be declared
+separately, or using the list-style shorthand property.</p>
+<p><b>list-style-type</b> defines the shape or type of bullet point used for each list-item.</p>
+<p>Some of the acceptable values for list-style-type:</p>
+<ul>
+  <li>disc</li>
+  <li>circle</li>
+  <li>square</li>
+  <li>decimal</li>
+  <li>lower-roman</li>
+  <li>upper-roman</li>
+  <li>none</li>
+</ul>
 
-  - disc 
-  - circle
-  - square 
-  - decimal 
-  - lower-roman 
-  - upper-roman 
-  - none
-
-> (For an exhaustive list, see the 
-> <a href="https://www.w3.org/wiki/CSS/Properties/list-style-type">W3C specification wiki</a>.
->
-> To use square bullet points for each list-item, for example, you would
-> use the following property-value pair:
-
+<p>(For an exhaustive list, see the 
+<a href="https://www.w3.org/wiki/CSS/Properties/list-style-type">W3C specification wiki</a>.</p>
+<p>To use square bullet points for each list-item, for example, you would use 
+the following property-value pair:</p>
 ```
 li {
   list-style-type: square;
 }
 ```
-
-> The <b>list-style-image</b> property determines whether the list-item
-> icon is set with an image, and accepts a value of none or a URL that
-> points to an image.
-
+<p>The <b>list-style-image</b> property determines whether the list-item
+icon is set with an image, and accepts a value of none or a URL that
+points to an image.</p>
 ```
 li {
   list-style-image: url (images/bullet.png);
 }
 ```
-
-> The <b>list-style-position** property defines where to position the
-> list-item marker, and it accepts one of two values: &quot;inside&quot; or
-> &quot;outside&quot;.
-
+<p>The <b>list-style-position</b> property defines where to position the
+list-item marker, and it accepts one of two values: &quot;inside&quot; or
+&quot;outside&quot;.
 ```
 li {list-style-position: inside;
 }
 ```
-
 <h2 id="ch2">Chapter 2: Structure and Formatting of a CSS Rule</h2>
 
 <h3 id="ch2-1">Section 2.1: Property Lists</h3>
 
-> Some properties can take multiple values, collectively known as a
-> <b>property list**.
+<p>Some properties can take multiple values, collectively known as a
+<b>property list</b>.
 
 ```
 /* Two values in this property list */
@@ -403,9 +381,9 @@ span {
 div, p {color: blue }
 ```
 
-/*  <b><div>**   elements and all   <b><p>**   elements. */
-/*  Without the comma only       <b><p>** */
-/*  <b><div>** */
+/*  <b><div></b>   elements and all   <b><p></b>   elements. */
+/*  Without the comma only       <b><p></b> */
+/*  <b><div></b> */
 
 > So the blue color applies to all elements that are a child of a would
 > be red.
@@ -467,7 +445,7 @@ div {
 
 ## Section 4.1: Basic selectors
 
-  <b>Selector**           <b>Description**
+  <b>Selector</b>           <b>Description</b>
   &ast;                     Universal selector (all elements)
   div					Tag selector (all <div> elements)
   .blue					Class selector (all elements with class blue)
@@ -478,7 +456,7 @@ div {
   div > p				child selector
   
 
-> <b>Note:** The value of an ID must be unique in a web page. It is a
+> <b>Note:</b> The value of an ID must be unique in a web page. It is a
 > violation of the <a href="https://www.w3.org/TR/html/dom.html#the-id-attribute">
 > HTML standard to use the value of an ID more than once in the same document tree.
 >
@@ -488,13 +466,13 @@ div {
 
 ## Section 4.2: Attribute Selectors
 
-> <b>Overview**
+> <b>Overview</b>
 >
 > Attribute selectors can be used with various types of operators that
 > change the selection criteria accordingly. They select an element
 > using the presence of a given attribute or attribute value.
 
-<b>Selector(1) Matched element Selects elements&period;.. CSS Version**
+<b>Selector(1) Matched element Selects elements&period;.. CSS Version</b>
 
 | Selector(1)     | Matched element            | Selects elements...                |
 |-----------------|:--------------------------:|------------------------------------|
@@ -512,7 +490,7 @@ div {
 |                 |                            | ignoring val's letter casing. |
 |                 |                            | followed by - (U+002D) |
 
-<b>*Notes:***
+<b>*Notes:</b>*
 
 1.  The attribute value can be surrounded by either single-quotes or
     double-quotes. No quotes at all may also work, but it&apos;s not valid
@@ -621,9 +599,9 @@ div[data-color="red"] {
 [attribute|="value"]
 ```
 
-<b>attribute&dollar;**                         <b>=**   <b>&quot;value&quot;**
+<b>attribute&dollar;</b>                         <b>=</b>   <b>&quot;value&quot;</b>
 
-<b>&lbrack;&rbrack;**
+<b>&lbrack;&rbrack;</b>
 
 > Selects elements with the given attribute and value where the given
 > attribute ends with the given value.
@@ -651,27 +629,27 @@ div
 class
 =
 &quot;foobar-file&quot;
-**&gt;**
+<b>&gt;</b>
 This will be red
-**&lt;**
-**/div**
-**&gt;**
-**&lt;**
-**div**
+<b>&lt;</b>
+<b>/div</b>
+<b>&gt;</b>
+<b>&lt;</b>
+<b>div</b>
 class
 =
 &quot;foobar-input&quot;
-**&gt;**
+<b>&gt;</b>
 This will NOT be red
-**&lt;**
-**/div**
-**&gt;**
+<b>&lt;</b>
+<b>/div</b>
+<b>&gt;</b>
 ```
 
 <a href="http://jsbin.com/yowihi/2/edit?html,css,output">Live Demo on JSBin</a>
-**attribute&vertbar;**                         **=**   **&quot;value&quot;**
+<b>attribute&vertbar;</b>                         <b>=</b>   <b>&quot;value&quot;</b>
 
-**&lbrack;&rbrack;**
+<b>&lbrack;&rbrack;</b>
 
 > Selects elements with a given attribute and value where the
 > attribute&apos;s value is exactly the given value or is exactly the given
@@ -685,23 +663,23 @@ lang
 &quot;EN&quot;
 &rbrack;
 {
-**color**
+<b>color</b>
 :
 red
 ;
 }
-**&lt;**
-**div**
+<b>&lt;</b>
+<b>div</b>
 lang
 =
 &quot;EN-us&quot;
-**&gt;**
+<b>&gt;</b>
 This will be red
-**&lt;**
-**/div**
-**&gt;**
-**&lt;**
-**div**
+<b>&lt;</b>
+<b>/div</b>
+<b>&gt;</b>
+<b>&lt;</b>
+<b>div</b>
 lang
 =
 &quot;EN-gb&quot;
