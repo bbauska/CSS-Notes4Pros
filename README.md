@@ -9,11 +9,13 @@ output:
     with some style
 ---
 
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h1>CSS-Notes4Pros</h1>
 CSS Notes For Professionals - intermediate level CSS learning course.  All on-line.  No money, unless you'd like to donate. I'm game for that.
 
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h1 align="center">Advanced CSS Notes for Professionals</h1>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h6 align="center">(by somebody, lecturer - somewhere @someplace)</h6>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~ readme.md of CSS Advanced - Notes for Professionals ~~~~~~~~~~~~~~~~~~~~-->
@@ -650,221 +652,98 @@ other case-insensitive possibility.
 
 <a href="http://jsbin.com/yowihi/4/edit?html,css,output">Live Demo on JSBin</a>
 
-> Specificity of attribute selectors
-  0-1-0
+<h4>Specificity of attribute selectors</h4>
+<p>0-1-0</p>
 
-> Same as class selector and pseudoclass.
+<p>Same as class selector and pseudoclass.</p>
 
 ```
 *[type=checkbox] // 0-1-0
 ```
 
-> Note that this means an attribute selector can be used to select an
-> element by its ID at a lower level of specificity than if it was
-> selected with an ID selector: &lbrack;&rbrack; targets the same element as #my-ID
-> but with lower specificity.
->
-> See the Syntax Section for more details.
+<p>Note that this means an attribute selector can be used to select an
+element by its ID at a lower level of specificity than if it was
+selected with an ID selector: &lbrack;&rbrack; targets the same element as #my-ID
+but with lower specificity.</p>
+
+<p>See the Syntax Section for more details.</p>
 
 <h3 id="ch4-3">Section 4.3: Combinators</h3>
 
-> **Overview**
+<b>Overview</b>
+<b>Selector Description</b>
 
-**Selector Description**
+| div span |  Descendant selector (all <b>&lt;span&gt;</b>s that are descendants of a <b>&lt;div&gt;</b>) |
+| div &gt; span | Child selector (all <b>&lt;span&gt;</b>s that are direct child of a <b>&lt;div&gt;</b>) |
+| a ~ span | General Sibling selector (all <b>&lt;span&gt;</b>s that are siblings after an <b>&lt;a&gt;</b>) |
+| a + span | Adjacent Sibling selector (all <b>&lt;span&gt;</b> that are immediately after an <b>&lt;a&gt;</b>) |
 
-  **&lt;span**   **&gt;**s that are descendants of a                    **&lt;div**
-
- div span   Descendant selector (all **&gt;**)
-| div span | &bsol; | s   | > Child selector | *   | **&gt;**s that are a direct   | * |
-| i | > | pan | > (all           | *&lt; | child of a                  | * |
-| v |   |     |                  | spa |                             | &bsol; |
-|   |   |     |                  | n** |                             | < |
-|   |   |     |                  |     |                             | d |
-|   |   |     |                  |     |                             | i |
-|   |   |     |                  |     |                             | v |
-|   |   |     |                  |     |                             | * |
-|   |   |     |                  |     |                             | * |
-
-> **&gt;**)
-
-  **&lt;span**   **&gt;**s that are siblings after an                     **&lt;a**
-
-
-> a &#126; span General Sibling selector (all **&gt;**)
-
-  a   &plus;   span   Adjacent Sibling selector   **&lt;span**   **&gt;**s that are immediately **&lt;a**
-                  (all                                     after an                     
-
-> **&gt;**)
->
-> **Note:** Sibling selectors target elements that come after them in
+> <b>Note:</b> Sibling selectors target elements that come after them in
 > the source document. CSS, by its nature (it cascades), cannot target
 > *previous* or *parent* elements. However, using the flex order
 > property, [[a] <a href="http://stackoverflow.com/a/36118012/3597276">
-previous sibling selector can be simulated on visual media</a>.
->
-> **Descendant Combinator: selector selector**
->
-> A descendant combinator, represented by at least one space character
-> (), selects elements that are a descendant of the defined element.
-> This combinator selects **all** descendants of the element (from child
-> elements on down).
+> previous sibling selector can be simulated on visual media</a>.
 
-div p
-{
-**color**
-:
-red
-;
+<h4>Descendant Combinator: selector selector</h4>
+
+A descendant combinator, represented by at least one space character
+(), selects elements that are a descendant of the defined element.
+This combinator selects <b>all** descendants of the element (from child
+elements on down).
+
+```
+div p {
+  color: red;
 }
-**&lt;**
-**div**
-**&gt;**
-**&lt;**
-**p**
-**&gt;**
-My text is red
-**&lt;**
-**/p**
-**&gt;**
-**&lt;**
-**section**
-**&gt;**
-**&lt;**
-**p**
-**&gt;**
-My text is red
-**&lt;**
-**/p**
-**&gt;**
-**&lt;**
-**/section**
-**&gt;**
-**&lt;**
-**/div**
-**&gt;**
-**&lt;**
-**p**
-**&gt;**
-My text is not red
-**&lt;**
-**/p**
-**&gt;**
+```
 
 <a href="http://jsbin.com/xonafuz/2/edit?html,css,output">Live Demo on JSBin</a>
 
-  **&lt;p**   **&gt;** elements are selected since they are both descendants of **&lt;div**
-            the                                                             
+In the above example, the first two <b>&lt;p&gt;</b> elements are selected since they are
+both descendants of the <b>&lt;div&gt;</b>.
 
+<h4>Child Combinator:</h4>
 
-> In the above example, the first two **&gt;**.
+The child (&gt;) combinator is used to select elements that are
+<b>children</b>, or <b>direct descendants**, of the specified element.
 
-  **selector**                      **&gt;**   **selector**
-
-
-> **Child Combinator:**
->
-> The child (&gt;) combinator is used to select elements that are
-> **children**, or **direct descendants**, of the specified element.
-
+```
 div
 &gt;
 p
 {
-**color**
+<b>color**
 :
 red
-;
-}
-**&lt;**
-**div**
-**&gt;**
-**&lt;**
-**p**
-**&gt;**
-My text is red
-**&lt;**
-**/p**
-**&gt;**
-**&lt;**
-**section**
-**&gt;**
-**&lt;**
-**p**
-**&gt;**
-My text is not red
-**&lt;**
-**/p**
-**&gt;**
-**&lt;**
-**/section**
-**&gt;**
-**&lt;**
-**/div**
-**&gt;**
+```
 
 <a href="http://jsbin.com/xonafuz/3/edit?html,css,output">Live Demo on JSBin</a>
 
-  **&lt;p**   **&gt;** element, as it is the only paragraph directly descended   **&lt;div**
+  <b>&lt;p**   <b>&gt;** element, as it is the only paragraph directly descended   <b>&lt;div**
             from a                                                           
 
 
-> The above CSS selects only the first **&gt;**.
+> The above CSS selects only the first <b>&gt;**.
 
-  **&lt;p**   **&gt;** element is not selected because it is not a direct child **&lt;div**
+  <b>&lt;p**   <b>&gt;** element is not selected because it is not a direct child <b>&lt;div**
             of the                                                          
 
 
-> The second **&gt;**.
+> The second <b>&gt;**.
 
-  **selector**                      **+**   **selector**
+  <b>selector**                      <b>+**   <b>selector**
 
 
-> **Adjacent Sibling Combinator:**
+> <b>Adjacent Sibling Combinator:**
 >
 > The adjacent sibling (+) combinator selects a sibling element that
 > immediate follows a specified element.
 
-p
-&plus;
-p
-{
-**color**
-:
-red
-;
-}
-**&lt;**
-**p**
+```
+<b>color**
+<b>&lt;<b>
 **&gt;**
-My text is not red
-**&lt;**
-**/p**
-**&gt;**
-**&lt;**
-**p**
-**&gt;**
-My text is red
-**&lt;**
-**/p**
-**&gt;**
-**&lt;**
-**p**
-**&gt;**
-My text is red
-**&lt;**
-**/p**
-**&gt;**
-**&lt;**
-**hr**
-**&gt;**
-**&lt;**
-**p**
-**&gt;**
-My text is not red
-**&lt;**
-**/p**
-**&gt;**
+```
 
 <a href="http://jsbin.com/xonafuz/4/edit?html,css,output">Live Demo on JSBin</a>
 
@@ -878,49 +757,12 @@ My text is not red
 > The general sibling (&#126;) combinator selects *all* siblings that follow
 > the specified element.
 
+```
 p &#126; p
-{
-**color**
-:
-red
-;
-}
-**&lt;**
-**p**
 **&gt;**
-My text is not red
-**&lt;**
-**/p**
-**&gt;**
-**&lt;**
-**p**
-**&gt;**
-My text is red
-**&lt;**
-**/p**
-**&gt;**
-**&lt;**
-**hr**
-**&gt;**
-**&lt;**
-**h**
-**1**
-**&gt;**
-And now a title
-**&lt;**
-**/h**
-**1**
-**&gt;**
-**&lt;**
-**p**
-**&gt;**
-My text is red
-**&lt;**
-**/p**
-**&gt;**
+```
 
-[[Live Demo on
-JSBin]](http://jsbin.com/xonafuz/5/edit?html,css,output)
+<a href="http://jsbin.com/xonafuz/5/edit?html,css,output">Live Demo on JSBin</a>
 
   **&lt;p**   **&gt;** elements that are *preceded* by another                  **&lt;p**
 
@@ -928,7 +770,7 @@ JSBin]](http://jsbin.com/xonafuz/5/edit?html,css,output)
 > The above example selects all **&gt;** element, whether or not they are
 > immediately adjacent.
 
-## Section 4.4: Pseudo-classes
+<h3 id="ch4-4">Section 4.4: Pseudo-classes</h3>
 
 > [[Pseudo-classes]](https://www.w3.org/TR/selectors/#pseudo-classes)
 > are **keywords** which allow selection based on information that lies
@@ -1106,13 +948,8 @@ Applies to any links which haven&apos;t been visited by the user.
 > Applies to all elements which **do not** match the value passed to
 
   not      &lpar;p&rpar; or :          not      (   .class-name
-
-
   [[not]](https://www.w3.org/wiki/CSS/Selectors/pseudo-classes/:not)
-
-
   not
-
 
 > (:) for example. It must have a value to be
 >
@@ -1148,7 +985,6 @@ Applies to any links which haven&apos;t been visited by the user.
 
   optional
 
-
 > The : CSS pseudo-class represents any element
 
 [[:optional](https://developer.mozilla.org/en-US/docs/Web/CSS/:optional)]
@@ -1158,7 +994,6 @@ that does not have the required attribute set on it. This allows
 > accordingly.
 
   out-of-range
-
 
 > The : CSS pseudo-class matches when an element has its value attribute
 > outside the specified range limitations for this element.
@@ -1171,7 +1006,6 @@ that does not have the required attribute set on it. This allows
 
   [[placeholder-shown]](https://developer.mozilla.org/en-US/docs/Web/CSS/:placeholder-shown)
 
-
 > [[:]](https://developer.mozilla.org/en-US/docs/Web/CSS/:placeholder-shown)**Experimental.**
 > Applies to any form element currently displaying placeholder text.
 
@@ -1179,7 +1013,6 @@ that does not have the required attribute set on it. This allows
 Applies to any element which is not editable by the user.
 
   **&lt;input**
-
 
 [[:read-write](https://developer.mozilla.org/en-US/docs/Web/CSS/:read-write)]
 Applies to any element that is editable by a user, such as **&gt;**
@@ -1209,129 +1042,63 @@ Applies to any links which have has been visited by the user.
 
   visited
 
-
-> The : pseudoclass can&apos;t be used for most styling in a lot of modern
+> The :visited pseudoclass can&apos;t be used for most styling in a lot of modern
 > browsers anymore because it&apos;s a security hole. See this
-> [[link]](https://hacks.mozilla.org/2010/03/privacy-related-changes-coming-to-css-vistited/)
+> <a href="https://hacks.mozilla.org/2010/03/privacy-related-changes-coming-to-css-vistited/">link</a>
 > for reference.
 
-## Section 4.5: Child Pseudo Class
+<h3 id="ch4-5">Section 4.5: Child Pseudo Class</h3>
 
 > &quot;The :nth-child(an+b) CSS pseudo-class matches an element that has
 > an+b-1 siblings before it in the document tree, for a given positive
-> **or zero value** for n&quot; - [MDN :nth-child]
+> <b>or zero value</b> for n&quot; - [MDN :nth-child]
 
+| **pseudo-selector**          | <b>1 2 3 4 5 6 7 8 9 10</b>           |
 +------------------------------+---------------------------------------+
-| **pseudo-selector**          | > **1 2 3 4 5 6 7 8 9 10**            |
-+==============================+=======================================+
-+------------------------------+---------------------------------------+
+| :first-child                 | ✔ |
+| nth-child (3)                |     ✔ |
+| nth-child (n+3)              |     ✔  ✔  ✔  ✔  ✔  ✔  ✔  ✔ |
+| nth-child (3n)               | ✔  ✔  ✔ |
+| nth-child (3n +1)            | ✔  ✔  ✔  ✔ |
+| nth-child (-n+3)             | ✔  ✔  ✔ |
+| nth-child (odd)              | ✔  ✔  ✔  ✔  ✔ |
+| nth-child (even)             | ✔  ✔  ✔  ✔  ✔ |
+| last-child                   |                  ✔ |
+| nth-last-child(3)            |              ✔
 
-:first-child ✔
+<h3 id="ch4-6">Section 4.6: Class Name Selectors</h3>
 
-  nth-child
+The class name selector select all elements with the targeted class
+name. For example, the class name .warning would select the following
+<b>&lt;div&gt;</b> element:
 
+```
+<div class="warning">
+  <p>This would be some warning copy.</p>
+</div>
+```
 
-:(3) ✔
+You can also combine class names to target elements more specifically.
+Let&apos;s build on the example above to showcase a more complicated class
+selection.
 
-  nth-child
+<h4>CSS</h4>
 
-
-:(n+3) ✔ ✔ ✔ ✔ ✔ ✔ ✔ ✔
-
-  nth-child                                             (     3n
-
-
-:) ✔ ✔ ✔
-
-  nth-child                                             (     3n
-
-
-:+1) ✔ ✔ ✔ ✔
-
-  nth-child                                             (     -n
-
-
-> :+3) ✔ ✔ ✔
-
-  nth-child                                         (     odd
-
-
-:) ✔ ✔ ✔ ✔ ✔
-
-  nth-child                                     (     even
-
-
-:) ✔ ✔ ✔ ✔ ✔
-
-:last-child ✔
-
-  nth-last-child
-
-
-:(3) ✔
-
-## Section 4.6: Class Name Selectors
-
-  **&lt;div**
-
-
-> The class name selector select all elements with the targeted class
-> name. For example, the class name .warning would select the following
-> **&gt;** element:
-
-**&lt;**
-**div**
-
-class
-
-=
-
-&quot;warning&quot;
-
-**&gt;**
-**&lt;**
-**p**
-**&gt;**
-This would be some warning copy.
-**&lt;**
-**/p**
-**&gt;**
-**&lt;**
-**/div**
-**&gt;**
-
-> You can also combine class names to target elements more specifically.
-> Let&apos;s build on the example above to showcase a more complicated class
-> selection.
->
-> **CSS**
-
-.important
-
-{
-
-**color**
-
-:
-orange
-;
+```
+.important {
+  color: orange;
 }
-.warning
-{
-**color**
-:
-blue
-;
+.warning {
+  color: blue;
 }
-.warning
-.important
-{
-**color**
-:
-red
-;
+.warning .important {
+  color: red;
 }
-> **HTML**
+```
+
+<h4>*HTML</h4>
+
+```
 **&lt;**
 **div**
 class
@@ -1367,69 +1134,48 @@ This is some really important warning copy.
 **&lt;**
 **/div**
 **&gt;**
+```
 
-> In this example, all elements with the .warning class will have a blue
-> text color, elements with the .important class with have an orange
-> text color, and all elements that have *both* the .important and
-> .warning class name will have a red text color.
+In this example, all elements with the .warning class will have a blue
+text color, elements with the .important class with have an orange
+text color, and all elements that have *both* the .important and
+.warning class name will have a red text color.
 
-  .warning.important
+Notice that within the CSS, the declaration did not have any spaces
+between the two class names. This means it will only find elements
+which contain both class names warning and important in their class
+attribute. Those class names could be in any order on the element.
 
+If a space was included between the two classes in the CSS
+declaration, it would only select elements that have parent elements
+with a .warning class names and child elements with .important class
+names.
 
-> Notice that within the CSS, the declaration did not have any spaces
-> between the two class names. This means it will only find elements
-> which contain both class names warning and important in their class
-> attribute. Those class names could be in any order on the element.
->
-> If a space was included between the two classes in the CSS
-> declaration, it would only select elements that have parent elements
-> with a .warning class names and child elements with .important class
-> names.
+<h3 id="ch4-7">Section 4.7: Select element using its ID without the high specificity of the ID selector</h4>
 
-## Section 4.7: Select element using its ID without the high specificity of the ID selector
+This trick helps you select an element using the ID as a value for an
+attribute selector to avoid the high specificity of the ID selector.
 
-> This trick helps you select an element using the ID as a value for an
-> attribute selector to avoid the high specificity of the ID selector.
->
-> HTML:
+<h4>HTML:</h4>
 
-**&lt;**
-**div**
-id
-=
-&quot;element&quot;
-**&gt;**
-&period;..
-**&lt;**
-**/div**
-**&gt;**
-> CSS
-&num;
-element
-{
-&period;..
-}
-*/&ast; High specificity will override many selectors &ast;/*
-&lbrack;
-id
-=
-&quot;element&quot;
-&rbrack;
-{
-&period;..
-}
+```
+<div id="element">. . .</div>
+```
 
-*/&ast; Low specificity, can be overridden easily &ast;/*
+<h4>CSS</h4>
 
-## Section 4.8: The :last-of-type selector
+```
+#element { . . . } /* High specificity will override many selectors */
+[id="element"] { . . .} /* Low specificity, can be overridden easily */
+```
 
-  :last-of-type
+<h3 id="ch4-8">Section 4.8: The :last-of-type selector</h3>
 
+The :last-of-type selects the element that is the last child, of a particular type,
+of its parent. In the example below, the css selects the last
+paragraph and the last heading h1.
 
-> The selects the element that is the last child, of a particular type,
-> of its parent. In the example below, the css selects the last
-> paragraph and the last heading h1.
-
+```
 p: last-of-type {
   background: #C5CAE9;
 }
@@ -1494,211 +1240,108 @@ Last heading 2
 **/div**
 
 **&gt;**
+```
 
 [[jsFiddle]](http://jsfiddle.net/MadalinaTn/YmMZZ/113/)
 
-## Section 4.9: CSS3 :in-range selector example
+<h3 id="ch4-9">Section 4.9: CSS3 :in-range selector example</h3>
 
-**&lt;**
-
-**style**
-
-**&gt;**
-
-input:in-range
-
-{
-
-border: 1px solid blue;
-
+```
+<style>
+input:in-range {
+  border: 1px solid blue;
 }
-**&lt;**
-**/style**
-**&gt;**
-**&lt;**
-**input**
-type
-=
-&quot;number&quot;
-min
-=
-&quot;10&quot;
-max
-=
-&quot;20&quot;
-value
-=
-&quot;15&quot;
-**&gt;**
-**&lt;**
-**p**
-**&gt;**
-The border for this value will be blue
-**&lt;**
-**/p**
-**&gt;**
-  in-range
+</style>
 
 
-> The : CSS pseudo-class matches when an element has its value attribute
-> inside the specified range limitations for this element. It allows the
-> page to give a feedback that the value currently defined using the
-> element is inside the range
-> limits.[[&lbrack;1&rbrack;]](https://developer.mozilla.org/en-US/docs/Web/CSS/:in-range)
+<input type="number" min="10" max="20" value="15">
+<p>The border for this value will be blue</p>
+```
 
-## Section 4.10: A. The :not pseudo-class example & B. :focuswithin CSS pseudo-class
+
+The :in-range CSS pseudo-class matches when an element has its value attribute
+inside the specified range limitations for this element. It allows the
+page to give a feedback that the value currently defined using the
+element is inside the range
+limits.[[&lbrack;1&rbrack;]](https://developer.mozilla.org/en-US/docs/Web/CSS/:in-range)
+
+<h3 id="ch4-10">Section 4.10: A. The :not pseudo-class example & B. :focuswithin CSS pseudo-class</h3>
 
 A.  The syntax is presented above.
 
-  **&lt;input**
+The following selector matches all **&gt;** elements in an HTML document
+that are not disabled and don&apos;t have the class .example:
 
+<h4>HTML:</h4>
 
-> The following selector matches all **&gt;** elements in an HTML document
-> that are not disabled and don&apos;t have the class .example:
->
-> HTML:
+```
+<form>
+  Phone: <input type="tel" class="example">
+  E-mail: <input type="email" disabled="disabled">
+  Pasword: <inpu type="password">
+</form>
+```
 
-**&lt;**
-**form**
-**&gt;**
-Phone:
-**&lt;**
-**input**
-type
-=
-&quot;tel&quot;
-class
-=
-&quot;example&quot;
-**&gt;**
-E-mail:
-**&lt;**
-**input**
-type
-=
-&quot;email&quot;
-disabled
-=
-&quot;disabled&quot;
-**&gt;**
-Password:
-**&lt;**
-**input**
-type
-=
-&quot;password&quot;
-**&gt;**
-**&lt;**
-**/form**
-**&gt;**
+<h4>CSS:</h4>
 
-> CSS:
-input
-:
-not
-(
-&lbrack;
-disabled
-&rbrack;
-)
-:
-not
-(
-.example
-)
-{
-**background-color**
-:
-#ccc
-;
+```
+input:not([disabled]):not(.example){
+  background-color: #ccc;
 }
+```
 
-  not
 
+The :not() pseudo-class will also support comma-separated selectors in
+Selectors Level 4:
 
-> The :() pseudo-class will also support comma-separated selectors in
-> Selectors Level 4:
->
-> CSS:
+<h4>CSS:</h4>
 
-input
-:
-not
-(
-&lbrack;
-disabled
-&rbrack;
-,
-.example
-)
-{
-**background-color**
-:
-#ccc
-;
+```
+input:not([disabled]):not(.example){
+  background-color: #ccc;
 }
+```
+
 <a href="http://jsbin.com/japere/edit?html,css,output">Live Demo on JSBin</a>
 
-> See background syntax here.
+See background syntax here.
 
 B.  The :focus-within CSS pseudo-classHTML:
 
-**&lt;**
-**h**
-**3**
-**&gt;**
-Background is blue if the input is focused .
-**&lt;**
-**/p**
-**&gt;**
-**&lt;**
-**div**
-**&gt;**
-**&lt;**
-**input**
-type
-=
-&quot;text&quot;
-**&gt;**
-**&lt;**
-**/div**
-**&gt;**
-> CSS:
-div
-{
-**height**
-:
-80
-px
-;
-}
-input
-{
-**margin**
-:
-30
-px
-;
-}
-div
-:
-focus-within
-{
-**background-color**
-:
-#1565C0
-;
-}
-## Section 4.11: Global boolean with checkbox:checked and &#126; (general sibling combinator)
+<h4>HTML:</h4>
 
-> With the &#126; selector, you can easily implement a global accessible
-> boolean without using JavaScript.
->
-> **Add boolean as a checkbox**
->
-> To the very beginning of your document, add as much booleans as you
-> want with a unique id and the hidden attribute set:
+```
+  <h3>Background is blue if the input is focused .</p>
+  <div>
+    <input type="text">
+  </div>
+```
 
+<h4>CSS:</h4>
+
+```
+div {
+  height: 80px;
+}
+input {
+  margin: 30px;
+}
+div:focus-within {
+  background-color: #1565C0;
+}
+```
+
+<h3 id="ch4-11">Section 4.11: Global boolean with checkbox:checked and &#126; (general sibling combinator)</h3>
+
+With the &#126; selector, you can easily implement a global accessible
+boolean without using JavaScript.
+
+<h4>Add boolean as a checkbox</h4>
+
+To the very beginning of your document, add as much booleans as you
+want with a unique id and the hidden attribute set:
+
+```
 **&lt;**
 **input**
 type
@@ -1756,84 +1399,54 @@ id
 **&lt;**
 **/div**
 **&gt;**
+```
 
-> **Change the boolean&apos;s value**
->
-> You can toggle the boolean by adding a label with the for attribute
-> set:
+<h4>Change the boolean&apos;s value</h4>
 
+You can toggle the boolean by adding a label with the for attribute set:
+
+```
 **&lt;**
-
 **label**
-
-for
-
-=
-
+for=
 &quot;sidebarShown&quot;
-
 **&gt;**
-
 Show/Hide the sidebar!
-
 **&lt;**
-
 **/label**
-
 **&gt;**
+```
 
-> **Accessing boolean value with CSS**
->
-> The normal selector (like .color-red) specifies the default
-> properties. They can be overridden by following true / false
-> selectors:
+<h4>Accessing boolean value with CSS</h4>
 
-*/&ast; true: &ast;/*
+The normal selector (like .color-red) specifies the default
+properties. They can be overridden by following true / false
+selectors:
 
+```
+/&ast; true: &ast;/*
 &lt;
-
 checkbox
-
 &gt;:
-
 checked
-
 &#126;
-
 &lbrack;
-
 sibling of
-
 checkbox
-
 & parent of
-
 target
-
 &rbrack;
-
 &lt;target
-
 &gt;
-
 */&ast; false: &ast;/*
-
 &lt;
-
 checkbox
-
 &gt;:
-
 not
-
 (
-
 :
-
 checked
-
 )
-
 &#126;
 &lbrack;
 sibling of
@@ -1847,6 +1460,7 @@ target
   **&lt;checkbox**   **&gt;**,   sibling   &rbrack;    **&lt;target**   **&gt;** should be replaced by the  sibling
                    &lbrack;        &period;..      and                  proper selectors. &lbrack;              &period;..
 
+```
 
 > Note that &rbrack;
 >
@@ -1855,10 +1469,9 @@ target
 >
 > Examples for the above HTML structure would be:
 
+```
 #sidebarShown
-
 :
-
 checked
 &#126;
 #container
@@ -1884,110 +1497,71 @@ checked
 {
 **background**
 :
-
 #333
-
 ;
-
 }
+```
 
-> **In action**
->
-> See [[this fiddle]](https://jsfiddle.net/yokosbm0/1/) for
-> a implementation of these global booleans.
+<h4>In action</h4>
 
-## Section 4.12: ID selectors
+See [[this fiddle]](https://jsfiddle.net/yokosbm0/1/) for
+a implementation of these global booleans.
 
-> ID selectors select DOM elements with the targeted ID. To select an
-> element by a specific ID in CSS, the &num; prefix is used.
->
-> For example, the following HTML div element...
+<h3 id="ch4-12">Section 4.12: ID selectors</h3>
 
+ID selectors select DOM elements with the targeted ID. To select an
+element by a specific ID in CSS, the &num; prefix is used.
+
+For example, the following HTML div element...
+
+```
 **&lt;**
-
 **div**
-
 id
-
 =
-
 &quot;exampleID&quot;
-
 **&gt;**
-
 **&lt;**
-
 **p**
-
 **&gt;**
-
 Example
-
 **&lt;**
-
 **/p**
-
 **&gt;**
-
 **&lt;**
-
 **/div**
-
 **&gt;**
-
 ...
+```
 
-can be selected by
+can be selected by #exampleID in CSS as shown below:
 
+```
 #exampleID
-
-in CSS as shown below:
-
-#exampleID
-
 {
-
-**width**
-
-:
-
-20
-
-px
-
-;
-
+width: 20px;
 }
+```
 
-**Note**
+> <b>Note</b>: The HTML specs do not allow multiple elements with the same ID
 
-:
+<h3 id="ch4-13">Section 4.13: How to style a Range input</h3>
 
-The HTML specs do not allow multiple elements with the same ID
+<h4>HTML</h4>
 
-## Section 4.13: How to style a Range input
-
-> HTML
-
+```
 **&lt;**
-
 **input**
-
 type
-
 =
-
 &quot;range&quot;
-
 **&gt;**
-
 **&lt;**
-
 **/input**
-
 **&gt;**
+```
 
-> CSS
+<h4>CSS</h4>
 
 **Effect Pseudo Selector**
 
