@@ -31,7 +31,6 @@ CSS Notes For Professionals - intermediate level CSS learning course.  All on-li
   alt=" logo." />
 </p>
 
-
 <h2 id="about">About</h2>
 
 <p>Please feel free to share this Markdown &amp; website with anyone, latest
@@ -76,21 +75,21 @@ It is recommended that the styles are loaded before the elements they
 style are utilized. Otherwise, <a href="http://stackoverflow.com/a/1642259/2397327">
 users will see a flash of unstyled content</a>.
 
-**Example hello-world.html**
+<h4>Example</h4>
+<h4>hello-world.html</h4>
 
 ```
 <! DOCTYPE html>
 <html>
   <head>
-    <metacharset="utf-8"/>
-    <linkrel="stylesheet"type="text/css"href="style.css">
+    <meta charset="utf-8"/>
+    <link rel="stylesheet" type="text/css" href="style.css">
   </head>
-<body>
-  <h1>Hello world!</h1>
-  <p>I ♥ CSS</p>
-</body>
+  <body>
+    <h1>Hello world!</h1>
+    <p>I ♥ CSS</p>
+  </body>
 </html>
-
 ```
 
 <h4>style.css</h4>
@@ -107,20 +106,17 @@ p {
 }
 ```
 
-Make sure you include the correct path to your CSS file in the href.
+<p>Make sure you include the correct path to your CSS file in the href.
 If the CSS file is in the same folder as your HTML file then no path
 is required (like the example above) but if it's saved in a folder,
-then specify it like this;
-
-href="foldername/style.css".
+then specify it like this;<br>
+href="foldername/style.css"</p>
 
 ```
 <link rel="stylesheet" type="text/css" href="foldername/style.css">
-
-<link rel="stylesheet" type="text/css" href="foldername/style.css">
 ```
 
-External stylesheets are considered the best way to handle your CSS.
+<p>External stylesheets are considered the best way to handle your CSS.
 There&apos;s a very simple reason for this: when you&apos;re managing a site
 of, say, 100 pages, all controlled by a single stylesheet, and you
 want to change your link colors from blue to green, it&apos;s a lot easier
@@ -128,10 +124,9 @@ to make the change in your CSS file and let the changes &quot;cascade&quot;
 throughout all 100 pages than it is to go into 100 separate pages and
 make the same change 100 times. Again, if you want to completely
 change the look of your website, you only need to update this one
-file.
+file.</p>
 
-You can load as many CSS files in your HTML page as needed.
-
+<p>You can load as many CSS files in your HTML page as needed.</p>
 
 ```
 <link rel="stylesheet" type="text/css" href="main.css">
@@ -139,43 +134,62 @@ You can load as many CSS files in your HTML page as needed.
 <link rel="stylesheet" type="text/css" href="override.css">
 ```
 
-CSS rules are applied with some basic rules, and order does matter.
-For example, if you have a main.css file with some code in it:
+<p>CSS rules are applied with some basic rules, and order does matter.
+For example, if you have a main.css file with some code in it:</p>
 
 ```
 p.green { color: #00ff00; }
 ```
 
-All your paragraphs with the &apos;green&apos; class will be written in light
+<p>All your paragraphs with the &apos;green&apos; class will be written in light
 green, but you can override this with another .css file just by
 including it *after* main.css. You can have override.css with the
-following code follow main.css, for example:
+following code follow main.css, for example:</p>
 
 ```
 p.green { color: #006600; }
 ```
 
-Now all your paragraphs with the &apos;green&apos; class will be written in
-darker green rather than light green.
+<p>Now all your paragraphs with the &apos;green&apos; class will be written in
+darker green rather than light green.</p>
 
-Other principles apply, such as the &apos;!important&apos; rule, specificity,
-and inheritance.
+<p>Other principles apply, such as the &apos;!important&apos; rule, specificity,
+and inheritance.</p>
 
-When someone first visits your website, their browser downloads the
+<p>When someone first visits your website, their browser downloads the
 HTML of the current page plus the linked CSS file. Then when they
 navigate to another page, their browser only needs to download the
 HTML of that page; the CSS file is cached, so it does not need to be
 downloaded again. Since browsers cache the external stylesheet, your
-pages load faster.
+pages load faster.</p>
 
 <h3 id="ch1-2">Section 1.2: Internal Styles</h3>
 
-CSS enclosed in **&gt;** tags within an HTML document function like an
-external stylesheet, except that it lives in the HTML document it
-styles instead of in a separate file, and therefore can only be
-applied to the document in which it lives. Note that this element
-*must* be inside the **&gt;** element for HTML validation (though it
-will work in all current &lt;head&gt; browsers if placed in body).
+<p>CSS enclosed in <b>&ltstyle&gt;>&lt;/style&gt;</b> tags within an HTML document 
+function like an external stylesheet, except that it lives in the HTML document it
+styles instead of in a separate file, and therefore can only be applied to the 
+document in which it lives. Note that this element <i>must</i> be inside the 
+<b>&lt;head&gt;</b> element for HTML validation (though it
+will work in all current &lt;head&gt; browsers if placed in body).</p>
+
+```
+<head>
+  <style>
+    h1 {
+      color: green;
+      text-decoration: underline;
+    }
+    p {
+      font-size: 25px;
+      font-family: 'Trebuchet MS', sans-serif;
+    }
+  </style>
+</head>
+<body>
+  <h1>Hello world!</h1>
+  <p>I ♥ CSS</p>
+</body>
+```
 
 <h3 id="ch1-3">Section 1.3: CSS &commat;import rule (one of CSS at-rule)</h3>
 
@@ -183,55 +197,57 @@ The &commat;import CSS at-rule is used to import style rules from other
 style sheets. These rules must precede all other types of rules,
 except &commat;charset rules; as it is not a nested statement, &commat;import
 cannot be used inside conditional group at-rules.
-<a href="https://developer.mozilla.org/en/docs/Web/CSS/@import">[[&commat;import]]</a>.
+<a href="https://developer.mozilla.org/en/docs/Web/CSS/@import">&commat;import</a>.
 
-**How to use &commat;import**
+<h4>How to use &commat;import</h4>
 
 You can use &commat;import rule in following ways:
 
-A.  **With internal style tag**
+A.  <b>With internal style tag</b>
 
-B.  **With external stylesheet**
+```
+  <style>
+    @import url('/css/styles.css');
+  </style>
+```
+
+B.  <b>With external stylesheet</b>
 
 The following line imports a CSS file named additional-styles.css in
 the root directory into the CSS file in which it appears:
 
+```
+@import '/additional-styles.css';
+```
+
 Importing external CSS is also possible. A common use case are font
 files.
-
+```
+@import 'https://fonts.googleapis.com/css?family=Lato';
+```
 An optional second argument to &commat;import rule is a list of media
 queries:
-
 ```
 @import '/print-styles.css' print;
-
 @import url('landscap.css') screen and (orientation: landscape);
 ```
 
 <h3 id="ch1-4">Section 1.4: Inline Styles</h3>
 
-  **&lt;style**
-
 Use inline styles to apply styling to a specific element. Note that
-this is ***not*** optimal. Placing style rules in a **&gt;** tag or
+this is <b><i>not</i></b> optimal. Placing style rules in a <b>&lt;style&gt;</b> tag or
 external CSS file is encouraged in order to maintain a distinction
 between content and presentation.
 
-  **&lt;style**
-
-Inline styles override any CSS in a **&gt;** tag or external style
+Inline styles override any CSS in a <b>&lt;style&gt;</b> tag or external style
 sheet. While this can be useful in some circumstances, this fact more
 often than not reduces a project&apos;s maintainability.
 
 The styles in the following example apply directly to the elements to
 which they are attached.
-
 ```
-<h1 style="color: green; 
-  text-decoration: underline;">Hello world!</h1>
-
-<p style="font-size: 25px; 
-  font-family: 'Trebuchet MS';">I ♥ CSS</p>
+<h1 style="color: green; text-decoration: underline;">Hello world!</h1>
+<p style="font-size: 25px; font-family: 'Trebuchet MS';">I ♥ CSS</p>
 ```
 Inline styles are generally the safest way to ensure rendering
 compatibility across various email clients, programs and devices, but
