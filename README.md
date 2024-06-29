@@ -56,10 +56,11 @@ nor accurate, use at your own risk.</p>
 
 <p align="center">Please send feedback and corrections to <a href="web@petercv.com">web@petercv.com</a></p>
 
-<h1>Chapter 1: Getting started with CSS</h1>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h2>Chapter 1: Getting started with CSS</h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch1-1">Section 1.1: External Stylesheet</h3>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 An external CSS stylesheet can be applied to any number of HTML
 documents by placing a <b>&lt;link&gt;</b> element in each HTML document.
 
@@ -162,9 +163,10 @@ HTML of that page; the CSS file is cached, so it does not need to be
 downloaded again. Since browsers cache the external stylesheet, your
 pages load faster.</p>
 
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch1-2">Section 1.2: Internal Styles</h3>
-
-<p>CSS enclosed in <b>&ltstyle&gt;>&lt;/style&gt;</b> tags within an HTML document 
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p>CSS enclosed in <b>&ltstyle&gt;&lt;/style&gt;</b> tags within an HTML document 
 function like an external stylesheet, except that it lives in the HTML document it
 styles instead of in a separate file, and therefore can only be applied to the 
 document in which it lives. Note that this element <i>must</i> be inside the 
@@ -190,8 +192,9 @@ will work in all current &lt;head&gt; browsers if placed in body).</p>
 </body>
 ```
 
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch1-3">Section 1.3: CSS &commat;import rule (one of CSS at-rule)</h3>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 The &commat;import CSS at-rule is used to import style rules from other
 style sheets. These rules must precede all other types of rules,
 except &commat;charset rules; as it is not a nested statement, &commat;import
@@ -231,8 +234,9 @@ queries:
 @import url('landscape.css') screen and (orientation: landscape);
 ```
 
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch1-4">Section 1.4: Inline Styles</h3>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 Use inline styles to apply styling to a specific element. Note that
 this is <b><i>not</i></b> optimal. Placing style rules in a <b>&lt;style&gt;</b> tag or
 external CSS file is encouraged in order to maintain a distinction
@@ -252,8 +256,9 @@ Inline styles are generally the safest way to ensure rendering
 compatibility across various email clients, programs and devices, but
 can be time-consuming to write and a bit challenging to manage.
 
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="#ch1-5">Section 1.5: Changing CSS with JavaScript</h3>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Pure JavaScript</h4>
 
 <p>It&apos;s possible to add, remove or change CSS property values with JavaScript 
@@ -308,8 +313,9 @@ $('.example-class').css({
   <li>jQuery documentation - CSS Manipulation</li>
 </ul>
 
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch1-6">Section 1.6: Styling Lists with CSS</h3>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>There are three different properties for styling list-items:
 list-style-type, list-style-image, and list-style position, which
 should be declared in that order. The default values are disc,
@@ -357,9 +363,11 @@ li {list-style-position: inside;
 }
 ```
 
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ch2">Chapter 2: Structure and Formatting of a CSS Rule</h2>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch2-1">Section 2.1: Property Lists</h3>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 <p>Some properties can take multiple values, collectively known as a
 <b>property list</b>.
@@ -379,8 +387,9 @@ span {
 }
 ```
 
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch2-2">Section 2.2: Multiple Selectors</h3>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>When you group CSS selectors, you apply the same styles to several
 different elements without repeating the styles in your style sheet.
 Use a comma to separate multiple grouped selectors.</p>
@@ -408,17 +417,20 @@ p, .blue, #first, div span{ color : blue }
   <li>every <b>&lt;span&gt;</b> inside of a <b>&lt;div&gt;</b>
 </ul>
 
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch2-3">Section 2.3: Rules, Selectors, and Declaration Blocks</h3>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>A CSS <b>rule</b> consists of a <b>selector</b> (e.g. h1) and <b>declaration block</b> ({}).
 
 ```
 h1 {}
 ```
 
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ch3">Chapter 3: Comments</h2>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch3-1">Section 3.1: Single Line</h3>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 ```
 /* This is a CSS comment */
@@ -427,7 +439,9 @@ div {
 }
 ```
 
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch3-2">Section 3.2: Multiple Line</h3>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 ```
 /*
@@ -442,8 +456,9 @@ div {
 }
 ```
 
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ch4">Chapter 4: Selectors</h2>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>CSS selectors identify specific HTML elements as targets for CSS
 styles. This topic covers how CSS selectors target HTML elements.
 Selectors use a wide range of over 50 selection methods offered by the
@@ -464,17 +479,17 @@ pseudo-classes, and patterns.</p>
 |  div > p			| child selector |
   
 <blockquote>
-<b>Note:</b> The value of an ID must be unique in a web page. It is a
-violation of the <a href="https://www.w3.org/TR/html/dom.html#the-id-attribute">
-HTML standard to use the value of an ID more than once in the same document tree.
+  <b>Note:</b> The value of an ID must be unique in a web page. It is a
+  violation of the <a href="https://www.w3.org/TR/html/dom.html#the-id-attribute">
+  HTML standard to use the value of an ID more than once in the same document tree.
 </blockquote>
 
 <p>A complete list of selectors can be found in the 
 <a href="https://www.w3.org/TR/css3-selectors/#selectors">CSS Selectors Level
 3 specification.</a></p>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch4-2">Section 4.2: Attribute Selectors</h3>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Overview</h4>
 
 <p>Attribute selectors can be used with various types of operators that
@@ -1054,7 +1069,7 @@ Applies to any links which have has been visited by the user.
 > <b>or zero value</b> for n&quot; - [MDN :nth-child]
 
 | **pseudo-selector**          | <b>1 2 3 4 5 6 7 8 9 10</b>           |
-+------------------------------+---------------------------------------+
+|------------------------------|---------------------------------------|
 | :first-child                 | ✔ |
 | nth-child (3)                |     ✔ |
 | nth-child (n+3)              |     ✔  ✔  ✔  ✔  ✔  ✔  ✔  ✔ |
@@ -1066,8 +1081,9 @@ Applies to any links which have has been visited by the user.
 | last-child                   |                  ✔ |
 | nth-last-child(3)            |              ✔
 
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch4-6">Section 4.6: Class Name Selectors</h3>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 The class name selector select all elements with the targeted class
 name. For example, the class name .warning would select the following
 <b>&lt;div&gt;</b> element:
@@ -1096,43 +1112,9 @@ selection.
 }
 ```
 
-<h4>*HTML</h4>
+<h4>HTML</h4>
 
 ```
-**&lt;**
-**div**
-class
-=
-&quot;warning&quot;
-**&gt;**
-**&lt;**
-**p**
-**&gt;**
-This would be some warning copy.
-**&lt;**
-**/p**
-**&gt;**
-**&lt;**
-**/div**
-**&gt;**
-**&lt;**
-**div**
-class
-=
-&quot;important warning&quot;
-**&gt;**
-**&lt;**
-**p**
-class
-=
-&quot;important&quot;
-**&gt;**
-This is some really important warning copy.
-**&lt;**
-**/p**
-**&gt;**
-**&lt;**
-**/div**
 **&gt;**
 ```
 
@@ -1183,63 +1165,7 @@ p: last-of-type {
 h1: last-of-type {
   background: #CDDC39;
 }
-
-&lt;div class= &quot;container&quot;&gt;
-
-&lt;p&gt;
-
-First paragraph
-
-&lt;/p&gt;
-
-**p**
-**&lt;**
-**&gt;**
-Second paragraph
-**&lt;**
-**/p**
-**&gt;**
-**&lt;**
-**p**
-**&gt;**
-Last paragraph
-**&lt;**
-**/p**
-**&gt;**
-**&lt;**
-**h**
-**1**
-**&gt;**
-Heading 1
-**&lt;**
-**/h**
-**1**
-**&gt;**
-**&lt;**
-**h**
-**2**
-**&gt;**
-First heading 2
-**&lt;**
-**/h**
-**2**
-**&gt;**
-**&lt;**
-**h**
-**2**
-**&gt;**
-Last heading 2
-**&lt;**
-**/h**
-**2**
-
-**&gt;**
-
-**&lt;**
-
-**/div**
-
-**&gt;**
+&gt;
 ```
 
 [[jsFiddle]](http://jsfiddle.net/MadalinaTn/YmMZZ/113/)
@@ -1343,59 +1269,6 @@ want with a unique id and the hidden attribute set:
 
 ```
 **&lt;**
-**input**
-type
-=
-&quot;checkbox&quot;
-id
-=
-&quot;sidebarShown&quot;
-hidden
-**/&gt;**
-**&lt;**
-**input**
-type
-=
-&quot;checkbox&quot;
-id
-=
-&quot;darkThemeUsed&quot;
-hidden
-**/&gt;**
-*&lt;!&minus;-*
-*here begins actual content, for example*
-*: &minus;-&gt;*
-**&lt;**
-**div**
-id
-=
-&quot;container&quot;
-**&gt;**
-**&lt;**
-**div**
-id
-=
-&quot;sidebar&quot;
-**&gt;**
-*&lt;!&minus;-*
-*Menu, Search, &period;..*
-*&minus;-&gt;*
-**&lt;**
-**/div**
-**&gt;**
-*&lt;!&minus;-*
-*Some more content &period;..*
-*&minus;-&gt;*
-**&lt;**
-**/div**
-**&gt;**
-**&lt;**
-**div**
-id
-=
-&quot;footer&quot;
-**&gt;**
-*&lt;!&minus;- &period;.. &minus;-&gt;*
 **&lt;**
 **/div**
 **&gt;**
@@ -1407,8 +1280,6 @@ You can toggle the boolean by adding a label with the for attribute set:
 
 ```
 **&lt;**
-**label**
-for=
 &quot;sidebarShown&quot;
 **&gt;**
 Show/Hide the sidebar!
@@ -1426,40 +1297,6 @@ selectors:
 ```
 /&ast; true: &ast;/*
 &lt;
-checkbox
-&gt;:
-checked
-&#126;
-&lbrack;
-sibling of
-checkbox
-& parent of
-target
-&rbrack;
-&lt;target
-&gt;
-*/&ast; false: &ast;/*
-&lt;
-checkbox
-&gt;:
-not
-(
-:
-checked
-)
-&#126;
-&lbrack;
-sibling of
-checkbox
-& parent of
-target
-&rbrack;
-&lt;target
-&gt;
-
-  **&lt;checkbox**   **&gt;**,   sibling   &rbrack;    **&lt;target**   **&gt;** should be replaced by the  sibling
-                   &lbrack;        &period;..      and                  proper selectors. &lbrack;              &period;..
-
 ```
 
 > Note that &rbrack;
@@ -1528,7 +1365,7 @@ For example, the following HTML div element...
 | Lower part of  | input[type=range]::-moz-range-progress, input[type=range]::-mx-fill-lower(not possible |
 | the track      | in WebKit browsers currently -JS needed) |
 
-## Section 4.14: The :only-child pseudo-class selector example
+<h3 id="ch4-14">Section 4.14: The :only-child pseudo-class selector example</h3>
 
 
 The :only-child CSS pseudo-class represents any element which is the only child of
@@ -1669,32 +1506,20 @@ footer {
 > HSLa allows you to add an additional alpha parameter between 0.0 and
 > 1.0 to define opacity.
 
+```
 li a
-
 {
-
 **background-color**
-
 :
-
 hsl
-
 (
-
 120
-
 ,
-
 100
-
 &percnt;
-
 ,
-
 50
-
 &percnt;
-
 )
 ;
 */&ast; green &ast;/*
@@ -1716,65 +1541,34 @@ hsla
 ;
 */&ast; green with 30% opacity &ast;/*
 }
+```
 
 > **Interaction with background-image**
 >
 > The following statements are all equivalent:
 
-body
-{
-**background**
-:
-red
-;
-**background-image**
-:
-url
-(
-*partiallytransparentimage.png*
-)
-;
+```
+body {
+  background: red;
+  background-image: url (
+partiallytransparentimage.png
+);
 }
-body
-{
-**background-color**
-:
-red
-;
-**background-image**
-:
-url
-(
-*partiallytransparentimage.png*
-)
-;
+body {
+  background-color: red;
+  background-image: url (
+    partiallytransparentimage.png);
 }
-body
-{
-**background-image**
-:
-url
-(
-*partiallytransparentimage.png*
-)
-;
-**background-color**
-:
-red
-;
+body {
+  background-image: url(
+    partiallytransparentimage.png);
+  background-color: red;
 }
-body
-{
-**background**
-:
-red
-url
-(
-*partiallytransparentimage.png*
-)
-;
-
+body {
+  background: redurl (
+    partiallytransparentimage.png);
 }
+```
 
 > They will all lead to the red color being shown underneath the image,
 > where the parts of the image are transparent, or the image is not
@@ -1782,6 +1576,7 @@ url
 >
 > Note that the following is not equivalent:
 
+```
 body
 {
 **background-image**
@@ -1796,19 +1591,20 @@ url
 red
 ;
 }
+```
 
 > Here, the value of background overrides your background-image.
 >
 > For more info on the background property, see Background Shorthand
 
-## Section 5.2: Background Gradients
+<h3 id="ch5-2">Section 5.2: Background Gradients</h3>
 
-> Gradients are new image types, added in CSS3. As an image, gradients
-> are set with the background-image property, or the background
-> shorthand.
->
-> There are two types of gradient functions, linear and radial. Each
-> type has a non-repeating variant and a repeating variant:
+Gradients are new image types, added in CSS3. As an image, gradients
+are set with the background-image property, or the background
+shorthand.
+
+There are two types of gradient functions, linear and radial. Each
+type has a non-repeating variant and a repeating variant:
 
   linear-gradient
 
