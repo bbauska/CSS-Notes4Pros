@@ -128,7 +128,6 @@ file.</p>
 
 ```
 <link rel="stylesheet" type="text/css" href="main.css">
-
 <link rel="stylesheet" type="text/css" href="override.css">
 ```
 
@@ -227,7 +226,7 @@ An optional second argument to &commat;import rule is a list of media
 queries:
 ```
 @import '/print-styles.css' print;
-@import url('landscap.css') screen and (orientation: landscape);
+@import url('landscape.css') screen and (orientation: landscape);
 ```
 
 <h3 id="ch1-4">Section 1.4: Inline Styles</h3>
@@ -268,11 +267,6 @@ el.style.fontFamily = 'sans-serif';
 example you see that the css property fontfamily becomes fontFamily in
 javascript.</p>
 
-```
-  <style> or <link>
-  <body> or <head>
-```
-
 <p>As an alternative to working directly on elements, you can create a 
 <b>&lt;style&gt;</b> or <b>&lt;link&gt;</b> element in JavaScript and append it 
 to the <b>&lt;body&gt;</b> or <b>&lt;head&gt;</b> of the HTML document.</p>
@@ -280,10 +274,13 @@ to the <b>&lt;body&gt;</b> or <b>&lt;head&gt;</b> of the HTML document.</p>
 <h4>jQuery</h4>
 
 <p>Modifying CSS properties with jQuery is even simpler.</p>
+
 ```
 $('#element').css('margin', '5px');
 ```
+
 <p>If you need to change more than one style rule:</p>
+
 ```
 $('#element').css({
   margin:"5px",
@@ -291,19 +288,22 @@ $('#element').css({
   color:"black"
 });
 ```
+
 <p>jQuery includes two ways to change css rules that have hyphens in them
 (i.e. font-size). You can put them in quotes or camel-case the style
 rule name.</p>
+
 ```
 $('.example-class').css({
   "background-color": "blue", 
   fontSize: "10px" 
 });
 ```
+
 <h4>See also</h4>
 <ul>
-  <li>JavaScript documentation -- Reading and Changing CSS Style.</li>
-  <li>jQuery documentation -- CSS Manipulation</li>
+  <li>JavaScript documentation - Reading and Changing CSS Style.</li>
+  <li>jQuery documentation - CSS Manipulation</li>
 </ul>
 
 <h3 id="ch1-6">Section 1.6: Styling Lists with CSS</h3>
@@ -329,26 +329,32 @@ separately, or using the list-style shorthand property.</p>
 <a href="https://www.w3.org/wiki/CSS/Properties/list-style-type">W3C specification wiki</a>.</p>
 <p>To use square bullet points for each list-item, for example, you would use 
 the following property-value pair:</p>
+
 ```
 li {
   list-style-type: square;
 }
 ```
+
 <p>The <b>list-style-image</b> property determines whether the list-item
 icon is set with an image, and accepts a value of none or a URL that
 points to an image.</p>
+
 ```
 li {
   list-style-image: url (images/bullet.png);
 }
 ```
+
 <p>The <b>list-style-position</b> property defines where to position the
 list-item marker, and it accepts one of two values: &quot;inside&quot; or
-&quot;outside&quot;.
+&quot;outside&quot;.</p>
+
 ```
 li {list-style-position: inside;
 }
 ```
+
 <h2 id="ch2">Chapter 2: Structure and Formatting of a CSS Rule</h2>
 
 <h3 id="ch2-1">Section 2.1: Property Lists</h3>
@@ -373,37 +379,36 @@ span {
 
 <h3 id="ch2-2">Section 2.2: Multiple Selectors</h3>
 
-> When you group CSS selectors, you apply the same styles to several
-> different elements without repeating the styles in your style sheet.
-> Use a comma to separate multiple grouped selectors.
+<p>When you group CSS selectors, you apply the same styles to several
+different elements without repeating the styles in your style sheet.
+Use a comma to separate multiple grouped selectors.</p>
 
 ```
 div, p {color: blue }
 ```
 
-/*  <b><div></b>   elements and all   <b><p></b>   elements. */
-/*  Without the comma only       <b><p></b> */
-/*  <b><div></b> */
+So the blue color applies to all <b>&lt;div&gt;</b> elements and all <b>&lt;p&gt;</b>
+elements.  Without the comma only <b>&lt;p&gt;</b> elements that are a child of 
+a <b>&lt;div&gt;</b> would be red.
 
-> So the blue color applies to all elements that are a child of a would
-> be red.
->
-> This also applies to all types of selectors.
+<p>This also applies to all types of selectors.</p>
 
 ```
 p, .blue, #first, div span{ color : blue }
 ```
 
-> This rule applies to:
+<p>This rule applies to:</p>
 
-  - <p>
-  - elements of the blue class 
-  - element with the ID first 
-  - every <span> inside of a <div>
+<ul>
+  <li><b>&lt;p&gt;</b></li>
+  <li>elements of the blue class</li>
+  <li>element with the ID first</li>
+  <li>every <b>&lt;span&gt;</b> inside of a <b>&lt;div&gt;</b>
+</ul>
 
 <h3 id="ch2-3">Section 2.3: Rules, Selectors, and Declaration Blocks</h3>
 
-> A CSS rule consists of a selector (e.g. h1) and declaration block ({}).
+<p>A CSS <b>rule</b> consists of a <b>selector</b> (e.g. h1) and <b>declaration block</b> ({}).
 
 ```
 h1 {}
@@ -420,7 +425,7 @@ div {
 }
 ```
 
-## Section 3.2: Multiple Line
+<h3 id="ch3-2">Section 3.2: Multiple Line</h3>
 
 ```
 /*
@@ -435,62 +440,64 @@ div {
 }
 ```
 
-# Chapter 4: Selectors
+<h2 id="ch4">Chapter 4: Selectors</h2>
 
-> CSS selectors identify specific HTML elements as targets for CSS
-> styles. This topic covers how CSS selectors target HTML elements.
-> Selectors use a wide range of over 50 selection methods offered by the
-> CSS language, including elements, classes, IDs, pseudo-elements and
-> pseudo-classes, and patterns.
+<p>CSS selectors identify specific HTML elements as targets for CSS
+styles. This topic covers how CSS selectors target HTML elements.
+Selectors use a wide range of over 50 selection methods offered by the
+CSS language, including elements, classes, IDs, pseudo-elements and
+pseudo-classes, and patterns.</p>
 
-## Section 4.1: Basic selectors
+<h2 id="ch4-1">Section 4.1: Basic selectors</h3>
 
-  <b>Selector</b>           <b>Description</b>
-  &ast;                     Universal selector (all elements)
-  div					Tag selector (all <div> elements)
-  .blue					Class selector (all elements with class blue)
-  #headline				ID selector (the element with "id" attribute set to headline)
-  :pseudo-class			All Elements with pseudo-class
-  ::pseudo-element		Element that matches pseudo-element
-  :lang(en)				Element that matches :lang declaration, for example <span lang="en">
-  div > p				child selector
+| Selector     | Description                                         |
+|:------------:|:---------------------------------------------------:|
+|  &ast;       | Universal selector (all elements) |
+|  div		   | Tag selector (all <b>&lt;div&gt;</b> elements) |
+|  .blue       | Class selector (all elements with class blue) |
+|  #headline   | ID selector (the element with "id" attribute set to headline) |
+|  :pseudo-class | All Elements with pseudo-class |
+|  ::pseudo-element | Element that matches pseudo-element |
+|  :lang(en)		| Element that matches :lang declaration, for example <b>&lt;span lang="en"&gt;</b> |
+|  div > p			| child selector |
   
+<blockquote>
+<b>Note:</b> The value of an ID must be unique in a web page. It is a
+violation of the <a href="https://www.w3.org/TR/html/dom.html#the-id-attribute">
+HTML standard to use the value of an ID more than once in the same document tree.
+</blockquote>
 
-> <b>Note:</b> The value of an ID must be unique in a web page. It is a
-> violation of the <a href="https://www.w3.org/TR/html/dom.html#the-id-attribute">
-> HTML standard to use the value of an ID more than once in the same document tree.
->
-> A complete list of selectors can be found in the 
-> <a href="https://www.w3.org/TR/css3-selectors/#selectors">CSS Selectors Level
-> 3 specification.
+<p>A complete list of selectors can be found in the 
+<a href="https://www.w3.org/TR/css3-selectors/#selectors">CSS Selectors Level
+3 specification.</a></p>
 
-## Section 4.2: Attribute Selectors
+<h3 id="ch4-2">Section 4.2: Attribute Selectors</h3>
 
-> <b>Overview</b>
->
-> Attribute selectors can be used with various types of operators that
-> change the selection criteria accordingly. They select an element
-> using the presence of a given attribute or attribute value.
+<h4>Overview</h4>
+
+<p>Attribute selectors can be used with various types of operators that
+change the selection criteria accordingly. They select an element
+using the presence of a given attribute or attribute value.</p>
 
 <b>Selector(1) Matched element Selects elements&period;.. CSS Version</b>
 
 | Selector(1)     | Matched element            | Selects elements...                |
 |-----------------|:--------------------------:|------------------------------------|
-| [attr]          | <div attr>                 | With attribute attr                |
-| [attr='val']    | <div attr="val">           | Where attribute attr has value val |
-| [attr~='val']   | <div attr="val val2 val3"> | Where val appears in the           |
+| [attr]          | &tl;div attr&gt;                 | With attribute attr                |
+| [attr='val']    | &tl;div attr="val"&gt;           | Where attribute attr has value val |
+| [attr~='val']   | &tl;div attr="val val2 val3"&gt; | Where val appears in the           |
 |                 |                            | whitespace-separated list of attr  |
-| [attr^='val']   | <div attr="val1 val2">     | Where attr's value begins with val |
-| [attr$='val']   | <div attr="sth aval">      | Where attr's value ends with val   |
-| [attr='val']    | <div attr="somevalhere">   | Where attr contains val anywhere   |
-| [attr|='val']   | <div attr="val-sth etc">   | Where attr's value is exactly val, |
+| [attr^='val']   | &tl;div attr="val1 val2"&gt;     | Where attr's value begins with val |
+| [attr$='val']   | &tl;div attr="sth aval"&gt;      | Where attr's value ends with val   |
+| [attr='val']    | &tl;div attr="somevalhere"&gt;   | Where attr contains val anywhere   |
+| [attr|='val']   | &tl;div attr="val-sth etc"&gt;   | Where attr's value is exactly val, |
 |                 |                            | or starts with val and immediately |
 |                 |                            | followed by - (U+002D) |
-| [attr|='val' i] | <div attr="val">           | Where attr has val, |
+| [attr|='val' i] | &tl;div attr="val"&gt;           | Where attr has val, |
 |                 |                            | ignoring val's letter casing. |
 |                 |                            | followed by - (U+002D) |
 
-<b>*Notes:</b>*
+<b>Notes:</b>
 
 1.  The attribute value can be surrounded by either single-quotes or
     double-quotes. No quotes at all may also work, but it&apos;s not valid
@@ -500,12 +507,10 @@ div {
     split into separate modules. However, there are &quot;level 4&quot; modules.
     <a href="http://caniuse.com/#feat=css-case-insensitive">See browser support</a>.
 
-```
-> Details
-> [attribute]
-```
+<h4>Details</h4>
+<h4>[attribute]</h4>
 
-> Selects elements with the given attribute.
+<p>Selects elements with the given attribute.</p>
 
 ```
 div[data-color] {
@@ -523,7 +528,7 @@ div[data-color] {
 [attribute="value"]
 ```
 
-> Selects elements with the given attribute and value.
+<p>Selects elements with the given attribute and value.</p>
 
 ```
 div[data-color="red"] {
@@ -540,10 +545,8 @@ div[data-color="red"] {
 ```
 [attribute="value"]
 ```
-
-> Selects elements with the given attribute and value where the given
-> attribute contains the given value anywhere (as a substring).
-
+Selects elements with the given attribute and value where the given
+attribute contains the given value anywhere (as a substring).
 ```
 [class = "foo"] {
   color: red;
@@ -562,8 +565,8 @@ div[data-color="red"] {
 [attribute~="value"]
 ```
 
-> Selects elements with the given attribute and value where the given
-> value appears in a whitespace-separated list.
+Selects elements with the given attribute and value where the given
+value appears in a whitespace-separated list.
 
 ```
 [class~="color-red"] {
@@ -580,8 +583,8 @@ div[data-color="red"] {
 [attribute^="value"]
 ```
 
-> Selects elements with the given attribute and value where the given
-> attribute begins with the value.
+Selects elements with the given attribute and value where the given
+attribute begins with the value.
 
 ```
 [class^="foo-"] {
@@ -596,148 +599,53 @@ div[data-color="red"] {
 <a href="http://jsbin.com/yowihi/1/edit?html,css,output">Live Demo on JSBin</a>
 
 ```
-[attribute|="value"]
+[attribute$="value"]
 ```
 
-<b>attribute&dollar;</b>                         <b>=</b>   <b>&quot;value&quot;</b>
-
-<b>&lbrack;&rbrack;</b>
-
-> Selects elements with the given attribute and value where the given
-> attribute ends with the given value.
+Selects elements with the given attribute and value where the given
+attribute ends with the given value.
 
 ```
-&lbrack;class&dollar;=&quot;file&quot;&rbrack;
-{
-color
-:
-red
-;
+[class$="file"] {
+  color: red;
 }
-&lt;
-div
-class
-=
-&quot;foobar-file&quot;
-&gt;
-This will be red
-&lt;
-/div
-&gt;
-&lt;
-div
-class
-=
-&quot;foobar-file&quot;
-<b>&gt;</b>
-This will be red
-<b>&lt;</b>
-<b>/div</b>
-<b>&gt;</b>
-<b>&lt;</b>
-<b>div</b>
-class
-=
-&quot;foobar-input&quot;
-<b>&gt;</b>
-This will NOT be red
-<b>&lt;</b>
-<b>/div</b>
-<b>&gt;</b>
+<div class="foobar-file">This will be red</div>
+<div class="foobar-file">This will be red</div>
+<div class="foobar-input">This will NOT be red</div>
 ```
 
 <a href="http://jsbin.com/yowihi/2/edit?html,css,output">Live Demo on JSBin</a>
-<b>attribute&vertbar;</b>                         <b>=</b>   <b>&quot;value&quot;</b>
-
-<b>&lbrack;&rbrack;</b>
-
-> Selects elements with a given attribute and value where the
-> attribute&apos;s value is exactly the given value or is exactly the given
-> value followed by - (U+002D)
 
 ```
-&lbrack;
-lang
-&vertbar;
-=
-&quot;EN&quot;
-&rbrack;
-{
-<b>color</b>
-:
-red
-;
-}
-<b>&lt;</b>
-<b>div</b>
-lang
-=
-&quot;EN-us&quot;
-<b>&gt;</b>
-This will be red
-<b>&lt;</b>
-<b>/div</b>
-<b>&gt;</b>
-<b>&lt;</b>
-<b>div</b>
-lang
-=
-&quot;EN-gb&quot;
-**&gt;**
-This will be red
-**&lt;**
-**/div**
-**&gt;**
-**&lt;**
-**div**
-lang
-=
-&quot;PT-pt&quot;
-**&gt;**
-This will NOT be red
-**&lt;**
-**/div**
-**&gt;**
+[attribute|="value"]
+```
+
+Selects elements with a given attribute and value where the
+attribute&apos;s value is exactly the given value or is exactly the given
+value followed by - (U+002D)
+
+```
+[lang|="EN"] {
+  color: red;
+  }
+<div lang="EN-us">This will be red</div>
+<div lang="EN-gb">This will be red</div>
+<div lang="PT-pt">This will NOT be red</div>
+```
+
 <a href="http://jsbin.com/yowihi/3/edit?html,css,output">Live Demo on JSBin</a>
-**attribute**                     **=**   **&quot;value&quot; i**
-**&lbrack;&rbrack;**
-```
 
-> Selects elements with a given attribute and value where the
-> attribute&apos;s value can be represented as Value, VALUE, vAlUe or any
-> other case-insensitive possibility.
+Selects elements with a given attribute and value where the
+attribute&apos;s value can be represented as Value, VALUE, vAlUe or any
+other case-insensitive possibility.
 
 ```
 [lang|="EN"] {
   color: red;
 }
-```
-
-```
-<div lang="EN-us"
-
-**&gt;**
-
-This will be red
-
-**&lt;**
-**/div**
-**&gt;**
-**&lt;**
-**div**
-lang
-=
-&quot;en&quot;
-**&gt;**
-This will be red
-**&lt;**
-**/div**
-**&gt;**
-**&lt;**
-div lang="PT">This will NOT be red
-**&lt;**
-**/div**
-**&gt;**
+<div lang="EN-us">This will be red</div>
+<div lang="EN-gb">This will be red</div>
+<div lang="PT-pt">This will NOT be red</div>
 ```
 
 <a href="http://jsbin.com/yowihi/4/edit?html,css,output">Live Demo on JSBin</a>
