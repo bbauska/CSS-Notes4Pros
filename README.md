@@ -19,7 +19,7 @@ CSS Notes For Professionals - intermediate level CSS learning course.  All on-li
 <!--~~~~~~~~~~~~~~~~~~~ readme.md of CSS Advanced - Notes for Professionals ~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ CSS-Notes4Pros.bauska.github.io ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 01/02. CSS Logos (01) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 01/02. javascript/css logos (01) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="center" width="100%">
 <img src="./images/image001.jpg"
   style="width:20%"
@@ -27,919 +27,10 @@ CSS Notes For Professionals - intermediate level CSS learning course.  All on-li
   alt="JavaScript coffee cup logo version." />
 <img src="./images/image002.png"
   style="width:20%"
-  title=" logo"
+  title="CSS logo"
   alt=" logo." />
 </p>
 
-[**[About]** [9](#about)](#about)
-
-[**[Chapter 1: Getting started with CSS]** [10](#section)](#section)
-
-[[Section 1.1: External Stylesheet] [10](#section-1.1-external-stylesheet)](#section-1.1-external-stylesheet)
-
-[[Section 1.2: Internal Styles] [11](#section-1.2-internal-styles)](#section-1.2-internal-styles)
-
-[[Section 1.3: CSS &commat;import rule (one of CSS at-rule)] [11](#section-1.3-css-import-rule-one-of-css-at-rule)](#section-1.3-css-import-rule-one-of-css-at-rule)
-
-[[Section 1.4: Inline Styles] [12](#section-1.4-inline-styles)](#section-1.4-inline-styles)
-
-[[Section 1.5: Changing CSS with JavaScript] [12](#section-1.5-changing-css-with-javascript)](#section-1.5-changing-css-with-javascript)
-
-[[Section 1.6: Styling Lists with CSS] [13](#section-1.6-styling-lists-with-css)](#section-1.6-styling-lists-with-css)
-
-[**[Chapter 2: Structure and Formatting of a CSS Rule]** [14](#chapter-2-structure-and-formatting-of-a-css-rule)](#chapter-2-structure-and-formatting-of-a-css-rule)
-
-[[Section 2.1: Property Lists]
-[14](#section-2.1-property-lists)](#section-2.1-property-lists)
-
-[[Section 2.2: Multiple Selectors]
-[14](#section-2.2-multiple-selectors)](#section-2.2-multiple-selectors)
-
-[[Section 2.3: Rules, Selectors, and Declaration Blocks]
-[14](#section-9)](#section-9)
-
-[**[Chapter 3: Comments]**
-[14](#chapter-3-comments)](#chapter-3-comments)
-
-[[Section 3.1: Single Line]
-[14](#section-3.1-single-line)](#section-3.1-single-line)
-
-[[Section 3.2: Multiple Line]
-[15](#section-3.2-multiple-line)](#section-3.2-multiple-line)
-
-[**[Chapter 4: Selectors]**
-[16](#chapter-4-selectors)](#chapter-4-selectors)
-
-[[Section 4.1: Basic selectors]
-[16](#section-4.1-basic-selectors)](#section-4.1-basic-selectors)
-
-[[Section 4.2: Attribute Selectors]
-[16](#section-4.2-attribute-selectors)](#section-4.2-attribute-selectors)
-
-[[Section 4.3: Combinators]
-[19](#section-4.3-combinators)](#section-4.3-combinators)
-
-[[Section 4.4: Pseudo-classes]
-[20](#section-4.4-pseudo-classes)](#section-4.4-pseudo-classes)
-
-[[Section 4.5: Child Pseudo Class]
-[22](#section-4.5-child-pseudo-class)](#section-4.5-child-pseudo-class)
-
-[[Section 4.6: Class Name Selectors]
-[23](#section-4.6-class-name-selectors)](#section-4.6-class-name-selectors)
-
-[[Section 4.7: Select element using its ID without the high specificity
-of the ID selector]
-[23](#section-4.7-select-element-using-its-id-without-the-high-specificity-of-the-id-selector)](#section-4.7-select-element-using-its-id-without-the-high-specificity-of-the-id-selector)
-
-[[Section 4.8: The :last-of-type selector]
-[24](#section-4.8-the-last-of-type-selector)](#section-4.8-the-last-of-type-selector)
-
-[[Section 4.9: CSS3 :in-range selector example]
-[24](#section-4.9-css3-in-range-selector-example)](#section-4.9-css3-in-range-selector-example)
-
-[[Section 4.10: A. The :not pseudo-class example & B. :focus-within CSS
-pseudo-class]
-[24](#section-4.10-a.-the-not-pseudo-class-example-b.-focuswithin-css-pseudo-class)](#section-4.10-a.-the-not-pseudo-class-example-b.-focuswithin-css-pseudo-class)
-
-[[Section 4.11: Global boolean with checkbox:checked and &#126; (general
-sibling combinator)]
-[26](#section-4.11-global-boolean-with-checkboxchecked-and-general-sibling-combinator)](#section-4.11-global-boolean-with-checkboxchecked-and-general-sibling-combinator)
-
-[[Section 4.12: ID selectors]
-[27](#section-4.12-id-selectors)](#section-4.12-id-selectors)
-
-[[Section 4.13: How to style a Range input]
-[27](#section-4.13-how-to-style-a-range-input)](#section-4.13-how-to-style-a-range-input)
-
-[[Section 4.14: The :only-child pseudo-class selector
-example]
-[28](#section-4.14-the-only-child-pseudo-class-selector-example)](#section-4.14-the-only-child-pseudo-class-selector-example)
-
-[**[Chapter 5: Backgrounds]**
-[28](#chapter-5-backgrounds)](#chapter-5-backgrounds)
-
-[[Section 5.1: Background Color]
-[28](#section-5.1-background-color)](#section-5.1-background-color)
-
-[[Section 5.2: Background Gradients]
-[30](#section-5.2-background-gradients)](#section-5.2-background-gradients)
-
-[[Section 5.3: Background Image]
-[32](#section-5.3-background-image)](#section-5.3-background-image)
-
-[[Section 5.4: Background Shorthand]
-[32](#section-5.4-background-shorthand)](#section-5.4-background-shorthand)
-
-[[Section 5.5: Background Size]
-[33](#section-5.5-background-size)](#section-5.5-background-size)
-
-[[Section 5.6: Background Position]
-[37](#section-5.6-background-position)](#section-5.6-background-position)
-
-[[Section 5.7: The background-origin property]
-[38](#section-5.7-the-background-origin-property)](#section-5.7-the-background-origin-property)
-
-[[Section 5.8: Multiple Background Image]
-[40](#section-5.8-multiple-background-image)](#section-5.8-multiple-background-image)
-
-[[Section 5.9: Background Attachment]
-[41](#section-5.9-background-attachment)](#section-5.9-background-attachment)
-
-[[Section 5.10: Background Clip]
-[42](#section-5.10-background-clip)](#section-5.10-background-clip)
-
-[[Section 5.11: Background Repeat]
-[42](#section-5.11-background-repeat)](#section-5.11-background-repeat)
-
-[[Section 5.12: background-blend-mode Property]
-[43](#section-5.12-background-blend-mode-property)](#section-5.12-background-blend-mode-property)
-
-[[Section 5.13: Background Color with Opacity]
-[43](#section-5.13-background-color-with-opacity)](#section-5.13-background-color-with-opacity)
-
-[**[Chapter 6: Centering]**
-[45](#chapter-6-centering)](#chapter-6-centering)
-
-[[Section 6.1: Using Flexbox]
-[45](#section-6.1-using-flexbox)](#section-6.1-using-flexbox)
-
-[[Section 6.2: Using CSS transform]
-[45](#section-6.2-using-css-transform)](#section-6.2-using-css-transform)
-
-[[Section 6.3: Using margin: 0 auto;]
-[46](#section-6.3-using-margin-0-auto)](#section-6.3-using-margin-0-auto)
-
-[[Section 6.4: Using text-align]
-[48](#section-6.4-using-text-align)](#section-6.4-using-text-align)
-
-[[Section 6.5: Using position: absolute]
-[48](#section-6.5-using-position-absolute)](#section-6.5-using-position-absolute)
-
-[[Section 6.6: Using calc()]
-[49](#section-6.6-using-calc)](#section-6.6-using-calc)
-
-[[Section 6.7: Using line-height]
-[49](#section-6.7-using-line-height)](#section-6.7-using-line-height)
-
-[[Section 6.8: Vertical align anything with 3 lines of code]
-[49](#section-6.8-vertical-align-anything-with-3-lines-of-code)](#section-6.8-vertical-align-anything-with-3-lines-of-code)
-
-[[Section 6.9: Centering in relation to another item]
-[50](#section-6.9-centering-in-relation-to-another-item)](#section-6.9-centering-in-relation-to-another-item)
-
-[[Section 6.10: Ghost element technique (Michał Czernow&apos;s
-hack)]
-[51](#section-6.10-ghost-element-technique-michał-czernows-hack)](#section-6.10-ghost-element-technique-michał-czernows-hack)
-
-[[Section 6.11: Centering vertically and horizontally without worrying
-about height or width]
-[52](#section-6.11-centering-vertically-and-horizontally-without-worrying-about-height-or-width)](#section-6.11-centering-vertically-and-horizontally-without-worrying-about-height-or-width)
-
-[[Section 6.12: Vertically align an image inside div]
-[53](#section-6.12-vertically-align-an-image-inside-div)](#section-6.12-vertically-align-an-image-inside-div)
-
-[[Section 6.13: Centering with fixed size]
-[53](#section-6.13-centering-with-fixed-size)](#section-6.13-centering-with-fixed-size)
-
-[[Section 6.14: Vertically align dynamic height elements]
-[54](#section-6.14-vertically-align-dynamic-height-elements)](#section-6.14-vertically-align-dynamic-height-elements)
-
-[[Section 6.15: Horizontal and Vertical centering using table
-layout]
-[55](#section-6.15-horizontal-and-vertical-centering-using-table-layout)](#section-6.15-horizontal-and-vertical-centering-using-table-layout)
-
-[**[Chapter 7: The Box Model]**
-[57](#chapter-7-the-box-model)](#chapter-7-the-box-model)
-
-[[Section 7.1: What is the Box Model?]
-[57](#section-7.1-what-is-the-box-model)](#section-7.1-what-is-the-box-model)
-
-[[Section 7.2: box-sizing]
-[58](#section-7.2-box-sizing)](#section-7.2-box-sizing)
-
-[**[Chapter 8: Margins]**
-[60](#chapter-8-margins)](#chapter-8-margins)
-
-[[Section 8.1: Margin Collapsing]
-[60](#section-8.1-margin-collapsing)](#section-8.1-margin-collapsing)
-
-[[Section 8.2: Apply Margin on a Given Side]
-[62](#section-8.2-apply-margin-on-a-given-side)](#section-8.2-apply-margin-on-a-given-side)
-
-[[Section 8.3: Margin property simplification]
-[63](#section-8.3-margin-property-simplification)](#section-8.3-margin-property-simplification)
-
-[[Section 8.4: Horizontally center elements on a page using
-margin]
-[63](#section-8.4-horizontally-center-elements-on-a-page-using-margin)](#section-8.4-horizontally-center-elements-on-a-page-using-margin)
-
-[[Section 8.5: Example 1:]
-[64](#section-8.5-example-1)](#section-8.5-example-1)
-
-[[Section 8.6: Negative margins]
-[64](#section-8.6-negative-margins)](#section-8.6-negative-margins)
-
-[**[Chapter 9: Padding]**
-[65](#chapter-9-padding)](#chapter-9-padding)
-
-[[Section 9.1: Padding Shorthand]
-[65](#section-9.1-padding-shorthand)](#section-9.1-padding-shorthand)
-
-[[Section 9.2: Padding on a given side]
-[66](#section-9.2-padding-on-a-given-side)](#section-9.2-padding-on-a-given-side)
-
-[**[Chapter 10: Border]**
-[66](#chapter-10-border)](#chapter-10-border)
-
-[[Section 10.1: border-radius]
-[66](#section-10.1-border-radius)](#section-10.1-border-radius)
-
-[[Section 10.2: border-style]
-[67](#section-10.2-border-style)](#section-10.2-border-style)
-
-[[Section 10.3: Multiple Borders]
-[68](#section-10.3-multiple-borders)](#section-10.3-multiple-borders)
-
-[[Section 10.4: border (shorthands)]
-[69](#section-10.4-border-shorthands)](#section-10.4-border-shorthands)
-
-[[Section 10.5: border-collapse]
-[70](#section-10.5-border-collapse)](#section-10.5-border-collapse)
-
-[[Section 10.6: border-image]
-[70](#section-10.6-border-image)](#section-10.6-border-image)
-
-[[Section 10.7: Creating a multi-colored border using
-border-image]
-[70](#section-10.7-creating-a-multi-colored-border-using-borderimage)](#section-10.7-creating-a-multi-colored-border-using-borderimage)
-
-[[Section 10.8: border-&lbrack;left&vertbar;right&vertbar;top&vertbar;bottom&rbrack;]
-[71](#section-10.8-border-leftrighttopbottom)](#section-10.8-border-leftrighttopbottom)
-
-[**[Chapter 11: Outlines]**
-[71](#chapter-11-outlines)](#chapter-11-outlines)
-
-[[Section 11.1: Overview]
-[72](#section-11.1-overview)](#section-11.1-overview)
-
-[[Section 11.2: outline-style]
-[72](#section-11.2-outline-style)](#section-11.2-outline-style)
-
-[**[Chapter 12: Overflow]**
-[73](#chapter-12-overflow)](#chapter-12-overflow)
-
-[[Section 12.1: overflow-wrap]
-[73](#section-12.1-overflow-wrap)](#section-12.1-overflow-wrap)
-
-[[Section 12.2: overflow-x and overflow-y]
-[74](#section-12.2-overflow-x-and-overflow-y)](#section-12.2-overflow-x-and-overflow-y)
-
-[[Section 12.3: overflow: scroll]
-[75](#section-12.3-overflow-scroll)](#section-12.3-overflow-scroll)
-
-[[Section 12.4: overflow: visible]
-[75](#section-12.4-overflow-visible)](#section-12.4-overflow-visible)
-
-[[Section 12.5: Block Formatting Context Created with
-Overflow]
-[76](#section-12.5-block-formatting-context-created-with-overflow)](#section-12.5-block-formatting-context-created-with-overflow)
-
-[**[Chapter 13: Media Queries]**
-[78](#chapter-13-media-queries)](#chapter-13-media-queries)
-
-[[Section 13.1: Terminology and Structure]
-[78](#section-13.1-terminology-and-structure)](#section-13.1-terminology-and-structure)
-
-[[Section 13.2: Basic Example]
-[79](#section-13.2-basic-example)](#section-13.2-basic-example)
-
-[[Section 13.3: mediatype]
-[79](#section-13.3-mediatype)](#section-13.3-mediatype)
-
-[[Section 13.4: Media Queries for Retina and Non Retina
-Screens]
-[80](#section-13.4-media-queries-for-retina-and-non-retina-screens)](#section-13.4-media-queries-for-retina-and-non-retina-screens)
-
-[[Section 13.5: Width vs Viewport]
-[80](#section-13.5-width-vs-viewport)](#section-13.5-width-vs-viewport)
-
-[[Section 13.6: Using Media Queries to Target Dierent Screen
-Sizes]
-[81](#section-13.6-using-media-queries-to-target-dierent-screen-sizes)](#section-13.6-using-media-queries-to-target-dierent-screen-sizes)
-
-[[Section 13.7: Use on link tag]
-[81](#section-13.7-use-on-link-tag)](#section-13.7-use-on-link-tag)
-
-[[Section 13.8: Media queries and IE8]
-[82](#section-13.8-media-queries-and-ie8)](#section-13.8-media-queries-and-ie8)
-
-[**[Chapter 14: Floats]**
-[82](#chapter-14-floats)](#chapter-14-floats)
-
-[[Section 14.1: Float an Image Within Text]
-[82](#section-14.1-float-an-image-within-text)](#section-14.1-float-an-image-within-text)
-
-[[Section 14.2: clear property]
-[83](#section-14.2-clear-property)](#section-14.2-clear-property)
-
-[[Section 14.3: Clearfix]
-[84](#section-14.3-clearfix)](#section-14.3-clearfix)
-
-[[Section 14.4: In-line DIV using float]
-[85](#section-14.4-in-line-div-using-float)](#section-14.4-in-line-div-using-float)
-
-[[Section 14.5: Use of overflow property to clear floats]
-[87](#section-14.5-use-of-overflow-property-to-clear-floats)](#section-14.5-use-of-overflow-property-to-clear-floats)
-
-[[Section 14.6: Simple Two Fixed-Width Column Layout]
-[87](#section-14.6-simple-two-fixed-width-column-layout)](#section-14.6-simple-two-fixed-width-column-layout)
-
-[[Section 14.7: Simple Three Fixed-Width Column Layout]
-[88](#section-14.7-simple-three-fixed-width-column-layout)](#section-14.7-simple-three-fixed-width-column-layout)
-
-[[Section 14.8: Two-Column Lazy/Greedy Layout]
-[88](#section-14.8-two-column-lazygreedy-layout)](#section-14.8-two-column-lazygreedy-layout)
-
-[**[Chapter 15: Typography]**
-[89](#chapter-15-typography)](#chapter-15-typography)
-
-[[Section 15.1: The Font Shorthand]
-[89](#section-15.1-the-font-shorthand)](#section-15.1-the-font-shorthand)
-
-[[Section 15.2: Quotes]
-[90](#section-15.2-quotes)](#section-15.2-quotes)
-
-[[Section 15.3: Font Size]
-[90](#section-15.3-font-size)](#section-15.3-font-size)
-
-[[Section 15.4: Text Direction]
-[91](#section-15.4-text-direction)](#section-15.4-text-direction)
-
-[[Section 15.5: Font Stacks]
-[91](#section-15.5-font-stacks)](#section-15.5-font-stacks)
-
-[[Section 15.6: Text Overflow]
-[91](#section-15.6-text-overflow)](#section-15.6-text-overflow)
-
-[[Section 15.7: Text Shadow]
-[92](#section-15.7-text-shadow)](#section-15.7-text-shadow)
-
-[[Section 15.8: Text Transform]
-[92](#section-15.8-text-transform)](#section-15.8-text-transform)
-
-[[Section 15.9: Letter Spacing]
-[93](#section-15.9-letter-spacing)](#section-15.9-letter-spacing)
-
-[[Section 15.10: Text Indent]
-[93](#section-15.10-text-indent)](#section-15.10-text-indent)
-
-[[Section 15.11: Text Decoration]
-[93](#section-15.11-text-decoration)](#section-15.11-text-decoration)
-
-[[Section 15.12: Word Spacing]
-[94](#section-15.12-word-spacing)](#section-15.12-word-spacing)
-
-[[Section 15.13: Font Variant]
-[94](#section-15.13-font-variant)](#section-15.13-font-variant)
-
-[**[Chapter 16: Flexible Box Layout (Flexbox)]**
-[96](#chapter-16-flexible-box-layout-flexbox)](#chapter-16-flexible-box-layout-flexbox)
-
-[[Section 16.1: Dynamic Vertical and Horizontal Centering (align-items,
-justify-content)]
-[96](#section-16.1-dynamic-vertical-and-horizontal-centering-alignitems-justify-content)](#section-16.1-dynamic-vertical-and-horizontal-centering-alignitems-justify-content)
-
-[[Section 16.2: Sticky Variable-Height Footer]
-[102](#section-16.2-sticky-variable-height-footer)](#section-16.2-sticky-variable-height-footer)
-
-[[Section 16.3: Optimally fit elements to their container]
-[103](#section-16.3-optimally-fit-elements-to-their-container)](#section-16.3-optimally-fit-elements-to-their-container)
-
-[[Section 16.4: Holy Grail Layout using Flexbox]
-[104](#section-16.4-holy-grail-layout-using-flexbox)](#section-16.4-holy-grail-layout-using-flexbox)
-
-[[Section 16.5: Perfectly aligned buttons inside cards with
-flexbox]
-[105](#section-16.5-perfectly-aligned-buttons-inside-cards-with-flexbox)](#section-16.5-perfectly-aligned-buttons-inside-cards-with-flexbox)
-
-[[Section 16.6: Same height on nested containers]
-[107](#section-16.6-same-height-on-nested-containers)](#section-16.6-same-height-on-nested-containers)
-
-[**[Chapter 17: Cascading and Specificity]**
-[108](#chapter-17-cascading-and-specificity)](#chapter-17-cascading-and-specificity)
-
-[[Section 17.1: Calculating Selector Specificity]
-[108](#section-17.1-calculating-selector-specificity)](#section-17.1-calculating-selector-specificity)
-
-[[Section 17.2: The !important declaration]
-[110](#section-17.2-the-important-declaration)](#section-17.2-the-important-declaration)
-
-[[Section 17.3: Cascading]
-[111](#section-17.3-cascading)](#section-17.3-cascading)
-
-[[Section 17.4: More complex specificity example]
-[112](#section-17.4-more-complex-specificity-example)](#section-17.4-more-complex-specificity-example)
-
-[**[Chapter 18: Colors]**
-[113](#chapter-18-colors)](#chapter-18-colors)
-
-[[Section 18.1: currentColor]
-[113](#section-18.1-currentcolor)](#section-18.1-currentcolor)
-
-[[Section 18.2: Color Keywords]
-[114](#section-18.2-color-keywords)](#section-18.2-color-keywords)
-
-[[Section 18.3: Hexadecimal Value]
-[120](#section-18.3-hexadecimal-value)](#section-18.3-hexadecimal-value)
-
-[[Section 18.4: rgb() Notation]
-[121](#section-18.4-rgb-notation)](#section-18.4-rgb-notation)
-
-[[Section 18.5: rgba() Notation]
-[122](#section-18.5-rgba-notation)](#section-18.5-rgba-notation)
-
-[[Section 18.6: hsl() Notation]
-[122](#section-18.6-hsl-notation)](#section-18.6-hsl-notation)
-
-[[Section 18.7: hsla() Notation]
-[123](#section-18.7-hsla-notation)](#section-18.7-hsla-notation)
-
-[**[Chapter 19: Opacity]**
-[125](#chapter-19-opacity)](#chapter-19-opacity)
-
-[[Section 19.1: Opacity Property]
-[125](#section-19.1-opacity-property)](#section-19.1-opacity-property)
-
-[[Section 19.2: IE Compatibility for &apos;opacity&apos;]
-[125](#section-19.2-ie-compatibility-for-opacity)](#section-19.2-ie-compatibility-for-opacity)
-
-[**[Chapter 20: Length Units]**
-[125](#chapter-20-length-units)](#chapter-20-length-units)
-
-[[Section 20.1: Creating scalable elements using rems and
-ems]
-[125](#section-20.1-creating-scalable-elements-using-rems-and-ems)](#section-20.1-creating-scalable-elements-using-rems-and-ems)
-
-[[Section 20.2: Font size with rem]
-[126](#section-20.2-font-size-with-rem)](#section-20.2-font-size-with-rem)
-
-[[Section 20.3: vmin and vmax]
-[127](#section-20.3-vmin-and-vmax)](#section-20.3-vmin-and-vmax)
-
-[[Section 20.4: vh and vw]
-[127](#section-20.4-vh-and-vw)](#section-20.4-vh-and-vw)
-
-[[Section 20.5: using percent %]
-[128](#section-20.5-using-percent)](#section-20.5-using-percent)
-
-[**[Chapter 21: Pseudo-Elements]**
-[128](#chapter-21-pseudo-elements)](#chapter-21-pseudo-elements)
-
-[[Section 21.1: Pseudo-Elements]
-[129](#section-21.1-pseudo-elements)](#section-21.1-pseudo-elements)
-
-[[Section 21.2: Pseudo-Elements in Lists]
-[129](#section-21.2-pseudo-elements-in-lists)](#section-21.2-pseudo-elements-in-lists)
-
-[**[Chapter 22: Positioning]**
-[130](#chapter-22-positioning)](#chapter-22-positioning)
-
-[[Section 22.1: Overlapping Elements with z-index]
-[130](#section-22.1-overlapping-elements-with-z-index)](#section-22.1-overlapping-elements-with-z-index)
-
-[[Section 22.2: Absolute Position]
-[132](#section-22.2-absolute-position)](#section-22.2-absolute-position)
-
-[[Section 22.3: Fixed position]
-[132](#section-22.3-fixed-position)](#section-22.3-fixed-position)
-
-[[Section 22.4: Relative Position]
-[132](#section-22.4-relative-position)](#section-22.4-relative-position)
-
-[[Section 22.5: Static positioning]
-[133](#section-22.5-static-positioning)](#section-22.5-static-positioning)
-
-[**[Chapter 23: Layout Control]**
-[134](#chapter-23-layout-control)](#chapter-23-layout-control)
-
-[[Section 23.1: The display property]
-[134](#section-23.1-the-display-property)](#section-23.1-the-display-property)
-
-[[Section 23.2: To get old table structure using div]
-[136](#section-23.2-to-get-old-table-structure-using-div)](#section-23.2-to-get-old-table-structure-using-div)
-
-[**[Chapter 24: Grid]**
-[137](#chapter-24-grid)](#chapter-24-grid)
-
-[[Section 24.1: Basic Example]
-[137](#section-24.1-basic-example)](#section-24.1-basic-example)
-
-[**[Chapter 25: Tables]**
-[139](#chapter-25-tables)](#chapter-25-tables)
-
-[[Section 25.1: table-layout]
-[139](#section-25.1-table-layout)](#section-25.1-table-layout)
-
-[[Section 25.2: empty-cells]
-[139](#section-25.2-empty-cells)](#section-25.2-empty-cells)
-
-[[Section 25.3: border-collapse]
-[139](#section-25.3-border-collapse)](#section-25.3-border-collapse)
-
-[[Section 25.4: border-spacing]
-[140](#section-25.4-border-spacing)](#section-25.4-border-spacing)
-
-[[Section 25.5: caption-side]
-[140](#section-25.5-caption-side)](#section-25.5-caption-side)
-
-[**[Chapter 26: Transitions]**
-[140](#chapter-26-transitions)](#chapter-26-transitions)
-
-[[Section 26.1: Transition shorthand]
-[141](#section-26.1-transition-shorthand)](#section-26.1-transition-shorthand)
-
-[[Section 26.2: cubic-bezier]
-[141](#section-26.2-cubic-bezier)](#section-26.2-cubic-bezier)
-
-[[Section 26.3: Transition (longhand)]
-[142](#section-26.3-transition-longhand)](#section-26.3-transition-longhand)
-
-[**[Chapter 27: Animations]**
-[144](#chapter-27-animations)](#chapter-27-animations)
-
-[[Section 27.1: Animations with keyframes]
-[144](#section-27.1-animations-with-keyframes)](#section-27.1-animations-with-keyframes)
-
-[[Section 27.2: Animations with the transition property]
-[145](#section-27.2-animations-with-the-transition-property)](#section-27.2-animations-with-the-transition-property)
-
-[[Section 27.3: Syntax Examples]
-[146](#section-27.3-syntax-examples)](#section-27.3-syntax-examples)
-
-[[Section 27.4: Increasing Animation Performance Using the
-&apos;will-change&apos; Attribute]
-[147](#section-27.4-increasing-animation-performance-using-the-will-change-attribute)](#section-27.4-increasing-animation-performance-using-the-will-change-attribute)
-
-[**[Chapter 28: 2D Transforms]**
-[147](#chapter-28-2d-transforms)](#chapter-28-2d-transforms)
-
-[[Section 28.1: Rotate]
-[148](#section-28.1-rotate)](#section-28.1-rotate)
-
-[[Section 28.2: Scale]
-[148](#section-28.2-scale)](#section-28.2-scale)
-
-[[Section 28.3: Skew]
-[148](#section-28.3-skew)](#section-28.3-skew)
-
-[[Section 28.4: Multiple transforms]
-[149](#section-28.4-multiple-transforms)](#section-28.4-multiple-transforms)
-
-[[Section 28.5: Translate]
-[149](#section-28.5-translate)](#section-28.5-translate)
-
-[[Section 28.6: Transform Origin]
-[150](#section-28.6-transform-origin)](#section-28.6-transform-origin)
-
-[**[Chapter 29: 3D Transforms]**
-[151](#chapter-29-3d-transforms)](#chapter-29-3d-transforms)
-
-[[Section 29.1: Compass pointer or needle shape using 3D
-transforms]
-[151](#section-29.1-compass-pointer-or-needle-shape-using-3d-transforms)](#section-29.1-compass-pointer-or-needle-shape-using-3d-transforms)
-
-[[Section 29.2: 3D text eect with shadow]
-[152](#section-29.2-3d-text-eect-with-shadow)](#section-29.2-3d-text-eect-with-shadow)
-
-[[Section 29.3: backface-visibility]
-[153](#section-29.3-backface-visibility)](#section-29.3-backface-visibility)
-
-[[Section 29.4: 3D cube]
-[154](#section-29.4-3d-cube)](#section-29.4-3d-cube)
-
-[**[Chapter 30: Filter Property]**
-[155](#chapter-30-filter-property)](#chapter-30-filter-property)
-
-[[Section 30.1: Blur]
-[156](#section-30.1-blur)](#section-30.1-blur)
-
-[[Section 30.2: Drop Shadow (use box-shadow instead if
-possible)]
-[156](#section-30.2-drop-shadow-use-box-shadow-instead-if-possible)](#section-30.2-drop-shadow-use-box-shadow-instead-if-possible)
-
-[[Section 30.3: Hue Rotate]
-[156](#section-30.3-hue-rotate)](#section-30.3-hue-rotate)
-
-[[Section 30.4: Multiple Filter Values]
-[157](#section-30.4-multiple-filter-values)](#section-30.4-multiple-filter-values)
-
-[[Section 30.5: Invert Color]
-[157](#section-30.5-invert-color)](#section-30.5-invert-color)
-
-[**[Chapter 31: Cursor Styling]**
-[158](#chapter-31-cursor-styling)](#chapter-31-cursor-styling)
-
-[[Section 31.1: Changing cursor type]
-[158](#section-31.1-changing-cursor-type)](#section-31.1-changing-cursor-type)
-
-[[Section 31.2: pointer-events]
-[158](#section-31.2-pointer-events)](#section-31.2-pointer-events)
-
-[[Section 31.3: caret-color]
-[159](#section-31.3-caret-color)](#section-31.3-caret-color)
-
-[**[Chapter 32: box-shadow]**
-[160](#chapter-32-box-shadow)](#chapter-32-box-shadow)
-
-[[Section 32.1: bottom-only drop shadow using a
-pseudo-element]
-[160](#section-32.1-bottom-only-drop-shadow-using-a-pseudoelement)](#section-32.1-bottom-only-drop-shadow-using-a-pseudoelement)
-
-[[Section 32.2: drop shadow]
-[161](#section-32.2-drop-shadow)](#section-32.2-drop-shadow)
-
-[[Section 32.3: inner drop shadow]
-[161](#section-32.3-inner-drop-shadow)](#section-32.3-inner-drop-shadow)
-
-[[Section 32.4: multiple shadows]
-[162](#section-32.4-multiple-shadows)](#section-32.4-multiple-shadows)
-
-[**[Chapter 33: Shapes for Floats]**
-[163](#chapter-33-shapes-for-floats)](#chapter-33-shapes-for-floats)
-
-[[Section 33.1: Shape Outside with Basic Shape -- circle()]
-[163](#section-33.1-shape-outside-with-basic-shape-circle)](#section-33.1-shape-outside-with-basic-shape-circle)
-
-[[Section 33.2: Shape margin]
-[164](#section-33.2-shape-margin)](#section-33.2-shape-margin)
-
-[**[Chapter 34: List Styles]**
-[166](#chapter-34-list-styles)](#chapter-34-list-styles)
-
-[[Section 34.1: Bullet Position]
-[166](#section-34.1-bullet-position)](#section-34.1-bullet-position)
-
-[[Section 34.2: Removing Bullets / Numbers]
-[166](#section-34.2-removing-bullets-numbers)](#section-34.2-removing-bullets-numbers)
-
-[[Section 34.3: Type of Bullet or Numbering]
-[166](#section-34.3-type-of-bullet-or-numbering)](#section-34.3-type-of-bullet-or-numbering)
-
-[**[Chapter 35: Counters]**
-[168](#chapter-35-counters)](#chapter-35-counters)
-
-[[Section 35.1: Applying roman numerals styling to the counter
-output]
-[168](#section-35.1-applying-roman-numerals-styling-to-the-counter-output)](#section-35.1-applying-roman-numerals-styling-to-the-counter-output)
-
-[[Section 35.2: Number each item using CSS Counter]
-[169](#section-35.2-number-each-item-using-css-counter)](#section-35.2-number-each-item-using-css-counter)
-
-[[Section 35.3: Implementing multi-level numbering using CSS
-counters]
-[170](#section-35.3-implementing-multi-level-numbering-using-css-counters)](#section-35.3-implementing-multi-level-numbering-using-css-counters)
-
-[**[Chapter 36: Functions]**
-[171](#chapter-36-functions)](#chapter-36-functions)
-
-[[Section 36.1: calc() function]
-[171](#section-36.1-calc-function)](#section-36.1-calc-function)
-
-[[Section 36.2: attr() function]
-[171](#section-36.2-attr-function)](#section-36.2-attr-function)
-
-[[Section 36.3: var() function]
-[171](#section-36.3-var-function)](#section-36.3-var-function)
-
-[[Section 36.4: radial-gradient() function]
-[172](#section-36.4-radial-gradient-function)](#section-36.4-radial-gradient-function)
-
-[[Section 36.5: linear-gradient() function]
-[172](#section-36.5-linear-gradient-function)](#section-36.5-linear-gradient-function)
-
-[**[Chapter 37: Custom Properties (Variables)]**
-[173](#chapter-37-custom-properties-variables)](#chapter-37-custom-properties-variables)
-
-[[Section 37.1: Variable Color]
-[173](#section-37.1-variable-color)](#section-37.1-variable-color)
-
-[[Section 37.2: Variable Dimensions]
-[173](#section-37.2-variable-dimensions)](#section-37.2-variable-dimensions)
-
-[[Section 37.3: Variable Cascading]
-[173](#section-37.3-variable-cascading)](#section-37.3-variable-cascading)
-
-[[Section 37.4: Valid/Invalids]
-[174](#section-37.4-validinvalids)](#section-37.4-validinvalids)
-
-[[Section 37.5: With media queries]
-[175](#section-37.5-with-media-queries)](#section-37.5-with-media-queries)
-
-[**[Chapter 38: Single Element Shapes]**
-[176](#chapter-38-single-element-shapes)](#chapter-38-single-element-shapes)
-
-[[Section 38.1: Trapezoid]
-[176](#section-38.1-trapezoid)](#section-38.1-trapezoid)
-
-[[Section 38.2: Triangles]
-[177](#section-38.2-triangles)](#section-38.2-triangles)
-
-[[Section 38.3: Circles and Ellipses]
-[180](#section-38.3-circles-and-ellipses)](#section-38.3-circles-and-ellipses)
-
-[[Section 38.4: Bursts]
-[181](#section-38.4-bursts)](#section-38.4-bursts)
-
-[[Section 38.5: Square]
-[183](#section-38.5-square)](#section-38.5-square)
-
-[[Section 38.6: Cube]
-[183](#section-38.6-cube)](#section-38.6-cube)
-
-[[Section 38.7: Pyramid]
-[184](#section-38.7-pyramid)](#section-38.7-pyramid)
-
-[**[Chapter 39: Columns]**
-[186](#chapter-39-columns)](#chapter-39-columns)
-
-[[Section 39.1: Simple Example (column-count)]
-[186](#section-39.1-simple-example-column-count)](#section-39.1-simple-example-column-count)
-
-[[Section 39.2: Column Width]
-[186](#section-39.2-column-width)](#section-39.2-column-width)
-
-[**[Chapter 40: Multiple columns]**
-[188](#chapter-40-multiple-columns)](#chapter-40-multiple-columns)
-
-[[Section 40.1: Create Multiple Columns]
-[188](#section-40.1-create-multiple-columns)](#section-40.1-create-multiple-columns)
-
-[[Section 40.2: Basic example]
-[188](#section-40.2-basic-example)](#section-40.2-basic-example)
-
-[**[Chapter 41: Inline-Block Layout]**
-[188](#chapter-41-inline-block-layout)](#chapter-41-inline-block-layout)
-
-[[Section 41.1: Justified navigation bar]
-[188](#section-41.1-justified-navigation-bar)](#section-41.1-justified-navigation-bar)
-
-[**[Chapter 42: Inheritance]**
-[189](#chapter-42-inheritance)](#chapter-42-inheritance)
-
-[[Section 42.1: Automatic inheritance]
-[189](#section-42.1-automatic-inheritance)](#section-42.1-automatic-inheritance)
-
-[[Section 42.2: Enforced inheritance]
-[190](#section-42.2-enforced-inheritance)](#section-42.2-enforced-inheritance)
-
-[**[Chapter 43: CSS Image Sprites]**
-[190](#chapter-43-css-image-sprites)](#chapter-43-css-image-sprites)
-
-[[Section 43.1: A Basic Implementation]
-[190](#section-43.1-a-basic-implementation)](#section-43.1-a-basic-implementation)
-
-[**[Chapter 44: Clipping and Masking]**
-[191](#chapter-44-clipping-and-masking)](#chapter-44-clipping-and-masking)
-
-[[Section 44.1: Clipping and Masking: Overview and
-Dierence]
-[192](#section-44.1-clipping-and-masking-overview-and-dierence)](#section-44.1-clipping-and-masking-overview-and-dierence)
-
-[[Section 44.2: Simple mask that fades an image from solid to
-transparent]
-[193](#section-44.2-simple-mask-that-fades-an-image-from-solid-to-transparent)](#section-44.2-simple-mask-that-fades-an-image-from-solid-to-transparent)
-
-[[Section 44.3: Clipping (Circle)]
-[194](#section-44.3-clipping-circle)](#section-44.3-clipping-circle)
-
-[[Section 44.4: Clipping (Polygon)]
-[195](#section-44.4-clipping-polygon)](#section-44.4-clipping-polygon)
-
-[[Section 44.5: Using masks to cut a hole in the middle of an
-image]
-[195](#section-44.5-using-masks-to-cut-a-hole-in-the-middle-of-an-image)](#section-44.5-using-masks-to-cut-a-hole-in-the-middle-of-an-image)
-
-[[Section 44.6: Using masks to create images with irregular
-shapes]
-[196](#section-44.6-using-masks-to-create-images-with-irregular-shapes)](#section-44.6-using-masks-to-create-images-with-irregular-shapes)
-
-[**[Chapter 45: Fragmentation]**
-[198](#chapter-45-fragmentation)](#chapter-45-fragmentation)
-
-[[Section 45.1: Media print page-break]
-[198](#section-45.1-media-print-page-break)](#section-45.1-media-print-page-break)
-
-[**[Chapter 46: CSS Object Model (CSSOM)]**
-[198](#chapter-46-css-object-model-cssom)](#chapter-46-css-object-model-cssom)
-
-[[Section 46.1: Adding a background-image rule via the
-CSSOM]
-[198](#section-46.1-adding-a-background-image-rule-via-the-cssom)](#section-46.1-adding-a-background-image-rule-via-the-cssom)
-
-[[Section 46.2: Introduction]
-[198](#section-46.2-introduction)](#section-46.2-introduction)
-
-[**[Chapter 47: Feature Queries]**
-[199](#chapter-47-feature-queries)](#chapter-47-feature-queries)
-
-[[Section 47.1: Basic &commat;supports usage]
-[199](#section-47.1-basic-supports-usage)](#section-47.1-basic-supports-usage)
-
-[[Section 47.2: Chaining feature detections]
-[199](#section-47.2-chaining-feature-detections)](#section-47.2-chaining-feature-detections)
-
-[**[Chapter 48: Stacking Context]**
-[200](#chapter-48-stacking-context)](#chapter-48-stacking-context)
-
-[[Section 48.1: Stacking Context]
-[200](#section-48.1-stacking-context)](#section-48.1-stacking-context)
-
-[**[Chapter 49: Block Formatting Contexts]**
-[205](#chapter-49-block-formatting-contexts)](#chapter-49-block-formatting-contexts)
-
-[[Section 49.1: Using the overflow property with a value dierent to
-visible]
-[205](#section-49.1-using-the-overflow-property-with-a-value-dierent-to-visible)](#section-49.1-using-the-overflow-property-with-a-value-dierent-to-visible)
-
-[**[Chapter 50: Vertical Centering]**
-[205](#chapter-50-vertical-centering)](#chapter-50-vertical-centering)
-
-[[Section 50.1: Centering with display: table]
-[205](#section-50.1-centering-with-display-table)](#section-50.1-centering-with-display-table)
-
-[[Section 50.2: Centering with Flexbox]
-[206](#section-50.2-centering-with-flexbox)](#section-50.2-centering-with-flexbox)
-
-[[Section 50.3: Centering with Transform]
-[206](#section-50.3-centering-with-transform)](#section-50.3-centering-with-transform)
-
-[[Section 50.4: Centering Text with Line Height]
-[207](#section-50.4-centering-text-with-line-height)](#section-50.4-centering-text-with-line-height)
-
-[[Section 50.5: Centering with Position: absolute]
-[207](#section-50.5-centering-with-position-absolute)](#section-50.5-centering-with-position-absolute)
-
-[[Section 50.6: Centering with pseudo element]
-[208](#section-50.6-centering-with-pseudo-element)](#section-50.6-centering-with-pseudo-element)
-
-[**[Chapter 51: Object Fit and Placement]**
-[209](#chapter-51-object-fit-and-placement)](#chapter-51-object-fit-and-placement)
-
-[[Section 51.1: object-fit]
-[209](#section-51.1-object-fit)](#section-51.1-object-fit)
-
-[**[Chapter 52: CSS design patterns]**
-[212](#chapter-52-css-design-patterns)](#chapter-52-css-design-patterns)
-
-[[Section 52.1: BEM]
-[212](#section-52.1-bem)](#section-52.1-bem)
-
-[**[Chapter 53: Browser Support & Prefixes]**
-[214](#chapter-53-browser-support-prefixes)](#chapter-53-browser-support-prefixes)
-
-[[Section 53.1: Transitions]
-[214](#section-53.1-transitions)](#section-53.1-transitions)
-
-[[Section 53.2: Transform]
-[214](#section-53.2-transform)](#section-53.2-transform)
-
-[**[Chapter 54: Normalizing Browser Styles]**
-[214](#chapter-54-normalizing-browser-styles)](#chapter-54-normalizing-browser-styles)
-
-[[Section 54.1: normalize.css]
-[214](#section-54.1-normalize.css)](#section-54.1-normalize.css)
-
-[[Section 54.2: Approaches and Examples]
-[215](#section-54.2-approaches-and-examples)](#section-54.2-approaches-and-examples)
-
-[**[Chapter 55: Internet Explorer Hacks]**
-[217](#chapter-55-internet-explorer-hacks)](#chapter-55-internet-explorer-hacks)
-
-[[Section 55.1: Adding Inline Block support to IE6 and IE7]
-[217](#section-55.1-adding-inline-block-support-to-ie6-and-ie7)](#section-55.1-adding-inline-block-support-to-ie6-and-ie7)
-
-[[Section 55.2: High Contrast Mode in Internet Explorer 10 and
-greater]
-[217](#section-55.2-high-contrast-mode-in-internet-explorer-10-and-greater)](#section-55.2-high-contrast-mode-in-internet-explorer-10-and-greater)
-
-[[Section 55.3: Internet Explorer 6 & Internet Explorer 7
-only]
-[217](#section-55.3-internet-explorer-6-internet-explorer-7-only)](#section-55.3-internet-explorer-6-internet-explorer-7-only)
-
-[[Section 55.4: Internet Explorer 8 only]
-[218](#section-55.4-internet-explorer-8-only)](#section-55.4-internet-explorer-8-only)
-
-[**[Chapter 56: Performance]**
-[219](#chapter-56-performance)](#chapter-56-performance)
-
-[[Section 56.1: Use transform and opacity to avoid trigger
-layout]
-[219](#section-56.1-use-transform-and-opacity-to-avoid-trigger-layout)](#section-56.1-use-transform-and-opacity-to-avoid-trigger-layout)
-
-[**[Credits]**](#credits)
-
-[[222](#credits)](#credits)
 
 <h2 id="about">About</h2>
 
@@ -969,7 +60,7 @@ nor accurate, use at your own risk.</p>
 
 <h1>Chapter 1: Getting started with CSS</h1>
 
-<h2 id="ch1-1">Section 1.1: External Stylesheet</h2>
+<h3 id="ch1-1">Section 1.1: External Stylesheet</h3>
 
 An external CSS stylesheet can be applied to any number of HTML
 documents by placing a &lt;link**&gt;** element in each HTML document.
@@ -982,8 +73,8 @@ attribute <a href="https://html.spec.whatwg.org/multipage/semantics.html#the-lin
 can be omitted</a>.
 
 It is recommended that the styles are loaded before the elements they
-style are utilized. Otherwise, <a href="http://stackoverflow.com/a/1642259/2397327">users will see a flash of unstyled
-content</a>.
+style are utilized. Otherwise, <a href="http://stackoverflow.com/a/1642259/2397327">
+users will see a flash of unstyled content</a>.
 
 **Example hello-world.html**
 
@@ -1077,7 +168,7 @@ HTML of that page; the CSS file is cached, so it does not need to be
 downloaded again. Since browsers cache the external stylesheet, your
 pages load faster.
 
-<h2 id="ch1-2">Section 1.2: Internal Styles</h2>
+<h3 id="ch1-2">Section 1.2: Internal Styles</h3>
 
 CSS enclosed in **&gt;** tags within an HTML document function like an
 external stylesheet, except that it lives in the HTML document it
@@ -1086,7 +177,7 @@ applied to the document in which it lives. Note that this element
 *must* be inside the **&gt;** element for HTML validation (though it
 will work in all current &lt;head&gt; browsers if placed in body).
 
-<h2 id="ch1-3">Section 1.3: CSS &commat;import rule (one of CSS at-rule)</h2>
+<h3 id="ch1-3">Section 1.3: CSS &commat;import rule (one of CSS at-rule)</h3>
 
 The &commat;import CSS at-rule is used to import style rules from other
 style sheets. These rules must precede all other types of rules,
@@ -1117,7 +208,7 @@ queries:
 @import url('landscap.css') screen and (orientation: landscape);
 ```
 
-<h2 id="ch1-4">Section 1.4: Inline Styles</h2>
+<h3 id="ch1-4">Section 1.4: Inline Styles</h3>
 
   **&lt;style**
 
@@ -1146,7 +237,7 @@ Inline styles are generally the safest way to ensure rendering
 compatibility across various email clients, programs and devices, but
 can be time-consuming to write and a bit challenging to manage.
 
-<h2 id="#ch1-5">Section 1.5: Changing CSS with JavaScript</h2>
+<h3 id="#ch1-5">Section 1.5: Changing CSS with JavaScript</h3>
 
 > Pure JavaScript
 >
@@ -1175,7 +266,7 @@ el.style.fontFamily='sans-serif';
 > document.
 >
 
-###jQuery
+<h4>jQuery</h4>
 
 > Modifying CSS properties with jQuery is even simpler.
 
@@ -1212,7 +303,7 @@ $('#element').css({
   - JavaScript documentation -- Reading and Changing CSS Style. 
   - jQuery documentation -- CSS Manipulation
 
-## Section 1.6: Styling Lists with CSS
+<h3 id="ch1-6">Section 1.6: Styling Lists with CSS</h3>
 
 > There are three different properties for styling list-items:
 > list-style-type, list-style-image, and list-style position, which
@@ -1232,7 +323,7 @@ $('#element').css({
   - lower-roman 
   - upper-roman 
   - none
->
+
 > (For an exhaustive list, see the 
 > <a href="https://www.w3.org/wiki/CSS/Properties/list-style-type">W3C specification wiki</a>.
 >
@@ -1264,9 +355,9 @@ li {list-style-position: inside;
 }
 ```
 
-# Chapter 2: Structure and Formatting of a CSS Rule
+<h2 id="ch2">Chapter 2: Structure and Formatting of a CSS Rule</h2>
 
-## Section 2.1: Property Lists
+<h3 id="ch2-1">Section 2.1: Property Lists</h3>
 
 > Some properties can take multiple values, collectively known as a
 > <b>property list**.
@@ -1286,11 +377,12 @@ span {
 }
 ```
 
-## Section 2.2: Multiple Selectors
+<h3 id="ch2-2">Section 2.2: Multiple Selectors</h3>
 
 > When you group CSS selectors, you apply the same styles to several
 > different elements without repeating the styles in your style sheet.
 > Use a comma to separate multiple grouped selectors.
+
 ```
 div, p {color: blue }
 ```
@@ -1303,6 +395,7 @@ div, p {color: blue }
 > be red.
 >
 > This also applies to all types of selectors.
+
 ```
 p, .blue, #first, div span{ color : blue }
 ```
@@ -1314,7 +407,7 @@ p, .blue, #first, div span{ color : blue }
   - element with the ID first 
   - every <span> inside of a <div>
 
-## Section 2.3: Rules, Selectors, and Declaration Blocks
+<h3 id="ch2-3">Section 2.3: Rules, Selectors, and Declaration Blocks</h3>
 
 > A CSS rule consists of a selector (e.g. h1) and declaration block ({}).
 
@@ -1322,9 +415,9 @@ p, .blue, #first, div span{ color : blue }
 h1 {}
 ```
 
-# Chapter 3: Comments
+<h2 id="ch3">Chapter 3: Comments</h2>
 
-## Section 3.1: Single Line
+<h3 id="ch3-1">Section 3.1: Single Line</h3>
 
 ```
 /* This is a CSS comment */
@@ -1671,7 +764,7 @@ div lang="PT">This will NOT be red
 >
 > See the Syntax Section for more details.
 
-<h2 id="ch4-3">Section 4.3: Combinators</h2>
+<h3 id="ch4-3">Section 4.3: Combinators</h3>
 
 > **Overview**
 
@@ -15077,104 +14170,64 @@ capitalize
 }
 
 .example3
-
 {
-
 **text-transform**
-
 :
-
 lowercase
-
 ;
-
 }
+```
 
 > **HTML**
 
+```
 **&lt;**
-
 **p**
-
 class
-
 =
-
 &quot;example1&quot;
-
 **&gt;**
-
 all letters in uppercase
-
 *&lt;!&minus;-*
-
 *&quot;ALL LETTERS IN UPPERCASE&quot;*
-
 *&minus;-&gt;*
-
 **&lt;**
-
 **/p**
-
 **&gt;**
-
 **&lt;**
-
 **p**
-
 class
-
 =
-
 &quot;example2&quot;
-
 **&gt;**
-
 all letters in capitalize
-
 *&lt;!&minus;-*
-
 *&quot;All Letters In Capitalize (Sentence Case)&quot;*
-
 *&minus;-&gt;*
-
 **&lt;**
-
 **/p**
-
 **&gt;**
-
 **&lt;**
-
 **p**
-
 class
-
 =
-
 &quot;example3&quot;
-
 **&gt;**
-
 all letters in lowercase
-
 *&lt;!&minus;-*
-
 *&quot;all letters in lowercase&quot;*
-
 *&minus;-&gt;*
-
 **&lt;**
-
 **/p**
-
 **&gt;**
+```
 
 ## Section 15.9: Letter Spacing
 
+```
 h2
-
 {
+```
 
 */&ast; adds a 1px space horizontally between each letter;*
 
@@ -15182,57 +14235,45 @@ h2
 
 **letter-spacing**
 
+```
 :
-
 1
-
 px
-
 ;
-
 }
+```
 
 > The letter-spacing property is used to specify the space between the
 > characters in a text.
 >
 > ! letter-spacing also supports negative values:
 
+```
 p
-
 {
-
 **letter-spacing**
-
 :
-
 -1
-
 px
-
 ;
-
 }
+```
 
 Resources:
 [[https://developer.mozilla.org/en-US/docs/Web/CSS/letter-spacing]](https://developer.mozilla.org/en-US/docs/Web/CSS/letter-spacing)
 
 ## Section 15.10: Text Indent
 
+```
 p
-
 {
-
 **text-indent**
-
 :
-
 50
-
 px
-
 ;
-
 }
+```
 
 > The text-indent property specifies how much horizontal space text
 > should be moved before the beginning of the first line of the text
@@ -15251,114 +14292,71 @@ px
 > The text-decoration property is used to set or remove decorations from
 > text.
 
+```
 h1
-
 {
-
 **text-decoration**
-
 :
-
 none
-
 ;
-
 }
-
 h2
-
 {
-
 **text-decoration**
-
 :
-
 overline
-
 ;
-
 }
-
 h3
-
 {
-
 **text-decoration**
-
 :
-
 line-through
-
 ;
-
 }
-
 h4
-
 {
-
 **text-decoration**
-
 :
-
 underline
-
 ;
-
 }
+```
 
 > text-decoration can be used in combination with text-decoration-style
 > and text-decoration-color as a shorthand property:
 
+```
 .title
-
 {
-
 **text-decoration**
-
 :
-
 underline
-
 dotted
-
 blue
-
 ;
-
 }
+```
 
 > This is a shorthand version of
 
+```
 .title
-
 {
-
 **text-decoration-style**
-
 :
-
 dotted
-
 ;
-
 **text-decoration-line**
-
 :
-
 underline
-
 ;
-
 **text-decoration-color**
-
 :
-
 blue
-
 ;
-
 }
+```
 
 > It should be noted that the following properties are only supported in
 > Firefox
@@ -15380,51 +14378,31 @@ blue
 >
 > **CSS**
 
+```
 .normal
-
 {
-
 **word-spacing**
-
 :
-
 normal
-
 ;
-
 }
-
 .narrow
-
 {
-
 **word-spacing**
-
 :
-
 -3
-
 px
-
 ;
-
 }
-
 .extensive
-
 {
-
 **word-spacing**
-
 :
-
 10
-
 px
-
 ;
-
 }
+```
 
 > **HTML**
 >
@@ -15465,53 +14443,39 @@ px
 >
 > **CSS:**
 
+```
 .smallcaps
-
 {
-
 **font-variant**
-
 :
-
 small-caps
-
 ;
-
 }
+```
 
 > **HTML:**
 
+```
 **&lt;**
-
 **p**
-
 class
-
 =
-
 &quot;smallcaps&quot;
-
 **&gt;**
-
 Documentation about CSS Fonts
-
 **&lt;**
-
 **br**
-
 **&gt;**
-
 aNd ExAmpLe
-
 **&lt;**
-
 **/p**
-
 **&gt;**
+```
 
 > **Output:**
 
-![](./images/media/image39.jpg){width="2.34375in" height="0.375in"}
+![](./images/media/image39.jpg)
+<!-- {width="2.34375in" height="0.375in"} -->
 
 > Note: The font-variant property is a shorthand for the properties:
 > font-variant-caps, font-variant-numeric, fontvariant-alternates,
@@ -15532,93 +14496,56 @@ aNd ExAmpLe
 >
 > **HTML**
 
+```
 **&lt;**
-
 **div**
-
 class
-
 =
-
 &quot;aligner&quot;
-
 **&gt;**
-
 **&lt;**
-
 **div**
-
 class
-
 =
-
 &quot;aligner-item&quot;
-
 **&gt;**
-
 ...
-
 **&lt;**
-
 **/div**
-
 **&gt;**
-
 **&lt;**
-
 **/div**
-
 **&gt;**
+```
 
 > **CSS**
 
+```
 .aligner
-
 {
-
 **display**
-
 :
-
 flex
-
 ;
-
 **align-items**
-
 :
-
 center
-
 ;
-
 **justify-content**
-
 :
-
 center
-
 ;
-
 }
-
 .aligner-item
-
 {
-
 **max-width**
-
 :
-
 50
-
 &percnt;
-
 ;
-
 */&ast;for demo. Use actual width instead.&ast;/*
-
 }
+```
 
 > Here is a
 > [[demo]](http://codepen.io/asim-coder/pen/ZOobqz).
@@ -15636,8 +14563,10 @@ center
 > This centers the elements along the axis specified by flex-direction.
 > I.e., for a
 
+```
   **flex-direction**                                   :   row
   **flex-direction**                            :   column
+```
 
 > justify-contentcenter horizontal () flexbox, this centers
 > horizontally, and for a vertical flexbox () flexbox, this centers
@@ -15647,112 +14576,66 @@ center
 >
 > All of the below styles are applied onto this simple layout:
 
+```
 **&lt;**
-
 **div**
-
 id
-
 =
-
 &quot;container&quot;
-
 **&gt;**
-
 **&lt;**
-
 **div**
-
 **&gt;**
-
 **&lt;**
-
 **/div**
-
 **&gt;**
-
 **&lt;**
-
 **div**
-
 **&gt;**
-
 **&lt;**
-
 **/div**
-
 **&gt;**
-
 **&lt;**
-
 **div**
-
 **&gt;**
-
 **&lt;**
-
 **/div**
-
 **&gt;**
-
 **&lt;**
-
 **/div**
-
 **&gt;**
 
-where
+where #container is the flex-box
+.  **justify-content**                            **:**   **center**
+```
 
-#container
-
-is the
-
-flex-box
-
-.
-
-  **justify-content**                            **:**   **center**
 
 > **Example: on a horizontal flexbox**
 >
 > **CSS:**
 
+```
 div
-
 #container
-
 {
-
 **display**
-
 :
-
 flex
-
 ;
-
 **flex-direction**
-
 :
-
 row
-
 ;
-
 **justify-content**
-
 :
-
 center
-
 ;
-
 }
+```
 
 > **Outcome:**
 
-![](./images/media/image40.jpg){width="6.90625in"
-height="6.135416666666667in"}
+![](./images/media/image40.jpg)
 
 > Here is a [[demo]](https://jsfiddle.net/d6pc5bmd/).
 
@@ -15762,41 +14645,28 @@ height="6.135416666666667in"}
 >
 > **CSS:**
 
+```
 div
-
 #container
-
 {
-
 **display**
-
 :
-
 flex
-
 ;
-
 **flex-direction**
-
 :
-
 column
-
 ;
-
 **justify-content**
-
 :
-
 center
-
 ;
-
 }
+```
 
 > **Outcome:**
 
-![](./images/media/image41.jpg){width="6.9375in" height="6.15625in"}
+![](./images/media/image41.jpg)
 
 > Here is a [[demo]](https://jsfiddle.net/d6pc5bmd/1/).
 
@@ -15806,42 +14676,28 @@ center
 >
 > **CSS:**
 
+```
 div
-
 #container
-
 {
-
 **display**
-
 :
-
 flex
-
 ;
-
 **flex-direction**
-
 :
-
 row
-
 ;
-
 **align-items**
-
 :
-
 center
-
 ;
-
 }
+```
 
 > **Outcome:**
 
-![](./images/media/image42.jpg){width="6.947916666666667in"
-height="6.145833333333333in"}
+![](./images/media/image42.jpg)
 
 > Here is a [[demo]](https://jsfiddle.net/d6pc5bmd/2/).
 
@@ -15851,37 +14707,24 @@ height="6.145833333333333in"}
 >
 > **CSS:**
 
+```
 div
-
 #container
-
 {
-
 **display**
-
 :
-
 flex
-
 ;
-
 **flex-direction**
-
 :
-
 column
-
 ;
-
 **align-items**
-
 :
-
 center
-
 ;
-
 }
+```
 
 > **Outcome:**
 
@@ -36151,8 +34994,8 @@ px
 > [**[Demo]**](https://jsfiddle.net/trungdq88/Logdo0rn/)
 > same animation, took **1.3ms** for rendering, **2.0ms** for painting.
 
-![](./images/media/image268.jpg){width="6.48in" height="5.48in"}
-
+![](./images/media/image268.jpg)
+<!-- width 6/2" -->
 # Credits
 
 > Thank you greatly to all the people from Stack Overflow Documentation
@@ -36656,3 +35499,6 @@ px
   [[Zeta]](https://stackoverflow.com/users/1139697/)          Chapter 5
 
   [[Zze]](https://stackoverflow.com/users/3509591/)           Chapter 5
+
+<!-- the end -->
+<!-- 6/28/2024 Fri 5:41pm -->
