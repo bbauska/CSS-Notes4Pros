@@ -1470,41 +1470,19 @@ target
 > Examples for the above HTML structure would be:
 
 ```
-#sidebarShown
-:
-checked
-&#126;
-#container
-#sidebar
-{
-**margin-left**
-:
-300
-px
-;
+#sidebarShown:checked ~ #container #sidebar {
+  margin-left: 300px;
 }
-#darkThemeUsed
-:
-checked
-&#126;
-#container
-,
-#darkThemeUsed
-:
-checked
-&#126;
-#footer
-{
-**background**
-:
-#333
-;
+
+#darkThemeUsed:checked ~ #container,
+#darkThemeUsed:checked ~ #footer {
+  background: #333;
 }
 ```
 
 <h4>In action</h4>
 
-See [[this fiddle]](https://jsfiddle.net/yokosbm0/1/) for
+See <a href="https://jsfiddle.net/yokosbm0/1/">this fiddle</a> for
 a implementation of these global booleans.
 
 <h3 id="ch4-12">Section 4.12: ID selectors</h3>
@@ -1515,31 +1493,16 @@ element by a specific ID in CSS, the &num; prefix is used.
 For example, the following HTML div element...
 
 ```
-**&lt;**
-**div**
-id
-=
-&quot;exampleID&quot;
-**&gt;**
-**&lt;**
-**p**
-**&gt;**
-Example
-**&lt;**
-**/p**
-**&gt;**
-**&lt;**
-**/div**
-**&gt;**
-...
+<div id="exampleID">
+  <p>Example</p>
+</div>
 ```
 
-can be selected by #exampleID in CSS as shown below:
+...can be selected by #exampleID in CSS as shown below:
 
 ```
-#exampleID
-{
-width: 20px;
+#exampleID {
+  width: 20px;
 }
 ```
 
@@ -1550,341 +1513,146 @@ width: 20px;
 <h4>HTML</h4>
 
 ```
-**&lt;**
-**input**
-type
-=
-&quot;range&quot;
-**&gt;**
-**&lt;**
-**/input**
-**&gt;**
+<input type="range"></input>
 ```
 
 <h4>CSS</h4>
 
-**Effect Pseudo Selector**
-
-  input&lbrack;type=range&rbrack;::-webkit-slider-thumb,   
-  input&lbrack;type=range&rbrack;::-moz-range-thumb,       
-  input&lbrack;type=range&rbrack;::-ms-thumb               
-
-
-> Thumb
-
-  input&lbrack;type=range&rbrack;::-webkit-slider-runnable-track,   
-  input&lbrack;type=range&rbrack;::-moz-range-track,                
-  input&lbrack;type=range&rbrack;::-ms-track                        
-
-
-> Track
-
-  input&lbrack;type=range&rbrack;:focus
-
-
-> OnFocus
-
-  input&lbrack;type=range&rbrack;::-moz-range-progress,
-  input&lbrack;type=range&rbrack;::-ms-fill-lower
-
-
-> Lower part of (not possible
-
-the track in WebKit browsers currently - JS needed)
+| <b>Effect</b>  | <b>Pseudo Selector</b>                             |
+|----------------|----------------------------------------------------|
+| Thumb          | input[type=range]::-webkit-slider-thumb, input[type=range]::-moz-range-thumb, |
+|                | input[type=range]::-ms-thumb               |
+| Track          | input[type=range]::-webkit-slider-runnable-track, input[type=range]::-moz-range-track, |
+|                | input[type=range]::-ms-track |
+| OnFocus        | input[type=range]:focus |
+| Lower part of  | input[type=range]::-moz-range-progress, input[type=range]::-mx-fill-lower(not possible |
+| the track      | in WebKit browsers currently -JS needed) |
 
 ## Section 4.14: The :only-child pseudo-class selector example
 
-  :only-child
+
+The :only-child CSS pseudo-class represents any element which is the only child of
+its parent.
+
+<h4>HTML:</h4>
+
+```
+<div>
+  <p>This paragraph is the only child of the div, it will have the color blue</p>
+</div>
+
+<div>
+  <p>This paragraph is one of the two children of the div</p>
+  <p>This paragraph is one of the two children of its parent</p>
+</div>
+```
+
+<h4>CSS:</h4>
+
+```
+p:only-child {
+  color: blue;
+}
+```
+
+The above example selects the &lt;p&gt; element that is the unique child from its 
+parent, in this case a &lt;div&gt;.
+
+<a href="https://jsbin.com/dizosi/edit?html,css">Live Demo on JSBin</a>
+
+<h2 id="ch5">Chapter 5: Backgrounds</h2>
+
+With CSS you can set colors, gradients, and images as the background
+of an element.
+
+It is possible to specify various combinations of images, colors, and
+gradients, and adjust the size, positioning, and repetition (among
+others) of these.
+
+<h3 id="ch5-1">Section 5.1: Background Color</h3>
+
+The background-color property sets the background color of an element
+using a color value or through keywords, such as transparent, inherit
+or initial.
+
+<ul>
+  <li><b>transparent</b>, specifies that the background color should be
+    transparent. This is default.</li>
+  <li><b>inherit</b>, inherits this property from its parent element.</li>
+  <li><b>initial</b>, sets this property to its default value.</li>
+</ul>
 
 
-> The CSS pseudo-class represents any element which is the only child of
-> its parent.
->
-> HTML:
+This can be applied to all elements, and ::first-letter/::first-line pseudo-elements.
 
-**&lt;**
+Colors in CSS can be specified by different methods.
 
-**div**
+<h4>Color names</h4>
 
-**&gt;**
+<h4>CSS</h4>
 
-**&lt;**
+```
+div {
+  background-color: red; /* red */
+}
+```
 
-**p**
+<h4>HTML</h4>
 
-**&gt;**
+```
+<div>This will have a red background</div>
+```
 
-This paragraph is the only child of the div, it will have the color blue
+<ul>
+  <li>The example used above is one of several ways that CSS has to represent
+    a single color.</li>
+</ul>
 
-**&lt;**
+<h4>Hex color codes</h4>
 
-**/p**
+Hex code is used to denote RGB components of a color in base-16
+hexadecimal notation. #ff0000, for example, is bright red, where the
+red component of the color is 256 bits (ff) and the corresponding
+green and blue portions of the color is 0 (00).
 
-**&gt;**
+If both values in each of the three RGB pairings (R, G, and B) are the
+same, then the color code can be shortened into three characters (the
+first digit of each pairing). #ff0000 can be shortened to #f00, and
+#ffffff can be shortened to #fff.
 
-**&lt;**
+Hex notation is case-insensitive.
 
-**/div**
-
-**&gt;**
-
-**&lt;**
-
-**div**
-
-**&gt;**
-
-**&lt;**
-
-**p**
-
-**&gt;**
-
-This paragraph is one of the two children of the div
-
-**&lt;**
-
-**/p**
-
-**&gt;**
-
-**&lt;**
-
-**p**
-
-**&gt;**
-
-This paragraph is one of the two children of its parent
-
-**&lt;**
-
-**/p**
-
-**&gt;**
-
-**&lt;**
-
-**/div**
-
-**&gt;**
-
-> CSS:
-
-p
-
-:
-
-only-child
-
-{
-
-**color**
-
-:
-
-blue
-
-;
-
+```
+body {
+  background-color: #de1205; /* red */
 }
 
-  **&lt;p&gt;**   element that is the unique child from its parent, in this     **&lt;div&gt;**
-              case a                                                        
-
-
-> The above example selects the .
-
-[[Live Demo on
-JSBin]](https://jsbin.com/dizosi/edit?html,css)
-
-# Chapter 5: Backgrounds
-
-> With CSS you can set colors, gradients, and images as the background
-> of an element.
->
-> It is possible to specify various combinations of images, colors, and
-> gradients, and adjust the size, positioning, and repetition (among
-> others) of these.
-
-## Section 5.1: Background Color
-
-> The background-color property sets the background color of an element
-> using a color value or through keywords, such as transparent, inherit
-> or initial.
->
-> **transparent**, specifies that the background color should be
-> transparent. This is default. **inherit**, inherits this property from
-> its parent element. **initial**, sets this property to its default
-> value.
-
-  ::first-letter                        /   ::first-line
-
-
-> This can be applied to all elements, and pseudo-elements.
->
-> Colors in CSS can be specified by different methods.
->
-> **Color names**
->
-> **CSS**
-
-div
-
-{
-
-**background-color**
-
-:
-
-red
-
-;
-
-*/&ast; red &ast;/*
-
+.main {
+  background-color: #00f; /* blue */
 }
+```
 
-> **HTML**
+<h4>RGB / RGBa</h4>
 
-**&lt;**
+Another way to declare a color is to use RGB or RGBa.
 
-**div**
+RGB stands for Red, Green and Blue, and requires of three separate
+values between 0 and 255, put between brackets, that correspond with
+the decimal color values for respectively red, green and blue.
 
-**&gt;**
+RGBa allows you to add an additional alpha parameter between 0.0 and
+1.0 to define opacity.
 
-This will have a red background
-
-**&lt;**
-
-**/div**
-
-**&gt;**
-
-The example used above is one of several ways that CSS has to represent
-a single color.
-
-> **Hex color codes**
->
-> Hex code is used to denote RGB components of a color in base-16
-> hexadecimal notation. #ff0000, for example, is bright red, where the
-> red component of the color is 256 bits (ff) and the corresponding
-> green and blue portions of the color is 0 (00).
->
-> If both values in each of the three RGB pairings (R, G, and B) are the
-> same, then the color code can be shortened into three characters (the
-> first digit of each pairing). #ff0000 can be shortened to #f00, and
-> #ffffff can be shortened to #fff.
->
-> Hex notation is case-insensitive.
-
-body
-
-{
-
-**background-color**
-
-:
-
-#de1205
-
-;
-
-*/&ast; red &ast;/*
-
+```
+header {
+  background-color: rgb(0, 0, 0); /* black */
 }
-
-.main
-
-{
-
-**background-color**
-
-:
-
-#00f
-
-;
-
-*/&ast; blue &ast;/*
-
+footer {
+  background-color: rgba(0, 0, 0, 0.5); /* black with 50% opacity */
 }
+```
 
-> **RGB / RGBa**
->
-> Another way to declare a color is to use RGB or RGBa.
->
-> RGB stands for Red, Green and Blue, and requires of three separate
-> values between 0 and 255, put between brackets, that correspond with
-> the decimal color values for respectively red, green and blue.
->
-> RGBa allows you to add an additional alpha parameter between 0.0 and
-> 1.0 to define opacity.
-
-header
-
-{
-
-**background-color**
-
-:
-
-rgb
-
-(
-
-0
-
-,
-
-0
-
-,
-
-0
-
-)
-
-;
-
-*/&ast; black &ast;/*
-
-}
-
-footer
-
-{
-
-**background-color**
-
-:
-
-rgba
-
-(
-
-0
-
-,
-
-0
-
-,
-
-0
-
-,
-
-0.5
-
-)
-
-;
-
-*/&ast; black with 50% opacity &ast;/*
-
-}
-
-> **HSL / HSLa**
+<h4>HSL / HSLa</h4>
 >
 > Another way to declare a color is to use HSL or HSLa and is similar to
 > RGB and RGBa.
