@@ -560,13 +560,13 @@ attribute ends with the given value.</p>
 
 <a href="http://jsbin.com/yowihi/2/edit?html,css,output">Live Demo on JSBin</a>
 
-<pre><code>&lbrack;attribute|="value"&rbrack;</code></pre>
+<pre><code>&lbrack;attribute&vert;="value"&rbrack;</code></pre>
 
-Selects elements with a given attribute and value where the
-attribute&apos;s value is exactly the given value or is exactly the given
-value followed by - (U+002D)
+<p>Selects elements with a given attribute and value where the
+attribute&apos;s value can be represented as Value, VALUE, vAlUe 
+or any other case-sensitive possibility.</p>
 
-<pre><code>&lbrack;lang|="EN"&rbrack; {
+<pre><code>&lbrack;lang="EN" i&rbrack; {
   color: red;
   }
 &lt;div lang="EN-us">This will be red&lt;/div&gt;
@@ -590,9 +590,8 @@ other case-insensitive possibility.</p>
 
 <a href="http://jsbin.com/yowihi/4/edit?html,css,output">Live Demo on JSBin</a>
 
-<h4>Specificity of attribute selectors</h4>
-
-<p>0-1-0</p>
+<h4>Specificity of attribute selectors<br>
+0-1-0</h4>
 
 <p>Same as class selector and pseudoclass.</p>
 
@@ -610,8 +609,9 @@ but with lower specificity.</p>
 <b>Overview</b>
 <b>Selector Description</b>
 
-| div span |  Descendant selector (all <b>&lt;span&gt;</b>s that are descendants of a <b>&lt;div&gt;</b>) |
+| Selector  | Description |
 |-----------|-------------------------------------------------------------------------------------|
+| div span |  Descendant selector (all <b>&lt;span&gt;</b>s that are descendants of a <b>&lt;div&gt;</b>) |
 | div &gt; span | Child selector (all <b>&lt;span&gt;</b>s that are direct child of a <b>&lt;div&gt;</b>) |
 | a ~ span | General Sibling selector (all <b>&lt;span&gt;</b>s that are siblings after an <b>&lt;a&gt;</b>) |
 | a + span | Adjacent Sibling selector (all <b>&lt;span&gt;</b> that are immediately after an <b>&lt;a&gt;</b>) |
