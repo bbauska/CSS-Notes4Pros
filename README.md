@@ -704,169 +704,71 @@ whether or not they are immediately adjacent.</p>
 
 <h3 id="ch4-4">Section 4.4: Pseudo-classes</h3>
 
-> &lbrack;&lbrack;Pseudo-classes&rbrack;&rbrack;(https://www.w3.org/TR/selectors/#pseudo-classes)
-> are <b>keywords</b> which allow selection based on information that lies
-> outside of the document tree or that cannot be expressed by other
-> selectors or combinators. This information can be associated to a
-> certain state
->
-> (&lbrack;&lbrack;state&rbrack;&rbrack;(https://www.w3.org/TR/selectors/#UIstates) and
-> &lbrack;&lbrack;dynamic&rbrack;&rbrack;(https://www.w3.org/TR/selectors/#dynamic-pseudos)
-> pseudo-classes), to locations
-> (&lbrack;&lbrack;structural&rbrack;&rbrack;(https://www.w3.org/TR/selectors/#structural-pseudos)
-> and
-> &lbrack;&lbrack;target&rbrack;&rbrack;(https://www.w3.org/TR/selectors/#target-pseudo)
-> pseudo-classes), to negations of the former
+<a href="https://www.w3.org/TR/selectors/#pseudo-classes">Pseudo-classes</a> are <b>keywords</b> 
+which allow selection based on information that lies outside of the document tree that cannot 
+be expressed by other selectors or combinators. This information can be associate to a
+certain state (<a href="https://www.w3.org/TR/selectors/#UIstates">state</a> and 
+<a href="https://www.w3.org/TR/selectors/#dynamic-pseudos">dynamic</a> pseudo-classes), to locations 
+(<a href="https://www.w3.org/TR/selectors/#structural-pseudos">structural and 
+<a href="https://www.w3.org/TR/selectors/#target-pseudo">target</a> pseudo-classes), 
+to negations of the former (<a href="https://www.w3.org/TR/selectors/#negation">negation</a> 
+pseudo-class) or the languages (<a href="https://www.w3.org/TR/selectors/#lang-pseudo">lang</a> 
+pseudo-class). Examples include whether or not a link has been followed (:visited), 
+the mouse is over an element (:hover), a checkbox is checked (:checked), etc.
 
-  visited   ), the mouse is over an       hover   ), a checkbox is       checked
-            element (:                            checked (:             
+<h4>Syntax</h4>
 
-
-> (&lbrack;&lbrack;negation&rbrack;&rbrack;(https://www.w3.org/TR/selectors/#negation)
-> pseudo-class) or to languages
-> (&lbrack;&lbrack;lang&rbrack;&rbrack;(https://www.w3.org/TR/selectors/#lang-pseudo)
-> pseudo-class). Examples include whether or not a link has been
-> followed (:), etc.
->
-> <b>Syntax</b>
-
-selector:pseudo
-&minus;
-class
-{
-property:
-<b>VALUE</b>
-;
+```
+selector:pseudo&minus;class {
+  property: <b>VALUE</b>;
 }
-> <b>List of pseudo-classes:</b>
-<b>Name Description</b>
+```
 
-&lbrack;&lbrack;:active&rbrack;(https://www.w3.org/TR/css3-selectors/#the-user-action-pseudo-classes-hover-act)&rbrack;
-Applies to any element being activated (i.e. clicked) by the user.
+<b>List of pseudo-classes:</b>
 
-> Allows you to build sets of related selectors by creating groups that
-> the
->
-> &lbrack;&lbrack;:any&rbrack;&rbrack;(https://developer.mozilla.org/en-US/docs/Web/CSS/:any)
-> included items will match. This is an alternative to repeating an
-> entire selector.
->
-> Selects the current active #news element (clicked on a URL
->
-> &lbrack;&lbrack;:target&rbrack;&rbrack;(https://developer.mozilla.org/en-US/docs/Web/CSS/:target)
-> containing that anchor name)
->
-> Applies to radio, checkbox, or option elements that are checked
->
-> &lbrack;&lbrack;:checked&rbrack;&rbrack;(https://www.w3.org/TR/css3-selectors/#checked)
-> or toggled into an &quot;on&quot; state.
->
-> Represents any user interface element that is the default among a
-> group of
->
-> &lbrack;&lbrack;:default&rbrack;&rbrack;(https://developer.mozilla.org/en-US/docs/Web/CSS/:default)
->
-> similar elements.
+| Name          | Description |
+|---------------|---------------------------------------------------------------------------------|
+| <a href="https://www.w3.org/TR/css3-selectors/#the-user-action-pseudo-classes-hover-act">:active</a>  | Applies to any element being activated (i.e. clicked) by the user. |
+| <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/:any">:any</a> | Allows you to build sets of related selectors by creating groups that |
+|               | included items will match. This is an alternative to repeating an entire selector. |
+| <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/:target">:target</a>  | Selects the current active #news element (clicked on a URL |
+|               | containing that anchor name)
+| <a href="https://www.w3.org/TR/css3-selectors/#checked">:checked</a>  | Applies to radio, checkbox, or option elements that are checked |
+|               | or toggled into an "on" state. |
+| <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/:default">:default</a> | Represents any user interface element that is the default among a group of |
+|               | similar elements. |
+| <a href="https://www.w3.org/TR/css3-selectors/#enableddisabled">:disabled</a> | Applies to any UI element which is in a disabled state. |
+| <a href="https://www.w3.org/TR/selectors/#empty-pseudo">:empty</a>   | Applies to any element which has no children. |
+| <a href="https://www.w3.org/TR/css3-selectors/#enableddisabled">:enabled</a>  | Applies to any UI element which is in an enabled state. |
+| <a href="http://tympanus.net/codrops/css_reference/first">:first</a> | Used in conjunction with @page rule, this selects the first page in a |
+|               | printed document. |
+| <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/:first-child">:first-child</a>  | Represents any element that is the first child element of its parent. |
+| <a href="https://www.w3.org/TR/css3-selectors/#first-of-type-pseudo">:first-of-type</a> | Applies when an element is the first of the selected element type |
+|              | inside its parent. This may or may not be the first-child. |
+| <a href="https://www.w3.org/TR/css3-selectors/#the-user-action-pseudo-classes-hover-act">:focus</a>  | Applies to any element which has the user's focus. This can be given by the |
+|              | user's keyboard, mouse events, or other forms of input. |
+| <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/:focus-within">:focus-within</a> | Can be used to highlight a whole section when one element inside it is focused. It matches |
+|              | any element that the :focus pseudo-class matches or that has a descendant focused. |
+| <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/:fullscreen">:full-screen</a>  | Applies to any element displayed in full-screen mode. It selects the whole stack |
+|              | of elements and not just the top level element. |
+| <a href="https://www.w3.org/TR/css3-selectors/#the-user-action-pseudo-classes-hover-act">:hover</a> | Applies to any element being hovered by the user&apos;s pointing device, but |
+|              | not activated. |
+| <a href="https://www.w3.org/TR/css3-selectors/#indeterminate">:indeterminate</a> | Applies radio or checkbox UI elements which are neither checked nor |
+|             | unchecked, but are in an indeterminate state. This can be due to an |
+|             | element's attribute or DOM manipulation. |
+| <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/:in-range">:in-range</a>  | The :in-range CSS pseudo-class matches when an element has |
+|             | its value attribute inside the specified range limitations for this element. |
+|             | It allows the page to give a feedback that the value currently defined |
+|             | using the elements is inside the range limits. |
+| <a href="http://tympanus.net/codrops/css_reference/invalid/">:invalid</a>  | Applies to &lt;input&gt; elements whose values are invalid according to |
+|             | the type specified in the type= attribute. |
+| <a href="https://www.w3.org/TR/css3-selectors/#lang-pseudo">:lang</a>  | Applies to any element who&apos;s wrapping &lt;body&gt; element has a properly |
+|             | designated lang= attribute. For the pseudo-class to be valid, it must |
+|             | contain a <a href="https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes">valid two or three langauge code</a>. |
+| <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/:last-child">:last-child</a>  | Represents any element that is the last child element of its parent. |
+| <a href="https://www.w3.org/TR/css3-selectors/#last-of-type-pseudo">:last-of-type</a>  | Applies when an element is the last of the selected element type inside |
+|             | its parent. This may or may not be the last-child. |
 
-&lbrack;&lbrack;:disabled&rbrack;(https://www.w3.org/TR/css3-selectors/#enableddisabled)&rbrack;
-Applies to any UI element which is in a disabled state.
-
-&lbrack;&lbrack;:empty&rbrack;(https://www.w3.org/TR/selectors/#empty-pseudo)&rbrack;
-Applies to any element which has no children.
-
-&lbrack;&lbrack;:enabled&rbrack;(https://www.w3.org/TR/css3-selectors/#enableddisabled)&rbrack;
-Applies to any UI element which is in an enabled state.
-
-> Used in conjunction with the &commat;page rule, this selects the first page
-> in a
->
-> &lbrack;&lbrack;:first&rbrack;&rbrack;(http://tympanus.net/codrops/css_reference/first)
-> printed document.
-
-&lbrack;&lbrack;:first-child&rbrack;(https://developer.mozilla.org/en-US/docs/Web/CSS/:first-child)&rbrack;
-Represents any element that is the first child element of its parent.
-
-> Applies when an element is the first of the selected element type
->
-> &lbrack;&lbrack;:first-of-type&rbrack;&rbrack;(https://www.w3.org/TR/css3-selectors/#first-of-type-pseudo)
-> inside its parent. This may or may not be the first-child.
->
-> Applies to any element which has the user&apos;s focus. This can be given
-> by the
->
-> &lbrack;&lbrack;:focus&rbrack;&rbrack;(https://www.w3.org/TR/css3-selectors/#the-user-action-pseudo-classes-hover-act)
-> user&apos;s keyboard, mouse events, or other forms of input.
->
-> Can be used to highlight a whole section when one element inside it is
-> focused. It matches
->
-> &lbrack;&lbrack;:focus-within&rbrack;&rbrack;(https://developer.mozilla.org/en-US/docs/Web/CSS/:focus-within)
-> any element that the :focus pseudo-class matches or that has a
-> descendant focused.
->
-> Applies to any element displayed in full-screen mode. It selects the
-> whole stack
->
-> &lbrack;&lbrack;:full-screen&rbrack;&rbrack;(https://developer.mozilla.org/en-US/docs/Web/CSS/:fullscreen)
-> of elements and not just the top level element.
->
-> Applies to any element being hovered by the user&apos;s pointing device,
-> but
->
-> &lbrack;&lbrack;:hover&rbrack;&rbrack;(https://www.w3.org/TR/css3-selectors/#the-user-action-pseudo-classes-hover-act)
-> not activated.
->
-> Applies radio or checkbox UI elements which are neither checked nor
->
-> &lbrack;&lbrack;:indeterminate&rbrack;(https://www.w3.org/TR/css3-selectors/#indeterminate)&rbrack;
-> unchecked, but are in an indeterminate state. This can be due to an
-> element&apos;s attribute or DOM manipulation.
-
-  in-range
-
-
-> The : CSS pseudo-class matches when an element has
->
-> its value attribute inside the specified range limitations for this
-> element.
->
-> &lbrack;&lbrack;:in-range&rbrack;&rbrack;(https://developer.mozilla.org/en-US/docs/Web/CSS/:in-range)
->
-> It allows the page to give a feedback that the value currently defined
-> using the element is inside the range limits.
-
-  <b>&lt;input</b>
-
-
-> Applies to <b>&gt;</b> elements whose values are invalid according to
-
-  type
-
-
-> &lbrack;&lbrack;:invalid&rbrack;&rbrack;(http://tympanus.net/codrops/css_reference/invalid/)
-> the type specified in the = attribute.
-
-  <b>&lt;body</b>
-
-
-> Applies to any element who&apos;s wrapping <b>&gt;</b> element has a properly
-
-  lang
-
-
-> &lbrack;&lbrack;:lang&rbrack;(https://www.w3.org/TR/css3-selectors/#lang-pseudo)&rbrack;
-> designated = attribute. For the pseudo-class to be valid, it must
-> contain a &lbrack;&lbrack;valid two or three letter language
-> code.&rbrack;&rbrack;(https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes)
-
-&lbrack;&lbrack;:last-child&rbrack;(https://developer.mozilla.org/en-US/docs/Web/CSS/:last-child)&rbrack;
-Represents any element that is the last child element of its parent.
-
-> Applies when an element is the last of the selected element type
-> inside
->
-> &lbrack;&lbrack;:last-of-type&rbrack;&rbrack;(https://www.w3.org/TR/css3-selectors/#last-of-type-pseudo)
-> its parent. This may or may not be the last-child.
 >
 > Used in conjunction with the &commat;page rule, this selects all the left
 >
