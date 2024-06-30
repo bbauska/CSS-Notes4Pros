@@ -11,8 +11,9 @@ output:
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h1>CSS-Notes4Pros</h1>
-CSS Notes For Professionals - intermediate level CSS learning course.  All on-line.  No money, unless you'd like to donate. I'm game for that.
 
+<p>CSS Notes For Professionals - intermediate level CSS learning course.  
+All on-line.  No money, unless you'd like to donate. I'm game for that.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h1 align="center">Advanced CSS Notes for Professionals</h1>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -27,7 +28,7 @@ CSS Notes For Professionals - intermediate level CSS learning course.  All on-li
   style="width:20%"
   title="JavaScript coffee cup logo version"
   alt="JavaScript coffee cup logo version." />
-<img src="./images/image002.png"
+<img src="./images/image002.jpg"
   style="width:20%"
   title="CSS logo"
   alt=" logo." />
@@ -55,32 +56,30 @@ their respective company owners.</p>
 nor accurate, use at your own risk.</p>
 
 <p align="center">Please send feedback and corrections to <a href="web@petercv.com">web@petercv.com</a></p>
-
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2>Chapter 1: Getting started with CSS</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch1-1">Section 1.1: External Stylesheet</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-An external CSS stylesheet can be applied to any number of HTML
-documents by placing a <b>&lt;link&gt;</b> element in each HTML document.
+<p>An external CSS stylesheet can be applied to any number of HTML
+documents by placing a <b>&lt;link&gt;</b> element in each HTML document.</p>
 
-The attribute rel of the <b>&lt;link&gt;</b> tag has to be set to &quot;stylesheet&quot;,
+<p>The attribute rel of the <b>&lt;link&gt;</b> tag has to be set to &quot;stylesheet&quot;,
 and the href attribute to the relative or absolute path to the
 stylesheet. While using relative URL paths is generally considered
 good practice, absolute paths can be used, too. In HTML5 the type
 attribute <a href="https://html.spec.whatwg.org/multipage/semantics.html#the-link-element">
-can be omitted</a>.
+can be omitted</a>.</p>
 
-It is recommended that the <b>&lt;link&gt;</b> tag be placed in the HTML file's <b>&lt;head&gt;</b>
+<p>It is recommended that the <b>&lt;link&gt;</b> tag be placed in the HTML file's <b>&lt;head&gt;</b>
 tag so that the styles are loaded before the elements they style.
 Otherwise, <a href="http://stackoverflow.com/a/1642259/2397327">
-users will see a flash of unstyled content</a>.
+users will see a flash of unstyled content</a>.</p>
 
 <h4>Example</h4>
 <h4>hello-world.html</h4>
 
-<pre><code>
-&lt;! DOCTYPE html&gt;
+<pre><code>&lt;! DOCTYPE html&gt;
 &lt;html&gt;
   &lt;head&gt;
     &lt;meta charset="utf-8"/&gt;
@@ -89,13 +88,13 @@ users will see a flash of unstyled content</a>.
   &lt;body&gt;
     &lt;h1&gt;Hello world!&lt;/h1&gt;
     &lt;p&gt;I ♥ CSS&lt;/p&gt;
-&lt;/body&gt;
-&lt;/html&gt;</code></pre>
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
 
 <h4>style.css</h4>
 
-```
-h1 {
+<pre><code>h1 {
   color: green;
   text-decoration: underline;
 }
@@ -104,7 +103,7 @@ p {
   font-size: 25px;
   font-family: 'Trebuchet MS', sans-serif;
 }
-```
+</code></pre>
 
 <p>Make sure you include the correct path to your CSS file in the href.
 If the CSS file is in the same folder as your HTML file then no path
@@ -112,9 +111,7 @@ is required (like the example above) but if it's saved in a folder,
 then specify it like this;<br>
 href="foldername/style.css"</p>
 
-```
-<link rel="stylesheet" type="text/css" href="foldername/style.css">
-```
+<pre><code>&lt;link rel="stylesheet" type="text/css" href="foldername/style.css"&gt;</code></pre>
 
 <p>External stylesheets are considered the best way to handle your CSS.
 There&apos;s a very simple reason for this: when you&apos;re managing a site
@@ -128,26 +125,20 @@ file.</p>
 
 <p>You can load as many CSS files in your HTML page as needed.</p>
 
-```
-<link rel="stylesheet" type="text/css" href="main.css">
-<link rel="stylesheet" type="text/css" href="override.css">
-```
+<pre><code>&lt;link rel="stylesheet" type="text/css" href="main.css"&gt;
+&lt;link rel="stylesheet" type="text/css" href="override.css"&gt;</code></pre>
 
 <p>CSS rules are applied with some basic rules, and order does matter.
 For example, if you have a main.css file with some code in it:</p>
 
-```
-p.green { color: #00ff00; }
-```
+<pre><code>p.green { color: #00ff00; }</code></pre>
 
 <p>All your paragraphs with the &apos;green&apos; class will be written in light
 green, but you can override this with another .css file just by
 including it *after* main.css. You can have override.css with the
 following code follow main.css, for example:</p>
 
-```
-p.green { color: #006600; }
-```
+<pre><code>p.green { color: #006600; }</code></pre>
 
 <p>Now all your paragraphs with the &apos;green&apos; class will be written in
 darker green rather than light green.</p>
@@ -161,7 +152,6 @@ navigate to another page, their browser only needs to download the
 HTML of that page; the CSS file is cached, so it does not need to be
 downloaded again. Since browsers cache the external stylesheet, your
 pages load faster.</p>
-
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch1-2">Section 1.2: Internal Styles</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -172,9 +162,8 @@ document in which it lives. Note that this element <i>must</i> be inside the
 <b>&lt;head&gt;</b> element for HTML validation (though it
 will work in all current &lt;head&gt; browsers if placed in body).</p>
 
-```
-<head>
-  <style>
+<pre><code>&lt;head&gt;
+  &lt;style&gt;
     h1 {
       color: green;
       text-decoration: underline;
@@ -183,78 +172,71 @@ will work in all current &lt;head&gt; browsers if placed in body).</p>
       font-size: 25px;
       font-family: 'Trebuchet MS', sans-serif;
     }
-  </style>
-</head>
-<body>
-  <h1>Hello world!</h1>
-  <p>I ♥ CSS</p>
-</body>
-```
-
+  &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;h1&gt;Hello world!&lt;/h1&gt;
+  &lt;p&gt;I ♥ CSS&lt;/p&gt;
+&lt;/body&gt;
+</code></pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch1-3">Section 1.3: CSS &commat;import rule (one of CSS at-rule)</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-The &commat;import CSS at-rule is used to import style rules from other
+<p>The &commat;import CSS at-rule is used to import style rules from other
 style sheets. These rules must precede all other types of rules,
 except &commat;charset rules; as it is not a nested statement, &commat;import
-cannot be used inside conditional group at-rules.
+cannot be used inside conditional group at-rules.</p>
+
 <a href="https://developer.mozilla.org/en/docs/Web/CSS/@import">&commat;import</a>.
 
 <h4>How to use &commat;import</h4>
 
-You can use &commat;import rule in following ways:
+<p>You can use &commat;import rule in following ways:</p>
 
 A.  <b>With internal style tag</b>
 
-```
-  <style>
+<pre><code>  <style>
     @import url('/css/styles.css');
-  </style>
-```
+  </style></code></pre>
 
 B.  <b>With external stylesheet</b>
 
-The following line imports a CSS file named additional-styles.css in
-the root directory into the CSS file in which it appears:
+<p>The following line imports a CSS file named additional-styles.css in
+the root directory into the CSS file in which it appears:</p>
 
-```
-@import '/additional-styles.css';
-```
+<pre><code>@import '/additional-styles.css';</code></pre>
 
-Importing external CSS is also possible. A common use case are font
-files.
-```
-@import 'https://fonts.googleapis.com/css?family=Lato';
-```
-An optional second argument to &commat;import rule is a list of media
-queries:
-```
-@import '/print-styles.css' print;
-@import url('landscape.css') screen and (orientation: landscape);
-```
+<p>Importing external CSS is also possible. A common use case are font
+files.</p>
+
+<pre><code>@import 'https://fonts.googleapis.com/css?family=Lato';</code></pre>
+
+<p>An optional second argument to &commat;import rule is a list of media
+queries:</p>
+<pre><code>@import '/print-styles.css' print;
+@import url('landscape.css') screen and (orientation: landscape);</code></pre>
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch1-4">Section 1.4: Inline Styles</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-Use inline styles to apply styling to a specific element. Note that
+<p>Use inline styles to apply styling to a specific element. Note that
 this is <b><i>not</i></b> optimal. Placing style rules in a <b>&lt;style&gt;</b> tag or
 external CSS file is encouraged in order to maintain a distinction
-between content and presentation.
+between content and presentation.</p>
 
-Inline styles override any CSS in a <b>&lt;style&gt;</b> tag or external style
+<p>Inline styles override any CSS in a <b>&lt;style&gt;</b> tag or external style
 sheet. While this can be useful in some circumstances, this fact more
-often than not reduces a project&apos;s maintainability.
+often than not reduces a project&apos;s maintainability.</p>
 
-The styles in the following example apply directly to the elements to
-which they are attached.
-```
-<h1 style="color: green; text-decoration: underline;">Hello world!</h1>
-<p style="font-size: 25px; font-family: 'Trebuchet MS';">I ♥ CSS</p>
-```
-Inline styles are generally the safest way to ensure rendering
+<p>The styles in the following example apply directly to the elements to
+which they are attached.</p>
+
+<pre><code>&lt;h1 style="color: green; text-decoration: underline;"&gt;Hello world!&lt;/h1&gt;
+&lt;p style="font-size: 25px; font-family: 'Trebuchet MS';"&gt;I ♥ CSS&lt;/p&gt;</code></pre>
+
+<p>Inline styles are generally the safest way to ensure rendering
 compatibility across various email clients, programs and devices, but
-can be time-consuming to write and a bit challenging to manage.
-
+can be time-consuming to write and a bit challenging to manage.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="#ch1-5">Section 1.5: Changing CSS with JavaScript</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -263,11 +245,9 @@ can be time-consuming to write and a bit challenging to manage.
 <p>It&apos;s possible to add, remove or change CSS property values with JavaScript 
 through an element&apos;s style property.</p>
 
-```
-var el = document.getElementById("element");
+<pre><code>var el = document.getElementById("element");
 el.style.opacity = 0.5;
-el.style.fontFamily = 'sans-serif';
-```
+el.style.fontFamily = 'sans-serif';</code></pre>
 
 <p>Note that style properties are named in lower camel case style. In the
 example you see that the css property fontfamily becomes fontFamily in
@@ -281,32 +261,27 @@ to the <b>&lt;body&gt;</b> or <b>&lt;head&gt;</b> of the HTML document.</p>
 
 <p>Modifying CSS properties with jQuery is even simpler.</p>
 
-```
-$('#element').css('margin', '5px');
-```
+<pre><code>$('#element').css('margin', '5px');</code></pre>
 
 <p>If you need to change more than one style rule:</p>
 
-```
-$('#element').css({
+<pre><code>$('#element').css({
   margin:"5px",
   padding:"10px",
   color:"black"
-});
-```
+});</code></pre>
 
 <p>jQuery includes two ways to change css rules that have hyphens in them
 (i.e. font-size). You can put them in quotes or camel-case the style
 rule name.</p>
 
-```
-$('.example-class').css({
+<pre><code>$('.example-class').css({
   "background-color": "blue", 
   fontSize: "10px" 
-});
-```
+});</code></pre>
 
 <h4>See also</h4>
+
 <ul>
   <li>JavaScript documentation - Reading and Changing CSS Style.</li>
   <li>jQuery documentation - CSS Manipulation</li>
@@ -320,8 +295,10 @@ list-style-type, list-style-image, and list-style position, which
 should be declared in that order. The default values are disc,
 outside, and none, respectively. Each property can be declared
 separately, or using the list-style shorthand property.</p>
+
 <p><b>list-style-type</b> defines the shape or type of bullet point used for each list-item.</p>
 <p>Some of the acceptable values for list-style-type:</p>
+
 <ul>
   <li>disc</li>
   <li>circle</li>
@@ -337,42 +314,32 @@ separately, or using the list-style shorthand property.</p>
 <p>To use square bullet points for each list-item, for example, you would use 
 the following property-value pair:</p>
 
-```
-li {
+<pre><code>li {
   list-style-type: square;
-}
-```
+}</code></pre>
 
 <p>The <b>list-style-image</b> property determines whether the list-item
 icon is set with an image, and accepts a value of none or a URL that
 points to an image.</p>
 
-```
-li {
+<pre><code>li {
   list-style-image: url (images/bullet.png);
-}
-```
+}</code></pre>
 
 <p>The <b>list-style-position</b> property defines where to position the
 list-item marker, and it accepts one of two values: &quot;inside&quot; or
 &quot;outside&quot;.</p>
-
-```
-li {list-style-position: inside;
-}
-```
-
+<pre><code>li {list-style-position: inside;
+}</code></pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ch2">Chapter 2: Structure and Formatting of a CSS Rule</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch2-1">Section 2.1: Property Lists</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-
 <p>Some properties can take multiple values, collectively known as a
 <b>property list</b>.
 
-```
-/* Two values in this property list */
+<pre><code>/* Two values in this property list */
 
 span {
   text-shadow: yellow 0 0 3px, green 4px 4px 10px;
@@ -383,9 +350,7 @@ span {
   text-shadow:
     yellow 0 0 3px,
     green 4px 4px 10px;
-}
-```
-
+}</code></pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch2-2">Section 2.2: Multiple Selectors</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -393,19 +358,15 @@ span {
 different elements without repeating the styles in your style sheet.
 Use a comma to separate multiple grouped selectors.</p>
 
-```
-div, p {color: blue }
-```
+<pre><code>div, p {color: blue }</code></pre>
 
-So the blue color applies to all <b>&lt;div&gt;</b> elements and all <b>&lt;p&gt;</b>
+<p>So the blue color applies to all <b>&lt;div&gt;</b> elements and all <b>&lt;p&gt;</b>
 elements.  Without the comma only <b>&lt;p&gt;</b> elements that are a child of 
-a <b>&lt;div&gt;</b> would be red.
+a <b>&lt;div&gt;</b> would be red.</p>
 
 <p>This also applies to all types of selectors.</p>
 
-```
-p, .blue, #first, div span{ color : blue }
-```
+<pre><code>p, .blue, #first, div span{ color : blue }</code></pre>
 
 <p>This rule applies to:</p>
 
@@ -415,35 +376,25 @@ p, .blue, #first, div span{ color : blue }
   <li>element with the ID first</li>
   <li>every <b>&lt;span&gt;</b> inside of a <b>&lt;div&gt;</b>
 </ul>
-
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch2-3">Section 2.3: Rules, Selectors, and Declaration Blocks</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>A CSS <b>rule</b> consists of a <b>selector</b> (e.g. h1) and <b>declaration block</b> ({}).
 
-```
-h1 {}
-```
-
+<pre><code>h1 {}</code></pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ch3">Chapter 3: Comments</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch3-1">Section 3.1: Single Line</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-
-```
-/* This is a CSS comment */
+<pre><code>/* This is a CSS comment */
 div {
   color: red; /* This is a CSS comment */
-}
-```
-
+}</code></pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch3-2">Section 3.2: Multiple Line</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-
-```
-/*
+<pre><code>/*
   This
   is
   a
@@ -452,9 +403,7 @@ div {
 */
 div {
   color: red;
-}
-```
-
+}</code></pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ch4">Chapter 4: Selectors</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -528,33 +477,27 @@ using the presence of a given attribute or attribute value.</p>
 
 <p>Selects elements with the given attribute.</p>
 
-```
-div[data-color] {
+<pre><code>div[data-color] {
   color: red;
 }
 
-<div data-color="red">This will be red</div>
-<div data-color="green">This will be red</div>
-<div data-background="red">This will NOT be red</div>
-```
+&lt;div data-color="red"&gt;This will be red&lt;/div&gt;
+&lt;div data-color="green"&gt;This will be red&lt;/div&gt;
+&lt;div data-background="red"&gt;This will NOT be red&lt;/div&gt;</code></pre>
 
 <a href="http://jsbin.com/cezale/1/edit?html,css,output">Live Demo on JSBin</a>
 
-```
-[attribute="value"]
-```
+<pre><code>[attribute="value"]</code></pre>
 
 <p>Selects elements with the given attribute and value.</p>
 
-```
-div[data-color="red"] {
+<pre><code>div[data-color="red"] {
   color: red;
   }
 
-<div data-color="red">This will be red</div>
-<div data-color="green">This will be red</div>
-<div data-background="red">This will NOT be red</div>
-```
+&lt;div data-color="red"&gt;This will be red&lt;/div&gt;
+&lt;div data-color="green"&gt;This will be red&lt;/div&gt;
+&lt;div data-background="red"&gt;This will NOT be red&lt;/div&gt;</code></pre>
 
 <a href="http://jsbin.com/waxoked/1/edit?html,css,output">Live Demo on JSBin</a>
 
@@ -563,17 +506,15 @@ div[data-color="red"] {
 ```
 Selects elements with the given attribute and value where the given
 attribute contains the given value anywhere (as a substring).
-```
-[class = "foo"] {
+<pre><code>[class = "foo"] {
   color: red;
 }
 
-<div class="foo-123">This will be red</div>
-<div class="foo123">This will be red</div>
-<div class="bar123foo">This will be red</div>
-<div class="barfooo123">This will be red</div>
-<div class="barfo0">Ths will NOT be red</div>
-```
+&lt;div class="foo-123"&gt;This will be red&lt;/div&gt;
+&lt;div class="foo123"&gt;This will be red&lt;/div&gt;
+&lt;div class="bar123foo"&gt;This will be red&lt;/div&gt;
+&lt;div class="barfooo123"&gt;This will be red&lt;/div&gt;
+&lt;div class="barfo0"&gt;Ths will NOT be red&lt;/div&gt;</code></pre>
 
 <a href="http://jsbin.com/dazige/1/edit?html,css,output">Live Demo on JSBin</a>
 
