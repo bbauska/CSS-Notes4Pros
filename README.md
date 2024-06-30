@@ -213,6 +213,7 @@ files.</p>
 
 <p>An optional second argument to &commat;import rule is a list of media
 queries:</p>
+
 <pre><code>@import '/print-styles.css' print;
 @import url('landscape.css') screen and (orientation: landscape);</code></pre>
 
@@ -329,6 +330,7 @@ points to an image.</p>
 <p>The <b>list-style-position</b> property defines where to position the
 list-item marker, and it accepts one of two values: &quot;inside&quot; or
 &quot;outside&quot;.</p>
+
 <pre><code>li {list-style-position: inside;
 }</code></pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -455,10 +457,10 @@ using the presence of a given attribute or attribute value.</p>
 | [attr^='val']   | &lt;div attr="val1 val2"&gt;     | Where attr's value begins with val |
 | [attr$='val']   | &lt;div attr="sth aval"&gt;      | Where attr's value ends with val   |
 | [attr='val']    | &lt;div attr="somevalhere"&gt;   | Where attr contains val anywhere   |
-| [attr|='val']   | &lt;div attr="val-sth etc"&gt;   | Where attr's value is exactly val, |
+| [attr&vert;='val']   | &lt;div attr="val-sth etc"&gt;   | Where attr's value is exactly val, |
 |                 |                            | or starts with val and immediately |
 |                 |                            | followed by - (U+002D) |
-| [attr|='val' i] | &lt;div attr="val"&gt;           | Where attr has val, |
+| [attr&vert;='val' i] | &lt;div attr="val"&gt;           | Where attr has val, |
 |                 |                            | ignoring val's letter casing. |
 |                 |                            | followed by - (U+002D) |
 
@@ -580,14 +582,14 @@ value followed by - (U+002D)
 attribute&apos;s value can be represented as Value, VALUE, vAlUe or any
 other case-insensitive possibility.</p>
 
-```
+<pre><code>
 [lang|="EN"] {
   color: red;
 }
-<div lang="EN-us">This will be red</div>
-<div lang="EN-gb">This will be red</div>
-<div lang="PT-pt">This will NOT be red</div>
-```
+&lt;div lang="EN-us"&gt;This will be red&lt;/div&gt;
+&lt;div lang="EN-gb"&gt;This will be red&lt;/div&gt;
+&lt;div lang="PT-pt"&gt;This will NOT be red&lt;/div&gt;
+</code></pre>
 
 <a href="http://jsbin.com/yowihi/4/edit?html,css,output">Live Demo on JSBin</a>
 
@@ -597,9 +599,7 @@ other case-insensitive possibility.</p>
 
 <p>Same as class selector and pseudoclass.</p>
 
-```
-*[type=checkbox] // 0-1-0
-```
+<pre><code>*[type=checkbox] // 0-1-0</code></pre>
 
 <p>Note that this means an attribute selector can be used to select an
 element by its ID at a lower level of specificity than if it was
@@ -676,11 +676,11 @@ both descendants of the <b>&lt;div&gt;</b>.</p>
 
 <p>The adjacent sibling (+) combinator selects a sibling element that immediate follows a specified element.</p>
 
-```
+<pre><code>
 <b>color</b>
 <b>&lt;</b>
 <b>&gt;</b>
-```
+</code></pre>
 
 <a href="http://jsbin.com/xonafuz/4/edit?html,css,output">Live Demo on JSBin</a>
 
@@ -1008,11 +1008,11 @@ The class name selector select all elements with the targeted class
 name. For example, the class name .warning would select the following
 <b>&lt;div&gt;</b> element:
 
-```
+<pre><code>
 <div class="warning">
   <p>This would be some warning copy.</p>
 </div>
-```
+</code></pre>
 
 You can also combine class names to target elements more specifically.
 Let&apos;s build on the example above to showcase a more complicated class
@@ -1056,16 +1056,16 @@ attribute selector to avoid the high specificity of the ID selector.</p>
 
 <h4>HTML:</h4>
 
-```
+<pre><code>
 <div id="element">. . .</div>
-```
+</code></pre>
 
 <h4>CSS</h4>
 
-```
+<pre><code>
 #element { . . . } /* High specificity will override many selectors */
 [id="element"] { . . .} /* Low specificity, can be overridden easily */
-```
+</code></pre>
 
 <h3 id="ch4-8">Section 4.8: The :last-of-type selector</h3>
 
@@ -1073,7 +1073,7 @@ The :last-of-type selects the element that is the last child, of a particular ty
 of its parent. In the example below, the css selects the last
 paragraph and the last heading h1.
 
-```
+<pre><code>
 p: last-of-type {
   background: #C5CAE9;
 }
@@ -1082,13 +1082,13 @@ h1: last-of-type {
   background: #CDDC39;
 }
 &gt;
-```
+</code></pre>
 
 [[jsFiddle]](http://jsfiddle.net/MadalinaTn/YmMZZ/113/)
 
 <h3 id="ch4-9">Section 4.9: CSS3 :in-range selector example</h3>
 
-```
+<pre><code>
 <style>
 input:in-range {
   border: 1px solid blue;
@@ -1098,7 +1098,7 @@ input:in-range {
 
 <input type="number" min="10" max="20" value="15">
 <p>The border for this value will be blue</p>
-```
+</code></pre>
 
 
 The :in-range CSS pseudo-class matches when an element has its value attribute
@@ -1116,21 +1116,21 @@ that are not disabled and don&apos;t have the class .example:
 
 <h4>HTML:</h4>
 
-```
+<pre><code>
 <form>
   Phone: <input type="tel" class="example">
   E-mail: <input type="email" disabled="disabled">
   Pasword: <inpu type="password">
 </form>
-```
+</code></pre>
 
 <h4>CSS:</h4>
 
-```
+<pre><code>
 input:not([disabled]):not(.example){
   background-color: #ccc;
 }
-```
+</code></pre>
 
 
 The :not() pseudo-class will also support comma-separated selectors in
@@ -1138,11 +1138,11 @@ Selectors Level 4:
 
 <h4>CSS:</h4>
 
-```
+<pre><code>
 input:not([disabled]):not(.example){
   background-color: #ccc;
 }
-```
+</code></pre>
 
 <a href="http://jsbin.com/japere/edit?html,css,output">Live Demo on JSBin</a>
 
@@ -1152,16 +1152,16 @@ B.  The :focus-within CSS pseudo-classHTML:
 
 <h4>HTML:</h4>
 
-```
+<pre><code>
   <h3>Background is blue if the input is focused .</p>
   <div>
     <input type="text">
   </div>
-```
+</code></pre>
 
 <h4>CSS:</h4>
 
-```
+<pre><code>
 div {
   height: 80px;
 }
@@ -1171,7 +1171,7 @@ input {
 div:focus-within {
   background-color: #1565C0;
 }
-```
+</code></pre>
 
 <h3 id="ch4-11">Section 4.11: Global boolean with checkbox:checked and &#126; (general sibling combinator)</h3>
 
@@ -1183,18 +1183,18 @@ boolean without using JavaScript.
 To the very beginning of your document, add as much booleans as you
 want with a unique id and the hidden attribute set:
 
-```
+<pre><code>
 **&lt;**
 **&lt;**
 **/div**
 **&gt;**
-```
+</code></pre>
 
 <h4>Change the boolean&apos;s value</h4>
 
 You can toggle the boolean by adding a label with the for attribute set:
 
-```
+<pre><code>
 **&lt;**
 &quot;sidebarShown&quot;
 **&gt;**
@@ -1202,7 +1202,7 @@ Show/Hide the sidebar!
 **&lt;**
 **/label**
 **&gt;</b>
-```
+</code></pre>
 
 <h4>Accessing boolean value with CSS</h4>
 
@@ -1210,10 +1210,10 @@ The normal selector (like .color-red) specifies the default
 properties. They can be overridden by following true / false
 selectors:
 
-```
+<pre><code>
 /&ast; true: &ast;/*
 &lt;
-```
+</code></pre>
 
 > Note that &rbrack;
 >
@@ -1222,7 +1222,7 @@ selectors:
 >
 > Examples for the above HTML structure would be:
 
-```
+<pre><code>
 #sidebarShown:checked ~ #container #sidebar {
   margin-left: 300px;
 }
@@ -1231,7 +1231,7 @@ selectors:
 #darkThemeUsed:checked ~ #footer {
   background: #333;
 }
-```
+</code></pre>
 
 <h4>In action</h4>
 
@@ -1245,19 +1245,19 @@ element by a specific ID in CSS, the &num; prefix is used.
 
 For example, the following HTML div element...
 
-```
+<pre><code>
 <div id="exampleID">
   <p>Example</p>
 </div>
-```
+</code></pre>
 
 ...can be selected by #exampleID in CSS as shown below:
 
-```
+<pre><code>
 #exampleID {
   width: 20px;
 }
-```
+</code></pre>
 
 > <b>Note</b>: The HTML specs do not allow multiple elements with the same ID
 
@@ -1265,9 +1265,9 @@ For example, the following HTML div element...
 
 <h4>HTML</h4>
 
-```
+<pre><code>
 <input type="range"></input>
-```
+</code></pre>
 
 <h4>CSS</h4>
 
@@ -1289,7 +1289,7 @@ its parent.
 
 <h4>HTML:</h4>
 
-```
+<pre><code>
 <div>
   <p>This paragraph is the only child of the div, it will have the color blue</p>
 </div>
@@ -1298,15 +1298,15 @@ its parent.
   <p>This paragraph is one of the two children of the div</p>
   <p>This paragraph is one of the two children of its parent</p>
 </div>
-```
+</code></pre>
 
 <h4>CSS:</h4>
 
-```
+<pre><code>
 p:only-child {
   color: blue;
 }
-```
+</code></pre>
 
 The above example selects the &lt;p&gt; element that is the unique child from its 
 parent, in this case a &lt;div&gt;.
@@ -1344,17 +1344,17 @@ Colors in CSS can be specified by different methods.
 
 <h4>CSS</h4>
 
-```
+<pre><code>
 div {
   background-color: red; /* red */
 }
-```
+</code></pre>
 
 <h4>HTML</h4>
 
-```
+<pre><code>
 <div>This will have a red background</div>
-```
+</code></pre>
 
 <ul>
   <li>The example used above is one of several ways that CSS has to represent
@@ -1375,7 +1375,7 @@ first digit of each pairing). #ff0000 can be shortened to #f00, and
 
 Hex notation is case-insensitive.
 
-```
+<pre><code>
 body {
   background-color: #de1205; /* red */
 }
@@ -1383,7 +1383,7 @@ body {
 .main {
   background-color: #00f; /* blue */
 }
-```
+</code></pre>
 
 <h4>RGB / RGBa</h4>
 
@@ -1396,14 +1396,14 @@ the decimal color values for respectively red, green and blue.
 RGBa allows you to add an additional alpha parameter between 0.0 and
 1.0 to define opacity.
 
-```
+<pre><code>
 header {
   background-color: rgb(0, 0, 0); /* black */
 }
 footer {
   background-color: rgba(0, 0, 0, 0.5); /* black with 50% opacity */
 }
-```
+</code></pre>
 
 <h4>HSL / HSLa</h4>
 >
@@ -1422,7 +1422,7 @@ footer {
 > HSLa allows you to add an additional alpha parameter between 0.0 and
 > 1.0 to define opacity.
 
-```
+</code></pre>
 li a
 {
 <b>background-color</b>
@@ -1457,13 +1457,13 @@ hsla
 ;
 */&ast; green with 30% opacity &ast;/*
 }
-```
+</code></pre>
 
 > <b>Interaction with background-image</b>
 >
 > The following statements are all equivalent:
 
-```
+</code></pre>
 body {
   background: red;
   background-image: url (
@@ -1484,7 +1484,7 @@ body {
   background: redurl (
     partiallytransparentimage.png);
 }
-```
+</code></pre>
 
 > They will all lead to the red color being shown underneath the image,
 > where the parts of the image are transparent, or the image is not
@@ -1492,7 +1492,7 @@ body {
 >
 > Note that the following is not equivalent:
 
-```
+</code></pre>
 body
 {
 <b>background-image</b>
@@ -1507,7 +1507,7 @@ url
 red
 ;
 }
-```
+</code></pre>
 
 > Here, the value of background overrides your background-image.
 >
@@ -10199,67 +10199,67 @@ height="3.7604166666666665in"}
 
 # Chapter 13: Media Queries
 
-+-------------+--------------------------------------------------------+
+|-------------|--------------------------------------------------------|
 | **          | > **Details**                                          |
 | Parameter** |                                                        |
-+=============+========================================================+
+|=============|========================================================|
 | mediatype   | (Optional) This is the type of media. Could be         |
 |             | anything in the range of all to screen.                |
-+-------------+--------------------------------------------------------+
+|-------------|--------------------------------------------------------|
 | not         | (Optional) Doesn&apos;t apply the CSS for this particular  |
 |             | media type and applies for everything else.            |
-+-------------+--------------------------------------------------------+
+|-------------|--------------------------------------------------------|
 | media       | Logic to identify use case for CSS. Options outlined   |
 | feature     | below.                                                 |
-+-------------+--------------------------------------------------------+
+|-------------|--------------------------------------------------------|
 | **Media     | **Details**                                            |
 | Feature**   |                                                        |
-+-------------+--------------------------------------------------------+
+|-------------|--------------------------------------------------------|
 | a           | Describes the aspect ratio of the targeted display     |
 | spect-ratio | area of the output device.                             |
-+-------------+--------------------------------------------------------+
+|-------------|--------------------------------------------------------|
 | color       | Indicates the number of bits per color component of    |
 |             | the output device. If the device is not a color        |
 |             | device, this value is zero.                            |
-+-------------+--------------------------------------------------------+
+|-------------|--------------------------------------------------------|
 | color-index | Indicates the number of entries in the color look-up   |
 |             | table for the output device.                           |
-+-------------+--------------------------------------------------------+
+|-------------|--------------------------------------------------------|
 | grid        | Determines whether the output device is a grid device  |
 |             | or a bitmap device.                                    |
-+-------------+--------------------------------------------------------+
+|-------------|--------------------------------------------------------|
 | height      | The height media feature describes the height of the   |
 |             | output device&apos;s rendering surface.                    |
-+-------------+--------------------------------------------------------+
+|-------------|--------------------------------------------------------|
 | max-width   | CSS will not apply on a screen width wider than        |
 |             | specified.                                             |
-+-------------+--------------------------------------------------------+
+|-------------|--------------------------------------------------------|
 | min-width   | CSS will not apply on a screen width narrower than     |
 |             | specified.                                             |
-+-------------+--------------------------------------------------------+
+|-------------|--------------------------------------------------------|
 | max-height  | CSS will not apply on a screen height taller than      |
 |             | specified.                                             |
-+-------------+--------------------------------------------------------+
+|-------------|--------------------------------------------------------|
 | min-height  | CSS will not apply on a screen height shorter than     |
 |             | specified.                                             |
-+-------------+--------------------------------------------------------+
+|-------------|--------------------------------------------------------|
 | monochrome  | Indicates the number of bits per pixel on a monochrome |
 |             | (greyscale) device.                                    |
-+-------------+--------------------------------------------------------+
+|-------------|--------------------------------------------------------|
 | orientation | CSS will only display if device is using specified     |
 |             | orientation. See remarks for more details.             |
-+-------------+--------------------------------------------------------+
+|-------------|--------------------------------------------------------|
 | resolution  | Indicates the resolution (pixel density) of the output |
 |             | device.                                                |
-+-------------+--------------------------------------------------------+
+|-------------|--------------------------------------------------------|
 | scan        | Describes the scanning process of television output    |
 |             | devices.                                               |
-+-------------+--------------------------------------------------------+
+|-------------|--------------------------------------------------------|
 | width       | The width media feature describes the width of the     |
 |             | rendering surface of the output device (such as the    |
 |             | width of the document window, or the width of the page |
 |             | box on a printer).                                     |
-+-------------+--------------------------------------------------------+
+|-------------|--------------------------------------------------------|
 
 > **Deprecated Features Details**
 >
@@ -13132,11 +13132,11 @@ capitalize
 lowercase
 ;
 }
-```
+</code></pre>
 
 > **HTML**
 
-```
+<pre><code>
 **&lt;**
 **p**
 class
@@ -13176,14 +13176,14 @@ all letters in lowercase
 **&lt;**
 **/p**
 **&gt;**
-```
+</code></pre>
 
 ## Section 15.9: Letter Spacing
 
-```
+<pre><code>
 h2
 {
-```
+</code></pre>
 
 */&ast; adds a 1px space horizontally between each letter;*
 
@@ -13191,20 +13191,20 @@ h2
 
 **letter-spacing**
 
-```
+<pre><code>
 :
 1
 px
 ;
 }
-```
+</code></pre>
 
 > The letter-spacing property is used to specify the space between the
 > characters in a text.
 >
 > ! letter-spacing also supports negative values:
 
-```
+<pre><code>
 p
 {
 **letter-spacing**
@@ -13213,14 +13213,14 @@ p
 px
 ;
 }
-```
+</code></pre>
 
 Resources:
 [[https://developer.mozilla.org/en-US/docs/Web/CSS/letter-spacing]](https://developer.mozilla.org/en-US/docs/Web/CSS/letter-spacing)
 
 ## Section 15.10: Text Indent
 
-```
+<pre><code>
 p
 {
 **text-indent**
@@ -13229,7 +13229,7 @@ p
 px
 ;
 }
-```
+</code></pre>
 
 > The text-indent property specifies how much horizontal space text
 > should be moved before the beginning of the first line of the text
@@ -13248,7 +13248,7 @@ px
 > The text-decoration property is used to set or remove decorations from
 > text.
 
-```
+<pre><code>
 h1
 {
 **text-decoration**
@@ -13277,12 +13277,12 @@ h4
 underline
 ;
 }
-```
+</code></pre>
 
 > text-decoration can be used in combination with text-decoration-style
 > and text-decoration-color as a shorthand property:
 
-```
+<pre><code>
 .title
 {
 **text-decoration**
@@ -13292,11 +13292,11 @@ dotted
 blue
 ;
 }
-```
+</code></pre>
 
 > This is a shorthand version of
 
-```
+<pre><code>
 .title
 {
 **text-decoration-style**
@@ -13312,7 +13312,7 @@ underline
 blue
 ;
 }
-```
+</code></pre>
 
 > It should be noted that the following properties are only supported in
 > Firefox
@@ -13334,7 +13334,7 @@ blue
 >
 > **CSS**
 
-```
+<pre><code>
 .normal
 {
 **word-spacing**
@@ -13358,7 +13358,7 @@ px
 px
 ;
 }
-```
+</code></pre>
 
 > **HTML**
 >
@@ -13399,7 +13399,7 @@ px
 >
 > **CSS:**
 
-```
+<pre><code>
 .smallcaps
 {
 **font-variant**
@@ -13407,11 +13407,11 @@ px
 small-caps
 ;
 }
-```
+</code></pre>
 
 > **HTML:**
 
-```
+<pre><code>
 **&lt;**
 **p**
 class
@@ -13426,7 +13426,7 @@ aNd ExAmpLe
 **&lt;**
 **/p**
 **&gt;**
-```
+</code></pre>
 
 > **Output:**
 
@@ -13452,7 +13452,7 @@ aNd ExAmpLe
 >
 > **HTML**
 
-```
+<pre><code>
 **&lt;**
 **div**
 class
@@ -13472,11 +13472,11 @@ class
 **&lt;**
 **/div**
 **&gt;**
-```
+</code></pre>
 
 > **CSS**
 
-```
+<pre><code>
 .aligner
 {
 **display**
@@ -13501,7 +13501,7 @@ center
 ;
 */&ast;for demo. Use actual width instead.&ast;/*
 }
-```
+</code></pre>
 
 > Here is a
 > [[demo]](http://codepen.io/asim-coder/pen/ZOobqz).
@@ -13519,10 +13519,10 @@ center
 > This centers the elements along the axis specified by flex-direction.
 > I.e., for a
 
-```
+<pre><code>
   **flex-direction**                                   :   row
   **flex-direction**                            :   column
-```
+</code></pre>
 
 > justify-contentcenter horizontal () flexbox, this centers
 > horizontally, and for a vertical flexbox () flexbox, this centers
@@ -13532,7 +13532,7 @@ center
 >
 > All of the below styles are applied onto this simple layout:
 
-```
+<pre><code>
 **&lt;**
 **div**
 id
@@ -13563,14 +13563,14 @@ id
 
 where #container is the flex-box
 .  **justify-content**                            **:**   **center**
-```
+</code></pre>
 
 
 > **Example: on a horizontal flexbox**
 >
 > **CSS:**
 
-```
+<pre><code>
 div
 #container
 {
@@ -13587,7 +13587,7 @@ row
 center
 ;
 }
-```
+</code></pre>
 
 > **Outcome:**
 
@@ -13601,7 +13601,7 @@ center
 >
 > **CSS:**
 
-```
+<pre><code>
 div
 #container
 {
@@ -13618,7 +13618,7 @@ column
 center
 ;
 }
-```
+</code></pre>
 
 > **Outcome:**
 
@@ -13632,7 +13632,7 @@ center
 >
 > **CSS:**
 
-```
+<pre><code>
 div
 #container
 {
@@ -13649,7 +13649,7 @@ row
 center
 ;
 }
-```
+</code></pre>
 
 > **Outcome:**
 
@@ -13663,7 +13663,7 @@ center
 >
 > **CSS:**
 
-```
+<pre><code>
 div
 #container
 {
@@ -13680,7 +13680,7 @@ column
 center
 ;
 }
-```
+</code></pre>
 
 > **Outcome:**
 
@@ -13691,45 +13691,28 @@ height="6.15625in"}
 >
 > **Example: Combination for centering both on horizontal flexbox**
 
+```
 div
-
 #container
-
 {
-
 **display**
-
 :
-
 flex
-
 ;
-
 **flex-direction**
-
 :
-
 row
-
 ;
-
 **justify-content**
-
 :
-
 center
-
 ;
-
 **align-items**
-
 :
-
 center
-
 ;
-
 }
+```
 
 > **Outcome:**
 
@@ -13740,45 +13723,28 @@ height="6.135416666666667in"}
 >
 > **Example: Combination for centering both on vertical flexbox**
 
+```
 div
-
 #container
-
 {
-
 **display**
-
 :
-
 flex
-
 ;
-
 **flex-direction**
-
 :
-
 column
-
 ;
-
 **justify-content**
-
 :
-
 center
-
 ;
-
 **align-items**
-
 :
-
 center
-
 ;
-
 }
+```
 
 > **Outcome:**
 
@@ -13797,490 +13763,137 @@ Here is a [[demo]](https://jsfiddle.net/d6pc5bmd/5/).
 >
 > **HTML:**
 
+```
 **&lt;**
-
 **div**
-
 class
-
 =
-
 &quot;header&quot;
-
 **&gt;**
-
 **&lt;**
-
 **h**
-
 **2**
-
 **&gt;**
-
 Header
-
 **&lt;**
-
 **/h**
-
 **2**
-
 **&gt;**
-
 **&lt;**
-
 **/div**
-
 **&gt;**
-
 **&lt;**
-
 **div**
-
 class
-
 =
-
 &quot;content&quot;
-
 **&gt;**
-
 **&lt;**
-
 **h**
-
 **1**
-
 **&gt;**
-
 Content
-
 **&lt;**
-
 **/h**
-
 **1**
-
 **&gt;**
-
 **&lt;**
-
 **p**
-
 **&gt;**
-
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec
 odio. Praesent libero.
-
 Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum
 imperdiet. Duis sagittis
-
 ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris
 massa. Vestibulum lacinia
-
 arcu eget nulla. Class aptent taciti sociosqu ad litora torquent per
 conubia nostra, per inceptos
-
 himenaeos. Curabitur sodales ligula in libero.
-
 **&lt;**
-
 **/p**
-
 **&gt;**
-
 **&lt;**
-
 **/div**
-
 **&gt;**
-
 **&lt;**
-
 **div**
-
 class
-
 =
-
 &quot;footer&quot;
-
 **&gt;**
-
 **&lt;**
-
 **h**
-
 **4**
-
 **&gt;**
-
 Footer
-
 **&lt;**
-
 **/h**
-
 **4**
-
 **&gt;**
-
 **&lt;**
-
 **/div**
-
 **&gt;**
+```
 
 > **CSS:**
 
-html
-
-,
-
-body
-
-{
-
-**height**
-
-:
-
-100
-
-&percnt;
-
-;
-
+```
+html, body {
+  <b>height</b>: 100&percnt;;
 }
-
-body
-
-{
-
-**display**
-
-:
-
-flex
-
-;
-
-**flex-direction**
-
-:
-
-column
-
-;
-
+body {
+  <b>display</b>: flex;
+  <b>flex-direction</b>: column;
 }
-
-.content
-
-{
-
-*/&ast; Include &apos;0 auto&apos; for best browser compatibility. &ast;/*
-
-**flex**
-
-:
-
-1
-
-0
-
-auto
-
-;
-
+.content {
+/* Include &apos;0 auto&apos; for best browser compatibility. */
+  <b>flex</b>: 10 auto;
 }
-
-.header
-
-,
-
-.footer
-
-{
-
-**background-color**
-
-:
-
-grey
-
-;
-
-**color**
-
-:
-
-white
-
-;
-
-**flex**
-
-:
-
-none
-
-;
-
+.header, .footer {
+  <b>background-color</b>: grey;
+  <b>color</b>: white;
+  <b>flex</b>: none;
 }
+```
 
-## Section 16.3: Optimally fit elements to their container
+<h3 id="ch16-3">Section 16.3: Optimally fit elements to their container</h3>
 
-> One of the nicest features of flexbox is to allow optimally fitting
-> containers to their parent element.
+<p>One of the nicest features of flexbox is to allow optimally fitting
+containers to their parent element.</p>
 
 [[Live demo]](https://jsfiddle.net/6gfogoqk/).
 
 > HTML:
 
-**&lt;**
-
-**div**
-
-class
-
-=
-
-&quot;flex-container&quot;
-
-**&gt;**
-
-**&lt;**
-
-**div**
-
-class
-
-=
-
-&quot;flex-item&quot;
-
-**&gt;**
-
-1
-
-**&lt;**
-
-**/div**
-
-**&gt;**
-
-**&lt;**
-
-**div**
-
-class
-
-=
-
-&quot;flex-item&quot;
-
-**&gt;**
-
-2
-
-**&lt;**
-
-**/div**
-
-**&gt;**
-
-**&lt;**
-
-**div**
-
-class
-
-=
-
-&quot;flex-item&quot;
-
-**&gt;**
-
-3
-
-**&lt;**
-
-**/div**
-
-**&gt;**
-
-**&lt;**
-
-**div**
-
-class
-
-=
-
-&quot;flex-item&quot;
-
-**&gt;**
-
-4
-
-**&lt;**
-
-**/div**
-
-**&gt;**
-
-**&lt;**
-
-**div**
-
-class
-
-=
-
-&quot;flex-item&quot;
-
-**&gt;**
-
-5
-
-**&lt;**
-
-**/div**
-
-**&gt;**
-
-**&lt;**
-
-**/div**
-
-**&gt;**
+```
+&lt;div class = &quot;flex-container&quot;&gt;
+&lt;div class = &quot;flex-item&quot;&gt;1 &lt;/div&gt;
+&lt;div class = &quot;flex-item&quot;&gt;2 &lt;/div&gt;
+&lt;div class = &quot;flex-item&quot;&gt;3 &lt;/div&gt;
+&lt;div class = &quot;flex-item&quot;&gt;4 &lt;/div&gt;
+&lt;div class = &quot;flex-item&quot;&gt;5 &lt;/div&gt;
+&lt;/div
+&gt;
+```
 
 > CSS:
 
+```
 .flex-container
-
 {
-
-**background-color**
-
-:
-
-#000
-
-;
-
-**height**
-
-:
-
-100
-
-&percnt;
-
-;
-
-**display**
-
-:
-
-flex
-
-;
-
-**flex-direction**
-
-:
-
-row
-
-;
-
-**flex-wrap**
-
-:
-
-wrap
-
-;
-
-**justify-content**
-
-:
-
-flex-start
-
-;
-
-**align-content**
-
-:
-
-stretch
-
-;
-
-**align-items**
-
-:
-
-stretch
-
-;
-
+<b>background-color</b>:#000;
+<b>height</b>:100&percnt;; display: flex; flex-direction: row;
+<b>flex-wrap</b>: wrap; justify-content: flex-start; align-content: stretch;
+<b>align-items</b>: stretch;
 }
-
-.flex-item
-
-{
-
-**background-color**
-
-:
-
-#ccf
-
-;
-
-**margin**
-
-:
-
-0.1
-
-em
-
-;
-
-**flex-grow**
-
-:
-
-1
-
-;
-
-**flex-shrink**
-
-:
-
-0
-
-;
-
-**flex-basis**
-
-:
-
-200
-
-px
-
-;
-
-*/&ast; or % could be used to ensure a specific layout &ast;/*
-
+.flex-item {
+  <b>background-color</b>: #ccf;
+  <b>margin</b>:0.1em; <b>flex-grow</b>: 1;
+  <b>flex-shrink</b>:0;
+  <b>flex-basis</b>:200px;
+/* or % could be used to ensure a specific layout */
 }
+```
 
 > **Outcome:**
 >
@@ -14289,7 +13902,7 @@ px
 ![](./images/media/image46.png){width="7.48037510936133in"
 height="3.182736220472441in"}
 
-## Section 16.4: Holy Grail Layout using Flexbox
+<h3 id="ch16-4">Section 16.4: Holy Grail Layout using Flexbox</h3>
 
 > [[Holy Grail
 > layout]](http://alistapart.com/article/holygrail) is a
@@ -14299,371 +13912,197 @@ height="3.182736220472441in"}
 > first in the markup). CSS Flexbox can be used to achieve this with a
 > very simple markup:
 >
-> HTML Markup:
 
+<h4>HTML Markup:</h4>
+
+```
 **&lt;**
-
 **div**
-
 class
-
 =
-
 &quot;container&quot;
-
 **&gt;**
-
 **&lt;**
-
 **header**
-
 class
-
 =
-
 &quot;header&quot;
-
 **&gt;**
-
 Header
-
 **&lt;**
-
 **/header**
-
 **&gt;**
-
 **&lt;**
-
 **div**
-
 class
-
 =
-
 &quot;content-body&quot;
-
 **&gt;**
-
 **&lt;**
-
 **main**
-
 class
-
 =
-
 &quot;content&quot;
-
 **&gt;**
-
 Content
-
 **&lt;**
-
 **/main**
-
 **&gt;**
-
 **&lt;**
-
 **nav**
-
 class
-
 =
-
 &quot;sidenav&quot;
-
 **&gt;**
-
 Nav
-
 **&lt;**
-
 **/nav**
-
 **&gt;**
-
 **&lt;**
-
 **aside**
-
 class
-
 =
-
 &quot;ads&quot;
-
 **&gt;**
-
 Ads
-
 **&lt;**
-
 **/aside**
-
 **&gt;**
-
 **&lt;**
-
 **/div**
-
 **&gt;**
-
-**&lt;**
-
+*&lt;**
 **footer**
-
 class
-
 =
-
 &quot;footer&quot;
-
 **&gt;**
-
 Footer
-
 **&lt;**
-
 **/footer**
-
 **&gt;**
-
 **&lt;**
-
 **/div**
-
 **&gt;**
+```
 
 > CSS:
 
+```
 body
-
 {
-
 **margin**
-
 :
-
 0
-
 ;
-
 **padding**
-
 :
-
 0
-
 ;
-
 }
-
 .container
-
 {
-
 **display**
-
 :
-
 flex
-
 ;
-
 **flex-direction**
-
 :
-
 column
-
 ;
-
 **height**
-
 :
-
 100
-
 vh
-
 ;
-
 }
-
 .header
-
 {
-
 **flex**
-
 :
-
 0
-
 0
-
 50
-
 px
-
 ;
-
 }
-
 .content-body
-
 {
-
 **flex**
-
 :
-
 1
-
 1
-
 auto
-
 ;
-
 **display**
-
 :
-
 flex
-
 ;
-
 **flex-direction**
-
 :
-
 row
-
 ;
-
 }
-
 .content-body
-
 .content
-
 {
-
 **flex**
-
 :
-
 1
-
 1
-
 auto
-
 ;
-
 **overflow**
-
 :
-
 auto
-
 ;
-
 }
-
 .content-body
-
 .sidenav
-
 {
-
 **order**
-
 :
-
 &minus;
-
 1
-
 ;
-
 **flex**
-
 :
-
 0
-
 0
-
 100
-
 px
-
 ;
-
 **overflow**
-
 :
-
 auto
-
 ;
-
 }
-
 .content-body
-
 .ads
-
 {
-
 **flex**
-
 :
-
 0
-
 0
-
 100
-
 px
-
 ;
-
 **overflow**
-
 :
-
 auto
-
 ;
-
 }
-
 .footer
-
 {
-
 **flex**
-
 :
-
 0
-
 0
-
 50
-
 px
-
 ;
-
 }
+```
 
 [[Demo]](https://jsfiddle.net/adityarb88/hek6ms0x/)
 
@@ -14713,133 +14152,72 @@ height="3.3848195538057744in"}
 >
 > CSS
 
+```
 .cards
-
 {
-
 **display**
-
 :
-
 flex
-
 ;
-
 }
-
 .card
-
 {
-
 **border**
-
 :
-
 1
-
 px
-
 solid
-
 #ccc
-
 ;
-
 **margin**
-
 :
-
 10
-
 px
-
 10
-
 px
-
 ;
-
 **padding**
-
 :
-
 0
-
 20
-
 px
-
 ;
-
 }
-
 button
-
 {
-
 **height**
-
 :
-
 40
-
 px
-
 ;
-
 **background**
-
 :
-
 #fff
-
 ;
-
 **padding**
-
 :
-
 0
-
 40
-
 px
-
 ;
-
 **border**
-
 :
-
 1
-
 px
-
 solid
-
 #000
-
 ;
-
 }
-
 p
-
 :
-
 last-child
-
 {
-
 **text-align**
-
 :
-
 center
-
 ;
-
 }
+```
 
 > The layout will change and become like this:
 
@@ -14855,161 +14233,89 @@ height="3.0046391076115486in"}
 > margin-top to auto. This will push the last paragraph to the bottom of
 > the card and achieve the required result.
 >
-> Final CSS:
 
+<h4>Final CSS:</h4>
+
+```
 .cards
-
 {
-
 **display**
-
 :
-
 flex
-
 ;
-
 }
-
 .card
-
 {
-
 **border**
-
 :
-
 1
-
 px
-
 solid
-
 #ccc
-
 ;
-
 **margin**
-
 :
-
 10
-
 px
-
 10
-
 px
-
 ;
-
 **padding**
-
 :
-
 0
-
 20
-
 px
-
 ;
-
 **display**
-
 :
-
 flex
-
 ;
-
 **flex-direction**
-
 :
-
 column
-
 ;
-
 }
-
 button
-
 {
-
 **height**
-
 :
-
 40
-
 px
-
 ;
-
 **background**
-
 :
-
 #fff
-
 ;
-
 **padding**
-
 :
-
 0
-
 40
-
 px
-
 ;
-
 **border**
-
 :
-
 1
-
 px
-
 solid
-
 #000
-
 ;
-
 }
-
 p
-
 :
-
 last-child
-
 {
-
 **text-align**
-
 :
-
 center
-
 ;
-
 **margin-top**
-
 :
-
 auto
-
 ;
-
 }
+```
 
-## Section 16.6: Same height on nested containers
+<h3 id="ch16-6">Section 16.6: Same height on nested containers</h3>
 
 > This code makes sure that all nested containers are always the same
 > height. This is done by assuring that all nested elements are the same
@@ -15019,144 +14325,86 @@ auto
 > This effect is achieved due to the property align-items being set to
 > stretch by default.
 >
-> **HTML**
 
+<h4>HTML</h4>
+
+```
 **&lt;**
-
 **div**
-
 class
-
 =
-
 &quot;container&quot;
-
 **&gt;**
-
 **&lt;**
-
 **div**
-
 style
-
 =
-
 &quot;background-color: red&quot;
-
 **&gt;**
-
 Some
-
 **&lt;**
-
 **br**
-
 **/&gt;**
-
 data
-
 **&lt;**
-
 **br**
-
 **/&gt;**
-
 to make
-
 **&lt;**
-
 **br**
-
 **/&gt;**
-
 a height
-
 **&lt;**
-
 **br**
-
 **/&gt;**
-
 **&lt;**
-
 **/div**
-
 **&gt;**
-
 **&lt;**
-
 **div**
-
 style
-
 =
-
 &quot;background-color: blue&quot;
-
 **&gt;**
-
 Fewer
-
 **&lt;**
-
 **br**
-
 **/&gt;**
-
 lines
-
 **&lt;**
-
 **br**
-
 **/&gt;**
-
 **&lt;**
-
 **/div**
-
 **&gt;**
-
 **&lt;**
-
 **/div**
-
 **&gt;**
+```
 
-> **CSS**
+<h4>CSS</h4>
 
+```
 .container
-
 {
-
 **display**
-
 :
-
 flex
-
 ;
-
 **align-items**
-
 :
-
 stretch
-
 ;
-
 // Default
-
 value
-
 }
+```
 
-Note: [[Does not work on IE versions under
-10]](http://caniuse.com/#search=flexbox)
+Note: [[Does not work on IE versions under 10]](http://caniuse.com/#search=flexbox)
 
-# Chapter 17: Cascading and Specificity
+<h2 id="ch17">Chapter 17: Cascading and Specificity</h2>
 
-## Section 17.1: Calculating Selector Specificity
+<h3 id="ch17-1">Section 17.1: Calculating Selector Specificity</h3>
 
 > Each individual CSS Selector has its own specificity value. Every
 > selector in a sequence increases the sequence&apos;s overall specificity.
@@ -15579,7 +14827,7 @@ li a
 > You can calculate the specificity of your selector
 > [[here]](http://specificity.keegan.st/)
 
-## Section 17.2: The !important declaration
+<h3 id="ch17-2">Section 17.2: The !important declaration</h3>
 
 > The !important declaration is used to override the usual specificity
 > in a style sheet by giving a higher priority to a
@@ -16359,13 +15607,10 @@ BlueViolet #8A2BE2 rgb(138,43,226)
 
 Brown #A52A2A rgb(165,42,42)
 
-+----------------------------------------------------------------+-----+
 |   ---                                                          |     |
-| -------------------------------------------------------------- |     |
 |   BurlyWood                  #DEB887                           |     |
 |                              rgb(222,184,135)                  |     |
 |   ---                                                          |     |
-| ----------------------- ------------------ ------------------- |     |
 |   CadetBlue                  #5F9EA0                           |     |
 |                              rgb(95,158,160)                   |     |
 |                                                                |     |
@@ -16438,14 +15683,8 @@ Brown #A52A2A rgb(165,42,42)
 |                                                                |     |
 |   DarkViolet                 #9400D3            rgb(148,0,211) |     |
 |   ---                                                          |     |
-| -------------------------------------------------------------- |     |
-+================================================================+=====+
-+----------------------------------------------------------------+-----+
 
-+----------------------------------------------------------------+-----+
-|   -----------------------------------------------------------  |     |
 |   DeepPink                   #FF1493 rgb(255,20,147)           |     |
-|   -------------------------- --------------------------------  |     |
 |   DeepSkyBlue                #00BFFF rgb(0,191,255)            |     |
 |                                                                |     |
 |   DimGray                    #696969 rgb(105,105,105)          |     |
@@ -16499,12 +15738,6 @@ Brown #A52A2A rgb(165,42,42)
 |   LemonChiffon               #FFFACD rgb(255,250,205)          |     |
 |                                                                |     |
 |   LightBlue                  #ADD8E6 rgb(173,216,230)          |     |
-|   -----------------------------------------------------------  |     |
-+================================================================+=====+
-+----------------------------------------------------------------+-----+
-
-+----------------------------------------------------------------+-----+
-| +--------------------------+-------------------------------+   |     |
 | | LightCoral #F08080       |                               |   |     |
 | | rgb(240,128,128)         |                               |   |     |
 | |                          |                               |   |     |
@@ -16513,62 +15746,54 @@ Brown #A52A2A rgb(165,42,42)
 | |                          |                               |   |     |
 | | LightGoldenRodYellow     |                               |   |     |
 | | #FAFAD2 rgb(250,250,210) |                               |   |     |
-| +==========================+===============================+   |     |
 | | LightGray                | #D3D3D3 rgb(211,211,211)      |   |     |
-| +--------------------------+-------------------------------+   |     |
 | | LightGrey                | #D3D3D3 rgb(211,211,211)      |   |     |
-| +--------------------------+-------------------------------+   |     |
+| |--------------------------|-------------------------------|   |     |
 | | LightGreen               | #90EE90 rgb(144,238,144)      |   |     |
-| +--------------------------+-------------------------------+   |     |
+| |--------------------------|-------------------------------|   |     |
 | | LightPink                | #FFB6C1 rgb(255,182,193)      |   |     |
-| +--------------------------+-------------------------------+   |     |
+| |--------------------------|-------------------------------|   |     |
 | | LightSalmon              | #FFA07A rgb(255,160,122)      |   |     |
-| +--------------------------+-------------------------------+   |     |
+| |--------------------------|-------------------------------|   |     |
 | | LightSeaGreen            | #20B2AA rgb(32,178,170)       |   |     |
-| +--------------------------+-------------------------------+   |     |
+| |--------------------------|-------------------------------|   |     |
 | | LightSkyBlue             | #87CEFA rgb(135,206,250)      |   |     |
-| +--------------------------+-------------------------------+   |     |
+| |--------------------------|-------------------------------|   |     |
 | | LightSlateGray           | #778899 rgb(119,136,153)      |   |     |
-| +--------------------------+-------------------------------+   |     |
+| |--------------------------|-------------------------------|   |     |
 | | LightSlateGrey           | #778899 rgb(119,136,153)      |   |     |
-| +--------------------------+-------------------------------+   |     |
+| |--------------------------|-------------------------------|   |     |
 | | LightSteelBlue           | #B0C4DE rgb(176,196,222)      |   |     |
-| +--------------------------+-------------------------------+   |     |
+| |--------------------------|-------------------------------|   |     |
 | | LightYellow              | #FFFFE0 rgb(255,255,224)      |   |     |
-| +--------------------------+-------------------------------+   |     |
+| |--------------------------|-------------------------------|   |     |
 | | Lime                     | #00FF00 rgb(0,255,0)          |   |     |
-| +--------------------------+-------------------------------+   |     |
+| |--------------------------|-------------------------------|   |     |
 | | LimeGreen                | #32CD32 rgb(50,205,50)        |   |     |
-| +--------------------------+-------------------------------+   |     |
+| |--------------------------|-------------------------------|   |     |
 | | Linen                    | #FAF0E6 rgb(250,240,230)      |   |     |
-| +--------------------------+-------------------------------+   |     |
+| |--------------------------|-------------------------------|   |     |
 | | Magenta                  | #FF00FF rgb(255,0,255)        |   |     |
-| +--------------------------+-------------------------------+   |     |
+| |--------------------------|-------------------------------|   |     |
 | | Maroon                   | #800000 rgb(128,0,0)          |   |     |
-| +--------------------------+-------------------------------+   |     |
+| |--------------------------|-------------------------------|   |     |
 | | MediumAquaMarine         | #66CDAA rgb(102,205,170)      |   |     |
-| +--------------------------+-------------------------------+   |     |
+| |--------------------------|-------------------------------|   |     |
 | | MediumBlue               | #0000CD rgb(0,0,205)          |   |     |
-| +--------------------------+-------------------------------+   |     |
+| |--------------------------|-------------------------------|   |     |
 | | MediumOrchid             | #BA55D3 rgb(186,85,211)       |   |     |
-| +--------------------------+-------------------------------+   |     |
+| |--------------------------|-------------------------------|   |     |
 | | MediumPurple             | #9370DB rgb(147,112,219)      |   |     |
-| +--------------------------+-------------------------------+   |     |
+| |--------------------------|-------------------------------|   |     |
 | | MediumSeaGreen           | #3CB371 rgb(60,179,113)       |   |     |
-| +--------------------------+-------------------------------+   |     |
+| |--------------------------|-------------------------------|   |     |
 | | MediumSlateBlue          | #7B68EE rgb(123,104,238)      |   |     |
-| +--------------------------+-------------------------------+   |     |
+| |--------------------------|-------------------------------|   |     |
 | | MediumSpringGreen        | #00FA9A rgb(0,250,154)        |   |     |
-| +--------------------------+-------------------------------+   |     |
+| |--------------------------|-------------------------------|   |     |
 | | MediumTurquoise          | #48D1CC rgb(72,209,204)       |   |     |
-| +--------------------------+-------------------------------+   |     |
+| |--------------------------|-------------------------------|   |     |
 | | MediumVioletRed          | #C71585 rgb(199,21,133)       |   |     |
-| +--------------------------+-------------------------------+   |     |
-+================================================================+=====+
-+----------------------------------------------------------------+-----+
-
-+----------------------------------------------------------------+-----+
-|   ---                                                          |     |
 | -------------------------------------------------------------- |     |
 |   MidnightBlue               #191970            rgb(25,25,112) |     |
 |   ---                                                          |     |
@@ -16650,9 +15875,6 @@ Brown #A52A2A rgb(165,42,42)
 |   SaddleBrown                #8B4513                           |     |
 |                              rgb(139,69,19)                    |     |
 |   ---                                                          |     |
-| -------------------------------------------------------------- |     |
-+================================================================+=====+
-+----------------------------------------------------------------+-----+
 
 Salmon #FA8072 rgb(250,128,114)
 
@@ -20220,38 +19442,35 @@ px
 > before the transition effect starts. In this case, the height will
 > start transitioning immediately, whereas the width will wait 1 second.
 
-# Chapter 27: Animations
+<h2 id="ch27">Chapter 27: Animations</h2>
 
-+---------------+------------------------------------------------------+
-| > *           |                                                      |
+| &gt;             |                                                      |
 | *Transition** |                                                      |
-+===============+======================================================+
 | Parameter     | > Details                                            |
-+---------------+------------------------------------------------------+
+|---------------|------------------------------------------------------|
 | property      | > Either the CSS property to transition on, or all,  |
 |               | > which specifies all transition-able properties.    |
-+---------------+------------------------------------------------------+
+|---------------|------------------------------------------------------|
 | duration      | > Transition time, either in seconds or              |
 |               | > milliseconds.                                      |
-+---------------+------------------------------------------------------+
+|---------------|------------------------------------------------------|
 | ti            | > Specifies a function to define how intermediate    |
 | ming-function | > values for properties are computed. Common values  |
 |               | > are ease, linear, and step-end. Check out the      |
 |               | > [[easing function                                  |
 |               | > cheatsheet]](http://easings.net/) for  |
 |               | > more.                                              |
-+---------------+------------------------------------------------------+
+|---------------|------------------------------------------------------|
 | delay         | > Amount of time, in seconds or milliseconds, to     |
 |               | > wait before playing the animation.                 |
-+---------------+------------------------------------------------------+
+|---------------|------------------------------------------------------|
 |               |                                                      |
-+---------------+------------------------------------------------------+
+|---------------|------------------------------------------------------|
 | **            |                                                      |
-| &commat;keyframes** |                                                      |
-+---------------+------------------------------------------------------+
+| &commat;keyframes |                                                      |
 
   -----------------------------------------------------------------------
-  **&lt;percentage**
+  <b>&lt;percentage</b>
   -----------------------------------------------------------------------
 
   -----------------------------------------------------------------------
@@ -24758,22 +23977,20 @@ Uppercase letters (A., B., C., D., &period;..) &ast;/* Non-specific:
 > **list-style**: none; */&ast; No visible list marker &ast;/* **list-style**:
 > inherit; */&ast; Inherits from parent &ast;/*
 
-# Chapter 35: Counters
+<h2 id="ch35">Chapter 35: Counters</h2>
 
-+---------+------------------------------------------------------------+
-| **Para  | > **Details**                                              |
-| meter** |                                                            |
-+=========+============================================================+
+| Para  | &gt; Details                                              |
+| meter |                                                            |
+|---------|------------------------------------------------------------|
 | count   | This is the name of the counter that needs to be created   |
 | er-name | or incremented or printed. It can be any custom name as    |
 |         | the developer wishes.                                      |
-+---------+------------------------------------------------------------+
+|---------|------------------------------------------------------------|
 | integer | This integer is an optional value that when provided next  |
 |         | to the counter name will represent the initial value of    |
 |         | the counter (in counter-set, counter-reset properties) or  |
 |         | the value by which the counter should be incremented (in   |
 |         | counter-increment).                                        |
-+---------+------------------------------------------------------------+
 
   -----------------------------------------------------------------------
   counter-
@@ -29769,16 +28986,14 @@ px
 > background-position property in CSS (with an x and y value) you can
 > easily extract sprites from a sprite sheet using CSS.
 
-# Chapter 44: Clipping and Masking
+<h2 id="ch44">Chapter 44: Clipping and Masking</h2>
 
-+-------------+--------------------------------------------------------+
 | **          | > **Details**                                          |
 | Parameter** |                                                        |
-+=============+========================================================+
+|-------------|--------------------------------------------------------|
 | clip-source | A URL which can point to an inline SVG element (or) an |
 |             | SVG element in an external file that contains the clip |
 |             | path&apos;s definition.                                    |
-+-------------+--------------------------------------------------------+
 
   -----------------------------------------------------------------------
   inset     (),   circle      (),   ellipse       () or     polygon
@@ -33474,7 +32689,7 @@ inline
 > invalid property executes only on the affected browsers. Other
 > browsers will simply ignore the rule.
 
-## Section 55.2: High Contrast Mode in Internet Explorer 10 and greater
+<h3 id="ch55-2">Section 55.2: High Contrast Mode in Internet Explorer 10 and greater</h3>
 
 > In Internet Explorer 10+ and Edge, Microsoft provides the
 > -ms-high-contrast media selector to expose the &quot;High Contrast&quot;
@@ -33660,9 +32875,8 @@ none
 
 }
 
-+-----------------------------+----------------------------------------+
 | **&commat;media** &bsol;&bsol;0             | > screen { }                           |
-+-----------------------------+----------------------------------------+
+|-----------------------------|----------------------------------------|
 
 > Everything between is processed only by I
 
