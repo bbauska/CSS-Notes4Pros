@@ -7814,7 +7814,7 @@ auto
 
 (100% - 80%) / 2 = 10%
 
-## Section 8.5: Example 1:
+<h3 id="ch8-5">Section 8.5: Example 1:</h3>
 
 > It is obvious to assume that the percentage value of margin to
 > margin-left and margin-right would be relative to its parent element.
@@ -8025,9 +8025,9 @@ Overlapping div&lt;/div
 
 &gt;
 
-# Chapter 9: Padding
+<h2 id="ch9">Chapter 9: Padding</h2>
 
-## Section 9.1: Padding Shorthand
+<h3 id="ch9-1">Section 9.1: Padding Shorthand</h3>
 
 > The padding property sets the padding space on all sides of an
 > element. The padding area is the space between the content of the
@@ -8194,7 +8194,7 @@ class
 
 **&gt;**
 
-## Section 9.2: Padding on a given side
+<h3 id="ch9-2">Section 9.2: Padding on a given side</h3>
 
 > The padding property sets the padding space on all sides of an
 > element. The padding area is the space between the content of the
@@ -8242,9 +8242,9 @@ class
 
 **&gt;**
 
-# Chapter 10: Border
+<h2 id="ch10">Chapter 10: Border</h2>
 
-## Section 10.1: border-radius
+<h3 id="ch10-1">Section 10.1: border-radius</h3>
 
 > The border-radius property allows you to change the shape of the basic
 > box model.
@@ -8560,7 +8560,7 @@ px
 
 ;
 
-## Section 10.2: border-style
+<h3 id="ch10-2">Section 10.2: border-style</h3>
 
 > The border-style property sets the style of an element&apos;s border. This
 > property can have from one to four values (for every side of the
@@ -8599,7 +8599,7 @@ dashed
 > (meaning in a conflict, the border would show), and hidden has the
 > highest priority (meaning in a conflict, the border would not show).
 
-## Section 10.3: Multiple Borders
+<h3 id="ch10-3">Section 10.3: Multiple Borders</h3>
 
 > Using outline:
 
@@ -8898,7 +8898,7 @@ height="4.020833333333333in"}
 
 [[http://jsfiddle.net/MadalinaTn/bvqpcohm/2/]](http://jsfiddle.net/MadalinaTn/bvqpcohm/2/)
 
-## Section 10.4: border (shorthands)
+<h3 id="ch10-4">Section 10.4: border (shorthands)</h3>
 
 > In most cases you want to define several border properties
 > (border-width, border-style and border-color) for all sides of an
@@ -8966,7 +8966,7 @@ double
 
 ;
 
-## Section 10.5: border-collapse
+<h3 id="ch10-5">Section 10.5: border-collapse</h3>
 
   **display**                         :     table
 
@@ -9004,7 +9004,7 @@ px
 
 > Also see Tables - border-collapse documentation entry
 
-## Section 10.6: border-image
+<h3 id="ch10-6">Section 10.6: border-image</h3>
 
 > With the border-image property you have the possibility to set an
 > image to be used instead of normal border styles.
@@ -9032,127 +9032,75 @@ px
 > the image will be **stretched**. The middle part of the image defaults
 > to be transparent.
 
-## Section 10.7: Creating a multi-colored border using borderimage
+<h3 id="ch10-7">Section 10.7: Creating a multi-colored border using borderimage</h3>
 
-> **CSS**
+<h4>CSS</h4>
 
+```
 .bordered
-
 {
-
 **border-image**
-
 :
-
 linear-gradient
-
 (
-
 to
-
 right
-
 ,
-
 red
-
 20
-
 &percnt;
-
 ,
-
 green
-
 20
-
 &percnt;
-
 ,
-
 green
-
 40
-
 &percnt;
-
 ,
-
 blue
-
 40
-
 &percnt;
-
 ,
-
 blue
-
 60
-
 &percnt;
-
 ,
-
 maroon
-
 60
-
 &percnt;
-
 ,
-
 maroon
-
 80
-
 &percnt;
-
 ,
-
 chocolate
-
 80
-
 &percnt;
-
 )
-
 ;
-
 */&ast; gradient with required colors &ast;/*
-
 **border-image-slice**
-
 :
-
 1
-
 ;
-
 }
+```
 
-> **HTML**
+<h4>HTML</h4>
 
+```
 **&lt;**
-
 **div**
-
 class
-
 =
-
 &apos;bordered&apos;
-
 **&gt;**
-
 Border on all sides
-
 **&lt;**
-
 **/div**
-
 **&gt;**
+```
 
 > The above example would produce a border that comprises of 5 different
 > colors. The colors are defined through a linear-gradient (you can find
@@ -9222,7 +9170,7 @@ px
 > A box&apos;s backgrounds, but not its border-image, are clipped to the
 > appropriate curve (as determined by 'background-clip').
 
-## Section 10.8: border-&lbrack;left&vertbar;right&vertbar;top&vertbar;bottom&rbrack;
+<h3 id="ch10-8">Section 10.8: border-&lbrack;left&vertbar;right&vertbar;top&vertbar;bottom&rbrack;</h3>
 
   border-           &lbrack;   left      &vertbar;   right        &vertbar;   top     &vertbar;   bottom
 
@@ -9255,7 +9203,7 @@ black
 
 }
 
-# Chapter 11: Outlines
+<h2 id="ch11">Chapter 11: Outlines</h2>
 
 **Parameter Details**
 
@@ -9279,7 +9227,7 @@ black
 
   hidden       hidden outline
 
-## Section 11.1: Overview
+<h3 id="ch11-1">Section 11.1: Overview</h3>
 
 > Outline is a line that goes around the element, outside of the border.
 > In contrast to border, outlines do not take any space in the box
@@ -9316,7 +9264,7 @@ black
 
 ;
 
-## Section 11.2: outline-style
+<h3 id="ch11-2">Section 11.2: outline-style</h3>
 
 > The outline-style property is used to set the style of the outline of
 > an element.
@@ -9633,7 +9581,7 @@ An outset outline
 
 **&gt;**
 
-# Chapter 12: Overflow
+<h2 id="ch12">Chapter 12: Overflow</h2>
 
 **Overflow Value Details**
 
@@ -9648,7 +9596,7 @@ An outset outline
 
   inherit     Inherit&apos;s the parent element&apos;s value for this property
 
-## Section 12.1: overflow-wrap
+<h3 id="ch12-1">Section 12.1: overflow-wrap</h3>
 
 > overflow-wrap tells a browser that it can break a line of text inside
 > a targeted element onto multiple lines in an otherwise unbreakable
@@ -9715,7 +9663,7 @@ break-word
 
 }
 
-> **HTML**
+<h4>HTML</h4>
 
 **&lt;**
 
@@ -9846,14 +9794,14 @@ height="4.271902887139108in"}
 > Will split a word into multiple lines, if necessary inherit Inherits
 > the parent element&apos;s value for this property
 
-## Section 12.2: overflow-x and overflow-y
+<h3 id="ch12-2">Section 12.2: overflow-x and overflow-y</h3>
 
 > These two properties work in a similar fashion as the overflow
 > property and accept the same values. The overflow-x parameter works
 > only on the x or left-to-right axis. The overflow-y works on the y or
 > top-to-bottom axis.
 >
-> **HTML**
+<h4>HTML</h4>
 
 **&lt;**
 
@@ -9955,7 +9903,7 @@ hidden
 
 }
 
-## Section 12.3: overflow: scroll
+<h3 id="ch12-3">Section 12.3: overflow: scroll</h3>
 
 > **HTML**
 
@@ -10023,9 +9971,9 @@ height="1.1875in"}
 > problems with scrollbars appearing and disappearing in a dynamic
 > environment. Printers may print overflowing content.
 
-## Section 12.4: overflow: visible
+<h3 id="ch12-4">Section 12.4: overflow: visible</h3>
 
-> **HTML**
+<h4>HTML</h4>
 
 **&lt;**
 
@@ -10086,13 +10034,13 @@ height="2.4270833333333335in"}
 > Content is not clipped and will be rendered outside the content box if
 > it exceeds its container size.
 
-## Section 12.5: Block Formatting Context Created with Overflow
+<h3 id="ch12-5">Section 12.5: Block Formatting Context Created with Overflow</h3>
 
 > Using the overflow property with a value different to visible will
 > create a new **block formatting context**. This is useful for aligning
 > a block element next to a floated element.
 >
-> **CSS**
+<h4>CSS</h4>
 
 img
 
@@ -10197,12 +10145,11 @@ height="3.7604166666666665in"}
 > This example shows how paragraphs within a div with the overflow
 > property set will interact with a floated image.
 
-# Chapter 13: Media Queries
+<h2 id="ch12">Chapter 13: Media Queries</h2>
 
-|-------------|--------------------------------------------------------|
 | **          | > **Details**                                          |
+|-------------|--------------------------------------------------------|
 | Parameter** |                                                        |
-|=============|========================================================|
 | mediatype   | (Optional) This is the type of media. Could be         |
 |             | anything in the range of all to screen.                |
 |-------------|--------------------------------------------------------|
