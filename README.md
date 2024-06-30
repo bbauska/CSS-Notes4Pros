@@ -629,7 +629,7 @@ but with lower specificity.</p>
 
 A descendant combinator, represented by at least one space character
 (), selects elements that are a descendant of the defined element.
-This combinator selects <b>all** descendants of the element (from child
+This combinator selects <b>all</b> descendants of the element (from child
 elements on down).
 
 <pre><code>div p {
@@ -653,7 +653,7 @@ both descendants of the <b>&lt;div&gt;</b>.</p>
 <h4>Child Combinator:selector &gt; selector</h4>
 
 <p>The child (&gt;) combinator is used to select elements that are
-<b>children</b>, or <b>direct descendants**, of the specified element.</p>
+<b>children</b>, or <b>direct descendants</b>, of the specified element.</p>
 
 <pre><code>div &gt; p {
   <b>color</b>: <span style='color: red;'>red</span>;
@@ -708,7 +708,7 @@ whether or not they are immediately adjacent.</p>
 <h3 id="ch4-4">Section 4.4: Pseudo-classes</h3>
 
 > [[Pseudo-classes]](https://www.w3.org/TR/selectors/#pseudo-classes)
-> are **keywords** which allow selection based on information that lies
+> are <b>keywords</b> which allow selection based on information that lies
 > outside of the document tree or that cannot be expressed by other
 > selectors or combinators. This information can be associated to a
 > certain state
@@ -731,18 +731,18 @@ whether or not they are immediately adjacent.</p>
 > pseudo-class). Examples include whether or not a link has been
 > followed (:), etc.
 >
-> **Syntax**
+> <b>Syntax</b>
 
 selector:pseudo
 &minus;
 class
 {
 property:
-**VALUE**
+<b>VALUE</b>
 ;
 }
-> **List of pseudo-classes:**
-**Name Description**
+> <b>List of pseudo-classes:</b>
+<b>Name Description</b>
 
 [[:active](https://www.w3.org/TR/css3-selectors/#the-user-action-pseudo-classes-hover-act)]
 Applies to any element being activated (i.e. clicked) by the user.
@@ -838,10 +838,10 @@ Represents any element that is the first child element of its parent.
 > It allows the page to give a feedback that the value currently defined
 > using the element is inside the range limits.
 
-  **&lt;input**
+  <b>&lt;input</b>
 
 
-> Applies to **&gt;** elements whose values are invalid according to
+> Applies to <b>&gt;</b> elements whose values are invalid according to
 
   type
 
@@ -849,10 +849,10 @@ Represents any element that is the first child element of its parent.
 > [[:invalid]](http://tympanus.net/codrops/css_reference/invalid/)
 > the type specified in the = attribute.
 
-  **&lt;body**
+  <b>&lt;body</b>
 
 
-> Applies to any element who&apos;s wrapping **&gt;** element has a properly
+> Applies to any element who&apos;s wrapping <b>&gt;</b> element has a properly
 
   lang
 
@@ -880,7 +880,7 @@ Represents any element that is the last child element of its parent.
 [[:link](https://www.w3.org/TR/css3-selectors/#the-link-pseudo-classes-link-and-visited)]
 Applies to any links which haven&apos;t been visited by the user.
 
-> Applies to all elements which **do not** match the value passed to
+> Applies to all elements which <b>do not</b> match the value passed to
 
   not      &lpar;p&rpar; or :          not      (   .class-name
   [[not]](https://www.w3.org/wiki/CSS/Selectors/pseudo-classes/:not)
@@ -941,16 +941,16 @@ that does not have the required attribute set on it. This allows
 
   [[placeholder-shown]](https://developer.mozilla.org/en-US/docs/Web/CSS/:placeholder-shown)
 
-> [[:]](https://developer.mozilla.org/en-US/docs/Web/CSS/:placeholder-shown)**Experimental.**
+> [[:]](https://developer.mozilla.org/en-US/docs/Web/CSS/:placeholder-shown)<b>Experimental.</b>
 > Applies to any form element currently displaying placeholder text.
 
 [[:read-only](https://developer.mozilla.org/en-US/docs/Web/CSS/:read-only)]
 Applies to any element which is not editable by the user.
 
-  **&lt;input**
+  <b>&lt;input&gt;</b>
 
 [[:read-write](https://developer.mozilla.org/en-US/docs/Web/CSS/:read-write)]
-Applies to any element that is editable by a user, such as **&gt;**
+Applies to any element that is editable by a user, such as <b>&gt;</b>
 elements.
 
 > Used in conjunction with the &commat;page rule, this selects all the right
@@ -988,7 +988,7 @@ Applies to any links which have has been visited by the user.
 > an+b-1 siblings before it in the document tree, for a given positive
 > <b>or zero value</b> for n&quot; - [MDN :nth-child]
 
-| **pseudo-selector**          | <b>1 2 3 4 5 6 7 8 9 10</b>           |
+| <b>pseudo-selector</b>          | <b>1 2 3 4 5 6 7 8 9 10</b>           |
 |------------------------------|---------------------------------------|
 | :first-child                 | ✔ |
 | nth-child (3)                |     ✔ |
@@ -1111,7 +1111,7 @@ limits.[[&lbrack;1&rbrack;]](https://developer.mozilla.org/en-US/docs/Web/CSS/:i
 
 A.  The syntax is presented above.
 
-The following selector matches all **&gt;** elements in an HTML document
+The following selector matches all <b>&gt;</b> elements in an HTML document
 that are not disabled and don&apos;t have the class .example:
 
 <h4>HTML:</h4>
@@ -1184,10 +1184,10 @@ To the very beginning of your document, add as much booleans as you
 want with a unique id and the hidden attribute set:
 
 <pre><code>
-**&lt;**
-**&lt;**
-**/div**
-**&gt;**
+<b>&lt;</b>
+<b>&lt;</b>
+<b>/div</b>
+<b>&gt;</b>
 </code></pre>
 
 <h4>Change the boolean&apos;s value</h4>
@@ -1195,13 +1195,13 @@ want with a unique id and the hidden attribute set:
 You can toggle the boolean by adding a label with the for attribute set:
 
 <pre><code>
-**&lt;**
+<b>&lt;</b>
 &quot;sidebarShown&quot;
-**&gt;**
+<b>&gt;</b>
 Show/Hide the sidebar!
-**&lt;**
-**/label**
-**&gt;</b>
+<b>&lt;</b>
+<b>/label</b>
+<b>&gt;</b>
 </code></pre>
 
 <h4>Accessing boolean value with CSS</h4>
@@ -1947,12 +1947,12 @@ url
 > related properties:
 
 +--------------+--------------------------------------------------+----+
-| <b>Value</b>    | <b>Description</b>                                  | *  |
-|              |                                                  | *C |
+| <b>Value</b>    | <b>Description</b>                                  |   |
+|              |                                                  | C |
 |              |                                                  | SS |
 |              |                                                  | Ve |
 |              |                                                  | r. |
-|              |                                                  | ** |
+|              |                                                  |  |
 +==============+==================================================+====+
 | back         | Background image to use                          | 1+ |
 | ground-image |                                                  |    |
@@ -2446,7 +2446,7 @@ div
 
 {
 
-**margin**
+<b>margin</b>
 
 :
 
@@ -2464,7 +2464,7 @@ ex
 
 ;
 
-**float**
+<b>float</b>
 
 :
 
@@ -2482,7 +2482,7 @@ div
 
 {
 
-**clear**
+<b>clear</b>
 
 :
 
@@ -2490,7 +2490,7 @@ both
 
 ;
 
-**border-top**
+<b>border-top</b>
 
 :
 
@@ -2504,7 +2504,7 @@ silver
 
 ;
 
-**padding-top**
+<b>padding-top</b>
 
 :
 
@@ -2528,7 +2528,7 @@ after
 
 {
 
-**background-color**
+<b>background-color</b>
 
 :
 
@@ -2536,7 +2536,7 @@ after
 
 ;
 
-**color**
+<b>color</b>
 
 :
 
@@ -2544,7 +2544,7 @@ after
 
 ;
 
-**margin**
+<b>margin</b>
 
 :
 
@@ -2554,7 +2554,7 @@ ex
 
 ;
 
-**padding**
+<b>padding</b>
 
 :
 
@@ -2564,7 +2564,7 @@ ex
 
 ;
 
-**opacity**
+<b>opacity</b>
 
 :
 
@@ -2572,7 +2572,7 @@ ex
 
 ;
 
-**display**
+<b>display</b>
 
 :
 
@@ -2580,7 +2580,7 @@ block
 
 ;
 
-**width**
+<b>width</b>
 
 :
 
@@ -2590,7 +2590,7 @@ ex
 
 ;
 
-**font-size**
+<b>font-size</b>
 
 :
 
@@ -2600,7 +2600,7 @@ em
 
 ;
 
-**content**
+<b>content</b>
 
 :
 
@@ -2616,15 +2616,15 @@ class
 
 }
 
-**&lt;**
+<b>&lt;</b>
 
-**div**
+<b>div</b>
 
-**&gt;**
+<b>&gt;</b>
 
-**&lt;**
+<b>&lt;</b>
 
-**div**
+<b>div</b>
 
 class
 
@@ -2632,60 +2632,60 @@ class
 
 &quot;contain&quot;
 
-**&gt;**
+<b>&gt;</b>
 
-**/div**
+<b>/div</b>
 
-**&lt;**
+<b>&lt;</b>
 
-**&gt;**
+<b>&gt;</b>
 
-**&lt;**
+<b>&lt;</b>
 
-**p**
+<b>p</b>
 
-**&gt;**
+<b>&gt;</b>
 
 Note the grey background. The image does not cover the whole region, but
 it&apos;s fully
 
-**&lt;**
+<b>&lt;</b>
 
-**em**
+<b>em</b>
 
-**&gt;**
+<b>&gt;</b>
 
 contained
 
-**&lt;**
+<b>&lt;</b>
 
-**/em**
+<b>/em</b>
 
-**&gt;**
+<b>&gt;</b>
 
 .
 
-**/p**
+<b>/p</b>
 
-**&lt;**
+<b>&lt;</b>
 
-**&gt;**
+<b>&gt;</b>
 
-**&lt;**
+<b>&lt;</b>
 
-**/div**
+<b>/div</b>
 
-**&gt;**
+<b>&gt;</b>
 
-**&lt;**
+<b>&lt;</b>
 
-**div**
+<b>div</b>
 
-**&gt;**
+<b>&gt;</b>
 
-**&lt;**
+<b>&lt;</b>
 
-**div**
+<b>div</b>
 
 class
 
@@ -2693,19 +2693,19 @@ class
 
 &quot;cover&quot;
 
-**&gt;**
+<b>&gt;</b>
 
-**/div**
+<b>/div</b>
 
-**&lt;**
+<b>&lt;</b>
 
-**&gt;**
+<b>&gt;</b>
 
-**&lt;**
+<b>&lt;</b>
 
-**p**
+<b>p</b>
 
-**&gt;**
+<b>&gt;</b>
 
 Note the ducks/geese at the bottom of the image. Most of the water is
 cut, as well as a part
@@ -2715,27 +2715,27 @@ you see any background color;
 
 the image
 
-**&lt;**
+<b>&lt;</b>
 
-**em**
+<b>em</b>
 
-**&gt;**
+<b>&gt;</b>
 
 covers
 
-**&lt;**
+<b>&lt;</b>
 
-**/em**
+<b>/em</b>
 
-**&gt;**
+<b>&gt;</b>
 
 all of the
 
-**&lt;**
+<b>&lt;</b>
 
-**code**
+<b>code</b>
 
-**&gt;**
+<b>&gt;</b>
 
 &lt;
 
@@ -2743,25 +2743,25 @@ div
 
 &gt;
 
-**&lt;**
+<b>&lt;</b>
 
-**/code**
+<b>/code</b>
 
-**&gt;**
+<b>&gt;</b>
 
 .
 
-**&lt;**
+<b>&lt;</b>
 
-**/p**
+<b>/p</b>
 
-**&gt;**
+<b>&gt;</b>
 
-**&lt;**
+<b>&lt;</b>
 
-**/div**
+<b>/div</b>
 
-**&gt;**
+<b>&gt;</b>
 
 ## Section 5.6: Background Position
 
@@ -2774,7 +2774,7 @@ div
 
 {
 
-**background-image**
+<b>background-image</b>
 
 :
 
@@ -2788,7 +2788,7 @@ url
 
 ;
 
-**background-position**
+<b>background-position</b>
 
 :
 
@@ -2804,10 +2804,10 @@ url
 
 }
 
-> The position is set using an **X** and **Y** co-ordinate and be set
+> The position is set using an <b>X</b> and <b>Y</b> co-ordinate and be set
 > using any of the units used within CSS.
 
-**Unit Description**
+<b>Unit Description</b>
 
 > A percentage for the horizontal offset is relative to *(width of
 > background positioning area - width of background image)*.
@@ -2822,14 +2822,14 @@ url
 >
 > Units in CSS can be specified by different methods (see here).
 >
-> **Longhand Background Position Properties**
+> <b>Longhand Background Position Properties</b>
 >
 > In addition to the shorthand property above, one can also use the
 > longhand background properties backgroundposition-x and
 > background-position-y. These allow you to control the x or y positions
 > separately.
 >
-> **NOTE:** This is supported in all browsers except Firefox (versions
+> <b>NOTE:</b> This is supported in all browsers except Firefox (versions
 > 31-48)
 > [[2]](http://caniuse.com/#search=background-position-x).
 > Firefox 49, to be released September 2016, *will* support these
@@ -2851,13 +2851,13 @@ url
 > The position is relative to the border box content-box - The position
 > is relative to the content box initial inherit
 >
-> **CSS**
+> <b>CSS</b>
 
 .example
 
 {
 
-**width**
+<b>width</b>
 
 :
 
@@ -2867,7 +2867,7 @@ px
 
 ;
 
-**border**
+<b>border</b>
 
 :
 
@@ -2881,7 +2881,7 @@ black
 
 ;
 
-**padding**
+<b>padding</b>
 
 :
 
@@ -2891,7 +2891,7 @@ px
 
 ;
 
-**background**
+<b>background</b>
 
 :
 
@@ -2905,7 +2905,7 @@ url
 
 ;
 
-**background-repeat**
+<b>background-repeat</b>
 
 :
 
@@ -2925,7 +2925,7 @@ no-repeat
 
 {
 
-**background-origin**
+<b>background-origin</b>
 
 :
 
@@ -2939,7 +2939,7 @@ border-box
 
 {
 
-**background-origin**
+<b>background-origin</b>
 
 :
 
@@ -2949,30 +2949,30 @@ content-box
 
 }
 
-> **HTML**
+> <b>HTML</b>
 
-**&lt;**
+<b>&lt;</b>
 
-**p**
+<b>p</b>
 
-**&gt;**
+<b>&gt;</b>
 
 No background-origin (padding-box is default):
 
-**&lt;**
+<b>&lt;</b>
 
-**/p**
+<b>/p</b>
 
-**&gt;**
+<b>&gt;</b>
 
-> **&lt;div** class=&quot;example example1&quot;**&gt;**
+> <b>&lt;div</b> class=&quot;example example1&quot;<b>&gt;</b>
 >
-> **&lt;h2&gt;**Lorem Ipsum Dolor**&lt;/h2&gt;** **&lt;p&gt;**Lorem ipsum dolor sit
+> <b>&lt;h2&gt;</b>Lorem Ipsum Dolor<b>&lt;/h2&gt;</b> <b>&lt;p&gt;</b>Lorem ipsum dolor sit
 > amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod
-> tincidunt ut laoreet dolore magna aliquam erat volutpat.**&lt;/p&gt;**
-> **&lt;p&gt;**Ut wisi enim ad minim veniam, quis nostrud exerci tation
+> tincidunt ut laoreet dolore magna aliquam erat volutpat.<b>&lt;/p&gt;</b>
+> <b>&lt;p&gt;</b>Ut wisi enim ad minim veniam, quis nostrud exerci tation
 > ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo
-> consequat.**&lt;/p&gt; &lt;/div&gt;**
+> consequat.<b>&lt;/p&gt; &lt;/div&gt;</b>
 >
 > **&lt;p&gt;**background-origin: border-box:**&lt;/p&gt;**
 >
@@ -3008,209 +3008,112 @@ height="6.0841666666666665in"}
 
 > In CSS3, we can stack multiple background in the same element.
 
+```
 #mydiv
-
 {
-
 **background-image**
-
 :
-
 url
-
 (
-
 img_1.png
-
 )
-
 ,
-
 */&ast; top image &ast;/*
-
 url
-
 (
-
 img_2.png
-
 )
-
 ,
-
 */&ast; middle image &ast;/*
-
 url
-
 (
-
 img_3.png
-
 )
-
 ;
-
 */&ast; bottom image &ast;/*
-
 **background-position**
-
 :
-
 right
-
 bottom
-
 ,
-
 left
-
 top
-
 ,
-
 right
-
 top
-
 ;
-
 **background-repeat**
-
 :
-
 no-repeat
-
 ,
-
 repeat
-
 ,
-
 no-repeat
-
 ;
-
 }
-
 > Images will be stacked atop one another with the first background on
 > top and the last background in the back. img_1 will be on top, the
 > img_2 and img_3 is on bottom.
 >
 > We can also use background shorthand property for this:
-
 #mydiv
-
 {
-
 **background**
-
 :
-
 url
-
 (
-
 img_1.png
-
 )
-
 right
-
 bottom
-
 no-repeat
-
 ,
-
 url
-
 (
-
 img_2.png
-
 )
-
 left
-
 top
-
 repeat
-
 ,
-
 url
-
 (
-
 img_3.png
-
 )
-
 right
-
 top
-
 no-repeat
-
 ;
-
 }
-
 We can also stack images and gradients:
-
 #mydiv
-
 {
-
 **background**
-
 :
-
 url
-
 (
-
 *image.png*
-
 )
-
 right
-
 bottom
-
 no-repeat
-
 ,
-
 linear-gradient
-
 (
-
 to
-
 bottom
-
 ,
-
 #fff
-
 0
-
 &percnt;
-
 ,
-
 #000
-
 100
-
 &percnt;
-
 )
-
 ;
-
 }
+```
 
 [Dem]
 
@@ -3221,36 +3124,22 @@ bottom
 > The background-attachment property sets whether a background image is
 > fixed or scrolls with the rest of the page.
 
+```
 body
-
 {
-
 **background-image**
-
 :
-
 url
-
 (
-
 &apos;img.jpg&apos;
-
 )
-
 ;
-
 **background-attachment**
-
 :
-
 fixed
-
 ;
-
 }
-
 **Value Description**
-
 > scroll The background scrolls along with the element. This is default.
 > fixed The background is fixed with regard to the viewport. local The
 > background scrolls along with the element&apos;s contents. initial Sets
@@ -3258,107 +3147,61 @@ fixed
 > from its parent element.
 >
 > **Examples**
-
 ***background-attachment: scroll***
-
 > The default behaviour, when the body is scrolled the background
 > scrolls with it:
-
 body
-
 {
-
 **background-image**
-
 :
-
 url
-
 (
-
 &apos;image.jpg&apos;
-
 )
-
 ;
-
 **background-attachment**
-
 :
-
 scroll
-
 ;
-
 }
-
 ***background-attachment: fixed***
-
 > The background image will be fixed and will not move when the body is
 > scrolled:
-
 body
-
 {
-
 **background-image**
-
 :
-
 url
-
 (
-
 &apos;image.jpg&apos;
-
 )
-
 ;
-
 **background-attachment**
-
 :
-
 fixed
-
 ;
-
 }
-
 ***background-attachment: local***
-
 > The background image of the div will scroll when the contents of the
 > div is scrolled.
-
 div
-
 {
-
 **background-image**
-
 :
-
 url
-
 (
-
 &apos;image.jpg&apos;
-
 )
-
 ;
-
 **background-attachment**
-
 :
-
 local
-
 ;
-
 }
+```
 
-## Section 5.10: Background Clip
+
+<h3 id="ch5-10">Section 5.10: Background Clip</h3>
 
 > Definition and Usage: The background-clip property specifies the
 > painting area of the background.
@@ -3375,325 +3218,180 @@ local
 >
 > inherit applies the setting of the parent to the selected element.
 >
-> **CSS**
 
+<h4>CSS</h4>
+
+```
 .example
-
 {
-
 **width**
-
 :
-
 300
-
 px
-
 ;
-
 **border**
-
 :
-
 20
-
 px
-
 solid
-
 black
-
 ;
-
 **padding**
-
 :
-
 50
-
 px
-
 ;
-
 **background**
-
 :
-
 url
-
 (
-
 *https://static.pexels.com/photos/6440/magazines-desk-work-workspace-medium.jpg*
-
 )
-
 ;
-
 **background-repeat**
-
 :
-
 no-repeat
-
 ;
-
 }
-
 .example1
-
 {
-
 }
-
 .example2
-
 {
-
 **background-origin**
-
 :
-
 border-box
-
 ;
-
 }
-
 .example3
 
 {
-
 **background-origin**
-
 :
-
 content-box
-
 ;
-
 }
+```
 
-> **HTML**
+<h4>HTML</h4>
 
+```
 **&lt;**
-
 **p**
-
 **&gt;**
-
 No background-origin (padding-box is default):
-
 **&lt;**
-
 **/p**
-
 **&gt;**
-
 **&lt;**
-
 **div**
-
 class
-
 =
-
 &quot;example example1&quot;
-
 **&gt;**
-
 **&lt;**
-
 **h**
-
 **2**
-
 **&gt;**
-
 Lorem Ipsum Dolor
-
 **&lt;**
-
 **/h**
-
 **2**
-
 **&gt;**
-
 **&lt;**
-
 **p**
-
 **&gt;**
-
 Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
 nonummy nibh euismod
-
 tincidunt ut laoreet dolore magna aliquam erat volutpat.
-
 **&lt;**
-
 **/p**
-
 **&gt;**
-
 **&lt;**
-
 **p**
-
 **&gt;**
-
 Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper
 suscipit lobortis nisl ut
-
 aliquip ex ea commodo consequat.
-
 **&lt;**
-
 **/p**
-
 **&gt;**
-
 **&lt;**
-
 **/div**
-
 **&gt;**
-
 **&lt;**
-
 **p**
-
 **&gt;**
-
 background-origin: border-box:
-
 **&lt;**
-
 **/p**
-
 **&gt;**
-
 **&lt;**
-
 **div**
-
 class
-
 =
-
 &quot;example example2&quot;
-
 **&gt;**
-
 **&lt;**
-
 **h**
-
 **2**
-
 **&gt;**
-
 Lorem Ipsum Dolor
-
 **&lt;**
-
 **/h**
-
 **2**
-
 **&gt;**
-
 **&lt;**
-
 **p**
-
 **&gt;**
-
 Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
 nonummy nibh euismod
-
 tincidunt ut laoreet dolore magna aliquam erat volutpat.
-
 **&lt;**
-
 **/p**
-
 **&gt;**
-
 **&lt;**
-
 **p**
-
 **&gt;**
-
 Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper
 suscipit lobortis nisl ut
-
 aliquip ex ea commodo consequat.
-
 **&lt;**
-
 **/p**
-
 **&gt;**
-
 **&lt;**
-
 **/div**
-
 **&gt;**
-
 **&lt;**
-
 **p**
-
 **&gt;**
-
 background-origin: content-box:
-
 **&lt;**
-
 **/p**
-
 **&gt;**
-
 **&lt;**
-
 **div**
-
 class
-
 =
-
 &quot;example example3&quot;
-
 **&gt;**
-
 **&lt;**
-
 **h**
-
 **2**
-
 **&gt;**
-
 Lorem Ipsum Dolor
-
 **&lt;**
-
 **/h**
-
 **2**
-
 **&gt;**
-
 > **&lt;p&gt;**Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed
 > diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam
 > erat volutpat.**&lt;/p&gt;** **&lt;p&gt;**Ut wisi enim ad minim veniam, quis
 > nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex
 > ea commodo consequat.**&lt;/p&gt; &lt;/div&gt;**
+```
 
-## Section 5.11: Background Repeat
+<h3 id="ch5-11">Section 5.11: Background Repeat</h3>
 
 > The background-repeat property sets if/how a background image will be
 > repeated.
@@ -3701,156 +3399,90 @@ Lorem Ipsum Dolor
 > By default, a background-image is repeated both vertically and
 > horizontally.
 
+```
 div
-
 {
-
 **background-image**
-
 :
-
 url
-
 (
-
 &quot;img.jpg&quot;
-
 )
-
 ;
-
 **background-repeat**
-
 :
-
 repeat-y
-
 ;
-
 }
-
   **background-repeat**: repeat-y
+```
 
 > Here&apos;s how a looks like:
 
 ![](./images/media/image14.jpg){width="7.48037510936133in"
 height="4.302722003499563in"}
 
-## Section 5.12: background-blend-mode Property
+<h3 id="ch5-12">Section 5.12: background-blend-mode Property</h3>
 
+```
 .my-div
-
 {
-
 **width**
-
 :
-
 300
-
 px
-
 ;
-
 **height**
-
 :
-
 200
-
 px
-
 ;
-
 **background-size**
-
 :
-
 100
-
 &percnt;
-
 ;
-
 **background-repeat**
-
 :
-
 no-repeat
-
 ;
-
 **background-image**
-
 :
-
 linear-gradient
-
 (
-
 to
-
 right
-
 ,
-
 black
-
 0
-
 &percnt;
-
 ,
-
 white
-
 100
-
 &percnt;
-
 )
-
 ,
-
 url
-
 (
-
 &apos;https://static.pexels.com/photos/54624/strawberry-fruit-red-sweet-54624-medium.jpeg&apos;
-
 )
-
 ;
-
 **background-blend-mode**
-
 :
-
 saturation
-
 ;
-
 }
-
 **&lt;**
-
 **div**
-
 class
-
 =
-
 &quot;my-div&quot;
-
 **&gt;**
-
 Lorem ipsum
-
 **&lt;**
-
 **/div**
-
 **&gt;**
+```
 
 See result here:
 [[https://jsfiddle.net/MadalinaTn/y69d28Lb/]](https://jsfiddle.net/MadalinaTn/y69d28Lb/)
@@ -3859,7 +3491,7 @@ See result here:
 > overlay &vertbar; darken &vertbar; lighten &vertbar; color-dodge &vertbar; saturation &vertbar; color &vertbar;
 > luminosity;
 
-## Section 5.13: Background Color with Opacity
+<h3 id="ch5-13">Section 5.13: Background Color with Opacity</h3>
 
 > If you set opacity on an element it will affect all its child
 > elements. To set an opacity just on the background of an element you
@@ -3868,277 +3500,160 @@ See result here:
 
 */&ast; Fallback for web browsers that don&apos;t support RGBa &ast;/*
 
+```
 **background-color**
-
 :
-
 rgb
-
 (
-
 0
-
 ,
-
 0
-
 ,
-
 0
-
 )
-
 ;
-
 */&ast; RGBa with 0.6 opacity &ast;/*
-
 **background-color**
-
 :
-
 rgba
-
 (
-
 0
-
 ,
-
 0
-
 ,
-
 0
-
 ,
-
 0.6
-
 )
-
 ;
-
 */&ast; For IE 5.5 - 7&ast;/*
-
 **filter**
-
 :
-
 progid
-
 :
-
 DXImageTransform
-
 .Microsoft
-
 .gradient
-
 (
-
 startColorstr
-
 =
-
 #99000000
-
 ,
-
 endColorstr
-
 =
-
 #99000000
-
 )
-
 ;
-
 */&ast; For IE 8&ast;/*
-
 &minus;
-
 ms-filter
-
 :
-
 &quot;progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000,
-
 endColorstr=#99000000)&quot;
-
 ;
+```
 
-# Chapter 6: Centering
+<h2 id="ch6">Chapter 6: Centering</h2>
 
-## Section 6.1: Using Flexbox
+<h3 id="ch6-1">Section 6.1: Using Flexbox</h3>
 
-> **HTML:**
+<h4>HTML:</h4>
 
+```
 **&lt;**
-
 **div**
-
 class
-
 =
-
 &quot;container&quot;
-
 **&gt;**
-
 **&lt;**
-
 **img**
-
 src
-
 =
-
 &quot;http://lorempixel.com/400/200&quot;
-
 **/&gt;**
-
 **&lt;**
-
 **/div**
-
 **&gt;**
+```
 
-> **CSS:**
+<h4>CSS:</h4>
 
+```
 html
-
 ,
-
 body
-
 ,
-
 .container
-
 {
-
 **height**
-
 :
-
 100
-
 &percnt;
-
 ;
-
 }
-
 .container
-
 {
-
 **display**
-
 :
-
 flex
-
 ;
-
 **justify-content**
-
 :
-
 center
-
 ;
-
 */&ast; horizontal center &ast;/*
-
 }
-
 img
-
 {
-
 **align-self**
-
 :
-
 center
-
 ;
-
 */&ast; vertical center &ast;/*
-
 }
+```
 
-[[View Result]](https://jsfiddle.net/aLu05kjy/1/) **HTML:**
+[[View Result]](https://jsfiddle.net/aLu05kjy/1/) 
 
+<h4>HTML:</h4>
+
+```
 **&lt;**
-
 **img**
-
 src
-
 =
-
 &quot;http://lorempixel.com/400/200&quot;
-
 **/&gt;**
-
 > **CSS:**
-
 html
-
 ,
-
 body
-
 {
-
 **height**
-
 :
-
 100
-
 &percnt;
-
 ;
-
 }
-
 body
-
 {
-
 **display**
-
 :
-
 flex
-
 ;
-
 **justify-content**
-
 :
-
 center
-
 ;
-
 */&ast; horizontal center &ast;/*
-
 **align-items**
-
 :
-
 center
-
 ;
-
 */&ast; vertical center &ast;/*
-
 }
+```
 
 [[View Result]](https://jsfiddle.net/ttp0bzfm/1/)
 
@@ -4164,7 +3679,7 @@ center
 > For a more detailed look at flexbox browser support, see [[this
 > answer]](http://stackoverflow.com/a/35137869/3597276).
 
-## Section 6.2: Using CSS transform
+<h3 id="ch6-2">Section 6.2: Using CSS transform</h3>
 
 > CSS transforms are based on the size of the elements so if you don&apos;t
 > know how tall or wide your element is, you can position it absolutely
@@ -4176,116 +3691,69 @@ center
 > [[this answer in
 > SO]](http://stackoverflow.com/a/32329785/1385678) for a
 > workaround.
->
-> **HTML**
 
+<h4>HTML</h4>
+
+```
 **&lt;**
-
 **div**
-
 class
-
 =
-
 &quot;container&quot;
-
 **&gt;**
-
 **&lt;**
-
 **div**
-
 class
-
 =
-
 &quot;element&quot;
-
 **&gt;**
-
 **&lt;**
-
 **/div**
-
 **&gt;**
-
 **&lt;**
-
 **/div**
-
 **&gt;**
+```
 
-> **CSS**
+<h4>CSS</h4>
 
+```
 .container
-
 {
-
 **position**
-
 :
-
 relative
-
 ;
-
 }
-
 .element
-
 {
-
 **position**
-
 :
-
 absolute
-
 ;
-
 **top**
-
 :
-
 50
-
 &percnt;
-
 ;
-
 **left**
-
 :
-
 50
-
 &percnt;
-
 ;
-
 **transform**
-
 :
-
 translate
-
 (
-
 -50
-
 &percnt;
-
 ,
-
 -50
-
 &percnt;
-
 )
-
 ;
-
 }
+```
 
 [[View example in
 JSFiddle]](https://jsfiddle.net/webtiki/rz3p3ufs/)
@@ -4334,276 +3802,152 @@ JSFiddle]](https://jsfiddle.net/webtiki/rz3p3ufs/)
 > [[fiddle]](https://jsfiddle.net/4xxmxca0/) for more
 > information.
 
-## Section 6.3: Using margin: 0 auto;
+<h3 id="ch6-3">Section 6.3: Using margin: 0 auto;</h3>
 
 | **margin**: 0                         | > auto;                      |
 
 > Objects can be centered by using if they are block elements and have a
 > defined width.
 >
-> **HTML**
+<h4>HTML</h4>
 
+```
 **&lt;**
-
 **div**
-
 class
-
 =
-
 &quot;containerDiv&quot;
-
 **&gt;**
-
 **&lt;**
-
 **div**
-
 id
-
 =
-
 &quot;centeredDiv&quot;
-
 **&gt;**
-
 **&lt;**
-
 **/div**
-
 **&gt;**
-
 **&lt;**
-
 **/div**
-
 **&gt;**
-
 **&lt;**
-
 **div**
-
 class
-
 =
-
 &quot;containerDiv&quot;
-
 **&gt;**
-
 **&lt;**
-
 **p**
-
 id
-
 =
-
 &quot;centeredParagraph&quot;
-
 **&gt;**
-
 This is a centered paragraph.
-
 **&lt;**
-
 **/p**
-
 **&gt;**
-
 **&lt;**
-
 **/div**
-
 **&gt;**
-
 **&lt;**
-
 **div**
-
 class
-
 =
-
 &quot;containerDiv&quot;
-
 **&gt;**
-
 **&lt;**
-
 **img**
-
 id
-
 =
-
 &quot;centeredImage&quot;
-
 src
-
 =
-
 &quot;https://i.kinja-img.com/gawker-media/image/upload/s&minus;-c7Q9b4Eh&minus;-/c_scale,fl_progressive,q_80,w&lowbar;
-
 800
-
 /qqyvc3bkpyl3mfhr8all.jpg&quot;
-
 **/&gt;**
-
 **&lt;**
-
 **/div**
-
 **&gt;**
+```
 
-> **CSS**
+<h4>CSS</h4>
 
+```
 .containerDiv
-
 {
-
 **width**
-
 :
-
 100
-
 &percnt;
-
 ;
-
 **height**
-
 :
-
 100
-
 px
-
 ;
-
 **padding-bottom**
-
 :
-
 40
-
 px
-
 ;
-
 }
-
 #centeredDiv
-
 {
-
 **margin**
-
 :
-
 0
-
 auto
-
 ;
-
 **width**
-
 :
-
 200
-
 px
-
 ;
-
 **height**
-
 :
-
 100
-
 px
-
 ;
-
 **border**
-
 :
-
 1
-
 px
-
 solid
-
 #000
-
 ;
-
 }
-
 #centeredParagraph
-
 {
-
 **width**
-
 :
-
 200
-
 px
-
 ;
-
 **margin**
-
 :
-
 0
-
 auto
-
 ;
-
 }
-
 #centeredImage
-
 {
-
 **display**
-
 :
-
 block
-
 ;
-
 **width**
-
 :
-
 200
-
 px
-
 ;
-
 **margin**
-
 :
-
 0
-
 auto
-
 ;
-
 }
+```
 
 > Result:
 
@@ -4613,7 +3957,7 @@ height="4.120708661417323in"}
 JSFiddle example: [[Centering objects with margin: 0
 auto;]](https://jsfiddle.net/xf1ze3v9/)
 
-## Section 6.4: Using text-align
+<h3 id="ch6-4">Section 6.4: Using text-align</h3>
 
   **text-align**
 
@@ -4622,37 +3966,30 @@ auto;]](https://jsfiddle.net/xf1ze3v9/)
 >
 > center for this purpose:
 >
-> **HTML**
 
+<h4>HTML</h4>
+
+```
 **&lt;**
-
 **p**
-
 **&gt;**
-
 Lorem ipsum
-
 **&lt;**
-
 **/p**
-
 **&gt;**
+```
 
-> **CSS**
+<h4>CSS</h4>
 
+```
 p
-
 {
-
 **text-align**
-
 :
-
 center
-
 ;
-
 }
+```
 
 > *This does not work for centering entire block elements*. text-align
 > controls only alignment of inline content like text in its parent
@@ -4660,7 +3997,7 @@ center
 >
 > See more about text-align in Typography section.
 
-## Section 6.5: Using position: absolute
+<h3 id="ch6-5">Section 6.5: Using position: absolute</h3>
 
 > *Working in old browsers (IE &gt;= 8)*
 >
@@ -32709,7 +32046,7 @@ black-on-white
 > black when high contrast mode is active *and* it is in black-on-white
 > mode.
 
-**&commat;media**
+<b>&commat;media</b>
 
 screen and
 
@@ -32731,7 +32068,7 @@ white-on-black
 
 {
 
-**background**
+<b>background</b>
 
 :
 
@@ -32739,7 +32076,7 @@ white-on-black
 
 ;
 
-**color**
+<b>color</b>
 
 :
 
@@ -32755,7 +32092,7 @@ white-on-black
 > white-on-black state only, and inverts the header colors to a black
 > background with white text.
 >
-> **More Information:**
+> <b>More Information:</b>
 
 <a href="https://msdn.microsoft.com/en-us/library/windows/apps/hh465764.aspx">Microsoft Documentation</a>
 on -ms-high-contrast
@@ -32771,7 +32108,7 @@ on -ms-high-contrast
 
 &ast;
 
-**display**
+<b>display</b>
 
 :
 
@@ -32791,12 +32128,12 @@ none
 
 ## Section 55.4: Internet Explorer 8 only
 
-  **&commat;media** &bsol;&bsol;                 0 screen { }
+  <b>&commat;media</b> &bsol;&bsol;                 0 screen { }
 
 
 > To target Internet Explorer 8, wrap your selectors inside :
 
-**&commat;media**
+<b>&commat;media</b>
 
 &bsol;&bsol;
 
@@ -32810,7 +32147,7 @@ screen
 
 {
 
-**display**
+<b>display</b>
 
 :
 
@@ -32822,7 +32159,7 @@ none
 
 }
 
-| **&commat;media** &bsol;&bsol;0             | > screen { }                           |
+| <b>&commat;media</b> &bsol;&bsol;0             | > screen { }                           |
 |-----------------------------|----------------------------------------|
 
 > Everything between is processed only by I
@@ -32835,7 +32172,7 @@ none
 > calculate the style and layout, which is a bad thing when you need to
 > animate at 60fps.
 >
-> **DON&apos;T**
+> <b>DON&apos;T</b>
 
 Animate with
 
@@ -32851,7 +32188,7 @@ trigger layout.
 
 {
 
-**left**
+<b>left</b>
 
 :
 
@@ -32859,7 +32196,7 @@ trigger layout.
 
 ;
 
-**top**
+<b>top</b>
 
 :
 
@@ -32867,7 +32204,7 @@ trigger layout.
 
 ;
 
-**transition**
+<b>transition</b>
 
 :
 
@@ -32887,7 +32224,7 @@ s
 
 ;
 
-**position**
+<b>position</b>
 
 :
 
@@ -32895,7 +32232,7 @@ absolute
 
 ;
 
-**width**
+<b>width</b>
 
 :
 
@@ -32905,7 +32242,7 @@ px
 
 ;
 
-**height**
+<b>height</b>
 
 :
 
@@ -32915,7 +32252,7 @@ px
 
 ;
 
-**background-color**
+<b>background-color</b>
 
 :
 
@@ -32931,7 +32268,7 @@ gray
 
 {
 
-**left**
+<b>left</b>
 
 :
 
@@ -32941,7 +32278,7 @@ px
 
 ;
 
-**top**
+<b>top</b>
 
 :
 
@@ -32953,28 +32290,28 @@ px
 
 }
 
-**[Dem]**
+<b>[Dem]</b>
 
-[**[o]**](https://jsfiddle.net/trungdq88/gmpzxLyq/)
+[<b>[o]</b>](https://jsfiddle.net/trungdq88/gmpzxLyq/)
 
 took
 
-**11.7**
+<b>11.7</b>
 
-**ms**
+<b>ms</b>
 
 for rendering,
 
-**9.8**
+<b>9.8</b>
 
-**ms**
+<b>ms</b>
 
 for painting
 
 ![](./images/media/image267.jpg){width="7.48037510936133in"
 height="7.517167541557305in"}
 
-> **DO**
+> <b>DO</b>
 
 Animate with
 
@@ -32986,7 +32323,7 @@ with the same animation.
 
 {
 
-**left**
+<b>left</b>
 
 :
 
@@ -32994,7 +32331,7 @@ with the same animation.
 
 ;
 
-**top**
+<b>top</b>
 
 :
 
@@ -33002,7 +32339,7 @@ with the same animation.
 
 ;
 
-**position**
+<b>position</b>
 
 :
 
@@ -33010,7 +32347,7 @@ absolute
 
 ;
 
-**width**
+<b>width</b>
 
 :
 
@@ -33020,7 +32357,7 @@ px
 
 ;
 
-**height**
+<b>height</b>
 
 :
 
@@ -33030,7 +32367,7 @@ px
 
 ;
 
-**background-color**
+<b>background-color</b>
 
 :
 
@@ -33038,7 +32375,7 @@ gray
 
 ;
 
-**transition**
+<b>transition</b>
 
 :
 
@@ -33050,7 +32387,7 @@ s
 
 ;
 
-**transform**
+<b>transform</b>
 
 :
 
@@ -33080,7 +32417,7 @@ translate3d
 
 {
 
-**transform**
+<b>transform</b>
 
 :
 
@@ -33108,8 +32445,8 @@ px
 
 }
 
-> [**[Demo]**](https://jsfiddle.net/trungdq88/Logdo0rn/)
-> same animation, took **1.3ms** for rendering, **2.0ms** for painting.
+> [<b>[Demo]</b>](https://jsfiddle.net/trungdq88/Logdo0rn/)
+> same animation, took <b>1.3ms</b> for rendering, <b>2.0ms</b> for painting.
 
 ![](./images/media/image268.jpg)
 <!-- width 6/2" -->
