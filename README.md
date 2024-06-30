@@ -448,17 +448,17 @@ using the presence of a given attribute or attribute value.</p>
 
 | Selector(1)     | Matched element            | Selects elements...                |
 |-----------------|:--------------------------:|------------------------------------|
-| [attr]          | &tl;div attr&gt;                 | With attribute attr                |
-| [attr='val']    | &tl;div attr="val"&gt;           | Where attribute attr has value val |
-| [attr~='val']   | &tl;div attr="val val2 val3"&gt; | Where val appears in the           |
+| [attr]          | &lt;div attr&gt;                 | With attribute attr                |
+| [attr='val']    | &lt;div attr="val"&gt;           | Where attribute attr has value val |
+| [attr~='val']   | &lt;div attr="val val2 val3"&gt; | Where val appears in the           |
 |                 |                            | whitespace-separated list of attr  |
-| [attr^='val']   | &tl;div attr="val1 val2"&gt;     | Where attr's value begins with val |
-| [attr$='val']   | &tl;div attr="sth aval"&gt;      | Where attr's value ends with val   |
-| [attr='val']    | &tl;div attr="somevalhere"&gt;   | Where attr contains val anywhere   |
-| [attr|='val']   | &tl;div attr="val-sth etc"&gt;   | Where attr's value is exactly val, |
+| [attr^='val']   | &lt;div attr="val1 val2"&gt;     | Where attr's value begins with val |
+| [attr$='val']   | &lt;div attr="sth aval"&gt;      | Where attr's value ends with val   |
+| [attr='val']    | &lt;div attr="somevalhere"&gt;   | Where attr contains val anywhere   |
+| [attr|='val']   | &lt;div attr="val-sth etc"&gt;   | Where attr's value is exactly val, |
 |                 |                            | or starts with val and immediately |
 |                 |                            | followed by - (U+002D) |
-| [attr|='val' i] | &tl;div attr="val"&gt;           | Where attr has val, |
+| [attr|='val' i] | &lt;div attr="val"&gt;           | Where attr has val, |
 |                 |                            | ignoring val's letter casing. |
 |                 |                            | followed by - (U+002D) |
 
@@ -501,11 +501,11 @@ using the presence of a given attribute or attribute value.</p>
 
 <a href="http://jsbin.com/waxoked/1/edit?html,css,output">Live Demo on JSBin</a>
 
-```
-[attribute="value"]
-```
-Selects elements with the given attribute and value where the given
-attribute contains the given value anywhere (as a substring).
+<pre><code>[attribute="value"]</code></pre>
+
+<p>Selects elements with the given attribute and value where the given
+attribute contains the given value anywhere (as a substring).</p>
+
 <pre><code>[class = "foo"] {
   color: red;
 }
@@ -518,83 +518,67 @@ attribute contains the given value anywhere (as a substring).
 
 <a href="http://jsbin.com/dazige/1/edit?html,css,output">Live Demo on JSBin</a>
 
-```
-[attribute~="value"]
-```
+<pre><code>[attribute~="value"]</pre></code>
 
-Selects elements with the given attribute and value where the given
-value appears in a whitespace-separated list.
+<p>Selects elements with the given attribute and value where the given
+value appears in a whitespace-separated list.</p>
 
-```
-[class~="color-red"] {
+<pre><code>[class~="color-red"] {
   color: red;
 }
 
-<div class="color-red foo-bar the-div">This will be red</div>
-<div class="color-blue" foo-bar the-div">This will NOT be red</div>
-```
+&lt;div class="color-red foo-bar the-div"&gt;This will be red&lt;/div&gt;
+&lt;div class="color-blue" foo-bar the-div"&gt;This will NOT be red&lt;/div&gt;</code></pre>
 
 <a href="http://jsbin.com/posuhim/1/edit?html,css,output">Live Demo on JSBin</a>
 
-```
-[attribute^="value"]
-```
+<pre><code>[attribute^="value"]</code></pre>
 
-Selects elements with the given attribute and value where the given
-attribute begins with the value.
+<p>Selects elements with the given attribute and value where the given
+attribute begins with the value.</p>
 
-```
-[class^="foo-"] {
+<pre><code>[class^="foo-"] {
   color: red;
   }
 
-<div class="foobar-file">This will be red</div>
-<div class="foobar-file">This will be red</div>
-<div class="foobar-input">This will NOT be red</div>
-```
+&lt;div class="foobar-file"&gt;This will be red&lt;/div&gt;
+&lt;div class="foobar-file"&gt;This will be red&lt;/div&gt;
+&lt;div class="foobar-input"&gt;This will NOT be red&lt;/div&gt;</code></pre>
 
 <a href="http://jsbin.com/yowihi/1/edit?html,css,output">Live Demo on JSBin</a>
 
-```
-[attribute$="value"]
-```
+<pre><code>[attribute$="value"]</code></pre>
 
-Selects elements with the given attribute and value where the given
-attribute ends with the given value.
+<p>Selects elements with the given attribute and value where the given
+attribute ends with the given value.</p>
 
-```
-[class$="file"] {
+<pre><code>[class$="file"] {
   color: red;
 }
-<div class="foobar-file">This will be red</div>
-<div class="foobar-file">This will be red</div>
-<div class="foobar-input">This will NOT be red</div>
-```
+&lt;div class="foobar-file"&gt;This will be red&lt;/div&gt;
+&lt;div class="foobar-file"&gt;This will be red&lt;/div&gt;
+&lt;div class="foobar-input"&gt;This will NOT be red&lt;/div&gt;</code></pre>
 
 <a href="http://jsbin.com/yowihi/2/edit?html,css,output">Live Demo on JSBin</a>
 
-```
-[attribute|="value"]
-```
+<pre><code>[attribute|="value"]</code></pre>
 
 Selects elements with a given attribute and value where the
 attribute&apos;s value is exactly the given value or is exactly the given
 value followed by - (U+002D)
 
-```
-[lang|="EN"] {
+<pre><code>[lang|="EN"] {
   color: red;
   }
-<div lang="EN-us">This will be red</div>
-<div lang="EN-gb">This will be red</div>
-<div lang="PT-pt">This will NOT be red</div>
-```
+&lt;div lang="EN-us">This will be red&lt;/div&gt;
+&lt;div lang="EN-gb">This will be red&lt;/div&gt;
+&lt;div lang="PT-pt"&gt;This will NOT be red&lt;/div&gt;</code></pre>
 
 <a href="http://jsbin.com/yowihi/3/edit?html,css,output">Live Demo on JSBin</a>
 
-Selects elements with a given attribute and value where the
+<p>Selects elements with a given attribute and value where the
 attribute&apos;s value can be represented as Value, VALUE, vAlUe or any
-other case-insensitive possibility.
+other case-insensitive possibility.</p>
 
 ```
 [lang|="EN"] {
@@ -608,6 +592,7 @@ other case-insensitive possibility.
 <a href="http://jsbin.com/yowihi/4/edit?html,css,output">Live Demo on JSBin</a>
 
 <h4>Specificity of attribute selectors</h4>
+
 <p>0-1-0</p>
 
 <p>Same as class selector and pseudoclass.</p>
