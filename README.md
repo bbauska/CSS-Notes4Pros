@@ -79,7 +79,7 @@ users will see a flash of unstyled content</a>.
 <h4>Example</h4>
 <h4>hello-world.html</h4>
 
-```
+<pre><code>
 <! DOCTYPE html>
 <html>
   <head>
@@ -91,7 +91,7 @@ users will see a flash of unstyled content</a>.
     <p>I ♥ CSS</p>
   </body>
 </html>
-```
+</code></pre>
 
 <h4>style.css</h4>
 
