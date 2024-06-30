@@ -3,7 +3,7 @@ title: |
   CSS Notes for Professionals
   by somebody, somewhere
 author: "bbauska"
-date last editted: "6/17/2024 Mon 12+pm"
+date last editted: "6/30/2024 Sun 12+pm"
 output: 
   markdown:
     with some style
@@ -3224,52 +3224,22 @@ local
 ```
 .example
 {
-**width**
-:
-300
-px
-;
-**border**
-:
-20
-px
-solid
-black
-;
-**padding**
-:
-50
-px
-;
-**background**
-:
-url
+**width**:300px;
+**border**:20px solid black;
+**padding**:50px;
+**background**:url
 (
 *https://static.pexels.com/photos/6440/magazines-desk-work-workspace-medium.jpg*
-)
-;
-**background-repeat**
-:
-no-repeat
-;
+);
+**background-repeat**: no-repeat;
 }
-.example1
-{
+.example1 {
 }
-.example2
-{
-**background-origin**
-:
-border-box
-;
+.example2 {
+**background-origin**: border-box;
 }
-.example3
-
-{
-**background-origin**
-:
-content-box
-;
+.example3 {
+**background-origin**: content-box;
 }
 ```
 
@@ -3297,98 +3267,96 @@ Lorem Ipsum Dolor
 **&lt;**
 **/h**
 **2**
-**&gt;**
-**&lt;**
-**p**
-**&gt;**
+<b>&gt;</b>
+<b>&lt;</b>
+<b>p</b>
+<b>&gt;</b>
 Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
 nonummy nibh euismod
 tincidunt ut laoreet dolore magna aliquam erat volutpat.
-**&lt;**
-**/p**
-**&gt;**
-**&lt;**
-**p**
-**&gt;**
+<b>&lt;</b>
+<b>/p</b>
+<b>&gt;</b>
+<b>&lt;</b>
+<b>p</b>
+<b>&gt;</b>
 Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper
 suscipit lobortis nisl ut
 aliquip ex ea commodo consequat.
-**&lt;**
-**/p**
-**&gt;**
-**&lt;**
-**/div**
-**&gt;**
-**&lt;**
-**p**
-**&gt;**
+<b>&lt;</b>
+<b>/p</b>
+<b>&gt;</b>
+<b>&lt;</b>
+<b>/div</b>
+<b>&gt;</b>
+<b>&lt;</b>
+<b>p</b>
+<b>&gt;</b>
 background-origin: border-box:
-**&lt;**
-**/p**
-**&gt;**
-**&lt;**
-**div**
-class
-=
-&quot;example example2&quot;
-**&gt;**
-**&lt;**
-**h**
-**2**
-**&gt;**
+<b>&lt;</b>
+<b>/p</b>
+<b>&gt;</b>
+<b>&lt;</b>
+<b>div</b>
+class = &quot;example example2&quot;
+<b>&gt;</b>
+<b>&lt;</b>
+<b>h</b>
+<b>2</b>
+<b>&gt;</b>
 Lorem Ipsum Dolor
-**&lt;**
-**/h**
-**2**
-**&gt;**
-**&lt;**
-**p**
-**&gt;**
+<b>&lt;</b>
+<b>/h</b>
+<b>2</b>
+<b>&gt;</b>
+<b>&lt;</b>
+<b>p</b>
+<b>&gt;</b>
 Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
 nonummy nibh euismod
 tincidunt ut laoreet dolore magna aliquam erat volutpat.
-**&lt;**
-**/p**
-**&gt;**
-**&lt;**
-**p**
-**&gt;**
+<b>&lt;</b>
+<b>/p</b>
+<b>&gt;</b>
+<b>&lt;</b>
+<b>p</b>
+<b>&gt;</b>
 Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper
 suscipit lobortis nisl ut
 aliquip ex ea commodo consequat.
-**&lt;**
-**/p**
-**&gt;**
-**&lt;**
-**/div**
-**&gt;**
-**&lt;**
-**p**
-**&gt;**
+<b>&lt;</b>
+<b>/p</b>
+<b>&gt;</b>
+<b>&lt;</b>
+<b>/div</b>
+<b>&gt;</b>
+<b>&lt;</b>
+<b>p</b>
+<b>&gt;</b>
 background-origin: content-box:
-**&lt;**
-**/p**
-**&gt;**
-**&lt;**
-**div**
+<b>&lt;</b>
+<b>/p</b>
+<b>&gt;</b>
+<b>&lt;</b>
+<b>div</b>
 class
 =
 &quot;example example3&quot;
-**&gt;**
-**&lt;**
-**h**
-**2**
-**&gt;**
+<b>&gt;</b>
+<b>&lt;</b>
+<b>h</b>
+<b>2</b>
+<b>&gt;</b>
 Lorem Ipsum Dolor
-**&lt;**
-**/h**
-**2**
-**&gt;**
-> **&lt;p&gt;**Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed
-> diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam
-> erat volutpat.**&lt;/p&gt;** **&lt;p&gt;**Ut wisi enim ad minim veniam, quis
-> nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex
-> ea commodo consequat.**&lt;/p&gt; &lt;/div&gt;**
+<b>&lt;</b>
+<b>/h</b>
+<b>2</b>
+<b>&gt;</b>
+> <b>&lt;p&gt;</b>There once was a man fron Sash. His balls were made of glass
+> When he rubbed them together, he made stormy weather.
+> And lightning struck out of his ass.<b>&lt;/p&gt;</b> <b>&lt;p&gt;</b>And more goes here, as
+> well. It beats Latin. I don't know Latin so better for me
+> the end.<b>&lt;/p&gt; &lt;/div&gt;</b>
 ```
 
 <h3 id="ch5-11">Section 5.11: Background Repeat</h3>
@@ -3400,26 +3368,18 @@ Lorem Ipsum Dolor
 > horizontally.
 
 ```
-div
-{
-**background-image**
-:
-url
-(
+div {
+<b>background-image</b>: url (
 &quot;img.jpg&quot;
-)
-;
-**background-repeat**
-:
-repeat-y
-;
+);
+<b>background-repeat</b>: repeat-y;
 }
-  **background-repeat**: repeat-y
+<b>background-repeat</b>: repeat-y
 ```
 
 > Here&apos;s how a looks like:
 
-![](./images/media/image14.jpg){width="7.48037510936133in"
+![](./images/media/image014.jpg){width="7.48037510936133in"
 height="4.302722003499563in"}
 
 <h3 id="ch5-12">Section 5.12: background-blend-mode Property</h3>
@@ -3427,61 +3387,31 @@ height="4.302722003499563in"}
 ```
 .my-div
 {
-**width**
-:
-300
-px
-;
-**height**
-:
-200
-px
-;
-**background-size**
-:
-100
-&percnt;
-;
-**background-repeat**
-:
-no-repeat
-;
-**background-image**
-:
-linear-gradient
+<b>width</b>:300px;
+<b>height</b>:200px;
+<b>background-size</b>:100&percnt;;
+<b>background-repeat</b>:no-repeat;
+<b>background-image</b>:linear-gradient
 (
-to
-right
-,
-black
-0
-&percnt;
-,
-white
-100
-&percnt;
-)
-,
+to right, black 0&percnt;
+,white 100&percnt;
+),
 url
 (
 &apos;https://static.pexels.com/photos/54624/strawberry-fruit-red-sweet-54624-medium.jpeg&apos;
-)
-;
-**background-blend-mode**
-:
-saturation
-;
+);
+<b>background-blend-mode</b>:saturation;
 }
-**&lt;**
-**div**
+<b>&lt;</b>
+<b>div</b>
 class
 =
 &quot;my-div&quot;
-**&gt;**
+<b>&gt;</b>
 Lorem ipsum
-**&lt;**
-**/div**
-**&gt;**
+<b>&lt;</b>
+<b>/div</b>
+<b>&gt;</b>
 ```
 
 See result here:
@@ -3501,56 +3431,24 @@ See result here:
 */&ast; Fallback for web browsers that don&apos;t support RGBa &ast;/*
 
 ```
-**background-color**
-:
-rgb
+<b>background-color</b>:rgb (
+  0,0,0
+  );
+/* RGBa with 0.6 opacity */
+<b>background-color</b>:rgba (
+  0,0,0,0.6
+);
+/* For IE 5.5 - 7 */
+<b>filter</b>: progid: DXImageTransform.Microsoft.gradient
 (
-0
-,
-0
-,
-0
-)
-;
-*/&ast; RGBa with 0.6 opacity &ast;/*
-**background-color**
-:
-rgba
-(
-0
-,
-0
-,
-0
-,
-0.6
-)
-;
-*/&ast; For IE 5.5 - 7&ast;/*
-**filter**
-:
-progid
-:
-DXImageTransform
-.Microsoft
-.gradient
-(
-startColorstr
-=
-#99000000
-,
-endColorstr
-=
-#99000000
-)
-;
-*/&ast; For IE 8&ast;/*
+startColorstr = #99000000,
+endColorstr = #99000000 
+);
+/* For IE 8 */
 &minus;
-ms-filter
-:
+ms-filter:
 &quot;progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000,
-endColorstr=#99000000)&quot;
-;
+endColorstr=#99000000)&quot;;
 ```
 
 <h2 id="ch6">Chapter 6: Centering</h2>
@@ -3560,57 +3458,38 @@ endColorstr=#99000000)&quot;
 <h4>HTML:</h4>
 
 ```
-**&lt;**
-**div**
+<b>&lt;</b>
+<b>div</b>
 class
 =
 &quot;container&quot;
-**&gt;**
-**&lt;**
-**img**
+<b>&gt;</b>
+<b>&lt;</b>
+<b>img</b>
 src
 =
 &quot;http://lorempixel.com/400/200&quot;
-**/&gt;**
-**&lt;**
-**/div**
-**&gt;**
+<b>/&gt;</b>
+<b>&lt;</b>
+<b>/div</b>
+<b>&gt;</b>
 ```
 
 <h4>CSS:</h4>
 
 ```
-html
-,
-body
-,
-.container
+html, body, .container
 {
-**height**
-:
-100
-&percnt;
-;
+<b>height</b>:100&percnt;;
 }
-.container
-{
-**display**
-:
-flex
-;
-**justify-content**
-:
-center
-;
-*/&ast; horizontal center &ast;/*
+.container {
+<b>display</b>: flex;
+<b>justify-content</b>: center;
+/* horizontal center */
 }
-img
-{
-**align-self**
-:
-center
-;
-*/&ast; vertical center &ast;/*
+img {
+<b>align-self</b>:center;
+/* vertical center */
 }
 ```
 
@@ -3619,39 +3498,20 @@ center
 <h4>HTML:</h4>
 
 ```
-**&lt;**
-**img**
-src
-=
-&quot;http://lorempixel.com/400/200&quot;
-**/&gt;**
-> **CSS:**
-html
-,
-body
-{
-**height**
-:
-100
-&percnt;
-;
+<b>&lt;</b>
+<b>img</b>
+src = &quot;http://lorempixel.com/400/200&quot;
+<b>/&gt;</b>
+> <b>CSS:</b>
+html, body {
+<b>height</b>:100&percnt;;
 }
-body
-{
-**display**
-:
-flex
-;
-**justify-content**
-:
-center
-;
+body {
+<b>display</b>:flex;
+<b>justify-content</b>:center;
 */&ast; horizontal center &ast;/*
-**align-items**
-:
-center
-;
-*/&ast; vertical center &ast;/*
+<b>align-items</b>:center;
+/* vertical center */
 }
 ```
 
@@ -3660,7 +3520,7 @@ center
 > See Dynamic Vertical and Horizontal Centering under the Flexbox
 > documentation for more details on flexbox and what the styles mean.
 >
-> **Browser Support**
+> <b>Browser Support</b>
 >
 > Flexbox is supported by all major browsers, [[except IE versions
 > before 10]](http://caniuse.com/#search=flex).
@@ -3695,24 +3555,24 @@ center
 <h4>HTML</h4>
 
 ```
-**&lt;**
-**div**
+<b>&lt;</b>
+<b>div</b>
 class
 =
 &quot;container&quot;
-**&gt;**
-**&lt;**
-**div**
+<b>&gt;</b>
+<b>&lt;</b>
+<b>div</b>
 class
 =
 &quot;element&quot;
-**&gt;**
-**&lt;**
-**/div**
-**&gt;**
-**&lt;**
-**/div**
-**&gt;**
+<b>&gt;</b>
+<b>&lt;</b>
+<b>/div</b>
+<b>&gt;</b>
+<b>&lt;</b>
+<b>/div</b>
+<b>&gt;</b>
 ```
 
 <h4>CSS</h4>
@@ -3720,28 +3580,28 @@ class
 ```
 .container
 {
-**position**
+<b>position</b>
 :
 relative
 ;
 }
 .element
 {
-**position**
+<b>position</b>
 :
 absolute
 ;
-**top**
+<b>top</b>
 :
 50
 &percnt;
 ;
-**left**
+<b>left</b>
 :
 50
 &percnt;
 ;
-**transform**
+<b>transform</b>
 :
 translate
 (
@@ -3758,7 +3618,7 @@ translate
 [[View example in
 JSFiddle]](https://jsfiddle.net/webtiki/rz3p3ufs/)
 
-> **CROSS BROWSER COMPATIBILITY**
+> <b>CROSS BROWSER COMPATIBILITY</b>
 >
 > The transform property needs prefixes to be supported by older
 > browsers. Prefixes are needed for Chrome&lt;=35, Safari&lt;=8, Opera&lt;=22,
@@ -3770,41 +3630,41 @@ JSFiddle]](https://jsfiddle.net/webtiki/rz3p3ufs/)
 > -webkit-transform: translate(-50%, -50%); */&ast; Chrome, Safari, Opera,
 > Android &ast;/*
 >
-> -ms-transform: translate(-50%, -50%); */&ast; IE 9 &ast;/* **transform**:
+> -ms-transform: translate(-50%, -50%); */&ast; IE 9 &ast;/* <b>transform</b>:
 > translate(-50%, -50%);
 >
 > For more information see
 > [[canIuse]](http://caniuse.com/#feat=transforms2d).
 >
-> **MORE INFORMATION**
+> <b>MORE INFORMATION</b>
 
-  **position**                    :   relative
+  <b>position</b>                    :   relative
 
 > The element is being positioned according to the first non-static
 > parent ( , absolute, or fixed). Explore more in this
 > [[fiddle]](https://jsfiddle.net/siavasfiroozbakht/ox8kyypa/)
 > and this documentation topic.
 
-  **left**   :   50%     and     **transform**    :   translateX          (   -50%
+  <b>left</b>   :   50%     and     <b>transform</b>    :   translateX          (   -50%
 
-  **top**   :   50%     and     **transform**    :   translateY           (   -50%
+  </b>top</b>   :   50%     and     <b>transform</b>    :   translateY           (   -50%
 
 > For horizontal-only centering, use ). The same goes for verticalonly
 > centering: center with ).
 
-  **right**   :   -50%       ; and      **margin-bottom**          :   -50%
+  <b>right</b>   :   -50%       ; and      <b>margin-bottom</b>          :   -50%
 
 
 > Using a non-static width/height elements with this method of centering
 > can cause the centered element to appear squished. This mostly happens
 > with elements containing text, and can be fixed by adding:
-> **margin**;. View this
+> <b>margin</b>;. View this
 > [[fiddle]](https://jsfiddle.net/4xxmxca0/) for more
 > information.
 
 <h3 id="ch6-3">Section 6.3: Using margin: 0 auto;</h3>
 
-| **margin**: 0                         | > auto;                      |
+| <b>margin</b>: 0                         | > auto;                      |
 
 > Objects can be centered by using if they are block elements and have a
 > defined width.
@@ -3812,51 +3672,51 @@ JSFiddle]](https://jsfiddle.net/webtiki/rz3p3ufs/)
 <h4>HTML</h4>
 
 ```
-**&lt;**
-**div**
+<b>&lt;</b>
+<b>div</b>
 class
 =
 &quot;containerDiv&quot;
-**&gt;**
-**&lt;**
-**div**
+<b>&gt;</b>
+<b>&lt;</b>
+<b>div</b>
 id
 =
 &quot;centeredDiv&quot;
-**&gt;**
-**&lt;**
-**/div**
-**&gt;**
-**&lt;**
-**/div**
-**&gt;**
-**&lt;**
-**div**
+<b>&gt;</b>
+<b>&lt;</b>
+<b>/div</b>
+<b>&gt;</b>
+<b>&lt;</b>
+<b>/div</b>
+<b>&gt;</b>
+<b>&lt;</b>
+<b>div</b>
 class
 =
 &quot;containerDiv&quot;
-**&gt;**
-**&lt;**
-**p**
+<b>&gt;</b>
+<b>&lt;</b>
+<b>p</b>
 id
 =
 &quot;centeredParagraph&quot;
-**&gt;**
+<b>&gt;</b>
 This is a centered paragraph.
-**&lt;**
-**/p**
-**&gt;**
-**&lt;**
-**/div**
-**&gt;**
-**&lt;**
-**div**
+<b>&lt;</b>
+<b>/p</b>
+<b>&gt;</b>
+<b>&lt;</b>
+<b>/div</b>
+<b>&gt;</b>
+<b>&lt;</b>
+<b>div</b>
 class
 =
 &quot;containerDiv&quot;
-**&gt;**
-**&lt;**
-**img**
+<b>&gt;</b>
+<b>&lt;</b>
+<b>img</b>
 id
 =
 &quot;centeredImage&quot;
@@ -3865,10 +3725,10 @@ src
 &quot;https://i.kinja-img.com/gawker-media/image/upload/s&minus;-c7Q9b4Eh&minus;-/c_scale,fl_progressive,q_80,w&lowbar;
 800
 /qqyvc3bkpyl3mfhr8all.jpg&quot;
-**/&gt;**
-**&lt;**
-**/div**
-**&gt;**
+<b>/&gt;</b>
+<b>&lt;</b>
+<b>/div</b>
+<b>&gt;</b>
 ```
 
 <h4>CSS</h4>
@@ -3876,17 +3736,17 @@ src
 ```
 .containerDiv
 {
-**width**
+<b>width</b>
 :
 100
 &percnt;
 ;
-**height**
+<b>height</b>
 :
 100
 px
 ;
-**padding-bottom**
+<b>padding-bottom</b>
 :
 40
 px
@@ -3894,22 +3754,22 @@ px
 }
 #centeredDiv
 {
-**margin**
+<b>margin</b>
 :
 0
 auto
 ;
-**width**
+<b>width</b>
 :
 200
 px
 ;
-**height**
+<b>height</b>
 :
 100
 px
 ;
-**border**
+<b>border</b>
 :
 1
 px
@@ -3919,12 +3779,12 @@ solid
 }
 #centeredParagraph
 {
-**width**
+<b>width</b>
 :
 200
 px
 ;
-**margin**
+<b>margin</b>
 :
 0
 auto
@@ -3932,16 +3792,16 @@ auto
 }
 #centeredImage
 {
-**display**
+<b>display</b>
 :
 block
 ;
-**width**
+<b>width</b>
 :
 200
 px
 ;
-**margin**
+<b>margin</b>
 :
 0
 auto
@@ -3959,7 +3819,7 @@ auto;]](https://jsfiddle.net/xf1ze3v9/)
 
 <h3 id="ch6-4">Section 6.4: Using text-align</h3>
 
-  **text-align**
+  <b>text-align</b>
 
 > The most common and easiest type of centering is that of lines of text
 > in an element. CSS has the rule :
@@ -3970,13 +3830,13 @@ auto;]](https://jsfiddle.net/xf1ze3v9/)
 <h4>HTML</h4>
 
 ```
-**&lt;**
-**p**
-**&gt;**
+<b>&lt;</b>
+<b>p</b>
+<b>&gt;</b>
 Lorem ipsum
-**&lt;**
-**/p**
-**&gt;**
+<b>&lt;</b>
+<b>/p</b>
+<b>&gt;</b>
 ```
 
 <h4>CSS</h4>
@@ -3984,7 +3844,7 @@ Lorem ipsum
 ```
 p
 {
-**text-align**
+<b>text-align</b>
 :
 center
 ;
@@ -4007,11 +3867,11 @@ center
 
 [[View Result]](https://jsfiddle.net/stuttufu/sj2m0oo2/1/)
 
-> **HTML**
+<h4>HTML</h4>
 
-**&lt;**
+<b>&lt;</b>
 
-**div**
+<b>div</b>
 
 class
 
@@ -4019,11 +3879,11 @@ class
 
 &quot;parent&quot;
 
-**&gt;**
+<b>&gt;</b>
 
-**&lt;**
+<b>&lt;</b>
 
-**img**
+<b>img</b>
 
 class
 
@@ -4037,21 +3897,21 @@ src
 
 &quot;http://lorempixel.com/400/200/&quot;
 
-**/&gt;**
+<b>/&gt;</b>
 
-**&lt;**
+<b>&lt;</b>
 
-**/div**
+<b>/div</b>
 
-**&gt;**
+<b>&gt;</b>
 
-> **CSS**
+> <h4>CSS</h4>
 
 .parent
 
 {
 
-**position**
+<b>position</b>
 
 :
 
@@ -4059,7 +3919,7 @@ relative
 
 ;
 
-**height**
+<b>height</b>
 
 :
 
@@ -4075,7 +3935,7 @@ px
 
 {
 
-**position**
+<b>position</b>
 
 :
 
@@ -4083,7 +3943,7 @@ absolute
 
 ;
 
-**margin**
+<b>margin</b>
 
 :
 
@@ -4091,7 +3951,7 @@ auto
 
 ;
 
-**top**
+<b>top</b>
 
 :
 
@@ -4099,7 +3959,7 @@ auto
 
 ;
 
-**right**
+<b>right</b>
 
 :
 
@@ -4107,7 +3967,7 @@ auto
 
 ;
 
-**bottom**
+<b>bottom</b>
 
 :
 
@@ -4115,7 +3975,7 @@ auto
 
 ;
 
-**left**
+<b>left</b>
 
 :
 
@@ -4143,111 +4003,58 @@ CSS]](http://codepen.io/shshaw/details/gEiDt)
 > can calculate (mathematically) what size/position your element
 > occupies by using a variety of values like pixels, percentages, etc.
 > Note: Whenever you use this function, always take care of the space
-> between two values ). **CSS**
+> between two values ). 
 
+<h4>CSS</h4>
+
+```
 .center
-
 {
-
-**position**
-
+<b>position</b>
 :
-
 absolute
-
 ;
-
-**height**
-
+<b>height</b>
 :
+50px;
 
-50
-
-px
-
-;
-
-**width**
-
+<b>width</b>
+: 50px;
+<b>background</b>
 :
-
-50
-
-px
-
-;
-
-**background**
-
-:
-
 red
 
 ;
-
-**top**
-
+<b>top</b>
 :
-
 calc
-
 (
-
 50
-
 &percnt;
-
 &minus;
-
 50
-
 px
-
 /
-
 2
-
 )
-
 ;
-
 */&ast; height divided by 2&ast;/*
-
-**left**
-
+  <b>left</b>
 :
-
-calc
-
-(
-
-50
-
-&percnt;
-
-&minus;
-
-50
-
-px
-
-/
-
-2
-
-)
-
-;
-
-*/&ast; width divided by 2&ast;/*
-
+  calc (
+50&percnt;
+&minus; 
+50px / 2);
+/* width divided by 2 */
 }
+```
 
-> **HTML**
 
-**&lt;**
+> <h4>HTML</h4>
 
-**div**
+<b>&lt;</b>
+
+<b>div</b>
 
 class
 
@@ -4255,26 +4062,26 @@ class
 
 &quot;center&quot;
 
-**&gt;**
+<b>&gt;</b>
 
-**&lt;**
+<b>&lt;</b>
 
-**/div**
+<b>/div</b>
 
-**&gt;**
+<b>&gt;</b>
 
 ## Section 6.7: Using line-height
 
 > You can also use line-height to center vertically a single line of
 > text inside a container :
 >
-> **CSS**
+> <h4>CSS</h4>
 
 div
 
 {
 
-**height**
+<b>height</b>
 
 :
 
@@ -4284,7 +4091,7 @@ px
 
 ;
 
-**line-height**
+<b>line-height</b>
 
 :
 
@@ -4296,7 +4103,7 @@ px
 
 }
 
-  **&lt;input** **/&gt;**
+  <b>&lt;input</b> <b>/&gt;</b>
 
 
 > That&apos;s quite ugly, but can be useful inside an element. The
@@ -4313,7 +4120,7 @@ px
 > Use these 3 lines to vertical align practically everything. Just make
 > sure the div/image you apply the code to has a parent with a height.
 >
-> **CSS**
+> <h4>CSS</h4>
 
 div
 
@@ -4321,7 +4128,7 @@ div
 
 {
 
-**position**
+<b>position</b>
 
 :
 
@@ -4329,7 +4136,7 @@ relative
 
 ;
 
-**top**
+<b>top</b>
 
 :
 
@@ -4339,7 +4146,7 @@ relative
 
 ;
 
-**transform**
+<b>transform</b>
 
 :
 
@@ -4357,11 +4164,11 @@ translateY
 
 }
 
-> **HTML**
+> <h4>HTML</h4>
 
-**&lt;**
+<b>&lt;</b>
 
-**div**
+<b>div</b>
 
 class
 
@@ -4369,15 +4176,15 @@ class
 
 &quot;vertical&quot;
 
-**&gt;**
+<b>&gt;</b>
 
 Vertical aligned text!
 
-**&lt;**
+<b>&lt;</b>
 
-**/div**
+<b>/div</b>
 
-**&gt;**
+<b>&gt;</b>
 
 ## Section 6.9: Centering in relation to another item
 
@@ -4386,11 +4193,11 @@ Vertical aligned text!
 >
 > Compatibility: IE8+, all other modern browsers.
 >
-> **HTML**
+> <h4>HTML</h4>
 
-**&lt;**
+<b>&lt;</b>
 
-**div**
+<b>div</b>
 
 class
 
@@ -4398,11 +4205,11 @@ class
 
 &quot;content&quot;
 
-**&gt;**
+<b>&gt;</b>
 
-**&lt;**
+<b>&lt;</b>
 
-**div**
+<b>div</b>
 
 class
 
@@ -4410,11 +4217,11 @@ class
 
 &quot;position-container&quot;
 
-**&gt;**
+<b>&gt;</b>
 
-**&lt;**
+<b>&lt;</b>
 
-**div**
+<b>div</b>
 
 class
 
@@ -4422,11 +4229,11 @@ class
 
 &quot;thumb&quot;
 
-**&gt;**
+<b>&gt;</b>
 
-**&lt;**
+<b>&lt;</b>
 
-**img**
+<b>img</b>
 
 src
 
@@ -4434,17 +4241,17 @@ src
 
 &quot;http://lorempixel.com/400/200/&quot;
 
-**&gt;**
+<b>&gt;</b>
 
-**&lt;**
+<b>&lt;</b>
 
-**/div**
+<b>/div</b>
 
-**&gt;**
+<b>&gt;</b>
 
-**&lt;**
+<b>&lt;</b>
 
-**div**
+<b>div</b>
 
 class
 
@@ -4452,11 +4259,11 @@ class
 
 &quot;details&quot;
 
-**&gt;**
+<b>&gt;</b>
 
-**&lt;**
+<b>&lt;</b>
 
-**p**
+<b>p</b>
 
 class
 
@@ -4464,19 +4271,19 @@ class
 
 &quot;banner-title&quot;
 
-**&gt;**
+<b>&gt;</b>
 
 text 1
 
-**&lt;**
+<b>&lt;</b>
 
-**/p**
+<b>/p</b>
 
-**&gt;**
+<b>&gt;</b>
 
-**&lt;**
+<b>&lt;</b>
 
-**p**
+<b>p</b>
 
 class
 
@@ -4484,21 +4291,21 @@ class
 
 &quot;banner-text&quot;
 
-**&gt;**
+<b>&gt;</b>
 
 content content content content content content content content
 
 content content content content content content
 
-**&lt;**
+<b>&lt;</b>
 
-**/p**
+<b>/p</b>
 
-**&gt;**
+<b>&gt;</b>
 
-**&lt;**
+<b>&lt;</b>
 
-**button**
+<b>button</b>
 
 class
 
@@ -4506,35 +4313,35 @@ class
 
 &quot;btn&quot;
 
-**&gt;**
+<b>&gt;<b>
 
 button
 
-**&lt;**
+<b>&lt;</b>
 
-**/button**
+<b>/button</b>
 
-**&gt;**
+<b>&gt;</b>
 
-**&lt;**
+<b>&lt;</b>
 
-**/div**
+<b>/div</b>
 
-**&gt;**
+<b>&gt;</b>
 
-**&lt;**
+<b>&lt;</b>
 
-**/div**
+<b>/div</b>
 
-**&gt;**
+<b>&gt;</b>
 
-**&lt;**
+<b>&lt;</b>
 
-**/div**
+<b>/div</b>
 
-**&gt;**
+<b>&gt;</b>
 
-> **CSS**
+> <h4>CSS</h4>
 
 .content
 
@@ -4542,7 +4349,7 @@ button
 
 {
 
-**box-sizing**
+<b>box-sizing</b>
 
 :
 
@@ -4558,7 +4365,7 @@ border-box
 
 {
 
-**display**
+<b>display</b>
 
 :
 
@@ -4574,7 +4381,7 @@ table
 
 {
 
-**display**
+<b>display</b>
 
 :
 
@@ -4582,7 +4389,7 @@ table-cell
 
 ;
 
-**vertical-align**
+<b>vertical-align</b>
 
 :
 
@@ -4590,7 +4397,7 @@ middle
 
 ;
 
-**width**
+<b>width</b>
 
 :
 
@@ -4600,7 +4407,7 @@ middle
 
 ;
 
-**padding**
+<b>padding</b>
 
 :
 
@@ -4610,7 +4417,7 @@ px
 
 ;
 
-**font-size**
+<b>font-size</b>
 
 :
 
@@ -4620,7 +4427,7 @@ px
 
 ;
 
-**text-align**
+<b>text-align</b>
 
 :
 
@@ -4636,7 +4443,7 @@ center
 
 {
 
-**width**
+<b>width</b>
 
 :
 
@@ -4656,7 +4463,7 @@ img
 
 {
 
-**width**
+<b>width</b>
 
 :
 
@@ -4674,22 +4481,22 @@ img
 > The main points are the 3 .thumb, .details and .position-container
 > containers:
 
-  **display**                         :     table
+  <b>display</b>                         :     table
 
 
-  **width**   :   &period;...   and    **display**   :   table-cell      ,   **vertical-align**
+  <b>width</b>   :   &period;...   and    <b>display</b>   :   table-cell      ,   <b>vertical-align</b>
 
 
 > The .position-container must have .
 >
 > The .details must have the real width set : middle.
 
-  **width**                        :      100%
+  <b>width</b>                        :      100%
 
 > The .thumb must have if you want that it will take all the remaining
 > space and it will be influenced by the .details width.
 
-  **width**                        :      100%
+  <b>width</b>                        :      100%
 
 > The image (if you have an image) inside .thumb should have , but it is
 > not necessary if you have correct proportions.
@@ -4699,14 +4506,14 @@ img
 > This technique works even when the container&apos;s dimensions are
 > unknown.
 
-  **vertical-align**
+  <b>vertical-align</b>
 
 > Set up a &quot;ghost&quot; element inside the container to be centered that is
 > 100% height, then use :
 >
 > middle on both that and the element to be centered.
 >
-> **CSS**
+> <h4>CSS</h4>
 
 */&ast; This parent can be any width and height &ast;/*
 
@@ -4714,7 +4521,7 @@ img
 
 {
 
-**text-align**
+<b>text-align</b>
 
 :
 
@@ -4725,7 +4532,7 @@ center
 */&ast; May want to do this if there is risk the container may be narrower
 than the element inside &ast;/*
 
-**white-space**
+<b>white-space</b>
 
 :
 
@@ -4745,7 +4552,7 @@ before
 
 {
 
-**content**
+<b>content</b>
 
 :
 
@@ -4753,7 +4560,7 @@ before
 
 ;
 
-**display**
+<b>display</b>
 
 :
 
@@ -4761,7 +4568,7 @@ inline-block
 
 ;
 
-**height**
+<b>height</b>
 
 :
 
@@ -4771,7 +4578,7 @@ inline-block
 
 ;
 
-**vertical-align**
+<b>vertical-align</b>
 
 :
 
@@ -4789,7 +4596,7 @@ middle
 
 *(probably to 1rem) in .centered. &ast;/*
 
-**margin-right**
+<b>margin-right</b>
 
 :
 
@@ -4808,7 +4615,7 @@ em
 
 {
 
-**display**
+<b>display</b>
 
 :
 
@@ -4816,7 +4623,7 @@ inline-block
 
 ;
 
-**vertical-align**
+<b>vertical-align</b>
 
 :
 
@@ -4824,7 +4631,7 @@ middle
 
 ;
 
-**width**
+<b>width</b>
 
 :
 
@@ -4834,7 +4641,7 @@ px
 
 ;
 
-**white-space**
+<b>white-space</b>
 
 :
 
@@ -4846,11 +4653,11 @@ normal
 
 }
 
-> **HTML**
+> <h4>HTML</h4>
 
-**&lt;**
+<b>&lt;</b>
 
-**div**
+<b>div</b>
 
 class
 
@@ -4858,11 +4665,11 @@ class
 
 &quot;block&quot;
 
-**&gt;**
+<b>&gt;</b>
 
-**&lt;**
+<b>&lt;</b>
 
-**div**
+<b>div</b>
 
 class
 
@@ -4870,21 +4677,21 @@ class
 
 &quot;centered&quot;
 
-**&gt;**
+<b>&gt;</b>
 
-**&lt;**
+<b>&lt;</b>
 
-**/div**
+<b>/div</b>
 
-**&gt;**
+<b>&gt;</b>
 
-**&lt;**
+<b>&lt;</b>
 
-**/div**
+<b>/div</b>
 
-**&gt;**
+<b>&gt;</b>
 
-## Section 6.11: Centering vertically and horizontally without worrying about height or width
+<h3 id="6-11">Section 6.11: Centering vertically and horizontally without worrying about height or width</h3>
 
 > The following technique allows you to add your content to an HTML
 > element and center it both horizontally and vertically **without
@@ -4917,7 +4724,7 @@ class
 >
 > **Demo**
 >
-> **HTML**
+> <h4>HTML</h4>
 
 **&lt;**
 
@@ -4975,7 +4782,7 @@ You can put anything here!
 
 **&gt;**
 
-> **CSS**
+> <h4>CSS</h4>
 
 body
 
@@ -5134,7 +4941,7 @@ Fiddle]**](http://jsfiddle.net/WXLsY/621/)!
 
 ## Section 6.12: Vertically align an image inside div
 
-> **HTML**
+> <h4>HTML</h4>
 
 **&lt;**
 
@@ -5166,7 +4973,7 @@ src
 
 **&gt;**
 
-> **CSS**
+> <h4>CSS</h4>
 
 .wrap
 
@@ -5292,7 +5099,7 @@ middle
 > to 50% with margin that reduces half of your content&apos;s width and
 > height:
 >
-> **HTML**
+> <h4>HTML</h4>
 
 **&lt;**
 
@@ -5314,7 +5121,7 @@ Center vertically and horizontally
 
 **&gt;**
 
-> **CSS**
+> <h4>CSS</h4>
 
 .center
 
@@ -5407,7 +5214,7 @@ px
 > You can center the element horizontally even if you don&apos;t know the
 > height of the content:
 >
-> **HTML**
+> <h4>HTML</h4>
 
 **&lt;**
 
@@ -5429,7 +5236,7 @@ Center only horizontally
 
 **&gt;**
 
-> **CSS**
+> <h4>CSS</h4>
 
 .center
 
@@ -5490,7 +5297,7 @@ px
 > You can center the element vertically if you know the element&apos;s
 > height:
 >
-> **HTML**
+> <h4>HTML</h4>
 
 **&lt;**
 
@@ -5512,7 +5319,7 @@ Center only vertically
 
 **&gt;**
 
-> **CSS**
+> <h4>CSS</h4>
 
 .center
 
@@ -5590,7 +5397,7 @@ px
 >
 > For widest browser support, a workaround with helper elements:
 >
-> **HTML**
+> <h4>HTML</h4>
 
 **&lt;**
 
@@ -5652,7 +5459,7 @@ class
 
 **&gt;**
 
-> **CSS**
+> <h4>CSS</h4>
 
 .vcenter
 
@@ -5776,7 +5583,7 @@ This approach
 
 > One could easily center a child element using table display property.
 >
-> **HTML**
+> <h4>HTML</h4>
 
 **&lt;**
 
@@ -5832,7 +5639,7 @@ class
 
 **&gt;**
 
-> **CSS**
+> <h4>CSS</h4>
 
 .wrapper
 
@@ -6772,7 +6579,7 @@ px
 > of the selected div. [*[View
 > Result]*](https://jsfiddle.net/wm0100x9/1/)
 >
-> **HTML**
+> <h4>HTML</h4>
 
 **&lt;**
 
@@ -6792,7 +6599,7 @@ id
 
 **&gt;**
 
-> **CSS**
+> <h4>CSS</h4>
 
 #myDiv
 
@@ -6877,7 +6684,7 @@ red
 > and a 100px margin to the left side. [*[View
 > Result]*](https://jsfiddle.net/1979c947/)
 >
-> **HTML**
+> <h4>HTML</h4>
 
 **&lt;**
 
@@ -6897,7 +6704,7 @@ id
 
 **&gt;**
 
-> **CSS**
+> <h4>CSS</h4>
 
 #myDiv
 
@@ -8756,7 +8563,7 @@ outset
 
 }
 
-> **HTML**
+> <h4>HTML</h4>
 
 **&lt;**
 
@@ -8940,7 +8747,7 @@ An outset outline
 > place. Helpful in preventing an long string of text causing layout
 > problems due to overflowing it&apos;s container.
 >
-> **CSS**
+> <h4>CSS</h4>
 
 div
 
@@ -9184,7 +8991,7 @@ the content to the top and bottom will be clipped.
 
 **&gt;**
 
-> **CSS**
+> <h4>CSS</h4>
 
 div
 
@@ -9242,7 +9049,7 @@ hidden
 
 <h3 id="ch12-3">Section 12.3: overflow: scroll</h3>
 
-> **HTML**
+> <h4>HTML</h4>
 
 **&lt;**
 
@@ -9259,7 +9066,7 @@ the overflow property.
 
 **&gt;**
 
-> **CSS**
+> <h4>CSS</h4>
 
 div
 
@@ -9327,7 +9134,7 @@ not clipped.
 
 **&gt;**
 
-> **CSS**
+> <h4>CSS</h4>
 
 div
 
@@ -9419,7 +9226,7 @@ hidden
 
 }
 
-> **HTML**
+> <h4>HTML</h4>
 
 **&lt;**
 
@@ -10398,7 +10205,7 @@ inherit
 
 **&lt;**
 
-**html**
+<h4>HTML</h4>
 
 **&gt;**
 
@@ -12379,7 +12186,7 @@ px
 > text. Valid values are: uppercase, capitalize, lowercase, initial,
 > inherit, and none
 >
-> **CSS**
+> <h4>CSS</h4>
 
 .example1
 
@@ -12418,7 +12225,7 @@ lowercase
 }
 </code></pre>
 
-> **HTML**
+> <h4>HTML</h4>
 
 <pre><code>
 **&lt;**
@@ -12616,7 +12423,7 @@ blue
 > word spacing the keyword inherit takes the value from the parent
 > element
 >
-> **CSS**
+> <h4>CSS</h4>
 
 <pre><code>
 .normal
@@ -12644,7 +12451,7 @@ px
 }
 </code></pre>
 
-> **HTML**
+> <h4>HTML</h4>
 >
 > **&lt;p&gt;**
 >
@@ -12734,7 +12541,7 @@ aNd ExAmpLe
 
 > **Simple Example (centering a single element)**
 >
-> **HTML**
+> <h4>HTML</h4>
 
 <pre><code>
 **&lt;**
@@ -12758,7 +12565,7 @@ class
 **&gt;**
 </code></pre>
 
-> **CSS**
+> <h4>CSS</h4>
 
 <pre><code>
 .aligner
@@ -16344,7 +16151,7 @@ vh
 > **On the output**, the *Child*&apos;s width will be half(50%) of the
 > *Parent*&apos;s, which is **50px**.
 >
-> **HTML**
+> <h4>HTML</h4>
 
 **&lt;**
 
@@ -16386,7 +16193,7 @@ CHILD
 
 **&gt;**
 
-> **CSS**
+> <h4>CSS</h4>
 
 **&lt;**
 
@@ -16716,7 +16523,7 @@ blue
 
 }
 
-> **HTML**
+> <h4>HTML</h4>
 
 **&lt;**
 
@@ -16829,7 +16636,7 @@ unset Combination of initial and inherit. More info
 > z-index of 2 puts red just under it, and a z-index of 1 puts blue
 > under that.
 >
-> **HTML**
+> <h4>HTML</h4>
 
 **&lt;**
 
@@ -16885,7 +16692,7 @@ id
 
 **&gt;**
 
-> **CSS**
+> <h4>CSS</h4>
 
 div
 
@@ -18428,7 +18235,7 @@ height="1.1458333333333333in"}
 
 ## Section 26.1: Transition shorthand
 
-> **CSS**
+> <h4>CSS</h4>
 
 div
 
@@ -18494,7 +18301,7 @@ green
 
 }
 
-> **HTML**
+> <h4>HTML</h4>
 
 **&lt;**
 
@@ -18584,7 +18391,7 @@ ease-in: ) ease-out: ) ease-in-out: )
 
 ## Section 26.3: Transition (longhand)
 
-> **CSS**
+> <h4>CSS</h4>
 
 div
 
@@ -18706,7 +18513,7 @@ px
 
 }
 
-> **HTML**
+> <h4>HTML</h4>
 >
 > **&lt;div&gt;&lt;/div&gt;**
 >
@@ -19611,7 +19418,7 @@ point on the Z axis
 
 ## Section 28.1: Rotate
 
-> **HTML**
+> <h4>HTML</h4>
 
 **&lt;**
 
@@ -19631,7 +19438,7 @@ class
 
 **&gt;**
 
-> **CSS**
+> <h4>CSS</h4>
 
 .rotate
 
@@ -19707,7 +19514,7 @@ deg
 
 ## Section 28.2: Scale
 
-> **HTML**
+> <h4>HTML</h4>
 
 **&lt;**
 
@@ -19727,7 +19534,7 @@ class
 
 **&gt;**
 
-> **CSS**
+> <h4>CSS</h4>
 
 .scale
 
@@ -19794,7 +19601,7 @@ scale
 
 ## Section 28.3: Skew
 
-> **HTML**
+> <h4>HTML</h4>
 
 **&lt;**
 
@@ -19814,7 +19621,7 @@ class
 
 **&gt;**
 
-> **CSS**
+> <h4>CSS</h4>
 
 .skew
 
@@ -20008,7 +19815,7 @@ height="2.7919728783902014in"}
 
 ## Section 28.5: Translate
 
-> **HTML**
+> <h4>HTML</h4>
 
 **&lt;**
 
@@ -20028,7 +19835,7 @@ class
 
 **&gt;**
 
-> **CSS**
+> <h4>CSS</h4>
 
 .translate
 
@@ -20341,7 +20148,7 @@ deg
 
 ## Section 29.1: Compass pointer or needle shape using 3D transforms
 
-> **CSS**
+> <h4>CSS</h4>
 
 div
 
@@ -20485,7 +20292,7 @@ px
 
 }
 
-> **HTML**
+> <h4>HTML</h4>
 
 **&lt;**
 
@@ -21509,12 +21316,12 @@ example]**](http://codepen.io/web-tiki/pen/NNwqBa)
 
 ## Section 30.1: Blur
 
-> **HTML**
+> <h4>HTML</h4>
 >
 > **&lt;img** src=&apos;donald-duck.png&apos; alt=&apos;Donald Duck&apos; title=&apos;Donald
 > Duck&apos; **/&gt;**
 >
-> **CSS**
+> <h4>CSS</h4>
 
 img
 
@@ -21563,7 +21370,7 @@ height="2.8125in"}
 
 ## Section 30.2: Drop Shadow (use box-shadow instead if possible)
 
-> **HTML**
+> <h4>HTML</h4>
 
 **&lt;**
 
@@ -21579,7 +21386,7 @@ My shadow always follows me.
 
 **&gt;**
 
-> **CSS**
+> <h4>CSS</h4>
 
 p
 
@@ -21646,12 +21453,12 @@ height="0.5729166666666666in"}
 
 ## Section 30.3: Hue Rotate
 
-> **HTML**
+> <h4>HTML</h4>
 >
 > **&lt;img** src=&apos;donald-duck.png&apos; alt=&apos;Donald Duck&apos; title=&apos;Donald
 > Duck&apos; **/&gt;**
 >
-> **CSS**
+> <h4>CSS</h4>
 
 img
 
@@ -21700,12 +21507,12 @@ height="2.8125in"}
 
 > To use multiple filters, separate each value with a space.
 >
-> **HTML**
+> <h4>HTML</h4>
 >
 > **&lt;img** src=&apos;donald-duck.png&apos; alt=&apos;Donald Duck&apos; title=&apos;Donald
 > Duck&apos; **/&gt;**
 >
-> **CSS**
+> <h4>CSS</h4>
 
 img
 
@@ -21812,7 +21619,7 @@ height="2.7083333333333335in"}
 
 ## Section 30.5: Invert Color
 
-> **HTML**
+> <h4>HTML</h4>
 
 **&lt;**
 
@@ -21826,7 +21633,7 @@ height="2.7083333333333335in"}
 
 **&gt;**
 
-> **CSS**
+> <h4>CSS</h4>
 
 div
 
@@ -21965,7 +21772,7 @@ HTML element &lbrack;&lbrack;1&rbrack;&rbrack;
 > visible indicator of the insertion point in an element where text and
 > other content is inserted by the user&apos;s typing or editing.
 >
-> **HTML**
+> <h4>HTML</h4>
 
 **&lt;**
 
@@ -21979,7 +21786,7 @@ id
 
 **/&gt;**
 
-> **CSS**
+> <h4>CSS</h4>
 
 #example
 
@@ -22027,7 +21834,7 @@ color can be of various notations: a color keyword, hexadecimal,
 JSFiddle:
 [[https://jsfiddle.net/UnsungHero97/80qod7aL/2/]](https://jsfiddle.net/UnsungHero97/80qod7aL/2/)
 
-> **HTML**
+> <h4>HTML</h4>
 
 **&lt;**
 
@@ -22047,7 +21854,7 @@ class
 
 **&gt;**
 
-> **CSS**
+> <h4>CSS</h4>
 
 .box_shadow
 
@@ -22256,7 +22063,7 @@ px
 JSFiddle:
 [[https://jsfiddle.net/UnsungHero97/80qod7aL/]](https://jsfiddle.net/UnsungHero97/80qod7aL/)
 
-> **HTML**
+> <h4>HTML</h4>
 
 **&lt;**
 
@@ -22276,7 +22083,7 @@ class
 
 **&gt;**
 
-> **CSS**
+> <h4>CSS</h4>
 
 .box_shadow
 
@@ -22358,7 +22165,7 @@ px
 
 ## Section 32.3: inner drop shadow
 
-> **HTML**
+> <h4>HTML</h4>
 
 **&lt;**
 
@@ -22378,7 +22185,7 @@ class
 
 **&gt;**
 
-> **CSS**
+> <h4>CSS</h4>
 
 .box_shadow
 
@@ -22515,7 +22322,7 @@ JSFiddle:
 JSFiddle:
 [[https://jsfiddle.net/UnsungHero97/80qod7aL/5/]](https://jsfiddle.net/UnsungHero97/80qod7aL/5/)
 
-> **HTML**
+> <h4>HTML</h4>
 
 **&lt;**
 
@@ -22535,7 +22342,7 @@ class
 
 **&gt;**
 
-> **CSS**
+> <h4>CSS</h4>
 
 .box_shadow
 
@@ -22693,7 +22500,7 @@ height="5.833333333333333in"}
 > the float area so that the inline content wraps around the shape
 > instead of the float&apos;s box.
 >
-> **CSS**
+> <h4>CSS</h4>
 
 img
 
@@ -22841,7 +22648,7 @@ px
 
 }
 
-> **HTML**
+> <h4>HTML</h4>
 >
 > **&lt;img**
 > src=&quot;http://images.clipartpanda.com/circle-clip-art-circlergb.jpg&quot;**&gt;**
@@ -22881,7 +22688,7 @@ height="1.4895833333333333in"}
 
 > The shape-margin CSS property adds a *margin* to shape-outside.
 >
-> **CSS**
+> <h4>CSS</h4>
 
 img
 
@@ -23049,7 +22856,7 @@ px
 
 }
 
-> **HTML**
+> <h4>HTML</h4>
 >
 > **&lt;img**
 > src=&quot;http://images.clipartpanda.com/circle-clip-art-circlergb.jpg&quot;**&gt;**
@@ -23305,7 +23112,7 @@ then the counter value is not printed
 
 ## Section 35.1: Applying roman numerals styling to the counter output
 
-> **CSS**
+> <h4>CSS</h4>
 
 body
 
@@ -23369,7 +23176,7 @@ upper-roman
 
 }
 
-> **HTML**
+> <h4>HTML</h4>
 
 **&lt;**
 
@@ -23437,7 +23244,7 @@ Item No: 3
 
 ## Section 35.2: Number each item using CSS Counter
 
-> **CSS**
+> <h4>CSS</h4>
 
 body
 
@@ -23607,7 +23414,7 @@ px
 
 }
 
-> **HTML**
+> <h4>HTML</h4>
 
 **&lt;**
 
@@ -23796,7 +23603,7 @@ Lorem Ipsum Dolor Sit Amet&period;...
 
 ## Section 35.3: Implementing multi-level numbering using CSS counters
 
-**CSS**
+<h4>CSS</h4>
 
 ul
 
@@ -23870,7 +23677,7 @@ list-item-number
 
 }
 
-**HTML**
+<h4>HTML</h4>
 
 **&lt;**
 
@@ -25227,7 +25034,7 @@ width
 > Here, a media query changes the variables used to set up a very simple
 > grid:
 >
-> **HTML**
+> <h4>HTML</h4>
 
 **&lt;**
 
@@ -25277,7 +25084,7 @@ width
 
 **&gt;**
 
-> **CSS**
+> <h4>CSS</h4>
 
 :
 
@@ -26440,7 +26247,7 @@ transparent
 ![](./images/media/image239.jpg){width="1.1458333333333333in"
 height="1.1875in"}
 
-> **HTML**
+> <h4>HTML</h4>
 
 **&lt;**
 
@@ -26460,7 +26267,7 @@ class
 
 **&gt;**
 
-> **CSS**
+> <h4>CSS</h4>
 
 .circle
 
@@ -26527,7 +26334,7 @@ rgb
 
 ![](./images/media/image240.jpg){width="0.9375in" height="0.9375in"}
 
-> **HTML**
+> <h4>HTML</h4>
 
 **&lt;**
 
@@ -26547,7 +26354,7 @@ class
 
 **&gt;**
 
-> **CSS**
+> <h4>CSS</h4>
 
 .oval
 
@@ -27620,7 +27427,7 @@ JSFiddle]](https://jsfiddle.net/vjL9ewmb/).
 > within the container. The distance between items is equal, independent
 > on the individual item width.
 
-**HTML**
+<h4>HTML</h4>
 
 **&lt;**
 
@@ -27688,7 +27495,7 @@ abcdef
 
 **&gt;**
 
-**CSS**
+<h4>CSS</h4>
 
 nav
 
@@ -28096,7 +27903,7 @@ Some paragraph
 >
 > So how do you implement one? Here&apos;s some example code.
 >
-> **HTML**
+> <h4>HTML</h4>
 
 **&lt;**
 
@@ -28152,7 +27959,7 @@ class
 
 **&gt;**
 
-> **CSS**
+> <h4>CSS</h4>
 
 .icon
 
@@ -28449,7 +28256,7 @@ luminance
 
 ## Section 44.2: Simple mask that fades an image from solid to transparent
 
-> **CSS**
+> <h4>CSS</h4>
 
 div
 
@@ -28529,7 +28336,7 @@ transparent
 
 }
 
-> **HTML**
+> <h4>HTML</h4>
 
 **&lt;**
 
@@ -28631,7 +28438,7 @@ at
 
 }
 
-> **HTML**
+> <h4>HTML</h4>
 
 **&lt;**
 
@@ -28787,7 +28594,7 @@ height="2.1666666666666665in"}
 
 ## Section 44.5: Using masks to cut a hole in the middle of an image
 
-> **CSS**
+> <h4>CSS</h4>
 
 div
 
@@ -28881,7 +28688,7 @@ white
 
 }
 
-> **HTML**
+> <h4>HTML</h4>
 >
 > In the above example, a transparent circle is created at the center
 > using radial-gradient and this is then used as a mask to produce the
@@ -28899,7 +28706,7 @@ height="2.1666666666666665in"}
 
 ## Section 44.6: Using masks to create images with irregular shapes
 
-> **CSS**
+> <h4>CSS</h4>
 
 div
 
@@ -29099,7 +28906,7 @@ no-repeat
 
 }
 
-> **HTML**
+> <h4>HTML</h4>
 
 **&lt;**
 
