@@ -64,7 +64,7 @@ nor accurate, use at your own risk.</p>
 <p>An external CSS stylesheet can be applied to any number of HTML
 documents by placing a <b>&lt;link&gt;</b> element in each HTML document.</p>
 
-<p>The attribute rel of the <b>&lt;link&gt;</b> tag has to be set to &quot;$\color{red}{stylesheet}$&quot;,
+<p>The attribute rel of the <b>&lt;link&gt;</b> tag has to be set to &quot; $\color{red}{stylesheet}$ &quot;,
 and the href attribute to the relative or absolute path to the
 stylesheet. While using relative URL paths is generally considered
 good practice, absolute paths can be used, too. In HTML5 the type
