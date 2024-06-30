@@ -656,11 +656,11 @@ both descendants of the <b>&lt;div&gt;</b>.</p>
 <b>children</b>, or <b>direct descendants**, of the specified element.</p>
 
 <pre><code>div &gt; p {
-  <b>color</b>: red;
+  <b>color</b>: <span style='color: red;'>red</span>;
 }
 
 &lt;div&gt;
-  &lt;p&gt;My text is red&lt;/p&gt;
+  &lt;p&gt;My text is <span style='color: red;'>red</span>&lt;/p&gt;
   &lt;section&gt;
     &lt;p&gt;My text is not red&lt;/p&gt;
   &lt/section&gt;
@@ -691,14 +691,14 @@ both descendants of the <b>&lt;div&gt;</b>.</p>
 <p>The general sibling (&#126;) combinator selects *all* siblings that follow the specified element.</p>
 
 <pre><code>p &#126; p
-  color: red;
+  color: <span style='color: red;'>red</span>;
 }
 
 &lt;p&gt;My text is not red&lt;/p&gt;
-&lt;p&gt;My text is red&lt;/p&gt;
+&lt;p&gt;My text is <span style='color: red;'>red</span>&lt;/p&gt;
 &lt;hr&gt;
 &lt;h1&gt;And now a title&lt;/h1&gt;
-&lt;p&gt;My text is red&lt;/p&gt;</code></pre>
+&lt;p&gt;<span style='color: red;'>My text is red</span>&lt;/p&gt;</code></pre>
 
 <a href="http://jsbin.com/xonafuz/5/edit?html,css,output">Live Demo on JSBin</a>
 
@@ -1020,8 +1020,7 @@ selection.
 
 <h4>CSS</h4>
 
-```
-.important {
+<pre><code>.important {
   color: orange;
 }
 .warning {
@@ -1029,34 +1028,31 @@ selection.
 }
 .warning .important {
   color: red;
-}
-```
+}</code></pre>
 
 <h4>HTML</h4>
 
-```
-**&gt;**
-```
+<pre><code><b>&gt;</b></code></pre>
 
-In this example, all elements with the .warning class will have a blue
+<p>In this example, all elements with the .warning class will have a blue
 text color, elements with the .important class with have an orange
 text color, and all elements that have *both* the .important and
-.warning class name will have a red text color.
+.warning class name will have a red text color.</p>
 
-Notice that within the CSS, the declaration did not have any spaces
+<p>Notice that within the CSS, the declaration did not have any spaces
 between the two class names. This means it will only find elements
 which contain both class names warning and important in their class
-attribute. Those class names could be in any order on the element.
+attribute. Those class names could be in any order on the element.</p>
 
-If a space was included between the two classes in the CSS
+<p>If a space was included between the two classes in the CSS
 declaration, it would only select elements that have parent elements
 with a .warning class names and child elements with .important class
-names.
+names.</p>
 
 <h3 id="ch4-7">Section 4.7: Select element using its ID without the high specificity of the ID selector</h4>
 
-This trick helps you select an element using the ID as a value for an
-attribute selector to avoid the high specificity of the ID selector.
+<p>This trick helps you select an element using the ID as a value for an
+attribute selector to avoid the high specificity of the ID selector.</p>
 
 <h4>HTML:</h4>
 
@@ -1205,7 +1201,7 @@ You can toggle the boolean by adding a label with the for attribute set:
 Show/Hide the sidebar!
 **&lt;**
 **/label**
-**&gt;**
+**&gt;</b>
 ```
 
 <h4>Accessing boolean value with CSS</h4>
@@ -1429,7 +1425,7 @@ footer {
 ```
 li a
 {
-**background-color**
+<b>background-color</b>
 :
 hsl
 (
@@ -1446,7 +1442,7 @@ hsl
 }
 #p1
 {
-**background-color**
+<b>background-color</b>
 :
 hsla
 (
@@ -1463,7 +1459,7 @@ hsla
 }
 ```
 
-> **Interaction with background-image**
+> <b>Interaction with background-image</b>
 >
 > The following statements are all equivalent:
 
@@ -1499,14 +1495,14 @@ body {
 ```
 body
 {
-**background-image**
+<b>background-image</b>
 :
 url
 (
 *partiallytransparentimage.png*
 )
 ;
-**background**
+<b>background</b>
 :
 red
 ;
@@ -1546,13 +1542,13 @@ type has a non-repeating variant and a repeating variant:
 >
 > ()
 >
-> **linear-gradient()**
+> <b>linear-gradient()</b>
 
-A linear-gradient has the following syntax **background**:
+A linear-gradient has the following syntax <b>background</b>:
 linear-gradient( &lt;direction&gt;?, &lt;color-stop-1&gt;, &lt;color-stop-2&gt;,
 &period;..);
 
-**Value Meaning**
+<b>Value Meaning</b>
 
   to top       ,   to bottom          ,   to right         or    to left
 
@@ -1561,10 +1557,10 @@ linear-gradient( &lt;direction&gt;?, &lt;color-stop-1&gt;, &lt;color-stop-2&gt;,
 > [[angle]](https://www.w3.org/TR/css3-values/#angles) as
 > 0deg,
 
-  **&lt;direction**
+  <b>&lt;direction</b>
 
 
-> **&gt;** 90deg&period;.. . The angle starts from to top and rotates clockwise.
+> <b>&gt;</b> 90deg&period;.. . The angle starts from to top and rotates clockwise.
 > Can be specified in
 > [[deg]](https://www.w3.org/TR/css3-values/#deg),
 > [[grad]](https://www.w3.org/TR/css3-values/#grad),
@@ -1572,7 +1568,7 @@ linear-gradient( &lt;direction&gt;?, &lt;color-stop-1&gt;, &lt;color-stop-2&gt;,
 > [[turn]](https://www.w3.org/TR/css3-values/#turn). If
 > omitted, the gradient flows from top to bottom
 
-  **&lt;color-stop-list**
+  <b>&lt;color-stop-list</b>
 
 
   yellow 10%        ,   rgba    (0,0,0,      .5   )   40px     ,   #fff 100%
@@ -1582,14 +1578,14 @@ linear-gradient( &lt;direction&gt;?, &lt;color-stop-1&gt;, &lt;color-stop-2&gt;,
 > [[length]](https://www.w3.org/TR/css3-values/#lengths) to
 > display it at. For
 >
-> **&gt;** example, &period;..
+> <b>&gt;</b> example, &period;..
 >
 > For example, this creates a linear gradient that starts from the right
 > and transitions from red to blue
 
 .linear-gradient
 {
-**background**
+<b>background</b>
 :
 linear-gradient
 (
@@ -1609,7 +1605,7 @@ blue
 
 .diagonal-linear-gradient
 {
-**background**
+<b>background</b>
 :
 linear-gradient
 (
@@ -1634,7 +1630,7 @@ yellow
 
 {
 
-**background**
+<b>background</b>
 
 :
 linear-gradient
@@ -1658,12 +1654,12 @@ violet
 )
 }
 
-**radial-gradient()**
+<b>radial-gradient()</b>
 
 .radial-gradient-simple
 
 {
-**background**
+<b>background</b>
 :
 radial-gradient
 (
@@ -1679,7 +1675,7 @@ blue
 
 {
 
-**background**
+<b>background</b>
 
 :
 
@@ -1709,7 +1705,7 @@ blue
 
 }
 
-**Value Meaning**
+<b>Value Meaning</b>
 
 circle Shape of gradient. Values are circle or ellipse, default is
 ellipse.
@@ -1724,7 +1720,7 @@ ellipse.
 > Sets the position of the gradient center, in the same way as
 > background-position.
 >
-> **Repeating gradients**
+> <b>Repeating gradients</b>
 >
 > Repeating gradient functions take the same arguments as the above
 > examples, but tile the gradient across the background of the element.
@@ -1733,7 +1729,7 @@ ellipse.
 
 {
 
-**background**
+<b>background</b>
 
 :
 
@@ -1777,7 +1773,7 @@ white
 
 {
 
-**background**
+<b>background</b>
 
 :
 
@@ -1823,7 +1819,7 @@ black
 
 }
 
-**Value Meaning**
+<b>Value Meaning</b>
 
 > [[Angle unit]](https://www.w3.org/TR/css3-values/#angles).
 > The angle starts from to top and rotates clockwise. Can be specified
@@ -1866,7 +1862,7 @@ black
 
 {
 
-**background-image**
+<b>background-image</b>
 
 :
 
@@ -1890,7 +1886,7 @@ url
 
 {
 
-**background-image**
+<b>background-image</b>
 
 :
 
@@ -1919,7 +1915,7 @@ url
 > The images will stack according to their order with the first declared
 > image on top of the others and so on.
 
-**Value Result**
+<b>Value Result</b>
 
   url      (   &apos;/path/to/image.jpg&apos;
 
@@ -1936,12 +1932,12 @@ url
 
   inherit                                  Inherit parent&apos;s value
 
-> **More CSS for Background Image**
+> <b>More CSS for Background Image</b>
 >
 > This following attributes are very useful and almost essential too.
 >
-> **background-size**: xpx ypx &vertbar; x% y%; **background-repeat**:
-> no-repeat &vertbar; repeat &vertbar; repeat-x &vertbar; repeat-y; **background-position**:
+> <b>background-size</b>: xpx ypx &vertbar; x% y%; <b>background-repeat</b>:
+> no-repeat &vertbar; repeat &vertbar; repeat-x &vertbar; repeat-y; <b>background-position</b>:
 > left offset (px/%) right offset (px/%) &vertbar; center center &vertbar; left top &vertbar;
 > right bottom;
 
@@ -1951,7 +1947,7 @@ url
 > related properties:
 
 +--------------+--------------------------------------------------+----+
-| **Value**    | **Description**                                  | *  |
+| <b>Value</b>    | <b>Description</b>                                  | *  |
 |              |                                                  | *C |
 |              |                                                  | SS |
 |              |                                                  | Ve |
@@ -2010,20 +2006,20 @@ url
 +--------------+--------------------------------------------------+----+
 
 > The order of the values does not matter and every value is optional
-> **Syntax**
+> <b>Syntax</b>
 >
 > The syntax of the background shorthand declaration is:
 >
-> **background**: &lbrack;&lt;background-image&gt;&rbrack; &lbrack;&lt;background-color&gt;&rbrack;
+> <b>background</b>: &lbrack;&lt;background-image&gt;&rbrack; &lbrack;&lt;background-color&gt;&rbrack;
 > &lbrack;&lt;background-position&gt;&rbrack;/&lbrack;&lt;background-size&gt;&rbrack;
 >
 > &lbrack;&lt;background-repeat&gt;&rbrack; &lbrack;&lt;background-origin&gt;&rbrack;
 > &lbrack;&lt;background-clip&gt;&rbrack; &lbrack;&lt;background-attachment&gt;&rbrack;
 > &lbrack;&lt;initial&vertbar;inherit&gt;&rbrack;;
 >
-> **Examples**
+> <b>Examples</b>
 
-**background**
+<b>background</b>
 
 :
 
@@ -2033,7 +2029,7 @@ red
 
 > Simply setting a background-color with the redvalue.
 
-**background**
+<b>background</b>
 
 :
 
@@ -2045,7 +2041,7 @@ red
 
 > Setting a background-clip to border-box and a background-color to red.
 
-**background**
+<b>background</b>
 
 :
 
@@ -2066,7 +2062,7 @@ url
 > Sets a background-repeat to no-repeat, background-origin to center and
 > a background-image to an image.
 
-**background**
+<b>background</b>
 
 :
 
@@ -2086,7 +2082,7 @@ green
 > green with pattern.png, if it is available, overlayed on the colour,
 > repeating as often as necessary to fill the element. If pattern.png
 > includes any transparency then the green colour will be visible behind
-> it. **background**: #000000 url(&quot;picture.png&quot;) top left / 600px auto
+> it. <b>background</b>: #000000 url(&quot;picture.png&quot;) top left / 600px auto
 > no-repeat;
 >
 > In this example we have a black background with an image
@@ -2096,14 +2092,14 @@ green
 > is set as 600px width and auto for the height. This example could work
 > well with a feature image that can fade into a solid colour.
 >
-> **NOTE:** Use of the shorthand background property resets all
+> <b>NOTE:</b> Use of the shorthand background property resets all
 > previously set background property values, even if a value is not
 > given. If you wish only to modify a background property value
 > previously set, use a longhand property instead.
 
 ## Section 5.5: Background Size
 
-> **General overview**
+> <b>General overview</b>
 >
 > The
 > [[background-size]](https://www.w3.org/TR/2014/CR-css3-background-20140909/#the-background-size)
@@ -2117,7 +2113,7 @@ green
 > × 256 px image, all the following background-size settings would yield
 > an image with height and width of 50 px:
 
-**background-size**
+<b>background-size</b>
 
 :
 
@@ -2127,7 +2123,7 @@ px
 
 ;
 
-**background-size**
+<b>background-size</b>
 
 :
 
@@ -2141,7 +2137,7 @@ auto
 
 */&ast; same as above &ast;/*
 
-**background-size**
+<b>background-size</b>
 
 :
 
@@ -2153,7 +2149,7 @@ px
 
 ;
 
-**background-size**
+<b>background-size</b>
 
 :
 
@@ -2181,7 +2177,7 @@ px
 
 {
 
-**background-image**
+<b>background-image</b>
 
 :
 
@@ -2195,7 +2191,7 @@ url
 
 ;
 
-**background-size**
+<b>background-size</b>
 
 :
 
@@ -2209,7 +2205,7 @@ url
 
 ;
 
-**width**
+<b>width</b>
 
 :
 
@@ -2219,7 +2215,7 @@ px
 
 ;
 
-**height**
+<b>height</b>
 
 :
 
@@ -2229,7 +2225,7 @@ px
 
 ;
 
-**padding**
+<b>padding</b>
 
 :
 
@@ -2237,7 +2233,7 @@ px
 
 ;
 
-**margin**
+<b>margin</b>
 
 :
 
@@ -2255,7 +2251,7 @@ The behaviour depends on the
 
 .
 
-> **Keeping the aspect ratio**
+> <b>Keeping the aspect ratio</b>
 >
 > The last example in the previos section lost its original aspect
 > ratio. The circle got into an ellipse, the square into a rectangle,
@@ -2269,7 +2265,7 @@ The behaviour depends on the
 > background area, the values, contain and cover provide the additional
 > functionality.
 >
-> **Eggsplanation for contain and cover**
+> <b>Eggsplanation for contain and cover</b>
 >
 > Sorry for the bad pun, but we&apos;re going to use a [[picture of the day
 > by Biswarup
@@ -2287,7 +2283,7 @@ height="2.7916666666666665in"}
 > contain and cover. Note that I also assume that we didn&apos;t mangle the
 > width and/or height of body.
 
-**contain**
+<b>contain</b>
 
 contain
 
@@ -2303,7 +2299,7 @@ width and its height can fit inside the background positioning area.
 ![](./images/media/image9.png){width="4.958333333333333in"
 height="3.09375in"}
 
-**cover**
+<b>cover</b>
 
 cover
 
@@ -2320,7 +2316,7 @@ area.
 ![](./images/media/image11.png){width="4.958333333333333in"
 height="2.7916666666666665in"}
 
-> **Demonstration with actual code**
+> <b>Demonstration with actual code</b>
 
 div
 
@@ -2330,7 +2326,7 @@ div
 
 {
 
-**background-image**
+<b>background-image</b>
 
 :
 
@@ -2344,7 +2340,7 @@ url
 
 ;
 
-**background-repeat**
+<b>background-repeat</b>
 
 :
 
@@ -2352,7 +2348,7 @@ no-repeat
 
 ;
 
-**background-position**
+<b>background-position</b>
 
 :
 
@@ -2362,7 +2358,7 @@ center
 
 ;
 
-**background-color**
+<b>background-color</b>
 
 :
 
@@ -2370,7 +2366,7 @@ center
 
 ;
 
-**border**
+<b>border</b>
 
 :
 
@@ -2382,7 +2378,7 @@ solid
 
 ;
 
-**width**
+<b>width</b>
 
 :
 
@@ -2392,7 +2388,7 @@ em
 
 ;
 
-**height**
+<b>height</b>
 
 :
 
@@ -2410,7 +2406,7 @@ div
 
 {
 
-**background-size**
+<b>background-size</b>
 
 :
 
@@ -2426,7 +2422,7 @@ div
 
 {
 
-**background-size**
+<b>background-size</b>
 
 :
 
