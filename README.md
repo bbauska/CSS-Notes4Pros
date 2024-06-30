@@ -182,16 +182,14 @@ will work in all current &lt;head&gt; browsers if placed in body).</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch1-3">Section 1.3: CSS &commat;import rule (one of CSS at-rule)</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>The &commat;import CSS at-rule is used to import style rules from other
-style sheets. These rules must precede all other types of rules,
-except &commat;charset rules; as it is not a nested statement, &commat;import
-cannot be used inside conditional group at-rules.</p>
-
-<a href="https://developer.mozilla.org/en/docs/Web/CSS/@import">&commat;import</a>.
+<p>The &commat;import CSS at-rule is used to import style rules from other style 
+sheets. These rules must precede all other types of rules, except &commat;charset 
+rules; as it is not a nested statement, &commat;import cannot be used inside 
+conditional group at-rules <a href="https://developer.mozilla.org/en/docs/Web/CSS/@import">&commat;import</a>.
 
 <h4>How to use &commat;import</h4>
 
-<p>You can use &commat;import rule in following ways:</p>
+<p>You can use &commat;import rule in the following ways:</p>
 
 A.  <b>With internal style tag</b>
 
@@ -418,7 +416,7 @@ pseudo-classes, and patterns.</p>
 <h2 id="ch4-1">Section 4.1: Basic selectors</h3>
 
 | Selector     | Description                                         |
-|:------------:|:---------------------------------------------------:|
+|--------------|-----------------------------------------------------|
 |  &ast;       | Universal selector (all elements) |
 |  div		   | Tag selector (all <b>&lt;div&gt;</b> elements) |
 |  .blue       | Class selector (all elements with class blue) |
@@ -449,20 +447,19 @@ using the presence of a given attribute or attribute value.</p>
 <b>Selector(1) Matched element Selects elements&period;.. CSS Version</b>
 
 | Selector(1)     | Matched element            | Selects elements...                |
-|-----------------|:--------------------------:|------------------------------------|
-| [attr]          | &lt;div attr&gt;                 | With attribute attr                |
-| [attr='val']    | &lt;div attr="val"&gt;           | Where attribute attr has value val |
-| [attr~='val']   | &lt;div attr="val val2 val3"&gt; | Where val appears in the           |
+|-----------------|----------------------------|------------------------------------|
+| &lbrack;attr&rbrack;          | &lt;div attr&gt;                 | With attribute attr                |
+| &lbrack;attr='val'&rbrack;    | &lt;div attr="val"&gt;           | Where attribute attr has value val |
+| &lbrack;attr~='val'&rbrack;   | &lt;div attr="val val2 val3"&gt; | Where val appears in the           |
 |                 |                            | whitespace-separated list of attr  |
-| [attr^='val']   | &lt;div attr="val1 val2"&gt;     | Where attr's value begins with val |
-| [attr$='val']   | &lt;div attr="sth aval"&gt;      | Where attr's value ends with val   |
-| [attr='val']    | &lt;div attr="somevalhere"&gt;   | Where attr contains val anywhere   |
-| [attr&vert;='val']   | &lt;div attr="val-sth etc"&gt;   | Where attr's value is exactly val, |
+| &lbrack;attr^='val'&rbrack;   | &lt;div attr="val1 val2"&gt;     | Where attr's value begins with val |
+| &lbrack;attr$='val'&rbrack;   | &lt;div attr="sth aval"&gt;      | Where attr's value ends with val   |
+| &lbrack;attr='val'&rbrack;    | &lt;div attr="somevalhere"&gt;   | Where attr contains val anywhere   |
+| &lbrack;attr&vert;='val'&rbrack;   | &lt;div attr="val-sth etc"&gt;   | Where attr's value is exactly val, |
 |                 |                            | or starts with val and immediately |
 |                 |                            | followed by - (U+002D) |
-| [attr&vert;='val' i] | &lt;div attr="val"&gt;           | Where attr has val, |
+| &lbrack;attr&vert;='val' i&rbrack; | &lt;div attr="val"&gt;           | Where attr has val, |
 |                 |                            | ignoring val's letter casing. |
-|                 |                            | followed by - (U+002D) |
 
 <b>Notes:</b>
 
@@ -474,12 +471,12 @@ using the presence of a given attribute or attribute value.</p>
     split into separate modules. However, there are &quot;level 4&quot; modules.
     <a href="http://caniuse.com/#feat=css-case-insensitive">See browser support</a>.
 
-<h4>Details</h4>
-<h4>[attribute]</h4>
+<h4>Details<br>
+&lbrack;attribute&rbrack;</h4>
 
 <p>Selects elements with the given attribute.</p>
 
-<pre><code>div[data-color] {
+<pre><code>div&lbrack;data-color&rbrack; {
   color: red;
 }
 
@@ -489,11 +486,11 @@ using the presence of a given attribute or attribute value.</p>
 
 <a href="http://jsbin.com/cezale/1/edit?html,css,output">Live Demo on JSBin</a>
 
-<pre><code>[attribute="value"]</code></pre>
+<pre><code>&lbrack;attribute="value"&rbrack;</code></pre>
 
 <p>Selects elements with the given attribute and value.</p>
 
-<pre><code>div[data-color="red"] {
+<pre><code>div&lbrack;data-color="red"&rbrack; {
   color: red;
   }
 
@@ -503,12 +500,12 @@ using the presence of a given attribute or attribute value.</p>
 
 <a href="http://jsbin.com/waxoked/1/edit?html,css,output">Live Demo on JSBin</a>
 
-<pre><code>[attribute="value"]</code></pre>
+<pre><code>&lbrack;attribute="value"&rbrack;</code></pre>
 
 <p>Selects elements with the given attribute and value where the given
 attribute contains the given value anywhere (as a substring).</p>
 
-<pre><code>[class = "foo"] {
+<pre><code>&lbrack;class = "foo"&rbrack; {
   color: red;
 }
 
@@ -520,12 +517,12 @@ attribute contains the given value anywhere (as a substring).</p>
 
 <a href="http://jsbin.com/dazige/1/edit?html,css,output">Live Demo on JSBin</a>
 
-<pre><code>[attribute~="value"]</pre></code>
+<pre><code>&lbrack;attribute~="value"&rbrack;</pre></code>
 
 <p>Selects elements with the given attribute and value where the given
 value appears in a whitespace-separated list.</p>
 
-<pre><code>[class~="color-red"] {
+<pre><code>&lbrack;class~="color-red"&rbrack; {
   color: red;
 }
 
@@ -534,12 +531,12 @@ value appears in a whitespace-separated list.</p>
 
 <a href="http://jsbin.com/posuhim/1/edit?html,css,output">Live Demo on JSBin</a>
 
-<pre><code>[attribute^="value"]</code></pre>
+<pre><code>&lbrack;attribute^="value"&rbrack;</code></pre>
 
 <p>Selects elements with the given attribute and value where the given
 attribute begins with the value.</p>
 
-<pre><code>[class^="foo-"] {
+<pre><code>&lbrack;class^="foo-"&rbrack; {
   color: red;
   }
 
@@ -549,12 +546,12 @@ attribute begins with the value.</p>
 
 <a href="http://jsbin.com/yowihi/1/edit?html,css,output">Live Demo on JSBin</a>
 
-<pre><code>[attribute$="value"]</code></pre>
+<pre><code>&lbrack;attribute$="value"&rbrack;</code></pre>
 
 <p>Selects elements with the given attribute and value where the given
 attribute ends with the given value.</p>
 
-<pre><code>[class$="file"] {
+<pre><code>&lbrack;class$="file"&rbrack; {
   color: red;
 }
 &lt;div class="foobar-file"&gt;This will be red&lt;/div&gt;
@@ -563,13 +560,13 @@ attribute ends with the given value.</p>
 
 <a href="http://jsbin.com/yowihi/2/edit?html,css,output">Live Demo on JSBin</a>
 
-<pre><code>[attribute|="value"]</code></pre>
+<pre><code>&lbrack;attribute|="value"&rbrack;</code></pre>
 
 Selects elements with a given attribute and value where the
 attribute&apos;s value is exactly the given value or is exactly the given
 value followed by - (U+002D)
 
-<pre><code>[lang|="EN"] {
+<pre><code>&lbrack;lang|="EN"&rbrack; {
   color: red;
   }
 &lt;div lang="EN-us">This will be red&lt;/div&gt;
@@ -583,7 +580,7 @@ attribute&apos;s value can be represented as Value, VALUE, vAlUe or any
 other case-insensitive possibility.</p>
 
 <pre><code>
-[lang|="EN"] {
+&lbrack;lang|="EN"&rbrack; {
   color: red;
 }
 &lt;div lang="EN-us"&gt;This will be red&lt;/div&gt;
@@ -599,7 +596,7 @@ other case-insensitive possibility.</p>
 
 <p>Same as class selector and pseudoclass.</p>
 
-<pre><code>*[type=checkbox] // 0-1-0</code></pre>
+<pre><code>*&lbrack;type=checkbox&rbrack; // 0-1-0</code></pre>
 
 <p>Note that this means an attribute selector can be used to select an
 element by its ID at a lower level of specificity than if it was
@@ -622,7 +619,7 @@ but with lower specificity.</p>
 > <b>Note:</b> Sibling selectors target elements that come after them in
 > the source document. CSS, by its nature (it cascades), cannot target
 > *previous* or *parent* elements. However, using the flex order
-> property, [[a] <a href="http://stackoverflow.com/a/36118012/3597276">
+> property, &lbrack;&lbrack;a&rbrack; <a href="http://stackoverflow.com/a/36118012/3597276">
 > previous sibling selector can be simulated on visual media</a>.
 
 <h4>Descendant Combinator: selector selector</h4>
@@ -707,27 +704,27 @@ whether or not they are immediately adjacent.</p>
 
 <h3 id="ch4-4">Section 4.4: Pseudo-classes</h3>
 
-> [[Pseudo-classes]](https://www.w3.org/TR/selectors/#pseudo-classes)
+> &lbrack;&lbrack;Pseudo-classes&rbrack;&rbrack;(https://www.w3.org/TR/selectors/#pseudo-classes)
 > are <b>keywords</b> which allow selection based on information that lies
 > outside of the document tree or that cannot be expressed by other
 > selectors or combinators. This information can be associated to a
 > certain state
 >
-> ([[state]](https://www.w3.org/TR/selectors/#UIstates) and
-> [[dynamic]](https://www.w3.org/TR/selectors/#dynamic-pseudos)
+> (&lbrack;&lbrack;state&rbrack;&rbrack;(https://www.w3.org/TR/selectors/#UIstates) and
+> &lbrack;&lbrack;dynamic&rbrack;&rbrack;(https://www.w3.org/TR/selectors/#dynamic-pseudos)
 > pseudo-classes), to locations
-> ([[structural]](https://www.w3.org/TR/selectors/#structural-pseudos)
+> (&lbrack;&lbrack;structural&rbrack;&rbrack;(https://www.w3.org/TR/selectors/#structural-pseudos)
 > and
-> [[target]](https://www.w3.org/TR/selectors/#target-pseudo)
+> &lbrack;&lbrack;target&rbrack;&rbrack;(https://www.w3.org/TR/selectors/#target-pseudo)
 > pseudo-classes), to negations of the former
 
   visited   ), the mouse is over an       hover   ), a checkbox is       checked
             element (:                            checked (:             
 
 
-> ([[negation]](https://www.w3.org/TR/selectors/#negation)
+> (&lbrack;&lbrack;negation&rbrack;&rbrack;(https://www.w3.org/TR/selectors/#negation)
 > pseudo-class) or to languages
-> ([[lang]](https://www.w3.org/TR/selectors/#lang-pseudo)
+> (&lbrack;&lbrack;lang&rbrack;&rbrack;(https://www.w3.org/TR/selectors/#lang-pseudo)
 > pseudo-class). Examples include whether or not a link has been
 > followed (:), etc.
 >
@@ -744,84 +741,84 @@ property:
 > <b>List of pseudo-classes:</b>
 <b>Name Description</b>
 
-[[:active](https://www.w3.org/TR/css3-selectors/#the-user-action-pseudo-classes-hover-act)]
+&lbrack;&lbrack;:active&rbrack;(https://www.w3.org/TR/css3-selectors/#the-user-action-pseudo-classes-hover-act)&rbrack;
 Applies to any element being activated (i.e. clicked) by the user.
 
 > Allows you to build sets of related selectors by creating groups that
 > the
 >
-> [[:any]](https://developer.mozilla.org/en-US/docs/Web/CSS/:any)
+> &lbrack;&lbrack;:any&rbrack;&rbrack;(https://developer.mozilla.org/en-US/docs/Web/CSS/:any)
 > included items will match. This is an alternative to repeating an
 > entire selector.
 >
 > Selects the current active #news element (clicked on a URL
 >
-> [[:target]](https://developer.mozilla.org/en-US/docs/Web/CSS/:target)
+> &lbrack;&lbrack;:target&rbrack;&rbrack;(https://developer.mozilla.org/en-US/docs/Web/CSS/:target)
 > containing that anchor name)
 >
 > Applies to radio, checkbox, or option elements that are checked
 >
-> [[:checked]](https://www.w3.org/TR/css3-selectors/#checked)
+> &lbrack;&lbrack;:checked&rbrack;&rbrack;(https://www.w3.org/TR/css3-selectors/#checked)
 > or toggled into an &quot;on&quot; state.
 >
 > Represents any user interface element that is the default among a
 > group of
 >
-> [[:default]](https://developer.mozilla.org/en-US/docs/Web/CSS/:default)
+> &lbrack;&lbrack;:default&rbrack;&rbrack;(https://developer.mozilla.org/en-US/docs/Web/CSS/:default)
 >
 > similar elements.
 
-[[:disabled](https://www.w3.org/TR/css3-selectors/#enableddisabled)]
+&lbrack;&lbrack;:disabled&rbrack;(https://www.w3.org/TR/css3-selectors/#enableddisabled)&rbrack;
 Applies to any UI element which is in a disabled state.
 
-[[:empty](https://www.w3.org/TR/selectors/#empty-pseudo)]
+&lbrack;&lbrack;:empty&rbrack;(https://www.w3.org/TR/selectors/#empty-pseudo)&rbrack;
 Applies to any element which has no children.
 
-[[:enabled](https://www.w3.org/TR/css3-selectors/#enableddisabled)]
+&lbrack;&lbrack;:enabled&rbrack;(https://www.w3.org/TR/css3-selectors/#enableddisabled)&rbrack;
 Applies to any UI element which is in an enabled state.
 
 > Used in conjunction with the &commat;page rule, this selects the first page
 > in a
 >
-> [[:first]](http://tympanus.net/codrops/css_reference/first)
+> &lbrack;&lbrack;:first&rbrack;&rbrack;(http://tympanus.net/codrops/css_reference/first)
 > printed document.
 
-[[:first-child](https://developer.mozilla.org/en-US/docs/Web/CSS/:first-child)]
+&lbrack;&lbrack;:first-child&rbrack;(https://developer.mozilla.org/en-US/docs/Web/CSS/:first-child)&rbrack;
 Represents any element that is the first child element of its parent.
 
 > Applies when an element is the first of the selected element type
 >
-> [[:first-of-type]](https://www.w3.org/TR/css3-selectors/#first-of-type-pseudo)
+> &lbrack;&lbrack;:first-of-type&rbrack;&rbrack;(https://www.w3.org/TR/css3-selectors/#first-of-type-pseudo)
 > inside its parent. This may or may not be the first-child.
 >
 > Applies to any element which has the user&apos;s focus. This can be given
 > by the
 >
-> [[:focus]](https://www.w3.org/TR/css3-selectors/#the-user-action-pseudo-classes-hover-act)
+> &lbrack;&lbrack;:focus&rbrack;&rbrack;(https://www.w3.org/TR/css3-selectors/#the-user-action-pseudo-classes-hover-act)
 > user&apos;s keyboard, mouse events, or other forms of input.
 >
 > Can be used to highlight a whole section when one element inside it is
 > focused. It matches
 >
-> [[:focus-within]](https://developer.mozilla.org/en-US/docs/Web/CSS/:focus-within)
+> &lbrack;&lbrack;:focus-within&rbrack;&rbrack;(https://developer.mozilla.org/en-US/docs/Web/CSS/:focus-within)
 > any element that the :focus pseudo-class matches or that has a
 > descendant focused.
 >
 > Applies to any element displayed in full-screen mode. It selects the
 > whole stack
 >
-> [[:full-screen]](https://developer.mozilla.org/en-US/docs/Web/CSS/:fullscreen)
+> &lbrack;&lbrack;:full-screen&rbrack;&rbrack;(https://developer.mozilla.org/en-US/docs/Web/CSS/:fullscreen)
 > of elements and not just the top level element.
 >
 > Applies to any element being hovered by the user&apos;s pointing device,
 > but
 >
-> [[:hover]](https://www.w3.org/TR/css3-selectors/#the-user-action-pseudo-classes-hover-act)
+> &lbrack;&lbrack;:hover&rbrack;&rbrack;(https://www.w3.org/TR/css3-selectors/#the-user-action-pseudo-classes-hover-act)
 > not activated.
 >
 > Applies radio or checkbox UI elements which are neither checked nor
 >
-> [[:indeterminate](https://www.w3.org/TR/css3-selectors/#indeterminate)]
+> &lbrack;&lbrack;:indeterminate&rbrack;(https://www.w3.org/TR/css3-selectors/#indeterminate)&rbrack;
 > unchecked, but are in an indeterminate state. This can be due to an
 > element&apos;s attribute or DOM manipulation.
 
@@ -833,7 +830,7 @@ Represents any element that is the first child element of its parent.
 > its value attribute inside the specified range limitations for this
 > element.
 >
-> [[:in-range]](https://developer.mozilla.org/en-US/docs/Web/CSS/:in-range)
+> &lbrack;&lbrack;:in-range&rbrack;&rbrack;(https://developer.mozilla.org/en-US/docs/Web/CSS/:in-range)
 >
 > It allows the page to give a feedback that the value currently defined
 > using the element is inside the range limits.
@@ -846,7 +843,7 @@ Represents any element that is the first child element of its parent.
   type
 
 
-> [[:invalid]](http://tympanus.net/codrops/css_reference/invalid/)
+> &lbrack;&lbrack;:invalid&rbrack;&rbrack;(http://tympanus.net/codrops/css_reference/invalid/)
 > the type specified in the = attribute.
 
   <b>&lt;body</b>
@@ -857,51 +854,51 @@ Represents any element that is the first child element of its parent.
   lang
 
 
-> [[:lang](https://www.w3.org/TR/css3-selectors/#lang-pseudo)]
+> &lbrack;&lbrack;:lang&rbrack;(https://www.w3.org/TR/css3-selectors/#lang-pseudo)&rbrack;
 > designated = attribute. For the pseudo-class to be valid, it must
-> contain a [[valid two or three letter language
-> code.]](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes)
+> contain a &lbrack;&lbrack;valid two or three letter language
+> code.&rbrack;&rbrack;(https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes)
 
-[[:last-child](https://developer.mozilla.org/en-US/docs/Web/CSS/:last-child)]
+&lbrack;&lbrack;:last-child&rbrack;(https://developer.mozilla.org/en-US/docs/Web/CSS/:last-child)&rbrack;
 Represents any element that is the last child element of its parent.
 
 > Applies when an element is the last of the selected element type
 > inside
 >
-> [[:last-of-type]](https://www.w3.org/TR/css3-selectors/#last-of-type-pseudo)
+> &lbrack;&lbrack;:last-of-type&rbrack;&rbrack;(https://www.w3.org/TR/css3-selectors/#last-of-type-pseudo)
 > its parent. This may or may not be the last-child.
 >
 > Used in conjunction with the &commat;page rule, this selects all the left
 >
-> [[:left]](http://tympanus.net/codrops/css_reference/left_pseudo-class/)
+> &lbrack;&lbrack;:left&rbrack;&rbrack;(http://tympanus.net/codrops/css_reference/left_pseudo-class/)
 >
 > pages in a printed document.
 
-[[:link](https://www.w3.org/TR/css3-selectors/#the-link-pseudo-classes-link-and-visited)]
+&lbrack;&lbrack;:link&rbrack;(https://www.w3.org/TR/css3-selectors/#the-link-pseudo-classes-link-and-visited)&rbrack;
 Applies to any links which haven&apos;t been visited by the user.
 
 > Applies to all elements which <b>do not</b> match the value passed to
 
   not      &lpar;p&rpar; or :          not      (   .class-name
-  [[not]](https://www.w3.org/wiki/CSS/Selectors/pseudo-classes/:not)
+  &lbrack;&lbrack;not&rbrack;&rbrack;(https://www.w3.org/wiki/CSS/Selectors/pseudo-classes/:not)
   not
 
 > (:) for example. It must have a value to be
 >
-> [[:()]](https://www.w3.org/wiki/CSS/Selectors/pseudo-classes/:not)
+> &lbrack;&lbrack;:()&rbrack;&rbrack;(https://www.w3.org/wiki/CSS/Selectors/pseudo-classes/:not)
 >
 > valid and it can only contain one selector. However, you can chain
 > multiple : selectors together.
 >
 > Applies when an element is the n-th element of its parent, where n
 >
-> [[:nth-child](https://www.w3.org/TR/css3-selectors/#nth-child-pseudo)]
+> &lbrack;&lbrack;:nth-child&rbrack;(https://www.w3.org/TR/css3-selectors/#nth-child-pseudo)&rbrack;
 > can be an integer, a mathematical expression (e.g n+3) or the keywords
 > odd or even.
 >
 > Applies when an element is the n-th element of its parent of the
 >
-> [[:nth-of-type](https://www.w3.org/TR/css3-selectors/#nth-of-type-pseudo)]
+> &lbrack;&lbrack;:nth-of-type&rbrack;(https://www.w3.org/TR/css3-selectors/#nth-of-type-pseudo)&rbrack;
 > same element type, where n can be an integer, a mathematical
 > expression (e.g n+3) or the keywords odd or even.
 
@@ -911,7 +908,7 @@ Applies to any links which haven&apos;t been visited by the user.
 > The : CSS pseudo-class represents any element which is the only child
 > of its parent. This is the same as
 >
-> [[:only-child]](https://developer.mozilla.org/en-US/docs/Web/CSS/:only-child)
+> &lbrack;&lbrack;:only-child&rbrack;&rbrack;(https://developer.mozilla.org/en-US/docs/Web/CSS/:only-child)
 
   first-child    :   last-child    or :  nth-child    (1):   nth-last-child
 
@@ -922,7 +919,7 @@ Applies to any links which haven&apos;t been visited by the user.
 
 > The : CSS pseudo-class represents any element
 
-[[:optional](https://developer.mozilla.org/en-US/docs/Web/CSS/:optional)]
+&lbrack;&lbrack;:optional&rbrack;(https://developer.mozilla.org/en-US/docs/Web/CSS/:optional)&rbrack;
 that does not have the required attribute set on it. This allows
 
 > forms to easily indicate optional fields and to style them
@@ -933,46 +930,46 @@ that does not have the required attribute set on it. This allows
 > The : CSS pseudo-class matches when an element has its value attribute
 > outside the specified range limitations for this element.
 >
-> [[:out-of-range](https://developer.mozilla.org/en-US/docs/Web/CSS/:out-of-range)]
+> &lbrack;&lbrack;:out-of-range&rbrack;(https://developer.mozilla.org/en-US/docs/Web/CSS/:out-of-range)&rbrack;
 > It allows the page to give a feedback that the value currently defined
 > using the element is outside the range limits. A value can be outside
 > of a range if it is either smaller or larger than maximum and minimum
 > set values.
 
-  [[placeholder-shown]](https://developer.mozilla.org/en-US/docs/Web/CSS/:placeholder-shown)
+  &lbrack;&lbrack;placeholder-shown&rbrack;&rbrack;(https://developer.mozilla.org/en-US/docs/Web/CSS/:placeholder-shown)
 
-> [[:]](https://developer.mozilla.org/en-US/docs/Web/CSS/:placeholder-shown)<b>Experimental.</b>
+> &lbrack;&lbrack;:&rbrack;&rbrack;(https://developer.mozilla.org/en-US/docs/Web/CSS/:placeholder-shown)<b>Experimental.</b>
 > Applies to any form element currently displaying placeholder text.
 
-[[:read-only](https://developer.mozilla.org/en-US/docs/Web/CSS/:read-only)]
+&lbrack;&lbrack;:read-only&rbrack;(https://developer.mozilla.org/en-US/docs/Web/CSS/:read-only)&rbrack;
 Applies to any element which is not editable by the user.
 
   <b>&lt;input&gt;</b>
 
-[[:read-write](https://developer.mozilla.org/en-US/docs/Web/CSS/:read-write)]
+&lbrack;&lbrack;:read-write&rbrack;(https://developer.mozilla.org/en-US/docs/Web/CSS/:read-write)&rbrack;
 Applies to any element that is editable by a user, such as <b>&gt;</b>
 elements.
 
 > Used in conjunction with the &commat;page rule, this selects all the right
 > pages in a
 >
-> [[:right]](http://tympanus.net/codrops/css_reference/right_pseudo-class)
+> &lbrack;&lbrack;:right&rbrack;&rbrack;(http://tympanus.net/codrops/css_reference/right_pseudo-class)
 > printed document.
 
-[[:root](https://developer.mozilla.org/en-US/docs/Web/CSS/:root)]
+&lbrack;&lbrack;:root&rbrack;(https://developer.mozilla.org/en-US/docs/Web/CSS/:root)&rbrack;
 matches the root element of a tree representing the document.
 
 > CSS pseudo-class matches the elements that are a reference
 >
-> [[:scope]](https://developer.mozilla.org/en-US/docs/Web/CSS/:scope)
+> &lbrack;&lbrack;:scope&rbrack;&rbrack;(https://developer.mozilla.org/en-US/docs/Web/CSS/:scope)
 > point for selectors to match against.
 >
 > Selects the current active #news element (clicked on a URL
 >
-> [[:target]](https://developer.mozilla.org/en-US/docs/Web/CSS/:target)
+> &lbrack;&lbrack;:target&rbrack;&rbrack;(https://developer.mozilla.org/en-US/docs/Web/CSS/:target)
 > containing that anchor name)
 
-[[:visited](https://www.w3.org/TR/css3-selectors/#the-link-pseudo-classes-link-and-visited)]
+&lbrack;&lbrack;:visited&rbrack;(https://www.w3.org/TR/css3-selectors/#the-link-pseudo-classes-link-and-visited)&rbrack;
 Applies to any links which have has been visited by the user.
 
   visited
@@ -986,7 +983,7 @@ Applies to any links which have has been visited by the user.
 
 > &quot;The :nth-child(an+b) CSS pseudo-class matches an element that has
 > an+b-1 siblings before it in the document tree, for a given positive
-> <b>or zero value</b> for n&quot; - [MDN :nth-child]
+> <b>or zero value</b> for n&quot; - &lbrack;MDN :nth-child&rbrack;
 
 | <b>pseudo-selector</b>          | <b>1 2 3 4 5 6 7 8 9 10</b>           |
 |------------------------------|---------------------------------------|
@@ -1064,7 +1061,7 @@ attribute selector to avoid the high specificity of the ID selector.</p>
 
 <pre><code>
 #element { . . . } /* High specificity will override many selectors */
-[id="element"] { . . .} /* Low specificity, can be overridden easily */
+&lbrack;id="element"&rbrack; { . . .} /* Low specificity, can be overridden easily */
 </code></pre>
 
 <h3 id="ch4-8">Section 4.8: The :last-of-type selector</h3>
@@ -1084,7 +1081,7 @@ h1: last-of-type {
 &gt;
 </code></pre>
 
-[[jsFiddle]](http://jsfiddle.net/MadalinaTn/YmMZZ/113/)
+&lbrack;&lbrack;jsFiddle&rbrack;&rbrack;(http://jsfiddle.net/MadalinaTn/YmMZZ/113/)
 
 <h3 id="ch4-9">Section 4.9: CSS3 :in-range selector example</h3>
 
@@ -1105,7 +1102,7 @@ The :in-range CSS pseudo-class matches when an element has its value attribute
 inside the specified range limitations for this element. It allows the
 page to give a feedback that the value currently defined using the
 element is inside the range
-limits.[[&lbrack;1&rbrack;]](https://developer.mozilla.org/en-US/docs/Web/CSS/:in-range)
+limits.&lbrack;&lbrack;&lbrack;1&rbrack;&rbrack;&rbrack;(https://developer.mozilla.org/en-US/docs/Web/CSS/:in-range)
 
 <h3 id="ch4-10">Section 4.10: A. The :not pseudo-class example & B. :focuswithin CSS pseudo-class</h3>
 
@@ -1127,7 +1124,7 @@ that are not disabled and don&apos;t have the class .example:
 <h4>CSS:</h4>
 
 <pre><code>
-input:not([disabled]):not(.example){
+input:not(&lbrack;disabled&rbrack;):not(.example){
   background-color: #ccc;
 }
 </code></pre>
@@ -1139,7 +1136,7 @@ Selectors Level 4:
 <h4>CSS:</h4>
 
 <pre><code>
-input:not([disabled]):not(.example){
+input:not(&lbrack;disabled&rbrack;):not(.example){
   background-color: #ccc;
 }
 </code></pre>
@@ -1273,12 +1270,12 @@ For example, the following HTML div element...
 
 | <b>Effect</b>  | <b>Pseudo Selector</b>                             |
 |----------------|----------------------------------------------------|
-| Thumb          | input[type=range]::-webkit-slider-thumb, input[type=range]::-moz-range-thumb, |
-|                | input[type=range]::-ms-thumb               |
-| Track          | input[type=range]::-webkit-slider-runnable-track, input[type=range]::-moz-range-track, |
-|                | input[type=range]::-ms-track |
-| OnFocus        | input[type=range]:focus |
-| Lower part of  | input[type=range]::-moz-range-progress, input[type=range]::-mx-fill-lower(not possible |
+| Thumb          | input&lbrack;type=range&rbrack;::-webkit-slider-thumb, input&lbrack;type=range&rbrack;::-moz-range-thumb, |
+|                | input&lbrack;type=range&rbrack;::-ms-thumb               |
+| Track          | input&lbrack;type=range&rbrack;::-webkit-slider-runnable-track, input&lbrack;type=range&rbrack;::-moz-range-track, |
+|                | input&lbrack;type=range&rbrack;::-ms-track |
+| OnFocus        | input&lbrack;type=range&rbrack;:focus |
+| Lower part of  | input&lbrack;type=range&rbrack;::-moz-range-progress, input&lbrack;type=range&rbrack;::-mx-fill-lower(not possible |
 | the track      | in WebKit browsers currently -JS needed) |
 
 <h3 id="ch4-14">Section 4.14: The :only-child pseudo-class selector example</h3>
@@ -1554,7 +1551,7 @@ linear-gradient( &lt;direction&gt;?, &lt;color-stop-1&gt;, &lt;color-stop-2&gt;,
 
 
 > Could be an argument like ; or an
-> [[angle]](https://www.w3.org/TR/css3-values/#angles) as
+> &lbrack;&lbrack;angle&rbrack;&rbrack;(https://www.w3.org/TR/css3-values/#angles) as
 > 0deg,
 
   <b>&lt;direction</b>
@@ -1562,10 +1559,10 @@ linear-gradient( &lt;direction&gt;?, &lt;color-stop-1&gt;, &lt;color-stop-2&gt;,
 
 > <b>&gt;</b> 90deg&period;.. . The angle starts from to top and rotates clockwise.
 > Can be specified in
-> [[deg]](https://www.w3.org/TR/css3-values/#deg),
-> [[grad]](https://www.w3.org/TR/css3-values/#grad),
-> [[rad]](https://www.w3.org/TR/css3-values/#rad), or
-> [[turn]](https://www.w3.org/TR/css3-values/#turn). If
+> &lbrack;&lbrack;deg&rbrack;&rbrack;(https://www.w3.org/TR/css3-values/#deg),
+> &lbrack;&lbrack;grad&rbrack;&rbrack;(https://www.w3.org/TR/css3-values/#grad),
+> &lbrack;&lbrack;rad&rbrack;&rbrack;(https://www.w3.org/TR/css3-values/#rad), or
+> &lbrack;&lbrack;turn&rbrack;&rbrack;(https://www.w3.org/TR/css3-values/#turn). If
 > omitted, the gradient flows from top to bottom
 
   <b>&lt;color-stop-list</b>
@@ -1575,7 +1572,7 @@ linear-gradient( &lt;direction&gt;?, &lt;color-stop-1&gt;, &lt;color-stop-2&gt;,
 
 
 > List of colors, optionally followed each one by a percentage or
-> [[length]](https://www.w3.org/TR/css3-values/#lengths) to
+> &lbrack;&lbrack;length&rbrack;&rbrack;(https://www.w3.org/TR/css3-values/#lengths) to
 > display it at. For
 >
 > <b>&gt;</b> example, &period;..
@@ -1821,12 +1818,12 @@ black
 
 <b>Value Meaning</b>
 
-> [[Angle unit]](https://www.w3.org/TR/css3-values/#angles).
+> &lbrack;&lbrack;Angle unit&rbrack;&rbrack;(https://www.w3.org/TR/css3-values/#angles).
 > The angle starts from to top and rotates clockwise. Can be specified
-> in [[deg]](https://www.w3.org/TR/css3-values/#deg),
-> [[grad]](https://www.w3.org/TR/css3-values/#grad),
-> [[rad]](https://www.w3.org/TR/css3-values/#rad), or -45deg
-> [[turn]](https://www.w3.org/TR/css3-values/#turn).
+> in &lbrack;&lbrack;deg&rbrack;&rbrack;(https://www.w3.org/TR/css3-values/#deg),
+> &lbrack;&lbrack;grad&rbrack;&rbrack;(https://www.w3.org/TR/css3-values/#grad),
+> &lbrack;&lbrack;rad&rbrack;&rbrack;(https://www.w3.org/TR/css3-values/#rad), or -45deg
+> &lbrack;&lbrack;turn&rbrack;&rbrack;(https://www.w3.org/TR/css3-values/#turn).
 
   to bottom       . Syntax:     to    &lbrack;   y-axis     (   top OR bottom
 
@@ -1849,68 +1846,49 @@ black
 > instead of color names. Color names were used for the sake of
 > illustration. Also note that the radial-gradient syntax is much more
 > complex than linear-gradient, and a simplified version is shown here.
-> For a full explanation and specs, see the [[MDN
-> Docs]](https://developer.mozilla.org/en-US/docs/Web/CSS/radial-gradient)
+> For a full explanation and specs, see the &lbrack;&lbrack;MDN
+> Docs&rbrack;&rbrack;(https://developer.mozilla.org/en-US/docs/Web/CSS/radial-gradient)
 
-## Section 5.3: Background Image
+<h3 id="ch5-3">Section 5.3: Background Image</h3>
 
 > The background-image property is used to specify a background image to
 > be applied to all matched elements. By default, this image is tiled to
 > cover the entire element, excluding margin.
 
+```
 .myClass
-
 {
-
 <b>background-image</b>
-
 :
+url
+(
+&apos;/path/to/image.jpg&apos;
+)
+;
+}
+```
 
 url
-
-(
-
-&apos;/path/to/image.jpg&apos;
-
-)
-
-;
-
-}
-
-  url
 
 > To use multiple images as background-image, define comma separated ()
 
+```
 .myClass
-
 {
-
 <b>background-image</b>
-
 :
-
 url
-
 (
-
 &apos;/path/to/image.jpg&apos;
-
 )
-
 ,
-
 url
-
 (
-
 &apos;/path/to/image2.jpg&apos;
-
 )
-
 ;
-
 }
+```
 
 > The images will stack according to their order with the first declared
 > image on top of the others and so on.
@@ -1941,69 +1919,62 @@ url
 > left offset (px/%) right offset (px/%) &vertbar; center center &vertbar; left top &vertbar;
 > right bottom;
 
-## Section 5.4: Background Shorthand
+<h3 id="ch5-4">Section 5.4: Background Shorthand</h3>
 
 > The background property can be used to set one or more background
 > related properties:
 
-+--------------+--------------------------------------------------+----+
-| <b>Value</b>    | <b>Description</b>                                  |   |
-|              |                                                  | C |
-|              |                                                  | SS |
-|              |                                                  | Ve |
-|              |                                                  | r. |
-|              |                                                  |  |
-+==============+==================================================+====+
-| back         | Background image to use                          | 1+ |
-| ground-image |                                                  |    |
-+--------------+--------------------------------------------------+----+
-| back         | Background color to apply                        | 1+ |
-| ground-color |                                                  |    |
-+--------------+--------------------------------------------------+----+
-| backgro      | Background image&apos;s position                     | 1+ |
-| und-position |                                                  |    |
-+--------------+--------------------------------------------------+----+
-| bac          | Background image&apos;s size                         | 3+ |
-| kground-size |                                                  |    |
-+--------------+--------------------------------------------------+----+
-| backg        | How to repeat background image                   | 1+ |
-| round-repeat |                                                  |    |
-+--------------+--------------------------------------------------+----+
-| backg        | How the background is positioned (ignored when   | 3+ |
-| round-origin | background-attachment is fixed)                  |    |
-+--------------+--------------------------------------------------+----+
-| bac          | How the background is painted relative to the    | 3+ |
-| kground-clip | content-box, border-box, or the padding-box      |    |
-+--------------+--------------------------------------------------+----+
-| How the      |                                                  | 1+ |
-| background   |                                                  |    |
-| image        |                                                  |    |
-| behaves,     |                                                  |    |
-| whether it   |                                                  |    |
-| scrolls      |                                                  |    |
-| along with   |                                                  |    |
-| its          |                                                  |    |
-| containing   |                                                  |    |
-|              |                                                  |    |
-| backgroun    |                                                  |    |
-| d-attachment |                                                  |    |
-| block or has |                                                  |    |
-| a fixed      |                                                  |    |
-| position     |                                                  |    |
-| within the   |                                                  |    |
-| viewport     |                                                  |    |
-+--------------+--------------------------------------------------+----+
-| initial Sets |                                                  | 3+ |
-| the property |                                                  |    |
-| to value to  |                                                  |    |
-| default      |                                                  |    |
-+--------------+--------------------------------------------------+----+
-| inherit      |                                                  | 2+ |
-| Inherits     |                                                  |    |
-| property     |                                                  |    |
-| value from   |                                                  |    |
-| parent       |                                                  |    |
-+--------------+--------------------------------------------------+----+
+| <b>Value</b> | <b>Description</b>                                  |
+|--------------|--------------------------------------------------|
+| back         | Background image to use                          |
+| ground-image |                                                  |
+|--------------|--------------------------------------------------|
+| back         | Background color to apply                        |
+| ground-color |                                                  |
+|--------------|--------------------------------------------------|
+| backgro      | Background image&apos;s position                 |
+| und-position |                                                  |
+|--------------|--------------------------------------------------|
+| bac          | Background image&apos;s size                     |
+| kground-size |                                                  |
+|--------------|--------------------------------------------------|
+| backg        | How to repeat background image                   |
+| round-repeat |                                                  |
+|--------------|--------------------------------------------------|
+| backg        | How the background is positioned (ignored when   |
+| round-origin | background-attachment is fixed)                  |
+|--------------|--------------------------------------------------|
+| bac          | How the background is painted relative to the    |
+| kground-clip | content-box, border-box, or the padding-box      |
+|--------------|--------------------------------------------------|
+| How the      |                                                  |
+| background   |                                                  |
+| image        |                                                  |
+| behaves,     |                                                  |
+| whether it   |                                                  |
+| scrolls      |                                                  |
+| along with   |                                                  |
+| its          |                                                  |
+| containing   |                                                  |
+|              |                                                  |
+| backgroun    |                                                  |
+| d-attachment |                                                  |
+| block or has |                                                  |
+| a fixed      |                                                  |
+| position     |                                                  |
+| within the   |                                                  |
+| viewport     |                                                  |
+|--------------|--------------------------------------------------|
+| initial Sets |                                                  |
+| the property |                                                  |
+| to value to  |                                                  |
+| default      |                                                  |
+|--------------|--------------------------------------------------|
+| inherit      |                                                  |
+| Inherits     |                                                  |
+| property     |                                                  |
+| value from   |                                                  |
+| parent       |                                                  |
 
 > The order of the values does not matter and every value is optional
 > <b>Syntax</b>
@@ -2097,12 +2068,12 @@ green
 > given. If you wish only to modify a background property value
 > previously set, use a longhand property instead.
 
-## Section 5.5: Background Size
+<h3 id="ch5-5">Section 5.5: Background Size</h3>
 
 > <b>General overview</b>
 >
 > The
-> [[background-size]](https://www.w3.org/TR/2014/CR-css3-background-20140909/#the-background-size)
+> &lbrack;&lbrack;background-size&rbrack;&rbrack;(https://www.w3.org/TR/2014/CR-css3-background-20140909/#the-background-size)
 > property enables one to control the scaling of the background-image.
 > It takes up to two values, which determine the scale/size of the
 > resulting image in vertical and and horizontal direction. If the
@@ -2245,9 +2216,9 @@ px
 
 The behaviour depends on the
 
-[background-origi]
+&lbrack;background-origi&rbrack;
 
-[[n]](https://www.w3.org/TR/2014/CR-css3-background-20140909/#the-background-origin)
+&lbrack;&lbrack;n&rbrack;&rbrack;(https://www.w3.org/TR/2014/CR-css3-background-20140909/#the-background-origin)
 
 .
 
@@ -2267,14 +2238,14 @@ The behaviour depends on the
 >
 > <b>Eggsplanation for contain and cover</b>
 >
-> Sorry for the bad pun, but we&apos;re going to use a [[picture of the day
+> Sorry for the bad pun, but we&apos;re going to use a &lbrack;&lbrack;picture of the day
 > by Biswarup
-> Ganguly]](https://commons.wikimedia.org/wiki/File:Chicken_Egg_without_Eggshell_5859.jpg)
+> Ganguly&rbrack;&rbrack;(https://commons.wikimedia.org/wiki/File:Chicken_Egg_without_Eggshell_5859.jpg)
 > for demonstration. Lets say that this is your screen, and the gray
 > area is outside of your visible screen. For demonstration, We&apos;re
 > going to assume a 16 × 9 ratio.
 
-![](./images/media/image7.png){width="4.958333333333333in"
+!&lbrack;&rbrack;(./images/media/image7.png){width="4.958333333333333in"
 height="2.7916666666666665in"}
 
 > We want to use the aforementioned picture of the day as a background.
@@ -2296,7 +2267,7 @@ width and its height can fit inside the background positioning area.
 > contained in the background positioning area, however, there could be
 > some empty space filled with your background-color in this case:
 
-![](./images/media/image9.png){width="4.958333333333333in"
+!&lbrack;&rbrack;(./images/media/image9.png){width="4.958333333333333in"
 height="3.09375in"}
 
 <b>cover</b>
@@ -2313,7 +2284,7 @@ area.
 > There will be no visible background-color, however depending on the
 > screen&apos;s ratio a great part of your image could be cut off:
 
-![](./images/media/image11.png){width="4.958333333333333in"
+!&lbrack;&rbrack;(./images/media/image11.png){width="4.958333333333333in"
 height="2.7916666666666665in"}
 
 > <b>Demonstration with actual code</b>
@@ -2763,10 +2734,10 @@ div
 
 <b>&gt;</b>
 
-## Section 5.6: Background Position
+<h3 id="ch5-6">Section 5.6: Background Position</h3>
 
 > The
-> [[background-position]](https://drafts.csswg.org/css-backgrounds-3/#background-position)
+> &lbrack;&lbrack;background-position&rbrack;&rbrack;(https://drafts.csswg.org/css-backgrounds-3/#background-position)
 > property is used to specify the starting position for a background
 > image or gradient
 
@@ -2831,13 +2802,13 @@ url
 >
 > <b>NOTE:</b> This is supported in all browsers except Firefox (versions
 > 31-48)
-> [[2]](http://caniuse.com/#search=background-position-x).
+> &lbrack;&lbrack;2&rbrack;&rbrack;(http://caniuse.com/#search=background-position-x).
 > Firefox 49, to be released September 2016, *will* support these
-> properties. Until then, [[there is a Firefox hack within this
-> Stack] [Overflow
-> answer.]](http://stackoverflow.com/questions/14844407/background-position-y-doesnt-work-in-firefox-via-css/29282573#29282573)
+> properties. Until then, &lbrack;&lbrack;there is a Firefox hack within this
+> Stack&rbrack; &lbrack;Overflow
+> answer.&rbrack;&rbrack;(http://stackoverflow.com/questions/14844407/background-position-y-doesnt-work-in-firefox-via-css/29282573#29282573)
 
-## Section 5.7: The background-origin property
+<h3 id="ch5-7">Section 5.7: The background-origin property</h3>
 
 > The background-origin property specifies where the background image is
 > positioned.
@@ -2851,105 +2822,32 @@ url
 > The position is relative to the border box content-box - The position
 > is relative to the content box initial inherit
 >
-> <b>CSS</b>
 
+<h4>CSS</h4>
+
+<pre><code>
 .example
-
 {
-
-<b>width</b>
-
-:
-
-300
-
-px
-
-;
-
-<b>border</b>
-
-:
-
-20
-
-px
-
-solid
-
-black
-
-;
-
-<b>padding</b>
-
-:
-
-50
-
-px
-
-;
-
-<b>background</b>
-
-:
-
-url
-
-(
-
+<b>width</b>: 300px;
+<b>border</b>: 20px solid black;
+<b>padding</b>: 50px;
+<b>background</b>: url (
 *https://static.pexels.com/photos/6440/magazines-desk-work-workspace-medium.jpg*
-
-)
-
-;
-
-<b>background-repeat</b>
-
-:
-
-no-repeat
-
-;
-
+);
+<b>background-repeat</b>: no-repeat;
 }
 
-.example1
-
-{
-
+.example1 {
 }
-
-.example2
-
-{
-
-<b>background-origin</b>
-
-:
-
-border-box
-
-;
-
+.example2 {
+<b>background-origin</b>: border-box;
 }
+.example3 {
+<b>background-origin</b>: content-box;
+}</code></pre>
 
-.example3
 
-{
-
-<b>background-origin</b>
-
-:
-
-content-box
-
-;
-
-}
-
-> <b>HTML</b>
+<h4>HTML</h4>
 
 <b>&lt;</b>
 
@@ -2996,13 +2894,13 @@ tincidunt ut laoreet dolore magna aliquam erat volutpat.**&lt;/p&gt;**
 ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo
 consequat.**&lt;/p&gt; &lt;/div&gt;** Result:
 
-![](./images/media/image13.jpg){width="7.48037510936133in"
+!&lbrack;&rbrack;(./images/media/image13.jpg){width="7.48037510936133in"
 height="6.0841666666666665in"}
 
 > More:
 
-[[https://www.w3.org/TR/css3-background/#the-background-origin]](https://www.w3.org/TR/css3-background/#the-background-origin)
-[[https://developer.mozilla.org/en-US/docs/Web/CSS/background-origin]](https://developer.mozilla.org/en-US/docs/Web/CSS/background-origin)
+&lbrack;&lbrack;https://www.w3.org/TR/css3-background/#the-background-origin&rbrack;&rbrack;(https://www.w3.org/TR/css3-background/#the-background-origin)
+&lbrack;&lbrack;https://developer.mozilla.org/en-US/docs/Web/CSS/background-origin&rbrack;&rbrack;(https://developer.mozilla.org/en-US/docs/Web/CSS/background-origin)
 
 ## Section 5.8: Multiple Background Image
 
@@ -3115,9 +3013,9 @@ bottom
 }
 ```
 
-[Dem]
+&lbrack;Dem&rbrack;
 
-[[o]](https://jsfiddle.net/z30up2un/)
+&lbrack;&lbrack;o&rbrack;&rbrack;(https://jsfiddle.net/z30up2un/)
 
 ## Section 5.9: Background Attachment
 
@@ -3379,7 +3277,7 @@ div {
 
 > Here&apos;s how a looks like:
 
-![](./images/media/image014.jpg){width="7.48037510936133in"
+!&lbrack;&rbrack;(./images/media/image014.jpg){width="7.48037510936133in"
 height="4.302722003499563in"}
 
 <h3 id="ch5-12">Section 5.12: background-blend-mode Property</h3>
@@ -3415,7 +3313,7 @@ Lorem ipsum
 ```
 
 See result here:
-[[https://jsfiddle.net/MadalinaTn/y69d28Lb/]](https://jsfiddle.net/MadalinaTn/y69d28Lb/)
+&lbrack;&lbrack;https://jsfiddle.net/MadalinaTn/y69d28Lb/&rbrack;&rbrack;(https://jsfiddle.net/MadalinaTn/y69d28Lb/)
 
 > CSS Syntax: background-blend-mode: normal &vertbar; multiply &vertbar; screen &vertbar;
 > overlay &vertbar; darken &vertbar; lighten &vertbar; color-dodge &vertbar; saturation &vertbar; color &vertbar;
@@ -3493,7 +3391,7 @@ img {
 }
 ```
 
-[[View Result]](https://jsfiddle.net/aLu05kjy/1/) 
+&lbrack;&lbrack;View Result&rbrack;&rbrack;(https://jsfiddle.net/aLu05kjy/1/) 
 
 <h4>HTML:</h4>
 
@@ -3515,29 +3413,29 @@ body {
 }
 ```
 
-[[View Result]](https://jsfiddle.net/ttp0bzfm/1/)
+&lbrack;&lbrack;View Result&rbrack;&rbrack;(https://jsfiddle.net/ttp0bzfm/1/)
 
 > See Dynamic Vertical and Horizontal Centering under the Flexbox
 > documentation for more details on flexbox and what the styles mean.
 >
 > <b>Browser Support</b>
 >
-> Flexbox is supported by all major browsers, [[except IE versions
-> before 10]](http://caniuse.com/#search=flex).
+> Flexbox is supported by all major browsers, &lbrack;&lbrack;except IE versions
+> before 10&rbrack;&rbrack;(http://caniuse.com/#search=flex).
 >
 > Some recent browser versions, such as Safari 8 and IE10, require
-> [[vendor
-> prefixes]](https://developer.mozilla.org/en-US/docs/Glossary/Vendor_Prefix).
+> &lbrack;&lbrack;vendor
+> prefixes&rbrack;&rbrack;(https://developer.mozilla.org/en-US/docs/Glossary/Vendor_Prefix).
 >
 > For a quick way to generate prefixes there is
-> [[Autoprefixer]](https://autoprefixer.github.io/), a
+> &lbrack;&lbrack;Autoprefixer&rbrack;&rbrack;(https://autoprefixer.github.io/), a
 > third-party tool.
 >
-> For older browsers (like IE 8 & 9) a [[Polyfill is
-> available]](https://github.com/jonathantneal/flexibility).
+> For older browsers (like IE 8 & 9) a &lbrack;&lbrack;Polyfill is
+> available&rbrack;&rbrack;(https://github.com/jonathantneal/flexibility).
 >
-> For a more detailed look at flexbox browser support, see [[this
-> answer]](http://stackoverflow.com/a/35137869/3597276).
+> For a more detailed look at flexbox browser support, see &lbrack;&lbrack;this
+> answer&rbrack;&rbrack;(http://stackoverflow.com/a/35137869/3597276).
 
 <h3 id="ch6-2">Section 6.2: Using CSS transform</h3>
 
@@ -3548,8 +3446,8 @@ body {
 >
 > Keep in mind that with this technique, the element could end being
 > rendered at a non-integer pixel boundary, making it look blurry. See
-> [[this answer in
-> SO]](http://stackoverflow.com/a/32329785/1385678) for a
+> &lbrack;&lbrack;this answer in
+> SO&rbrack;&rbrack;(http://stackoverflow.com/a/32329785/1385678) for a
 > workaround.
 
 <h4>HTML</h4>
@@ -3615,8 +3513,8 @@ translate
 }
 ```
 
-[[View example in
-JSFiddle]](https://jsfiddle.net/webtiki/rz3p3ufs/)
+&lbrack;&lbrack;View example in
+JSFiddle&rbrack;&rbrack;(https://jsfiddle.net/webtiki/rz3p3ufs/)
 
 > <b>CROSS BROWSER COMPATIBILITY</b>
 >
@@ -3634,7 +3532,7 @@ JSFiddle]](https://jsfiddle.net/webtiki/rz3p3ufs/)
 > translate(-50%, -50%);
 >
 > For more information see
-> [[canIuse]](http://caniuse.com/#feat=transforms2d).
+> &lbrack;&lbrack;canIuse&rbrack;&rbrack;(http://caniuse.com/#feat=transforms2d).
 >
 > <b>MORE INFORMATION</b>
 
@@ -3642,7 +3540,7 @@ JSFiddle]](https://jsfiddle.net/webtiki/rz3p3ufs/)
 
 > The element is being positioned according to the first non-static
 > parent ( , absolute, or fixed). Explore more in this
-> [[fiddle]](https://jsfiddle.net/siavasfiroozbakht/ox8kyypa/)
+> &lbrack;&lbrack;fiddle&rbrack;&rbrack;(https://jsfiddle.net/siavasfiroozbakht/ox8kyypa/)
 > and this documentation topic.
 
   <b>left</b>   :   50%     and     <b>transform</b>    :   translateX          (   -50%
@@ -3659,7 +3557,7 @@ JSFiddle]](https://jsfiddle.net/webtiki/rz3p3ufs/)
 > can cause the centered element to appear squished. This mostly happens
 > with elements containing text, and can be fixed by adding:
 > <b>margin</b>;. View this
-> [[fiddle]](https://jsfiddle.net/4xxmxca0/) for more
+> &lbrack;&lbrack;fiddle&rbrack;&rbrack;(https://jsfiddle.net/4xxmxca0/) for more
 > information.
 
 <h3 id="ch6-3">Section 6.3: Using margin: 0 auto;</h3>
@@ -3811,11 +3709,11 @@ auto
 
 > Result:
 
-![](./images/media/image15.jpg){width="7.48037510936133in"
+!&lbrack;&rbrack;(./images/media/image15.jpg){width="7.48037510936133in"
 height="4.120708661417323in"}
 
-JSFiddle example: [[Centering objects with margin: 0
-auto;]](https://jsfiddle.net/xf1ze3v9/)
+JSFiddle example: &lbrack;&lbrack;Centering objects with margin: 0
+auto;&rbrack;&rbrack;(https://jsfiddle.net/xf1ze3v9/)
 
 <h3 id="ch6-4">Section 6.4: Using text-align</h3>
 
@@ -3865,7 +3763,7 @@ center
 > or top and bottom offsets, will center an absolutely positioned
 > elements within its parent.
 
-[[View Result]](https://jsfiddle.net/stuttufu/sj2m0oo2/1/)
+&lbrack;&lbrack;View Result&rbrack;&rbrack;(https://jsfiddle.net/stuttufu/sj2m0oo2/1/)
 
 <h4>HTML</h4>
 
@@ -3988,8 +3886,8 @@ auto
 > Elements that don&apos;t have their own implicit width and height like
 > images do, will need those values defined.
 
-Other resources: [[Absolute Centering in
-CSS]](http://codepen.io/shshaw/details/gEiDt)
+Other resources: &lbrack;&lbrack;Absolute Centering in
+CSS&rbrack;&rbrack;(http://codepen.io/shshaw/details/gEiDt)
 
 ## Section 6.6: Using calc()
 
@@ -4113,9 +4011,9 @@ px
 
 ## Section 6.8: Vertical align anything with 3 lines of code
 
-[[Supported by IE11+]](http://caniuse.com/#search=transform)
+&lbrack;&lbrack;Supported by IE11+&rbrack;&rbrack;(http://caniuse.com/#search=transform)
 
-[[View Result]](https://jsfiddle.net/bnqrLgk9/1/)
+&lbrack;&lbrack;View Result&rbrack;&rbrack;(https://jsfiddle.net/bnqrLgk9/1/)
 
 > Use these 3 lines to vertical align practically everything. Just make
 > sure the div/image you apply the code to has a parent with a height.
@@ -4476,7 +4374,7 @@ img
 }
 
 > Link to
-> [[JSFiddle]](https://jsfiddle.net/gasp10/6bv92mko/4/)
+> &lbrack;&lbrack;JSFiddle&rbrack;&rbrack;(https://jsfiddle.net/gasp10/6bv92mko/4/)
 >
 > The main points are the 3 .thumb, .details and .position-container
 > containers:
@@ -4936,8 +4834,8 @@ solid
 
 }
 
-See also [**[this
-Fiddle]**](http://jsfiddle.net/WXLsY/621/)!
+See also &lbrack;**&lbrack;this
+Fiddle&rbrack;**&rbrack;(http://jsfiddle.net/WXLsY/621/)!
 
 ## Section 6.12: Vertically align an image inside div
 
@@ -5386,14 +5284,14 @@ px
   **margin-top**:-50%
 
 
-> [***[isn&apos;t]*** [applicable to block-level
-> elements]](http://www.w3.org/TR/CSS21/visudet.html#propdef-vertical-align)
-> [[used values would compute as]
-> ***[zero]***](http://www.w3.org/TR/CSS2/visudet.html#Computing_heights_and_margins)
+> &lbrack;***&lbrack;isn&apos;t&rbrack;*** &lbrack;applicable to block-level
+> elements&rbrack;&rbrack;(http://www.w3.org/TR/CSS21/visudet.html#propdef-vertical-align)
+> &lbrack;&lbrack;used values would compute as&rbrack;
+> ***&lbrack;zero&rbrack;***&rbrack;(http://www.w3.org/TR/CSS2/visudet.html#Computing_heights_and_margins)
 >
-> [[percentage-based margin values are calculated relative to
-> the] ***[width]*** [of containing
-> block]](http://www.w3.org/TR/CSS2/box.html#margin-properties)
+> &lbrack;&lbrack;percentage-based margin values are calculated relative to
+> the&rbrack; ***&lbrack;width&rbrack;*** &lbrack;of containing
+> block&rbrack;&rbrack;(http://www.w3.org/TR/CSS2/box.html#margin-properties)
 >
 > For widest browser support, a workaround with helper elements:
 >
@@ -5571,9 +5469,9 @@ px
 
 }
 
-[[jsfiddle]](http://jsfiddle.net/ovfiddle/yVAW9/) from
-[[original
-question]](http://stackoverflow.com/a/12417336/1081234).
+&lbrack;&lbrack;jsfiddle&rbrack;&rbrack;(http://jsfiddle.net/ovfiddle/yVAW9/) from
+&lbrack;&lbrack;original
+question&rbrack;&rbrack;(http://stackoverflow.com/a/12417336/1081234).
 This approach
 
 > works with dynamic height elements respects content flow is supported
@@ -5797,11 +5695,11 @@ teal
 > The Box Model describes how the padding, border, and margin are added
 > to the content to create this rectangle.
 
-![](./images/media/image16.png){width="4.739583333333333in"
+!&lbrack;&rbrack;(./images/media/image16.png){width="4.739583333333333in"
 height="3.5416666666666665in"}
 
-*Diagram from [[CSS2.2 Working
-Draft]](https://www.w3.org/TR/CSS22/box.html#mpb-examples)*
+*Diagram from &lbrack;&lbrack;CSS2.2 Working
+Draft&rbrack;&rbrack;(https://www.w3.org/TR/CSS22/box.html#mpb-examples)*
 
 > The perimeter of each of the four areas is called an *edge*. Each edge
 > defines a *box.*
@@ -5865,7 +5763,7 @@ px
 > and a top, right, bottom, and left padding of 20px. Ignoring content,
 > our generated box will look like this:
 
-![](./images/media/image17.jpg){width="1.8229166666666667in"
+!&lbrack;&rbrack;(./images/media/image17.jpg){width="1.8229166666666667in"
 height="1.5416666666666667in"}
 
 > *Screenshot of Google Chrome&apos;s Element Styles panel*
@@ -5888,7 +5786,7 @@ height="1.5416666666666667in"}
 > to the previous element&apos;s content the new element should be
 > positioned:
 
-![](./images/media/image18.jpg){width="3.6354166666666665in"
+!&lbrack;&rbrack;(./images/media/image18.jpg){width="3.6354166666666665in"
 height="1.5416666666666667in"}
 
 > The content of each of element is separated by a 150px gap, but the
@@ -5898,7 +5796,7 @@ height="1.5416666666666667in"}
 > margin edge would be in the same position as the right border edge,
 > and our two elements would now look like this:
 
-![](./images/media/image19.jpg){width="3.4583333333333335in"
+!&lbrack;&rbrack;(./images/media/image19.jpg){width="3.4583333333333335in"
 height="1.5416666666666667in"}
 
 ## Section 7.2: box-sizing
@@ -6576,8 +6474,8 @@ px
 > margin-left margin-right margin-top margin-bottom
 >
 > The following code would apply a margin of 30 pixels to the left side
-> of the selected div. [*[View
-> Result]*](https://jsfiddle.net/wm0100x9/1/)
+> of the selected div. &lbrack;*&lbrack;View
+> Result&rbrack;*&rbrack;(https://jsfiddle.net/wm0100x9/1/)
 >
 > <h4>HTML</h4>
 
@@ -6681,8 +6579,8 @@ red
 
 > The following example applies a zero-width margin to the top of the
 > div, a 10px margin to the right side, a 50px margin to the left side,
-> and a 100px margin to the left side. [*[View
-> Result]*](https://jsfiddle.net/1979c947/)
+> and a 100px margin to the left side. &lbrack;*&lbrack;View
+> Result&rbrack;*&rbrack;(https://jsfiddle.net/1979c947/)
 >
 > <h4>HTML</h4>
 
@@ -7396,7 +7294,7 @@ class
 > Every corner of an element can have up to two values, for the vertical
 > and horizontal radius of that corner (for a maximum of 8 values).
 
-![](./images/media/image25.jpg){width="6.145833333333333in"
+!&lbrack;&rbrack;(./images/media/image25.jpg){width="6.145833333333333in"
 height="1.9375in"}
 
 > The first set of values defines the horizontal radius. The optional
@@ -8037,10 +7935,10 @@ px
 
 }
 
-![](./images/media/image27.jpg){width="1.4583333333333333in"
+!&lbrack;&rbrack;(./images/media/image27.jpg){width="1.4583333333333333in"
 height="4.020833333333333in"}
 
-[[http://jsfiddle.net/MadalinaTn/bvqpcohm/2/]](http://jsfiddle.net/MadalinaTn/bvqpcohm/2/)
+&lbrack;&lbrack;http://jsfiddle.net/MadalinaTn/bvqpcohm/2/&rbrack;&rbrack;(http://jsfiddle.net/MadalinaTn/bvqpcohm/2/)
 
 <h3 id="ch10-4">Section 10.4: border (shorthands)</h3>
 
@@ -8252,7 +8150,7 @@ Border on all sides
 > information about border-image-slice property in the border-image
 > example in same page.
 
-![](./images/media/image28.jpg){width="3.5104166666666665in"
+!&lbrack;&rbrack;(./images/media/image28.jpg){width="3.5104166666666665in"
 height="1.4375in"}
 
 > (*Note: Additional properties were added to the element for
@@ -8277,7 +8175,7 @@ height="1.4375in"}
 > gradient&apos;s start color and bottom border would be end color. Below is
 > the output of a 5 colored gradient.
 
-![](./images/media/image29.jpg){width="3.4895833333333335in"
+!&lbrack;&rbrack;(./images/media/image29.jpg){width="3.4895833333333335in"
 height="1.40625in"}
 
 > If the border is required only on specific sides of the element then
@@ -8929,7 +8827,7 @@ on the next line.
 
 **&gt;**
 
-![](./images/media/image32.jpg){width="7.48037510936133in"
+!&lbrack;&rbrack;(./images/media/image32.jpg){width="7.48037510936133in"
 height="4.271902887139108in"}
 
 **overflow-wrap** -- **Value Details**
@@ -9104,7 +9002,7 @@ scroll
 
 > **Result**
 
-![](./images/media/image33.jpg){width="1.1666666666666667in"
+!&lbrack;&rbrack;(./images/media/image33.jpg){width="1.1666666666666667in"
 height="1.1875in"}
 
 > The content above is clipped in a 100px by 100px box, with scrolling
@@ -9172,7 +9070,7 @@ visible
 
 > **Result**
 
-![](./images/media/image34.jpg){width="0.6770833333333334in"
+!&lbrack;&rbrack;(./images/media/image34.jpg){width="0.6770833333333334in"
 height="2.4270833333333335in"}
 
 > Content is not clipped and will be rendered outside the content box if
@@ -9283,7 +9181,7 @@ debitis sea.
 
 > **Result**
 
-![](./images/media/image35.jpg){width="6.375in"
+!&lbrack;&rbrack;(./images/media/image35.jpg){width="6.375in"
 height="3.7604166666666665in"}
 
 > This example shows how paragraphs within a div with the overflow
@@ -9964,15 +9862,15 @@ px
 
 ## Section 13.8: Media queries and IE8
 
-> [**[Media
-> queries]**](http://www.brianhadaway.com/responsive-web-design-using-css3-media-queries/)
+> &lbrack;**&lbrack;Media
+> queries&rbrack;**&rbrack;(http://www.brianhadaway.com/responsive-web-design-using-css3-media-queries/)
 > are not supported at all in IE8 and below.
 >
 > **A Javascript based workaround**
 >
 > To add support for IE8, you could use one of several JS solutions. For
 > example,
-> [**[Respond]**](https://github.com/scottjehl/Respond) can
+> &lbrack;**&lbrack;Respond&rbrack;**&rbrack;(https://github.com/scottjehl/Respond) can
 > be added to add media query support for IE8 only with the following
 > code :
 
@@ -10016,8 +9914,8 @@ endif
 
 **&gt;**
 
-> [**[CSS
-> Mediaqueries]**](https://code.google.com/p/css3-mediaqueries-js/)
+> &lbrack;**&lbrack;CSS
+> Mediaqueries&rbrack;**&rbrack;(https://code.google.com/p/css3-mediaqueries-js/)
 > is another library that does the same thing. The code for adding that
 > library to your HTML would be identical :
 
@@ -10121,8 +10019,8 @@ endif
 
 > **Note :**
 >
-> Technically it&apos;s one more alternative: using [**[CSS
-> hacks]**](http://browserhacks.com/) to target IE&lt;9. It
+> Technically it&apos;s one more alternative: using &lbrack;**&lbrack;CSS
+> hacks&rbrack;**&rbrack;(http://browserhacks.com/) to target IE&lt;9. It
 > has the same impact as an IE&lt;9 only stylesheet, but you don&apos;t need a
 > separate stylesheet for that. I do not recommend this option, though,
 > as they produce invalid CSS code (which is but one of several reasons
@@ -10180,11 +10078,11 @@ rem
 
 > This will be the output
 
-![](./images/media/image36.jpg){width="7.48037510936133in"
+!&lbrack;&rbrack;(./images/media/image36.jpg){width="7.48037510936133in"
 height="7.052389545056868in"}
 
-[[Codepen
-Link]](http://codepen.io/vishak-kavalur/pen/pbxvLx)
+&lbrack;&lbrack;Codepen
+Link&rbrack;&rbrack;(http://codepen.io/vishak-kavalur/pen/pbxvLx)
 
 ## Section 14.2: clear property
 
@@ -10333,11 +10231,11 @@ The clearfix hack is a popular way to contain floats (N. Gallagher aka
 > container (**the parent**) and style this class with a few rules
 > described below.
 >
-> 3 versions with slightly different effects (sources :[[A new micro
+> 3 versions with slightly different effects (sources :&lbrack;&lbrack;A new micro
 > clearfix
-> hack]](http://nicolasgallagher.com/micro-clearfix-hack/)
-> by N. Gallagher and [[clearfix
-> reloaded]](http://yuiblog.com/blog/2010/09/27/clearfix-reloaded-overflowhidden-demystified/)
+> hack&rbrack;&rbrack;(http://nicolasgallagher.com/micro-clearfix-hack/)
+> by N. Gallagher and &lbrack;&lbrack;clearfix
+> reloaded&rbrack;&rbrack;(http://yuiblog.com/blog/2010/09/27/clearfix-reloaded-overflowhidden-demystified/)
 > by T. J. Koblentz):
 >
 > **Clearfix (with top margin collapsing of contained floats still
@@ -10544,11 +10442,11 @@ zoom
 
 }
 
-[[Codepen showing clearfix
-effect]](http://codepen.io/PhilippeVay/pen/OXEqgW?editors=0100)
+&lbrack;&lbrack;Codepen showing clearfix
+effect&rbrack;&rbrack;(http://codepen.io/PhilippeVay/pen/OXEqgW?editors=0100)
 
-> Other resource: [[Everything you know about clearfix is
-> wrong]](http://www.cssmojo.com/clearfix_block-formatting-context_and_hasLayout/)
+> Other resource: &lbrack;&lbrack;Everything you know about clearfix is
+> wrong&rbrack;&rbrack;(http://www.cssmojo.com/clearfix_block-formatting-context_and_hasLayout/)
 > (clearfix and BFC - Block Formatting Context while hasLayout relates
 > to outdated browsers IE6 maybe 7)
 
@@ -10612,7 +10510,7 @@ This is DIV 2
 
 > The output of the following code will be
 
-![](./images/media/image37.jpg){width="7.48037510936133in"
+!&lbrack;&rbrack;(./images/media/image37.jpg){width="7.48037510936133in"
 height="3.613208661417323in"}
 
 > We can make them in-line by adding a float css property to the div.
@@ -10829,13 +10727,13 @@ center
 
 }
 
-![](./images/media/image38.jpg){width="7.48037510936133in"
+!&lbrack;&rbrack;(./images/media/image38.jpg){width="7.48037510936133in"
 height="0.9774857830271216in"}
 
-[[Codepen
-Link]](http://codepen.io/vishak-kavalur/pen/bZxbBy)
+&lbrack;&lbrack;Codepen
+Link&rbrack;&rbrack;(http://codepen.io/vishak-kavalur/pen/bZxbBy)
 
-## Section 14.5: Use of overflow property to clear floats
+<h3 id="ch14-5">Section 14.5: Use of overflow property to clear floats</h3>
 
 > Setting overflow value to hidden,auto or scroll to an element, will
 > clear all the floats within that element.
@@ -10844,7 +10742,7 @@ Link]](http://codepen.io/vishak-kavalur/pen/bZxbBy)
 
 **Note:** using will always show the scrollbox
 
-## Section 14.6: Simple Two Fixed-Width Column Layout
+<h3 id="ch14-6">Section 14.6: Simple Two Fixed-Width Column Layout</h3>
 
 > A simple two-column layout consists of two fixed-width, floated
 > elements. Note that the sidebar and content area are not the same
@@ -10852,107 +10750,59 @@ Link]](http://codepen.io/vishak-kavalur/pen/bZxbBy)
 > multi-column layouts using floats, and requires workarounds to make
 > multiple columns appear to be the same height.
 >
-> HTML:
+<h4>HTML:</h4>
 
+```
 **&lt;**
-
 **div**
-
 class
-
 =
-
 &quot;wrapper&quot;
-
 **&gt;**
-
 **&lt;**
-
 **div**
-
 class
-
 =
-
 &quot;sidebar&quot;
-
 **&gt;**
-
 **&lt;**
-
 **h**
-
 **2**
-
 **&gt;**
-
 Sidebar
-
 **&lt;**
-
 **/h**
-
 **2**
-
 **&gt;**
-
 **&lt;**
-
 **p**
-
 **&gt;**
-
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec
 odio.
-
 **&lt;**
-
 **/p**
-
 **&gt;**
-
 **&lt;**
-
 **/div**
-
 **&gt;**
-
 **&lt;**
-
 **div**
-
 class
-
 =
-
 &quot;content&quot;
-
 **&gt;**
-
 **&lt;**
-
 **h**
-
 **1**
-
 **&gt;**
-
 Content
-
 **&lt;**
-
 **/h**
-
 **1**
-
 **&gt;**
-
 **&lt;**
-
 **p**
-
 **&gt;**
-
 Class aptent taciti sociosqu ad litora torquent per conubia nostra, per
 inceptos himenaeos.
 
@@ -10968,237 +10818,134 @@ suscipit quis, luctus non,
 massa. Fusce ac turpis quis ligula lacinia aliquet.
 
 **&lt;**
-
 **/p**
-
 **&gt;**
-
 **&lt;**
-
 **/div**
-
 **&gt;**
-
 **&lt;**
-
 **/div**
-
 **&gt;**
+```
 
-> CSS:
+<h4>CSS:</h4>
 
+```
 .wrapper
-
 {
-
 **width**
-
 :
-
 600
-
 px
-
 ;
-
 **padding**
-
 :
-
 20
-
 px
-
 ;
-
 **background-color**
-
 :
-
 pink
-
 ;
-
 */&ast; Floated elements don&apos;t use any height. Adding &quot;overflow:hidden;&quot;
 forces the*
 
 *parent element to expand to contain its floated children. &ast;/*
 
 **overflow**
-
 :
-
 hidden
-
 ;
-
 }
-
 .sidebar
-
 {
-
 **width**
-
 :
-
 150
-
 px
-
 ;
-
 **float**
-
 :
-
 left
-
 ;
-
 **background-color**
-
 :
-
 blue
-
 ;
-
 }
-
 .content
-
 {
-
 **width**
-
 :
-
 450
-
 px
-
 ;
-
 **float**
-
 :
-
 right
-
 ;
-
 **background-color**
-
 :
-
 yellow
-
 ;
-
 }
+```
 
-## Section 14.7: Simple Three Fixed-Width Column Layout
+<h3 id="ch14-7">Section 14.7: Simple Three Fixed-Width Column Layout</h3>
 
-> HTML:
+<h4>HTML:</h4>
 
+```
 **&lt;**
-
 **div**
-
 class
-
 =
-
 &quot;wrapper&quot;
-
 **&gt;**
-
 **&lt;**
-
 **div**
-
 class
-
 =
-
 &quot;left-sidebar&quot;
-
 **&gt;**
-
 **&lt;**
-
 **h**
-
 **1**
-
 **&gt;**
-
 Left Sidebar
-
 **&lt;**
-
 **/h**
-
 **1**
-
 **&gt;**
-
 **&lt;**
-
 **p**
-
 **&gt;**
-
 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-
 **&lt;**
-
 **/p**
-
 **&gt;**
-
 **&lt;**
-
 **/div**
-
 **&gt;**
-
 **&lt;**
-
 **div**
-
 class
-
 =
-
 &quot;content&quot;
-
 **&gt;**
-
 **&lt;**
-
 **h**
-
 **1**
-
 **&gt;**
-
 Content
-
 **&lt;**
-
 **/h**
-
 **1**
-
 **&gt;**
-
 **&lt;**
-
 **p**
-
 **&gt;**
+```
 
 Class aptent taciti sociosqu ad litora torquent per conubia nostra, per
 inceptos himenaeos.
@@ -11519,7 +11266,7 @@ yellow
 
 }
 
-[[Fiddle]](https://jsfiddle.net/ooprqsL0/)
+&lbrack;&lbrack;Fiddle&rbrack;&rbrack;(https://jsfiddle.net/ooprqsL0/)
 
 # Chapter 15: Typography
 
@@ -12067,11 +11814,11 @@ N
 
 > Example (open in Chrome or Safari):
 
-[[http://jsfiddle.net/csYjC/1131/]](http://jsfiddle.net/csYjC/1131/)
+&lbrack;&lbrack;http://jsfiddle.net/csYjC/1131/&rbrack;&rbrack;(http://jsfiddle.net/csYjC/1131/)
 
 > Resources:
 
-[[https://www.w3.org/TR/2012/WD-css3-ui-20120117/#text-overflow0]](https://www.w3.org/TR/2012/WD-css3-ui-20120117/#text-overflow0)
+&lbrack;&lbrack;https://www.w3.org/TR/2012/WD-css3-ui-20120117/#text-overflow0&rbrack;&rbrack;(https://www.w3.org/TR/2012/WD-css3-ui-20120117/#text-overflow0)
 
 ## Section 15.7: Text Shadow
 
@@ -12307,7 +12054,7 @@ px
 </code></pre>
 
 Resources:
-[[https://developer.mozilla.org/en-US/docs/Web/CSS/letter-spacing]](https://developer.mozilla.org/en-US/docs/Web/CSS/letter-spacing)
+&lbrack;&lbrack;https://developer.mozilla.org/en-US/docs/Web/CSS/letter-spacing&rbrack;&rbrack;(https://developer.mozilla.org/en-US/docs/Web/CSS/letter-spacing)
 
 ## Section 15.10: Text Indent
 
@@ -12328,11 +12075,11 @@ px
 >
 > Resources:
 >
-> [[Indenting only the first line of text in a
-> paragraph?]](http://stackoverflow.com/questions/5856952/indenting-only-the-first-line-of-text-in-a-paragraph)
+> &lbrack;&lbrack;Indenting only the first line of text in a
+> paragraph?&rbrack;&rbrack;(http://stackoverflow.com/questions/5856952/indenting-only-the-first-line-of-text-in-a-paragraph)
 
-[[https://www.w3.org/TR/CSS21/text.html#propdef-text-indent]](https://www.w3.org/TR/CSS21/text.html#propdef-text-indent)
-[[https://developer.mozilla.org/en-US/docs/Web/CSS/text-indent]](https://developer.mozilla.org/en-US/docs/Web/CSS/text-indent)
+&lbrack;&lbrack;https://www.w3.org/TR/CSS21/text.html#propdef-text-indent&rbrack;&rbrack;(https://www.w3.org/TR/CSS21/text.html#propdef-text-indent)
+&lbrack;&lbrack;https://developer.mozilla.org/en-US/docs/Web/CSS/text-indent&rbrack;&rbrack;(https://developer.mozilla.org/en-US/docs/Web/CSS/text-indent)
 
 ## Section 15.11: Text Decoration
 
@@ -12467,14 +12214,14 @@ px
 >
 > **Online-Demo**
 
-[[Try it yourself]](https://jsfiddle.net/91742Lxt/)
+&lbrack;&lbrack;Try it yourself&rbrack;&rbrack;(https://jsfiddle.net/91742Lxt/)
 
 > **Further reading:**
 
-[[word-spacing] [--]
-[MDN]](https://developer.mozilla.org/de/docs/Web/CSS/word-spacing)
-[[word-spacing] [--]
-[w3.org]](https://www.w3.org/wiki/CSS/Properties/word-spacing)
+&lbrack;&lbrack;word-spacing&rbrack; &lbrack;--&rbrack;
+&lbrack;MDN&rbrack;&rbrack;(https://developer.mozilla.org/de/docs/Web/CSS/word-spacing)
+&lbrack;&lbrack;word-spacing&rbrack; &lbrack;--&rbrack;
+&lbrack;w3.org&rbrack;&rbrack;(https://www.w3.org/wiki/CSS/Properties/word-spacing)
 
 ## Section 15.13: Font Variant
 
@@ -12521,7 +12268,7 @@ aNd ExAmpLe
 
 > **Output:**
 
-![](./images/media/image39.jpg)
+!&lbrack;&rbrack;(./images/media/image39.jpg)
 <!-- {width="2.34375in" height="0.375in"} -->
 
 > Note: The font-variant property is a shorthand for the properties:
@@ -12595,7 +12342,7 @@ center
 </code></pre>
 
 > Here is a
-> [[demo]](http://codepen.io/asim-coder/pen/ZOobqz).
+> &lbrack;&lbrack;demo&rbrack;&rbrack;(http://codepen.io/asim-coder/pen/ZOobqz).
 >
 > **Reasoning**
 
@@ -12682,9 +12429,9 @@ center
 
 > **Outcome:**
 
-![](./images/media/image40.jpg)
+!&lbrack;&rbrack;(./images/media/image40.jpg)
 
-> Here is a [[demo]](https://jsfiddle.net/d6pc5bmd/).
+> Here is a &lbrack;&lbrack;demo&rbrack;&rbrack;(https://jsfiddle.net/d6pc5bmd/).
 
   **justify-content**                            **:**   **center**
 
@@ -12713,9 +12460,9 @@ center
 
 > **Outcome:**
 
-![](./images/media/image41.jpg)
+!&lbrack;&rbrack;(./images/media/image41.jpg)
 
-> Here is a [[demo]](https://jsfiddle.net/d6pc5bmd/1/).
+> Here is a &lbrack;&lbrack;demo&rbrack;&rbrack;(https://jsfiddle.net/d6pc5bmd/1/).
 
   **align-content**                           **:**   **center**
 
@@ -12744,9 +12491,9 @@ center
 
 > **Outcome:**
 
-![](./images/media/image42.jpg)
+!&lbrack;&rbrack;(./images/media/image42.jpg)
 
-> Here is a [[demo]](https://jsfiddle.net/d6pc5bmd/2/).
+> Here is a &lbrack;&lbrack;demo&rbrack;&rbrack;(https://jsfiddle.net/d6pc5bmd/2/).
 
   **align-content**                           **:**   **center**
 
@@ -12775,10 +12522,10 @@ center
 
 > **Outcome:**
 
-![](./images/media/image43.jpg){width="6.979166666666667in"
+!&lbrack;&rbrack;(./images/media/image43.jpg){width="6.979166666666667in"
 height="6.15625in"}
 
-> Here is a [[demo]](https://jsfiddle.net/d6pc5bmd/3/).
+> Here is a &lbrack;&lbrack;demo&rbrack;&rbrack;(https://jsfiddle.net/d6pc5bmd/3/).
 >
 > **Example: Combination for centering both on horizontal flexbox**
 
@@ -12807,10 +12554,10 @@ center
 
 > **Outcome:**
 
-![](./images/media/image44.jpg){width="6.9375in"
+!&lbrack;&rbrack;(./images/media/image44.jpg){width="6.9375in"
 height="6.135416666666667in"}
 
-> Here is a [[demo]](https://jsfiddle.net/d6pc5bmd/4/).
+> Here is a &lbrack;&lbrack;demo&rbrack;&rbrack;(https://jsfiddle.net/d6pc5bmd/4/).
 >
 > **Example: Combination for centering both on vertical flexbox**
 
@@ -12839,18 +12586,18 @@ center
 
 > **Outcome:**
 
-![](./images/media/image45.jpg){width="6.9375in"
+!&lbrack;&rbrack;(./images/media/image45.jpg){width="6.9375in"
 height="6.114583333333333in"}
 
-Here is a [[demo]](https://jsfiddle.net/d6pc5bmd/5/).
+Here is a &lbrack;&lbrack;demo&rbrack;&rbrack;(https://jsfiddle.net/d6pc5bmd/5/).
 
 ## Section 16.2: Sticky Variable-Height Footer
 
 > This code creates a sticky footer. When the content doesn&apos;t reach the
 > end of the viewport, the footer sticks to the bottom of the viewport.
 > When the content extends past the bottom of the viewport, the footer
-> is also pushed out of the viewport. [*[View
-> Result]*](https://jsfiddle.net/0t1f84tL/)
+> is also pushed out of the viewport. &lbrack;*&lbrack;View
+> Result&rbrack;*&rbrack;(https://jsfiddle.net/0t1f84tL/)
 >
 > **HTML:**
 
@@ -12952,7 +12699,7 @@ body {
 <p>One of the nicest features of flexbox is to allow optimally fitting
 containers to their parent element.</p>
 
-[[Live demo]](https://jsfiddle.net/6gfogoqk/).
+&lbrack;&lbrack;Live demo&rbrack;&rbrack;(https://jsfiddle.net/6gfogoqk/).
 
 > HTML:
 
@@ -12990,13 +12737,13 @@ containers to their parent element.</p>
 >
 > Columns adapt as screen is resized.
 
-![](./images/media/image46.png){width="7.48037510936133in"
+!&lbrack;&rbrack;(./images/media/image46.png){width="7.48037510936133in"
 height="3.182736220472441in"}
 
 <h3 id="ch16-4">Section 16.4: Holy Grail Layout using Flexbox</h3>
 
-> [[Holy Grail
-> layout]](http://alistapart.com/article/holygrail) is a
+> &lbrack;&lbrack;Holy Grail
+> layout&rbrack;&rbrack;(http://alistapart.com/article/holygrail) is a
 > layout with a fixed height header and footer, and a center with 3
 > columns. The 3 columns include a fixed width sidenav, a fluid center,
 > and a column for other content like ads (the fluid center appears
@@ -13195,14 +12942,14 @@ px
 }
 ```
 
-[[Demo]](https://jsfiddle.net/adityarb88/hek6ms0x/)
+&lbrack;&lbrack;Demo&rbrack;&rbrack;(https://jsfiddle.net/adityarb88/hek6ms0x/)
 
 ## Section 16.5: Perfectly aligned buttons inside cards with flexbox
 
 > It&apos;s a regular pattern in design these days to vertically align
 > **call to actions** inside its containing cards like this:
 
-![](./images/media/image47.jpg){width="7.48037510936133in"
+!&lbrack;&rbrack;(./images/media/image47.jpg){width="7.48037510936133in"
 height="3.3848195538057744in"}
 
 > This can be achieved using a special trick with flexbox
@@ -13312,7 +13059,7 @@ center
 
 > The layout will change and become like this:
 
-![](./images/media/image48.jpg){width="7.48037510936133in"
+!&lbrack;&rbrack;(./images/media/image48.jpg){width="7.48037510936133in"
 height="3.0046391076115486in"}
 
   **display**                            :     flex
@@ -13410,9 +13157,9 @@ auto
 
 > This code makes sure that all nested containers are always the same
 > height. This is done by assuring that all nested elements are the same
-> height as the containing parent div. [[See working
-> example]](https://jsfiddle.net/3wwh7ewp/):
-> [[https://jsfiddle.net/3wwh7ewp/]](https://jsfiddle.net/3wwh7ewp/)
+> height as the containing parent div. &lbrack;&lbrack;See working
+> example&rbrack;&rbrack;(https://jsfiddle.net/3wwh7ewp/):
+> &lbrack;&lbrack;https://jsfiddle.net/3wwh7ewp/&rbrack;&rbrack;(https://jsfiddle.net/3wwh7ewp/)
 > This effect is achieved due to the property align-items being set to
 > stretch by default.
 >
@@ -13491,7 +13238,7 @@ value
 }
 ```
 
-Note: [[Does not work on IE versions under 10]](http://caniuse.com/#search=flexbox)
+Note: &lbrack;&lbrack;Does not work on IE versions under 10&rbrack;&rbrack;(http://caniuse.com/#search=flexbox)
 
 <h2 id="ch17">Chapter 17: Cascading and Specificity</h2>
 
@@ -13828,9 +13575,9 @@ span
 > However it may not always possible to find another common selector
 > which is shared between any element which uses the .bar class. Because
 > of this, CSS allows us to duplicate selectors to increase specificity.
-> Instead of just .bar, we can use instead (See [[The grammar of
+> Instead of just .bar, we can use instead (See &lbrack;&lbrack;The grammar of
 > Selectors, W3C
-> Recommendation]](https://www.w3.org/TR/css3-selectors/#grammar)).
+> Recommendation&rbrack;&rbrack;(https://www.w3.org/TR/css3-selectors/#grammar)).
 > This still selects any element with a class of .bar, but now has
 > double the Group *B* specificity:
 
@@ -13916,7 +13663,7 @@ li a
 > This makes future changes harder and pollutes that css page.
 >
 > You can calculate the specificity of your selector
-> [[here]](http://specificity.keegan.st/)
+> &lbrack;&lbrack;here&rbrack;&rbrack;(http://specificity.keegan.st/)
 
 <h3 id="ch17-2">Section 17.2: The !important declaration</h3>
 
@@ -13991,9 +13738,9 @@ normal
 >
 > See also:
 
-[**[W3C - 6 Assigning property values, Cascading, and Inheritance &minus;-
+&lbrack;**&lbrack;W3C - 6 Assigning property values, Cascading, and Inheritance &minus;-
 6.4.2 !important
-rules]**](https://www.w3.org/TR/CSS22/cascade.html#important-rules)
+rules&rbrack;**&rbrack;(https://www.w3.org/TR/CSS22/cascade.html#important-rules)
 
 ## Section 17.3: Cascading
 
@@ -14646,7 +14393,7 @@ currentColor
 
 > **Possible Result:**
 
-![](./images/media/image49.png){width="5.21875in" height="3.09375in"}
+!&lbrack;&rbrack;(./images/media/image49.png){width="5.21875in" height="3.09375in"}
 
 ## Section 18.2: Color Keywords
 
@@ -15118,11 +14865,11 @@ can!*
 
 }
 
-> [[Hexadecimal
-> notation]](https://en.wikipedia.org/wiki/Hexadecimal) is
-> used to specify color values in the RGB color format, per the [[W3C&apos;s
-> &apos;Numerical color]
-> [values&apos;]](https://www.w3.org/TR/css3-color/#numerical).
+> &lbrack;&lbrack;Hexadecimal
+> notation&rbrack;&rbrack;(https://en.wikipedia.org/wiki/Hexadecimal) is
+> used to specify color values in the RGB color format, per the &lbrack;&lbrack;W3C&apos;s
+> &apos;Numerical color&rbrack;
+> &lbrack;values&apos;&rbrack;&rbrack;(https://www.w3.org/TR/css3-color/#numerical).
 >
 > There are a lot of tools available on the Internet for looking up
 > hexadecimal (or simply hex) color values.
@@ -15443,7 +15190,7 @@ hsl
 
 }
 
-![](./images/media/image189.jpg){width="7.48037510936133in"
+!&lbrack;&rbrack;(./images/media/image189.jpg){width="7.48037510936133in"
 height="5.610277777777778in"}
 
 > **Syntax**
@@ -15952,13 +15699,13 @@ em
 
 > **Possible Result:**
 
-![](./images/media/image190.jpg){width="6.34375in"
+!&lbrack;&rbrack;(./images/media/image190.jpg){width="6.34375in"
 height="2.9583333333333335in"}
 
 ## Section 20.2: Font size with rem
 
 > CSS3 introduces a few new units, including the
-> [[rem]](https://www.w3.org/TR/css-values/#font-relative-lengths)
+> &lbrack;&lbrack;rem&rbrack;&rbrack;(https://www.w3.org/TR/css-values/#font-relative-lengths)
 > unit, which stands for &quot;root em&quot;. Let&apos;s look at how rem works.
 >
 > First, let&apos;s look at the differences between em and rem.
@@ -16074,8 +15821,8 @@ em
 >
 > 1 vmax is equal to the larger of *1 vh* and *1 vw*
 
-**Note**: vmax is [[not
-supported]](http://caniuse.com/#feat=viewport-units) in:
+**Note**: vmax is &lbrack;&lbrack;not
+supported&rbrack;&rbrack;(http://caniuse.com/#feat=viewport-units) in:
 
 > any version of Internet Explorer Safari before version 6.1
 
@@ -16237,7 +15984,7 @@ width: 50%;
 
 > **OUTPUT**
 
-![](./images/media/image191.jpg){width="1.40625in" height="0.875in"}
+!&lbrack;&rbrack;(./images/media/image191.jpg){width="1.40625in" height="0.875in"}
 
 # Chapter 21: Pseudo-Elements
 
@@ -16567,7 +16314,7 @@ Test II
 
 > **Result**
 
-![](./images/media/image193.jpg){width="2.4479166666666665in"
+!&lbrack;&rbrack;(./images/media/image193.jpg){width="2.4479166666666665in"
 height="1.3125in"}
 
 # Chapter 22: Positioning
@@ -16618,12 +16365,12 @@ height="1.3125in"}
 > is reached, then it acts as .
 
 unset Combination of initial and inherit. More info
-[[here]](https://developer.mozilla.org/en-US/docs/Web/CSS/unset).
+&lbrack;&lbrack;here&rbrack;&rbrack;(https://developer.mozilla.org/en-US/docs/Web/CSS/unset).
 
 ## Section 22.1: Overlapping Elements with z-index
 
-> To change the default [[stack
-> order]](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context)
+> To change the default &lbrack;&lbrack;stack
+> order&rbrack;&rbrack;(https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context)
 > positioned elements (position property set to relative, absolute or
 > fixed), use the z-index property.
 >
@@ -16862,11 +16609,11 @@ red
 
 > This creates the following effect:
 
-![](./images/media/image194.jpg){width="3.6458333333333335in"
+!&lbrack;&rbrack;(./images/media/image194.jpg){width="3.6458333333333335in"
 height="3.8645833333333335in"}
 
 > See a working example at
-> [[JSFiddle]](https://jsfiddle.net/esnc10tq/).
+> &lbrack;&lbrack;JSFiddle&rbrack;&rbrack;(https://jsfiddle.net/esnc10tq/).
 >
 > **Syntax**
 
@@ -16900,14 +16647,14 @@ auto Gives the element the same stacking context as its parent.
 >
 > All elements are laid out in a 3D axis in CSS, including a depth axis,
 > measured by the z-index property. z-index only works on positioned
-> elements: (see: [[Why does z-index need a defined position to
-> work?]](https://www.sitepoint.com/community/t/why-does-z-index-need-a-defined-position-to-work/46115)).
+> elements: (see: &lbrack;&lbrack;Why does z-index need a defined position to
+> work?&rbrack;&rbrack;(https://www.sitepoint.com/community/t/why-does-z-index-need-a-defined-position-to-work/46115)).
 > The only value where it is ignored is the default value, static.
 >
-> Read about the z-index property and Stacking Contexts in the [[CSS
-> Specification]](https://drafts.csswg.org/css-position/#layered-presentation)
-> on layered presentation and at the [[Mozilla Developer
-> Network]](https://developer.mozilla.org/en-US/docs/Web/CSS/z-index).
+> Read about the z-index property and Stacking Contexts in the &lbrack;&lbrack;CSS
+> Specification&rbrack;&rbrack;(https://drafts.csswg.org/css-position/#layered-presentation)
+> on layered presentation and at the &lbrack;&lbrack;Mozilla Developer
+> Network&rbrack;&rbrack;(https://developer.mozilla.org/en-US/docs/Web/CSS/z-index).
 
 ## Section 22.2: Absolute Position
 
@@ -17067,7 +16814,7 @@ px
 ## Section 22.5: Static positioning
 
 > The default position of an element is static. To quote
-> [[MDN]](https://developer.mozilla.org/en-US/docs/Web/CSS/position#values):
+> &lbrack;&lbrack;MDN&rbrack;&rbrack;(https://developer.mozilla.org/en-US/docs/Web/CSS/position#values):
 
 This keyword lets the element use the normal behavior, that is it is
 laid out in its current position in the
@@ -18033,11 +17780,11 @@ px
 > order within the container.
 >
 > View a working example on
-> [[JSFiddle]](https://jsfiddle.net/fexfwkkv/3/). You&apos;ll
+> &lbrack;&lbrack;JSFiddle&rbrack;&rbrack;(https://jsfiddle.net/fexfwkkv/3/). You&apos;ll
 > need to view this in IE10, IE11 or Edge for it to work as these are
 > currently the only browsers supporting Grid Layout (with vendor prefix
 > -ms-) or enable a flag in Chrome, Opera and Firefox according to
-> [[caniuse]](http://caniuse.com/#feat=css-grid) in order to
+> &lbrack;&lbrack;caniuse&rbrack;&rbrack;(http://caniuse.com/#feat=css-grid) in order to
 > test with them.
 
 # Chapter 25: Tables
@@ -18055,7 +17802,7 @@ px
 
 > Below an example of two tables both set to :
 
-![](./images/media/image200.jpg){width="4.625in" height="1.125in"}
+!&lbrack;&rbrack;(./images/media/image200.jpg){width="4.625in" height="1.125in"}
 
   ------------------------------------------------------------------------------------------
   **table-layout**   :   auto   while the one on the right    **table-layout**   :   fixed
@@ -18090,7 +17837,7 @@ be determined by the contents of its&apos; cells.
 > Below an example with two tables with different values set to the
 > empty-cells property:
 
-![](./images/media/image201.jpg){width="5.708333333333333in"
+!&lbrack;&rbrack;(./images/media/image201.jpg){width="5.708333333333333in"
 height="0.8854166666666666in"}
 
   -----------------------------------------------------------------------------------------
@@ -18110,11 +17857,11 @@ height="0.8854166666666666in"}
 >
 > More Information:
 >
-> [[https://www.w3.org/TR/CSS21/tables.html#empty-cells]](https://www.w3.org/TR/CSS21/tables.html#empty-cells)
-> [[https://developer.mozilla.org/en-US/docs/Web/CSS/empty-cells]](https://developer.mozilla.org/en-US/docs/Web/CSS/empty-cells)
-> [[http://codepen.io/SitePoint/pen/yfhtq]](http://codepen.io/SitePoint/pen/yfhtq)
+> &lbrack;&lbrack;https://www.w3.org/TR/CSS21/tables.html#empty-cells&rbrack;&rbrack;(https://www.w3.org/TR/CSS21/tables.html#empty-cells)
+> &lbrack;&lbrack;https://developer.mozilla.org/en-US/docs/Web/CSS/empty-cells&rbrack;&rbrack;(https://developer.mozilla.org/en-US/docs/Web/CSS/empty-cells)
+> &lbrack;&lbrack;http://codepen.io/SitePoint/pen/yfhtq&rbrack;&rbrack;(http://codepen.io/SitePoint/pen/yfhtq)
 
-[[https://css-tricks.com/almanac/properties/e/empty-cells/]](https://css-tricks.com/almanac/properties/e/empty-cells/)
+&lbrack;&lbrack;https://css-tricks.com/almanac/properties/e/empty-cells/&rbrack;&rbrack;(https://css-tricks.com/almanac/properties/e/empty-cells/)
 
 ## Section 25.3: border-collapse
 
@@ -18124,7 +17871,7 @@ height="0.8854166666666666in"}
 > Below an example of two tables with different values to the
 > border-collapse property:
 
-![](./images/media/image202.jpg){width="5.666666666666667in"
+!&lbrack;&rbrack;(./images/media/image202.jpg){width="5.666666666666667in"
 height="0.9270833333333334in"}
 
   --------------------------------------------------------------------------------------------------
@@ -18150,7 +17897,7 @@ height="0.9270833333333334in"}
 > Below an example of two tables with different values to the
 > border-spacing property:
 
-![](./images/media/image203.jpg){width="6.03125in" height="1.15625in"}
+!&lbrack;&rbrack;(./images/media/image203.jpg){width="6.03125in" height="1.15625in"}
 
   -----------------------------------------------------------------------------------------------
   **border-spacing**   :   2px   (default) while the one on the    **border-spacing**   :   8px
@@ -18184,7 +17931,7 @@ vary between browsers.
 > Below an example with two tables with different values set to the
 > caption-side property:
 
-![](./images/media/image204.jpg){width="5.729166666666667in"
+!&lbrack;&rbrack;(./images/media/image204.jpg){width="5.729166666666667in"
 height="1.1458333333333333in"}
 
   ------------------------------------------------------------------------------------------
@@ -18206,8 +17953,8 @@ height="1.1458333333333333in"}
 **Parameter Details**
 
 > The specific CSS property whose value change needs to be transitioned
-> (or) all, if all the transition-property [[transitionable
-> properties]](https://www.w3.org/TR/css3-transitions/#animatable-properties)
+> (or) all, if all the transition-property &lbrack;&lbrack;transitionable
+> properties&rbrack;&rbrack;(https://www.w3.org/TR/css3-transitions/#animatable-properties)
 > need to be transitioned.
 >
 > The duration (or period) in seconds (s) or milliseconds (ms) over
@@ -18225,8 +17972,8 @@ height="1.1458333333333333in"}
 >
 > (). More information about the various timing functions can be
 >
-> found in the [[W3C
-> specs]](https://www.w3.org/TR/css3-transitions/#transition-timing-function).
+> found in the &lbrack;&lbrack;W3C
+> specs&rbrack;&rbrack;(https://www.w3.org/TR/css3-transitions/#transition-timing-function).
 >
 > The amount of time that must have elapsed before the transition can
 > start. Can be transition-delay
@@ -18341,13 +18088,13 @@ green
 
 > )
 
-![](./images/media/image205.jpg){width="4.395833333333333in"
+!&lbrack;&rbrack;(./images/media/image205.jpg){width="4.395833333333333in"
 height="2.2083333333333335in"}
 
-> These parameters will be mapped to points which are part of a [[Bézier
-> curve]](https://en.wikipedia.org/wiki/B%C3%A9zier_curve#Cubic_B.C3.A9zier_curves):
+> These parameters will be mapped to points which are part of a &lbrack;&lbrack;Bézier
+> curve&rbrack;&rbrack;(https://en.wikipedia.org/wiki/B%C3%A9zier_curve#Cubic_B.C3.A9zier_curves):
 
-![](./images/media/image206.jpg){width="4.96875in"
+!&lbrack;&rbrack;(./images/media/image206.jpg){width="4.96875in"
 height="4.958333333333333in"}
 
 > For CSS Bézier Curves, P0 and P3 are always in the same spot. P0 is at
@@ -18548,8 +18295,8 @@ px
 | ti            | > Specifies a function to define how intermediate    |
 | ming-function | > values for properties are computed. Common values  |
 |               | > are ease, linear, and step-end. Check out the      |
-|               | > [[easing function                                  |
-|               | > cheatsheet]](http://easings.net/) for  |
+|               | > &lbrack;&lbrack;easing function                                  |
+|               | > cheatsheet&rbrack;&rbrack;(http://easings.net/) for  |
 |               | > more.                                              |
 |---------------|------------------------------------------------------|
 | delay         | > Amount of time, in seconds or milliseconds, to     |
@@ -18828,7 +18575,7 @@ infinite
 
 }
 
-[*[View Result]*](https://jsfiddle.net/s9m3od3p/6/)
+&lbrack;*&lbrack;View Result&rbrack;*&rbrack;(https://jsfiddle.net/s9m3od3p/6/)
 
 > There&apos;s a few different things to note here. First, the actual
 > &commat;keyframes syntax.
@@ -19023,7 +18770,7 @@ px
 
 }
 
-[*[View Result]*](https://jsfiddle.net/0kcm6rwo/)
+&lbrack;*&lbrack;View Result&rbrack;*&rbrack;(https://jsfiddle.net/0kcm6rwo/)
 
 > By default, hovering over an element with the .Example class would
 > immediately cause the element&apos;s height to jump to 120px and its
@@ -19054,7 +18801,7 @@ ease
 
 }
 
-[*[View Result]*](https://jsfiddle.net/v2j4ggue/1/)
+&lbrack;*&lbrack;View Result&rbrack;*&rbrack;(https://jsfiddle.net/v2j4ggue/1/)
 
 > The all value applies the transition to all compatible (numbers-based)
 > properties. Any compatible property name (such as height or top) can
@@ -19686,7 +19433,7 @@ deg
 > and 50% from top.
 
 See the result
-[[here]](https://jsfiddle.net/MadalinaTn/gtt4osms/1/).
+&lbrack;&lbrack;here&rbrack;&rbrack;(https://jsfiddle.net/MadalinaTn/gtt4osms/1/).
 
 ## Section 28.4: Multiple transforms
 
@@ -19726,7 +19473,7 @@ px
 > element**. This means that the translation won&apos;t be horizontal but on
 > an axis rotate 15 degrees clockwise as shown in the following image:
 
-![](./images/media/image207.jpg){width="7.48037510936133in"
+!&lbrack;&rbrack;(./images/media/image207.jpg){width="7.48037510936133in"
 height="2.7919728783902014in"}
 
 > Changing the order of the transforms will change the output. The first
@@ -19810,7 +19557,7 @@ px
 
 > As shown in this image:
 
-![](./images/media/image208.jpg){width="7.48037510936133in"
+!&lbrack;&rbrack;(./images/media/image208.jpg){width="7.48037510936133in"
 height="2.7919728783902014in"}
 
 ## Section 28.5: Translate
@@ -19981,336 +19728,187 @@ translateY
 > left corner with : 0 0; and the second (.tr)is transformed around
 > it&apos;s top right corner with 0. The rotation is applied **on hover** :
 >
-> *HTML:*
+<h4>HTML:</h4>
 
+```
 **&lt;**
-
 **div**
-
 class
-
 =
-
 &quot;transform originl&quot;
-
 **&gt;**
-
 **&lt;**
-
 **/div**
-
 **&gt;**
-
 **&lt;**
-
 **div**
-
 class
-
 =
-
 &quot;transform origin2&quot;
-
 **&gt;**
-
 **&lt;**
-
 **/div**
-
 **&gt;**
+```
 
-> *CSS:*
+<h4>CSS:</h4>
 
+```
 .transform
-
 {
-
 **display**
-
 :
-
 inline-block
-
 ;
-
 **width**
-
 :
-
 200
-
 px
-
 ;
-
 **height**
-
 :
-
 100
-
 px
-
 ;
-
 **background**
-
 :
-
 teal
-
 ;
-
 **transition**
-
 :
-
 transform
-
 1
-
 s
-
 ;
-
 }
-
 .origin1
-
 {
-
 **transform-origin**
-
 :
-
 0
-
 0
-
 ;
-
 }
-
 .origin2
-
 {
-
 **transform-origin**
-
 :
-
 100
-
 &percnt;
-
 0
-
 ;
-
 }
-
 .transform
-
 :
-
 hover
-
 {
-
 **transform**
-
 :
-
 rotate
-
 (
-
 30
-
 deg
-
 )
-
 ;
-
 }
-
-  -----------------------------------------------------------------------
-  50% 50%
-  -----------------------------------------------------------------------
-
-  -----------------------------------------------------------------------
+```
 
 > The default value for the transform-origin property is which is the
 > center of the element.
 
-# Chapter 29: 3D Transforms
+<h2 id="ch29">Chapter 29: 3D Transforms</h2>
 
-## Section 29.1: Compass pointer or needle shape using 3D transforms
+<h3 id="ch29-1">Section 29.1: Compass pointer or needle shape using 3D transforms</h3>
 
-> <h4>CSS</h4>
+<h4>CSS</h4>
 
+```
 div
-
 .needle
-
 {
-
 **margin**
-
 :
-
 100
-
 px
-
 ;
-
 **height**
-
 :
-
 150
-
 px
-
 ;
-
 **width**
-
 :
-
 150
-
 px
-
 ;
-
 **transform**
-
 :
-
 rotateY
-
 (
-
 85
-
 deg
-
 )
-
 rotateZ
-
 (
-
 45
-
 deg
-
 )
-
 ;
-
 */&ast; presentational &ast;/*
-
 **background-image**
-
 :
-
 linear-gradient
-
 (
-
 to
-
 top
-
 left
-
 ,
-
 #555
-
 0
-
 &percnt;
-
 ,
-
 #555
-
 40
-
 &percnt;
-
 ,
-
 #444
-
 50
-
 &percnt;
-
 ,
-
 #333
-
 97
-
 &percnt;
-
 )
-
 ;
-
 **box-shadow**
-
 :
-
 inset
-
 6
-
 px
-
 6
-
 px
-
 22
-
 px
-
 8
-
 px
-
 #272727
-
 ;
-
 }
+```
 
-> <h4>HTML</h4>
+<h4>HTML</h4>
 
+```
 **&lt;**
-
 **div**
-
 class
-
 =
-
 &apos;needle&apos;
-
 **&gt;**
-
 **&lt;**
-
 **/div**
-
 **&gt;**
+```
 
 > In the above example, a needle or compass pointer shape is created
 > using 3D transforms. Generally when we apply the rotate transform on
@@ -20320,590 +19918,321 @@ class
 > ends up looking like a needle. The more the rotation of the Y-axis the
 > more squeezed the element looks.
 
-  ----------------------------------------------------------------------------
   rotateX           (   85deg        )   rotateZ              (   45deg
   ----------------- --- ------------ --- -------------------- --- ------------
-
-  ----------------------------------------------------------------------------
 
 > The output of the above example would be a needle resting on its tip.
 > For creating a needle that is resting on its base, the rotation should
 > be along the X-axis instead of along Y-axis. So the transform
 > property&apos;s value would have to be something like );.
 >
-> [[This pen]](http://codepen.io/hari_shanx/pen/YXzoBo) uses
+> &lbrack;&lbrack;This pen&rbrack;&rbrack;(http://codepen.io/hari_shanx/pen/YXzoBo) uses
 > a similar approach to create something that resembles the Safari logo
 > or a compass dial.
 >
 > **Screenshot of element with no transform:**
 
-![](./images/media/image209.jpg){width="1.6979166666666667in"
+!&lbrack;&rbrack;(./images/media/image209.jpg){width="1.6979166666666667in"
 height="1.6979166666666667in"}
 
 > **Screenshot of element with only 2D transform:**
 
-![](./images/media/image210.jpg){width="2.3541666666666665in"
+!&lbrack;&rbrack;(./images/media/image210.jpg){width="2.3541666666666665in"
 height="2.3645833333333335in"}
 
 > **Screenshot of element with 3D transform:**
 
-![](./images/media/image211.jpg){width="0.7395833333333334in"
+!&lbrack;&rbrack;(./images/media/image211.jpg){width="0.7395833333333334in"
 height="2.4791666666666665in"}
 
-## Section 29.2: 3D text eect with shadow
+<h3 id="ch29-2">Section 29.2: 3D text eect with shadow</h3>
 
-***HTML:***
+<h4>HTML:</h4>
 
+```
 **&lt;**
-
 **div**
-
 id
-
 =
-
 &quot;title&quot;
-
 **&gt;**
-
 **&lt;**
-
 **h**
-
 **1**
-
 data-content
-
 =
-
 &quot;HOVER&quot;
-
 **&gt;**
-
 HOVER
-
 **&lt;**
-
 **/h**
-
 **1**
-
 **&gt;**
-
 **&lt;**
-
 **/div**
-
 **&gt;**
+```
 
-***CSS:***
+<h4>CSS:</h4>
 
+```
 &ast;
-
 {
-
 **margin**
-
 :
-
 0
-
 ;
-
 **padding**
-
 :
-
 0
-
 ;
-
 }
-
 html
-
 ,
-
 body
-
 {
-
 **height**
-
 :
-
 100
-
 &percnt;
-
 ;
-
 **width**
-
 :
-
 100
-
 &percnt;
-
 ;
-
 **overflow**
-
 :
-
 hidden
-
 ;
-
 **background**
-
 :
-
 #0099CC
-
 ;
-
 }
-
 #title
-
 {
-
 **position**
-
 :
-
 absolute
-
 ;
-
 **top**
-
 :
-
 50
-
 &percnt;
-
 ;
-
 **left**
-
 :
-
 50
-
 &percnt;
-
 ;
-
 **transform**
-
 :
-
 translate
-
 (
-
 -50
-
 &percnt;
-
 ,
-
 -50
-
 &percnt;
-
 )
-
 ;
-
 **perspective-origin**
-
 :
-
 50
-
 &percnt;
-
 50
-
 &percnt;
-
 ;
-
 **perspective**
-
 :
-
 300
-
 px
-
 ;
-
 }
-
 h1
-
 {
-
 **text-align**
-
 :
-
 center
-
 ;
-
 **font-size**
-
 :
-
 12
-
 vmin
-
 ;
-
 **font-family**
-
 :
-
 &apos;Open Sans&apos;
-
 ,
-
 sans-serif
-
 ;
-
 **color**
-
 :
-
 rgba
-
 (
-
 0
-
 ,
-
 0
-
 ,
-
 0
-
 ,
-
 0.8
-
 )
-
 ;
-
 **line-height**
-
 :
-
 1
-
 em
-
 ;
-
 **transform**
-
 :
-
 rotateY
-
 (
-
 50
-
 deg
-
 )
-
 ;
-
 **perspective**
-
 :
-
 150
-
 px
-
 ;
-
 **perspective-origin**
-
 :
-
 0
-
 &percnt;
-
 50
-
 &percnt;
-
 ;
-
 }
-
 h1
-
 :
-
 after
-
 {
-
 **content**
-
 :
-
 attr
-
 (
-
 data-content
-
 )
-
 ;
-
 **position**
-
 :
-
 absolute
-
 ;
-
 **left**
-
 :
-
 0
-
 ;
-
 **top**
-
 :
-
 0
-
 ;
-
 **transform-origin**
-
 :
-
 50
-
 &percnt;
-
 100
-
 &percnt;
-
 ;
-
 **transform**
-
 :
-
 rotateX
-
 (
-
 -90
-
 deg
-
 )
-
 ;
-
 **color**
-
 :
-
 #0099CC
-
 ;
-
 }
-
 #title
-
 :
-
 before
-
 {
-
 **content**
-
 :
-
 &apos;&apos;
-
 ;
-
 **position**
-
 :
-
 absolute
-
 ;
-
 **top**
-
 :
-
 -150
-
 &percnt;
-
 ;
-
 **left**
-
 :
-
 -25
-
 &percnt;
-
 ;
-
 **width**
-
 :
-
 180
-
 &percnt;
-
 ;
-
 **height**
-
 :
-
 328
-
 &percnt;
-
 ;
-
 **background**
-
 :
-
 rgba
-
 (
-
 255
-
 ,
-
 255
-
 ,
-
 255
-
 ,
-
 0.7
-
 )
-
 ;
-
 **transform-origin**
-
 :
-
 0
-
 100
-
 &percnt;
-
 ;
-
 **transform**
-
 :
-
 translatez
-
 (
-
 -200
-
 px
-
 )
-
 rotate
-
 (
-
 40
-
 deg
-
 )
-
 skewX
-
 (
-
 35
-
 deg
-
 )
-
 ;
-
 **border-radius**
-
 :
-
 0
-
 0
-
 100
-
 &percnt;
-
 0
-
 ;
-
 }
+```
 
-[[View example with additional hover
-effect]](http://codepen.io/web-tiki/pen/azeKNy)
+&lbrack;&lbrack;View example with additional hover
+effect&rbrack;&rbrack;(http://codepen.io/web-tiki/pen/azeKNy)
 
-![](./images/media/image212.jpg){width="7.48037510936133in"
+!&lbrack;&rbrack;(./images/media/image212.jpg){width="7.48037510936133in"
 height="3.642194881889764in"}
 
 > In this example, the text is transformed to make it look like it is
@@ -20926,7 +20255,7 @@ height="3.642194881889764in"}
 >
 > For example, this would flip an element away from the screen:
 
-[[JSFIDDLE]](https://jsfiddle.net/3z3z843c/)
+&lbrack;&lbrack;JSFIDDLE&rbrack;&rbrack;(https://jsfiddle.net/3z3z843c/)
 
 **&lt;**
 
@@ -21269,11 +20598,11 @@ rotateX
 
 {
 
-![](./images/media/image213.png){width="7.486667760279965in"
+
+!&lbrack;&rbrack;(./images/media/image213.png){width="7.486667760279965in"
 height="6.386666666666667in"}
 
-[**[View this
-example]**](http://codepen.io/web-tiki/pen/NNwqBa)
+<a href="http://codepen.io/web-tiki/pen/NNwqBa">View this example</a>
 
 > Additional styling is added in the demo and a transform is applied on
 > hover to view the 6 faces of the cube.
@@ -21282,7 +20611,7 @@ example]**](http://codepen.io/web-tiki/pen/NNwqBa)
 >
 > 4 faces are made with pseudo elements chained transforms are applied
 
-# Chapter 30: Filter Property
+<h2 id="ch30">Chapter 30: Filter Property</h2>
 
 > **Value Description** blur(x) Blurs the image by x pixels.
 >
@@ -21294,30 +20623,24 @@ example]**](http://codepen.io/web-tiki/pen/NNwqBa)
 >
 > drop-shadow(h, v, x, y, z) Gives the image a drop-shadow. h and v can
 > have negative values. x, y, and z are optional.
+  | Value         | Description |
+  |---------------|------------------------------------------------------|
+  | greyscale(x)  | Shows the image in greyscale, with a maximum value of |
+  |               | 1.0 or 100%. |
+  | hue-rotate(x) | Applies a hue-rotation to the image. |
+  | invert(x)     | Inverts the color of the image with a maximum value of |
+  |               | 1.0 or 100%. |
+  | opacity(x)    | Sets how opaque/transparent the image is with a |
+  |               | maximum value of 1.0 or 100%. |
+  | saturate(x)   | Saturates the image at any value above 1.0 or 100%. |
+  |               | Below that, the image will start to de-saturate. |
+  | sepia(x)      | Converts the image to sepia with a maximum value of |
+  |               |  1.0 or 100%. |
 
-  -----------------------------------------------------------------------
-  greyscale(x)     Shows the image in greyscale, with a maximum value of
-                   1.0 or 100%.
-  ---------------- ------------------------------------------------------
-  hue-rotate(x)    Applies a hue-rotation to the image.
+<h3 id="ch30-1">Section 30.1: Blur</h3>
 
-  invert(x)        Inverts the color of the image with a maximum value of
-                   1.0 or 100%.
+<h4>HTML</h4>
 
-  opacity(x)       Sets how opaque/transparent the image is with a
-                   maximum value of 1.0 or 100%.
-
-  saturate(x)      Saturates the image at any value above 1.0 or 100%.
-                   Below that, the image will start to de-saturate.
-
-  sepia(x)         Converts the image to sepia with a maximum value of
-                   1.0 or 100%.
-  -----------------------------------------------------------------------
-
-## Section 30.1: Blur
-
-> <h4>HTML</h4>
->
 > **&lt;img** src=&apos;donald-duck.png&apos; alt=&apos;Donald Duck&apos; title=&apos;Donald
 > Duck&apos; **/&gt;**
 >
@@ -21363,14 +20686,14 @@ px
 
 > **Result**
 
-![](./images/media/image214.jpg){width="2.2395833333333335in"
+!&lbrack;&rbrack;(./images/media/image214.jpg){width="2.2395833333333335in"
 height="2.8125in"}
 
 > Makes you wanna rub your glasses.
 
-## Section 30.2: Drop Shadow (use box-shadow instead if possible)
+<h3 id="ch30-2">Section 30.2: Drop Shadow (use box-shadow instead if possible)</h3>
 
-> <h4>HTML</h4>
+<h4>HTML</h4>
 
 **&lt;**
 
@@ -21448,12 +20771,12 @@ green
 
 > **Result**
 
-![](./images/media/image215.jpg){width="2.40625in"
+!&lbrack;&rbrack;(./images/media/image215.jpg){width="2.40625in"
 height="0.5729166666666666in"}
 
-## Section 30.3: Hue Rotate
+<h3 id="ch30-3">Section 30.3: Hue Rotate</h3>
 
-> <h4>HTML</h4>
+<h4>HTML</h4>
 >
 > **&lt;img** src=&apos;donald-duck.png&apos; alt=&apos;Donald Duck&apos; title=&apos;Donald
 > Duck&apos; **/&gt;**
@@ -21500,19 +20823,19 @@ deg
 
 > **Result**
 
-![](./images/media/image216.jpg){width="2.2604166666666665in"
+!&lbrack;&rbrack;(./images/media/image216.jpg){width="2.2604166666666665in"
 height="2.8125in"}
 
-## Section 30.4: Multiple Filter Values
+<h3 id="ch30-4">Section 30.4: Multiple Filter Values</h3>
 
 > To use multiple filters, separate each value with a space.
->
-> <h4>HTML</h4>
->
+
+<h4>HTML</h4>
+
 > **&lt;img** src=&apos;donald-duck.png&apos; alt=&apos;Donald Duck&apos; title=&apos;Donald
 > Duck&apos; **/&gt;**
->
-> <h4>CSS</h4>
+
+<h4>CSS</h4>
 
 img
 
@@ -21614,12 +20937,12 @@ invert
 
 > **Result**
 
-![](./images/media/image217.jpg){width="2.1145833333333335in"
+!&lbrack;&rbrack;(./images/media/image217.jpg){width="2.1145833333333335in"
 height="2.7083333333333335in"}
 
-## Section 30.5: Invert Color
+<h3 id="ch30-5">Section 30.5: Invert Color</h3>
 
-> <h4>HTML</h4>
+<h4>HTML</h4>
 
 **&lt;**
 
@@ -21703,7 +21026,7 @@ invert
 
 > **Result**
 
-![](./images/media/image218.jpg){width="1.1979166666666667in"
+!&lbrack;&rbrack;(./images/media/image218.jpg){width="1.1979166666666667in"
 height="1.1979166666666667in"}
 
 > Turns from white to black.
@@ -21759,20 +21082,20 @@ HTML element &lbrack;&lbrack;1&rbrack;&rbrack;
 > auto; inherit.
 >
 > 1&period;
-> [[https://css-tricks.com/almanac/properties/p/pointer-events/]](https://css-tricks.com/almanac/properties/p/pointer-events/)
+> &lbrack;&lbrack;https://css-tricks.com/almanac/properties/p/pointer-events/&rbrack;&rbrack;(https://css-tricks.com/almanac/properties/p/pointer-events/)
 >
 > Other resources:
 >
-> [[https://developer.mozilla.org/en-US/docs/Web/CSS/pointer-events]](https://developer.mozilla.org/en-US/docs/Web/CSS/pointer-events)
-> [[https://davidwalsh.name/pointer-events]](https://davidwalsh.name/pointer-events)
+> &lbrack;&lbrack;https://developer.mozilla.org/en-US/docs/Web/CSS/pointer-events&rbrack;&rbrack;(https://developer.mozilla.org/en-US/docs/Web/CSS/pointer-events)
+> &lbrack;&lbrack;https://davidwalsh.name/pointer-events&rbrack;&rbrack;(https://davidwalsh.name/pointer-events)
 
-## Section 31.3: caret-color
+<h3 id="ch31-3">Section 31.3: caret-color</h3>
 
 > The caret-color CSS property specifies the color of the caret, the
 > visible indicator of the insertion point in an element where text and
 > other content is inserted by the user&apos;s typing or editing.
 >
-> <h4>HTML</h4>
+<h4>HTML</h4>
 
 **&lt;**
 
@@ -21804,7 +21127,7 @@ red
 
 > Resources:
 >
-> [[https://developer.mozilla.org/en-US/docs/Web/CSS/caret-color]](https://developer.mozilla.org/en-US/docs/Web/CSS/caret-color)
+> &lbrack;&lbrack;https://developer.mozilla.org/en-US/docs/Web/CSS/caret-color&rbrack;&rbrack;(https://developer.mozilla.org/en-US/docs/Web/CSS/caret-color)
 
 # Chapter 32: box-shadow
 
@@ -21832,7 +21155,7 @@ color can be of various notations: a color keyword, hexadecimal,
 ## Section 32.1: bottom-only drop shadow using a pseudoelement
 
 JSFiddle:
-[[https://jsfiddle.net/UnsungHero97/80qod7aL/2/]](https://jsfiddle.net/UnsungHero97/80qod7aL/2/)
+&lbrack;&lbrack;https://jsfiddle.net/UnsungHero97/80qod7aL/2/&rbrack;&rbrack;(https://jsfiddle.net/UnsungHero97/80qod7aL/2/)
 
 > <h4>HTML</h4>
 
@@ -22056,14 +21379,14 @@ px
 
 }
 
-![](./images/media/image220.jpg){width="6.25in" height="3.75in"}
+!&lbrack;&rbrack;(./images/media/image220.jpg){width="6.25in" height="3.75in"}
 
-## Section 32.2: drop shadow
+<h3 id="ch32-2">Section 32.2: drop shadow</h3>
 
 JSFiddle:
-[[https://jsfiddle.net/UnsungHero97/80qod7aL/]](https://jsfiddle.net/UnsungHero97/80qod7aL/)
+&lbrack;&lbrack;https://jsfiddle.net/UnsungHero97/80qod7aL/&rbrack;&rbrack;(https://jsfiddle.net/UnsungHero97/80qod7aL/)
 
-> <h4>HTML</h4>
+<h4>HTML</h4>
 
 **&lt;**
 
@@ -22163,9 +21486,9 @@ px
 
 }
 
-## Section 32.3: inner drop shadow
+<h3 id="ch32-3">Section 32.3: inner drop shadow</h3>
 
-> <h4>HTML</h4>
+<h4>HTML</h4>
 
 **&lt;**
 
@@ -22311,18 +21634,18 @@ px
 
 > **Result:**
 
-![](./images/media/image221.jpg){width="2.6458333333333335in"
+!&lbrack;&rbrack;(./images/media/image221.jpg){width="2.6458333333333335in"
 height="1.5416666666666667in"}
 
 JSFiddle:
-[[https://jsfiddle.net/UnsungHero97/80qod7aL/1/]](https://jsfiddle.net/UnsungHero97/80qod7aL/1/)
+&lbrack;&lbrack;https://jsfiddle.net/UnsungHero97/80qod7aL/1/&rbrack;&rbrack;(https://jsfiddle.net/UnsungHero97/80qod7aL/1/)
 
-## Section 32.4: multiple shadows
+<h3 id="ch32-4">Section 32.4: multiple shadows</h3>
 
 JSFiddle:
-[[https://jsfiddle.net/UnsungHero97/80qod7aL/5/]](https://jsfiddle.net/UnsungHero97/80qod7aL/5/)
+&lbrack;&lbrack;https://jsfiddle.net/UnsungHero97/80qod7aL/5/&rbrack;&rbrack;(https://jsfiddle.net/UnsungHero97/80qod7aL/5/)
 
-> <h4>HTML</h4>
+<h4>HTML</h4>
 
 **&lt;**
 
@@ -22464,7 +21787,7 @@ px
 
 }
 
-![](./images/media/image222.jpg){width="6.125in"
+!&lbrack;&rbrack;(./images/media/image222.jpg){width="6.125in"
 height="5.833333333333333in"}
 
 # Chapter 33: Shapes for Floats
@@ -22648,7 +21971,7 @@ px
 
 }
 
-> <h4>HTML</h4>
+<h4>HTML</h4>
 >
 > **&lt;img**
 > src=&quot;http://images.clipartpanda.com/circle-clip-art-circlergb.jpg&quot;**&gt;**
@@ -22676,12 +21999,12 @@ px
 > be wrapped around when shape-outside is used and when it is not used.
 > **Output with shape-outside**
 
-![](./images/media/image223.jpg){width="3.3333333333333335in"
+!&lbrack;&rbrack;(./images/media/image223.jpg){width="3.3333333333333335in"
 height="1.3229166666666667in"}
 
 > **Output without shape-outside**
 
-![](./images/media/image224.jpg){width="3.3333333333333335in"
+!&lbrack;&rbrack;(./images/media/image224.jpg){width="3.3333333333333335in"
 height="1.4895833333333333in"}
 
 ## Section 33.2: Shape margin
@@ -22856,7 +22179,7 @@ px
 
 }
 
-> <h4>HTML</h4>
+<h4>HTML</h4>
 >
 > **&lt;img**
 > src=&quot;http://images.clipartpanda.com/circle-clip-art-circlergb.jpg&quot;**&gt;**
@@ -22876,7 +22199,7 @@ px
 >
 > **Output:**
 
-![](./images/media/image225.jpg){width="3.3333333333333335in"
+!&lbrack;&rbrack;(./images/media/image225.jpg){width="3.3333333333333335in"
 height="1.3958333333333333in"}
 
 # Chapter 34: List Styles
@@ -22944,7 +22267,7 @@ outside
 > extend to the left even if it would fall off the page.
 >
 > Showing the result of inside and outside positioning:
-> [[jsfiddle]](https://jsfiddle.net/pqh3cxdp/)
+> &lbrack;&lbrack;jsfiddle&rbrack;&rbrack;(https://jsfiddle.net/pqh3cxdp/)
 
 ## Section 34.2: Removing Bullets / Numbers
 
@@ -23176,7 +22499,7 @@ upper-roman
 
 }
 
-> <h4>HTML</h4>
+<h4>HTML</h4>
 
 **&lt;**
 
@@ -23414,7 +22737,7 @@ px
 
 }
 
-> <h4>HTML</h4>
+<h4>HTML</h4>
 
 **&lt;**
 
@@ -23599,7 +22922,7 @@ Lorem Ipsum Dolor Sit Amet&period;...
 > The above example numbers every &quot;item&quot; in the page and adds the
 > item&apos;s number before its header (using content property of
 > .item-header element&apos;s pseudo). A live demo of this code is available
-> [[here]](https://jsfiddle.net/a7rmje3r/).
+> &lbrack;&lbrack;here&rbrack;&rbrack;(https://jsfiddle.net/a7rmje3r/).
 
 ## Section 35.3: Implementing multi-level numbering using CSS counters
 
@@ -24207,7 +23530,7 @@ primary-color
 }
 
 > This feature is currently under development. Check
-> [[caniuse.com]](http://caniuse.com/#feat=css-variables)
+> &lbrack;&lbrack;caniuse.com&rbrack;&rbrack;(http://caniuse.com/#feat=css-variables)
 > for the latest browser support.
 
 ## Section 36.4: radial-gradient() function
@@ -24626,7 +23949,7 @@ red
 
 > And get this result:
 
-![](./images/media/image226.jpg){width="3.71875in"
+!&lbrack;&rbrack;(./images/media/image226.jpg){width="3.71875in"
 height="0.6041666666666666in"}
 
 ## Section 37.4: Valid/Invalids
@@ -25025,7 +24348,7 @@ width
 
 ;
 
-## Section 37.5: With media queries
+<h3 id="ch37-5">Section 37.5: With media queries</h3>
 
 > You can re-set variables within media queries and have those new
 > values cascade wherever they are used, something that isn&apos;t possible
@@ -25034,7 +24357,7 @@ width
 > Here, a media query changes the variables used to set up a very simple
 > grid:
 >
-> <h4>HTML</h4>
+<h4>HTML</h4>
 
 **&lt;**
 
@@ -25372,12 +24695,12 @@ red
 
 }
 
-> You can try resizing the window in this [[CodePen
-> Demo]](https://codepen.io/mkumaran/pen/BZaXvz)
+> You can try resizing the window in this &lbrack;&lbrack;CodePen
+> Demo&rbrack;&rbrack;(https://codepen.io/mkumaran/pen/BZaXvz)
 >
 > Here&apos;s an animated screenshot of the resizing in action:
 
-![](./images/media/image227.jpg){width="7.48037510936133in"
+!&lbrack;&rbrack;(./images/media/image227.jpg){width="7.48037510936133in"
 height="4.327166447944007in"}
 
 # Chapter 38: Single Element Shapes
@@ -25388,7 +24711,7 @@ height="4.327166447944007in"}
 > 0px), a width greater than zero and a border, that is transparent
 > except for one side:
 
-![](./images/media/image228.jpg){width="4.75in" height="1.96875in"}
+!&lbrack;&rbrack;(./images/media/image228.jpg){width="4.75in" height="1.96875in"}
 
 > **HTML:**
 
@@ -25489,7 +24812,7 @@ black
 > bottom, left) each form a triangle. Here&apos;s an element with 0
 > height/width and 4 different colored borders.
 
-![](./images/media/image229.jpg){width="1.6666666666666667in"
+!&lbrack;&rbrack;(./images/media/image229.jpg){width="1.6666666666666667in"
 height="1.7083333333333333in"}
 
 > By setting some borders to transparent, and others to a color we can
@@ -25498,7 +24821,7 @@ height="1.7083333333333333in"}
 > borders to transparent. Here&apos;s an image with the left and right
 > borders shaded slightly to show how the triangle is being formed.
 
-![](./images/media/image230.jpg){width="1.1458333333333333in"
+!&lbrack;&rbrack;(./images/media/image230.jpg){width="1.1458333333333333in"
 height="1.1875in"}
 
 > The dimensions of the triangle can be altered by changing the
@@ -25703,7 +25026,7 @@ rgb
 
 > **Triangle - Pointing Right**
 
-![](./images/media/image233.jpg){width="1.1458333333333333in"
+!&lbrack;&rbrack;(./images/media/image233.jpg){width="1.1458333333333333in"
 height="1.1875in"}
 
 **&lt;**
@@ -26244,10 +25567,10 @@ transparent
 > height (a *square*) and then set the border-radius property of this
 > element to 50%.
 
-![](./images/media/image239.jpg){width="1.1458333333333333in"
+!&lbrack;&rbrack;(./images/media/image239.jpg){width="1.1458333333333333in"
 height="1.1875in"}
 
-> <h4>HTML</h4>
+<h4>HTML</h4>
 
 **&lt;**
 
@@ -26332,9 +25655,9 @@ rgb
 > An **ellipse** is similar to a circle, but with different values for
 > width and height.
 
-![](./images/media/image240.jpg){width="0.9375in" height="0.9375in"}
+!&lbrack;&rbrack;(./images/media/image240.jpg){width="0.9375in" height="0.9375in"}
 
-> <h4>HTML</h4>
+<h4>HTML</h4>
 
 **&lt;**
 
@@ -26661,7 +25984,7 @@ rgb
 > This example shows how to create a cube using 2D transformation
 > methods () on pseudo elements.
 
-![](./images/media/image244.jpg){width="2.40625in"
+!&lbrack;&rbrack;(./images/media/image244.jpg){width="2.40625in"
 height="1.9479166666666667in"}
 
 > **HTML:**
@@ -26934,7 +26257,7 @@ px
 
 }
 
-[**[See demo]**](https://jsfiddle.net/codename0/9po0r1L1/)
+&lbrack;**&lbrack;See demo&rbrack;**&rbrack;(https://jsfiddle.net/codename0/9po0r1L1/)
 
 ## Section 38.7: Pyramid
 
@@ -26947,7 +26270,7 @@ px
 > This example shows how to create a **pyramid** using borders and 2D
 > transformation methods and rotate() on pseudo elements.
 
-![](./images/media/image245.jpg){width="2.1041666666666665in"
+!&lbrack;&rbrack;(./images/media/image245.jpg){width="2.1041666666666665in"
 height="1.8541666666666667in"}
 
 > **HTML:**
@@ -27226,7 +26549,7 @@ deg
 >
 > **Result**
 
-![](./images/media/image246.jpg){width="7.48037510936133in"
+!&lbrack;&rbrack;(./images/media/image246.jpg){width="7.48037510936133in"
 height="3.572153324584427in"}
 
 ## Section 39.2: Column Width
@@ -27291,7 +26614,7 @@ px
 
 > **Result**
 
-![](./images/media/image247.jpg){width="6.125in"
+!&lbrack;&rbrack;(./images/media/image247.jpg){width="6.125in"
 height="3.7083333333333335in"}
 
 # Chapter 40: Multiple columns
@@ -27414,8 +26737,8 @@ gray
 
 }
 
-See a [[live sample of this on
-JSFiddle]](https://jsfiddle.net/vjL9ewmb/).
+See a &lbrack;&lbrack;live sample of this on
+JSFiddle&rbrack;&rbrack;(https://jsfiddle.net/vjL9ewmb/).
 
 # Chapter 41: Inline-Block Layout
 
@@ -27894,7 +27217,7 @@ Some paragraph
 >
 > For example:
 
-![](./images/media/image248.jpg){width="1.75in" height="1.875in"}
+!&lbrack;&rbrack;(./images/media/image248.jpg){width="1.75in" height="1.875in"}
 
 > The image above is an image sprite sheet, and each one of those stars
 > is a sprite within the sprite sheet. These sprite sheets are useful
@@ -27903,7 +27226,7 @@ Some paragraph
 >
 > So how do you implement one? Here&apos;s some example code.
 >
-> <h4>HTML</h4>
+<h4>HTML</h4>
 
 **&lt;**
 
@@ -28141,8 +27464,8 @@ px
                  mask&apos;s origin (*mask positioning area*) depending on the property. The
                  list of possible values are content-box, padding-box, border-box,
                  margin-box, fill-box, stroke-box, view-box. Detailed explanation of how
-                 each of those values work is available in the [[W3C
-                 Spec]](https://www.w3.org/TR/css-masking/#the-mask-clip).
+                 each of those values work is available in the &lbrack;&lbrack;W3C
+                 Spec&rbrack;&rbrack;(https://www.w3.org/TR/css-masking/#the-mask-clip).
   -------------- -----------------------------------------------------------------------
   bg-size        This represents the size of each mask-image layer and has the same
                  syntax as backgroundsize. The value can be length or percentage or auto
@@ -28156,8 +27479,8 @@ px
 >
 > compositing-operator of compositing operation that should be used for
 > this layer with those below it. Detailed explanation about each value
-> is available in the [[W3C
-> Specs]](https://www.w3.org/TR/css-masking/#the-mask-composite).
+> is available in the &lbrack;&lbrack;W3C
+> Specs&rbrack;&rbrack;(https://www.w3.org/TR/css-masking/#the-mask-composite).
 
 ## Section 44.1: Clipping and Masking: Overview and Dierence
 
@@ -28178,7 +27501,7 @@ px
 > property on elements. Every graphical element that also exists in SVG
 > you can use here as a function to define the path. Examples are ().
 
-![](./images/media/image249.jpg){width="3.3333333333333335in"
+!&lbrack;&rbrack;(./images/media/image249.jpg){width="3.3333333333333335in"
 height="2.71875in"}
 
 > Example
@@ -28219,7 +27542,7 @@ center
 > **Alpha Mask**: Only on the transparent areas of the mask the element
 > will be opaque.
 
-![](./images/media/image250.jpg){width="3.3333333333333335in"
+!&lbrack;&rbrack;(./images/media/image250.jpg){width="3.3333333333333335in"
 height="2.0625in"}
 
 > This image for example can be used as a luminance mask to make for an
@@ -28336,7 +27659,7 @@ transparent
 
 }
 
-> <h4>HTML</h4>
+<h4>HTML</h4>
 
 **&lt;**
 
@@ -28361,11 +27684,11 @@ transparent
 >
 > **Output without the mask:**
 
-![](./images/media/image251.jpg){width="2.1875in" height="2.1875in"}
+!&lbrack;&rbrack;(./images/media/image251.jpg){width="2.1875in" height="2.1875in"}
 
 > **Output with the mask:**
 
-![](./images/media/image252.jpg){width="2.1875in" height="2.1875in"}
+!&lbrack;&rbrack;(./images/media/image252.jpg){width="2.1875in" height="2.1875in"}
 
 > **Note:** As mentioned in remarks, the above example would work in
 > Chrome, Safari and Opera only when used with the -webkit prefix. This
@@ -28438,7 +27761,7 @@ at
 
 }
 
-> <h4>HTML</h4>
+<h4>HTML</h4>
 
 **&lt;**
 
@@ -28470,10 +27793,10 @@ radius at x y
 
 )
 
-[**[View Example]**](https://jsfiddle.net/webtiki/qp69n494/)
+&lbrack;**&lbrack;View Example&rbrack;**&rbrack;(https://jsfiddle.net/webtiki/qp69n494/)
 **Output:**
 
-![](./images/media/image253.jpg){width="2.46875in"
+!&lbrack;&rbrack;(./images/media/image253.jpg){width="2.46875in"
 height="2.2291666666666665in"}
 
 ## Section 44.4: Clipping (Polygon)
@@ -28585,11 +27908,11 @@ polygon
 > This can also be used on an element with an image or a gradient as
 > background.
 
-[**[View Example]**](https://jsfiddle.net/eoa4a94k/)
+&lbrack;**&lbrack;View Example&rbrack;**&rbrack;(https://jsfiddle.net/eoa4a94k/)
 
 > **Output:**
 
-![](./images/media/image254.jpg){width="2.1666666666666665in"
+!&lbrack;&rbrack;(./images/media/image254.jpg){width="2.1666666666666665in"
 height="2.1666666666666665in"}
 
 ## Section 44.5: Using masks to cut a hole in the middle of an image
@@ -28688,7 +28011,7 @@ white
 
 }
 
-> <h4>HTML</h4>
+<h4>HTML</h4>
 >
 > In the above example, a transparent circle is created at the center
 > using radial-gradient and this is then used as a mask to produce the
@@ -28696,12 +28019,12 @@ white
 >
 > **Image without mask:**
 
-![](./images/media/image255.jpg){width="2.1666666666666665in"
+!&lbrack;&rbrack;(./images/media/image255.jpg){width="2.1666666666666665in"
 height="2.1666666666666665in"}
 
 > **Image with mask:**
 
-![](./images/media/image256.jpg){width="2.1666666666666665in"
+!&lbrack;&rbrack;(./images/media/image256.jpg){width="2.1666666666666665in"
 height="2.1666666666666665in"}
 
 ## Section 44.6: Using masks to create images with irregular shapes
@@ -28927,12 +28250,12 @@ no-repeat
 >
 > **Image without the mask:**
 
-![](./images/media/image257.jpg){width="4.25in"
+!&lbrack;&rbrack;(./images/media/image257.jpg){width="4.25in"
 height="2.1666666666666665in"}
 
 > **Image with the mask:**
 
-![](./images/media/image258.jpg){width="4.260416666666667in"
+!&lbrack;&rbrack;(./images/media/image258.jpg){width="4.260416666666667in"
 height="2.2083333333333335in"}
 
 # Chapter 45: Fragmentation
@@ -29076,7 +28399,7 @@ stylesheet
 3.  The web browser combines the DOM and the CSSOM to create a render
     tree. The web browser displays your webpage.
 
-![](./images/media/image259.jpg){width="7.48037510936133in"
+!&lbrack;&rbrack;(./images/media/image259.jpg){width="7.48037510936133in"
 height="3.0871391076115486in"}
 
 # Chapter 47: Feature Queries
@@ -29998,11 +29321,11 @@ center
 
 > **Result:**
 
-![](./images/media/image260.jpg){width="6.0in" height="3.0in"}
+!&lbrack;&rbrack;(./images/media/image260.jpg){width="6.0in" height="3.0in"}
 
 > Source:
 
-[[https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context]](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context).
+&lbrack;&lbrack;https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context&rbrack;&rbrack;(https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context).
 
 # Chapter 49: Block Formatting Contexts
 
@@ -30084,24 +29407,24 @@ hidden
 
 }
 
-![](./images/media/image261.jpg){width="6.0in" height="3.0in"}
+!&lbrack;&rbrack;(./images/media/image261.jpg){width="6.0in" height="3.0in"}
 
-[[https://jsfiddle.net/MadalinaTn/qkwwmu6m/2/]](https://jsfiddle.net/MadalinaTn/qkwwmu6m/2/)
+&lbrack;&lbrack;https://jsfiddle.net/MadalinaTn/qkwwmu6m/2/&rbrack;&rbrack;(https://jsfiddle.net/MadalinaTn/qkwwmu6m/2/)
 
-> [[Using the overflow property with a value different to visible (its
-> default) will create a new block formatting] [context.
-> This is technically necessary] [---] [if a
+> &lbrack;&lbrack;Using the overflow property with a value different to visible (its
+> default) will create a new block formatting&rbrack; &lbrack;context.
+> This is technically necessary&rbrack; &lbrack;---&rbrack; &lbrack;if a
 > float intersected with the scrolling element it would
-> forcibly] [rewrap the
-> content.]](https://css-tricks.com/almanac/properties/o/overflow/)
+> forcibly&rbrack; &lbrack;rewrap the
+> content.&rbrack;&rbrack;(https://css-tricks.com/almanac/properties/o/overflow/)
 >
 > This example that show how a number of paragraphs will interact with a
-> floated image is similar to [[this
-> example]](https://css-tricks.com/almanac/properties/o/overflow/),
+> floated image is similar to &lbrack;&lbrack;this
+> example&rbrack;&rbrack;(https://css-tricks.com/almanac/properties/o/overflow/),
 > on css-tricks.com.
 
-[[2]](https://css-tricks.com/almanac/properties/o/overflow/):
-[[https://developer.mozilla.org/en-US/docs/Web/CSS/overflow]](https://developer.mozilla.org/en-US/docs/Web/CSS/overflow)
+&lbrack;&lbrack;2&rbrack;&rbrack;(https://css-tricks.com/almanac/properties/o/overflow/):
+&lbrack;&lbrack;https://developer.mozilla.org/en-US/docs/Web/CSS/overflow&rbrack;&rbrack;(https://developer.mozilla.org/en-US/docs/Web/CSS/overflow)
 MDN
 
 # Chapter 50: Vertical Centering
@@ -31070,7 +30393,7 @@ cover
 
 ;
 
-![](./images/media/image264.jpg){width="6.197916666666667in"
+!&lbrack;&rbrack;(./images/media/image264.jpg){width="6.197916666666667in"
 height="2.8125in"}
 
 > Cover fills the entire box with the image. The image aspect ratio is
@@ -31101,19 +30424,19 @@ scale-down
 > Scale-down either sizes the object as none or as contain. It displays
 > whichever option results in a smaller image size.
 
-![](./images/media/image266.jpg){width="7.270833333333333in"
+!&lbrack;&rbrack;(./images/media/image266.jpg){width="7.270833333333333in"
 height="3.6458333333333335in"}
 
 # Chapter 52: CSS design patterns
 
 > These examples are for documenting CSS-specific design patterns like
-> [[BEM]](http://getbem.com/),
-> [[OOCSS]](https://www.smashingmagazine.com/2011/12/an-introduction-to-object-oriented-css-oocss/)
-> and [[SMACSS]](https://smacss.com/).
+> &lbrack;&lbrack;BEM&rbrack;&rbrack;(http://getbem.com/),
+> &lbrack;&lbrack;OOCSS&rbrack;&rbrack;(https://www.smashingmagazine.com/2011/12/an-introduction-to-object-oriented-css-oocss/)
+> and &lbrack;&lbrack;SMACSS&rbrack;&rbrack;(https://smacss.com/).
 >
 > These examples are NOT for documenting CSS frameworks like
-> [[Bootstrap]](http://getbootstrap.com/) or
-> [[Foundation]](http://foundation.zurb.com/).
+> &lbrack;&lbrack;Bootstrap&rbrack;&rbrack;(http://getbootstrap.com/) or
+> &lbrack;&lbrack;Foundation&rbrack;&rbrack;(http://foundation.zurb.com/).
 
 ## Section 52.1: BEM
 
@@ -31123,10 +30446,10 @@ height="3.6458333333333335in"}
 
   -------------------------------------------------------------------------
 
-> [[BEM]](http://getbem.com/introduction/) stands for .
+> &lbrack;&lbrack;BEM&rbrack;&rbrack;(http://getbem.com/introduction/) stands for .
 > It&apos;s a methodology initially conceived by Russian tech company
 >
-> [[Yandex]](https://en.wikipedia.org/wiki/Yandex), but
+> &lbrack;&lbrack;Yandex&rbrack;&rbrack;(https://en.wikipedia.org/wiki/Yandex), but
 > which gained quite some traction among American & Western-European web
 > developers as well.
 >
@@ -31448,7 +30771,7 @@ deg
 > they can differ from browser to browser.
 >
 > This is where
-> [[normalize.css]](http://necolas.github.io/normalize.css/)
+> &lbrack;&lbrack;normalize.css&rbrack;&rbrack;(http://necolas.github.io/normalize.css/)
 > comes into play. It overrides the most common inconsistencies and
 > fixes known bugs.
 >
@@ -31563,8 +30886,8 @@ align: baseline;
 
 **}**
 
-[[Eric Meyer&apos;s Reset
-CSS]](http://meyerweb.com/eric/tools/css/reset/)
+&lbrack;&lbrack;Eric Meyer&apos;s Reset
+CSS&rbrack;&rbrack;(http://meyerweb.com/eric/tools/css/reset/)
 
 > Normalize CSS on the other and deals with many of these separately.
 > The following is a sample from the version (v4.2.0) of the code.
@@ -32097,9 +31420,9 @@ px
 
 }
 
-<b>[Dem]</b>
+<b>&lbrack;Dem&rbrack;</b>
 
-[<b>[o]</b>](https://jsfiddle.net/trungdq88/gmpzxLyq/)
+&lbrack;<b>&lbrack;o&rbrack;</b>&rbrack;(https://jsfiddle.net/trungdq88/gmpzxLyq/)
 
 took
 
@@ -32115,7 +31438,7 @@ for rendering,
 
 for painting
 
-![](./images/media/image267.jpg){width="7.48037510936133in"
+!&lbrack;&rbrack;(./images/media/image267.jpg){width="7.48037510936133in"
 height="7.517167541557305in"}
 
 > <b>DO</b>
@@ -32252,514 +31575,514 @@ px
 
 }
 
-> [<b>[Demo]</b>](https://jsfiddle.net/trungdq88/Logdo0rn/)
+> &lbrack;<b>&lbrack;Demo&rbrack;</b>&rbrack;(https://jsfiddle.net/trungdq88/Logdo0rn/)
 > same animation, took <b>1.3ms</b> for rendering, <b>2.0ms</b> for painting.
 
-![](./images/media/image268.jpg)
+!&lbrack;&rbrack;(./images/media/image268.jpg)
 <!-- width 6/2" -->
 # Credits
 
 > Thank you greatly to all the people from Stack Overflow Documentation
 > who helped provide this content, more changes can be sent to
-> [web@petercv.com] for new content to be published or
+> &lbrack;web@petercv.com&rbrack; for new content to be published or
 > updated
 
-  [[A B]](https://stackoverflow.com/users/167362/)               Chapter 20
+  &lbrack;&lbrack;A B&rbrack;&rbrack;(https://stackoverflow.com/users/167362/)               Chapter 20
 
-  [[A.J]](https://stackoverflow.com/users/2720743/)              Chapter 4
+  &lbrack;&lbrack;A.J&rbrack;&rbrack;(https://stackoverflow.com/users/2720743/)              Chapter 4
 
-  [[Aaron]](https://stackoverflow.com/users/1676224/)            Chapter 4
+  &lbrack;&lbrack;Aaron&rbrack;&rbrack;(https://stackoverflow.com/users/1676224/)            Chapter 4
 
-  [[abaracedo]](https://stackoverflow.com/users/2993458/)        Chapter 4
+  &lbrack;&lbrack;abaracedo&rbrack;&rbrack;(https://stackoverflow.com/users/2993458/)        Chapter 4
 
-  [[Abhishek Singh]](https://stackoverflow.com/users/5716106/)   Chapter 22
+  &lbrack;&lbrack;Abhishek Singh&rbrack;&rbrack;(https://stackoverflow.com/users/5716106/)   Chapter 22
 
-  [[adamboro]](https://stackoverflow.com/users/3772847/)         Chapter 1
+  &lbrack;&lbrack;adamboro&rbrack;&rbrack;(https://stackoverflow.com/users/3772847/)         Chapter 1
 
-  [[Aeolingamenfel]](https://stackoverflow.com/users/3681236/)   Chapters 27 and 55
+  &lbrack;&lbrack;Aeolingamenfel&rbrack;&rbrack;(https://stackoverflow.com/users/3681236/)   Chapters 27 and 55
 
-  [[Ahmad Alfy]](https://stackoverflow.com/users/497828/)        Chapters 4, 5 and 16
+  &lbrack;&lbrack;Ahmad Alfy&rbrack;&rbrack;(https://stackoverflow.com/users/497828/)        Chapters 4, 5 and 16
 
-  [[Alohci]](https://stackoverflow.com/users/42585/)             Chapter 15
+  &lbrack;&lbrack;Alohci&rbrack;&rbrack;(https://stackoverflow.com/users/42585/)             Chapter 15
 
-  [[amflare]](https://stackoverflow.com/users/5937428/)          Chapters 13 and 17
+  &lbrack;&lbrack;amflare&rbrack;&rbrack;(https://stackoverflow.com/users/5937428/)          Chapters 13 and 17
 
-  [[Andre Lopes]](https://stackoverflow.com/users/2816342/)      Chapter 44
+  &lbrack;&lbrack;Andre Lopes&rbrack;&rbrack;(https://stackoverflow.com/users/2816342/)      Chapter 44
 
-  [[andre mcgruder]](https://stackoverflow.com/users/4257303/)   Chapter 54
+  &lbrack;&lbrack;andre mcgruder&rbrack;&rbrack;(https://stackoverflow.com/users/4257303/)   Chapter 54
 
-  [[andreas]](https://stackoverflow.com/users/4952806/)          Chapters 15 and 38
+  &lbrack;&lbrack;andreas&rbrack;&rbrack;(https://stackoverflow.com/users/4952806/)          Chapters 15 and 38
 
-  [[Andrew]](https://stackoverflow.com/users/5410688/)           Chapters 12, 19 and 53
+  &lbrack;&lbrack;Andrew&rbrack;&rbrack;(https://stackoverflow.com/users/5410688/)           Chapters 12, 19 and 53
 
-  [[Andrew Myers]](https://stackoverflow.com/users/5764553/)     Chapter 47
+  &lbrack;&lbrack;Andrew Myers&rbrack;&rbrack;(https://stackoverflow.com/users/5764553/)     Chapter 47
 
-  [[Anil]](https://stackoverflow.com/users/711308/)              Chapter 4
+  &lbrack;&lbrack;Anil&rbrack;&rbrack;(https://stackoverflow.com/users/711308/)              Chapter 4
 
-  [[animuson]](https://stackoverflow.com/users/246246/)          Chapters 4, 50 and 53
+  &lbrack;&lbrack;animuson&rbrack;&rbrack;(https://stackoverflow.com/users/246246/)          Chapters 4, 50 and 53
 
-  [[apaul]](https://stackoverflow.com/users/1947286/)            Chapters 6 and 27
+  &lbrack;&lbrack;apaul&rbrack;&rbrack;(https://stackoverflow.com/users/1947286/)            Chapters 6 and 27
 
-  [[Araknid]](https://stackoverflow.com/users/4268627/)          Chapter 4
+  &lbrack;&lbrack;Araknid&rbrack;&rbrack;(https://stackoverflow.com/users/4268627/)          Chapter 4
 
-  [[Arif]](https://stackoverflow.com/users/6254638/)             Chapter 11
+  &lbrack;&lbrack;Arif&rbrack;&rbrack;(https://stackoverflow.com/users/6254638/)             Chapter 11
 
-  [[Arjan Einbu]](https://stackoverflow.com/users/19594/)        Chapters 4, 7, 8, 15 and 17
+  &lbrack;&lbrack;Arjan Einbu&rbrack;&rbrack;(https://stackoverflow.com/users/19594/)        Chapters 4, 7, 8, 15 and 17
 
-  [[Ashwin Ramaswami]](https://stackoverflow.com/users/1950269/) Chapters 1 and 4
+  &lbrack;&lbrack;Ashwin Ramaswami&rbrack;&rbrack;(https://stackoverflow.com/users/1950269/) Chapters 1 and 4
 
-  [[Asim K T]](https://stackoverflow.com/users/4015856/)         Chapters 5 and 16
+  &lbrack;&lbrack;Asim K T&rbrack;&rbrack;(https://stackoverflow.com/users/4015856/)         Chapters 5 and 16
 
-  [[AVAVT]](https://stackoverflow.com/users/1645830/)            Chapter 50
+  &lbrack;&lbrack;AVAVT&rbrack;&rbrack;(https://stackoverflow.com/users/1645830/)            Chapter 50
 
-  [[awe]](https://stackoverflow.com/users/109392/)               Chapter 1
+  &lbrack;&lbrack;awe&rbrack;&rbrack;(https://stackoverflow.com/users/109392/)               Chapter 1
 
-  [[bdkopen]](https://stackoverflow.com/users/7214959/)          Chapter 3
+  &lbrack;&lbrack;bdkopen&rbrack;&rbrack;(https://stackoverflow.com/users/7214959/)          Chapter 3
 
-  [[Ben Rhys]](https://stackoverflow.com/users/4509121/)         Chapter 5
+  &lbrack;&lbrack;Ben Rhys&rbrack;&rbrack;(https://stackoverflow.com/users/4509121/)         Chapter 5
 
-  [[Bipon]](https://stackoverflow.com/users/3764366/)            Chapter 40
+  &lbrack;&lbrack;Bipon&rbrack;&rbrack;(https://stackoverflow.com/users/3764366/)            Chapter 40
 
-  [[BiscuitBaker]](https://stackoverflow.com/users/1482673/)     Chapter 7
+  &lbrack;&lbrack;BiscuitBaker&rbrack;&rbrack;(https://stackoverflow.com/users/1482673/)     Chapter 7
 
-  [[Boris]](https://stackoverflow.com/users/6442082/)            Chapter 5
+  &lbrack;&lbrack;Boris&rbrack;&rbrack;(https://stackoverflow.com/users/6442082/)            Chapter 5
 
-  [[Boysenb3rry]](https://stackoverflow.com/users/6049524/)      Chapter 1
+  &lbrack;&lbrack;Boysenb3rry&rbrack;&rbrack;(https://stackoverflow.com/users/6049524/)      Chapter 1
 
-  [[brandaemon]](https://stackoverflow.com/users/4561047/)       Chapter 17
+  &lbrack;&lbrack;brandaemon&rbrack;&rbrack;(https://stackoverflow.com/users/4561047/)       Chapter 17
 
-  [[Brett DeWoody]](https://stackoverflow.com/users/438581/)     Chapters 18, 38 and 39
+  &lbrack;&lbrack;Brett DeWoody&rbrack;&rbrack;(https://stackoverflow.com/users/438581/)     Chapters 18, 38 and 39
 
-  [[CalvT]](https://stackoverflow.com/users/1873567/)            Chapters 5 and 9
+  &lbrack;&lbrack;CalvT&rbrack;&rbrack;(https://stackoverflow.com/users/1873567/)            Chapters 5 and 9
 
-  [[Casey]](https://stackoverflow.com/users/3969494/)            Chapter 11
+  &lbrack;&lbrack;Casey&rbrack;&rbrack;(https://stackoverflow.com/users/3969494/)            Chapter 11
 
-  [[Cassidy Williams]](https://stackoverflow.com/users/1950503/) Chapters 10 and 22
+  &lbrack;&lbrack;Cassidy Williams&rbrack;&rbrack;(https://stackoverflow.com/users/1950503/) Chapters 10 and 22
 
-  [[cdm]](https://stackoverflow.com/users/4663542/)              Chapters 5 and 8
+  &lbrack;&lbrack;cdm&rbrack;&rbrack;(https://stackoverflow.com/users/4663542/)              Chapters 5 and 8
 
-  [[Charlie H]](https://stackoverflow.com/users/4185234/)        Chapters 4 and 28
+  &lbrack;&lbrack;Charlie H&rbrack;&rbrack;(https://stackoverflow.com/users/4185234/)        Chapters 4 and 28
 
-  [[Chathuranga                                                              Chapters 11, 13 and 23
-  Jayanath]](https://stackoverflow.com/users/1037793/)           
+  &lbrack;&lbrack;Chathuranga                                                              Chapters 11, 13 and 23
+  Jayanath&rbrack;&rbrack;(https://stackoverflow.com/users/1037793/)           
 
-  [[Chiller]](https://stackoverflow.com/users/3844188/)          Chapter 38
+  &lbrack;&lbrack;Chiller&rbrack;&rbrack;(https://stackoverflow.com/users/3844188/)          Chapter 38
 
-  [[Chris]](https://stackoverflow.com/users/2030321/)            Chapters 1, 4, 23, 25, 42 and 50
+  &lbrack;&lbrack;Chris&rbrack;&rbrack;(https://stackoverflow.com/users/2030321/)            Chapters 1, 4, 23, 25, 42 and 50
 
-  [[Chris Spittles]](https://stackoverflow.com/users/493762/)    Chapters 8 and 24
+  &lbrack;&lbrack;Chris Spittles&rbrack;&rbrack;(https://stackoverflow.com/users/493762/)    Chapters 8 and 24
 
-  [[Christiaan Maks]](https://stackoverflow.com/users/3710120/)  Chapter 28
+  &lbrack;&lbrack;Christiaan Maks&rbrack;&rbrack;(https://stackoverflow.com/users/3710120/)  Chapter 28
 
-  [[CocoaBean]](https://stackoverflow.com/users/1165357/)        Chapter 5
+  &lbrack;&lbrack;CocoaBean&rbrack;&rbrack;(https://stackoverflow.com/users/1165357/)        Chapter 5
 
-  [[coderfin]](https://stackoverflow.com/users/2344083/)         Chapter 3
+  &lbrack;&lbrack;coderfin&rbrack;&rbrack;(https://stackoverflow.com/users/2344083/)         Chapter 3
 
-  [[cone56]](https://stackoverflow.com/users/2229579/)           Chapters 31 and 36
+  &lbrack;&lbrack;cone56&rbrack;&rbrack;(https://stackoverflow.com/users/2229579/)           Chapters 31 and 36
 
-  [[CPHPython]](https://stackoverflow.com/users/6225838/)        Chapter 4
+  &lbrack;&lbrack;CPHPython&rbrack;&rbrack;(https://stackoverflow.com/users/6225838/)        Chapter 4
 
-  [[csx.cc]](https://stackoverflow.com/users/5650428/)              Chapter 1
+  &lbrack;&lbrack;csx.cc&rbrack;&rbrack;(https://stackoverflow.com/users/5650428/)              Chapter 1
 
-  [[cuervoo]](https://stackoverflow.com/users/4230661/)             Chapter 18
+  &lbrack;&lbrack;cuervoo&rbrack;&rbrack;(https://stackoverflow.com/users/4230661/)             Chapter 18
 
-  [[Daniel G. Blázquez]](https://stackoverflow.com/users/321480/)   Chapter 5
+  &lbrack;&lbrack;Daniel G. Blázquez&rbrack;&rbrack;(https://stackoverflow.com/users/321480/)   Chapter 5
 
-  [[Daniel Käfer]](https://stackoverflow.com/users/1079174/)        Chapter 6
+  &lbrack;&lbrack;Daniel Käfer&rbrack;&rbrack;(https://stackoverflow.com/users/1079174/)        Chapter 6
 
-  [[Daniel Stradowski]](https://stackoverflow.com/users/5449709/)   Chapter 5
+  &lbrack;&lbrack;Daniel Stradowski&rbrack;&rbrack;(https://stackoverflow.com/users/5449709/)   Chapter 5
 
-  [[DarkAjax]](https://stackoverflow.com/users/1046057/)            Chapter 17
+  &lbrack;&lbrack;DarkAjax&rbrack;&rbrack;(https://stackoverflow.com/users/1046057/)            Chapter 17
 
-  [[darrylyeo]](https://stackoverflow.com/users/5545315/)           Chapters 2, 13 and 18
+  &lbrack;&lbrack;darrylyeo&rbrack;&rbrack;(https://stackoverflow.com/users/5545315/)           Chapters 2, 13 and 18
 
-  [[Darthstroke]](https://stackoverflow.com/users/3241847/)         Chapter 5
+  &lbrack;&lbrack;Darthstroke&rbrack;&rbrack;(https://stackoverflow.com/users/3241847/)         Chapter 5
 
-  [[Dave Everitt]](https://stackoverflow.com/users/123033/)         Chapter 4
+  &lbrack;&lbrack;Dave Everitt&rbrack;&rbrack;(https://stackoverflow.com/users/123033/)         Chapter 4
 
-  [[David Fullerton]](https://stackoverflow.com/users/91687/)       Chapter 4
+  &lbrack;&lbrack;David Fullerton&rbrack;&rbrack;(https://stackoverflow.com/users/91687/)       Chapter 4
 
-  [[Demeter Dimitri]](https://stackoverflow.com/users/2172975/)     Chapter 4
+  &lbrack;&lbrack;Demeter Dimitri&rbrack;&rbrack;(https://stackoverflow.com/users/2172975/)     Chapter 4
 
-  [[demonofthemist]](https://stackoverflow.com/users/3375368/)      Chapter 14
+  &lbrack;&lbrack;demonofthemist&rbrack;&rbrack;(https://stackoverflow.com/users/3375368/)      Chapter 14
 
-  [[designcise]](https://stackoverflow.com/users/2382283/)          Chapters 4, 5 and 18
+  &lbrack;&lbrack;designcise&rbrack;&rbrack;(https://stackoverflow.com/users/2382283/)          Chapters 4, 5 and 18
 
-  [[Devid Farinelli]](https://stackoverflow.com/users/4695325/)     Chapters 4 and 6
+  &lbrack;&lbrack;Devid Farinelli&rbrack;&rbrack;(https://stackoverflow.com/users/4695325/)     Chapters 4 and 6
 
-  [[Devon Bernard]](https://stackoverflow.com/users/1407020/)       Chapter 4
+  &lbrack;&lbrack;Devon Bernard&rbrack;&rbrack;(https://stackoverflow.com/users/1407020/)       Chapter 4
 
-  [[Dex Star]](https://stackoverflow.com/users/3562241/)            Chapter 27
+  &lbrack;&lbrack;Dex Star&rbrack;&rbrack;(https://stackoverflow.com/users/3562241/)            Chapter 27
 
-  [[Diego V]](https://stackoverflow.com/users/1385678/)             Chapter 6
+  &lbrack;&lbrack;Diego V&rbrack;&rbrack;(https://stackoverflow.com/users/1385678/)             Chapter 6
 
-  [[Dinidu Hewage]](https://stackoverflow.com/users/1615830/)       Chapter 4
+  &lbrack;&lbrack;Dinidu Hewage&rbrack;&rbrack;(https://stackoverflow.com/users/1615830/)       Chapter 4
 
-  [[dippas]](https://stackoverflow.com/users/3448527/)              Chapters 4, 17 and 21
+  &lbrack;&lbrack;dippas&rbrack;&rbrack;(https://stackoverflow.com/users/3448527/)              Chapters 4, 17 and 21
 
-  [[doctorsherlock]](https://stackoverflow.com/users/5128879/)      Chapter 10
+  &lbrack;&lbrack;doctorsherlock&rbrack;&rbrack;(https://stackoverflow.com/users/5128879/)      Chapter 10
 
-  [[dodopok]](https://stackoverflow.com/users/2480653/)             Chapters 13, 36 and 45
+  &lbrack;&lbrack;dodopok&rbrack;&rbrack;(https://stackoverflow.com/users/2480653/)             Chapters 13, 36 and 45
 
-  [[Elegant.Scripting]](https://stackoverflow.com/users/4497067/)   Chapter 43
+  &lbrack;&lbrack;Elegant.Scripting&rbrack;&rbrack;(https://stackoverflow.com/users/4497067/)   Chapter 43
 
-  [[Eliran Malka]](https://stackoverflow.com/users/547020/)         Chapter 6
+  &lbrack;&lbrack;Eliran Malka&rbrack;&rbrack;(https://stackoverflow.com/users/547020/)         Chapter 6
 
-  [[Emanuele Parisio]](https://stackoverflow.com/users/2550659/)    Chapter 6
+  &lbrack;&lbrack;Emanuele Parisio&rbrack;&rbrack;(https://stackoverflow.com/users/2550659/)    Chapter 6
 
-  [[Evgeny]](https://stackoverflow.com/users/1189546/)              Chapter 15
+  &lbrack;&lbrack;Evgeny&rbrack;&rbrack;(https://stackoverflow.com/users/1189546/)              Chapter 15
 
-  [[Farzad YZ]](https://stackoverflow.com/users/2784512/)           Chapter 6
+  &lbrack;&lbrack;Farzad YZ&rbrack;&rbrack;(https://stackoverflow.com/users/2784512/)           Chapter 6
 
-  [[fcalderan]](https://stackoverflow.com/users/1098851/)           Chapter 5
+  &lbrack;&lbrack;fcalderan&rbrack;&rbrack;(https://stackoverflow.com/users/1098851/)           Chapter 5
 
-  [[feeela]](https://stackoverflow.com/users/341201/)               Chapters 46 and 55
+  &lbrack;&lbrack;feeela&rbrack;&rbrack;(https://stackoverflow.com/users/341201/)               Chapters 46 and 55
 
-  [[FelipeAls]](https://stackoverflow.com/users/137626/)            Chapters 1, 5, 10, 11, 14, 16, 24 and 25
+  &lbrack;&lbrack;FelipeAls&rbrack;&rbrack;(https://stackoverflow.com/users/137626/)            Chapters 1, 5, 10, 11, 14, 16, 24 and 25
 
-  [[Felix A J]](https://stackoverflow.com/users/1155876/)           Chapter 15
+  &lbrack;&lbrack;Felix A J&rbrack;&rbrack;(https://stackoverflow.com/users/1155876/)           Chapter 15
 
-  [[Felix Edelmann]](https://stackoverflow.com/users/2796524/)      Chapter 4
+  &lbrack;&lbrack;Felix Edelmann&rbrack;&rbrack;(https://stackoverflow.com/users/2796524/)      Chapter 4
 
-  [[Felix Schütz]](https://stackoverflow.com/users/4362643/)        Chapter 4
+  &lbrack;&lbrack;Felix Schütz&rbrack;&rbrack;(https://stackoverflow.com/users/4362643/)        Chapter 4
 
-  [[Forty]](https://stackoverflow.com/users/5900863/)               Chapter 4
+  &lbrack;&lbrack;Forty&rbrack;&rbrack;(https://stackoverflow.com/users/5900863/)               Chapter 4
 
-  [[fracz]](https://stackoverflow.com/users/878514/)                Chapter 4
+  &lbrack;&lbrack;fracz&rbrack;&rbrack;(https://stackoverflow.com/users/878514/)                Chapter 4
 
-  [[fzzylogic]](https://stackoverflow.com/users/2198632/)           Chapter 16
+  &lbrack;&lbrack;fzzylogic&rbrack;&rbrack;(https://stackoverflow.com/users/2198632/)           Chapter 16
 
-  [[G]](https://stackoverflow.com/users/29805/)                     Chapters 1 and 17
+  &lbrack;&lbrack;G&rbrack;&rbrack;(https://stackoverflow.com/users/29805/)                     Chapters 1 and 17
 
-  [[Gabriel R.]](https://stackoverflow.com/users/170091/)           Chapter 1
+  &lbrack;&lbrack;Gabriel R.&rbrack;&rbrack;(https://stackoverflow.com/users/170091/)           Chapter 1
 
-  [[gandreadis]](https://stackoverflow.com/users/6171547/)          Chapter 4
+  &lbrack;&lbrack;gandreadis&rbrack;&rbrack;(https://stackoverflow.com/users/6171547/)          Chapter 4
 
-  [[geek1011]](https://stackoverflow.com/users/5139282/)            Chapter 21
+  &lbrack;&lbrack;geek1011&rbrack;&rbrack;(https://stackoverflow.com/users/5139282/)            Chapter 21
 
-  [[geeksal]](https://stackoverflow.com/users/3212574/)             Chapter 17
+  &lbrack;&lbrack;geeksal&rbrack;&rbrack;(https://stackoverflow.com/users/3212574/)             Chapter 17
 
-  [[Gerardas]](https://stackoverflow.com/users/2948417/)            Chapter 1
+  &lbrack;&lbrack;Gerardas&rbrack;&rbrack;(https://stackoverflow.com/users/2948417/)            Chapter 1
 
-  [[Gnietschow]](https://stackoverflow.com/users/1339365/)          Chapter 10
+  &lbrack;&lbrack;Gnietschow&rbrack;&rbrack;(https://stackoverflow.com/users/1339365/)          Chapter 10
 
-  [[GoatsWearHats]](https://stackoverflow.com/users/5299938/)       Chapter 1
+  &lbrack;&lbrack;GoatsWearHats&rbrack;&rbrack;(https://stackoverflow.com/users/5299938/)       Chapter 1
 
-  [[Gofilord]](https://stackoverflow.com/users/3448251/)            Chapter 21
+  &lbrack;&lbrack;Gofilord&rbrack;&rbrack;(https://stackoverflow.com/users/3448251/)            Chapter 21
 
-  [[Grant Palin]](https://stackoverflow.com/users/68763/)           Chapter 54
+  &lbrack;&lbrack;Grant Palin&rbrack;&rbrack;(https://stackoverflow.com/users/68763/)           Chapter 54
 
-  [[H. Pauwelyn]](https://stackoverflow.com/users/4551041/)         Chapters 4, 18 and 36
+  &lbrack;&lbrack;H. Pauwelyn&rbrack;&rbrack;(https://stackoverflow.com/users/4551041/)         Chapters 4, 18 and 36
 
-  [[HansCz]](https://stackoverflow.com/users/173679/)               Chapter 4
+  &lbrack;&lbrack;HansCz&rbrack;&rbrack;(https://stackoverflow.com/users/173679/)               Chapter 4
 
-  [[Harish Gyanani]](https://stackoverflow.com/users/1495703/)      Chapter 1
+  &lbrack;&lbrack;Harish Gyanani&rbrack;&rbrack;(https://stackoverflow.com/users/1495703/)      Chapter 1
 
-  [[Harry]](https://stackoverflow.com/users/2606013/)               Chapters 10, 26, 28, 29, 33, 35 and 44
+  &lbrack;&lbrack;Harry&rbrack;&rbrack;(https://stackoverflow.com/users/2606013/)               Chapters 10, 26, 28, 29, 33, 35 and 44
 
-  [[henry]](https://stackoverflow.com/users/1241736/)               Chapter 4
+  &lbrack;&lbrack;henry&rbrack;&rbrack;(https://stackoverflow.com/users/1241736/)               Chapter 4
 
-  [[Horst Jahns]](https://stackoverflow.com/users/2661301/)         Chapter 5
+  &lbrack;&lbrack;Horst Jahns&rbrack;&rbrack;(https://stackoverflow.com/users/2661301/)         Chapter 5
 
-  [[Hristo]](https://stackoverflow.com/users/196921/)               Chapter 32
+  &lbrack;&lbrack;Hristo&rbrack;&rbrack;(https://stackoverflow.com/users/196921/)               Chapter 32
 
-  [[Hugo Buff]](https://stackoverflow.com/users/3392335/)           Chapter 4
+  &lbrack;&lbrack;Hugo Buff&rbrack;&rbrack;(https://stackoverflow.com/users/3392335/)           Chapter 4
 
-  [[Hynes]](https://stackoverflow.com/users/2640230/)                Chapters 4, 5 and 15
+  &lbrack;&lbrack;Hynes&rbrack;&rbrack;(https://stackoverflow.com/users/2640230/)                Chapters 4, 5 and 15
 
-  [[insertusernamehere]](https://stackoverflow.com/users/1456376/)   Chapter 15
+  &lbrack;&lbrack;insertusernamehere&rbrack;&rbrack;(https://stackoverflow.com/users/1456376/)   Chapter 15
 
-  [[J Atkin]](https://stackoverflow.com/users/4683264/)              Chapters 1 and 4
+  &lbrack;&lbrack;J Atkin&rbrack;&rbrack;(https://stackoverflow.com/users/4683264/)              Chapters 1 and 4
 
-  [[J F]](https://stackoverflow.com/users/5244995/)                  Chapters 4 and 20
+  &lbrack;&lbrack;J F&rbrack;&rbrack;(https://stackoverflow.com/users/5244995/)                  Chapters 4 and 20
 
-  [[Jacob Gray]](https://stackoverflow.com/users/3285730/)           Chapters 4, 5 and 22
+  &lbrack;&lbrack;Jacob Gray&rbrack;&rbrack;(https://stackoverflow.com/users/3285730/)           Chapters 4, 5 and 22
 
-  [[James Donnelly]](https://stackoverflow.com/users/1317805/)       Chapters 7 and 17
+  &lbrack;&lbrack;James Donnelly&rbrack;&rbrack;(https://stackoverflow.com/users/1317805/)       Chapters 7 and 17
 
-  [[James Taylor]](https://stackoverflow.com/users/1944335/)         Chapter 5
+  &lbrack;&lbrack;James Taylor&rbrack;&rbrack;(https://stackoverflow.com/users/1944335/)         Chapter 5
 
-  [[jaredsk]](https://stackoverflow.com/users/2378918/)              Chapters 10, 36 and 50
+  &lbrack;&lbrack;jaredsk&rbrack;&rbrack;(https://stackoverflow.com/users/2378918/)              Chapters 10, 36 and 50
 
-  [[JedaiCoder]](https://stackoverflow.com/users/5826535/)           Chapter 6
+  &lbrack;&lbrack;JedaiCoder&rbrack;&rbrack;(https://stackoverflow.com/users/5826535/)           Chapter 6
 
-  [[Jef]](https://stackoverflow.com/users/4142458/)                  Chapter 16
+  &lbrack;&lbrack;Jef&rbrack;&rbrack;(https://stackoverflow.com/users/4142458/)                  Chapter 16
 
-  [[Jeffery Tang]](https://stackoverflow.com/users/6454135/)         Chapter 30
+  &lbrack;&lbrack;Jeffery Tang&rbrack;&rbrack;(https://stackoverflow.com/users/6454135/)         Chapter 30
 
-  [[jehna1]](https://stackoverflow.com/users/2697279/)               Chapter 6
+  &lbrack;&lbrack;jehna1&rbrack;&rbrack;(https://stackoverflow.com/users/2697279/)               Chapter 6
 
-  [[jgh]](https://stackoverflow.com/users/7861554/)                  Chapter 12
+  &lbrack;&lbrack;jgh&rbrack;&rbrack;(https://stackoverflow.com/users/7861554/)                  Chapter 12
 
-  [[JHS]](https://stackoverflow.com/users/3538313/)                  Chapter 25
+  &lbrack;&lbrack;JHS&rbrack;&rbrack;(https://stackoverflow.com/users/3538313/)                  Chapter 25
 
-  [[Jmh2013]](https://stackoverflow.com/users/1284810/)              Chapters 13, 23 and 43
+  &lbrack;&lbrack;Jmh2013&rbrack;&rbrack;(https://stackoverflow.com/users/1284810/)              Chapters 13, 23 and 43
 
-  [[joejoe31b]](https://stackoverflow.com/users/3213602/)            Chapters 4 and 13
+  &lbrack;&lbrack;joejoe31b&rbrack;&rbrack;(https://stackoverflow.com/users/3213602/)            Chapters 4 and 13
 
-  [[JoelBonetR]](https://stackoverflow.com/users/6479108/)           Chapter 4
+  &lbrack;&lbrack;JoelBonetR&rbrack;&rbrack;(https://stackoverflow.com/users/6479108/)           Chapter 4
 
-  [[joe_young]](https://stackoverflow.com/users/4206206/)            Chapters 1 and 15
+  &lbrack;&lbrack;joe_young&rbrack;&rbrack;(https://stackoverflow.com/users/4206206/)            Chapters 1 and 15
 
-  [[John Slegers]](https://stackoverflow.com/users/1946501/)         Chapters 4, 5, 6, 13, 17, 18, 28, 52 and 55
+  &lbrack;&lbrack;John Slegers&rbrack;&rbrack;(https://stackoverflow.com/users/1946501/)         Chapters 4, 5, 6, 13, 17, 18, 28, 52 and 55
 
-  [[Jon Chan]](https://stackoverflow.com/users/1043674/)             Chapters 5 and 15
+  &lbrack;&lbrack;Jon Chan&rbrack;&rbrack;(https://stackoverflow.com/users/1043674/)             Chapters 5 and 15
 
-  [[Jonathan Argentiero]](https://stackoverflow.com/users/1679414/)  Chapter 6
+  &lbrack;&lbrack;Jonathan Argentiero&rbrack;&rbrack;(https://stackoverflow.com/users/1679414/)  Chapter 6
 
-  [[Jonathan Lam]](https://stackoverflow.com/users/2397327/)         Chapters 1, 6, 7, 16 and 22
+  &lbrack;&lbrack;Jonathan Lam&rbrack;&rbrack;(https://stackoverflow.com/users/2397327/)         Chapters 1, 6, 7, 16 and 22
 
-  [[Jonathan Zúñiga]](https://stackoverflow.com/users/1560233/)      Chapter 5
+  &lbrack;&lbrack;Jonathan Zúñiga&rbrack;&rbrack;(https://stackoverflow.com/users/1560233/)      Chapter 5
 
-  [[Jose Gomez]](https://stackoverflow.com/users/6530221/)           Chapter 1
+  &lbrack;&lbrack;Jose Gomez&rbrack;&rbrack;(https://stackoverflow.com/users/6530221/)           Chapter 1
 
-  [[Just a student]](https://stackoverflow.com/users/962603/)        Chapter 1
+  &lbrack;&lbrack;Just a student&rbrack;&rbrack;(https://stackoverflow.com/users/962603/)        Chapter 1
 
-  [[Kevin Katzke]](https://stackoverflow.com/users/1280289/)         Chapter 23
+  &lbrack;&lbrack;Kevin Katzke&rbrack;&rbrack;(https://stackoverflow.com/users/1280289/)         Chapter 23
 
-  [[kingcobra1986]](https://stackoverflow.com/users/3942863/)        Chapter 17
+  &lbrack;&lbrack;kingcobra1986&rbrack;&rbrack;(https://stackoverflow.com/users/3942863/)        Chapter 17
 
-  [[Kuhan]](https://stackoverflow.com/users/3214177/)                Chapter 18
+  &lbrack;&lbrack;Kuhan&rbrack;&rbrack;(https://stackoverflow.com/users/3214177/)                Chapter 18
 
-  [[Kyle Ratliff]](https://stackoverflow.com/users/4446898/)         Chapter 6
+  &lbrack;&lbrack;Kyle Ratliff&rbrack;&rbrack;(https://stackoverflow.com/users/4446898/)         Chapter 6
 
-  [[leo_ap]](https://stackoverflow.com/users/1644937/)               Chapter 50
+  &lbrack;&lbrack;leo_ap&rbrack;&rbrack;(https://stackoverflow.com/users/1644937/)               Chapter 50
 
-  [[LiLacTac]](https://stackoverflow.com/users/5375837/)             Chapter 55
+  &lbrack;&lbrack;LiLacTac&rbrack;&rbrack;(https://stackoverflow.com/users/5375837/)             Chapter 55
 
-  [[Luka Kerr]](https://stackoverflow.com/users/6523193/)            Chapter 29
+  &lbrack;&lbrack;Luka Kerr&rbrack;&rbrack;(https://stackoverflow.com/users/6523193/)            Chapter 29
 
-  [[Luke Taylor]](https://stackoverflow.com/users/4414003/)          Chapter 28
+  &lbrack;&lbrack;Luke Taylor&rbrack;&rbrack;(https://stackoverflow.com/users/4414003/)          Chapter 28
 
-  [[Madalina Taina]](https://stackoverflow.com/users/3830698/)       Chapters 4, 5, 6, 8, 9, 10, 11, 12, 14, 15, 19, 25,
+  &lbrack;&lbrack;Madalina Taina&rbrack;&rbrack;(https://stackoverflow.com/users/3830698/)       Chapters 4, 5, 6, 8, 9, 10, 11, 12, 14, 15, 19, 25,
                                                                                  29, 31, 32, 34, 39, 45 and 49
 
-  [[Marc]](https://stackoverflow.com/users/4382892/)                 Chapter 20
+  &lbrack;&lbrack;Marc&rbrack;&rbrack;(https://stackoverflow.com/users/4382892/)                 Chapter 20
 
-  [[Marcatectura]](https://stackoverflow.com/users/1592764/)         Chapter 21
+  &lbrack;&lbrack;Marcatectura&rbrack;&rbrack;(https://stackoverflow.com/users/1592764/)         Chapter 21
 
-  [[Marjorie Pickard]](https://stackoverflow.com/users/7855318/)     Chapter 2
+  &lbrack;&lbrack;Marjorie Pickard&rbrack;&rbrack;(https://stackoverflow.com/users/7855318/)     Chapter 2
 
-  [[Mark Perera]](https://stackoverflow.com/users/6574064/)          Chapter 4
+  &lbrack;&lbrack;Mark Perera&rbrack;&rbrack;(https://stackoverflow.com/users/6574064/)          Chapter 4
 
-  [[Marten Koetsier]](https://stackoverflow.com/users/2286722/)      Chapters 34 and 41
+  &lbrack;&lbrack;Marten Koetsier&rbrack;&rbrack;(https://stackoverflow.com/users/2286722/)      Chapters 34 and 41
 
-  [[Matas Vaitkevicius]](https://stackoverflow.com/users/1509764/)   Chapters 4 and 13
+  &lbrack;&lbrack;Matas Vaitkevicius&rbrack;&rbrack;(https://stackoverflow.com/users/1509764/)   Chapters 4 and 13
 
-  [[Mattia Astorino]](https://stackoverflow.com/users/1490860/)      Chapter 22
+  &lbrack;&lbrack;Mattia Astorino&rbrack;&rbrack;(https://stackoverflow.com/users/1490860/)      Chapter 22
 
-  [[Maximillian                                                                  Chapters 5 and 13
-  Laumeister]](https://stackoverflow.com/users/2234742/)             
+  &lbrack;&lbrack;Maximillian                                                                  Chapters 5 and 13
+  Laumeister&rbrack;&rbrack;(https://stackoverflow.com/users/2234742/)             
 
-  [[Maxouhell]](https://stackoverflow.com/users/4022806/)            Chapter 6
+  &lbrack;&lbrack;Maxouhell&rbrack;&rbrack;(https://stackoverflow.com/users/4022806/)            Chapter 6
 
-  [[Michael Moriarty]](https://stackoverflow.com/users/4515471/)     Chapters 5, 15 and 18
+  &lbrack;&lbrack;Michael Moriarty&rbrack;&rbrack;(https://stackoverflow.com/users/4515471/)     Chapters 5, 15 and 18
 
-  [[Michael_B]](https://stackoverflow.com/users/3597276/)            Chapters 4 and 6
+  &lbrack;&lbrack;Michael_B&rbrack;&rbrack;(https://stackoverflow.com/users/3597276/)            Chapters 4 and 6
 
-  [[Mifeet]](https://stackoverflow.com/users/2032064/)               Chapter 6
+  &lbrack;&lbrack;Mifeet&rbrack;&rbrack;(https://stackoverflow.com/users/2032064/)               Chapter 6
 
-  [[Mike McCaughan]](https://stackoverflow.com/users/215552/)        Chapter 24
+  &lbrack;&lbrack;Mike McCaughan&rbrack;&rbrack;(https://stackoverflow.com/users/215552/)        Chapter 24
 
-  [[Miles]](https://stackoverflow.com/users/4075712/)                Chapters 12 and 51
+  &lbrack;&lbrack;Miles&rbrack;&rbrack;(https://stackoverflow.com/users/4075712/)                Chapters 12 and 51
 
-  [[Miro]](https://stackoverflow.com/users/559079/)                  Chapter 18
+  &lbrack;&lbrack;Miro&rbrack;&rbrack;(https://stackoverflow.com/users/559079/)                  Chapter 18
 
-  [[MMachinegun]](https://stackoverflow.com/users/2102463/)          Chapter 54
+  &lbrack;&lbrack;MMachinegun&rbrack;&rbrack;(https://stackoverflow.com/users/2102463/)          Chapter 54
 
-  [[mmativ]](https://stackoverflow.com/users/5321188/)               Chapter 50
+  &lbrack;&lbrack;mmativ&rbrack;&rbrack;(https://stackoverflow.com/users/5321188/)               Chapter 50
 
-  [[Mod Proxy]](https://stackoverflow.com/users/6571865/)            Chapter 6
+  &lbrack;&lbrack;Mod Proxy&rbrack;&rbrack;(https://stackoverflow.com/users/6571865/)            Chapter 6
 
-  [[Mr. Alien]](https://stackoverflow.com/users/1542290/)            Chapter 5
+  &lbrack;&lbrack;Mr. Alien&rbrack;&rbrack;(https://stackoverflow.com/users/1542290/)            Chapter 5
 
-  [[Mr. Meeseeks]](https://stackoverflow.com/users/1270656/)        Chapter 29
+  &lbrack;&lbrack;Mr. Meeseeks&rbrack;&rbrack;(https://stackoverflow.com/users/1270656/)        Chapter 29
 
-  [[Mr_Green]](https://stackoverflow.com/users/1577396/)            Chapter 8
+  &lbrack;&lbrack;Mr_Green&rbrack;&rbrack;(https://stackoverflow.com/users/1577396/)            Chapter 8
 
-  [[Muthu Kumaran]](https://stackoverflow.com/users/615746/)        Chapter 37
+  &lbrack;&lbrack;Muthu Kumaran&rbrack;&rbrack;(https://stackoverflow.com/users/615746/)        Chapter 37
 
-  [[Naeem Shaikh]](https://stackoverflow.com/users/3556874/)        Chapter 4
+  &lbrack;&lbrack;Naeem Shaikh&rbrack;&rbrack;(https://stackoverflow.com/users/3556874/)        Chapter 4
 
-  [[Nate]](https://stackoverflow.com/users/420006/)                 Chapter 5
+  &lbrack;&lbrack;Nate&rbrack;&rbrack;(https://stackoverflow.com/users/420006/)                 Chapter 5
 
-  [[Nathan Arthur]](https://stackoverflow.com/users/937377/)        Chapters 1, 4, 6, 8, 13, 14, 15 and 16
+  &lbrack;&lbrack;Nathan Arthur&rbrack;&rbrack;(https://stackoverflow.com/users/937377/)        Chapters 1, 4, 6, 8, 13, 14, 15 and 16
 
-  [[Nemanja Trifunovic]](https://stackoverflow.com/users/4004007/)  Chapter 48
+  &lbrack;&lbrack;Nemanja Trifunovic&rbrack;&rbrack;(https://stackoverflow.com/users/4004007/)  Chapter 48
 
-  [[Niek Brouwer]](https://stackoverflow.com/users/5347689/)        Chapter 23
+  &lbrack;&lbrack;Niek Brouwer&rbrack;&rbrack;(https://stackoverflow.com/users/5347689/)        Chapter 23
 
-  [[niyasc]](https://stackoverflow.com/users/1520248/)              Chapter 18
+  &lbrack;&lbrack;niyasc&rbrack;&rbrack;(https://stackoverflow.com/users/1520248/)              Chapter 18
 
-  [[Nobal Mohan]](https://stackoverflow.com/users/1004972/)         Chapter 10
+  &lbrack;&lbrack;Nobal Mohan&rbrack;&rbrack;(https://stackoverflow.com/users/1004972/)         Chapter 10
 
-  [[o.v.]](https://stackoverflow.com/users/1081234/)                Chapter 6
+  &lbrack;&lbrack;o.v.&rbrack;&rbrack;(https://stackoverflow.com/users/1081234/)                Chapter 6
 
-  [[Obsidian]](https://stackoverflow.com/users/2120261/)            Chapters 37 and 53
+  &lbrack;&lbrack;Obsidian&rbrack;&rbrack;(https://stackoverflow.com/users/2120261/)            Chapters 37 and 53
 
-  [[Ortomala Lokni]](https://stackoverflow.com/users/1807667/)      Chapters 6, 7 and 17
+  &lbrack;&lbrack;Ortomala Lokni&rbrack;&rbrack;(https://stackoverflow.com/users/1807667/)      Chapters 6, 7 and 17
 
-  [[Pat]](https://stackoverflow.com/users/5712587/)                 Chapter 21
+  &lbrack;&lbrack;Pat&rbrack;&rbrack;(https://stackoverflow.com/users/5712587/)                 Chapter 21
 
-  [[patelarpan]](https://stackoverflow.com/users/3710481/)          Chapters 1 and 50
+  &lbrack;&lbrack;patelarpan&rbrack;&rbrack;(https://stackoverflow.com/users/3710481/)          Chapters 1 and 50
 
-  [[Paul Kozlovitch]](https://stackoverflow.com/users/1923755/)     Chapter 6
+  &lbrack;&lbrack;Paul Kozlovitch&rbrack;&rbrack;(https://stackoverflow.com/users/1923755/)     Chapter 6
 
-  [[Paul Sweatte]](https://stackoverflow.com/users/1113772/)        Chapter 46
+  &lbrack;&lbrack;Paul Sweatte&rbrack;&rbrack;(https://stackoverflow.com/users/1113772/)        Chapter 46
 
-  [[Persijn]](https://stackoverflow.com/users/3999748/)             Chapters 4 and 5
+  &lbrack;&lbrack;Persijn&rbrack;&rbrack;(https://stackoverflow.com/users/3999748/)             Chapters 4 and 5
 
-  [[Phil]](https://stackoverflow.com/users/6429774/)                Chapter 50
+  &lbrack;&lbrack;Phil&rbrack;&rbrack;(https://stackoverflow.com/users/6429774/)                Chapter 50
 
-  [[pixelbandito]](https://stackoverflow.com/users/2555029/)        Chapter 9
+  &lbrack;&lbrack;pixelbandito&rbrack;&rbrack;(https://stackoverflow.com/users/2555029/)        Chapter 9
 
-  [[Praveen Kumar]](https://stackoverflow.com/users/462627/)        Chapters 4, 6, 13, 15, 26, 28, 50 and 55
+  &lbrack;&lbrack;Praveen Kumar&rbrack;&rbrack;(https://stackoverflow.com/users/462627/)        Chapters 4, 6, 13, 15, 26, 28, 50 and 55
 
-  [[Qaz]](https://stackoverflow.com/users/2421026/)                 Chapter 12
+  &lbrack;&lbrack;Qaz&rbrack;&rbrack;(https://stackoverflow.com/users/2421026/)                 Chapter 12
 
-  [[Rahul Nanwani]](https://stackoverflow.com/users/2314308/)       Chapter 22
+  &lbrack;&lbrack;Rahul Nanwani&rbrack;&rbrack;(https://stackoverflow.com/users/2314308/)       Chapter 22
 
-  [[RamenChef]](https://stackoverflow.com/users/6392939/)           Chapter 43
+  &lbrack;&lbrack;RamenChef&rbrack;&rbrack;(https://stackoverflow.com/users/6392939/)           Chapter 43
 
-  [[rdans]](https://stackoverflow.com/users/2617732/)               Chapter 4
+  &lbrack;&lbrack;rdans&rbrack;&rbrack;(https://stackoverflow.com/users/2617732/)               Chapter 4
 
-  [[RedRiderX]](https://stackoverflow.com/users/982259/)            Chapter 37
+  &lbrack;&lbrack;RedRiderX&rbrack;&rbrack;(https://stackoverflow.com/users/982259/)            Chapter 37
 
-  [[rejnev]](https://stackoverflow.com/users/3764165/)              Chapter 8
+  &lbrack;&lbrack;rejnev&rbrack;&rbrack;(https://stackoverflow.com/users/3764165/)              Chapter 8
 
-  [[Richard Hamilton]](https://stackoverflow.com/users/4703663/)    Chapters 4, 5, 15, 18, 20 and 27
+  &lbrack;&lbrack;Richard Hamilton&rbrack;&rbrack;(https://stackoverflow.com/users/4703663/)    Chapters 4, 5, 15, 18, 20 and 27
 
-  [[Rion Williams]](https://stackoverflow.com/users/557445/)        Chapter 4
+  &lbrack;&lbrack;Rion Williams&rbrack;&rbrack;(https://stackoverflow.com/users/557445/)        Chapter 4
 
-  [[rishabh dev]](https://stackoverflow.com/users/4114117/)         Chapter 46
+  &lbrack;&lbrack;rishabh dev&rbrack;&rbrack;(https://stackoverflow.com/users/4114117/)         Chapter 46
 
-  [[rmondesilva]](https://stackoverflow.com/users/4672534/)         Chapters 15 and 20
+  &lbrack;&lbrack;rmondesilva&rbrack;&rbrack;(https://stackoverflow.com/users/4672534/)         Chapters 15 and 20
 
-  [[Robotnicka]](https://stackoverflow.com/users/4534949/)          Chapter 20
+  &lbrack;&lbrack;Robotnicka&rbrack;&rbrack;(https://stackoverflow.com/users/4534949/)          Chapter 20
 
-  [[Rocket Risa]](https://stackoverflow.com/users/5220880/)         Chapter 1
+  &lbrack;&lbrack;Rocket Risa&rbrack;&rbrack;(https://stackoverflow.com/users/5220880/)         Chapter 1
 
-  [[Sandeep Tuniki]](https://stackoverflow.com/users/4937439/)      Chapter 6
+  &lbrack;&lbrack;Sandeep Tuniki&rbrack;&rbrack;(https://stackoverflow.com/users/4937439/)      Chapter 6
 
-  [[Saroj Sasmal]](https://stackoverflow.com/users/5293076/)        Chapter 1
+  &lbrack;&lbrack;Saroj Sasmal&rbrack;&rbrack;(https://stackoverflow.com/users/5293076/)        Chapter 1
 
-  [[ScientiaEtVeritas]](https://stackoverflow.com/users/2612484/)   Chapters 1, 4, 6, 7, 10, 11, 18, 20, 21, 23, 26,
+  &lbrack;&lbrack;ScientiaEtVeritas&rbrack;&rbrack;(https://stackoverflow.com/users/2612484/)   Chapters 1, 4, 6, 7, 10, 11, 18, 20, 21, 23, 26,
                                                                                 31, 33, 44 and 53
 
-  [[Sebastian Zartner]](https://stackoverflow.com/users/432681/)    Chapter 40
+  &lbrack;&lbrack;Sebastian Zartner&rbrack;&rbrack;(https://stackoverflow.com/users/432681/)    Chapter 40
 
-  [[SeinopSys]](https://stackoverflow.com/users/1344955/)           Chapters 18, 23, 36 and 54
+  &lbrack;&lbrack;SeinopSys&rbrack;&rbrack;(https://stackoverflow.com/users/1344955/)           Chapters 18, 23, 36 and 54
 
-  [[Sergey Denisov]](https://stackoverflow.com/users/2570353/)      Chapters 5 and 26
+  &lbrack;&lbrack;Sergey Denisov&rbrack;&rbrack;(https://stackoverflow.com/users/2570353/)      Chapters 5 and 26
 
-  [[Shaggy]](https://stackoverflow.com/users/4768433/)              Chapters 5, 21 and 53
+  &lbrack;&lbrack;Shaggy&rbrack;&rbrack;(https://stackoverflow.com/users/4768433/)              Chapters 5, 21 and 53
 
-  [[Siavas]](https://stackoverflow.com/users/5838198/)              Chapter 6
+  &lbrack;&lbrack;Siavas&rbrack;&rbrack;(https://stackoverflow.com/users/5838198/)              Chapter 6
 
-  [[Someone]](https://stackoverflow.com/users/1410735/)             Chapter 6
+  &lbrack;&lbrack;Someone&rbrack;&rbrack;(https://stackoverflow.com/users/1410735/)             Chapter 6
 
-  [[Sourav Ghosh]](https://stackoverflow.com/users/4040525/)        Chapters 5 and 22
+  &lbrack;&lbrack;Sourav Ghosh&rbrack;&rbrack;(https://stackoverflow.com/users/4040525/)        Chapters 5 and 22
 
-  [[Squazz]](https://stackoverflow.com/users/1955317/)              Chapters 16 and 31
+  &lbrack;&lbrack;Squazz&rbrack;&rbrack;(https://stackoverflow.com/users/1955317/)              Chapters 16 and 31
 
-  [[srikarg]](https://stackoverflow.com/users/1042093/)             Chapter 13
+  &lbrack;&lbrack;srikarg&rbrack;&rbrack;(https://stackoverflow.com/users/1042093/)             Chapter 13
 
-  [[StefanBob]](https://stackoverflow.com/users/3317728/)           Chapter 9
+  &lbrack;&lbrack;StefanBob&rbrack;&rbrack;(https://stackoverflow.com/users/3317728/)           Chapter 9
 
-  [[Stewartside]](https://stackoverflow.com/users/2889988/)         Chapters 4, 5, 6, 18, 20 and 21
+  &lbrack;&lbrack;Stewartside&rbrack;&rbrack;(https://stackoverflow.com/users/2889988/)         Chapters 4, 5, 6, 18, 20 and 21
 
-  [[Stratboy]](https://stackoverflow.com/users/551357/)             Chapter 5
+  &lbrack;&lbrack;Stratboy&rbrack;&rbrack;(https://stackoverflow.com/users/551357/)             Chapter 5
 
-  [[sudo bangbang]](https://stackoverflow.com/users/3951782/)       Chapter 4
+  &lbrack;&lbrack;sudo bangbang&rbrack;&rbrack;(https://stackoverflow.com/users/3951782/)       Chapter 4
 
-  [[Sumner Evans]](https://stackoverflow.com/users/2319844/)        Chapter 4
+  &lbrack;&lbrack;Sumner Evans&rbrack;&rbrack;(https://stackoverflow.com/users/2319844/)        Chapter 4
 
-  [[Sun Qingyao]](https://stackoverflow.com/users/5399734/)         Chapter 8
+  &lbrack;&lbrack;Sun Qingyao&rbrack;&rbrack;(https://stackoverflow.com/users/5399734/)         Chapter 8
 
-  [[Sunnyok]](https://stackoverflow.com/users/4290193/)             Chapters 4, 6 and 8
+  &lbrack;&lbrack;Sunnyok&rbrack;&rbrack;(https://stackoverflow.com/users/4290193/)             Chapters 4, 6 and 8
 
-  [[Sverri M. Olsen]](https://stackoverflow.com/users/1300892/)     Chapter 1
+  &lbrack;&lbrack;Sverri M. Olsen&rbrack;&rbrack;(https://stackoverflow.com/users/1300892/)     Chapter 1
 
-  [[takeradi]](https://stackoverflow.com/users/3538394/)      Chapter 16
+  &lbrack;&lbrack;takeradi&rbrack;&rbrack;(https://stackoverflow.com/users/3538394/)      Chapter 16
 
-  [[Taylor]](https://stackoverflow.com/users/3311859/)        Chapter 6
+  &lbrack;&lbrack;Taylor&rbrack;&rbrack;(https://stackoverflow.com/users/3311859/)        Chapter 6
 
-  [[Ted Goas]](https://stackoverflow.com/users/734487/)       Chapters 12, 15, 34 and 43
+  &lbrack;&lbrack;Ted Goas&rbrack;&rbrack;(https://stackoverflow.com/users/734487/)       Chapters 12, 15, 34 and 43
 
-  [[Teo Dragovic]](https://stackoverflow.com/users/2382115/)  Chapters 1 and 13
+  &lbrack;&lbrack;Teo Dragovic&rbrack;&rbrack;(https://stackoverflow.com/users/2382115/)  Chapters 1 and 13
 
-  [[ThatWeirdo]](https://stackoverflow.com/users/2566065/)    Chapter 4
+  &lbrack;&lbrack;ThatWeirdo&rbrack;&rbrack;(https://stackoverflow.com/users/2566065/)    Chapter 4
 
-  [[TheGenie                                                              Chapter 36
-  OfTruth]](https://stackoverflow.com/users/5931915/)         
+  &lbrack;&lbrack;TheGenie                                                              Chapter 36
+  OfTruth&rbrack;&rbrack;(https://stackoverflow.com/users/5931915/)         
 
-  [[Theodore K.]](https://stackoverflow.com/users/2667686/)   Chapter 22
+  &lbrack;&lbrack;Theodore K.&rbrack;&rbrack;(https://stackoverflow.com/users/2667686/)   Chapter 22
 
-  [[think123]](https://stackoverflow.com/users/1136709/)      Chapter 5
+  &lbrack;&lbrack;think123&rbrack;&rbrack;(https://stackoverflow.com/users/1136709/)      Chapter 5
 
-  [[Timothy Miller]](https://stackoverflow.com/users/934019/) Chapter 55
+  &lbrack;&lbrack;Timothy Miller&rbrack;&rbrack;(https://stackoverflow.com/users/934019/) Chapter 55
 
-  [[Toby]](https://stackoverflow.com/users/4008056/)          Chapters 15 and 20
+  &lbrack;&lbrack;Toby&rbrack;&rbrack;(https://stackoverflow.com/users/4008056/)          Chapters 15 and 20
 
-  [[Todd]](https://stackoverflow.com/users/7026544/)          Chapter 1
+  &lbrack;&lbrack;Todd&rbrack;&rbrack;(https://stackoverflow.com/users/7026544/)          Chapter 1
 
-  [[ToniB]](https://stackoverflow.com/users/3614064/)         Chapter 15
+  &lbrack;&lbrack;ToniB&rbrack;&rbrack;(https://stackoverflow.com/users/3614064/)         Chapter 15
 
-  [[Tot Zam]](https://stackoverflow.com/users/4660897/)       Chapter 8
+  &lbrack;&lbrack;Tot Zam&rbrack;&rbrack;(https://stackoverflow.com/users/4660897/)       Chapter 8
 
-  [[Trevor Clarke]](https://stackoverflow.com/users/3998484/) Chapters 5, 8, 10 and 15
+  &lbrack;&lbrack;Trevor Clarke&rbrack;&rbrack;(https://stackoverflow.com/users/3998484/) Chapters 5, 8, 10 and 15
 
-  [[TrungDQ]](https://stackoverflow.com/users/1420186/)       Chapter 56
+  &lbrack;&lbrack;TrungDQ&rbrack;&rbrack;(https://stackoverflow.com/users/1420186/)       Chapter 56
 
-  [[TylerH]](https://stackoverflow.com/users/2756409/)        Chapters 1, 4, 5, 36 and 53
+  &lbrack;&lbrack;TylerH&rbrack;&rbrack;(https://stackoverflow.com/users/2756409/)        Chapters 1, 4, 5, 36 and 53
 
-  [[Ulrich Schwarz]](https://stackoverflow.com/users/505649/) Chapter 43
+  &lbrack;&lbrack;Ulrich Schwarz&rbrack;&rbrack;(https://stackoverflow.com/users/505649/) Chapter 43
 
-  [[user007]](https://stackoverflow.com/users/2642959/)       Chapter 18
+  &lbrack;&lbrack;user007&rbrack;&rbrack;(https://stackoverflow.com/users/2642959/)       Chapter 18
 
-  [[user2622348]](https://stackoverflow.com/users/2622348/)   Chapter 20
+  &lbrack;&lbrack;user2622348&rbrack;&rbrack;(https://stackoverflow.com/users/2622348/)   Chapter 20
 
-  [[vishak]](https://stackoverflow.com/users/1161892/)        Chapter 14
+  &lbrack;&lbrack;vishak&rbrack;&rbrack;(https://stackoverflow.com/users/1161892/)        Chapter 14
 
-  [[vkopio]](https://stackoverflow.com/users/5047630/)        Chapter 7
+  &lbrack;&lbrack;vkopio&rbrack;&rbrack;(https://stackoverflow.com/users/5047630/)        Chapter 7
 
-  [[Vlusion]](https://stackoverflow.com/users/5539376/)       Chapter 15
+  &lbrack;&lbrack;Vlusion&rbrack;&rbrack;(https://stackoverflow.com/users/5539376/)       Chapter 15
 
-  [[Volker E.]](https://stackoverflow.com/users/1696030/)     Chapter 15
+  &lbrack;&lbrack;Volker E.&rbrack;&rbrack;(https://stackoverflow.com/users/1696030/)     Chapter 15
 
-  [[web]](https://stackoverflow.com/users/1811992/)           Chapters 6, 26, 28, 29 and 44
+  &lbrack;&lbrack;web&rbrack;&rbrack;(https://stackoverflow.com/users/1811992/)           Chapters 6, 26, 28, 29 and 44
 
-  [[Will                                                                  Chapter 9
-  DiFruscio]](https://stackoverflow.com/users/6598808/)       
+  &lbrack;&lbrack;Will                                                                  Chapter 9
+  DiFruscio&rbrack;&rbrack;(https://stackoverflow.com/users/6598808/)       
 
-  [[Wolfgang]](https://stackoverflow.com/users/1979340/)      Chapter 18
+  &lbrack;&lbrack;Wolfgang&rbrack;&rbrack;(https://stackoverflow.com/users/1979340/)      Chapter 18
 
-  [[X]](https://stackoverflow.com/users/1305794/)             Chapter 18
+  &lbrack;&lbrack;X&rbrack;&rbrack;(https://stackoverflow.com/users/1305794/)             Chapter 18
 
-  [[Xinyang Li]](https://stackoverflow.com/users/2226315/)    Chapter 1
+  &lbrack;&lbrack;Xinyang Li&rbrack;&rbrack;(https://stackoverflow.com/users/2226315/)    Chapter 1
 
-  [[xpy]](https://stackoverflow.com/users/1982831/)           Chapter 4
+  &lbrack;&lbrack;xpy&rbrack;&rbrack;(https://stackoverflow.com/users/1982831/)           Chapter 4
 
-  [[Yury Fedorov]](https://stackoverflow.com/users/4378400/)  Chapter 4
+  &lbrack;&lbrack;Yury Fedorov&rbrack;&rbrack;(https://stackoverflow.com/users/4378400/)  Chapter 4
 
-  [[Zac]](https://stackoverflow.com/users/2096845/)           Chapters 5 and 12
+  &lbrack;&lbrack;Zac&rbrack;&rbrack;(https://stackoverflow.com/users/2096845/)           Chapters 5 and 12
 
-  [[Zaffy]](https://stackoverflow.com/users/823738/)          Chapter 4
+  &lbrack;&lbrack;Zaffy&rbrack;&rbrack;(https://stackoverflow.com/users/823738/)          Chapter 4
 
-  [[Zakaria                                                               Chapter 20
-  Acharki]](https://stackoverflow.com/users/4281779/)         
+  &lbrack;&lbrack;Zakaria                                                               Chapter 20
+  Acharki&rbrack;&rbrack;(https://stackoverflow.com/users/4281779/)         
 
-  [[Zaz]](https://stackoverflow.com/users/405550/)            Chapter 4
+  &lbrack;&lbrack;Zaz&rbrack;&rbrack;(https://stackoverflow.com/users/405550/)            Chapter 4
 
-  [[Ze Rubeus]](https://stackoverflow.com/users/4232386/)     Chapter 4
+  &lbrack;&lbrack;Ze Rubeus&rbrack;&rbrack;(https://stackoverflow.com/users/4232386/)     Chapter 4
 
-  [[zeel]](https://stackoverflow.com/users/765036/)           Chapter 6
+  &lbrack;&lbrack;zeel&rbrack;&rbrack;(https://stackoverflow.com/users/765036/)           Chapter 6
 
-  [[zer00ne]](https://stackoverflow.com/users/2813224/)       Chapter 20
+  &lbrack;&lbrack;zer00ne&rbrack;&rbrack;(https://stackoverflow.com/users/2813224/)       Chapter 20
 
-  [[Zeta]](https://stackoverflow.com/users/1139697/)          Chapter 5
+  &lbrack;&lbrack;Zeta&rbrack;&rbrack;(https://stackoverflow.com/users/1139697/)          Chapter 5
 
-  [[Zze]](https://stackoverflow.com/users/3509591/)           Chapter 5
+  &lbrack;&lbrack;Zze&rbrack;&rbrack;(https://stackoverflow.com/users/3509591/)           Chapter 5
 
 <!-- the end -->
 <!-- 6/28/2024 Fri 5:41pm -->
