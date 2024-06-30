@@ -80,18 +80,17 @@ users will see a flash of unstyled content</a>.
 <h4>hello-world.html</h4>
 
 <pre><code>
-<! DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8"/>
-    <link rel="stylesheet" type="text/css" href="style.css">
-  </head>
-  <body>
-    <h1>Hello world!</h1>
-    <p>I ♥ CSS</p>
-  </body>
-</html>
-</code></pre>
+&lt;! DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;meta charset="utf-8"/&gt;
+    &lt;link rel="stylesheet" type="text/css" href="style.css"&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;Hello world!&lt;/h1&gt;
+    &lt;p&gt;I ♥ CSS&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
 
 <h4>style.css</h4>
 
