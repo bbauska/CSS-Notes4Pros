@@ -614,6 +614,7 @@ but with lower specificity.</p>
 <b>Selector Description</b>
 
 | div span |  Descendant selector (all <b>&lt;span&gt;</b>s that are descendants of a <b>&lt;div&gt;</b>) |
+|-----------|-------------------------------------------------------------------------------------|
 | div &gt; span | Child selector (all <b>&lt;span&gt;</b>s that are direct child of a <b>&lt;div&gt;</b>) |
 | a ~ span | General Sibling selector (all <b>&lt;span&gt;</b>s that are siblings after an <b>&lt;a&gt;</b>) |
 | a + span | Adjacent Sibling selector (all <b>&lt;span&gt;</b> that are immediately after an <b>&lt;a&gt;</b>) |
@@ -631,84 +632,78 @@ A descendant combinator, represented by at least one space character
 This combinator selects <b>all** descendants of the element (from child
 elements on down).
 
-```
-div p {
+<pre><code>div p {
   color: red;
 }
-```
+
+&lt;div&gt;
+  &lt;p&gt;My text is red&lt;/p&gt;
+  &lt;section&gt;
+    &lt;p&gt;My text is red&lt;/p&gt;
+  &lt;/section&gt;
+&lt;/div&gt;
+
+&lt;p&gt;My text is not red&lt;/p&gt;</code></pre>
 
 <a href="http://jsbin.com/xonafuz/2/edit?html,css,output">Live Demo on JSBin</a>
 
-In the above example, the first two <b>&lt;p&gt;</b> elements are selected since they are
-both descendants of the <b>&lt;div&gt;</b>.
+<p>In the above example, the first two <b>&lt;p&gt;</b> elements are selected since they are
+both descendants of the <b>&lt;div&gt;</b>.</p>
 
-<h4>Child Combinator:</h4>
+<h4>Child Combinator:selector &gt; selector</h4>
 
-The child (&gt;) combinator is used to select elements that are
-<b>children</b>, or <b>direct descendants**, of the specified element.
+<p>The child (&gt;) combinator is used to select elements that are
+<b>children</b>, or <b>direct descendants**, of the specified element.</p>
 
-```
-div
-&gt;
-p
-{
-<b>color**
-:
-red
-```
+<pre><code>div &gt; p {
+  <b>color</b>: red;
+}
+
+&lt;div&gt;
+  &lt;p&gt;My text is red&lt;/p&gt;
+  &lt;section&gt;
+    &lt;p&gt;My text is not red&lt;/p&gt;
+  &lt/section&gt;
+&lt;/div&gt;</code></pre>
 
 <a href="http://jsbin.com/xonafuz/3/edit?html,css,output">Live Demo on JSBin</a>
 
-  <b>&lt;p**   <b>&gt;** element, as it is the only paragraph directly descended   <b>&lt;div**
-            from a                                                           
+<p>The above CSS selects only the first &lt;p&gt; element, as it is the only paragraph directly descended from a &lt;div&gt;.</p>
 
+<p>The second <b>&lt;p</b> element is not selected because it is not a direct child of the &lt;div&gt;.</p>
 
-> The above CSS selects only the first <b>&gt;**.
+<h4>Adjacent Sibling Combinator:</h4>
 
-  <b>&lt;p**   <b>&gt;** element is not selected because it is not a direct child <b>&lt;div**
-            of the                                                          
-
-
-> The second <b>&gt;**.
-
-  <b>selector**                      <b>+**   <b>selector**
-
-
-> <b>Adjacent Sibling Combinator:**
->
-> The adjacent sibling (+) combinator selects a sibling element that
-> immediate follows a specified element.
+<p>The adjacent sibling (+) combinator selects a sibling element that immediate follows a specified element.</p>
 
 ```
-<b>color**
-<b>&lt;<b>
-**&gt;**
+<b>color</b>
+<b>&lt;</b>
+<b>&gt;</b>
 ```
 
 <a href="http://jsbin.com/xonafuz/4/edit?html,css,output">Live Demo on JSBin</a>
 
-  **&lt;p**   **&gt;** elements which are *directly preceded* by another         **&lt;p**
+<p>The above example selects only those &lt;p&gt; elements which are <i>directly preceded</i> by another &lt;p&gt; element.</p>
 
+<h4>General Sibling Combinator: selector &#126; selector</h4>
 
-> The above example selects only those **&gt;** element.
->
-> **General Sibling Combinator: selector &#126; selector**
->
-> The general sibling (&#126;) combinator selects *all* siblings that follow
-> the specified element.
+<p>The general sibling (&#126;) combinator selects *all* siblings that follow the specified element.</p>
 
-```
-p &#126; p
-**&gt;**
-```
+<pre><code>p &#126; p
+  color: red;
+}
+
+&lt;p&gt;My text is not red&lt;/p&gt;
+&lt;p&gt;My text is red&lt;/p&gt;
+&lt;hr&gt;
+&lt;h1&gt;And now a title&lt;/h1&gt;
+&lt;p&gt;My text is red&lt;/p&gt;</code></pre>
 
 <a href="http://jsbin.com/xonafuz/5/edit?html,css,output">Live Demo on JSBin</a>
 
-  **&lt;p**   **&gt;** elements that are *preceded* by another                  **&lt;p**
-
-
-> The above example selects all **&gt;** element, whether or not they are
-> immediately adjacent.
+The above example selects all &lt;p&gt; elements that are <i>preceded</i> by another &lt;p&gt; element,
+whether or not they are immediately adjacent.</p>
 
 <h3 id="ch4-4">Section 4.4: Pseudo-classes</h3>
 
