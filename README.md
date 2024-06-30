@@ -64,7 +64,7 @@ nor accurate, use at your own risk.</p>
 <p>An external CSS stylesheet can be applied to any number of HTML
 documents by placing a <b>&lt;link&gt;</b> element in each HTML document.</p>
 
-<p>The attribute rel of the <b>&lt;link&gt;</b> tag has to be set to &quot;stylesheet&quot;,
+<p>The attribute rel of the <b>&lt;link&gt;</b> tag has to be set to $\color{red}{&quot;stylesheet&quot;}$,
 and the href attribute to the relative or absolute path to the
 stylesheet. While using relative URL paths is generally considered
 good practice, absolute paths can be used, too. In HTML5 the type
@@ -420,6 +420,7 @@ pseudo-classes, and patterns.</p>
 |  &ast;       | Universal selector (all elements) |
 |  div		   | Tag selector (all <b>&lt;div&gt;</b> elements) |
 |  .blue       | Class selector (all elements with class blue) |
+|  .blue.red   | All elements with class blue and red (a type of Compound selector) |
 |  #headline   | ID selector (the element with "id" attribute set to headline) |
 |  :pseudo-class | All Elements with pseudo-class |
 |  ::pseudo-element | Element that matches pseudo-element |
@@ -454,7 +455,7 @@ using the presence of a given attribute or attribute value.</p>
 |                 |                            | whitespace-separated list of attr  |
 | &lbrack;attr^='val'&rbrack;   | &lt;div attr="val1 val2"&gt;     | Where attr's value begins with val |
 | &lbrack;attr$='val'&rbrack;   | &lt;div attr="sth aval"&gt;      | Where attr's value ends with val   |
-| &lbrack;attr='val'&rbrack;    | &lt;div attr="somevalhere"&gt;   | Where attr contains val anywhere   |
+| &lbrack;attr&ast;='val'&rbrack;    | &lt;div attr="somevalhere"&gt;   | Where attr contains val anywhere   |
 | &lbrack;attr&vert;='val'&rbrack;   | &lt;div attr="val-sth etc"&gt;   | Where attr's value is exactly val, |
 |                 |                            | or starts with val and immediately |
 |                 |                            | followed by - (U+002D) |
