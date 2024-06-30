@@ -69,12 +69,12 @@ and the href attribute to the relative or absolute path to the
 stylesheet. While using relative URL paths is generally considered
 good practice, absolute paths can be used, too. In HTML5 the type
 attribute <a href="https://html.spec.whatwg.org/multipage/semantics.html#the-link-element">
-$${\color{red}can be omitted}$$</a>.</p>
+ ${\color{red}can be omitted}$ </a>.</p>
 
 <p>It is recommended that the <b>&lt;link&gt;</b> tag be placed in the HTML file's <b>&lt;head&gt;</b>
 tag so that the styles are loaded before the elements they style.
-Otherwise, <a href="http://stackoverflow.com/a/1642259/2397327">
-$${\color{red}users will see a flash of unstyled content}$$</a>.</p>
+Otherwise, <a href="http://stackoverflow.com/a/1642259/2397327"> 
+$${\color{red}users will see a flash of unstyled content}$$ </a>.</p>
 
 <h4>Example</h4>
 <h4>hello-world.html</h4>
@@ -83,7 +83,7 @@ $${\color{red}users will see a flash of unstyled content}$$</a>.</p>
 &lt;html&gt;
   &lt;head&gt;
     &lt;meta charset="$\color{red}{utf-8}$"/&gt;
-    &lt;link rel="$\color{red}{stylesheet}$" type="$\color{red}{text/css}$" href="$\color{red}{style.css}$"&gt;
+    &lt;link rel=" $\color{red}{stylesheet}$ " type=" $\color{red}{text/css}$ " href=" $\color{red}{style.css}$ "&gt;
   &lt;/head&gt;
   &lt;body&gt;
     &lt;h1&gt;Hello world!&lt;/h1&gt;
