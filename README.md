@@ -805,14 +805,12 @@ the mouse is over an element (:hover), a checkbox is checked (:checked), etc.</p
 > it's a security hole. See this <a href="https://hacks.mozilla.org/2010/03/privacy-related-changes-coming-to-css-visited/">link</a> for reference.
 
 <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/:placeholder-shown"><b>Experimental.</b>
-
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch4-5">Section 4.5: Child Pseudo Class</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-
-> &quot;The :nth-child(an+b) CSS pseudo-class matches an element that has
-> an+b-1 siblings before it in the document tree, for a given positive
-> <b>or zero value</b> for n&quot; - &lbrack;MDN :nth-child&rbrack;
+&quot;The :nth-child(an+b) CSS pseudo-class matches an element that has
+an+b-1 siblings before it in the document tree, for a given positive
+<b>or zero value</b> for n&quot; - &lbrack;MDN :nth-child&rbrack;
 
 | <b>pseudo-selector</b>       | <b>1&nbsp;&nbsp;2&nbsp;&nbsp;&nbsp;3&nbsp;&nbsp;&nbsp;4&nbsp;&nbsp;&nbsp;5&nbsp;&nbsp;&nbsp;6&nbsp;&nbsp;&nbsp;7&nbsp;&nbsp;&nbsp;8&nbsp;&nbsp;&nbsp;9&nbsp;&nbsp;&nbsp;10</b> |
 |------------------------------|---------------------------------------------------------------------------------|
@@ -878,11 +876,9 @@ attribute. Those class names could be in any order on the element.</p>
 declaration, it would only select elements that have parent elements
 with a .warning class names and child elements with .important class
 names.</p>
-
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch4-7">Section 4.7: Select element using its ID without the high specificity of the ID selector</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-
 <p>This trick helps you select an element using the ID as a value for an
 attribute selector to avoid the high specificity of the ID selector.</p>
 
@@ -894,7 +890,6 @@ attribute selector to avoid the high specificity of the ID selector.</p>
 
 <pre><code>#element { . . . } /* High specificity will override many selectors */
 &lbrack;id="element"&rbrack; { . . .} /* Low specificity, can be overridden easily */</code></pre>
-
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch4-8">Section 4.8: The :last-of-type selector</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -921,7 +916,6 @@ h1: last-of-type {
 <image left justified>
 
 <a href="http://jsfiddle.net/MadalinaTn/YmMZZ/113/">jsFiddle</a>
-
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch4-9">Section 4.9: CSS3 :in-range selector example</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -933,16 +927,15 @@ input:in-range {
 
 <b>&lt;input</b> type="number" min="10" max="20" value="15"&gt;
 <b>&lt;p&gt;</b>The border for this value will be blue<b>&lt;/p&gt;</b></code></pre>
+
 <!-- page 18 -->
 <p>The :in-range CSS pseudo-class matches when an element has its value attribute
 inside the specified range limitations for this element. It allows the
 page to give a feedback that the value currently defined using the
-element is inside the range limits.&lbrack;<a href=https://developer.mozilla.org/en-US/docs/Web/CSS/:in-range">1</a>&rbrack;.
-
+element is inside the range limits.&lbrack;<a href=https://developer.mozilla.org/en-US/docs/Web/CSS/:in-range">1</a>&rbrack;.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch4-10">Section 4.10: A. The :not pseudo-class example & B. :focuswithin CSS pseudo-class</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<!-- page 18 -->
 A.  The syntax is presented above.
 
 <p>The following selector matches all <b>&lt;input&gt;</b> elements in an HTML document
@@ -1061,12 +1054,10 @@ Examples for the above HTML structure would be:
 <h4>In action</h4>
 
 See <a href="https://jsfiddle.net/yokosbm0/1/">this fiddle</a> for
-a implementation of these global booleans.
-
+an implementation of these global booleans.
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch4-12">Section 4.12: ID selectors</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-
 ID selectors select DOM elements with the targeted ID. To select an
 element by a specific ID in CSS, the &num; prefix is used.
 
@@ -1082,7 +1073,7 @@ For example, the following HTML div element...
   width: 20px;
 }</code></pre>
 
-> <b>Note</b>: The HTML specs do not allow multiple elements with the same ID
+<b>Note</b>: The HTML specs do not allow multiple elements with the same ID
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch4-13">Section 4.13: How to style a Range input</h3>
@@ -1132,7 +1123,6 @@ child of its parent.</p>
 parent, in this case a &lt;div&gt;.</p>
 
 <a href="https://jsbin.com/dizosi/edit?html,css">Live Demo on JSBin</a>
-
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ch5">Chapter 5: Backgrounds</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
