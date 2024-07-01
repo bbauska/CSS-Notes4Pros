@@ -573,7 +573,7 @@ or any other case-sensitive possibility.</p>
 
 <a href="http://jsbin.com/yowihi/3/edit?html,css,output">Live Demo on JSBin</a>
 
-&lbrack;<b>attribute</b>=<b>"value" i</b>&rbrack;
+<pre><code>&lbrack;<b>attribute</b>=<b>"value" i</b>&rbrack;</code></pre>
 
 <p>Selects elements with a given attribute and value where the
 attribute&apos;s value can be represented as Value, VALUE, vAlUe or any
@@ -644,12 +644,9 @@ elements on down).
 
 <p>In the above example, the first two <b>&lt;p&gt;</b> elements are selected since they are
 both descendants of the <b>&lt;div&gt;</b>.</p>
-
 <h4>Child Combinator: selector &gt; selector</h4>
-
 <p>The child (&gt;) combinator is used to select elements that are
 <b>children</b>, or <b>direct descendants</b>, of the specified element.</p>
-
 <pre><code>div &gt; p {
   <b>color</b>: <span style='color: red;'>red</span>;
 }
@@ -660,15 +657,10 @@ both descendants of the <b>&lt;div&gt;</b>.</p>
     <b>&lt;p&gt;</b>My text is not red<b>&lt;/p&gt;</b>
   <b>&lt/section&gt;</b>
 <b>&lt;/div&gt;</b></code></pre>
-
 <a href="http://jsbin.com/xonafuz/3/edit?html,css,output">Live Demo on JSBin</a>
-
 <p>The above CSS selects only the first <b>&lt;p&gt;</b> element, as it is the only paragraph directly descended from a <b>&lt;div&gt;</b>.</p>
-
 <p>The second <b>&lt;p&gt;</b> element is not selected because it is not a direct child of the <b>&lt;div&gt;</b>.</p>
-
 <h4>Adjacent Sibling Combinator: selector &plus; selector</h4>
-
 <p>The adjacent sibling (+) combinator selects a sibling element that immediate follows a specified element.</p>
 
 <pre><code>p &plus; p {
@@ -701,7 +693,7 @@ both descendants of the <b>&lt;div&gt;</b>.</p>
 
 <a href="http://jsbin.com/xonafuz/5/edit?html,css,output">Live Demo on JSBin</a>
 
-The above example selects all &lt;p&gt; elements that are <i>preceded</i> by another &lt;p&gt; element,
+The above example selects all <b>&lt;p&gt;</b> elements that are <i>preceded</i> by another <b>&lt;p&gt;</b> element,
 whether or not they are immediately adjacent.</p>
 
 <h3 id="ch4-4">Section 4.4: Pseudo-classes</h3>
@@ -720,11 +712,9 @@ the mouse is over an element (:hover), a checkbox is checked (:checked), etc.
 
 <h4>Syntax</h4>
 
-```
-selector:pseudo&minus;class {
+<pre><code>selector:pseudo-class {
   property: <b>VALUE</b>;
-}
-```
+}</code></pre>
 
 <b>List of pseudo-classes:</b>
 
@@ -770,118 +760,47 @@ selector:pseudo&minus;class {
 | <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/:last-child">:last-child</a>  | Represents any element that is the last child element of its parent. |
 | <a href="https://www.w3.org/TR/css3-selectors/#last-of-type-pseudo">:last-of-type</a>  | Applies when an element is the last of the selected element type inside |
 |             | its parent. This may or may not be the last-child. |
+| <a href="http://tympanus.net/codrops/css_reference/left_pseudo-class/">:left</a> | Used in conjunction with the &commat;page rule, this selects all the left |
+|             | pages in a printed document. |
+| <a href="https://www.w3.org/TR/css3-selectors/#the-link-pseudo-classes-link-and-visited">:link | Applies to any links which haven&apos;t been visited by the user. |
+| <a href="https://www.w3.org/wiki/CSS/Selectors/pseudo-classes/:not">:not() | Applies to all elements which <b>do not</b> match the value passed to |
+|                 | :not(p) or :not(.class-name) for example. It must have a value to be |
+|                 | valid and it can only contain one selector. However, youi can chain multiple |
+|                 | together.
+| <a href="https://www.w3.org/TR/css3-selectors/#nth-child-pseudo">:nth-child | Applies when an element is the n-th element of its parent, where n |
+|                       | can be an integer, a mathematical expression (e.g n+3) or the keywords |
+|                       | odd or even. |
+| <a href="https://www.w3.org/TR/css3-selectors/#nth-of-type-pseudo">:nth-of-type | Applies when an eleent is the n-th element of its parent of the |
+|                         | same element type, where n can be an integer, a mathematical |
+|                         | expression (e.g n+3) or the keywords odd or even. |
+| <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/:only-child">:only-child | The :only-child CSS pseudo-class represents any element |
+|                        | which is the only child of a parent.  This is the same as |
+|                        | :first-child:last-child or :nth-child(1):nth-last-child(1), |
+|                        | but with a lower specificity. |
+| <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/:optional">:optional | The :optional CSS pseudo-class represents any element |
+|                      | that does not have the required attribute set on it. This allows |
+|                      | forms to easily indicate optional fields and to style them accordingly. |
+| <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/:out-of-range">:out-of-range | The :out-of-range CSS pseudo-class matches when an element has its |
+|                          | value attribute outside the specified range limitations for this element. |
+|                          | It allows the page to give a feedback that the value currently defined using the |
+|                          | element is outside the range limits. A value can be outside of a range if it is |
+|                          | either smaller or larger than maximum and minimum set values. |
+| <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/:placeholder-shown">:placeholder-shown | <b>Experimental:</b> Applies to any form element currently displaying placeholder text. |
+| <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/:read-only">:read-only | Applies to any element which is not editable by the user. |
+| <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/:read-write">:read-write | Applies to any element that is editable by a user, such as <b>&lt;input&gt;</b> elements. |
+| <a href="http://tympanus.net/codrops/css_reference/right_pseudo-class">:right | Used in conjunction with the @page rule, this selects all the right pages in a |
+|                   | printed document. |
+| <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/:root">:root | Matches the root element of a tree representing the document. |
+| <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/:scope">:scope | CSS pseudo-class matches the elements that are a reference |
+|                   | point for selectors to match against. |
+| <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/:target">:target | Selects the current active #news element (clicked on a URL |
+|                    | containing that anchor name). |
+| <a href="https://www.w3.org/TR/css3-selectors/#the-link-pseudo-classes-link-and-visited">:visited | Applies to any links which have been visited by the user. |
 
->
-> Used in conjunction with the &commat;page rule, this selects all the left
->
-> &lbrack;&lbrack;:left&rbrack;&rbrack;(http://tympanus.net/codrops/css_reference/left_pseudo-class/)
->
-> pages in a printed document.
+> The :visited pseudo-class can't be used for most styling in a lot of modern browsers anymore because
+> it's a security hole. See this <a href="https://hacks.mozilla.org/2010/03/privacy-related-changes-coming-to-css-visited/">link</a> for reference.
 
-&lbrack;&lbrack;:link&rbrack;(https://www.w3.org/TR/css3-selectors/#the-link-pseudo-classes-link-and-visited)&rbrack;
-Applies to any links which haven&apos;t been visited by the user.
-
-> Applies to all elements which <b>do not</b> match the value passed to
-
-  not      &lpar;p&rpar; or :          not      (   .class-name
-  &lbrack;&lbrack;not&rbrack;&rbrack;(https://www.w3.org/wiki/CSS/Selectors/pseudo-classes/:not)
-  not
-
-> (:) for example. It must have a value to be
->
-> &lbrack;&lbrack;:()&rbrack;&rbrack;(https://www.w3.org/wiki/CSS/Selectors/pseudo-classes/:not)
->
-> valid and it can only contain one selector. However, you can chain
-> multiple : selectors together.
->
-> Applies when an element is the n-th element of its parent, where n
->
-> &lbrack;&lbrack;:nth-child&rbrack;(https://www.w3.org/TR/css3-selectors/#nth-child-pseudo)&rbrack;
-> can be an integer, a mathematical expression (e.g n+3) or the keywords
-> odd or even.
->
-> Applies when an element is the n-th element of its parent of the
->
-> &lbrack;&lbrack;:nth-of-type&rbrack;(https://www.w3.org/TR/css3-selectors/#nth-of-type-pseudo)&rbrack;
-> same element type, where n can be an integer, a mathematical
-> expression (e.g n+3) or the keywords odd or even.
-
-  only-child
-
-
-> The : CSS pseudo-class represents any element which is the only child
-> of its parent. This is the same as
->
-> &lbrack;&lbrack;:only-child&rbrack;&rbrack;(https://developer.mozilla.org/en-US/docs/Web/CSS/:only-child)
-
-  first-child    :   last-child    or :  nth-child    (1):   nth-last-child
-
-
-> :(1), but with a lower specificity.
-
-  optional
-
-> The : CSS pseudo-class represents any element
-
-&lbrack;&lbrack;:optional&rbrack;(https://developer.mozilla.org/en-US/docs/Web/CSS/:optional)&rbrack;
-that does not have the required attribute set on it. This allows
-
-> forms to easily indicate optional fields and to style them
-> accordingly.
-
-  out-of-range
-
-> The : CSS pseudo-class matches when an element has its value attribute
-> outside the specified range limitations for this element.
->
-> &lbrack;&lbrack;:out-of-range&rbrack;(https://developer.mozilla.org/en-US/docs/Web/CSS/:out-of-range)&rbrack;
-> It allows the page to give a feedback that the value currently defined
-> using the element is outside the range limits. A value can be outside
-> of a range if it is either smaller or larger than maximum and minimum
-> set values.
-
-  &lbrack;&lbrack;placeholder-shown&rbrack;&rbrack;(https://developer.mozilla.org/en-US/docs/Web/CSS/:placeholder-shown)
-
-> &lbrack;&lbrack;:&rbrack;&rbrack;(https://developer.mozilla.org/en-US/docs/Web/CSS/:placeholder-shown)<b>Experimental.</b>
-> Applies to any form element currently displaying placeholder text.
-
-&lbrack;&lbrack;:read-only&rbrack;(https://developer.mozilla.org/en-US/docs/Web/CSS/:read-only)&rbrack;
-Applies to any element which is not editable by the user.
-
-  <b>&lt;input&gt;</b>
-
-&lbrack;&lbrack;:read-write&rbrack;(https://developer.mozilla.org/en-US/docs/Web/CSS/:read-write)&rbrack;
-Applies to any element that is editable by a user, such as <b>&gt;</b>
-elements.
-
-> Used in conjunction with the &commat;page rule, this selects all the right
-> pages in a
->
-> &lbrack;&lbrack;:right&rbrack;&rbrack;(http://tympanus.net/codrops/css_reference/right_pseudo-class)
-> printed document.
-
-&lbrack;&lbrack;:root&rbrack;(https://developer.mozilla.org/en-US/docs/Web/CSS/:root)&rbrack;
-matches the root element of a tree representing the document.
-
-> CSS pseudo-class matches the elements that are a reference
->
-> &lbrack;&lbrack;:scope&rbrack;&rbrack;(https://developer.mozilla.org/en-US/docs/Web/CSS/:scope)
-> point for selectors to match against.
->
-> Selects the current active #news element (clicked on a URL
->
-> &lbrack;&lbrack;:target&rbrack;&rbrack;(https://developer.mozilla.org/en-US/docs/Web/CSS/:target)
-> containing that anchor name)
-
-&lbrack;&lbrack;:visited&rbrack;(https://www.w3.org/TR/css3-selectors/#the-link-pseudo-classes-link-and-visited)&rbrack;
-Applies to any links which have has been visited by the user.
-
-  visited
-
-> The :visited pseudoclass can&apos;t be used for most styling in a lot of modern
-> browsers anymore because it&apos;s a security hole. See this
-> <a href="https://hacks.mozilla.org/2010/03/privacy-related-changes-coming-to-css-vistited/">link</a>
-> for reference.
+<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/:placeholder-shown"><b>Experimental.</b>
 
 <h3 id="ch4-5">Section 4.5: Child Pseudo Class</h3>
 
@@ -889,18 +808,18 @@ Applies to any links which have has been visited by the user.
 > an+b-1 siblings before it in the document tree, for a given positive
 > <b>or zero value</b> for n&quot; - &lbrack;MDN :nth-child&rbrack;
 
-| <b>pseudo-selector</b>          | <b>1 2 3 4 5 6 7 8 9 10</b>           |
+| <b>pseudo-selector</b>       | <b>1  2  3  4  5  6  7  8  9  10</b>           |
 |------------------------------|---------------------------------------|
-| :first-child                 | ✔ |
-| nth-child (3)                |     ✔ |
-| nth-child (n+3)              |     ✔  ✔  ✔  ✔  ✔  ✔  ✔  ✔ |
-| nth-child (3n)               | ✔  ✔  ✔ |
-| nth-child (3n +1)            | ✔  ✔  ✔  ✔ |
-| nth-child (-n+3)             | ✔  ✔  ✔ |
-| nth-child (odd)              | ✔  ✔  ✔  ✔  ✔ |
-| nth-child (even)             | ✔  ✔  ✔  ✔  ✔ |
-| last-child                   |                  ✔ |
-| nth-last-child(3)            |              ✔
+| :first-child                 |  ✔ |
+| :nth-child (3)                |         ✔ |
+| :nth-child (n+3)              |         ✔  ✔  ✔  ✔  ✔  ✔  ✔  ✔ |
+| :nth-child (3n)               |         ✔       ✔       ✔ |
+| :nth-child (3n+1)             | ✔         ✔       ✔       ✔ |
+| :nth-child (-n+3)             | ✔  ✔  ✔ |
+| :nth-child (odd)              | ✔      ✔      ✔     ✔     ✔ |
+| :nth-child (even)             |     ✔      ✔      ✔     ✔        ✔ |
+| :last-child                   |                             ✔ |
+| :nth-last-child(3)            |                        ✔ |
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch4-6">Section 4.6: Class Name Selectors</h3>
