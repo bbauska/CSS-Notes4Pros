@@ -1700,10 +1700,10 @@ The behaviour depends on the
 > area is outside of your visible screen. For demonstration, We&apos;re
 > going to assume a 16 × 9 ratio.
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 07. javascript/css logos (01) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 07.  (xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="center" width="100%">
-<img src="./images/image007.jpg"
-  style="width:4.9in"
+<img src="./images/image007.png"
+  style="width:50%"
   title=""
   alt="." />
 </p>
