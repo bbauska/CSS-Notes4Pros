@@ -1728,7 +1728,14 @@ width and its height can fit inside the background positioning area.
 > contained in the background positioning area, however, there could be
 > some empty space filled with your background-color in this case:
 
-[image009.png 4.95x3.09](./images/image009.png)
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 09.  (xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p align="center" width="100%">
+<img src="./images/image009.png"
+  style="width:50%"
+  title=""
+  alt="." />
+</p>
 
 <b>cover</b>
 
@@ -1744,179 +1751,65 @@ area.
 > There will be no visible background-color, however depending on the
 > screen&apos;s ratio a great part of your image could be cut off:
 
-[image011.png](./images/image011.png)
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 11.  (xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p align="center" width="100%">
+<img src="./images/image011.png"
+  style="width:50%"
+  title=""
+  alt="." />
+</p>
 <!-- {width="4.958333333333333in" height="2.7916666666666665in"} -->
 
 <b>Demonstration with actual code</b>
 
 ```
-div
-&gt;
-div
-{
-<b>background-image</b>
-:
-url
-(
-*http://i.stack.imgur.com/r5CAq.jpg*
-)
-;
-<b>background-repeat</b>
-:
-no-repeat
-;
-<b>background-position</b>
-:
-center
-center
-;
-<b>background-color</b>
-:
-#ccc
-;
-<b>border</b>
-:
-1
-px
-solid
-;
-<b>width</b>
-:
-20
-em
-;
-<b>height</b>
-:
-10
-em
-;
+div &gt; div {
+  <b>background-image</b>: url(http://i.stack.imgur.com/r5CAq.jpg);
+  <b>background-repeat</b>: no-repeat;
+  <b>background-position</b>: center center;
+  <b>background-color</b>: #ccc;
+  <b>border</b>: 1px solid;
+  <b>width</b>: 20em;
+  <b>height</b>: 10em;
 }
-div
-.contain
-{
-<b>background-size</b>
-:
-contain
-;
+div .contain {
+  <b>background-size</b>: contain;
 }
-div
-.cover
-{
-<b>background-size</b>
-:
-cover
-;
+div .cover {
+  <b>background-size</b>: cover;
 }
 ```
 
 <i>Additional styles for the explanation boxes</i>
 
-
 ```
-div
-&gt;
-div
-{
-<b>margin</b>
-:
-0
-1
-ex
-1
-ex
-0
-;
-<b>float</b>
-:
-left
-;
+div &gt; div {
+  <b>margin</b>: 0 1 ex 1 ex 0;
+  <b>float</b>: left;
 }
-div
-&plus;
-div
-{
-<b>clear</b>
-:
-both
-;
-<b>border-top</b>
-:
-1
-px
-dashed
-silver
-;
-<b>padding-top</b>
-:
-1
-ex
-;
+div &plus; div {
+  <b>clear</b>: both;
+  <b>border-top</b>: 1px dashed silver;
+  <b>padding-top</b>: 1ex;
 }
-div
-&gt;
-div
-::
-after
-{
-<b>background-color</b>
-:
-#000
-;
-<b>color</b>
-:
-#fefefe
-;
-<b>margin</b>
-:
-1
-ex
-;
-<b>padding</b>
-:
-1
-ex
-;
-<b>opacity</b>
-:
-0.8
-;
-<b>display</b>
-:
-block
-;
-<b>width</b>
-:
-10
-ex
-;
-<b>font-size</b>
-:
-0.7
-em
-;
-<b>content</b>
-:
-attr
-(
-class
-)
-;
+div &gt; div::after {
+  <b>background-color</b>: #000;
+  <b>color</b>: #fefefe;
+  <b>margin</b>: 1ex;
+  <b>padding</b>: 1ex;
+  <b>opacity</b>: 0.8;
+  <b>display</b>: block;
+  <b>width</b>: 10ex;
+  <b>font-size</b>: 0.7em;
+  <b>content</b>: attr (
+    class 
+  );
 }
-<b>&lt;</b>
-<b>div</b>
-<b>&gt;</b>
-<b>&lt;</b>
-<b>div</b>
-class
-=
-&quot;contain&quot;
-<b>&gt;</b>
-<b>/div</b>
-<b>&lt;</b>
-<b>&gt;</b>
-<b>&lt;</b>
-<b>p</b>
-<b>&gt;</b>
+  <b>&lt;div&gt;</b>
+  <b>&lt;div class = &quot;contain&quot;</b>
+  <b>&gt;/div&lt;&gt;</b>
+  <b>&lt;p&gt;</b>
 ```
 
 Note the grey background. The image does not cover the whole region, but
@@ -1942,9 +1835,7 @@ contained
 <b>&gt;</b>
 <b>&lt;</b>
 <b>div</b>
-class
-=
-&quot;cover&quot;
+class = &quot;cover&quot;
 <b>&gt;</b>
 <b>/div</b>
 <b>&lt;</b>
@@ -1955,10 +1846,8 @@ class
 ```
 
 Note the ducks/geese at the bottom of the image. Most of the water is
-cut, as well as a part
-
-of the sky. You don&apos;t see the complete image anymore, but neither do
-you see any background color;
+cut, as well as a part of the sky. You don&apos;t see the complete 
+image anymore, but neither do you see any background color;
 
 ```
 the image
@@ -1997,39 +1886,25 @@ div
 > property is used to specify the starting position for a background
 > image or gradient
 
+```
 .myClass
-
 {
-
 <b>background-image</b>
-
 :
-
 url
-
 (
-
 &apos;path/to/image.jpg&apos;
-
 )
-
 ;
-
 <b>background-position</b>
-
 :
-
 50
-
 &percnt;
-
 50
-
 &percnt;
-
 ;
-
 }
+```
 
 > The position is set using an <b>X</b> and <b>Y</b> co-ordinate and be set
 > using any of the units used within CSS.
@@ -2067,7 +1942,6 @@ url
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch5-7">Section 5.7: The background-origin property</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-
 > The background-origin property specifies where the background image is
 > positioned.
 >
@@ -2107,50 +1981,47 @@ url
 
 <h4>HTML</h4>
 
+```
 <b>&lt;</b>
-
 <b>p</b>
-
 <b>&gt;</b>
-
 No background-origin (padding-box is default):
-
 <b>&lt;</b>
-
 <b>/p</b>
-
 <b>&gt;</b>
+<b>&lt;div</b> class=&quot;example example1&quot;<b>&gt;</b>
 
-> <b>&lt;div</b> class=&quot;example example1&quot;<b>&gt;</b>
->
-> <b>&lt;h2&gt;</b>Lorem Ipsum Dolor<b>&lt;/h2&gt;</b> <b>&lt;p&gt;</b>Lorem ipsum dolor sit
-> amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod
-> tincidunt ut laoreet dolore magna aliquam erat volutpat.<b>&lt;/p&gt;</b>
-> <b>&lt;p&gt;</b>Ut wisi enim ad minim veniam, quis nostrud exerci tation
-> ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo
-> consequat.<b>&lt;/p&gt; &lt;/div&gt;</b>
->
-> **&lt;p&gt;**background-origin: border-box:**&lt;/p&gt;**
->
-> **&lt;div** class=&quot;example example2&quot;**&gt;**
->
-> **&lt;h2&gt;**Lorem Ipsum Dolor**&lt;/h2&gt;** **&lt;p&gt;**Lorem ipsum dolor sit
-> amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod
-> tincidunt ut laoreet dolore magna aliquam erat volutpat.**&lt;/p&gt;**
-> **&lt;p&gt;**Ut wisi enim ad minim veniam, quis nostrud exerci tation
-> ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo
-> consequat.**&lt;/p&gt; &lt;/div&gt;**
->
-> **&lt;p&gt;**background-origin: content-box:**&lt;/p&gt;**
->
-> **&lt;div** class=&quot;example example3&quot;**&gt;**
+<b>&lt;h2&gt;</b>Lorem Ipsum Dolor<b>&lt;/h2&gt;</b> <b>&lt;p&gt;</b>Lorem ipsum dolor sit
+amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod
+tincidunt ut laoreet dolore magna aliquam erat volutpat.<b>&lt;/p&gt;</b>
+<b>&lt;p&gt;</b>Ut wisi enim ad minim veniam, quis nostrud exerci tation
+ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo
+consequat.<b>&lt;/p&gt; &lt;/div&gt;</b>
+
+**&lt;p&gt;**background-origin: border-box:**&lt;/p&gt;**
+
+**&lt;div** class=&quot;example example2&quot;**&gt;**
 
 **&lt;h2&gt;**Lorem Ipsum Dolor**&lt;/h2&gt;** **&lt;p&gt;**Lorem ipsum dolor sit
 amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod
 tincidunt ut laoreet dolore magna aliquam erat volutpat.**&lt;/p&gt;**
 **&lt;p&gt;**Ut wisi enim ad minim veniam, quis nostrud exerci tation
 ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo
-consequat.**&lt;/p&gt; &lt;/div&gt;** Result:
+consequat.**&lt;/p&gt; &lt;/div&gt;**
+
+**&lt;p&gt;**background-origin: content-box:**&lt;/p&gt;**
+
+**&lt;div** class=&quot;example example3&quot;**&gt;**
+
+**&lt;h2&gt;**Lorem Ipsum Dolor**&lt;/h2&gt;** **&lt;p&gt;**Lorem ipsum dolor sit
+amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod
+tincidunt ut laoreet dolore magna aliquam erat volutpat.**&lt;/p&gt;**
+**&lt;p&gt;**Ut wisi enim ad minim veniam, quis nostrud exerci tation
+ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo
+consequat.**&lt;/p&gt; &lt;/div&gt;** 
+```
+
+Result:
 
 [image013](./images/image013.jpg)
 
@@ -2166,113 +2037,44 @@ consequat.**&lt;/p&gt; &lt;/div&gt;** Result:
 > In CSS3, we can stack multiple background in the same element.
 
 ```
-#mydiv
-{
-**background-image**
-:
-url
-(
-img_1.png
-)
-,
-*/&ast; top image &ast;/*
-url
-(
-img_2.png
-)
-,
-*/&ast; middle image &ast;/*
-url
-(
-img_3.png
-)
-;
-*/&ast; bottom image &ast;/*
-**background-position**
-:
-right
-bottom
-,
-left
-top
-,
-right
-top
-;
-**background-repeat**
-:
-no-repeat
-,
-repeat
-,
-no-repeat
-;
-}
-> Images will be stacked atop one another with the first background on
-> top and the last background in the back. img_1 will be on top, the
-> img_2 and img_3 is on bottom.
->
-> We can also use background shorthand property for this:
-#mydiv
-{
-**background**
-:
-url
-(
-img_1.png
-)
-right
-bottom
-no-repeat
-,
-url
-(
-img_2.png
-)
-left
-top
-repeat
-,
-url
-(
-img_3.png
-)
-right
-top
-no-repeat
-;
-}
-We can also stack images and gradients:
-#mydiv
-{
-**background**
-:
-url
-(
-*image.png*
-)
-right
-bottom
-no-repeat
-,
-linear-gradient
-(
-to
-bottom
-,
-#fff
-0
-&percnt;
-,
-#000
-100
-&percnt;
-)
-;
+#mydiv {
+  **background-image**: url(img_1.png), /* top image */
+url (img_2.png), /* middle image */
+url (img_3.png); /* bottom image */
+  **background-position**: right bottom, left top, right top;
+  **background-repeat**: no-repeat, repeat, no-repeat;
 }
 ```
 
-&lbrack;Dem&rbrack;
+Images will be stacked atop one another with the first background on
+top and the last background in the back. img_1 will be on top, the
+img_2 and img_3 is on bottom.
+
+We can also use background shorthand property for this:
+
+```
+#mydiv {
+  **background**: 
+  url(img_1.png) right bottom no-repeat,
+  url(img_2.png) left top repeat,
+  url(img_3.png) right top no-repeat;
+}
+```
+
+We can also stack images and gradients:
+
+```
+#mydiv {
+  **background**:
+url(*image.png*) right bottom no-repeat,
+linear-gradient (
+  to bottom,
+  #fff 0 &percnt;
+,
+  #000 100 &percnt;
+);
+}
+```
 
 [jsFiddle ](https://jsfiddle.net/z30up2un/)
 
@@ -2354,24 +2156,22 @@ div {
 <h4>CSS</h4>
 
 ```
-.example
-{
-**width**:300px;
-**border**:20px solid black;
-**padding**:50px;
-**background**:url
-(
-*https://static.pexels.com/photos/6440/magazines-desk-work-workspace-medium.jpg*
-);
-**background-repeat**: no-repeat;
+.example {
+  **width**:300px;
+  **border**:20px solid black;
+  **padding**:50px;
+  **background**:url (
+    https://static.pexels.com/photos/6440/magazines-desk-work-workspace-medium.jpg
+  );
+  **background-repeat**: no-repeat;
 }
 .example1 {
 }
 .example2 {
-**background-origin**: border-box;
+  **background-origin**: border-box;
 }
 .example3 {
-**background-origin**: content-box;
+  **background-origin**: content-box;
 }
 ```
 
@@ -2495,23 +2295,21 @@ Lorem Ipsum Dolor
 <h3 id="ch5-11">Section 5.11: Background Repeat</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
-> The background-repeat property sets if/how a background image will be
-> repeated.
->
-> By default, a background-image is repeated both vertically and
-> horizontally.
+The background-repeat property sets if/how a background image will be repeated.
+
+By default, a background-image is repeated both vertically and horizontally.
 
 ```
 div {
-<b>background-image</b>: url (
-&quot;img.jpg&quot;
-);
-<b>background-repeat</b>: repeat-y;
+  <b>background-image</b>: url (
+    &quot;img.jpg&quot;
+  );
+  <b>background-repeat</b>: repeat-y;
 }
-<b>background-repeat</b>: repeat-y
+  <b>background-repeat</b>: repeat-y
 ```
 
-> Here&apos;s how a looks like:
+<h4>Here&apos;s how it looks:</h4>
 
 [image014.jpg](./images/image014.jpg)
 
@@ -2549,8 +2347,7 @@ Lorem ipsum
 <b>&gt;</b>
 ```
 
-See result here:
-&lbrack;&lbrack;https://jsfiddle.net/MadalinaTn/y69d28Lb/&rbrack;&rbrack;(https://jsfiddle.net/MadalinaTn/y69d28Lb/)
+<a href="https://jsfiddle.net/MadalinaTn/y69d28Lb/&rbrack;&rbrack;(https://jsfiddle.net/MadalinaTn/y69d28Lb/">See results here</a>.
 
 > CSS Syntax: background-blend-mode: normal &vertbar; multiply &vertbar; screen &vertbar;
 > overlay &vertbar; darken &vertbar; lighten &vertbar; color-dodge &vertbar; saturation &vertbar; color &vertbar;
@@ -2565,7 +2362,7 @@ See result here:
 > will have to use RGBA colors. Following example will have a black
 > background with 0.6 opacity.
 
-*/&ast; Fallback for web browsers that don&apos;t support RGBa &ast;/*
+/* Fallback for web browsers that don&apos;t support RGBa */
 
 ```
 <b>background-color</b>:rgb (
@@ -2588,8 +2385,8 @@ ms-filter:
 endColorstr=#99000000)&quot;;
 ```
 
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ch6">Chapter 6: Centering</h2>
-
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch6-1">Section 6.1: Using Flexbox</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
