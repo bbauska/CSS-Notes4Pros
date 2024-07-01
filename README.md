@@ -1,9 +1,9 @@
 ---
 title: |
   CSS Notes for Professionals
-  by somebody, somewhere
+  by web@petercv.com, PDF https://goalkicker.com/CSSBook
 author: "bbauska"
-date last editted: "6/30/2024 Sun 12+pm"
+date last editted: "7/1/2024 Mon 2+am"
 output: 
   markdown:
     with some style
@@ -411,7 +411,9 @@ Selectors use a wide range of over 50 selection methods offered by the
 CSS language, including elements, classes, IDs, pseudo-elements and
 pseudo-classes, and patterns.</p>
 
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ch4-1">Section 4.1: Basic selectors</h3>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 | Selector     | Description                                         |
 |--------------|-----------------------------------------------------|
@@ -601,8 +603,9 @@ but with lower specificity.</p>
 
 <p>See the Syntax Section for more details.</p>
 
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch4-3">Section 4.3: Combinators</h3>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <b>Overview</b>
 <b>Selector Description</b>
 
@@ -695,7 +698,9 @@ both descendants of the <b>&lt;div&gt;</b>.</p>
 The above example selects all <b>&lt;p&gt;</b> elements that are <i>preceded</i> by another <b>&lt;p&gt;</b> element,
 whether or not they are immediately adjacent.</p>
 
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch4-4">Section 4.4: Pseudo-classes</h3>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 <p><a href="https://www.w3.org/TR/selectors/#pseudo-classes">Pseudo-classes</a> are <b>keywords</b> 
 which allow selection based on information that lies outside of the document tree that cannot 
@@ -801,7 +806,9 @@ the mouse is over an element (:hover), a checkbox is checked (:checked), etc.</p
 
 <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/:placeholder-shown"><b>Experimental.</b>
 
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch4-5">Section 4.5: Child Pseudo Class</h3>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 > &quot;The :nth-child(an+b) CSS pseudo-class matches an element that has
 > an+b-1 siblings before it in the document tree, for a given positive
@@ -872,7 +879,9 @@ declaration, it would only select elements that have parent elements
 with a .warning class names and child elements with .important class
 names.</p>
 
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch4-7">Section 4.7: Select element using its ID without the high specificity of the ID selector</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 <p>This trick helps you select an element using the ID as a value for an
 attribute selector to avoid the high specificity of the ID selector.</p>
@@ -886,8 +895,9 @@ attribute selector to avoid the high specificity of the ID selector.</p>
 <pre><code>#element { . . . } /* High specificity will override many selectors */
 &lbrack;id="element"&rbrack; { . . .} /* Low specificity, can be overridden easily */</code></pre>
 
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch4-8">Section 4.8: The :last-of-type selector</h3>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>The :last-of-type selects the element that is the last child, of a particular type,
 of its parent. In the example below, the css selects the last
 paragraph and the last heading h1.</p>
@@ -912,8 +922,9 @@ h1: last-of-type {
 
 <a href="http://jsfiddle.net/MadalinaTn/YmMZZ/113/">jsFiddle</a>
 
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch4-9">Section 4.9: CSS3 :in-range selector example</h3>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre><code><b>&lt;style&gt;</b>
 input:in-range {
   border: 1px solid blue;
@@ -922,14 +933,16 @@ input:in-range {
 
 <b>&lt;input</b> type="number" min="10" max="20" value="15"&gt;
 <b>&lt;p&gt;</b>The border for this value will be blue<b>&lt;/p&gt;</b></code></pre>
-
+<!-- page 18 -->
 <p>The :in-range CSS pseudo-class matches when an element has its value attribute
 inside the specified range limitations for this element. It allows the
 page to give a feedback that the value currently defined using the
 element is inside the range limits.&lbrack;<a href=https://developer.mozilla.org/en-US/docs/Web/CSS/:in-range">1</a>&rbrack;.
 
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch4-10">Section 4.10: A. The :not pseudo-class example & B. :focuswithin CSS pseudo-class</h3>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!-- page 18 -->
 A.  The syntax is presented above.
 
 <p>The following selector matches all <b>&lt;input&gt;</b> elements in an HTML document
@@ -980,13 +993,17 @@ input {
   <b>margin</b>: 30px;
 }
 div:focus-within {
-  <b>background-color:</b> #1565C0;
+  <b>background-color</b>: #1565C0;
 }</code></pre>
 
+
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <image about 7x7>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!-- page 19 -->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch4-11">Section 4.11: Global boolean with checkbox:checked and &#126; (general sibling combinator)</h3>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>With the &#126; selector, you can easily implement a global accessible
 boolean without using JavaScript.</p>
 
@@ -998,10 +1015,10 @@ want with a unique id and the hidden attribute set:</p>
 <pre><code>&lt;input type="checkbox" dis="sidebarShown" hidden /&gt;
 &lt;input type="checkbox" dis="darkThemeUsed" hidden /&gt;
 
-<!-- here begins actual content, for example: -->
+/* here begins actual content, for example: */
 &lt;div id="container"&gt;
   &lt;div id="sider"&gt;
-    <!-- Menu, Search, ... -->
+    /* Menu, Search, ... */
   &lt;/div&gt;
  &lt;/div&gt;
  
@@ -1010,7 +1027,7 @@ want with a unique id and the hidden attribute set:</p>
  &lt;/div&gt;</code></pre>
 
 <h4>Change the boolean&apos;s value</h4>
-
+<!-- page 20 -->
 <p>You can toggle the boolean by adding a label with the for attribute set:</p>
 
 <pre><code><b>&lt;label</b> for=&quot;sidebarShown&quot;&gt;Show/Hide the sidebar!<b>&lt;/label&gt;</b></code></pre>
@@ -1022,10 +1039,10 @@ properties. They can be overridden by following true / false
 selectors:
 
 <pre><code>/* true: */
-&lt;checkbox&gt;:checked ~ [sibling of checkbox & parent of target] <target>
+&lt;checkbox&gt;:checked &bsim; &lbrack;sibling of checkbox & parent of target&rbrack; &lt;target&gt;
 
-/* false */
-&lt;checkbox*gt;:not(:checked) ~ [sibling of checkbox & parent of target] <target></code></pre>
+/* false: */
+&lt;checkbox*gt;:not(:checked) ~ &lbrack;sibling of checkbox & parent of target&rbrack; &lt;target&gt;</code></pre>
 
 Note that &lt;checkbox&gt;, &lbrack;sibling ...&rbrack; and &lt;target&gt; should be replaced by the proper selectors. &lbrack;sibling ...&rbrack;
 can be a specific selector, (often if you're lazy) simply * or nothing if the target is already a sibling of the checkbox.
@@ -1046,7 +1063,9 @@ Examples for the above HTML structure would be:
 See <a href="https://jsfiddle.net/yokosbm0/1/">this fiddle</a> for
 a implementation of these global booleans.
 
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch4-12">Section 4.12: ID selectors</h3>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 ID selectors select DOM elements with the targeted ID. To select an
 element by a specific ID in CSS, the &num; prefix is used.
@@ -1065,8 +1084,10 @@ For example, the following HTML div element...
 
 > <b>Note</b>: The HTML specs do not allow multiple elements with the same ID
 
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch4-13">Section 4.13: How to style a Range input</h3>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!-- page 21 -->
 <h4>HTML</h4>
 
 <pre><code>&lt;input type="range"&gt;&lt;/input&gt;</code></pre>
@@ -1083,8 +1104,9 @@ For example, the following HTML div element...
 | Lower part of  | input&lbrack;type=range&rbrack;::-moz-range-progress, input&lbrack;type=range&rbrack;::-mx-fill-lower(not possible |
 | the track      | in WebKit browsers currently -JS needed) |
 
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch4-14">Section 4.14: The :only-child pseudo-class selector example</h3>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>The :only-child CSS pseudo-class represents any element which is the only 
 child of its parent.</p>
 
@@ -1111,17 +1133,19 @@ parent, in this case a &lt;div&gt;.</p>
 
 <a href="https://jsbin.com/dizosi/edit?html,css">Live Demo on JSBin</a>
 
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ch5">Chapter 5: Backgrounds</h2>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!-- page 22 -->
 <p>With CSS you can set colors, gradients, and images as the background
 of an element.</p>
 
 <p>It is possible to specify various combinations of images, colors, and
 gradients, and adjust the size, positioning, and repetition (among
 others) of these.</p>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch5-1">Section 5.1: Background Color</h3>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>The background-color property sets the background color of an element
 using a color value or through keywords, such as transparent, inherit
 or initial.</p>
@@ -1133,7 +1157,6 @@ or initial.</p>
   <li><b>initial</b>, sets this property to its default value.</li>
 </ul>
 
-
 This can be applied to all elements, and ::first-letter/::first-line pseudo-elements.
 
 Colors in CSS can be specified by different methods.
@@ -1144,8 +1167,7 @@ Colors in CSS can be specified by different methods.
 
 <pre><code>div {
   background-color: red; /* red */
-}
-</code><pre>
+}</code></pre>
 
 <h4>HTML</h4>
 
@@ -1159,26 +1181,24 @@ Colors in CSS can be specified by different methods.
 <h4>Hex color codes</h4>
 
 Hex code is used to denote RGB components of a color in base-16
-hexadecimal notation. #ff0000, for example, is bright red, where the
+hexadecimal notation. &num;ff0000, for example, is bright red, where the
 red component of the color is 256 bits (ff) and the corresponding
 green and blue portions of the color is 0 (00).
 
 If both values in each of the three RGB pairings (R, G, and B) are the
 same, then the color code can be shortened into three characters (the
-first digit of each pairing). #ff0000 can be shortened to #f00, and
-#ffffff can be shortened to #fff.
+first digit of each pairing). &num;ff0000 can be shortened to &num;f00, and
+&num;ffffff can be shortened to &num;fff.
 
 Hex notation is case-insensitive.
 
-<pre><code>
-body {
+<pre><code>body {
   background-color: #de1205; /* red */
 }
 
 .main {
   background-color: #00f; /* blue */
-}
-</code></pre>
+}</code></pre>
 
 <h4>RGB / RGBa</h4>
 
@@ -1191,75 +1211,42 @@ the decimal color values for respectively red, green and blue.
 RGBa allows you to add an additional alpha parameter between 0.0 and
 1.0 to define opacity.
 
-<pre><code>
-header {
+<pre><code>header {
   background-color: rgb(0, 0, 0); /* black */
 }
 footer {
   background-color: rgba(0, 0, 0, 0.5); /* black with 50% opacity */
-}
-</code></pre>
+}</code></pre>
 
 <h4>HSL / HSLa</h4>
->
-> Another way to declare a color is to use HSL or HSLa and is similar to
-> RGB and RGBa.
->
-> HSL stands for hue, saturation, and lightness, and is also often
-> called HLS:
->
-> Hue is a degree on the color wheel (from 0 to 360).
->
-> Saturation is a percentage between 0% and 100%.
->
-> Lightness is also a percentage between 0% and 100%.
->
-> HSLa allows you to add an additional alpha parameter between 0.0 and
-> 1.0 to define opacity.
 
-</code></pre>
-li a
-{
-<b>background-color</b>
-:
-hsl
-(
-120
-,
-100
-&percnt;
-,
-50
-&percnt;
-)
-;
-*/&ast; green &ast;/*
+Another way to declare a color is to use HSL or HSLa and is similar to
+RGB and RGBa.
+
+HSL stands for hue, saturation, and lightness, and is also often
+called HLS:
+
+<ul>
+  <li>Hue is a degree on the color wheel (from 0 to 360).</li>
+  <li>Saturation is a percentage between 0% and 100%.</li>
+  <li>Lightness is also a percentage between 0% and 100%.</li>
+</ul>
+
+HSLa allows you to add an additional alpha parameter between 0.0 and
+1.0 to define opacity.
+
+</code></pre>li a {
+<b>background-color</b>: hsl(120, 100&percnt;, 50&percnt;); /* green */
 }
-#p1
-{
-<b>background-color</b>
-:
-hsla
-(
-120,100
-&percnt;
-,
-50
-&percnt;
-,
-.3
-)
-;
-*/&ast; green with 30% opacity &ast;/*
-}
-</code></pre>
+#p1 {
+<b>background-color</b>: hsla(120, 100&percnt;, 50&percnt;, .3); /* green with 30% opacity */
+}</code></pre>
 
-> <b>Interaction with background-image</b>
->
-> The following statements are all equivalent:
+<b>Interaction with background-image</b>
 
-</code></pre>
-body {
+<p>The following statements are all equivalent:</p>
+
+</code></pre>body {
   background: red;
   background-image: url (
 partiallytransparentimage.png
@@ -1278,37 +1265,26 @@ body {
 body {
   background: redurl (
     partiallytransparentimage.png);
-}
-</code></pre>
+}</code></pre>
+<!-- page 24 -->
+They will all lead to the red color being shown underneath the image,
+where the parts of the image are transparent, or the image is not
+showing (perhaps as a result of background-repeat).
 
-> They will all lead to the red color being shown underneath the image,
-> where the parts of the image are transparent, or the image is not
-> showing (perhaps as a result of background-repeat).
->
-> Note that the following is not equivalent:
+Note that the following is not equivalent:
 
-</code></pre>
-body
-{
-<b>background-image</b>
-:
-url
-(
-*partiallytransparentimage.png*
-)
-;
-<b>background</b>
-:
-red
-;
-}
-</code></pre>
+</code></pre>body {
+<b>background-image</b>: url(partiallytransparentimage.png);
+<b>background</b>: red;
+}</code></pre>
 
-> Here, the value of background overrides your background-image.
->
-> For more info on the background property, see Background Shorthand
+Here, the value of background overrides your background-image.
 
+For more info on the background property, see Background Shorthand
+
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch5-2">Section 5.2: Background Gradients</h3>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 Gradients are new image types, added in CSS3. As an image, gradients
 are set with the background-image property, or the background
@@ -1317,311 +1293,140 @@ shorthand.
 There are two types of gradient functions, linear and radial. Each
 type has a non-repeating variant and a repeating variant:
 
-  linear-gradient
+<ul>
+  <li>linear-gradient()</li>
+  <li>repeating-linear-gradient()</li>
+  <li>radial-gradient()</li>
+  <li>repeating-radial-gradient()</li>
+</ul>
+
+<h4>linear-gradient()</h4>
+
+<p>A linear-gradient has the following syntax</p>
+
+<b>background</b>: inear-gradient( &lt;direction&gt;?, &lt;color-stop-1&gt;, &lt;color-stop-2&gt;, ...);
+
+| Value             | Meaning |
+|:-----------------:|-----------------------------------------------|
+| &lt;direction&gt; | Could be an argument like to top, to bottom, to right or to left; or an angle as 0deg, |
+|                   | 90deg... . The angle starts from top and rotates clockwise. Can be specified in deg, grad, rad, |
+|                   | or turn. If omitted, the gradient flows from top to bottom. |
+| &lt;color-stop-list&gt; | List of colors, optionally followed each one by a percentage or length to display it at. For |
+|                   | example, yellow 10%, rgba(0,0,0,.5) 40px, #fff 100%... |
 
 
-  repeating-linear-gradient
+Can be specified in
+<ul>
+  <li><a href="https://www.w3.org/TR/css3-values/#deg">deg</a>,</li>
+  <li><a href="https://www.w3.org/TR/css3-values/#grad">grad</a>,</li>
+  <li><a href="https://www.w3.org/TR/css3-values/#rad">rad</a>, or</li>
+  <li><a href="https://www.w3.org/TR/css3-values/#turn">turn</a>.</li>
+</ul>
+If omitted, the gradient flows from top to bottom
 
+<pre><code>.linear-gradient {
+  <b>background</b>: linear-gradient (to left top, red, blue); /* you can also use 270deg */
+}</code></pre>
 
-  radial-gradient
+You can create a diagonal gradient by declaring both a horizontal and vertical starting position.
 
+<pre><code>.diagonal-linear-gradient {
+  <b>background</b>: linear-gradient (to left top, red, yellow 10&percnt;);
+}</code></pre>
+<!-- page 25 -->
 
-  repeating-radial-gradient
+It is possible to specify any number of color stops in a gradient by
+separating them with commas. The following examples will create a
+gradient with 8 color stops
 
-
-> ()
->
-> ()
->
-> ()
->
-> ()
->
-> <b>linear-gradient()</b>
-
-A linear-gradient has the following syntax <b>background</b>:
-linear-gradient( &lt;direction&gt;?, &lt;color-stop-1&gt;, &lt;color-stop-2&gt;,
-&period;..);
-
-<b>Value Meaning</b>
-
-  to top       ,   to bottom          ,   to right         or    to left
-
-
-> Could be an argument like ; or an
-> &lbrack;&lbrack;angle&rbrack;&rbrack;(https://www.w3.org/TR/css3-values/#angles) as
-> 0deg,
-
-  <b>&lt;direction</b>
-
-
-> <b>&gt;</b> 90deg&period;.. . The angle starts from to top and rotates clockwise.
-> Can be specified in
-> &lbrack;&lbrack;deg&rbrack;&rbrack;(https://www.w3.org/TR/css3-values/#deg),
-> &lbrack;&lbrack;grad&rbrack;&rbrack;(https://www.w3.org/TR/css3-values/#grad),
-> &lbrack;&lbrack;rad&rbrack;&rbrack;(https://www.w3.org/TR/css3-values/#rad), or
-> &lbrack;&lbrack;turn&rbrack;&rbrack;(https://www.w3.org/TR/css3-values/#turn). If
-> omitted, the gradient flows from top to bottom
-
-  <b>&lt;color-stop-list</b>
-
-
-  yellow 10%        ,   rgba    (0,0,0,      .5   )   40px     ,   #fff 100%
-
-
-> List of colors, optionally followed each one by a percentage or
-> &lbrack;&lbrack;length&rbrack;&rbrack;(https://www.w3.org/TR/css3-values/#lengths) to
-> display it at. For
->
-> <b>&gt;</b> example, &period;..
->
-> For example, this creates a linear gradient that starts from the right
-> and transitions from red to blue
-
-.linear-gradient
-{
-<b>background</b>
-:
-linear-gradient
-(
-to
-left
-,
-red
-,
-blue
-)
-;
-*/&ast; you can also use 270deg &ast;/*
+```
+.linear-gradient-rainbow {
+  <b>background</b>: linear-gradient(to left, red, orange, yellow, green, blue, indigo, violet)
 }
+```
 
-> You can create a diagonal gradient by declaring both a horizontal and
-> vertical starting position.
+<h4>radial-gradient()</h4>
 
-.diagonal-linear-gradient
-{
-<b>background</b>
-:
-linear-gradient
-(
-to
-left
-top
-,
-red
-,
-yellow
-10
-&percnt;
-)
-;
+```
+<b>.radial-gradient-simple {
+  <b>background</b>: radial-gradient(red, blue);
 }
-
-> It is possible to specify any number of color stops in a gradient by
-> separating them with commas. The following examples will create a
-> gradient with 8 color stops
-
-.linear-gradient-rainbow
-
-{
-
-<b>background</b>
-
-:
-linear-gradient
-(
-to
-left
-,
-red
-,
-orange
-,
-yellow
-,
-green
-,
-blue
-,
-indigo
-,
-violet
-)
+.radial-gradient {
+  <b>background</b>: radial-gradient(circle farthest-corner at top left, red, blue);
 }
+```
 
-<b>radial-gradient()</b>
+| Value    | Meaning   |
+|----------|----------------------------------------------------------------------|
+| circle   | Shape of gradient. Values are circle or ellipse, default is ellipse. |
+| farthest-corner | Keywords describing how big the ending shape must be. Values  |
+|                 | are closest-side, farthest-side, closest-corner, farthest-corner |
+| top left   | Sets the position of the gradient center, in the same way as |
+|            | background-position. |
 
-.radial-gradient-simple
+<h4>Repeating gradients</h4>
 
-{
-<b>background</b>
-:
-radial-gradient
-(
-red
-,
-blue
-)
-;
+Repeating gradient functions take the same arguments as the above
+examples, but tile the gradient across the background of the element.
 
-}
-
-.radial-gradient
-
-{
-
-<b>background</b>
-
-:
-
-radial-gradient
-
-(
-
-circle
-
-farthest-corner at
-
-top
-
-left
-
-,
-
-red
-
-,
-
-blue
-
-)
-
-;
-
-}
-
-<b>Value Meaning</b>
-
-circle Shape of gradient. Values are circle or ellipse, default is
-ellipse.
-
-> Keywords describing how big the ending shape must be. Values are
-> closest-side, farthest-
->
-> farthest-corner side, closest-corner, farthest-corner
-
-  top left
-
-> Sets the position of the gradient center, in the same way as
-> background-position.
->
-> <b>Repeating gradients</b>
->
-> Repeating gradient functions take the same arguments as the above
-> examples, but tile the gradient across the background of the element.
-
+```
 .bullseye
-
 {
-
 <b>background</b>
-
 :
-
 repeating-radial-gradient
-
 (
-
 red
-
 ,
-
 red
-
 10
-
 &percnt;
-
 ,
-
 white
-
 10
-
 &percnt;
-
 ,
-
 white
-
 20
-
 &percnt;
-
 )
-
 ;
-
 }
-
 .warning
-
 {
-
 <b>background</b>
-
 :
-
 repeating-linear-gradient
-
 (
-
 -45
-
 deg
-
 ,
-
 yellow
-
 ,
-
 yellow
-
 10
-
 &percnt;
-
 ,
-
 black
-
 10
-
 &percnt;
-
 ,
-
 black
-
 20
-
 &percnt;
-
 )
-
 ;
-
 }
+```
 
 <b>Value Meaning</b>
 
-> &lbrack;&lbrack;Angle unit&rbrack;&rbrack;(https://www.w3.org/TR/css3-values/#angles).
-> The angle starts from to top and rotates clockwise. Can be specified
-> in &lbrack;&lbrack;deg&rbrack;&rbrack;(https://www.w3.org/TR/css3-values/#deg),
-> &lbrack;&lbrack;grad&rbrack;&rbrack;(https://www.w3.org/TR/css3-values/#grad),
-> &lbrack;&lbrack;rad&rbrack;&rbrack;(https://www.w3.org/TR/css3-values/#rad), or -45deg
-> &lbrack;&lbrack;turn&rbrack;&rbrack;(https://www.w3.org/TR/css3-values/#turn).
+Angle unit&rbrack;&rbrack;(https://www.w3.org/TR/css3-values/#angles).
+The angle starts from to top and rotates clockwise. Can be specified
+> in (https://www.w3.org/TR/css3-values/#deg),
+grad(https://www.w3.org/TR/css3-values/#grad),
+rad(https://www.w3.org/TR/css3-values/#rad), or -45deg
+turn(https://www.w3.org/TR/css3-values/#turn).
 
   to bottom       . Syntax:     to    &lbrack;   y-axis     (   top OR bottom
 
@@ -1647,58 +1452,44 @@ black
 > For a full explanation and specs, see the &lbrack;&lbrack;MDN
 > Docs&rbrack;&rbrack;(https://developer.mozilla.org/en-US/docs/Web/CSS/radial-gradient)
 
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch5-3">Section 5.3: Background Image</h3>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
-> The background-image property is used to specify a background image to
-> be applied to all matched elements. By default, this image is tiled to
-> cover the entire element, excluding margin.
+The background-image property is used to specify a background image to
+be applied to all matched elements. By default, this image is tiled to
+cover the entire element, excluding margin.
 
 ```
-.myClass
-{
-<b>background-image</b>
-:
-url
-(
-&apos;/path/to/image.jpg&apos;
-)
-;
+.myClass {
+  <b>background-image</b>: url (&apos;/path/to/image.jpg&apos;);
 }
 ```
 
-url
+<h4>url</h4>
 
-> To use multiple images as background-image, define comma separated ()
+To use multiple images as background-image, define comma separated ()
 
 ```
-.myClass
-{
-<b>background-image</b>
-:
-url
-(
-&apos;/path/to/image.jpg&apos;
-)
-,
-url
-(
-&apos;/path/to/image2.jpg&apos;
-)
-;
+.myClass {
+  <b>background-image</b>: url 
+  (&apos;/path/to/image.jpg&apos;), url (
+  &apos;/path/to/image2.jpg&apos;);
 }
 ```
 
-> The images will stack according to their order with the first declared
-> image on top of the others and so on.
+The images will stack according to their order with the first declared
+image on top of the others and so on.
 
 <b>Value Result</b>
 
-  url      (   &apos;/path/to/image.jpg&apos;
+```
+url ( &apos;/path/to/image.jpg&apos;
+Specify background image&apos;s path(s) or an image resource specified
+with data URI
+)
+```
 
-> Specify background image&apos;s path(s) or an image resource specified
-> with data URI
->
-> )
 >
 > schema (apostrophes can be omitted), separate multiples by comma
 
@@ -1717,10 +1508,12 @@ url
 > left offset (px/%) right offset (px/%) &vertbar; center center &vertbar; left top &vertbar;
 > right bottom;
 
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch5-4">Section 5.4: Background Shorthand</h3>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
-> The background property can be used to set one or more background
-> related properties:
+The background property can be used to set one or more background
+related properties:
 
 | <b>Value</b> | <b>Description</b>                                  |
 |--------------|--------------------------------------------------|
@@ -1788,64 +1581,29 @@ url
 >
 > <b>Examples</b>
 
-<b>background</b>
+```
+<b>background</b>: red;
+```
 
-:
+Simply setting a background-color with the redvalue.
 
-red
+```
+<b>background</b>: border-box red;
+```
 
-;
+Setting a background-clip to border-box and a background-color to red.
 
-> Simply setting a background-color with the redvalue.
-
-<b>background</b>
-
-:
-
-border-box
-
-red
-
-;
-
-> Setting a background-clip to border-box and a background-color to red.
-
-<b>background</b>
-
-:
-
-no-repeat
-
-center
-
-url
-
-(
-
-&quot;somepng.jpg&quot;
-
-)
-
-;
+```
+<b>background</b>: no-repeat center url(&quot;somepng.jpg&quot;);
+```
 
 > Sets a background-repeat to no-repeat, background-origin to center and
 > a background-image to an image.
 
-<b>background</b>
-
-:
-
-url
-
-(
-
-&apos;pattern.png&apos;
-
-)
-
-green
-
-;
+```
+<b>background</b>: url(&apos;pattern.png&apos;)
+  green;
+```
 
 > In this example, the background-color of the element would be set to
 > green with pattern.png, if it is available, overlayed on the colour,
@@ -1866,7 +1624,9 @@ green
 > given. If you wish only to modify a background property value
 > previously set, use a longhand property instead.
 
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch5-5">Section 5.5: Background Size</h3>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 > <b>General overview</b>
 >
@@ -1882,55 +1642,13 @@ green
 > × 256 px image, all the following background-size settings would yield
 > an image with height and width of 50 px:
 
-<b>background-size</b>
-
-:
-
-50
-
-px
-
-;
-
-<b>background-size</b>
-
-:
-
-50
-
-px
-
-auto
-
-;
-
-*/&ast; same as above &ast;/*
-
-<b>background-size</b>
-
-:
-
-auto
-
-50
-
-px
-
-;
-
-<b>background-size</b>
-
-:
-
-50
-
-px
-
-50
-
-px
-
-;
+```
+<b>background-size</b>: 50px;
+<b>background-size</b>: 50px auto;
+/* same as above */
+<b>background-size</b>: auto 50px;
+<b>background-size</b>: 50px 50px;
+```
 
 > So if we started with the following picture (which has the mentioned
 > size of 256 px × 256 px),
@@ -1942,75 +1660,16 @@ px
 > the element. The following example would yield a 200 px × 133 px drawn
 > image:
 
-#withbackground
-
-{
-
-<b>background-image</b>
-
-:
-
-url
-
-(
-
-*to/some/background.png*
-
-)
-
-;
-
-<b>background-size</b>
-
-:
-
-100
-
-&percnt;
-
-66
-
-&percnt;
-
-;
-
-<b>width</b>
-
-:
-
-200
-
-px
-
-;
-
-<b>height</b>
-
-:
-
-200
-
-px
-
-;
-
-<b>padding</b>
-
-:
-
-0
-
-;
-
-<b>margin</b>
-
-:
-
-0
-
-;
-
+```
+#withbackground {
+  <b>background-image</b>: url(*to/some/background.png*);
+  <b>background-size</b>: 100&percnt; 66&percnt;;
+  <b>width</b>:200px;
+  <b>height</b>: 200px;
+  <b>padding</b>: 0;
+  <b>margin</b>: 0; 
 }
+```
 
 The behaviour depends on the
 
@@ -2083,396 +1742,212 @@ area.
 [image011.png](./images/image011.png)
 <!-- {width="4.958333333333333in" height="2.7916666666666665in"} -->
 
-> <b>Demonstration with actual code</b>
+<b>Demonstration with actual code</b>
 
+```
 div
-
 &gt;
-
 div
-
 {
-
 <b>background-image</b>
-
 :
-
 url
-
 (
-
 *http://i.stack.imgur.com/r5CAq.jpg*
-
 )
-
 ;
-
 <b>background-repeat</b>
-
 :
-
 no-repeat
-
 ;
-
 <b>background-position</b>
-
 :
-
 center
-
 center
-
 ;
-
 <b>background-color</b>
-
 :
-
 #ccc
-
 ;
-
 <b>border</b>
-
 :
-
 1
-
 px
-
 solid
-
 ;
-
 <b>width</b>
-
 :
-
 20
-
 em
-
 ;
-
 <b>height</b>
-
 :
-
 10
-
 em
-
 ;
-
 }
-
 div
-
 .contain
-
 {
-
 <b>background-size</b>
-
 :
-
 contain
-
 ;
-
 }
-
 div
-
 .cover
-
 {
-
 <b>background-size</b>
-
 :
-
 cover
-
 ;
-
 }
+```
 
-*/&ast;&ast;&ast;&ast;&ast;&ast;&ast;&ast;&ast;&ast;&ast;&ast;&ast;&ast;&ast;&ast;&ast;&ast;&ast;&ast;&ast;&ast;&ast;&ast;&ast;&ast;&ast;&ast;&ast;&ast;&ast;&ast;&ast;&ast;&ast;&ast;&ast;&ast;&ast;&ast;&ast;&ast;&ast;&ast;*
+<i>Additional styles for the explanation boxes</i>
 
-*Additional styles for the explanation boxes*
 
-*&ast;&ast;&ast;&ast;&ast;&ast;&ast;&ast;&ast;&ast;&ast;&ast;&ast;&ast;&ast;&ast;&ast;&ast;&ast;&ast;&ast;&ast;&ast;&ast;&ast;&ast;&ast;&ast;&ast;&ast;&ast;&ast;&ast;&ast;&ast;&ast;&ast;&ast;&ast;&ast;&ast;&ast;&ast;&ast;&ast;/*
-
+```
 div
-
 &gt;
-
 div
-
 {
-
 <b>margin</b>
-
 :
-
 0
-
 1
-
 ex
-
 1
-
 ex
-
 0
-
 ;
-
 <b>float</b>
-
 :
-
 left
-
 ;
-
 }
-
 div
-
 &plus;
-
 div
-
 {
-
 <b>clear</b>
-
 :
-
 both
-
 ;
-
 <b>border-top</b>
-
 :
-
 1
-
 px
-
 dashed
-
 silver
-
 ;
-
 <b>padding-top</b>
-
 :
-
 1
-
 ex
-
 ;
-
 }
-
 div
-
 &gt;
-
 div
-
 ::
-
 after
-
 {
-
 <b>background-color</b>
-
 :
-
 #000
-
 ;
-
 <b>color</b>
-
 :
-
 #fefefe
-
 ;
-
 <b>margin</b>
-
 :
-
 1
-
 ex
-
 ;
-
 <b>padding</b>
-
 :
-
 1
-
 ex
-
 ;
-
 <b>opacity</b>
-
 :
-
 0.8
-
 ;
-
 <b>display</b>
-
 :
-
 block
-
 ;
-
 <b>width</b>
-
 :
-
 10
-
 ex
-
 ;
-
 <b>font-size</b>
-
 :
-
 0.7
-
 em
-
 ;
-
 <b>content</b>
-
 :
-
 attr
-
 (
-
 class
-
 )
-
 ;
-
 }
-
 <b>&lt;</b>
-
 <b>div</b>
-
 <b>&gt;</b>
-
 <b>&lt;</b>
-
 <b>div</b>
-
 class
-
 =
-
 &quot;contain&quot;
-
 <b>&gt;</b>
-
 <b>/div</b>
-
 <b>&lt;</b>
-
 <b>&gt;</b>
-
 <b>&lt;</b>
-
 <b>p</b>
-
 <b>&gt;</b>
+```
 
 Note the grey background. The image does not cover the whole region, but
 it&apos;s fully
 
+```
 <b>&lt;</b>
-
 <b>em</b>
-
 <b>&gt;</b>
-
 contained
-
 <b>&lt;</b>
-
 <b>/em</b>
-
 <b>&gt;</b>
-
 .
-
 <b>/p</b>
-
 <b>&lt;</b>
-
 <b>&gt;</b>
-
 <b>&lt;</b>
-
 <b>/div</b>
-
 <b>&gt;</b>
-
 <b>&lt;</b>
-
 <b>div</b>
-
 <b>&gt;</b>
-
 <b>&lt;</b>
-
 <b>div</b>
-
 class
-
 =
-
 &quot;cover&quot;
-
 <b>&gt;</b>
-
 <b>/div</b>
-
 <b>&lt;</b>
-
 <b>&gt;</b>
-
 <b>&lt;</b>
-
 <b>p</b>
-
 <b>&gt;</b>
+```
 
 Note the ducks/geese at the bottom of the image. Most of the water is
 cut, as well as a part
@@ -2480,57 +1955,37 @@ cut, as well as a part
 of the sky. You don&apos;t see the complete image anymore, but neither do
 you see any background color;
 
+```
 the image
-
 <b>&lt;</b>
-
 <b>em</b>
-
 <b>&gt;</b>
-
 covers
-
 <b>&lt;</b>
-
 <b>/em</b>
-
 <b>&gt;</b>
-
 all of the
-
 <b>&lt;</b>
-
 <b>code</b>
-
 <b>&gt;</b>
-
 &lt;
-
 div
-
 &gt;
-
 <b>&lt;</b>
-
 <b>/code</b>
-
 <b>&gt;</b>
-
 .
-
 <b>&lt;</b>
-
 <b>/p</b>
-
 <b>&gt;</b>
-
 <b>&lt;</b>
-
 <b>/div</b>
-
 <b>&gt;</b>
+```
 
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch5-6">Section 5.6: Background Position</h3>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 > The
 > &lbrack;&lbrack;background-position&rbrack;&rbrack;(https://drafts.csswg.org/css-backgrounds-3/#background-position)
@@ -2604,7 +2059,9 @@ url
 > Stack&rbrack; &lbrack;Overflow
 > answer.&rbrack;&rbrack;(http://stackoverflow.com/questions/14844407/background-position-y-doesnt-work-in-firefox-via-css/29282573#29282573)
 
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch5-7">Section 5.7: The background-origin property</h3>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 > The background-origin property specifies where the background image is
 > positioned.
@@ -2697,7 +2154,9 @@ consequat.**&lt;/p&gt; &lt;/div&gt;** Result:
 &lbrack;&lbrack;https://www.w3.org/TR/css3-background/#the-background-origin&rbrack;&rbrack;(https://www.w3.org/TR/css3-background/#the-background-origin)
 &lbrack;&lbrack;https://developer.mozilla.org/en-US/docs/Web/CSS/background-origin&rbrack;&rbrack;(https://developer.mozilla.org/en-US/docs/Web/CSS/background-origin)
 
-## Section 5.8: Multiple Background Image
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h3 id="ch5-8">Section 5.8: Multiple Background Image</h3>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 > In CSS3, we can stack multiple background in the same element.
 
@@ -2810,28 +2269,22 @@ bottom
 
 &lbrack;Dem&rbrack;
 
-&lbrack;&lbrack;o&rbrack;&rbrack;(https://jsfiddle.net/z30up2un/)
+[jsFiddle ](https://jsfiddle.net/z30up2un/)
 
-## Section 5.9: Background Attachment
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h3 id="ch5-9">Section 5.9: Background Attachment</h3>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 > The background-attachment property sets whether a background image is
 > fixed or scrolls with the rest of the page.
 
 ```
-body
-{
-**background-image**
-:
-url
-(
-&apos;img.jpg&apos;
-)
-;
-**background-attachment**
-:
-fixed
-;
+body {
+**background-image**: url(&apos;img.jpg&apos;);
+**background-attachment**: fixed;
 }
+```
+
 **Value Description**
 > scroll The background scrolls along with the element. This is default.
 > fixed The background is fixed with regard to the viewport. local The
@@ -2843,58 +2296,39 @@ fixed
 ***background-attachment: scroll***
 > The default behaviour, when the body is scrolled the background
 > scrolls with it:
-body
-{
-**background-image**
-:
-url
-(
-&apos;image.jpg&apos;
-)
-;
-**background-attachment**
-:
-scroll
-;
-}
-***background-attachment: fixed***
-> The background image will be fixed and will not move when the body is
-> scrolled:
-body
-{
-**background-image**
-:
-url
-(
-&apos;image.jpg&apos;
-)
-;
-**background-attachment**
-:
-fixed
-;
-}
-***background-attachment: local***
-> The background image of the div will scroll when the contents of the
-> div is scrolled.
-div
-{
-**background-image**
-:
-url
-(
-&apos;image.jpg&apos;
-)
-;
-**background-attachment**
-:
-local
-;
+
+```
+body {
+**background-image**: url(&apos;image.jpg&apos;);
+**background-attachment**: scroll;
 }
 ```
 
+***background-attachment: fixed***
+> The background image will be fixed and will not move when the body is
+> scrolled:
 
+```
+body {
+  **background-image**: url(&apos;image.jpg&apos;);
+  **background-attachment**: fixed;
+}
+```
+
+***background-attachment: local***
+> The background image of the div will scroll when the contents of the
+> div is scrolled.
+
+```
+div {
+  **background-image**: url(&apos;image.jpg&apos;);
+  **background-attachment**: local;
+}
+```
+
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch5-10">Section 5.10: Background Clip</h3>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 > Definition and Usage: The background-clip property specifies the
 > painting area of the background.
@@ -3052,7 +2486,9 @@ Lorem Ipsum Dolor
 > the end.<b>&lt;/p&gt; &lt;/div&gt;</b>
 ```
 
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch5-11">Section 5.11: Background Repeat</h3>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 > The background-repeat property sets if/how a background image will be
 > repeated.
@@ -3074,7 +2510,9 @@ div {
 
 [image014.jpg](./images/image014.jpg)
 
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch5-12">Section 5.12: background-blend-mode Property</h3>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 ```
 .my-div
@@ -3113,7 +2551,9 @@ See result here:
 > overlay &vertbar; darken &vertbar; lighten &vertbar; color-dodge &vertbar; saturation &vertbar; color &vertbar;
 > luminosity;
 
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch5-13">Section 5.13: Background Color with Opacity</h3>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 > If you set opacity on an element it will affect all its child
 > elements. To set an opacity just on the background of an element you
@@ -3145,7 +2585,9 @@ endColorstr=#99000000)&quot;;
 
 <h2 id="ch6">Chapter 6: Centering</h2>
 
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch6-1">Section 6.1: Using Flexbox</h3>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 <h4>HTML:</h4>
 
@@ -3231,7 +2673,9 @@ body {
 > For a more detailed look at flexbox browser support, see &lbrack;&lbrack;this
 > answer&rbrack;&rbrack;(http://stackoverflow.com/a/35137869/3597276).
 
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch6-2">Section 6.2: Using CSS transform</h3>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 > CSS transforms are based on the size of the elements so if you don&apos;t
 > know how tall or wide your element is, you can position it absolutely
@@ -3354,7 +2798,9 @@ JSFiddle&rbrack;&rbrack;(https://jsfiddle.net/webtiki/rz3p3ufs/)
 > &lbrack;&lbrack;fiddle&rbrack;&rbrack;(https://jsfiddle.net/4xxmxca0/) for more
 > information.
 
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch6-3">Section 6.3: Using margin: 0 auto;</h3>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 | <b>margin</b>: 0                         | > auto;                      |
 
@@ -3426,78 +2872,25 @@ src
 <h4>CSS</h4>
 
 ```
-.containerDiv
-{
-<b>width</b>
-:
-100
-&percnt;
-;
-<b>height</b>
-:
-100
-px
-;
-<b>padding-bottom</b>
-:
-40
-px
-;
+.containerDiv {
+  <b>width</b>: 100&percnt;;
+  <b>height</b>: 100px;
+  <b>padding-bottom</b>: 40px;
 }
-#centeredDiv
-{
-<b>margin</b>
-:
-0
-auto
-;
-<b>width</b>
-:
-200
-px
-;
-<b>height</b>
-:
-100
-px
-;
-<b>border</b>
-:
-1
-px
-solid
-#000
-;
+#centeredDiv {
+  <b>margin</b>: 0 auto;
+  <b>width</b>: 200px;
+  <b>height</b>: 100px;
+  <b>border</b>: 1px solid #000;
 }
-#centeredParagraph
-{
-<b>width</b>
-:
-200
-px
-;
-<b>margin</b>
-:
-0
-auto
-;
+#centeredParagraph {
+  <b>width</b>: 200px;
+  <b>margin</b>: 0 auto;
 }
-#centeredImage
-{
-<b>display</b>
-:
-block
-;
-<b>width</b>
-:
-200
-px
-;
-<b>margin</b>
-:
-0
-auto
-;
+#centeredImage {
+  <b>display</b>: block;
+  <b>width</b>: 200px;
+  <b>margin</b>: 0 auto;
 }
 ```
 
@@ -3508,7 +2901,9 @@ auto
 JSFiddle example: &lbrack;&lbrack;Centering objects with margin: 0
 auto;&rbrack;&rbrack;(https://jsfiddle.net/xf1ze3v9/)
 
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch6-4">Section 6.4: Using text-align</h3>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
   <b>text-align</b>
 
@@ -3533,12 +2928,8 @@ Lorem ipsum
 <h4>CSS</h4>
 
 ```
-p
-{
-<b>text-align</b>
-:
-center
-;
+p {
+  <b>text-align</b>: center;
 }
 ```
 
@@ -3548,7 +2939,9 @@ center
 >
 > See more about text-align in Typography section.
 
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch6-5">Section 6.5: Using position: absolute</h3>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 > *Working in old browsers (IE &gt;= 8)*
 >
@@ -3560,324 +2953,157 @@ center
 
 <h4>HTML</h4>
 
-<b>&lt;</b>
-
-<b>div</b>
-
-class
-
-=
-
-&quot;parent&quot;
-
+```
+<b>&lt;</b> <b>div</b> class=&quot;parent&quot;<b>&gt;</b>
+<b>&lt;</b> <b>img</b> class=&quot;center&quot; src=&quot;http://lorempixel.com/400/200/&quot;<b>/&gt;</b>
+<b>&lt;</b> <b>/div</b>
 <b>&gt;</b>
-
-<b>&lt;</b>
-
-<b>img</b>
-
-class
-
-=
-
-&quot;center&quot;
-
-src
-
-=
-
-&quot;http://lorempixel.com/400/200/&quot;
-
-<b>/&gt;</b>
-
-<b>&lt;</b>
-
-<b>/div</b>
-
-<b>&gt;</b>
-
-> <h4>CSS</h4>
-
-.parent
-
-{
-
-<b>position</b>
-
-:
-
-relative
-
-;
-
-<b>height</b>
-
-:
-
-500
-
-px
-
-;
-
-}
-
-.center
-
-{
-
-<b>position</b>
-
-:
-
-absolute
-
-;
-
-<b>margin</b>
-
-:
-
-auto
-
-;
-
-<b>top</b>
-
-:
-
-0
-
-;
-
-<b>right</b>
-
-:
-
-0
-
-;
-
-<b>bottom</b>
-
-:
-
-0
-
-;
-
-<b>left</b>
-
-:
-
-0
-
-;
-
-}
-
-> Elements that don&apos;t have their own implicit width and height like
-> images do, will need those values defined.
-
-Other resources: &lbrack;&lbrack;Absolute Centering in
-CSS&rbrack;&rbrack;(http://codepen.io/shshaw/details/gEiDt)
-
-## Section 6.6: Using calc()
-
-  -----------------------------------------------------------------------
-  calc              (    100% - 80px
-  ----------------- ---- ------------------------------------------------
-
-  -----------------------------------------------------------------------
-
-> The calc() function is the part of a new syntax in CSS3 in which you
-> can calculate (mathematically) what size/position your element
-> occupies by using a variety of values like pixels, percentages, etc.
-> Note: Whenever you use this function, always take care of the space
-> between two values ). 
+```
 
 <h4>CSS</h4>
 
 ```
+.parent {
+  <b>position</b>: relative;
+  <b>height</b>: 500px;
+}
 .center
 {
-<b>position</b>
-:
-absolute
-;
-<b>height</b>
-:
-50px;
+  <b>position</b>: absolute;
+  <b>margin</b>: auto;
+  <b>top</b>: 0;
+  <b>right</b>: 0;
+  <b>bottom</b>: 0;
+  <b>left</b>: 0;
+}
+```
 
-<b>width</b>
-: 50px;
-<b>background</b>
-:
-red
+Elements that don&apos;t have their own implicit width and height like
+images do, will need those values defined.
 
-;
-<b>top</b>
-:
-calc
-(
-50
-&percnt;
-&minus;
-50
-px
-/
-2
-)
-;
-*/&ast; height divided by 2&ast;/*
-  <b>left</b>
-:
-  calc (
-50&percnt;
-&minus; 
-50px / 2);
+Other resources: &lbrack;&lbrack;Absolute Centering in
+CSS&rbrack;&rbrack;(http://codepen.io/shshaw/details/gEiDt)
+
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h3 id="ch6-6">Section 6.6: Using calc()</h3>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+
+  calc              (    100% - 80px
+
+The calc() function is the part of a new syntax in CSS3 in which you
+can calculate (mathematically) what size/position your element
+occupies by using a variety of values like pixels, percentages, etc.
+Note: Whenever you use this function, always take care of the space
+between two values ). 
+
+<h4>CSS</h4>
+
+```
+.center {
+  <b>position</b>: absolute;
+  <b>height</b>: 50px;
+  <b>width</b>: 50px;
+  <b>background</b>: red;
+  <b>top</b>: calc (50&percnt; &minus; 50px/2
+);
+/* height divided by 2 */
+  <b>left</b>: calc (50&percnt; &minus; 50px / 2);
 /* width divided by 2 */
 }
 ```
 
 
-> <h4>HTML</h4>
+<h4>HTML</h4>
 
+```
 <b>&lt;</b>
-
 <b>div</b>
-
 class
-
 =
-
 &quot;center&quot;
-
 <b>&gt;</b>
-
 <b>&lt;</b>
-
 <b>/div</b>
-
 <b>&gt;</b>
+```
 
-## Section 6.7: Using line-height
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h3 id="ch6-7">Section 6.7: Using line-height</h3>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
-> You can also use line-height to center vertically a single line of
-> text inside a container :
->
-> <h4>CSS</h4>
+You can also use line-height to center vertically a single line of
+text inside a container :
 
-div
+<h4>CSS</h4>
 
-{
-
-<b>height</b>
-
-:
-
-200
-
-px
-
-;
-
-<b>line-height</b>
-
-:
-
-200
-
-px
-
-;
-
+```
+div {
+  <b>height</b>: 200px;
+  <b>line-height</b>: 200px;
 }
-
   <b>&lt;input</b> <b>/&gt;</b>
+```
 
+That&apos;s quite ugly, but can be useful inside an element. The
+line-height property works only when the text to be centered spans a
+single line. If the text wraps into multiple lines, the resulting
+output won&apos;t be centered.
 
-> That&apos;s quite ugly, but can be useful inside an element. The
-> line-height property works only when the text to be centered spans a
-> single line. If the text wraps into multiple lines, the resulting
-> output won&apos;t be centered.
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h3 id="ch6-8">Section 6.8: Vertical align anything with 3 lines of code</h3>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
-## Section 6.8: Vertical align anything with 3 lines of code
+Supported by IE11+ (http://caniuse.com/#search=transform)
 
-&lbrack;&lbrack;Supported by IE11+&rbrack;&rbrack;(http://caniuse.com/#search=transform)
+View Result (https://jsfiddle.net/bnqrLgk9/1/)
 
-&lbrack;&lbrack;View Result&rbrack;&rbrack;(https://jsfiddle.net/bnqrLgk9/1/)
+Use these 3 lines to vertical align practically everything. Just make
+sure the div/image you apply the code to has a parent with a height.
 
-> Use these 3 lines to vertical align practically everything. Just make
-> sure the div/image you apply the code to has a parent with a height.
->
-> <h4>CSS</h4>
+<h4>CSS</h4>
 
+```
 div
-
 .vertical
-
 {
-
 <b>position</b>
-
 :
-
 relative
-
 ;
-
 <b>top</b>
-
 :
-
 50
-
 &percnt;
-
 ;
-
 <b>transform</b>
-
 :
-
 translateY
-
 (
-
 -50
-
 &percnt;
-
 )
-
 ;
-
 }
+```
 
-> <h4>HTML</h4>
+<h4>HTML</h4>
 
+```
 <b>&lt;</b>
-
 <b>div</b>
-
 class
-
 =
-
 &quot;vertical&quot;
-
 <b>&gt;</b>
-
 Vertical aligned text!
-
 <b>&lt;</b>
-
 <b>/div</b>
-
 <b>&gt;</b>
+```
 
-## Section 6.9: Centering in relation to another item
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h3 id="ch6-9">Section 6.9: Centering in relation to another item</h3>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 > We will see how to center content based on the height of a near
 > element.
@@ -4192,7 +3418,9 @@ img
 > The image (if you have an image) inside .thumb should have , but it is
 > not necessary if you have correct proportions.
 
-## Section 6.10: Ghost element technique (Michał Czernow&apos;s hack)
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h3 id="ch6-10">Section 6.10: Ghost element technique (Michał Czernow&apos;s hack)</h3>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 > This technique works even when the container&apos;s dimensions are
 > unknown.
@@ -4382,7 +3610,9 @@ class
 
 <b>&gt;</b>
 
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="6-11">Section 6.11: Centering vertically and horizontally without worrying about height or width</h3>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 > The following technique allows you to add your content to an HTML
 > element and center it both horizontally and vertically **without
@@ -4630,9 +3860,11 @@ solid
 See also &lbrack;**&lbrack;this
 Fiddle&rbrack;**&rbrack;(http://jsfiddle.net/WXLsY/621/)!
 
-## Section 6.12: Vertically align an image inside div
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h3 id="ch6-12">Section 6.12: Vertically align an image inside div</h3>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
-> <h4>HTML</h4>
+<h4>HTML</h4>
 
 **&lt;**
 
@@ -4784,7 +4016,9 @@ middle
 
 }
 
-## Section 6.13: Centering with fixed size
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h3 id="ch6-13">Section 6.13: Centering with fixed size</h3>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 > If the size of your content is fixed, you can use absolute positioning
 > to 50% with margin that reduces half of your content&apos;s width and
@@ -5066,7 +4300,9 @@ px
 
 }
 
-## Section 6.14: Vertically align dynamic height elements
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h3 id="ch6-14">Section 6.14: Vertically align dynamic height elements</h3>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 > Applying css intuitively doesn&apos;t produce the desired results because
 
@@ -5270,11 +4506,13 @@ This approach
 > works with dynamic height elements respects content flow is supported
 > by legacy browsers
 
-## Section 6.15: Horizontal and Vertical centering using table layout
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h3 id="ch6-15">Section 6.15: Horizontal and Vertical centering using table layout</h3>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
-> One could easily center a child element using table display property.
->
-> <h4>HTML</h4>
+One could easily center a child element using table display property.
+
+<h4>HTML</h4>
 
 **&lt;**
 
@@ -5480,7 +4718,9 @@ teal
 > padding and border. initial Sets the box model to its default state.
 > inherit Inherits the box model of the parent element.
 
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch7-1">Section 7.1: What is the Box Model?</h3>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 <h4>The Edges</h4>
 
@@ -5588,7 +4828,9 @@ px
 
 [image019.jpg 3.45" x 1.54"](./images/image019.jpg)
 
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch7-2">Section 7.2: box-sizing</h3>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 > The default box model (content-box) can be counter-intuitive, since
 > the width / height for an element will not represent its actual width
@@ -5919,7 +5161,9 @@ px
 > margin-top). This does not happen because the margins collapse
 > together to form one margin.
 
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch8-2">Section 8.2: Apply Margin on a Given Side</h3>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 <h4>Direction-Specific Properties</h4>
 
@@ -6049,7 +5293,9 @@ red
 }
 ```
 
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch8-3">Section 8.3: Margin property simplification</h3>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 ```
 p
@@ -6133,7 +5379,9 @@ px
 }
 ```
 
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch8-4">Section 8.4: Horizontally center elements on a page using margin</h3>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 > As long as the element is a **block**, and it has an **explicitly set
 > width value**, margins can be used to center block elements on a page
@@ -6180,7 +5428,9 @@ auto
 
 (100% - 80%) / 2 = 10%
 
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch8-5">Section 8.5: Example 1:</h3>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 It is obvious to assume that the percentage value of margin to
 margin-left and margin-right would be relative to its parent element.
@@ -6221,8 +5471,9 @@ margin-left and margin-right would be relative to its parent element.
 }
 ```
 
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch8-6">Section 8.6: Negative margins</h3>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Margin is one of a few CSS properties that can be set to negative
 values. This property can be used to <b>overlap elements without
 absolute positioning</b>.</p>
@@ -6257,9 +5508,11 @@ Overlapping div&lt;/div
 &gt;
 ```
 
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ch9">Chapter 9: Padding</h2>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch9-1">Section 9.1: Padding Shorthand</h3>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 > The padding property sets the padding space on all sides of an
 > element. The padding area is the space between the content of the
@@ -6352,7 +5605,9 @@ class
 **&gt;**
 ```
 
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch9-2">Section 9.2: Padding on a given side</h3>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 The padding property sets the padding space on all sides of an
 element. The padding area is the space between the content of the
@@ -6385,9 +5640,11 @@ class
 **&gt;**
 ```
 
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ch10">Chapter 10: Border</h2>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch10-1">Section 10.1: border-radius</h3>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 > The border-radius property allows you to change the shape of the basic
 > box model.
@@ -6395,8 +5652,7 @@ class
 > Every corner of an element can have up to two values, for the vertical
 > and horizontal radius of that corner (for a maximum of 8 values).
 
-[image025.jpg](./images/image025.jpg)
-<!-- {width="6.145833333333333in" height="1.9375in"} -->
+[image025.jpg 6.14 x 1.93](./images/image025.jpg)
 
 > The first set of values defines the horizontal radius. The optional
 > second set of values, preceded by a '/' , defines the vertical radius.
@@ -6703,7 +5959,9 @@ px
 
 ;
 
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch10-2">Section 10.2: border-style</h3>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 > The border-style property sets the style of an element&apos;s border. This
 > property can have from one to four values (for every side of the
@@ -6742,7 +6000,9 @@ dashed
 > (meaning in a conflict, the border would show), and hidden has the
 > highest priority (meaning in a conflict, the border would not show).
 
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch10-3">Section 10.3: Multiple Borders</h3>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 > Using outline:
 
@@ -7036,12 +6296,13 @@ px
 
 }
 
-[image027.jpg](./images/image027.jpg)
-<!-- {width="1.4583333333333333in" height="4.020833333333333in"} -->
+[image027.jpg 1.458 x 4.021](./images/image027.jpg)
 
 &lbrack;&lbrack;http://jsfiddle.net/MadalinaTn/bvqpcohm/2/&rbrack;&rbrack;(http://jsfiddle.net/MadalinaTn/bvqpcohm/2/)
 
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch10-4">Section 10.4: border (shorthands)</h3>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 > In most cases you want to define several border properties
 > (border-width, border-style and border-color) for all sides of an
@@ -7109,7 +6370,9 @@ double
 
 ;
 
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch10-5">Section 10.5: border-collapse</h3>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
   **display**                         :     table
 
@@ -7147,7 +6410,9 @@ px
 
 > Also see Tables - border-collapse documentation entry
 
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch10-6">Section 10.6: border-image</h3>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 > With the border-image property you have the possibility to set an
 > image to be used instead of normal border styles.
@@ -7175,7 +6440,9 @@ px
 > the image will be **stretched**. The middle part of the image defaults
 > to be transparent.
 
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch10-7">Section 10.7: Creating a multi-colored border using borderimage</h3>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 <h4>CSS</h4>
 
@@ -7275,8 +6542,7 @@ Border on all sides
 > gradient&apos;s start color and bottom border would be end color. Below is
 > the output of a 5 colored gradient.
 
-!&lbrack;&rbrack;(./images/media/image29.jpg){width="3.4895833333333335in"
-height="1.40625in"}
+[image029.jpg 3.489 x 1.40](./images/image029.jpg)
 
 > If the border is required only on specific sides of the element then
 > the border-width property can be used just like with any other normal
@@ -7312,7 +6578,9 @@ px
 > A box&apos;s backgrounds, but not its border-image, are clipped to the
 > appropriate curve (as determined by 'background-clip').
 
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch10-8">Section 10.8: border-&lbrack;left&vertbar;right&vertbar;top&vertbar;bottom&rbrack;</h3>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
   border-           &lbrack;   left      &vertbar;   right        &vertbar;   top     &vertbar;   bottom
 
@@ -7369,7 +6637,9 @@ black
 
   hidden       hidden outline
 
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch11-1">Section 11.1: Overview</h3>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 > Outline is a line that goes around the element, outside of the border.
 > In contrast to border, outlines do not take any space in the box
@@ -7406,7 +6676,9 @@ black
 
 ;
 
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch11-2">Section 11.2: outline-style</h3>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 > The outline-style property is used to set the style of the outline of
 > an element.
@@ -7738,7 +7010,9 @@ An outset outline
 
   inherit     Inherit&apos;s the parent element&apos;s value for this property
 
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch12-1">Section 12.1: overflow-wrap</h3>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 > overflow-wrap tells a browser that it can break a line of text inside
 > a targeted element onto multiple lines in an otherwise unbreakable
@@ -7927,8 +7201,7 @@ on the next line.
 
 **&gt;**
 
-!&lbrack;&rbrack;(./images/media/image32.jpg){width="7.48037510936133in"
-height="4.271902887139108in"}
+[image032.jpg 7.48 x 4.27](./images/image032.jpg)
 
 **overflow-wrap** -- **Value Details**
 
@@ -7936,7 +7209,9 @@ height="4.271902887139108in"}
 > Will split a word into multiple lines, if necessary inherit Inherits
 > the parent element&apos;s value for this property
 
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch12-2">Section 12.2: overflow-x and overflow-y</h3>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 > These two properties work in a similar fashion as the overflow
 > property and accept the same values. The overflow-x parameter works
@@ -8044,10 +7319,11 @@ hidden
 ;
 
 }
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch12-3">Section 12.3: overflow: scroll</h3>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
-> <h4>HTML</h4>
+<h4>HTML</h4>
 
 **&lt;**
 
@@ -8102,8 +7378,7 @@ scroll
 
 > **Result**
 
-!&lbrack;&rbrack;(./images/media/image33.jpg){width="1.1666666666666667in"
-height="1.1875in"}
+[image033.jpg 1.16 x 1.18](./images/image033.jpg)
 
 > The content above is clipped in a 100px by 100px box, with scrolling
 > available to view overflowing content.
@@ -8113,8 +7388,9 @@ height="1.1875in"}
 > problems with scrollbars appearing and disappearing in a dynamic
 > environment. Printers may print overflowing content.
 
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch12-4">Section 12.4: overflow: visible</h3>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>HTML</h4>
 
 **&lt;**
@@ -8170,13 +7446,14 @@ visible
 
 > **Result**
 
-!&lbrack;&rbrack;(./images/media/image34.jpg){width="0.6770833333333334in"
-height="2.4270833333333335in"}
+[image034.jpg .67 x 2.427](./images/image034.jpg)
 
 > Content is not clipped and will be rendered outside the content box if
 > it exceeds its container size.
 
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch12-5">Section 12.5: Block Formatting Context Created with Overflow</h3>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 > Using the overflow property with a value different to visible will
 > create a new **block formatting context**. This is useful for aligning
@@ -8281,8 +7558,7 @@ debitis sea.
 
 > **Result**
 
-!&lbrack;&rbrack;(./images/media/image35.jpg){width="6.375in"
-height="3.7604166666666665in"}
+[imge035.jpg 6.375 x 3.76](./images/image035.jpg)
 
 > This example shows how paragraphs within a div with the overflow
 > property set will interact with a floated image.
@@ -8380,7 +7656,9 @@ height="3.7604166666666665in"}
 >
 > display width of the browser.
 
-## Section 13.1: Terminology and Structure
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h3 id="ch13-1">Section 13.1: Terminology and Structure</h3>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 > **Media queries** allow one to apply CSS rules based on the type of
 > device / media (e.g. screen, print or handheld) called **media type**,
@@ -8460,7 +7738,9 @@ portrait
 
 }
 
-## Section 13.2: Basic Example
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h3 id="ch13-2">Section 13.2: Basic Example</h3>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 **&commat;media**
 
@@ -8517,7 +7797,9 @@ skyblue
 > background color will cease to be sky blue as soon as the user has
 > resized the view port to less than 720 pixels in width.
 
-## Section 13.3: mediatype
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h3 id="ch13-3">Section 13.3: mediatype</h3>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
   **&commat;media** mediatype
 
@@ -8621,11 +7903,13 @@ aural Speech Systems
 > Television-type devices tty Devices with a fixed-pitch character grid.
 > Terminals, portables.
 
-## Section 13.4: Media Queries for Retina and Non Retina Screens
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h3 id="ch13-4">Section 13.4: Media Queries for Retina and Non Retina Screens</h3>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 > Although this works only for WebKit based browsers, this is helpful:
 
-*/&ast; &minus;&minus;&minus;&minus;&minus;&minus;&minus;&minus;&minus;&minus;- Non-Retina Screens &minus;&minus;&minus;&minus;&minus;&minus;&minus;&minus;&minus;&minus;- &ast;/*
+/* Non-Retina Screens */
 
 **&commat;media**
 
@@ -8762,7 +8046,9 @@ dpi
 >
 > This hasn&apos;t been implemented in engines other than WebKit and Blink.
 
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 ## Section 13.5: Width vs Viewport
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
   **&lt;head**
 
@@ -8795,7 +8081,9 @@ dpi
 > webpage with its native resolution which results in a zoomed out view
 > (smaller texts and images).
 
-## Section 13.6: Using Media Queries to Target Dierent Screen Sizes
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+## Section 13.6: Using Media Queries to Target Dierent Screen Sizes0
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 > Often times, responsive web design involves media queries, which are
 > CSS blocks that are only executed if a condition is satisfied. This is
@@ -8952,7 +8240,9 @@ px
 
 }
 
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 ## Section 13.7: Use on link tag
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 > **&lt;link** rel=&quot;stylesheet&quot; media=&quot;min-width: 600px&quot;
 > href=&quot;example.css&quot; **/&gt;**
@@ -8960,7 +8250,9 @@ px
 > This stylesheet is still downloaded but is applied only on devices
 > with screen width larger than 600px.
 
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 ## Section 13.8: Media queries and IE8
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 > &lbrack;**&lbrack;Media
 > queries&rbrack;**&rbrack;(http://www.brianhadaway.com/responsive-web-design-using-css3-media-queries/)
@@ -9126,16 +8418,18 @@ endif
 > as they produce invalid CSS code (which is but one of several reasons
 > why the use of CSS hacks is generally frowned upon today).
 
-# Chapter 14: Floats
-
-## Section 14.1: Float an Image Within Text
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h2 id="ch14">Chapter 14: Floats</h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h3 id="ch14-1">Section 14.1: Float an Image Within Text</h3>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 > The most basic use of a float is having text wrap around an image. The
 > below code will produce two paragraphs and an image, with the second
 > paragraph flowing around the image. Notice that it is always content
 > *after* the floated element that flows around the floated element.
 >
-> HTML:
+<h4>HTML:</h4>
 >
 > **&lt;p&gt;**Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 > Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed
@@ -9150,43 +8444,29 @@ dignissim lacinia nunc. Curabitur tortor. Pellentesque nibh. Aenean
 quam. In scelerisque sem at dolor. Maecenas mattis. Sed convallis
 tristique sem. Proin ut ligula vel nunc egestas porttitor. Morbi lectus
 risus, iaculis vel, suscipit quis, luctus non, massa. Fusce ac turpis
-quis ligula lacinia aliquet. **&lt;/p&gt;** CSS:
+quis ligula lacinia aliquet. **&lt;/p&gt;** 
 
-img
+<h4>CSS:</h4>
 
-{
-
-**float**
-
-:
-
-left
-
-;
-
-**margin-right**
-
-:
-
-1
-
-rem
-
-;
-
+```
+img {
+  **float**: left;
+  **margin-right**: 1rem;
 }
+```
 
 > This will be the output
 
-!&lbrack;&rbrack;(./images/media/image36.jpg){width="7.48037510936133in"
-height="7.052389545056868in"}
+[image036.jpg 7.48 x 7.05](./images/image036.jpg)
 
 &lbrack;&lbrack;Codepen
 Link&rbrack;&rbrack;(http://codepen.io/vishak-kavalur/pen/pbxvLx)
 
-## Section 14.2: clear property
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h3 id="ch14-2">Section 14.2: clear property</h3>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
-> The clear property is directly related to floats. Property Values:
+The clear property is directly related to floats. Property Values:
 
 none - Default. Allows floating elements on both sides
 
@@ -9198,129 +8478,79 @@ both - No floating elements allowed on either the left or the right side
 
 initial - Sets this property to its default value. Read about initial
 
-inherit - Inherits this property from its parent element. Read about
-inherit
+inherit - Inherits this property from its parent element. Read about inherit
 
+```
 **&lt;**
+```
 
 <h4>HTML</h4>
 
+```
 **&gt;**
-
 **&lt;**
-
 **head**
-
 **&gt;**
-
 **&lt;**
-
 **style**
-
 **&gt;**
-
 img {
-
 float: left;
-
 }
-
 p.clear {
-
 clear: both;
-
 }
-
 **&lt;**
-
 **/style**
-
 **&gt;**
-
 **&lt;**
-
 **/head**
-
 **&gt;**
-
 **&lt;**
-
 **body**
-
 **&gt;**
-
 **&lt;**
-
 **img**
-
 src
-
 =
-
 &quot;https://static.pexels.com/photos/69372/pexels-photo-69372-medium.jpeg&quot;
-
 width
-
 =
-
 &quot;100&quot;
-
 **&gt;**
-
 **&lt;**
-
 **p**
-
 **&gt;**
-
 Lorem ipsoum Lorem ipsoum Lorem ipsoum Lorem ipsoum Lorem ipsoum Lorem
 ipsoum Lorem ipsoum Lorem
-
 ipsoum Lorem ipsoum Lorem ipsoum Lorem ipsoum Lorem ipsoum
-
 **&lt;**
-
 **/p**
-
 **&gt;**
-
 **&lt;**
-
 **p**
-
 class
-
 =
-
 &quot;clear&quot;
-
 **&gt;**
-
 Lorem ipsoum Lorem ipsoum Lorem ipsoum Lorem ipsoum Lorem ipsoum Lorem
 ipsoum
-
 Lorem ipsoum Lorem ipsoum Lorem ipsoum Lorem ipsoum Lorem ipsoum Lorem
 ipsoum
-
 **&lt;**
-
 **/p**
-
 **&gt;**
-
 **&lt;**
-
 **/body**
-
 **&gt;**
-
 **&lt;**
-
 **/html**
-
 **&gt;**
+```
 
-## Section 14.3: Clearfix
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h3 id="ch14-3">Section 14.3: Clearfix</h3>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 The clearfix hack is a popular way to contain floats (N. Gallagher aka
 &commat;necolas)
@@ -9550,7 +8780,9 @@ effect&rbrack;&rbrack;(http://codepen.io/PhilippeVay/pen/OXEqgW?editors=0100)
 > (clearfix and BFC - Block Formatting Context while hasLayout relates
 > to outdated browsers IE6 maybe 7)
 
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 ## Section 14.4: In-line DIV using float
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 > The div is a block-level element, i.e it occupies the whole of the
 > page width and the siblings are place one below the other irrespective
@@ -9610,8 +8842,7 @@ This is DIV 2
 
 > The output of the following code will be
 
-!&lbrack;&rbrack;(./images/media/image37.jpg){width="7.48037510936133in"
-height="3.613208661417323in"}
+[image037.jpg 7.48 x 3.61](./images/image037.jpg)
 
 > We can make them in-line by adding a float css property to the div.
 >
@@ -9827,13 +9058,13 @@ center
 
 }
 
-!&lbrack;&rbrack;(./images/media/image38.jpg){width="7.48037510936133in"
-height="0.9774857830271216in"}
+[image038.jpg 7.48 x .97](./images/image038.jpg)
 
-&lbrack;&lbrack;Codepen
-Link&rbrack;&rbrack;(http://codepen.io/vishak-kavalur/pen/bZxbBy)
+<a href="http://codepen.io/vishak-kavalur/pen/bZxbBy">Codepen</a>
 
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch14-5">Section 14.5: Use of overflow property to clear floats</h3>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 > Setting overflow value to hidden,auto or scroll to an element, will
 > clear all the floats within that element.
@@ -9842,7 +9073,9 @@ Link&rbrack;&rbrack;(http://codepen.io/vishak-kavalur/pen/bZxbBy)
 
 **Note:** using will always show the scrollbox
 
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch14-6">Section 14.6: Simple Two Fixed-Width Column Layout</h3>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 > A simple two-column layout consists of two fixed-width, floated
 > elements. Note that the sidebar and content area are not the same
@@ -9991,8 +9224,9 @@ yellow
 }
 ```
 
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch14-7">Section 14.7: Simple Three Fixed-Width Column Layout</h3>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>HTML:</h4>
 
 ```
@@ -10274,7 +9508,9 @@ right
 
 }
 
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 ## Section 14.8: Two-Column Lazy/Greedy Layout
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 > This layout uses one floated column to create a two-column layout with
 > no defined widths. In this example the left sidebar is &quot;lazy,&quot; in
@@ -10398,7 +9634,9 @@ yellow
 > *text-decoration* none, underline, overline, line-through, initial,
 > inherit;
 
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 ## Section 15.1: The Font Shorthand
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 > With the syntax:
 
@@ -10548,7 +9786,9 @@ sans-serif
 >
 > font-family -- depends on user agent
 
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 ## Section 15.2: Quotes
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
   **&lt;q**
 
@@ -10579,7 +9819,9 @@ q
 
 }
 
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 ## Section 15.3: Font Size
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 > **HTML:**
 
@@ -10660,7 +9902,9 @@ px
 > The text inside #element-one will be 30px in size, while the text in
 > #element-two will be 10px in size.
 
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 ## Section 15.4: Text Direction
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 div
 
@@ -10758,7 +10002,9 @@ vertical-rl
 
 Syntax: ;
 
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 ## Section 15.5: Font Stacks
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 **font-family**
 
@@ -10806,7 +10052,9 @@ monospace
 > required character, the browser will fall back to &quot;Courier New,&quot;
 > and, if necessary, any monospace font on the user&apos;s computer.
 
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 ## Section 15.6: Text Overflow
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 > The text-overflow property deals with how overflowed content should be
 > signaled to users. In this example, the ellipsis represents clipped
@@ -10920,7 +10168,9 @@ N
 
 &lbrack;&lbrack;https://www.w3.org/TR/2012/WD-css3-ui-20120117/#text-overflow0&rbrack;&rbrack;(https://www.w3.org/TR/2012/WD-css3-ui-20120117/#text-overflow0)
 
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 ## Section 15.7: Text Shadow
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 > To add shadows to text, use the text-shadow property. The syntax is as
 > follows:
@@ -11027,7 +10277,9 @@ px
 
 }
 
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 ## Section 15.8: Text Transform
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 > The text-transform property allows you to change the capitalization of
 > text. Valid values are: uppercase, capitalize, lowercase, initial,
@@ -11116,7 +10368,9 @@ all letters in lowercase
 **&gt;**
 </code></pre>
 
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 ## Section 15.9: Letter Spacing
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 <pre><code>
 h2
@@ -11156,7 +10410,9 @@ px
 Resources:
 &lbrack;&lbrack;https://developer.mozilla.org/en-US/docs/Web/CSS/letter-spacing&rbrack;&rbrack;(https://developer.mozilla.org/en-US/docs/Web/CSS/letter-spacing)
 
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 ## Section 15.10: Text Indent
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 <pre><code>
 p
@@ -11181,7 +10437,9 @@ px
 &lbrack;&lbrack;https://www.w3.org/TR/CSS21/text.html#propdef-text-indent&rbrack;&rbrack;(https://www.w3.org/TR/CSS21/text.html#propdef-text-indent)
 &lbrack;&lbrack;https://developer.mozilla.org/en-US/docs/Web/CSS/text-indent&rbrack;&rbrack;(https://developer.mozilla.org/en-US/docs/Web/CSS/text-indent)
 
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 ## Section 15.11: Text Decoration
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 > The text-decoration property is used to set or remove decorations from
 > text.
@@ -11258,7 +10516,9 @@ blue
 > text-decoration-color text-decoration-line text-decoration-style
 > text-decoration-skip
 
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 ## Section 15.12: Word Spacing
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 > The word-spacing property specifies the spacing behavior between tags
 > and words.
@@ -11323,7 +10583,9 @@ px
 &lbrack;&lbrack;word-spacing&rbrack; &lbrack;--&rbrack;
 &lbrack;w3.org&rbrack;&rbrack;(https://www.w3.org/wiki/CSS/Properties/word-spacing)
 
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 ## Section 15.13: Font Variant
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 > Attributes:
 
@@ -11368,14 +10630,15 @@ aNd ExAmpLe
 
 > **Output:**
 
-!&lbrack;&rbrack;(./images/media/image39.jpg)
-<!-- {width="2.34375in" height="0.375in"} -->
+[image039.jpg 2.34 x .375](./images/image039.jpg)
 
 > Note: The font-variant property is a shorthand for the properties:
 > font-variant-caps, font-variant-numeric, fontvariant-alternates,
 > font-variant-ligatures, and font-variant-east-asian.
 
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 # Chapter 16: Flexible Box Layout (Flexbox)
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 > The Flexible Box module, or just &apos;flexbox&apos; for short, is a box model
 > designed for user interfaces, and it allows users to align and
@@ -11384,7 +10647,9 @@ aNd ExAmpLe
 > screen sizes. A flex container expands items to fill available space
 > and shrinks them to prevent overflow.
 
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 ## Section 16.1: Dynamic Vertical and Horizontal Centering (alignitems, justify-content)
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 > **Simple Example (centering a single element)**
 >
@@ -11529,9 +10794,9 @@ center
 
 > **Outcome:**
 
-!&lbrack;&rbrack;(./images/media/image40.jpg)
+[image040.jpg ](./images/image040.jpg)
 
-> Here is a &lbrack;&lbrack;demo&rbrack;&rbrack;(https://jsfiddle.net/d6pc5bmd/).
+Here is the <a href="https://jsfiddle.net/d6pc5bmd/">demo jsFiddle</a>.
 
   **justify-content**                            **:**   **center**
 
@@ -11560,9 +10825,9 @@ center
 
 > **Outcome:**
 
-!&lbrack;&rbrack;(./images/media/image41.jpg)
+[image041.jpg](./images/image041.jpg)
 
-> Here is a &lbrack;&lbrack;demo&rbrack;&rbrack;(https://jsfiddle.net/d6pc5bmd/1/).
+Here is a <a href="https://jsfiddle.net/d6pc5bmd/1/">demo jsFiddle</a>.
 
   **align-content**                           **:**   **center**
 
@@ -11591,9 +10856,9 @@ center
 
 > **Outcome:**
 
-!&lbrack;&rbrack;(./images/media/image42.jpg)
+[image042.jpg](./images/image042.jpg)
 
-> Here is a &lbrack;&lbrack;demo&rbrack;&rbrack;(https://jsfiddle.net/d6pc5bmd/2/).
+Here is the <a href="https://jsfiddle.net/d6pc5bmd/2/">demo jsFiddle</a>.
 
   **align-content**                           **:**   **center**
 
@@ -11622,8 +10887,7 @@ center
 
 > **Outcome:**
 
-!&lbrack;&rbrack;(./images/media/image43.jpg){width="6.979166666666667in"
-height="6.15625in"}
+[image043.jpg 6.97 x 6.15](./images/image043.jpg)
 
 > Here is a &lbrack;&lbrack;demo&rbrack;&rbrack;(https://jsfiddle.net/d6pc5bmd/3/).
 >
@@ -11654,8 +10918,7 @@ center
 
 > **Outcome:**
 
-!&lbrack;&rbrack;(./images/media/image44.jpg){width="6.9375in"
-height="6.135416666666667in"}
+[image044.jpog 6.93 x 6.13](./images/image044.jpg)
 
 > Here is a &lbrack;&lbrack;demo&rbrack;&rbrack;(https://jsfiddle.net/d6pc5bmd/4/).
 >
@@ -11686,13 +10949,13 @@ center
 
 > **Outcome:**
 
-!&lbrack;&rbrack;(./images/media/image45.jpg){width="6.9375in"
-height="6.114583333333333in"}
+[image045.jpg 6.93 x 6.11](./images/image045.jpg)
 
-Here is a &lbrack;&lbrack;demo&rbrack;&rbrack;(https://jsfiddle.net/d6pc5bmd/5/).
+Here is a <a href="https://jsfiddle.net/d6pc5bmd/5/">demo</a>.
 
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 ## Section 16.2: Sticky Variable-Height Footer
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 > This code creates a sticky footer. When the content doesn&apos;t reach the
 > end of the viewport, the footer sticks to the bottom of the viewport.
 > When the content extends past the bottom of the viewport, the footer
@@ -11794,7 +11057,9 @@ body {
 }
 ```
 
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch16-3">Section 16.3: Optimally fit elements to their container</h3>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 <p>One of the nicest features of flexbox is to allow optimally fitting
 containers to their parent element.</p>
@@ -11837,7 +11102,7 @@ containers to their parent element.</p>
 >
 > Columns adapt as screen is resized.
 
-!&lbrack;&rbrack;(./images/media/image46.png){width="7.48037510936133in"
+!&lbrack;&rbrack;(./images/image046.png){width="7.48037510936133in"
 height="3.182736220472441in"}
 
 <h3 id="ch16-4">Section 16.4: Holy Grail Layout using Flexbox</h3>
@@ -12042,14 +11307,16 @@ px
 }
 ```
 
-&lbrack;&lbrack;Demo&rbrack;&rbrack;(https://jsfiddle.net/adityarb88/hek6ms0x/)
+<a href="https://jsfiddle.net/adityarb88/hek6ms0x/">jsFiddle Demo</a>
 
-## Section 16.5: Perfectly aligned buttons inside cards with flexbox
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h3 id="ch16-5">Section 16.5: Perfectly aligned buttons inside cards with flexbox</h3>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 > It&apos;s a regular pattern in design these days to vertically align
 > **call to actions** inside its containing cards like this:
 
-!&lbrack;&rbrack;(./images/media/image47.jpg){width="7.48037510936133in"
+!&lbrack;&rbrack;(./images/image047.jpg){width="7.48037510936133in"
 height="3.3848195538057744in"}
 
 > This can be achieved using a special trick with flexbox
@@ -12159,7 +11426,7 @@ center
 
 > The layout will change and become like this:
 
-!&lbrack;&rbrack;(./images/media/image48.jpg){width="7.48037510936133in"
+!&lbrack;&rbrack;(./images/image048.jpg){width="7.48037510936133in"
 height="3.0046391076115486in"}
 
   **display**                            :     flex
@@ -12253,7 +11520,9 @@ auto
 }
 ```
 
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch16-6">Section 16.6: Same height on nested containers</h3>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 > This code makes sure that all nested containers are always the same
 > height. This is done by assuring that all nested elements are the same
@@ -12340,9 +11609,11 @@ value
 
 Note: &lbrack;&lbrack;Does not work on IE versions under 10&rbrack;&rbrack;(http://caniuse.com/#search=flexbox)
 
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ch17">Chapter 17: Cascading and Specificity</h2>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch17-1">Section 17.1: Calculating Selector Specificity</h3>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 > Each individual CSS Selector has its own specificity value. Every
 > selector in a sequence increases the sequence&apos;s overall specificity.
@@ -12765,7 +12036,9 @@ li a
 > You can calculate the specificity of your selector
 > &lbrack;&lbrack;here&rbrack;&rbrack;(http://specificity.keegan.st/)
 
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch17-2">Section 17.2: The !important declaration</h3>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 > The !important declaration is used to override the usual specificity
 > in a style sheet by giving a higher priority to a
@@ -12842,7 +12115,9 @@ normal
 6.4.2 !important
 rules&rbrack;**&rbrack;(https://www.w3.org/TR/CSS22/cascade.html#important-rules)
 
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 ## Section 17.3: Cascading
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 > Cascading and specificity are used together to determine the final
 > value of a CSS styling property. They also define the mechanisms for
@@ -13085,7 +12360,9 @@ red
 >
 > Inline styles trump everything.
 
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 ## Section 17.4: More complex specificity example
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 div
 
@@ -13312,19 +12589,17 @@ Hello, world!
 >
 > color:
 
-  ----------------------------------------------------------------------------------
   **color**   :   red   ;. The color is set in both the div .mystyle .myotherstyle
                         and                                 
-  ----------- --- ----- ----------------------------------- ------------------------
-
-  ----------------------------------------------------------------------------------
 
 > rule sets. The latter has the higher specificity of (0, 2, 0) and
 > &quot;wins&quot;.
 
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 # Chapter 18: Colors
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 ## Section 18.1: currentColor
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 > currentColor returns the computed color value of the current element.
 >
@@ -13493,26 +12768,20 @@ currentColor
 
 > **Possible Result:**
 
-!&lbrack;&rbrack;(./images/media/image49.png){width="5.21875in" height="3.09375in"}
+[image049.png 5.2 x 3.09](./images/image049.png)
 
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 ## Section 18.2: Color Keywords
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 > Most browsers support using color keywords to specify a color. For
 > example, to set the color of an element to blue, use the blue keyword:
 
-.some-class
-
-{
-
-**color**
-
-:
-
-blue
-
-;
-
+```
+.some-class {
+  **color**: blue;
 }
+```
 
 > CSS keywords are not case sensitive---blue, Blue and BLUE will all
 > result in #0000FF.
@@ -13873,7 +13142,9 @@ YellowGreen #9ACD32 rgb(154,205,50)
 
 > (0,0,0,0)
 
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 ## Section 18.3: Hexadecimal Value
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 > **Background**
 >
@@ -13981,7 +13252,9 @@ can!*
 > &quot;digits&quot; long, and are case-insensitive: that is, they don&apos;t care
 > about capitalization. #FFC125 and #ffc125 are the same color.
 
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 ## Section 18.4: rgb() Notation
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 > RGB is an additive color model which represents colors as mixtures of
 > red, green, and blue light. In essence, the RGB representation is the
@@ -14106,7 +13379,9 @@ red
 > **&gt;** an integer from 0 - 255 or percentage from 0 - 100% **&gt;** an
 > integer from 0 - 255 or percentage from 0 - 100%
 
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 ## Section 18.5: rgba() Notation
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 > Similar to rgb() notation, but with an additional alpha (opacity)
 > value.
@@ -14248,7 +13523,9 @@ red
 > **&gt;** a number from 0 - 1, where 0.0 is fully transparent and 1.0 is
 > fully opaque
 
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 ## Section 18.6: hsl() Notation
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 > HSL stands for **hue** (&quot;which color&quot;), **saturation** (&quot;how much
 > color&quot;) and **lightness** (&quot;how much white&quot;).
@@ -14290,7 +13567,7 @@ hsl
 
 }
 
-!&lbrack;&rbrack;(./images/media/image189.jpg){width="7.48037510936133in"
+!&lbrack;&rbrack;(./images/image189.jpg){width="7.48037510936133in"
 height="5.610277777777778in"}
 
 > **Syntax**
@@ -14367,7 +13644,9 @@ hue
 > A lightness of 0% always produces black, and 100% always produces
 > white; changing the hue or saturation has no effect.
 
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 ## Section 18.7: hsla() Notation
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 > Similar to hsl() notation, but with an added alpha (opacity) value.
 >
@@ -14452,9 +13731,11 @@ hue
 **&gt;** a number from 0 - 1 where 0 is fully transparent and 1 is fully
 opaque
 
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 # Chapter 19: Opacity
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 ## Section 19.1: Opacity Property
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 > An element&apos;s opacity can be set using the opacity property. Values
 > can be anywhere from 0.0 (transparent) to 1.0 (opaque).
@@ -14521,7 +13802,9 @@ This is a partially transparent element
 
 > 75% transparent (25% Opaque) Transparent
 
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 ## Section 19.2: IE Compatibility for &apos;opacity&apos;
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 To use
 
@@ -14608,7 +13891,9 @@ opacity
 > CSS supports a number of length measurements units. They are absolute
 > or relative.
 
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 ## Section 20.1: Creating scalable elements using rems and ems
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 Version ≥ 3
 
@@ -14799,10 +14084,12 @@ em
 
 > **Possible Result:**
 
-!&lbrack;&rbrack;(./images/media/image190.jpg){width="6.34375in"
+!&lbrack;&rbrack;(./images/image190.jpg){width="6.34375in"
 height="2.9583333333333335in"}
 
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 ## Section 20.2: Font size with rem
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 > CSS3 introduces a few new units, including the
 > &lbrack;&lbrack;rem&rbrack;&rbrack;(https://www.w3.org/TR/css-values/#font-relative-lengths)
@@ -14912,7 +14199,9 @@ em
 
 }
 
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 ## Section 20.3: vmin and vmax
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 > **vmin**: Relative to 1 percent of the viewport&apos;s smaller dimension
 > **vmax**: Relative to 1 percent of the viewport&apos;s larger dimension
@@ -14926,7 +14215,9 @@ supported&rbrack;&rbrack;(http://caniuse.com/#feat=viewport-units) in:
 
 > any version of Internet Explorer Safari before version 6.1
 
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 ## Section 20.4: vh and vw
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 CSS3 introduced two units for representing size.
 
@@ -14981,7 +14272,9 @@ vh
 > Above, the size for the div takes up 20% of the width and height of
 > the viewport
 
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 ## Section 20.5: using percent %
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 > One of the useful unit when creating a responsive application.
 >
@@ -15084,7 +14377,7 @@ width: 50%;
 
 > **OUTPUT**
 
-!&lbrack;&rbrack;(./images/media/image191.jpg){width="1.40625in" height="0.875in"}
+!&lbrack;&rbrack;(./images/image191.jpg){width="1.40625in" height="0.875in"}
 
 # Chapter 21: Pseudo-Elements
 
@@ -15138,7 +14431,9 @@ width: 50%;
 > For example, the ::first-letter pseudo-element targets only the first
 > letter of a block element specified by the selector.
 
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 ## Section 21.1: Pseudo-Elements
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 > Pseudo-elements are added to selectors but instead of describing a
 > special state, they allow you to style certain parts of a document.
@@ -15272,7 +14567,9 @@ green
 
 }
 
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 ## Section 21.2: Pseudo-Elements in Lists
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 > Pseudo-elements are often used to change the look of lists (mostly for
 > unordered lists, ul).
@@ -15414,7 +14711,7 @@ Test II
 
 > **Result**
 
-!&lbrack;&rbrack;(./images/media/image193.jpg){width="2.4479166666666665in"
+!&lbrack;&rbrack;(./images/image193.jpg){width="2.4479166666666665in"
 height="1.3125in"}
 
 # Chapter 22: Positioning
@@ -15467,7 +14764,9 @@ height="1.3125in"}
 unset Combination of initial and inherit. More info
 &lbrack;&lbrack;here&rbrack;&rbrack;(https://developer.mozilla.org/en-US/docs/Web/CSS/unset).
 
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 ## Section 22.1: Overlapping Elements with z-index
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 > To change the default &lbrack;&lbrack;stack
 > order&rbrack;&rbrack;(https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context)
@@ -15709,7 +15008,7 @@ red
 
 > This creates the following effect:
 
-!&lbrack;&rbrack;(./images/media/image194.jpg){width="3.6458333333333335in"
+!&lbrack;&rbrack;(./images/image194.jpg){width="3.6458333333333335in"
 height="3.8645833333333335in"}
 
 > See a working example at
@@ -15756,7 +15055,9 @@ auto Gives the element the same stacking context as its parent.
 > on layered presentation and at the &lbrack;&lbrack;Mozilla Developer
 > Network&rbrack;&rbrack;(https://developer.mozilla.org/en-US/docs/Web/CSS/z-index).
 
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 ## Section 22.2: Absolute Position
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 > When absolute positioning is used the box of the desired element is
 > taken out of the *Normal Flow* and it no longer affects the position
@@ -15816,7 +15117,9 @@ px
 > This code will move the box containing element with attribute down 0px
 > and right 500px relative to its containing element.
 
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 ## Section 22.3: Fixed position
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 > Defining position as fixed we can remove an element from the document
 > flow and set its position relatively to the browser window. One
@@ -15857,7 +15160,9 @@ px
 
 }
 
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 ## Section 22.4: Relative Position
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 > Relative positioning moves the element in relation to where it would
 > have been in *normal flow* .Offset properties:
@@ -15911,7 +15216,9 @@ px
 > class=&quot;relpos&quot; 20px down and 30px to the right from where it would
 > have been in normal flow.
 
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 ## Section 22.5: Static positioning
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 > The default position of an element is static. To quote
 > &lbrack;&lbrack;MDN&rbrack;&rbrack;(https://developer.mozilla.org/en-US/docs/Web/CSS/position#values):
@@ -15995,7 +15302,9 @@ static
 > Let the element behave like a **&gt;** element list-item Let the element
 > behave like a **&gt;** element.
 
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 ## Section 23.1: The display property
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 > The display CSS property is fundamental for controlling the layout and
 > flow of an HTML document. Most elements have a default display value
@@ -16438,7 +15747,9 @@ none
 > JavaScript to show or hide elements at will, eliminating the need to
 > actually delete and re-create them.
 
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 ## Section 23.2: To get old table structure using div
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 > This is the normal HTML table structure
 
@@ -16592,12 +15903,16 @@ I behave like a table now
 
 **&gt;**
 
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 # Chapter 24: Grid
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 > Grid layout is a new and powerful CSS layout system that allows to
 > divide a web page content into rows and columns in an easy way.
 
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 ## Section 24.1: Basic Example
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 > **Property Possible Values** display grid / inline-grid
 >
@@ -16887,9 +16202,11 @@ px
 > &lbrack;&lbrack;caniuse&rbrack;&rbrack;(http://caniuse.com/#feat=css-grid) in order to
 > test with them.
 
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 # Chapter 25: Tables
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 ## Section 25.1: table-layout
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 > The table-layout property changes the algorithm that is used for the
 > layout of a table.
@@ -16902,7 +16219,7 @@ px
 
 > Below an example of two tables both set to :
 
-!&lbrack;&rbrack;(./images/media/image200.jpg){width="4.625in" height="1.125in"}
+!&lbrack;&rbrack;(./images/image200.jpg){width="4.625in" height="1.125in"}
 
   ------------------------------------------------------------------------------------------
   **table-layout**   :   auto   while the one on the right    **table-layout**   :   fixed
@@ -16928,7 +16245,9 @@ be determined by the contents of its&apos; cells.
 > fixed of a cell exceeds this width, the cell will not resize but
 > instead, let the content overflow.
 
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 ## Section 25.2: empty-cells
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 > The empty-cells property determines if cells with no content should be
 > displayed or not. This has no effect unless border-collapse is set to
@@ -16937,7 +16256,7 @@ be determined by the contents of its&apos; cells.
 > Below an example with two tables with different values set to the
 > empty-cells property:
 
-!&lbrack;&rbrack;(./images/media/image201.jpg){width="5.708333333333333in"
+!&lbrack;&rbrack;(./images/image201.jpg){width="5.708333333333333in"
 height="0.8854166666666666in"}
 
   -----------------------------------------------------------------------------------------
@@ -16963,7 +16282,9 @@ height="0.8854166666666666in"}
 
 &lbrack;&lbrack;https://css-tricks.com/almanac/properties/e/empty-cells/&rbrack;&rbrack;(https://css-tricks.com/almanac/properties/e/empty-cells/)
 
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 ## Section 25.3: border-collapse
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 > The border-collapse property determines if a tables&apos; borders should
 > be separated or merged.
@@ -16971,7 +16292,7 @@ height="0.8854166666666666in"}
 > Below an example of two tables with different values to the
 > border-collapse property:
 
-!&lbrack;&rbrack;(./images/media/image202.jpg){width="5.666666666666667in"
+!&lbrack;&rbrack;(./images/image202.jpg){width="5.666666666666667in"
 height="0.9270833333333334in"}
 
   --------------------------------------------------------------------------------------------------
@@ -16989,7 +16310,9 @@ height="0.9270833333333334in"}
 > separate from each other. collapse This value sets the borders of the
 > table to merge together, rather than being distinct.
 
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 ## Section 25.4: border-spacing
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 > The border-spacing property determines the spacing between cells. This
 > has no effect unless border-collapse is set to separate.
@@ -16997,7 +16320,7 @@ height="0.9270833333333334in"}
 > Below an example of two tables with different values to the
 > border-spacing property:
 
-!&lbrack;&rbrack;(./images/media/image203.jpg){width="6.03125in" height="1.15625in"}
+!&lbrack;&rbrack;(./images/image203.jpg){width="6.03125in" height="1.15625in"}
 
   -----------------------------------------------------------------------------------------------
   **border-spacing**   :   2px   (default) while the one on the    **border-spacing**   :   8px
@@ -17016,7 +16339,9 @@ vary between browsers.
 > &lt;length&gt; &lt;length&gt; This syntax allows specifying separate
 > horizontal and vertical values respectively.
 
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 ## Section 25.5: caption-side
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
   -----------------------------------------------------------------------
   **&lt;caption**
@@ -17031,7 +16356,7 @@ vary between browsers.
 > Below an example with two tables with different values set to the
 > caption-side property:
 
-!&lbrack;&rbrack;(./images/media/image204.jpg){width="5.729166666666667in"
+!&lbrack;&rbrack;(./images/image204.jpg){width="5.729166666666667in"
 height="1.1458333333333333in"}
 
   ------------------------------------------------------------------------------------------
@@ -17080,9 +16405,11 @@ height="1.1458333333333333in"}
 >
 > specified in seconds (s) or milliseconds (ms)
 
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 ## Section 26.1: Transition shorthand
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
-> <h4>CSS</h4>
+<h4>CSS</h4>
 
 div
 
@@ -17165,7 +16492,9 @@ green
 > This example will change the background color when the div is hovered
 > the background-color change will last 1 second.
 
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 ## Section 26.2: cubic-bezier
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 > The cubic-bezier function is a transition timing function which is
 > often used for custom and smooth transitions.
@@ -17188,13 +16517,13 @@ green
 
 > )
 
-!&lbrack;&rbrack;(./images/media/image205.jpg){width="4.395833333333333in"
+!&lbrack;&rbrack;(./images/image205.jpg){width="4.395833333333333in"
 height="2.2083333333333335in"}
 
 > These parameters will be mapped to points which are part of a &lbrack;&lbrack;Bézier
 > curve&rbrack;&rbrack;(https://en.wikipedia.org/wiki/B%C3%A9zier_curve#Cubic_B.C3.A9zier_curves):
 
-!&lbrack;&rbrack;(./images/media/image206.jpg){width="4.96875in"
+!&lbrack;&rbrack;(./images/image206.jpg){width="4.96875in"
 height="4.958333333333333in"}
 
 > For CSS Bézier Curves, P0 and P3 are always in the same spot. P0 is at
@@ -17236,9 +16565,11 @@ height="4.958333333333333in"}
 
 ease-in: ) ease-out: ) ease-in-out: )
 
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 ## Section 26.3: Transition (longhand)
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
-> <h4>CSS</h4>
+<h4>CSS</h4>
 
 div
 
@@ -17428,7 +16759,9 @@ px
 >
 > block Any amount of CSS attributes for the keyframe.
 
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 ## Section 27.1: Animations with keyframes
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 > For multi-stage CSS animations, you can create CSS &commat;keyframes.
 > Keyframes allow you to define multiple animation points, called a
@@ -17811,7 +17144,9 @@ webkit-animation
 
 &period;..
 
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 ## Section 27.2: Animations with the transition property
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 > Useful for simple animations, the CSS transition property allows
 > number-based CSS properties to animate between states.
@@ -17975,7 +17310,9 @@ ease
 > number and a default or automatic value, such as transitioning an
 > element&apos;s height from 100px to auto.
 
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 ## Section 27.3: Syntax Examples
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 > Our first syntax example shows the animation shorthand property using
 > all of the available properties/parameters:
@@ -18083,7 +17420,9 @@ slidein
 
 ;
 
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 ## Section 27.4: Increasing Animation Performance Using the &apos;will-change&apos; Attribute
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 > When creating animations and other GPU-heavy actions, it&apos;s important
 > to understand the will-change attribute.
@@ -18263,7 +17602,9 @@ point on the Z axis
 > scale-factor In () function, the second scale-factor is optional. If
 > not provided, the first scale-factor will be applied for Y-axis also.
 
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 ## Section 28.1: Rotate
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 > <h4>HTML</h4>
 
@@ -18359,9 +17700,11 @@ deg
 > The above example will set the center of rotation to the middle of the
 > right side end.
 
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 ## Section 28.2: Scale
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
-> <h4>HTML</h4>
+<h4>HTML</h4>
 
 **&lt;**
 
@@ -18381,7 +17724,7 @@ class
 
 **&gt;**
 
-> <h4>CSS</h4>
+<h4>CSS</h4>
 
 .scale
 
@@ -18446,9 +17789,11 @@ scale
 > The center of the transform is in the center of the div, 50% from left
 > and 50% from top.
 
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 ## Section 28.3: Skew
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
-> <h4>HTML</h4>
+<h4>HTML</h4>
 
 **&lt;**
 
@@ -18535,7 +17880,9 @@ deg
 See the result
 &lbrack;&lbrack;here&rbrack;&rbrack;(https://jsfiddle.net/MadalinaTn/gtt4osms/1/).
 
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 ## Section 28.4: Multiple transforms
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 > Multiple transforms can be applied to an element in one property like
 > this:
@@ -18573,7 +17920,7 @@ px
 > element**. This means that the translation won&apos;t be horizontal but on
 > an axis rotate 15 degrees clockwise as shown in the following image:
 
-!&lbrack;&rbrack;(./images/media/image207.jpg){width="7.48037510936133in"
+!&lbrack;&rbrack;(./images/image207.jpg){width="7.48037510936133in"
 height="2.7919728783902014in"}
 
 > Changing the order of the transforms will change the output. The first
@@ -18657,7 +18004,7 @@ px
 
 > As shown in this image:
 
-!&lbrack;&rbrack;(./images/media/image208.jpg){width="7.48037510936133in"
+!&lbrack;&rbrack;(./images/image208.jpg){width="7.48037510936133in"
 height="2.7919728783902014in"}
 
 ## Section 28.5: Translate
@@ -19032,17 +18379,17 @@ class
 >
 > **Screenshot of element with no transform:**
 
-!&lbrack;&rbrack;(./images/media/image209.jpg){width="1.6979166666666667in"
+!&lbrack;&rbrack;(./images/image209.jpg){width="1.6979166666666667in"
 height="1.6979166666666667in"}
 
 > **Screenshot of element with only 2D transform:**
 
-!&lbrack;&rbrack;(./images/media/image210.jpg){width="2.3541666666666665in"
+!&lbrack;&rbrack;(./images/image210.jpg){width="2.3541666666666665in"
 height="2.3645833333333335in"}
 
 > **Screenshot of element with 3D transform:**
 
-!&lbrack;&rbrack;(./images/media/image211.jpg){width="0.7395833333333334in"
+!&lbrack;&rbrack;(./images/image211.jpg){width="0.7395833333333334in"
 height="2.4791666666666665in"}
 
 <h3 id="ch29-2">Section 29.2: 3D text eect with shadow</h3>
@@ -19332,7 +18679,7 @@ deg
 &lbrack;&lbrack;View example with additional hover
 effect&rbrack;&rbrack;(http://codepen.io/web-tiki/pen/azeKNy)
 
-!&lbrack;&rbrack;(./images/media/image212.jpg){width="7.48037510936133in"
+!&lbrack;&rbrack;(./images/image212.jpg){width="7.48037510936133in"
 height="3.642194881889764in"}
 
 > In this example, the text is transformed to make it look like it is
@@ -19699,7 +19046,7 @@ rotateX
 {
 
 
-!&lbrack;&rbrack;(./images/media/image213.png){width="7.486667760279965in"
+!&lbrack;&rbrack;(./images/image213.png){width="7.486667760279965in"
 height="6.386666666666667in"}
 
 <a href="http://codepen.io/web-tiki/pen/NNwqBa">View this example</a>
@@ -19786,7 +19133,7 @@ px
 
 > **Result**
 
-!&lbrack;&rbrack;(./images/media/image214.jpg){width="2.2395833333333335in"
+!&lbrack;&rbrack;(./images/image214.jpg){width="2.2395833333333335in"
 height="2.8125in"}
 
 > Makes you wanna rub your glasses.
@@ -19871,7 +19218,7 @@ green
 
 > **Result**
 
-!&lbrack;&rbrack;(./images/media/image215.jpg){width="2.40625in"
+!&lbrack;&rbrack;(./images/image215.jpg){width="2.40625in"
 height="0.5729166666666666in"}
 
 <h3 id="ch30-3">Section 30.3: Hue Rotate</h3>
@@ -19923,7 +19270,7 @@ deg
 
 > **Result**
 
-!&lbrack;&rbrack;(./images/media/image216.jpg){width="2.2604166666666665in"
+!&lbrack;&rbrack;(./images/image216.jpg){width="2.2604166666666665in"
 height="2.8125in"}
 
 <h3 id="ch30-4">Section 30.4: Multiple Filter Values</h3>
@@ -20037,7 +19384,7 @@ invert
 
 > **Result**
 
-!&lbrack;&rbrack;(./images/media/image217.jpg){width="2.1145833333333335in"
+!&lbrack;&rbrack;(./images/image217.jpg){width="2.1145833333333335in"
 height="2.7083333333333335in"}
 
 <h3 id="ch30-5">Section 30.5: Invert Color</h3>
@@ -20126,7 +19473,7 @@ invert
 
 > **Result**
 
-!&lbrack;&rbrack;(./images/media/image218.jpg){width="1.1979166666666667in"
+!&lbrack;&rbrack;(./images/image218.jpg){width="1.1979166666666667in"
 height="1.1979166666666667in"}
 
 > Turns from white to black.
@@ -20479,7 +19826,7 @@ px
 
 }
 
-!&lbrack;&rbrack;(./images/media/image220.jpg){width="6.25in" height="3.75in"}
+!&lbrack;&rbrack;(./images/image220.jpg){width="6.25in" height="3.75in"}
 
 <h3 id="ch32-2">Section 32.2: drop shadow</h3>
 
@@ -20734,7 +20081,7 @@ px
 
 > **Result:**
 
-!&lbrack;&rbrack;(./images/media/image221.jpg){width="2.6458333333333335in"
+!&lbrack;&rbrack;(./images/image221.jpg){width="2.6458333333333335in"
 height="1.5416666666666667in"}
 
 JSFiddle:
@@ -20887,7 +20234,7 @@ px
 
 }
 
-!&lbrack;&rbrack;(./images/media/image222.jpg){width="6.125in"
+!&lbrack;&rbrack;(./images/image222.jpg){width="6.125in"
 height="5.833333333333333in"}
 
 # Chapter 33: Shapes for Floats
@@ -21099,12 +20446,12 @@ px
 > be wrapped around when shape-outside is used and when it is not used.
 > **Output with shape-outside**
 
-!&lbrack;&rbrack;(./images/media/image223.jpg){width="3.3333333333333335in"
+!&lbrack;&rbrack;(./images/image223.jpg){width="3.3333333333333335in"
 height="1.3229166666666667in"}
 
 > **Output without shape-outside**
 
-!&lbrack;&rbrack;(./images/media/image224.jpg){width="3.3333333333333335in"
+!&lbrack;&rbrack;(./images/image224.jpg){width="3.3333333333333335in"
 height="1.4895833333333333in"}
 
 ## Section 33.2: Shape margin
@@ -21299,7 +20646,7 @@ px
 >
 > **Output:**
 
-!&lbrack;&rbrack;(./images/media/image225.jpg){width="3.3333333333333335in"
+!&lbrack;&rbrack;(./images/image225.jpg){width="3.3333333333333335in"
 height="1.3958333333333333in"}
 
 # Chapter 34: List Styles
@@ -23049,7 +22396,7 @@ red
 
 > And get this result:
 
-!&lbrack;&rbrack;(./images/media/image226.jpg){width="3.71875in"
+!&lbrack;&rbrack;(./images/image226.jpg){width="3.71875in"
 height="0.6041666666666666in"}
 
 ## Section 37.4: Valid/Invalids
@@ -23800,7 +23147,7 @@ red
 >
 > Here&apos;s an animated screenshot of the resizing in action:
 
-!&lbrack;&rbrack;(./images/media/image227.jpg){width="7.48037510936133in"
+!&lbrack;&rbrack;(./images/image227.jpg){width="7.48037510936133in"
 height="4.327166447944007in"}
 
 # Chapter 38: Single Element Shapes
@@ -23811,7 +23158,7 @@ height="4.327166447944007in"}
 > 0px), a width greater than zero and a border, that is transparent
 > except for one side:
 
-!&lbrack;&rbrack;(./images/media/image228.jpg){width="4.75in" height="1.96875in"}
+!&lbrack;&rbrack;(./images/image228.jpg){width="4.75in" height="1.96875in"}
 
 > **HTML:**
 
@@ -23912,7 +23259,7 @@ black
 > bottom, left) each form a triangle. Here&apos;s an element with 0
 > height/width and 4 different colored borders.
 
-!&lbrack;&rbrack;(./images/media/image229.jpg){width="1.6666666666666667in"
+!&lbrack;&rbrack;(./images/image229.jpg){width="1.6666666666666667in"
 height="1.7083333333333333in"}
 
 > By setting some borders to transparent, and others to a color we can
@@ -23921,7 +23268,7 @@ height="1.7083333333333333in"}
 > borders to transparent. Here&apos;s an image with the left and right
 > borders shaded slightly to show how the triangle is being formed.
 
-!&lbrack;&rbrack;(./images/media/image230.jpg){width="1.1458333333333333in"
+!&lbrack;&rbrack;(./images/image230.jpg){width="1.1458333333333333in"
 height="1.1875in"}
 
 > The dimensions of the triangle can be altered by changing the
@@ -24126,7 +23473,7 @@ rgb
 
 > **Triangle - Pointing Right**
 
-!&lbrack;&rbrack;(./images/media/image233.jpg){width="1.1458333333333333in"
+!&lbrack;&rbrack;(./images/image233.jpg){width="1.1458333333333333in"
 height="1.1875in"}
 
 **&lt;**
@@ -24667,7 +24014,7 @@ transparent
 > height (a *square*) and then set the border-radius property of this
 > element to 50%.
 
-!&lbrack;&rbrack;(./images/media/image239.jpg){width="1.1458333333333333in"
+!&lbrack;&rbrack;(./images/image239.jpg){width="1.1458333333333333in"
 height="1.1875in"}
 
 <h4>HTML</h4>
@@ -24755,7 +24102,7 @@ rgb
 > An **ellipse** is similar to a circle, but with different values for
 > width and height.
 
-!&lbrack;&rbrack;(./images/media/image240.jpg){width="0.9375in" height="0.9375in"}
+!&lbrack;&rbrack;(./images/image240.jpg){width="0.9375in" height="0.9375in"}
 
 <h4>HTML</h4>
 
@@ -25084,7 +24431,7 @@ rgb
 > This example shows how to create a cube using 2D transformation
 > methods () on pseudo elements.
 
-!&lbrack;&rbrack;(./images/media/image244.jpg){width="2.40625in"
+!&lbrack;&rbrack;(./images/image244.jpg){width="2.40625in"
 height="1.9479166666666667in"}
 
 > **HTML:**
@@ -25370,7 +24717,7 @@ px
 > This example shows how to create a **pyramid** using borders and 2D
 > transformation methods and rotate() on pseudo elements.
 
-!&lbrack;&rbrack;(./images/media/image245.jpg){width="2.1041666666666665in"
+!&lbrack;&rbrack;(./images/image245.jpg){width="2.1041666666666665in"
 height="1.8541666666666667in"}
 
 > **HTML:**
@@ -25649,7 +24996,7 @@ deg
 >
 > **Result**
 
-!&lbrack;&rbrack;(./images/media/image246.jpg){width="7.48037510936133in"
+!&lbrack;&rbrack;(./images/image246.jpg){width="7.48037510936133in"
 height="3.572153324584427in"}
 
 ## Section 39.2: Column Width
@@ -25714,7 +25061,7 @@ px
 
 > **Result**
 
-!&lbrack;&rbrack;(./images/media/image247.jpg){width="6.125in"
+!&lbrack;&rbrack;(./images/image247.jpg){width="6.125in"
 height="3.7083333333333335in"}
 
 # Chapter 40: Multiple columns
@@ -26317,7 +25664,7 @@ Some paragraph
 >
 > For example:
 
-!&lbrack;&rbrack;(./images/media/image248.jpg){width="1.75in" height="1.875in"}
+!&lbrack;&rbrack;(./images/image248.jpg){width="1.75in" height="1.875in"}
 
 > The image above is an image sprite sheet, and each one of those stars
 > is a sprite within the sprite sheet. These sprite sheets are useful
@@ -26588,7 +25935,7 @@ px
 > property on elements. Every graphical element that also exists in SVG
 > you can use here as a function to define the path. Examples are ().
 
-!&lbrack;&rbrack;(./images/media/image249.jpg){width="3.3333333333333335in"
+!&lbrack;&rbrack;(./images/image249.jpg){width="3.3333333333333335in"
 height="2.71875in"}
 
 > Example
@@ -26629,7 +25976,7 @@ center
 > **Alpha Mask**: Only on the transparent areas of the mask the element
 > will be opaque.
 
-!&lbrack;&rbrack;(./images/media/image250.jpg){width="3.3333333333333335in"
+!&lbrack;&rbrack;(./images/image250.jpg){width="3.3333333333333335in"
 height="2.0625in"}
 
 > This image for example can be used as a luminance mask to make for an
@@ -28411,7 +27758,7 @@ hidden
 
 }
 
-[image261.jpg 6 x 3](./images/media/image261.jpg)
+[image261.jpg 6 x 3](./images/image261.jpg)
 
 &lbrack;&lbrack;https://jsfiddle.net/MadalinaTn/qkwwmu6m/2/&rbrack;&rbrack;(https://jsfiddle.net/MadalinaTn/qkwwmu6m/2/)
 
@@ -29397,7 +28744,7 @@ cover
 
 ;
 
-[image264.jpg 6.2 x 2.8](./images/media/image264.jpg)
+[image264.jpg 6.2 x 2.8](./images/image264.jpg)
 
 > Cover fills the entire box with the image. The image aspect ratio is
 > preserved, but the image is cropped to the dimensions of the box.
@@ -30258,169 +29605,100 @@ none
 > Non-alphanumeric prefixes (other than hyphens and underscores) are
 > ignored in IE6 and IE7, so this hack works for any unprefixed pair.
 
-## Section 55.4: Internet Explorer 8 only
+<h3 id="ch55-4">Section 55.4: Internet Explorer 8 only</h3>
 
   <b>&commat;media</b> &bsol;&bsol;                 0 screen { }
 
 
 > To target Internet Explorer 8, wrap your selectors inside :
 
+```
 <b>&commat;media</b>
-
 &bsol;&bsol;
-
 0
-
 screen
-
 {
-
 .hide-on-ie8
-
 {
-
 <b>display</b>
-
 :
-
 none
-
 ;
-
 }
-
 }
+```
 
 | <b>&commat;media</b> &bsol;&bsol;0             | > screen { }                           |
-|-----------------------------|----------------------------------------|
 
 > Everything between is processed only by I
 
-# Chapter 56: Performance
+<h2 id="ch56">Chapter 56: Performance</h2>
 
-## Section 56.1: Use transform and opacity to avoid trigger layout
+<h3 id="ch56-1">Section 56.1: Use transform and opacity to avoid trigger layout</h3>
 
-> Changing some CSS attribute will trigger the browser to synchronously
-> calculate the style and layout, which is a bad thing when you need to
-> animate at 60fps.
->
-> <b>DON&apos;T</b>
+Changing some CSS attribute will trigger the browser to synchronously
+calculate the style and layout, which is a bad thing when you need to
+animate at 60fps.
 
-Animate with
+<b>DON&apos;T</b>
 
-left
+Animate with left and top trigger layout.
 
-and
-
-top
-
-trigger layout.
-
+```
 #box
-
 {
-
 <b>left</b>
-
 :
-
 0
-
 ;
-
 <b>top</b>
-
 :
-
 0
-
 ;
-
 <b>transition</b>
-
 :
-
 left
-
 0.5
-
 s
-
 ,
-
 top
-
 0.5
-
 s
-
 ;
-
 <b>position</b>
-
 :
-
 absolute
-
 ;
-
 <b>width</b>
-
 :
-
 50
-
 px
-
 ;
-
 <b>height</b>
-
 :
-
 50
-
 px
-
 ;
-
 <b>background-color</b>
-
 :
-
 gray
-
 ;
-
 }
-
 #box
-
 .active
-
 {
-
 <b>left</b>
-
 :
-
 100
-
 px
-
 ;
-
 <b>top</b>
-
 :
-
 100
-
 px
-
 ;
-
 }
+```
 
 <b>&lbrack;Dem&rbrack;</b>
 
@@ -30579,511 +29857,9 @@ px
 > &lbrack;<b>&lbrack;Demo&rbrack;</b>&rbrack;(https://jsfiddle.net/trungdq88/Logdo0rn/)
 > same animation, took <b>1.3ms</b> for rendering, <b>2.0ms</b> for painting.
 
-!&lbrack;&rbrack;(./images/media/image268.jpg)
-<!-- width 6/2" -->
-# Credits
-
-> Thank you greatly to all the people from Stack Overflow Documentation
-> who helped provide this content, more changes can be sent to
-> &lbrack;web@petercv.com&rbrack; for new content to be published or
-> updated
-
-  &lbrack;&lbrack;A B&rbrack;&rbrack;(https://stackoverflow.com/users/167362/)               Chapter 20
-
-  &lbrack;&lbrack;A.J&rbrack;&rbrack;(https://stackoverflow.com/users/2720743/)              Chapter 4
-
-  &lbrack;&lbrack;Aaron&rbrack;&rbrack;(https://stackoverflow.com/users/1676224/)            Chapter 4
-
-  &lbrack;&lbrack;abaracedo&rbrack;&rbrack;(https://stackoverflow.com/users/2993458/)        Chapter 4
-
-  &lbrack;&lbrack;Abhishek Singh&rbrack;&rbrack;(https://stackoverflow.com/users/5716106/)   Chapter 22
-
-  &lbrack;&lbrack;adamboro&rbrack;&rbrack;(https://stackoverflow.com/users/3772847/)         Chapter 1
-
-  &lbrack;&lbrack;Aeolingamenfel&rbrack;&rbrack;(https://stackoverflow.com/users/3681236/)   Chapters 27 and 55
-
-  &lbrack;&lbrack;Ahmad Alfy&rbrack;&rbrack;(https://stackoverflow.com/users/497828/)        Chapters 4, 5 and 16
-
-  &lbrack;&lbrack;Alohci&rbrack;&rbrack;(https://stackoverflow.com/users/42585/)             Chapter 15
-
-  &lbrack;&lbrack;amflare&rbrack;&rbrack;(https://stackoverflow.com/users/5937428/)          Chapters 13 and 17
-
-  &lbrack;&lbrack;Andre Lopes&rbrack;&rbrack;(https://stackoverflow.com/users/2816342/)      Chapter 44
-
-  &lbrack;&lbrack;andre mcgruder&rbrack;&rbrack;(https://stackoverflow.com/users/4257303/)   Chapter 54
-
-  &lbrack;&lbrack;andreas&rbrack;&rbrack;(https://stackoverflow.com/users/4952806/)          Chapters 15 and 38
-
-  &lbrack;&lbrack;Andrew&rbrack;&rbrack;(https://stackoverflow.com/users/5410688/)           Chapters 12, 19 and 53
-
-  &lbrack;&lbrack;Andrew Myers&rbrack;&rbrack;(https://stackoverflow.com/users/5764553/)     Chapter 47
-
-  &lbrack;&lbrack;Anil&rbrack;&rbrack;(https://stackoverflow.com/users/711308/)              Chapter 4
-
-  &lbrack;&lbrack;animuson&rbrack;&rbrack;(https://stackoverflow.com/users/246246/)          Chapters 4, 50 and 53
-
-  &lbrack;&lbrack;apaul&rbrack;&rbrack;(https://stackoverflow.com/users/1947286/)            Chapters 6 and 27
-
-  &lbrack;&lbrack;Araknid&rbrack;&rbrack;(https://stackoverflow.com/users/4268627/)          Chapter 4
-
-  &lbrack;&lbrack;Arif&rbrack;&rbrack;(https://stackoverflow.com/users/6254638/)             Chapter 11
-
-  &lbrack;&lbrack;Arjan Einbu&rbrack;&rbrack;(https://stackoverflow.com/users/19594/)        Chapters 4, 7, 8, 15 and 17
-
-  &lbrack;&lbrack;Ashwin Ramaswami&rbrack;&rbrack;(https://stackoverflow.com/users/1950269/) Chapters 1 and 4
-
-  &lbrack;&lbrack;Asim K T&rbrack;&rbrack;(https://stackoverflow.com/users/4015856/)         Chapters 5 and 16
-
-  &lbrack;&lbrack;AVAVT&rbrack;&rbrack;(https://stackoverflow.com/users/1645830/)            Chapter 50
-
-  &lbrack;&lbrack;awe&rbrack;&rbrack;(https://stackoverflow.com/users/109392/)               Chapter 1
-
-  &lbrack;&lbrack;bdkopen&rbrack;&rbrack;(https://stackoverflow.com/users/7214959/)          Chapter 3
-
-  &lbrack;&lbrack;Ben Rhys&rbrack;&rbrack;(https://stackoverflow.com/users/4509121/)         Chapter 5
-
-  &lbrack;&lbrack;Bipon&rbrack;&rbrack;(https://stackoverflow.com/users/3764366/)            Chapter 40
-
-  &lbrack;&lbrack;BiscuitBaker&rbrack;&rbrack;(https://stackoverflow.com/users/1482673/)     Chapter 7
-
-  &lbrack;&lbrack;Boris&rbrack;&rbrack;(https://stackoverflow.com/users/6442082/)            Chapter 5
-
-  &lbrack;&lbrack;Boysenb3rry&rbrack;&rbrack;(https://stackoverflow.com/users/6049524/)      Chapter 1
-
-  &lbrack;&lbrack;brandaemon&rbrack;&rbrack;(https://stackoverflow.com/users/4561047/)       Chapter 17
-
-  &lbrack;&lbrack;Brett DeWoody&rbrack;&rbrack;(https://stackoverflow.com/users/438581/)     Chapters 18, 38 and 39
-
-  &lbrack;&lbrack;CalvT&rbrack;&rbrack;(https://stackoverflow.com/users/1873567/)            Chapters 5 and 9
-
-  &lbrack;&lbrack;Casey&rbrack;&rbrack;(https://stackoverflow.com/users/3969494/)            Chapter 11
-
-  &lbrack;&lbrack;Cassidy Williams&rbrack;&rbrack;(https://stackoverflow.com/users/1950503/) Chapters 10 and 22
-
-  &lbrack;&lbrack;cdm&rbrack;&rbrack;(https://stackoverflow.com/users/4663542/)              Chapters 5 and 8
-
-  &lbrack;&lbrack;Charlie H&rbrack;&rbrack;(https://stackoverflow.com/users/4185234/)        Chapters 4 and 28
-
-  &lbrack;&lbrack;Chathuranga                                                              Chapters 11, 13 and 23
-  Jayanath&rbrack;&rbrack;(https://stackoverflow.com/users/1037793/)           
-
-  &lbrack;&lbrack;Chiller&rbrack;&rbrack;(https://stackoverflow.com/users/3844188/)          Chapter 38
-
-  &lbrack;&lbrack;Chris&rbrack;&rbrack;(https://stackoverflow.com/users/2030321/)            Chapters 1, 4, 23, 25, 42 and 50
-
-  &lbrack;&lbrack;Chris Spittles&rbrack;&rbrack;(https://stackoverflow.com/users/493762/)    Chapters 8 and 24
-
-  &lbrack;&lbrack;Christiaan Maks&rbrack;&rbrack;(https://stackoverflow.com/users/3710120/)  Chapter 28
-
-  &lbrack;&lbrack;CocoaBean&rbrack;&rbrack;(https://stackoverflow.com/users/1165357/)        Chapter 5
-
-  &lbrack;&lbrack;coderfin&rbrack;&rbrack;(https://stackoverflow.com/users/2344083/)         Chapter 3
-
-  &lbrack;&lbrack;cone56&rbrack;&rbrack;(https://stackoverflow.com/users/2229579/)           Chapters 31 and 36
-
-  &lbrack;&lbrack;CPHPython&rbrack;&rbrack;(https://stackoverflow.com/users/6225838/)        Chapter 4
-
-  &lbrack;&lbrack;csx.cc&rbrack;&rbrack;(https://stackoverflow.com/users/5650428/)              Chapter 1
-
-  &lbrack;&lbrack;cuervoo&rbrack;&rbrack;(https://stackoverflow.com/users/4230661/)             Chapter 18
-
-  &lbrack;&lbrack;Daniel G. Blázquez&rbrack;&rbrack;(https://stackoverflow.com/users/321480/)   Chapter 5
-
-  &lbrack;&lbrack;Daniel Käfer&rbrack;&rbrack;(https://stackoverflow.com/users/1079174/)        Chapter 6
-
-  &lbrack;&lbrack;Daniel Stradowski&rbrack;&rbrack;(https://stackoverflow.com/users/5449709/)   Chapter 5
-
-  &lbrack;&lbrack;DarkAjax&rbrack;&rbrack;(https://stackoverflow.com/users/1046057/)            Chapter 17
-
-  &lbrack;&lbrack;darrylyeo&rbrack;&rbrack;(https://stackoverflow.com/users/5545315/)           Chapters 2, 13 and 18
-
-  &lbrack;&lbrack;Darthstroke&rbrack;&rbrack;(https://stackoverflow.com/users/3241847/)         Chapter 5
-
-  &lbrack;&lbrack;Dave Everitt&rbrack;&rbrack;(https://stackoverflow.com/users/123033/)         Chapter 4
-
-  &lbrack;&lbrack;David Fullerton&rbrack;&rbrack;(https://stackoverflow.com/users/91687/)       Chapter 4
-
-  &lbrack;&lbrack;Demeter Dimitri&rbrack;&rbrack;(https://stackoverflow.com/users/2172975/)     Chapter 4
-
-  &lbrack;&lbrack;demonofthemist&rbrack;&rbrack;(https://stackoverflow.com/users/3375368/)      Chapter 14
-
-  &lbrack;&lbrack;designcise&rbrack;&rbrack;(https://stackoverflow.com/users/2382283/)          Chapters 4, 5 and 18
-
-  &lbrack;&lbrack;Devid Farinelli&rbrack;&rbrack;(https://stackoverflow.com/users/4695325/)     Chapters 4 and 6
-
-  &lbrack;&lbrack;Devon Bernard&rbrack;&rbrack;(https://stackoverflow.com/users/1407020/)       Chapter 4
-
-  &lbrack;&lbrack;Dex Star&rbrack;&rbrack;(https://stackoverflow.com/users/3562241/)            Chapter 27
-
-  &lbrack;&lbrack;Diego V&rbrack;&rbrack;(https://stackoverflow.com/users/1385678/)             Chapter 6
-
-  &lbrack;&lbrack;Dinidu Hewage&rbrack;&rbrack;(https://stackoverflow.com/users/1615830/)       Chapter 4
-
-  &lbrack;&lbrack;dippas&rbrack;&rbrack;(https://stackoverflow.com/users/3448527/)              Chapters 4, 17 and 21
-
-  &lbrack;&lbrack;doctorsherlock&rbrack;&rbrack;(https://stackoverflow.com/users/5128879/)      Chapter 10
-
-  &lbrack;&lbrack;dodopok&rbrack;&rbrack;(https://stackoverflow.com/users/2480653/)             Chapters 13, 36 and 45
-
-  &lbrack;&lbrack;Elegant.Scripting&rbrack;&rbrack;(https://stackoverflow.com/users/4497067/)   Chapter 43
-
-  &lbrack;&lbrack;Eliran Malka&rbrack;&rbrack;(https://stackoverflow.com/users/547020/)         Chapter 6
-
-  &lbrack;&lbrack;Emanuele Parisio&rbrack;&rbrack;(https://stackoverflow.com/users/2550659/)    Chapter 6
-
-  &lbrack;&lbrack;Evgeny&rbrack;&rbrack;(https://stackoverflow.com/users/1189546/)              Chapter 15
-
-  &lbrack;&lbrack;Farzad YZ&rbrack;&rbrack;(https://stackoverflow.com/users/2784512/)           Chapter 6
-
-  &lbrack;&lbrack;fcalderan&rbrack;&rbrack;(https://stackoverflow.com/users/1098851/)           Chapter 5
-
-  &lbrack;&lbrack;feeela&rbrack;&rbrack;(https://stackoverflow.com/users/341201/)               Chapters 46 and 55
-
-  &lbrack;&lbrack;FelipeAls&rbrack;&rbrack;(https://stackoverflow.com/users/137626/)            Chapters 1, 5, 10, 11, 14, 16, 24 and 25
-
-  &lbrack;&lbrack;Felix A J&rbrack;&rbrack;(https://stackoverflow.com/users/1155876/)           Chapter 15
-
-  &lbrack;&lbrack;Felix Edelmann&rbrack;&rbrack;(https://stackoverflow.com/users/2796524/)      Chapter 4
-
-  &lbrack;&lbrack;Felix Schütz&rbrack;&rbrack;(https://stackoverflow.com/users/4362643/)        Chapter 4
-
-  &lbrack;&lbrack;Forty&rbrack;&rbrack;(https://stackoverflow.com/users/5900863/)               Chapter 4
-
-  &lbrack;&lbrack;fracz&rbrack;&rbrack;(https://stackoverflow.com/users/878514/)                Chapter 4
-
-  &lbrack;&lbrack;fzzylogic&rbrack;&rbrack;(https://stackoverflow.com/users/2198632/)           Chapter 16
-
-  &lbrack;&lbrack;G&rbrack;&rbrack;(https://stackoverflow.com/users/29805/)                     Chapters 1 and 17
-
-  &lbrack;&lbrack;Gabriel R.&rbrack;&rbrack;(https://stackoverflow.com/users/170091/)           Chapter 1
-
-  &lbrack;&lbrack;gandreadis&rbrack;&rbrack;(https://stackoverflow.com/users/6171547/)          Chapter 4
-
-  &lbrack;&lbrack;geek1011&rbrack;&rbrack;(https://stackoverflow.com/users/5139282/)            Chapter 21
-
-  &lbrack;&lbrack;geeksal&rbrack;&rbrack;(https://stackoverflow.com/users/3212574/)             Chapter 17
-
-  &lbrack;&lbrack;Gerardas&rbrack;&rbrack;(https://stackoverflow.com/users/2948417/)            Chapter 1
-
-  &lbrack;&lbrack;Gnietschow&rbrack;&rbrack;(https://stackoverflow.com/users/1339365/)          Chapter 10
-
-  &lbrack;&lbrack;GoatsWearHats&rbrack;&rbrack;(https://stackoverflow.com/users/5299938/)       Chapter 1
-
-  &lbrack;&lbrack;Gofilord&rbrack;&rbrack;(https://stackoverflow.com/users/3448251/)            Chapter 21
-
-  &lbrack;&lbrack;Grant Palin&rbrack;&rbrack;(https://stackoverflow.com/users/68763/)           Chapter 54
-
-  &lbrack;&lbrack;H. Pauwelyn&rbrack;&rbrack;(https://stackoverflow.com/users/4551041/)         Chapters 4, 18 and 36
-
-  &lbrack;&lbrack;HansCz&rbrack;&rbrack;(https://stackoverflow.com/users/173679/)               Chapter 4
-
-  &lbrack;&lbrack;Harish Gyanani&rbrack;&rbrack;(https://stackoverflow.com/users/1495703/)      Chapter 1
-
-  &lbrack;&lbrack;Harry&rbrack;&rbrack;(https://stackoverflow.com/users/2606013/)               Chapters 10, 26, 28, 29, 33, 35 and 44
-
-  &lbrack;&lbrack;henry&rbrack;&rbrack;(https://stackoverflow.com/users/1241736/)               Chapter 4
-
-  &lbrack;&lbrack;Horst Jahns&rbrack;&rbrack;(https://stackoverflow.com/users/2661301/)         Chapter 5
-
-  &lbrack;&lbrack;Hristo&rbrack;&rbrack;(https://stackoverflow.com/users/196921/)               Chapter 32
-
-  &lbrack;&lbrack;Hugo Buff&rbrack;&rbrack;(https://stackoverflow.com/users/3392335/)           Chapter 4
-
-  &lbrack;&lbrack;Hynes&rbrack;&rbrack;(https://stackoverflow.com/users/2640230/)                Chapters 4, 5 and 15
-
-  &lbrack;&lbrack;insertusernamehere&rbrack;&rbrack;(https://stackoverflow.com/users/1456376/)   Chapter 15
-
-  &lbrack;&lbrack;J Atkin&rbrack;&rbrack;(https://stackoverflow.com/users/4683264/)              Chapters 1 and 4
-
-  &lbrack;&lbrack;J F&rbrack;&rbrack;(https://stackoverflow.com/users/5244995/)                  Chapters 4 and 20
-
-  &lbrack;&lbrack;Jacob Gray&rbrack;&rbrack;(https://stackoverflow.com/users/3285730/)           Chapters 4, 5 and 22
-
-  &lbrack;&lbrack;James Donnelly&rbrack;&rbrack;(https://stackoverflow.com/users/1317805/)       Chapters 7 and 17
-
-  &lbrack;&lbrack;James Taylor&rbrack;&rbrack;(https://stackoverflow.com/users/1944335/)         Chapter 5
-
-  &lbrack;&lbrack;jaredsk&rbrack;&rbrack;(https://stackoverflow.com/users/2378918/)              Chapters 10, 36 and 50
-
-  &lbrack;&lbrack;JedaiCoder&rbrack;&rbrack;(https://stackoverflow.com/users/5826535/)           Chapter 6
-
-  &lbrack;&lbrack;Jef&rbrack;&rbrack;(https://stackoverflow.com/users/4142458/)                  Chapter 16
-
-  &lbrack;&lbrack;Jeffery Tang&rbrack;&rbrack;(https://stackoverflow.com/users/6454135/)         Chapter 30
-
-  &lbrack;&lbrack;jehna1&rbrack;&rbrack;(https://stackoverflow.com/users/2697279/)               Chapter 6
-
-  &lbrack;&lbrack;jgh&rbrack;&rbrack;(https://stackoverflow.com/users/7861554/)                  Chapter 12
-
-  &lbrack;&lbrack;JHS&rbrack;&rbrack;(https://stackoverflow.com/users/3538313/)                  Chapter 25
-
-  &lbrack;&lbrack;Jmh2013&rbrack;&rbrack;(https://stackoverflow.com/users/1284810/)              Chapters 13, 23 and 43
-
-  &lbrack;&lbrack;joejoe31b&rbrack;&rbrack;(https://stackoverflow.com/users/3213602/)            Chapters 4 and 13
-
-  &lbrack;&lbrack;JoelBonetR&rbrack;&rbrack;(https://stackoverflow.com/users/6479108/)           Chapter 4
-
-  &lbrack;&lbrack;joe_young&rbrack;&rbrack;(https://stackoverflow.com/users/4206206/)            Chapters 1 and 15
-
-  &lbrack;&lbrack;John Slegers&rbrack;&rbrack;(https://stackoverflow.com/users/1946501/)         Chapters 4, 5, 6, 13, 17, 18, 28, 52 and 55
-
-  &lbrack;&lbrack;Jon Chan&rbrack;&rbrack;(https://stackoverflow.com/users/1043674/)             Chapters 5 and 15
-
-  &lbrack;&lbrack;Jonathan Argentiero&rbrack;&rbrack;(https://stackoverflow.com/users/1679414/)  Chapter 6
-
-  &lbrack;&lbrack;Jonathan Lam&rbrack;&rbrack;(https://stackoverflow.com/users/2397327/)         Chapters 1, 6, 7, 16 and 22
-
-  &lbrack;&lbrack;Jonathan Zúñiga&rbrack;&rbrack;(https://stackoverflow.com/users/1560233/)      Chapter 5
-
-  &lbrack;&lbrack;Jose Gomez&rbrack;&rbrack;(https://stackoverflow.com/users/6530221/)           Chapter 1
-
-  &lbrack;&lbrack;Just a student&rbrack;&rbrack;(https://stackoverflow.com/users/962603/)        Chapter 1
-
-  &lbrack;&lbrack;Kevin Katzke&rbrack;&rbrack;(https://stackoverflow.com/users/1280289/)         Chapter 23
-
-  &lbrack;&lbrack;kingcobra1986&rbrack;&rbrack;(https://stackoverflow.com/users/3942863/)        Chapter 17
-
-  &lbrack;&lbrack;Kuhan&rbrack;&rbrack;(https://stackoverflow.com/users/3214177/)                Chapter 18
-
-  &lbrack;&lbrack;Kyle Ratliff&rbrack;&rbrack;(https://stackoverflow.com/users/4446898/)         Chapter 6
-
-  &lbrack;&lbrack;leo_ap&rbrack;&rbrack;(https://stackoverflow.com/users/1644937/)               Chapter 50
-
-  &lbrack;&lbrack;LiLacTac&rbrack;&rbrack;(https://stackoverflow.com/users/5375837/)             Chapter 55
-
-  &lbrack;&lbrack;Luka Kerr&rbrack;&rbrack;(https://stackoverflow.com/users/6523193/)            Chapter 29
-
-  &lbrack;&lbrack;Luke Taylor&rbrack;&rbrack;(https://stackoverflow.com/users/4414003/)          Chapter 28
-
-  &lbrack;&lbrack;Madalina Taina&rbrack;&rbrack;(https://stackoverflow.com/users/3830698/)       Chapters 4, 5, 6, 8, 9, 10, 11, 12, 14, 15, 19, 25,
-                                                                                 29, 31, 32, 34, 39, 45 and 49
-
-  &lbrack;&lbrack;Marc&rbrack;&rbrack;(https://stackoverflow.com/users/4382892/)                 Chapter 20
-
-  &lbrack;&lbrack;Marcatectura&rbrack;&rbrack;(https://stackoverflow.com/users/1592764/)         Chapter 21
-
-  &lbrack;&lbrack;Marjorie Pickard&rbrack;&rbrack;(https://stackoverflow.com/users/7855318/)     Chapter 2
-
-  &lbrack;&lbrack;Mark Perera&rbrack;&rbrack;(https://stackoverflow.com/users/6574064/)          Chapter 4
-
-  &lbrack;&lbrack;Marten Koetsier&rbrack;&rbrack;(https://stackoverflow.com/users/2286722/)      Chapters 34 and 41
-
-  &lbrack;&lbrack;Matas Vaitkevicius&rbrack;&rbrack;(https://stackoverflow.com/users/1509764/)   Chapters 4 and 13
-
-  &lbrack;&lbrack;Mattia Astorino&rbrack;&rbrack;(https://stackoverflow.com/users/1490860/)      Chapter 22
-
-  &lbrack;&lbrack;Maximillian                                                                  Chapters 5 and 13
-  Laumeister&rbrack;&rbrack;(https://stackoverflow.com/users/2234742/)             
-
-  &lbrack;&lbrack;Maxouhell&rbrack;&rbrack;(https://stackoverflow.com/users/4022806/)            Chapter 6
-
-  &lbrack;&lbrack;Michael Moriarty&rbrack;&rbrack;(https://stackoverflow.com/users/4515471/)     Chapters 5, 15 and 18
-
-  &lbrack;&lbrack;Michael_B&rbrack;&rbrack;(https://stackoverflow.com/users/3597276/)            Chapters 4 and 6
-
-  &lbrack;&lbrack;Mifeet&rbrack;&rbrack;(https://stackoverflow.com/users/2032064/)               Chapter 6
-
-  &lbrack;&lbrack;Mike McCaughan&rbrack;&rbrack;(https://stackoverflow.com/users/215552/)        Chapter 24
-
-  &lbrack;&lbrack;Miles&rbrack;&rbrack;(https://stackoverflow.com/users/4075712/)                Chapters 12 and 51
-
-  &lbrack;&lbrack;Miro&rbrack;&rbrack;(https://stackoverflow.com/users/559079/)                  Chapter 18
-
-  &lbrack;&lbrack;MMachinegun&rbrack;&rbrack;(https://stackoverflow.com/users/2102463/)          Chapter 54
-
-  &lbrack;&lbrack;mmativ&rbrack;&rbrack;(https://stackoverflow.com/users/5321188/)               Chapter 50
-
-  &lbrack;&lbrack;Mod Proxy&rbrack;&rbrack;(https://stackoverflow.com/users/6571865/)            Chapter 6
-
-  &lbrack;&lbrack;Mr. Alien&rbrack;&rbrack;(https://stackoverflow.com/users/1542290/)            Chapter 5
-
-  &lbrack;&lbrack;Mr. Meeseeks&rbrack;&rbrack;(https://stackoverflow.com/users/1270656/)        Chapter 29
-
-  &lbrack;&lbrack;Mr_Green&rbrack;&rbrack;(https://stackoverflow.com/users/1577396/)            Chapter 8
-
-  &lbrack;&lbrack;Muthu Kumaran&rbrack;&rbrack;(https://stackoverflow.com/users/615746/)        Chapter 37
-
-  &lbrack;&lbrack;Naeem Shaikh&rbrack;&rbrack;(https://stackoverflow.com/users/3556874/)        Chapter 4
-
-  &lbrack;&lbrack;Nate&rbrack;&rbrack;(https://stackoverflow.com/users/420006/)                 Chapter 5
-
-  &lbrack;&lbrack;Nathan Arthur&rbrack;&rbrack;(https://stackoverflow.com/users/937377/)        Chapters 1, 4, 6, 8, 13, 14, 15 and 16
-
-  &lbrack;&lbrack;Nemanja Trifunovic&rbrack;&rbrack;(https://stackoverflow.com/users/4004007/)  Chapter 48
-
-  &lbrack;&lbrack;Niek Brouwer&rbrack;&rbrack;(https://stackoverflow.com/users/5347689/)        Chapter 23
-
-  &lbrack;&lbrack;niyasc&rbrack;&rbrack;(https://stackoverflow.com/users/1520248/)              Chapter 18
-
-  &lbrack;&lbrack;Nobal Mohan&rbrack;&rbrack;(https://stackoverflow.com/users/1004972/)         Chapter 10
-
-  &lbrack;&lbrack;o.v.&rbrack;&rbrack;(https://stackoverflow.com/users/1081234/)                Chapter 6
-
-  &lbrack;&lbrack;Obsidian&rbrack;&rbrack;(https://stackoverflow.com/users/2120261/)            Chapters 37 and 53
-
-  &lbrack;&lbrack;Ortomala Lokni&rbrack;&rbrack;(https://stackoverflow.com/users/1807667/)      Chapters 6, 7 and 17
-
-  &lbrack;&lbrack;Pat&rbrack;&rbrack;(https://stackoverflow.com/users/5712587/)                 Chapter 21
-
-  &lbrack;&lbrack;patelarpan&rbrack;&rbrack;(https://stackoverflow.com/users/3710481/)          Chapters 1 and 50
-
-  &lbrack;&lbrack;Paul Kozlovitch&rbrack;&rbrack;(https://stackoverflow.com/users/1923755/)     Chapter 6
-
-  &lbrack;&lbrack;Paul Sweatte&rbrack;&rbrack;(https://stackoverflow.com/users/1113772/)        Chapter 46
-
-  &lbrack;&lbrack;Persijn&rbrack;&rbrack;(https://stackoverflow.com/users/3999748/)             Chapters 4 and 5
-
-  &lbrack;&lbrack;Phil&rbrack;&rbrack;(https://stackoverflow.com/users/6429774/)                Chapter 50
-
-  &lbrack;&lbrack;pixelbandito&rbrack;&rbrack;(https://stackoverflow.com/users/2555029/)        Chapter 9
-
-  &lbrack;&lbrack;Praveen Kumar&rbrack;&rbrack;(https://stackoverflow.com/users/462627/)        Chapters 4, 6, 13, 15, 26, 28, 50 and 55
-
-  &lbrack;&lbrack;Qaz&rbrack;&rbrack;(https://stackoverflow.com/users/2421026/)                 Chapter 12
-
-  &lbrack;&lbrack;Rahul Nanwani&rbrack;&rbrack;(https://stackoverflow.com/users/2314308/)       Chapter 22
-
-  &lbrack;&lbrack;RamenChef&rbrack;&rbrack;(https://stackoverflow.com/users/6392939/)           Chapter 43
-
-  &lbrack;&lbrack;rdans&rbrack;&rbrack;(https://stackoverflow.com/users/2617732/)               Chapter 4
-
-  &lbrack;&lbrack;RedRiderX&rbrack;&rbrack;(https://stackoverflow.com/users/982259/)            Chapter 37
-
-  &lbrack;&lbrack;rejnev&rbrack;&rbrack;(https://stackoverflow.com/users/3764165/)              Chapter 8
-
-  &lbrack;&lbrack;Richard Hamilton&rbrack;&rbrack;(https://stackoverflow.com/users/4703663/)    Chapters 4, 5, 15, 18, 20 and 27
-
-  &lbrack;&lbrack;Rion Williams&rbrack;&rbrack;(https://stackoverflow.com/users/557445/)        Chapter 4
-
-  &lbrack;&lbrack;rishabh dev&rbrack;&rbrack;(https://stackoverflow.com/users/4114117/)         Chapter 46
-
-  &lbrack;&lbrack;rmondesilva&rbrack;&rbrack;(https://stackoverflow.com/users/4672534/)         Chapters 15 and 20
-
-  &lbrack;&lbrack;Robotnicka&rbrack;&rbrack;(https://stackoverflow.com/users/4534949/)          Chapter 20
-
-  &lbrack;&lbrack;Rocket Risa&rbrack;&rbrack;(https://stackoverflow.com/users/5220880/)         Chapter 1
-
-  &lbrack;&lbrack;Sandeep Tuniki&rbrack;&rbrack;(https://stackoverflow.com/users/4937439/)      Chapter 6
-
-  &lbrack;&lbrack;Saroj Sasmal&rbrack;&rbrack;(https://stackoverflow.com/users/5293076/)        Chapter 1
-
-  &lbrack;&lbrack;ScientiaEtVeritas&rbrack;&rbrack;(https://stackoverflow.com/users/2612484/)   Chapters 1, 4, 6, 7, 10, 11, 18, 20, 21, 23, 26,
-                                                                                31, 33, 44 and 53
-
-  &lbrack;&lbrack;Sebastian Zartner&rbrack;&rbrack;(https://stackoverflow.com/users/432681/)    Chapter 40
-
-  &lbrack;&lbrack;SeinopSys&rbrack;&rbrack;(https://stackoverflow.com/users/1344955/)           Chapters 18, 23, 36 and 54
-
-  &lbrack;&lbrack;Sergey Denisov&rbrack;&rbrack;(https://stackoverflow.com/users/2570353/)      Chapters 5 and 26
-
-  &lbrack;&lbrack;Shaggy&rbrack;&rbrack;(https://stackoverflow.com/users/4768433/)              Chapters 5, 21 and 53
-
-  &lbrack;&lbrack;Siavas&rbrack;&rbrack;(https://stackoverflow.com/users/5838198/)              Chapter 6
-
-  &lbrack;&lbrack;Someone&rbrack;&rbrack;(https://stackoverflow.com/users/1410735/)             Chapter 6
-
-  &lbrack;&lbrack;Sourav Ghosh&rbrack;&rbrack;(https://stackoverflow.com/users/4040525/)        Chapters 5 and 22
-
-  &lbrack;&lbrack;Squazz&rbrack;&rbrack;(https://stackoverflow.com/users/1955317/)              Chapters 16 and 31
-
-  &lbrack;&lbrack;srikarg&rbrack;&rbrack;(https://stackoverflow.com/users/1042093/)             Chapter 13
-
-  &lbrack;&lbrack;StefanBob&rbrack;&rbrack;(https://stackoverflow.com/users/3317728/)           Chapter 9
-
-  &lbrack;&lbrack;Stewartside&rbrack;&rbrack;(https://stackoverflow.com/users/2889988/)         Chapters 4, 5, 6, 18, 20 and 21
-
-  &lbrack;&lbrack;Stratboy&rbrack;&rbrack;(https://stackoverflow.com/users/551357/)             Chapter 5
-
-  &lbrack;&lbrack;sudo bangbang&rbrack;&rbrack;(https://stackoverflow.com/users/3951782/)       Chapter 4
-
-  &lbrack;&lbrack;Sumner Evans&rbrack;&rbrack;(https://stackoverflow.com/users/2319844/)        Chapter 4
-
-  &lbrack;&lbrack;Sun Qingyao&rbrack;&rbrack;(https://stackoverflow.com/users/5399734/)         Chapter 8
-
-  &lbrack;&lbrack;Sunnyok&rbrack;&rbrack;(https://stackoverflow.com/users/4290193/)             Chapters 4, 6 and 8
-
-  &lbrack;&lbrack;Sverri M. Olsen&rbrack;&rbrack;(https://stackoverflow.com/users/1300892/)     Chapter 1
-
-  &lbrack;&lbrack;takeradi&rbrack;&rbrack;(https://stackoverflow.com/users/3538394/)      Chapter 16
-
-  &lbrack;&lbrack;Taylor&rbrack;&rbrack;(https://stackoverflow.com/users/3311859/)        Chapter 6
-
-  &lbrack;&lbrack;Ted Goas&rbrack;&rbrack;(https://stackoverflow.com/users/734487/)       Chapters 12, 15, 34 and 43
-
-  &lbrack;&lbrack;Teo Dragovic&rbrack;&rbrack;(https://stackoverflow.com/users/2382115/)  Chapters 1 and 13
-
-  &lbrack;&lbrack;ThatWeirdo&rbrack;&rbrack;(https://stackoverflow.com/users/2566065/)    Chapter 4
-
-  &lbrack;&lbrack;TheGenie                                                              Chapter 36
-  OfTruth&rbrack;&rbrack;(https://stackoverflow.com/users/5931915/)         
-
-  &lbrack;&lbrack;Theodore K.&rbrack;&rbrack;(https://stackoverflow.com/users/2667686/)   Chapter 22
-
-  &lbrack;&lbrack;think123&rbrack;&rbrack;(https://stackoverflow.com/users/1136709/)      Chapter 5
-
-  &lbrack;&lbrack;Timothy Miller&rbrack;&rbrack;(https://stackoverflow.com/users/934019/) Chapter 55
-
-  &lbrack;&lbrack;Toby&rbrack;&rbrack;(https://stackoverflow.com/users/4008056/)          Chapters 15 and 20
-
-  &lbrack;&lbrack;Todd&rbrack;&rbrack;(https://stackoverflow.com/users/7026544/)          Chapter 1
-
-  &lbrack;&lbrack;ToniB&rbrack;&rbrack;(https://stackoverflow.com/users/3614064/)         Chapter 15
-
-  &lbrack;&lbrack;Tot Zam&rbrack;&rbrack;(https://stackoverflow.com/users/4660897/)       Chapter 8
-
-  &lbrack;&lbrack;Trevor Clarke&rbrack;&rbrack;(https://stackoverflow.com/users/3998484/) Chapters 5, 8, 10 and 15
-
-  &lbrack;&lbrack;TrungDQ&rbrack;&rbrack;(https://stackoverflow.com/users/1420186/)       Chapter 56
-
-  &lbrack;&lbrack;TylerH&rbrack;&rbrack;(https://stackoverflow.com/users/2756409/)        Chapters 1, 4, 5, 36 and 53
-
-  &lbrack;&lbrack;Ulrich Schwarz&rbrack;&rbrack;(https://stackoverflow.com/users/505649/) Chapter 43
-
-  &lbrack;&lbrack;user007&rbrack;&rbrack;(https://stackoverflow.com/users/2642959/)       Chapter 18
-
-  &lbrack;&lbrack;user2622348&rbrack;&rbrack;(https://stackoverflow.com/users/2622348/)   Chapter 20
-
-  &lbrack;&lbrack;vishak&rbrack;&rbrack;(https://stackoverflow.com/users/1161892/)        Chapter 14
-
-  &lbrack;&lbrack;vkopio&rbrack;&rbrack;(https://stackoverflow.com/users/5047630/)        Chapter 7
-
-  &lbrack;&lbrack;Vlusion&rbrack;&rbrack;(https://stackoverflow.com/users/5539376/)       Chapter 15
-
-  &lbrack;&lbrack;Volker E.&rbrack;&rbrack;(https://stackoverflow.com/users/1696030/)     Chapter 15
-
-  &lbrack;&lbrack;web&rbrack;&rbrack;(https://stackoverflow.com/users/1811992/)           Chapters 6, 26, 28, 29 and 44
-
-  &lbrack;&lbrack;Will                                                                  Chapter 9
-  DiFruscio&rbrack;&rbrack;(https://stackoverflow.com/users/6598808/)       
-
-  &lbrack;&lbrack;Wolfgang&rbrack;&rbrack;(https://stackoverflow.com/users/1979340/)      Chapter 18
-
-  &lbrack;&lbrack;X&rbrack;&rbrack;(https://stackoverflow.com/users/1305794/)             Chapter 18
-
-  &lbrack;&lbrack;Xinyang Li&rbrack;&rbrack;(https://stackoverflow.com/users/2226315/)    Chapter 1
-
-  &lbrack;&lbrack;xpy&rbrack;&rbrack;(https://stackoverflow.com/users/1982831/)           Chapter 4
-
-  &lbrack;&lbrack;Yury Fedorov&rbrack;&rbrack;(https://stackoverflow.com/users/4378400/)  Chapter 4
-
-  &lbrack;&lbrack;Zac&rbrack;&rbrack;(https://stackoverflow.com/users/2096845/)           Chapters 5 and 12
-
-  &lbrack;&lbrack;Zaffy&rbrack;&rbrack;(https://stackoverflow.com/users/823738/)          Chapter 4
-
-  &lbrack;&lbrack;Zakaria                                                               Chapter 20
-  Acharki&rbrack;&rbrack;(https://stackoverflow.com/users/4281779/)         
-
-  &lbrack;&lbrack;Zaz&rbrack;&rbrack;(https://stackoverflow.com/users/405550/)            Chapter 4
-
-  &lbrack;&lbrack;Ze Rubeus&rbrack;&rbrack;(https://stackoverflow.com/users/4232386/)     Chapter 4
-
-  &lbrack;&lbrack;zeel&rbrack;&rbrack;(https://stackoverflow.com/users/765036/)           Chapter 6
-
-  &lbrack;&lbrack;zer00ne&rbrack;&rbrack;(https://stackoverflow.com/users/2813224/)       Chapter 20
-
-  &lbrack;&lbrack;Zeta&rbrack;&rbrack;(https://stackoverflow.com/users/1139697/)          Chapter 5
-
-  &lbrack;&lbrack;Zze&rbrack;&rbrack;(https://stackoverflow.com/users/3509591/)           Chapter 5
+[imge268.jpg](./images/image268.jpg)
+<!-- width 6.2" -->
 
 <!-- the end -->
 <!-- 6/28/2024 Fri 5:41pm -->
+<!-- 7/1/2024 Mon 2:24am -->
