@@ -655,7 +655,7 @@ both descendants of the <b>&lt;div&gt;</b>.</p>
   <b>&lt;p&gt;</b>My text is <span style='color: red;'>red</span><b>&lt;/p&gt;</b>
   <b>&lt;section&gt;</b>
     <b>&lt;p&gt;</b>My text is not red<b>&lt;/p&gt;</b>
-  <b>&lt/section&gt;</b>
+  <b>&lt;/section&gt;</b>
 <b>&lt;/div&gt;</b></code></pre>
 <a href="http://jsbin.com/xonafuz/3/edit?html,css,output">Live Demo on JSBin</a>
 <p>The above CSS selects only the first <b>&lt;p&gt;</b> element, as it is the only paragraph directly descended from a <b>&lt;div&gt;</b>.</p>
@@ -850,7 +850,7 @@ selection.</p>
 
 <h4>HTML:</h4>
 
-<pre><code><b>&lt;div class="warning"&gt;
+<pre><code><b>&lt;div class="warning"&gt;</b>
   <b>&lt;p&gt;</b>This would be some warning copy.<b>&lt;/p&gt;</b>
 <b>&lt;/div&gt;</b>
 
