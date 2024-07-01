@@ -808,18 +808,18 @@ the mouse is over an element (:hover), a checkbox is checked (:checked), etc.
 > an+b-1 siblings before it in the document tree, for a given positive
 > <b>or zero value</b> for n&quot; - &lbrack;MDN :nth-child&rbrack;
 
-| <b>pseudo-selector</b>       | <b>1&nbsp;&nbsp;2&nbsp;&nbsp;3&nbsp;&nbsp;4&nbsp;&nbsp;5&nbsp;&nbsp;6&nbsp;&nbsp;7&nbsp;&nbsp;8&nbsp;&nbsp;9&nbsp;&nbsp;10</b>           |
+| <b>pseudo-selector</b>       | <b>1&nbsp;&nbsp;2&nbsp;&nbsp;&nbsp;3&nbsp;&nbsp;&nbsp;4&nbsp;&nbsp;&nbsp;5&nbsp;&nbsp;&nbsp;6&nbsp;&nbsp;&nbsp;7&nbsp;&nbsp;&nbsp;8&nbsp;&nbsp;&nbsp;9&nbsp;&nbsp;&nbsp;10</b> |
 |------------------------------|---------------------------------------|
 | :first-child                 |  ✔ |
-| :nth-child (3)                |         ✔ |
-| :nth-child (n+3)              |         ✔  ✔  ✔  ✔  ✔  ✔  ✔  ✔ |
+| :nth-child (3)                | &nbsp;&nbsp;✔ |
+| :nth-child (n+3)              | &nbsp;&nbsp;✔&nbsp;  ✔&nbsp;  ✔&nbsp;  ✔&nbsp;  ✔&nbsp;  ✔&nbsp;  ✔&nbsp;  ✔ |
 | :nth-child (3n)               |         ✔       ✔       ✔ |
 | :nth-child (3n+1)             | ✔         ✔       ✔       ✔ |
 | :nth-child (-n+3)             | ✔  ✔  ✔ |
 | :nth-child (odd)              | ✔      ✔      ✔     ✔     ✔ |
 | :nth-child (even)             |     ✔      ✔      ✔     ✔        ✔ |
-| :last-child                   |                             ✔ |
-| :nth-last-child(3)            |                        ✔ |
+| :last-child                   | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;✔ |
+| :nth-last-child(3)            | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;✔ |
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch4-6">Section 4.6: Class Name Selectors</h3>
