@@ -11,7 +11,7 @@ output:
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h1>CSS-Notes4Pros</h1>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>CSS Notes For Professionals - intermediate level CSS learning course.  
 All on-line.  No money, unless you'd like to donate. I'm game for that.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -2070,8 +2070,7 @@ The behaviour depends on the
 > area is outside of your visible screen. For demonstration, We&apos;re
 > going to assume a 16 × 9 ratio.
 
-!&lbrack;&rbrack;(./images/media/image7.png){width="4.958333333333333in"
-height="2.7916666666666665in"}
+[image007.png 4.95x2.79](./images/image007.png)
 
 > We want to use the aforementioned picture of the day as a background.
 > However, we cropped the image to 4x3 for some reason. We could set the
@@ -2092,8 +2091,7 @@ width and its height can fit inside the background positioning area.
 > contained in the background positioning area, however, there could be
 > some empty space filled with your background-color in this case:
 
-!&lbrack;&rbrack;(./images/media/image9.png){width="4.958333333333333in"
-height="3.09375in"}
+[image009.png 4.95x3.09](./images/image009.png)
 
 <b>cover</b>
 
@@ -2109,8 +2107,8 @@ area.
 > There will be no visible background-color, however depending on the
 > screen&apos;s ratio a great part of your image could be cut off:
 
-!&lbrack;&rbrack;(./images/media/image11.png){width="4.958333333333333in"
-height="2.7916666666666665in"}
+[image011.png](./images/image011.png)
+<!-- {width="4.958333333333333in" height="2.7916666666666665in"} -->
 
 > <b>Demonstration with actual code</b>
 
@@ -2719,8 +2717,7 @@ tincidunt ut laoreet dolore magna aliquam erat volutpat.**&lt;/p&gt;**
 ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo
 consequat.**&lt;/p&gt; &lt;/div&gt;** Result:
 
-!&lbrack;&rbrack;(./images/media/image13.jpg){width="7.48037510936133in"
-height="6.0841666666666665in"}
+[image013](./images/image013.jpg)
 
 > More:
 
@@ -3102,8 +3099,7 @@ div {
 
 > Here&apos;s how a looks like:
 
-!&lbrack;&rbrack;(./images/media/image014.jpg){width="7.48037510936133in"
-height="4.302722003499563in"}
+[image014.jpg](./images/image014.jpg)
 
 <h3 id="ch5-12">Section 5.12: background-blend-mode Property</h3>
 
@@ -3534,8 +3530,7 @@ auto
 
 > Result:
 
-!&lbrack;&rbrack;(./images/media/image15.jpg){width="7.48037510936133in"
-height="4.120708661417323in"}
+[image015.jpg](./images/image015.jpg)
 
 JSFiddle example: &lbrack;&lbrack;Centering objects with margin: 0
 auto;&rbrack;&rbrack;(https://jsfiddle.net/xf1ze3v9/)
@@ -5512,16 +5507,15 @@ teal
 > padding and border. initial Sets the box model to its default state.
 > inherit Inherits the box model of the parent element.
 
-## Section 7.1: What is the Box Model?
+<h3 id="ch7-1">Section 7.1: What is the Box Model?</h3>
 
-> **The Edges**
->
+<h4>The Edges</h4>
+
 > The browser creates a rectangle for each element in the HTML document.
 > The Box Model describes how the padding, border, and margin are added
 > to the content to create this rectangle.
 
-!&lbrack;&rbrack;(./images/media/image16.png){width="4.739583333333333in"
-height="3.5416666666666665in"}
+[image016.png](./images/image016.png)  <!-- 4.7" -->
 
 *Diagram from &lbrack;&lbrack;CSS2.2 Working
 Draft&rbrack;&rbrack;(https://www.w3.org/TR/CSS22/box.html#mpb-examples)*
@@ -5588,8 +5582,7 @@ px
 > and a top, right, bottom, and left padding of 20px. Ignoring content,
 > our generated box will look like this:
 
-!&lbrack;&rbrack;(./images/media/image17.jpg){width="1.8229166666666667in"
-height="1.5416666666666667in"}
+[image017.jpg](./images/image017.jpg) <!-- 1.8" -->
 
 > *Screenshot of Google Chrome&apos;s Element Styles panel*
 >
@@ -5611,8 +5604,7 @@ height="1.5416666666666667in"}
 > to the previous element&apos;s content the new element should be
 > positioned:
 
-!&lbrack;&rbrack;(./images/media/image18.jpg){width="3.6354166666666665in"
-height="1.5416666666666667in"}
+[image018.jpg 3.6" width, 1.5" height](./images/image018.jpg)
 
 > The content of each of element is separated by a 150px gap, but the
 > two elements&apos; boxes touch each other.
@@ -5621,10 +5613,9 @@ height="1.5416666666666667in"}
 > margin edge would be in the same position as the right border edge,
 > and our two elements would now look like this:
 
-!&lbrack;&rbrack;(./images/media/image19.jpg){width="3.4583333333333335in"
-height="1.5416666666666667in"}
+[image019.jpg 3.45" x 1.54"](./images/image019.jpg)
 
-## Section 7.2: box-sizing
+<h3 id="ch7-2">Section 7.2: box-sizing</h3>
 
 > The default box model (content-box) can be counter-intuitive, since
 > the width / height for an element will not represent its actual width
@@ -5634,340 +5625,137 @@ height="1.5416666666666667in"}
 > The following example demonstrates this potential issue with
 > content-box:
 
-textarea
+```
+textarea {
+  <b>width</b>: 100&percnt;;
+  <b>padding</b>: 3px;
+  <b>box-sizing</b>: content-box; /* default value */
+}
+```
 
-{
+<p>Since the padding will be added to the width of the textarea, the
+resulting element is a textarea that is wider than 100%.</p>
 
-**width**
+<p>Fortunately, CSS allows us to change the box model with the box-sizing
+property for an element. There are three different values for the
+property available:</p>
 
-:
+<ul>
+  <li>content-box: The common box model - width and height only includes the
+    content, not the padding or border.</li>
+  <li>padding-box: Width and height includes the content and the padding, but 
+    not the border.</li>
+  <li>border-box: Width and height includes the content, the padding as well as 
+    the border.</li>
+</ul>
 
-100
+<image here>
 
-&percnt;
+<p>To solve the textarea problem above, you could just change the
+box-sizing property to padding-box or borderbox. border-box is most
+commonly used.</p>
 
-;
+```
+textarea {
+  <b>width</b>: 100&percnt;;
+  <b>padding</b>: 3px;
+  <b>box-sizing</b>: border-box;
+}
+```
 
-**padding**
+<p>To apply a specific box model to every element on the page, use the following 
+snippet:</p>
 
-:
-
-3
-
-px
-
-;
-
-**box-sizing**
-
-:
-
-content-box
-
-;
-
-*/&ast; default value &ast;/*
-
+```
+html {
+  <b>box-sizing</b>: border-box;
 }
 
-> Since the padding will be added to the width of the textarea, the
-> resulting element is a textarea that is wider than 100%.
->
-> Fortunately, CSS allows us to change the box model with the box-sizing
-> property for an element. There are three different values for the
-> property available:
->
-> content-box: The common box model - width and height only includes the
-> content, not the padding or border
+&ast;, &ast;:before, &ast;:after {
+  <b>box-sizing</b>: inherit;
+}
+```
 
-padding-box
+<p>In this box-sizing: border-box; is not directly applied to &ast;, so you can easily
+overwrite this property on individual elements.</p>
 
-:
+<h2 id="ch8">Chapter 8: Margins</h2>
 
-Width and height includes the content and the padding, but not the
-border
+| <b>Parameter</b>  | <b>Details</b> |
+|-------------------|------------------------------------------------------------------|
+| 0                 | set margin to none. |
+| auto              | used for centering, by evenly setting values on each side units. |
+| (e.g. px)         | see parameter section in Units for a list of valid units.
+| inherit           | inherit margin value from parent element. 
+| initial           | restore to initial value. |
 
-border-box
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h3 id="ch8-1">Section 8.1: Margin Collapsing</h3>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p>When two margins are touching each other vertically, they are
+collapsed. When two margins touch horizontally, they do not collapse.</p>
 
-:
+<h4>Example of adjacent vertical margins:</h4>
 
-Width and height includes the content, the padding as well as the border
+<p>Consider the following styles and markup:</p>
 
-> To solve the textarea problem above, you could just change the
-> box-sizing property to padding-box or borderbox. border-box is most
-> commonly used.
-
-textarea
-
-{
-
-**width**
-
-:
-
-100
-
-&percnt;
-
-;
-
-**padding**
-
-:
-
-3
-
-px
-
-;
-
-**box-sizing**
-
-:
-
-border-box
-
-;
-
+```
+div {
+  <b>margin</b>: 10px;
 }
 
-> To apply a specific box model to every element on the page, use the
-> following snippet:
+<b>&lt;div&gt;</b>
+  some content
+<b>&lt;/div&gt;</b>
+<b>&lt;div&gt;</b>
+  some more content
+<b>&lt;/div&gt;</b>
+```
 
-html
+<p>They will be 10px apart since vertical margins collapse over one and
+other. (The spacing will not be the sum of two margins.)</p>
 
-{
+<h4>Example of adjacent horizontal margins:</h4>
 
-**box-sizing**
+<p>Consider the following styles and markup:</p>
 
-:
-
-border-box
-
-;
-
+```
+span {
+  <b>margin</b>: 10px;
 }
 
-&ast;,
+<b>&lt;span&gt;</b>some<b>&lt;/span&gt;&lt;span&gt;</b>content<b>&lt;/span&gt;</b>
+```
 
-&ast;:
+They will be 20px apart since horizontal margins don&apos;t collapse over
+one and other. (The spacing will be the sum of two margins.)
 
-before
+<h4>Overlapping with different sizes</h4>
 
-,
-
-&ast;:
-
-after
-
-{
-
-**box-sizing**
-
-:
-
-inherit
-
-;
-
+```
+.top {
+  <b>margin</b>: 10px;
 }
-
-  **box-sizing**                    :   border-box
-
-> In this coding ; is not directly applied to &ast;, so you can easily
-> overwrite this property on individual elements.
-
-# Chapter 8: Margins
-
-**Parameter Details**
-
-0 set margin to none
-
-> auto used for centering, by evenly setting values on each side units
-> (e.g. px) see parameter section in Units for a list of valid units
-> inherit inherit margin value from parent element initial restore to
-> initial value
-
-## Section 8.1: Margin Collapsing
-
-> When two margins are touching each other vertically, they are
-> collapsed. When two margins touch horizontally, they do not collapse.
->
-> **Example of adjacent vertical margins:**
->
-> Consider the following styles and markup:
-
-div
-
-{
-
-**margin**
-
-:
-
-10
-
-px
-
-;
-
+.bottom {
+ <b>margin</b>: 15px;
 }
-
 **&lt;**
-
 **div**
-
+class = &quot;top&quot;
 **&gt;**
-
 some content
-
 **&lt;**
-
 **/div**
-
 **&gt;**
-
 **&lt;**
-
 **div**
-
+class = &quot;bottom&quot;
 **&gt;**
-
 some more content
-
 **&lt;**
-
 **/div**
-
 **&gt;**
-
-> They will be 10px apart since vertical margins collapse over one and
-> other. (The spacing will not be the sum of two margins.)
->
-> **Example of adjacent horizontal margins:**
->
-> Consider the following styles and markup:
-
-span
-
-{
-
-**margin**
-
-:
-
-10
-
-px
-
-;
-
-}
-
-**&lt;**
-
-**span**
-
-**&gt;**
-
-some
-
-**&lt;**
-
-**/span**
-
-**&gt;**
-
-**&lt;**
-
-**span**
-
-**&gt;**
-
-content
-
-**&lt;**
-
-**/span**
-
-**&gt;**
-
-> They will be 20px apart since horizontal margins don&apos;t collapse over
-> one and other. (The spacing will be the sum of two margins.)
->
-> **Overlapping with different sizes**
-
-.top
-
-{
-
-**margin**
-
-:
-
-10
-
-px
-
-;
-
-}
-
-.bottom
-
-{
-
-**margin**
-
-:
-
-15
-
-px
-
-;
-
-}
-
-**&lt;**
-
-**div**
-
-class
-
-=
-
-&quot;top&quot;
-
-**&gt;**
-
-some content
-
-**&lt;**
-
-**/div**
-
-**&gt;**
-
-**&lt;**
-
-**div**
-
-class
-
-=
-
-&quot;bottom&quot;
-
-**&gt;**
-
-some more content
-
-**&lt;**
-
-**/div**
-
-**&gt;**
+```
 
 > These elements will be spaced 15px apart vertically. The margins
 > overlap as much as they can, but the larger margin will determine the
@@ -5975,145 +5763,78 @@ some more content
 >
 > **Overlapping margin gotcha**
 
+```
 .outer-top
-
 {
-
 **margin**
-
 :
-
 10
-
 px
-
 ;
-
 }
-
 .inner-top
-
 {
-
 **margin**
-
 :
-
 15
-
 px
-
 ;
-
 }
-
 .outer-bottom
-
 {
-
 **margin**
-
 :
-
 20
-
 px
-
 ;
-
 }
-
 .inner-bottom
-
 {
-
 **margin**
-
 :
-
 25
-
 px
-
 ;
-
 }
-
 **&lt;**
-
 **div**
-
 class
-
 =
-
 &quot;outer-top&quot;
-
 **&gt;**
-
 **&lt;**
-
 **div**
-
 class
-
 =
-
 &quot;inner-top&quot;
-
 **&gt;**
-
 some content
-
 **&lt;**
-
 **/div**
-
 **&gt;**
-
 **&lt;**
-
 **/div**
-
 **&gt;**
-
 **&lt;**
-
 **div**
-
 class
-
 =
-
 &quot;outer-bottom&quot;
-
 **&gt;**
-
 **&lt;**
-
 **div**
-
 class
-
 =
-
 &quot;inner-bottom&quot;
-
 **&gt;**
-
 some more content
-
 **&lt;**
-
 **/div**
-
 **&gt;**
-
 **&lt;**
-
 **/div**
-
 **&gt;**
+```
 
 > What will be the spacing between the two texts? (hover to see answer)
 >
@@ -6122,25 +5843,18 @@ some more content
 >
 > Now, what about if we add some borders to the markup above.
 
+```
 div
-
 {
-
 **border**
-
 :
-
 1
-
 px
-
 solid
-
 red
-
 ;
-
 }
+```
 
 > What will be the spacing between the two texts? (hover to see answer)
 >
@@ -6153,488 +5867,300 @@ red
 >
 > **Collapsing Margins Between Parent and Child Elements:**
 >
-> HTML:
+<h4>HTML:</h4>
 
+```
 **&lt;**
-
 **h**
-
 **1**
-
 **&gt;**
-
 Title
-
 **&lt;**
-
 **/h**
-
 **1**
-
 **&gt;**
-
 **&lt;**
-
 **div**
-
 **&gt;**
-
 **&lt;**
-
 **p**
-
 **&gt;**
-
 Paragraph
-
 **&lt;**
-
 **/p**
-
 **&gt;**
-
 **&lt;**
-
 **/div**
-
 **&gt;**
+```
 
-> CSS
+<h4>CSS:</h4>
 
+```
 h1
-
 {
-
 **margin**
-
 :
-
 0
-
 ;
-
 **background**
-
 :
-
 #cff
-
 ;
-
 }
-
 div
-
 {
-
 **margin**
-
 :
-
 50
-
 px
-
 0
-
 0
-
 0
-
 ;
-
 **background**
-
 :
-
 #cfc
-
 ;
-
 }
-
 p
-
 {
-
 **margin**
-
 :
-
 25
-
 px
-
 0
-
 0
-
 0
-
 ;
-
 **background**
-
 :
-
 #cf9
-
 ;
-
 }
+```
 
 > In the example above, only the largest margin applies. You may have
-> expected that the paragraph would be located 60px from the h1 (since
+ expected that the paragraph would be located 60px from the h1 (since
 > the div element has a margin-top of 40px and the p has a 20px
 > margin-top). This does not happen because the margins collapse
 > together to form one margin.
 
-## Section 8.2: Apply Margin on a Given Side
+<h3 id="ch8-2">Section 8.2: Apply Margin on a Given Side</h3>
 
-> **Direction-Specific Properties**
->
-> CSS allows you to specify a given side to apply margin to. The four
-> properties provided for this purpose are:
->
-> margin-left margin-right margin-top margin-bottom
->
-> The following code would apply a margin of 30 pixels to the left side
-> of the selected div. &lbrack;*&lbrack;View
-> Result&rbrack;*&rbrack;(https://jsfiddle.net/wm0100x9/1/)
->
-> <h4>HTML</h4>
+<h4>Direction-Specific Properties</h4>
 
+CSS allows you to specify a given side to apply margin to. The four
+properties provided for this purpose are:
+
+
+The following code would apply a margin of 30 pixels to the left side
+of the selected div. &lbrack;*&lbrack;View
+Result&rbrack;*&rbrack;(https://jsfiddle.net/wm0100x9/1/)
+
+<h4>HTML</h4>
+
+```
 **&lt;**
-
 **div**
-
 id
-
 =
-
 &quot;myDiv&quot;
-
 **&gt;**
-
 **&lt;**
-
 **/div**
-
 **&gt;**
+```
 
-> <h4>CSS</h4>
+<h4>CSS:</h4>
 
+```
 #myDiv
-
 {
-
 **margin-left**
-
 :
-
 30
-
 px
-
 ;
-
 **height**
-
 :
-
 40
-
 px
-
 ;
-
 **width**
-
 :
-
 40
-
 px
-
 ;
-
 **background-color**
-
 :
-
 red
-
 ;
-
 }
+```
 
-**Parameter Details**
+<b>Parameter Details</b>
 
 > margin-left The direction in which the margin should be applied.
 
 30px The width of the margin.
 
-> **Specifying Direction Using Shorthand Property**
->
-> The standard margin property can be expanded to specify differing
-> widths to each side of the selected elements. The syntax for doing
-> this is as follows:
+<h4>Specifying Direction Using Shorthand Property</h4>
 
+The standard margin property can be expanded to specify differing
+widths to each side of the selected elements. The syntax for doing
+this is as follows:
+
+```
 **margin**
-
 :
-
 &lt;top
-
 &gt;
-
 &lt;right
-
 &gt;
-
 &lt;bottom
-
 &gt;
-
 &lt;left
-
 &gt;
-
 ;
+```
 
 > The following example applies a zero-width margin to the top of the
 > div, a 10px margin to the right side, a 50px margin to the left side,
 > and a 100px margin to the left side. &lbrack;*&lbrack;View
 > Result&rbrack;*&rbrack;(https://jsfiddle.net/1979c947/)
 >
-> <h4>HTML</h4>
+<h4>HTML</h4>
 
+```
 **&lt;**
-
 **div**
-
 id
-
 =
-
 &quot;myDiv&quot;
-
 **&gt;**
-
 **&lt;**
-
 **/div**
-
 **&gt;**
+```
 
-> <h4>CSS</h4>
+<h4>CSS</h4>
 
+```
 #myDiv
-
 {
-
 **margin**
-
 :
-
 0
-
 10
-
 px
-
 50
-
 px
-
 100
-
 px
-
 ;
-
 **height**
-
 :
-
 40
-
 px
-
 ;
-
 **width**
-
 :
-
 40
-
 px
-
 ;
-
 **background-color**
-
 :
-
 red
-
 ;
-
 }
+```
 
-## Section 8.3: Margin property simplification
+<h3 id="ch8-3">Section 8.3: Margin property simplification</h3>
 
+```
 p
-
 {
-
 **margin**
-
 :
-
 1
-
 px
-
 ;
-
 */&ast; 1px margin in all directions &ast;/*
-
 */&ast;equals to:&ast;/*
-
 **margin**
-
 :
-
 1
-
 px
-
 1
-
 px
-
 ;
-
 */&ast;equals to:&ast;/*
-
 **margin**
-
 :
-
 1
-
 px
-
 1
-
 px
-
 1
-
 px
-
 ;
-
 */&ast;equals to:&ast;/*
-
 **margin**
-
 :
-
 1
-
 px
-
 1
-
 px
-
 1
-
 px
-
 1
-
 px
-
 ;
-
 }
+```
 
 > Another exapmle:
 
+```
 p
-
 {
-
 **margin**
-
 :
-
 10
-
 px
-
 15
-
 px
-
 ;
-
 */&ast; 10px margin-top & bottom And 15px margin-right & left&ast;/*
-
 */&ast;equals to:&ast;/*
-
 **margin**
-
 :
-
 10
-
 px
-
 15
-
 px
-
 10
-
 px
-
 15
-
 px
-
 ;
-
 */&ast;equals to:&ast;/*
-
 **margin**
-
 :
-
 10
-
 px
-
 15
-
 px
-
 10
-
 px
-
 ;
-
 */&ast; margin left will be calculated from the margin right value (=15px)
 &ast;/*
-
 }
+```
 
-## Section 8.4: Horizontally center elements on a page using margin
+<h3 id="ch8-4">Section 8.4: Horizontally center elements on a page using margin</h3>
 
 > As long as the element is a **block**, and it has an **explicitly set
 > width value**, margins can be used to center block elements on a page
@@ -6683,72 +6209,23 @@ auto
 
 <h3 id="ch8-5">Section 8.5: Example 1:</h3>
 
-> It is obvious to assume that the percentage value of margin to
-> margin-left and margin-right would be relative to its parent element.
+It is obvious to assume that the percentage value of margin to
+margin-left and margin-right would be relative to its parent element.
 
+```
 .parent
-
 {
-
-**width**
-
-:
-
-500
-
-px
-
-;
-
-**height**
-
-:
-
-300
-
-px
-
-;
-
+**width**: 500px;
+**height**: 300px;
 }
-
 .child
-
 {
-
-**width**
-
-:
-
-100
-
-px
-
-;
-
-**height**
-
-:
-
-100
-
-px
-
-;
-
-**margin-left**
-
-:
-
-10
-
-&percnt;
-
-;
-
+**width**: 100px;
+**height**: 100px;
+**margin-left**: 10&percnt;;
 */&ast; (parentWidth &ast; 10/100) =&gt; 50px &ast;/*
-
 }
+```
 
 > But that is not the case, when comes to margin-top and margin-bottom.
 > Both these properties, in percentages, aren&apos;t relative to the height
@@ -6756,141 +6233,56 @@ px
 >
 > So,
 
-.parent
-
-{
-
-**width**
-
-:
-
-500
-
-px
-
-;
-
-**height**
-
-:
-
-300
-
-px
-
-;
-
+```
+.parent {
+  <b>width</b>: 500px;
+  <b>height</b>: 300px;
 }
-
-.child
-
-{
-
-**width**
-
-:
-
-100
-
-px
-
-;
-
-**height**
-
-:
-
-100
-
-px
-
-;
-
-**margin-left**
-
-:
-
-10
-
-&percnt;
-
-;
-
+.child {
+  <b>width</b>: 100px;
+  <b>height</b>: 100px;
+  <b>margin-left</b>: 10&percnt;;
 */&ast; (parentWidth &ast; 10/100) =&gt; 50px &ast;/*
-
-**margin-top**
-
-:
-
-20
-
-&percnt;
-
-;
-
+  <b>margin-top</b>: 20&percnt;;
 */&ast; (parentWidth &ast; 20/100) =&gt; 100px &ast;/*
-
 }
+```
 
-## Section 8.6: Negative margins
+<h3 id="ch8-6">Section 8.6: Negative margins</h3>
 
-> Margin is one of a few CSS properties that can be set to negative
-> values. This property can be used to **overlap elements without
-> absolute positioning**.
+<p>Margin is one of a few CSS properties that can be set to negative
+values. This property can be used to <b>overlap elements without
+absolute positioning</b>.</p>
 
+```
 div
-
 {
-
 **display**
-
 :
-
 inline
-
 ;
-
 }
-
 #over
-
 {
-
 **margin-left**
-
 :
-
 -20
-
 px
-
 ;
-
 }
-
 &lt;
-
 div
-
 &gt;
-
 Base div&lt;/div
-
 &gt;
-
 &lt;
-
 div id
-
 =
-
 &quot;over&quot;
-
 &gt;
-
 Overlapping div&lt;/div
-
 &gt;
+```
 
 <h2 id="ch9">Chapter 9: Padding</h2>
 
@@ -6903,211 +6295,122 @@ Overlapping div&lt;/div
 > To save adding padding to each side individually (using padding-top,
 > padding-left etc) can you write it as a shorthand, as below:
 >
+
 > **Four values**:
 
+```
 **&lt;**
-
 **style**
-
 **&gt;**
-
 .myDiv {
-
 padding: 25px 50px 75px 100px; /&ast; top right bottom left; &ast;/
-
 }
-
 **&lt;**
-
 **/style**
-
 **&gt;**
-
 **&lt;**
-
 **div**
-
 class
-
 =
-
 &quot;myDiv&quot;
-
 **&gt;**
-
 **&lt;**
-
 **/div**
-
 **&gt;**
-
 > **Three values**:
-
 **&lt;**
-
 **style**
-
 **&gt;**
-
 .myDiv
-
 {
-
 padding: 25px 50px 75px; /&ast; top left/right bottom &ast;/
-
 }
-
 **&lt;**
-
 **/style**
-
 **&gt;**
-
 **&lt;**
-
 **div**
-
 class
-
 =
-
 &quot;myDiv&quot;
-
 **&gt;**
-
 **&lt;**
-
 **/div**
-
 **&gt;**
-
 > **Two values**:
-
 **&lt;**
-
 **style**
-
 **&gt;**
-
 .myDiv
-
 {
-
 padding: 25px 50px; /&ast; top/bottom left/right &ast;/
-
 }
-
 **&lt;**
-
 **/style**
-
 **&gt;**
-
 **&lt;**
-
 **div**
-
 class
-
 =
-
 &quot;myDiv&quot;
-
 **&gt;**
-
 **&lt;**
-
 **/div**
-
 **&gt;**
-
 > **One value**:
-
 **&lt;**
-
 **style**
-
 **&gt;**
-
 .myDiv
-
 {
-
 padding: 25px; /&ast; top/right/bottom/left &ast;/
-
 }
-
 **&lt;**
-
 **/style**
-
 **&gt;**
-
 **&lt;**
-
 **div**
-
 class
-
 =
-
 &quot;myDiv&quot;
-
 **&gt;**
-
 **&lt;**
-
 **/div**
-
 **&gt;**
+```
 
 <h3 id="ch9-2">Section 9.2: Padding on a given side</h3>
 
-> The padding property sets the padding space on all sides of an
-> element. The padding area is the space between the content of the
-> element and its border. Negative values are not allowed.
->
-> You can specify a side individually:
->
-> padding-top padding-right padding-bottom padding-left
->
-> The following code would add a padding of 5px to the top of the div:
+The padding property sets the padding space on all sides of an
+element. The padding area is the space between the content of the
+element and its border. Negative values are not allowed.
 
+You can specify a side individually:
+
+padding-top padding-right padding-bottom padding-left
+
+The following code would add a padding of 5px to the top of the div:
+
+```
 **&lt;**
-
 **style**
-
 **&gt;**
-
 .myClass {
-
 padding-top: 5px;
-
 }
-
 **&lt;**
-
 **/style**
-
 **&gt;**
-
 **&lt;**
-
 **div**
-
 class
-
 =
-
 &quot;myClass&quot;
-
 **&gt;**
-
 **&lt;**
-
 **/div**
-
 **&gt;**
+```
 
 <h2 id="ch10">Chapter 10: Border</h2>
 
@@ -7119,8 +6422,8 @@ class
 > Every corner of an element can have up to two values, for the vertical
 > and horizontal radius of that corner (for a maximum of 8 values).
 
-!&lbrack;&rbrack;(./images/media/image25.jpg){width="6.145833333333333in"
-height="1.9375in"}
+[image025.jpg](./images/image025.jpg)
+<!-- {width="6.145833333333333in" height="1.9375in"} -->
 
 > The first set of values defines the horizontal radius. The optional
 > second set of values, preceded by a '/' , defines the vertical radius.
@@ -7760,8 +7063,8 @@ px
 
 }
 
-!&lbrack;&rbrack;(./images/media/image27.jpg){width="1.4583333333333333in"
-height="4.020833333333333in"}
+[image027.jpg](./images/image027.jpg)
+<!-- {width="1.4583333333333333in" height="4.020833333333333in"} -->
 
 &lbrack;&lbrack;http://jsfiddle.net/MadalinaTn/bvqpcohm/2/&rbrack;&rbrack;(http://jsfiddle.net/MadalinaTn/bvqpcohm/2/)
 
@@ -7975,8 +7278,7 @@ Border on all sides
 > information about border-image-slice property in the border-image
 > example in same page.
 
-!&lbrack;&rbrack;(./images/media/image28.jpg){width="3.5104166666666665in"
-height="1.4375in"}
+[image028.jpg 3.5"x1.437"](./images/image028.jpg)
 
 > (*Note: Additional properties were added to the element for
 > presentational purpose.*)
@@ -27234,20 +26536,17 @@ px
 |             | SVG element in an external file that contains the clip |
 |             | path&apos;s definition.                                    |
 
-  -----------------------------------------------------------------------
   inset     (),   circle      (),   ellipse       () or     polygon
-  --------- ----- ----------- ----- ------------- --------- -------------
 
-  -----------------------------------------------------------------------
 
 > Refers to one among (). Using one of these
 
-  ----------------------------------------------------------------------------
   basic-shape         functions the clipping path is defined. These shape
                       functions work exactly the same way as they do in Shapes
                       for Floats
-  ------------------- --------------------------------------------------------
+
   clip-geometry-box   This can have one among content-box, padding-box,
+
                       border-box, margin-box, fill-box, stroke-box, view-box
                       as values. When this is provided without any value for
                       &lt;basic-shape&gt;, the edges of the corresponding box is
@@ -27273,17 +26572,12 @@ px
                       similar in behavior to the backgroundposition property.
                       The value can be provided in 1 value syntax (like top,
                       10%) or in 2 value
-  ----------------------------------------------------------------------------
 
-  -----------------------------------------------------------------------
   top right                             ,   50% 50%
-  ------------------------------------- --- -----------------------------
 
-  -----------------------------------------------------------------------
 
 > syntax (like ).
 
-  --------------------------------------------------------------------------------------
   geometry-box   This specifies the box to which the mask should be clipped (*mask
                  painting area*) or the box which should be used as reference for the
                  mask&apos;s origin (*mask positioning area*) depending on the property. The
@@ -27291,13 +26585,11 @@ px
                  margin-box, fill-box, stroke-box, view-box. Detailed explanation of how
                  each of those values work is available in the &lbrack;&lbrack;W3C
                  Spec&rbrack;&rbrack;(https://www.w3.org/TR/css-masking/#the-mask-clip).
-  -------------- -----------------------------------------------------------------------
+
   bg-size        This represents the size of each mask-image layer and has the same
                  syntax as backgroundsize. The value can be length or percentage or auto
                  or cover or contain. Length, percentage and auto can either be provided
                  as a single value or as one for each axis.
-
-  --------------------------------------------------------------------------------------
 
 > This can be any one among add, subtract, exclude, multiply per layer
 > and defines the type
@@ -27307,7 +26599,7 @@ px
 > is available in the &lbrack;&lbrack;W3C
 > Specs&rbrack;&rbrack;(https://www.w3.org/TR/css-masking/#the-mask-composite).
 
-## Section 44.1: Clipping and Masking: Overview and Dierence
+<h3 id="ch44-1">Section 44.1: Clipping and Masking: Overview and Dierence</h3>
 
 > With **Clipping** and **Masking** you can make some specified parts of
 > elements transparent or opaque. Both can be applied to any HTML
@@ -27315,11 +26607,8 @@ px
 >
 > **Clipping**
 
-  ------------------------------------------------------------------------
   circle          (),     polygon           () or        ellipse
-  --------------- ------- ----------------- ------------ -----------------
 
-  ------------------------------------------------------------------------
 
 > Clips are vector paths. Outside of this path the element will be
 > transparent, inside it&apos;s opaque. Therefore you can define a clip-path
@@ -27486,17 +26775,14 @@ transparent
 
 <h4>HTML</h4>
 
+```
 **&lt;**
-
 **div**
-
 **&gt;**
-
 **&lt;**
-
 **/div**
-
 **&gt;**
+```
 
 > In the above example there is an element with an image as its
 > background. The mask that is applied on the image (using CSS) makes it
@@ -27509,96 +26795,65 @@ transparent
 >
 > **Output without the mask:**
 
-!&lbrack;&rbrack;(./images/media/image251.jpg){width="2.1875in" height="2.1875in"}
+[image251.jpg 2.18 x 2.18](./images/image251.jpg)
 
 > **Output with the mask:**
 
-!&lbrack;&rbrack;(./images/media/image252.jpg){width="2.1875in" height="2.1875in"}
+[image252.jpg 2.18 x 2.18](./images/image252.jpg)
 
 > **Note:** As mentioned in remarks, the above example would work in
 > Chrome, Safari and Opera only when used with the -webkit prefix. This
 > example (with a linear-gradient as mask image) is not yet supported in
 > Firefox.
 
-## Section 44.3: Clipping (Circle)
+<h3 id="ch44-3">Section 44.3: Clipping (Circle)</h3>
 
-**CSS:**
+<h4>CSS:</h4>
 
+```
 div
-
 {
-
 **width**
-
 :
-
 200
-
 px
-
 ;
-
 **height**
-
 :
-
 200
-
 px
-
 ;
-
 **background**
-
 :
-
 teal
-
 ;
-
 **clip-path**
-
 :
-
 circle
-
 (
-
 30
-
 &percnt;
-
 at
-
 50
-
 &percnt;
-
 50
-
 &percnt;
-
 )
-
 ;
-
 */&ast; refer remarks before usage &ast;/*
-
 }
+```
 
 <h4>HTML</h4>
 
+```
 **&lt;**
-
 **div**
-
 **&gt;**
-
 **&lt;**
-
 **/div**
-
 **&gt;**
+```
 
 > This example shows how to clip a div to a circle. The element is
 > clipped into a circle whose radius is 30% based on the dimensions of
@@ -27612,117 +26867,78 @@ at
 
 circle
 
+```
 (
-
 radius at x y
-
 )
+```
 
 &lbrack;**&lbrack;View Example&rbrack;**&rbrack;(https://jsfiddle.net/webtiki/qp69n494/)
 **Output:**
 
-!&lbrack;&rbrack;(./images/media/image253.jpg){width="2.46875in"
-height="2.2291666666666665in"}
+[image253.jpg 2.468 x 2.229](./images/image253.jpg)
 
-## Section 44.4: Clipping (Polygon)
+<h3 id="ch44-4">Section 44.4: Clipping (Polygon)</h3>
 
-**CSS:**
+<h4>CSS:</h4>
 
+```
 div
-
 {
-
 **width**
-
 :
-
 200
-
 px
-
 ;
-
 **height**
-
 :
-
 200
-
 px
-
 ;
-
 **background**
-
 :
-
 teal
-
 ;
-
 **clip-path**
-
 :
-
 polygon
-
 (
-
 0
-
 0
-
 ,
-
 0
-
 100
-
 &percnt;
-
 ,
-
 100
-
 &percnt;
-
 50
-
 &percnt;
-
 )
-
 ;
-
 */&ast; refer remarks before usage &ast;/*
-
 }
+```
 
-**HTML:**
+<h4>HTML:</h4>
 
+```
 **&lt;**
-
 **div**
-
 **&gt;**
-
 **&lt;**
-
 **/div**
-
 **&gt;**
+```
 
 > In the above example, a **polygonal** clipping path is used to clip
 > the square (200 x 200) element into a triangle shape. The output shape
 > is a triangle because the path starts at (that is, first coordinates
 > are at) 0 0 - which is the top-left
 
-  ------------------------------------------------------------------------
   100%   &minus; which is bottom-left corner of the box and then       100% 50%
          finally to                                               
-  ------ -------------------------------------------------------- --------
 
-  ------------------------------------------------------------------------
 
 > corner of the box, then goes to 0 which is
 >
@@ -27737,10 +26953,9 @@ polygon
 
 > **Output:**
 
-!&lbrack;&rbrack;(./images/media/image254.jpg){width="2.1666666666666665in"
-height="2.1666666666666665in"}
+[image254.jpg 2.16 x 2.16](./images/image254.jpg)
 
-## Section 44.5: Using masks to cut a hole in the middle of an image
+<h3 id="ch44-5">Section 44.5: Using masks to cut a hole in the middle of an image</h3>
 
 > <h4>CSS</h4>
 
@@ -27844,15 +27059,13 @@ white
 >
 > **Image without mask:**
 
-!&lbrack;&rbrack;(./images/media/image255.jpg){width="2.1666666666666665in"
-height="2.1666666666666665in"}
+[image255.jpg 2.16 x 2.16](./images/image255.jpg)
 
 > **Image with mask:**
 
-!&lbrack;&rbrack;(./images/media/image256.jpg){width="2.1666666666666665in"
-height="2.1666666666666665in"}
+[image256.jpg 2.16 x 2.16](./images/image256.jpg)
 
-## Section 44.6: Using masks to create images with irregular shapes
+<h3 id="ch44-6">Section 44.6: Using masks to create images with irregular shapes</h3>
 
 > <h4>CSS</h4>
 
@@ -28075,15 +27288,13 @@ no-repeat
 >
 > **Image without the mask:**
 
-!&lbrack;&rbrack;(./images/media/image257.jpg){width="4.25in"
-height="2.1666666666666665in"}
+[image257.jpg 4.25 x 2.167](./images/image257.jpg)
 
 > **Image with the mask:**
 
-!&lbrack;&rbrack;(./images/media/image258.jpg){width="4.260416666666667in"
-height="2.2083333333333335in"}
+[image258.jpg 4.26 x 2.21](./images/image258.jpg)
 
-# Chapter 45: Fragmentation
+<h2 id="ch45">Chapter 45: Fragmentation</h2>
 
 **Value Description**
 
@@ -28224,18 +27435,13 @@ stylesheet
 3.  The web browser combines the DOM and the CSSOM to create a render
     tree. The web browser displays your webpage.
 
-!&lbrack;&rbrack;(./images/media/image259.jpg){width="7.48037510936133in"
-height="3.0871391076115486in"}
+[image259.jpg 7.5 x 3](./images/image259.jpg)
 
-# Chapter 47: Feature Queries
+<h2 id="ch47">Chapter 47: Feature Queries</h2>
 
 **Parameter Details**
 
-  -----------------------------------------------------------------------
   property                              :    value
-  ------------------------------------- ---- ----------------------------
-
-  -----------------------------------------------------------------------
 
 > Evaluates true if the browser can handle the CSS rule. The parenthesis
 > around the rule are
@@ -29146,7 +28352,7 @@ center
 
 > **Result:**
 
-!&lbrack;&rbrack;(./images/media/image260.jpg){width="6.0in" height="3.0in"}
+[image260.jpg 6x3 inc](./images/image260.jpg)
 
 > Source:
 
@@ -29232,7 +28438,7 @@ hidden
 
 }
 
-!&lbrack;&rbrack;(./images/media/image261.jpg){width="6.0in" height="3.0in"}
+[image261.jpg 6 x 3](./images/media/image261.jpg)
 
 &lbrack;&lbrack;https://jsfiddle.net/MadalinaTn/qkwwmu6m/2/&rbrack;&rbrack;(https://jsfiddle.net/MadalinaTn/qkwwmu6m/2/)
 
@@ -30218,8 +29424,7 @@ cover
 
 ;
 
-!&lbrack;&rbrack;(./images/media/image264.jpg){width="6.197916666666667in"
-height="2.8125in"}
+[image264.jpg 6.2 x 2.8](./images/media/image264.jpg)
 
 > Cover fills the entire box with the image. The image aspect ratio is
 > preserved, but the image is cropped to the dimensions of the box.
@@ -30249,10 +29454,9 @@ scale-down
 > Scale-down either sizes the object as none or as contain. It displays
 > whichever option results in a smaller image size.
 
-!&lbrack;&rbrack;(./images/media/image266.jpg){width="7.270833333333333in"
-height="3.6458333333333335in"}
+[image266.jpg 7.2 x 3.65](./images/image266.jpg)
 
-# Chapter 52: CSS design patterns
+<h2 id="ch52">Chapter 52: CSS design patterns</h2>
 
 > These examples are for documenting CSS-specific design patterns like
 > &lbrack;&lbrack;BEM&rbrack;&rbrack;(http://getbem.com/),
@@ -30263,7 +29467,7 @@ height="3.6458333333333335in"}
 > &lbrack;&lbrack;Bootstrap&rbrack;&rbrack;(http://getbootstrap.com/) or
 > &lbrack;&lbrack;Foundation&rbrack;&rbrack;(http://foundation.zurb.com/).
 
-## Section 52.1: BEM
+<h3 id="ch52-1">Section 52.1: BEM</h3>
 
   -------------------------------------------------------------------------
   Blocks         ,   Elements and Modifiers
@@ -31263,8 +30467,7 @@ for rendering,
 
 for painting
 
-!&lbrack;&rbrack;(./images/media/image267.jpg){width="7.48037510936133in"
-height="7.517167541557305in"}
+[image267.jpg 7.5 x 7.5](./images/image267.jpg)
 
 > <b>DO</b>
 
