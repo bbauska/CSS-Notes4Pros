@@ -285,7 +285,6 @@ rule name.</p>
   <li>JavaScript documentation - Reading and Changing CSS Style.</li>
   <li>jQuery documentation - CSS Manipulation</li>
 </ul>
-
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch1-6">Section 1.6: Styling Lists with CSS</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -622,10 +621,10 @@ but with lower specificity.</p>
 
 <h4>Descendant Combinator: selector selector</h4>
 
-A descendant combinator, represented by at least one space character
+<p>A descendant combinator, represented by at least one space character
 (), selects elements that are a descendant of the defined element.
 This combinator selects <b>all</b> descendants of the element (from child
-elements on down).
+elements on down).</p>
 
 <pre><code>div p {
   <b>color</b>: red;
@@ -698,7 +697,7 @@ whether or not they are immediately adjacent.</p>
 
 <h3 id="ch4-4">Section 4.4: Pseudo-classes</h3>
 
-<a href="https://www.w3.org/TR/selectors/#pseudo-classes">Pseudo-classes</a> are <b>keywords</b> 
+<p><a href="https://www.w3.org/TR/selectors/#pseudo-classes">Pseudo-classes</a> are <b>keywords</b> 
 which allow selection based on information that lies outside of the document tree that cannot 
 be expressed by other selectors or combinators. This information can be associate to a
 certain state (<a href="https://www.w3.org/TR/selectors/#UIstates">state</a> and 
@@ -708,7 +707,7 @@ certain state (<a href="https://www.w3.org/TR/selectors/#UIstates">state</a> and
 to negations of the former (<a href="https://www.w3.org/TR/selectors/#negation">negation</a> 
 pseudo-class) or the languages (<a href="https://www.w3.org/TR/selectors/#lang-pseudo">lang</a> 
 pseudo-class). Examples include whether or not a link has been followed (:visited), 
-the mouse is over an element (:hover), a checkbox is checked (:checked), etc.
+the mouse is over an element (:hover), a checkbox is checked (:checked), etc.</p>
 
 <h4>Syntax</h4>
 
@@ -889,9 +888,9 @@ attribute selector to avoid the high specificity of the ID selector.</p>
 
 <h3 id="ch4-8">Section 4.8: The :last-of-type selector</h3>
 
-The :last-of-type selects the element that is the last child, of a particular type,
+<p>The :last-of-type selects the element that is the last child, of a particular type,
 of its parent. In the example below, the css selects the last
-paragraph and the last heading h1.
+paragraph and the last heading h1.</p>
 
 <pre><code>p: last-of-type {
   <b>background: #C5CAE9;</b>
@@ -933,38 +932,31 @@ element is inside the range limits.&lbrack<a href=https://developer.mozilla.org/
 
 A.  The syntax is presented above.
 
-The following selector matches all <b>&gt;</b> elements in an HTML document
-that are not disabled and don&apos;t have the class .example:
+<p>The following selector matches all <b>&lt;input&gt;</b> elements in an HTML document
+that are not disabled and don&apos;t have the class .example:</p>
 
 <h4>HTML:</h4>
 
-<pre><code>
-<form>
-  Phone: <input type="tel" class="example">
-  E-mail: <input type="email" disabled="disabled">
-  Pasword: <inpu type="password">
-</form>
-</code></pre>
+<pre><code><b>&lt;form&gt;</b>
+  Phone: <b>&lt;input</b> type="tel" class="example"&gt;
+  E-mail: <b>&lt;input</b> type="email" disabled="disabled"&gt;
+  Pasword: <b>&lt;input</b> type="password"&gt;
+&lt;/form&gt;</code></pre>
 
 <h4>CSS:</h4>
 
-<pre><code>
-input:not(&lbrack;disabled&rbrack;):not(.example){
-  background-color: #ccc;
-}
-</code></pre>
+<pre><code>input:not(&lbrack;disabled&rbrack;):not(.example){
+  <b>background-color</b>: #ccc;
+}</code></pre>
 
-
-The :not() pseudo-class will also support comma-separated selectors in
-Selectors Level 4:
+<p>The :not() pseudo-class will also support comma-separated selectors in
+Selectors Level 4:</p>
 
 <h4>CSS:</h4>
 
-<pre><code>
-input:not(&lbrack;disabled&rbrack;):not(.example){
-  background-color: #ccc;
-}
-</code></pre>
+<pre><code>input:not(&lbrack;disabled&rbrack;):not(.example){
+  <b>background-color</b>: #ccc;
+}</code></pre>
 
 <a href="http://jsbin.com/japere/edit?html,css,output">Live Demo on JSBin</a>
 
@@ -974,57 +966,54 @@ B.  The :focus-within CSS pseudo-classHTML:
 
 <h4>HTML:</h4>
 
-<pre><code>
-  <h3>Background is blue if the input is focused .</p>
-  <div>
-    <input type="text">
-  </div>
-</code></pre>
+<pre><code>  <b>&lt;h3&gt;</b>Background is blue if the input is focused.<b>&lt;/p&gt;</b>
+  <b>&lt;div&gt;</b>
+    <b>&lt;input</b> type="text"&gt;
+  <b>&lt;/div&gt;</b></code></pre>
 
 <h4>CSS:</h4>
 
-<pre><code>
-div {
-  height: 80px;
+<pre><code>div {
+  <b>height</b>: 80px;
 }
 input {
-  margin: 30px;
+  <b>margin</b>: 30px;
 }
 div:focus-within {
-  background-color: #1565C0;
-}
-</code></pre>
+  <b>background-color:</b> #1565C0;
+}</code></pre>
+
+<image about 7x7>
 
 <h3 id="ch4-11">Section 4.11: Global boolean with checkbox:checked and &#126; (general sibling combinator)</h3>
 
-With the &#126; selector, you can easily implement a global accessible
-boolean without using JavaScript.
+<p>With the &#126; selector, you can easily implement a global accessible
+boolean without using JavaScript.</p>
 
 <h4>Add boolean as a checkbox</h4>
 
-To the very beginning of your document, add as much booleans as you
-want with a unique id and the hidden attribute set:
+<p>To the very beginning of your document, add as much booleans as you
+want with a unique id and the hidden attribute set:</p>
 
-<pre><code>
-<b>&lt;</b>
-<b>&lt;</b>
-<b>/div</b>
-<b>&gt;</b>
-</code></pre>
+<pre><code>&lt;input type="checkbox" dis="sidebarShown" hidden /&gt;
+&lt;input type="checkbox" dis="darkThemeUsed" hidden /&gt;
+
+<!-- here begins actual content, for example: -->
+&lt;div id="container"&gt;
+  &lt;div id="sider"&gt;
+    <!-- Menu, Search, ... -->
+  &lt;/div&gt;
+ &lt;/div&gt;
+ 
+ &lt;div id="footer"&gt;
+   <!-- ... -->
+ &lt;/div&gt;</code></pre>
 
 <h4>Change the boolean&apos;s value</h4>
 
-You can toggle the boolean by adding a label with the for attribute set:
+<p>You can toggle the boolean by adding a label with the for attribute set:</p>
 
-<pre><code>
-<b>&lt;</b>
-&quot;sidebarShown&quot;
-<b>&gt;</b>
-Show/Hide the sidebar!
-<b>&lt;</b>
-<b>/label</b>
-<b>&gt;</b>
-</code></pre>
+<pre><code><b>&lt;</b>&quot;sidebarShown&quot;<b>&gt;</b>Show/Hide the sidebar!<b>&lt;</b><b>/label</b><b>&gt;</b></code></pre>
 
 <h4>Accessing boolean value with CSS</h4>
 
@@ -1032,28 +1021,25 @@ The normal selector (like .color-red) specifies the default
 properties. They can be overridden by following true / false
 selectors:
 
-<pre><code>
-/&ast; true: &ast;/*
-&lt;
-</code></pre>
+<pre><code>/* true: */
+&lt;checkbox&gt;:checked ~ [sibling of checkbox & parent of target] <target>
 
-> Note that &rbrack;
->
-> can be a specific selector, (often if you&apos;re lazy) simply &ast; or
-> nothing if the target is already a sibling of the checkbox.
->
-> Examples for the above HTML structure would be:
+/* false */
+&lt;checkbox*gt;:not(:checked) ~ [sibling of checkbox & parent of target] <target></code></pre>
 
-<pre><code>
-#sidebarShown:checked ~ #container #sidebar {
+Note that <checkbox>, &lbrack;sibling ...&rbrack; and &lt;target&gt; should be replaced by the proper selectors. &lbrack;sibling ...&rbrack;
+can be a specific selector, (often if you're lazy) simply * or nothing if the target is already a sibling of the checkbox.
+
+Examples for the above HTML structure would be:
+
+<pre><code>#sidebarShown:checked ~ #container #sidebar {
   margin-left: 300px;
 }
 
 #darkThemeUsed:checked ~ #container,
 #darkThemeUsed:checked ~ #footer {
   background: #333;
-}
-</code></pre>
+}</code></pre>
 
 <h4>In action</h4>
 
@@ -1067,19 +1053,15 @@ element by a specific ID in CSS, the &num; prefix is used.
 
 For example, the following HTML div element...
 
-<pre><code>
-<div id="exampleID">
-  <p>Example</p>
-</div>
-</code></pre>
+<pre><code>&lt;div id="exampleID"&gt;
+  &lt;p&gt;Example&lt;/p&gt;
+&lt;/div&gt;</code></pre>
 
-...can be selected by #exampleID in CSS as shown below:
+<p>...can be selected by #exampleID in CSS as shown below:</p>
 
-<pre><code>
-#exampleID {
+<pre><code>#exampleID {
   width: 20px;
-}
-</code></pre>
+}</code></pre>
 
 > <b>Note</b>: The HTML specs do not allow multiple elements with the same ID
 
