@@ -1312,7 +1312,8 @@ Can be specified in
   <li><a href="https://www.w3.org/TR/css3-values/#rad">rad</a>, or</li>
   <li><a href="https://www.w3.org/TR/css3-values/#turn">turn</a>.</li>
 </ul>
-If omitted, the gradient flows from top to bottom
+
+For example, this creates a linear gradient that starts from the right and transitions from red to blue.
 
 <pre><code>.linear-gradient {
   <b>background</b>: linear-gradient (to left top, red, blue); /* you can also use 270deg */
@@ -1329,22 +1330,18 @@ It is possible to specify any number of color stops in a gradient by
 separating them with commas. The following examples will create a
 gradient with 8 color stops
 
-```
-.linear-gradient-rainbow {
+<pre><code>.linear-gradient-rainbow {
   <b>background</b>: linear-gradient(to left, red, orange, yellow, green, blue, indigo, violet)
-}
-```
+}</code></pre>
 
 <h4>radial-gradient()</h4>
 
-```
-<b>.radial-gradient-simple {
+<pre><code><b>.radial-gradient-simple {
   <b>background</b>: radial-gradient(red, blue);
 }
 .radial-gradient {
   <b>background</b>: radial-gradient(circle farthest-corner at top left, red, blue);
-}
-```
+}</code></pre>
 
 | Value    | Meaning   |
 |----------|----------------------------------------------------------------------|
@@ -1359,145 +1356,70 @@ gradient with 8 color stops
 Repeating gradient functions take the same arguments as the above
 examples, but tile the gradient across the background of the element.
 
-```
-.bullseye
-{
-<b>background</b>
-:
-repeating-radial-gradient
-(
-red
-,
-red
-10
-&percnt;
-,
-white
-10
-&percnt;
-,
-white
-20
-&percnt;
-)
-;
+<pre><code>.bullseye {
+  <b>background</b>: repeating-radial-gradient(red, red 10&percnt;, white 10&percnt;, white 20&percnt;);
 }
-.warning
-{
-<b>background</b>
-:
-repeating-linear-gradient
-(
--45
-deg
-,
-yellow
-,
-yellow
-10
-&percnt;
-,
-black
-10
-&percnt;
-,
-black
-20
-&percnt;
-)
-;
-}
-```
+.warning {
+  <b>background</b>: repeating-linear-gradient(-45deg, yellow, yellow 10&percnt;, black 10&percnt;, black 20&percnt; );
+}</code/</pre>
 
-<b>Value Meaning</b>
+| <b>Value</b>   | <b>Meaning</b>  |
+|----------------|-----------------|
+| -45deg         | Angle unit. The angle starts from the top and rotates clockwise. Can be specified in deg, grad, rad, or |
+|                | turn. |
+| to left        | Direction of gradient, default is to bottom. Syntax: to &lbrack;y-axis(top or bottom)&rbrack; &lbrackx-asis(left OR
+|                | right)&rbrack; ie to top right.
+| yellow 10%     | Color, optionally followed by a percentage or length to display it at. Repeated two or more times. |
 
-Angle unit&rbrack;&rbrack;(https://www.w3.org/TR/css3-values/#angles).
-The angle starts from to top and rotates clockwise. Can be specified
-> in (https://www.w3.org/TR/css3-values/#deg),
-grad(https://www.w3.org/TR/css3-values/#grad),
-rad(https://www.w3.org/TR/css3-values/#rad), or -45deg
+
+Angle unit(https://www.w3.org/TR/css3-values/#angles)
+degres (https://www.w3.org/TR/css3-values/#deg),
+grad (https://www.w3.org/TR/css3-values/#grad),
+rad(https://www.w3.org/TR/css3-values/#rad),
 turn(https://www.w3.org/TR/css3-values/#turn).
 
-  to bottom       . Syntax:     to    &lbrack;   y-axis     (   top OR bottom
-
-  x-axis                         (     left OR
-
-
-  to left
-
-
-  right            )&rbrack; ie         to top right
-
-> Direction of gradient, default is )&rbrack; &lbrack;
-
-  yellow 10%
-
-> Color, optionally followed by a percentage or length to display it at.
-> Repeated two or more times.
->
-> Note that HEX, RGB, RGBa, HSL, and HSLa color codes may be used
-> instead of color names. Color names were used for the sake of
-> illustration. Also note that the radial-gradient syntax is much more
-> complex than linear-gradient, and a simplified version is shown here.
-> For a full explanation and specs, see the &lbrack;&lbrack;MDN
-> Docs&rbrack;&rbrack;(https://developer.mozilla.org/en-US/docs/Web/CSS/radial-gradient)
-
+Note that HEX, RGB, RGBa, HSL, and HSLa color codes may be used instead of color names. Color names were used
+for the sake of illustration. Also note that the radial-gradient syntax is much more complex than linear-gradient, 
+and a simplified version is shown here. For a full explanation and specs, see the 
+<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/radial-gradient">MDN Docs</a>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch5-3">Section 5.3: Background Image</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-
-The background-image property is used to specify a background image to
+<p>The background-image property is used to specify a background image to
 be applied to all matched elements. By default, this image is tiled to
-cover the entire element, excluding margin.
+cover the entire element, excluding margin.</p>
 
-```
-.myClass {
+<pre><code..myClass {
   <b>background-image</b>: url (&apos;/path/to/image.jpg&apos;);
-}
-```
+}</code></pre>
 
-<h4>url</h4>
+<p>To use multiple images as background-image, define comma separated url()</p>
 
-To use multiple images as background-image, define comma separated ()
-
-```
-.myClass {
+<pre><code>.myClass {
   <b>background-image</b>: url 
   (&apos;/path/to/image.jpg&apos;), url (
   &apos;/path/to/image2.jpg&apos;);
-}
-```
+}</code></pre>
 
-The images will stack according to their order with the first declared
-image on top of the others and so on.
+<p>The images will stack according to their order with the first declared
+image on top of the others and so on.</p>
 
-<b>Value Result</b>
+| <b>Value</b>  |   <b>Result</b>    |
+|---------------|--------------------|
+| url (&apos;/path/to/image.jpg&apos;) | Specify background image&apos;s path(s) or an image resource specified with data URI |
+|                                      | schema (apostrophes can be omitted), separate multiples by comma |
+| none | No backgound image |
+| initial   | Default value |
+| inherit | Inherit parent's value |
 
-```
-url ( &apos;/path/to/image.jpg&apos;
-Specify background image&apos;s path(s) or an image resource specified
-with data URI
-)
-```
+<h4>More CSS for Background Image</h4>
 
->
-> schema (apostrophes can be omitted), separate multiples by comma
+This following attributes are very useful and almost essential too.
 
-  none                                     No background image
-
-  initial                                  Default value
-
-  inherit                                  Inherit parent&apos;s value
-
-> <b>More CSS for Background Image</b>
->
-> This following attributes are very useful and almost essential too.
->
-> <b>background-size</b>: xpx ypx &vertbar; x% y%; <b>background-repeat</b>:
-> no-repeat &vertbar; repeat &vertbar; repeat-x &vertbar; repeat-y; <b>background-position</b>:
-> left offset (px/%) right offset (px/%) &vertbar; center center &vertbar; left top &vertbar;
-> right bottom;
-
+<b>background-size</b>: xpx ypx &vertbar; x% y%; 
+<b>background-repeat</b>: no-repeat &vertbar; repeat &vertbar; repeat-x &vertbar; repeat-y; 
+<b>background-position</b>: left offset (px/%) right offset (px/%) &vertbar; center center &vertbar; left top &vertbar; right 
+bottom;
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch5-4">Section 5.4: Background Shorthand</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
