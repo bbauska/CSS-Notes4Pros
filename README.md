@@ -444,8 +444,6 @@ pseudo-classes, and patterns.</p>
 change the selection criteria accordingly. They select an element
 using the presence of a given attribute or attribute value.</p>
 
-<b>Selector(1) Matched element Selects elements&period;.. CSS Version</b>
-
 | Selector(1)     | Matched element            | Selects elements...                |
 |----------------:|----------------------------|------------------------------------|
 | &lbrack;attr&rbrack;          | &lt;div attr&gt;                 | With attribute attr                |
@@ -496,7 +494,7 @@ using the presence of a given attribute or attribute value.</p>
 
 <b>&lt;div data-color="red"&gt;</b>This will be red<b>&lt;/div&gt;</b>
 <b>&lt;div data-color="green"&gt;</b>This will be red<b>&lt;/div&gt;</b>
-<b>&lt;div data-background="red"&gt;</b>This will NOT be red<b>&lt;/div&gt;</b></code></pre>
+<b>&lt;div data-background="blue"&gt;</b>This will NOT be red<b>&lt;/div&gt;</b></code></pre>
 
 <a href="http://jsbin.com/waxoked/1/edit?html,css,output">Live Demo on JSBin</a>
 
