@@ -808,7 +808,7 @@ the mouse is over an element (:hover), a checkbox is checked (:checked), etc.
 > an+b-1 siblings before it in the document tree, for a given positive
 > <b>or zero value</b> for n&quot; - &lbrack;MDN :nth-child&rbrack;
 
-| <b>pseudo-selector</b>       | <b>1  2  3  4  5  6  7  8  9  10</b>           |
+| <b>pseudo-selector</b>       | <b>1&nbsp;&nbsp;2&nbsp;&nbsp;3&nbsp;&nbsp;4&nbsp;&nbsp;5&nbsp;&nbsp;6&nbsp;&nbsp;7&nbsp;&nbsp;8&nbsp;&nbsp;9&nbsp;&nbsp;10</b>           |
 |------------------------------|---------------------------------------|
 | :first-child                 |  ✔ |
 | :nth-child (3)                |         ✔ |
