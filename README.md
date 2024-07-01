@@ -914,19 +914,19 @@ h1: last-of-type {
 
 <h3 id="ch4-9">Section 4.9: CSS3 :in-range selector example</h3>
 
-<pre><code>&lt;style&gt;
+<pre><code><b>&lt;style&gt;</b>
 input:in-range {
   border: 1px solid blue;
 }
-&lt;/style&gt;
+<b>&lt;/style&gt;</b>
 
-&lt;input type="number" min="10" max="20" value="15"&gt;
-&lt;p&gt;The border for this value will be blue&lt;/p&gt;</code></pre>
+<b>&lt;input</b> type="number" min="10" max="20" value="15"&gt;
+<b>&lt;p&gt;</b>The border for this value will be blue<b>&lt;/p&gt;</b></code></pre>
 
 <p>The :in-range CSS pseudo-class matches when an element has its value attribute
 inside the specified range limitations for this element. It allows the
 page to give a feedback that the value currently defined using the
-element is inside the range limits.&lbrack<a href=https://developer.mozilla.org/en-US/docs/Web/CSS/:in-range">1</a>&rbrack;.
+element is inside the range limits.&lbrack;<a href=https://developer.mozilla.org/en-US/docs/Web/CSS/:in-range">1</a>&rbrack;.
 
 <h3 id="ch4-10">Section 4.10: A. The :not pseudo-class example & B. :focuswithin CSS pseudo-class</h3>
 
@@ -1013,7 +1013,7 @@ want with a unique id and the hidden attribute set:</p>
 
 <p>You can toggle the boolean by adding a label with the for attribute set:</p>
 
-<pre><code><b>&lt;</b>&quot;sidebarShown&quot;<b>&gt;</b>Show/Hide the sidebar!<b>&lt;</b><b>/label</b><b>&gt;</b></code></pre>
+<pre><code><b>&lt;label</b> for=&quot;sidebarShown&quot;&gt;Show/Hide the sidebar!<b>&lt;/label&gt;</b></code></pre>
 
 <h4>Accessing boolean value with CSS</h4>
 
@@ -1027,7 +1027,7 @@ selectors:
 /* false */
 &lt;checkbox*gt;:not(:checked) ~ [sibling of checkbox & parent of target] <target></code></pre>
 
-Note that <checkbox>, &lbrack;sibling ...&rbrack; and &lt;target&gt; should be replaced by the proper selectors. &lbrack;sibling ...&rbrack;
+Note that &lt;checkbox&gt;, &lbrack;sibling ...&rbrack; and &lt;target&gt; should be replaced by the proper selectors. &lbrack;sibling ...&rbrack;
 can be a specific selector, (often if you're lazy) simply * or nothing if the target is already a sibling of the checkbox.
 
 Examples for the above HTML structure would be:
@@ -1069,9 +1069,7 @@ For example, the following HTML div element...
 
 <h4>HTML</h4>
 
-<pre><code>
-<input type="range"></input>
-</code></pre>
+<pre><code>&lt;input type="range"&gt;&lt;/input&gt;</code></pre>
 
 <h4>CSS</h4>
 
@@ -1087,50 +1085,46 @@ For example, the following HTML div element...
 
 <h3 id="ch4-14">Section 4.14: The :only-child pseudo-class selector example</h3>
 
-
-The :only-child CSS pseudo-class represents any element which is the only child of
-its parent.
+<p>The :only-child CSS pseudo-class represents any element which is the only 
+child of its parent.</p>
 
 <h4>HTML:</h4>
 
-<pre><code>
-<div>
-  <p>This paragraph is the only child of the div, it will have the color blue</p>
-</div>
+<pre><code>&lt;div&gt;
+  &lt;p>This paragraph is the only child of the div, it will have the color blue&lt;/p&gt;
+&lt;/div&gt;
 
-<div>
-  <p>This paragraph is one of the two children of the div</p>
-  <p>This paragraph is one of the two children of its parent</p>
-</div>
+&lt;div&gt;
+  &lt;p&gt;This paragraph is one of the two children of the div&lt;/p&gt;
+  &lt;p&gt;This paragraph is one of the two children of its parent&lt;/p&gt;
+&lt;/div&gt;
 </code></pre>
 
 <h4>CSS:</h4>
 
-<pre><code>
-p:only-child {
+<pre><code>p:only-child {
   color: blue;
-}
-</code></pre>
+}</code></pre>
 
-The above example selects the &lt;p&gt; element that is the unique child from its 
-parent, in this case a &lt;div&gt;.
+<p>The above example selects the &lt;p&gt; element that is the unique child from its 
+parent, in this case a &lt;div&gt;.</p>
 
 <a href="https://jsbin.com/dizosi/edit?html,css">Live Demo on JSBin</a>
 
 <h2 id="ch5">Chapter 5: Backgrounds</h2>
 
-With CSS you can set colors, gradients, and images as the background
-of an element.
+<p>With CSS you can set colors, gradients, and images as the background
+of an element.</p>
 
-It is possible to specify various combinations of images, colors, and
+<p>It is possible to specify various combinations of images, colors, and
 gradients, and adjust the size, positioning, and repetition (among
-others) of these.
+others) of these.</p>
 
 <h3 id="ch5-1">Section 5.1: Background Color</h3>
 
-The background-color property sets the background color of an element
+<p>The background-color property sets the background color of an element
 using a color value or through keywords, such as transparent, inherit
-or initial.
+or initial.</p>
 
 <ul>
   <li><b>transparent</b>, specifies that the background color should be
@@ -1148,17 +1142,14 @@ Colors in CSS can be specified by different methods.
 
 <h4>CSS</h4>
 
-<pre><code>
-div {
+<pre><code>div {
   background-color: red; /* red */
 }
-</code></pre>
+</code><pre>
 
 <h4>HTML</h4>
 
-<pre><code>
-<div>This will have a red background</div>
-</code></pre>
+<pre><code>&lt;div&gt;This will have a red background&lt;/div&gt;</code></pre>
 
 <ul>
   <li>The example used above is one of several ways that CSS has to represent
