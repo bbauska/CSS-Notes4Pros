@@ -1675,9 +1675,7 @@ The behaviour depends on the
 
 &lbrack;background-origi&rbrack;
 
-&lbrack;&lbrack;n&rbrack;&rbrack;(https://www.w3.org/TR/2014/CR-css3-background-20140909/#the-background-origin)
-
-.
+(https://www.w3.org/TR/2014/CR-css3-background-20140909/#the-background-origin)
 
 > <b>Keeping the aspect ratio</b>
 >
@@ -1701,8 +1699,15 @@ The behaviour depends on the
 > for demonstration. Lets say that this is your screen, and the gray
 > area is outside of your visible screen. For demonstration, We&apos;re
 > going to assume a 16 × 9 ratio.
-
-[image007.png 4.95x2.79](./images/image007.png)
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 07. javascript/css logos (01) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p align="center" width="100%">
+<img src="./images/image007.jpg"
+  style="width:4.9in"
+  title=""
+  alt="." />
+</p>
+<!-- [image007.png 4.95x2.79](./images/image007.png) -->
 
 > We want to use the aforementioned picture of the day as a background.
 > However, we cropped the image to 4x3 for some reason. We could set the
