@@ -79,7 +79,7 @@ users will see a flash of unstyled content</a>.</p>
 <h4>Example</h4>
 <h4>hello-world.html</h4>
 
-<pre><code>&lt;! DOCTYPE html&gt;
+<pre><code>&lt;!DOCTYPE html&gt;
 &lt;html&gt;
   &lt;head&gt;
     &lt;meta charset="utf-8"/&gt;
@@ -309,7 +309,7 @@ separately, or using the list-style shorthand property.</p>
 </ul>
 
 <p>(For an exhaustive list, see the 
-<a href="https://www.w3.org/wiki/CSS/Properties/list-style-type">W3C specification wiki</a>.</p>
+<a href="https://www.w3.org/wiki/CSS/Properties/list-style-type">W3C specification wiki</a>).</p>
 <p>To use square bullet points for each list-item, for example, you would use 
 the following property-value pair:</p>
 
@@ -340,7 +340,6 @@ list-item marker, and it accepts one of two values: &quot;inside&quot; or
 <b>property list</b>.
 
 <pre><code>/* Two values in this property list */
-
 span {
   text-shadow: yellow 0 0 3px, green 4px 4px 10px;
 }
@@ -430,12 +429,12 @@ pseudo-classes, and patterns.</p>
 <blockquote>
   <b>Note:</b> The value of an ID must be unique in a web page. It is a
   violation of the <a href="https://www.w3.org/TR/html/dom.html#the-id-attribute">
-  HTML standard to use the value of an ID more than once in the same document tree.
+  HTML standard</a> to use the value of an ID more than once in the same document tree.
 </blockquote>
 
 <p>A complete list of selectors can be found in the 
 <a href="https://www.w3.org/TR/css3-selectors/#selectors">CSS Selectors Level
-3 specification.</a></p>
+3 specification</a>.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch4-2">Section 4.2: Attribute Selectors</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -448,7 +447,7 @@ using the presence of a given attribute or attribute value.</p>
 <b>Selector(1) Matched element Selects elements&period;.. CSS Version</b>
 
 | Selector(1)     | Matched element            | Selects elements...                |
-|-----------------|----------------------------|------------------------------------|
+|----------------:|----------------------------|------------------------------------|
 | &lbrack;attr&rbrack;          | &lt;div attr&gt;                 | With attribute attr                |
 | &lbrack;attr='val'&rbrack;    | &lt;div attr="val"&gt;           | Where attribute attr has value val |
 | &lbrack;attr~='val'&rbrack;   | &lt;div attr="val val2 val3"&gt; | Where val appears in the           |
@@ -473,121 +472,121 @@ using the presence of a given attribute or attribute value.</p>
     <a href="http://caniuse.com/#feat=css-case-insensitive">See browser support</a>.
 
 <h4>Details<br>
-&lbrack;attribute&rbrack;</h4>
+&lbrack;<b>attribute</b>&rbrack;</h4>
 
 <p>Selects elements with the given attribute.</p>
 
 <pre><code>div&lbrack;data-color&rbrack; {
-  color: red;
+  <b>color</b>: red;
 }
 
-&lt;div data-color="red"&gt;This will be red&lt;/div&gt;
-&lt;div data-color="green"&gt;This will be red&lt;/div&gt;
-&lt;div data-background="red"&gt;This will NOT be red&lt;/div&gt;</code></pre>
+<b>&lt;div data-color="red"&gt;</b>This will be red<b>&lt;/div&gt;</b>
+<b>&lt;div data-color="green"&gt;</b>This will be red<b>&lt;/div&gt;</b>
+<b>&lt;div data-background="red"&gt;</b>This will NOT be red<b>&lt;/div&gt;</b></code></pre>
 
 <a href="http://jsbin.com/cezale/1/edit?html,css,output">Live Demo on JSBin</a>
 
-<pre><code>&lbrack;attribute="value"&rbrack;</code></pre>
+<pre><code>&lbrack;<b>attribute="value"</b>&rbrack;</code></pre>
 
 <p>Selects elements with the given attribute and value.</p>
 
 <pre><code>div&lbrack;data-color="red"&rbrack; {
-  color: red;
+  <b>color</b>: red;
   }
 
-&lt;div data-color="red"&gt;This will be red&lt;/div&gt;
-&lt;div data-color="green"&gt;This will be red&lt;/div&gt;
-&lt;div data-background="red"&gt;This will NOT be red&lt;/div&gt;</code></pre>
+<b>&lt;div data-color="red"&gt;</b>This will be red<b>&lt;/div&gt;</b>
+<b>&lt;div data-color="green"&gt;</b>This will be red<b>&lt;/div&gt;</b>
+<b>&lt;div data-background="red"&gt;</b>This will NOT be red<b>&lt;/div&gt;</b></code></pre>
 
 <a href="http://jsbin.com/waxoked/1/edit?html,css,output">Live Demo on JSBin</a>
 
-<pre><code>&lbrack;attribute="value"&rbrack;</code></pre>
+<pre><code>&lbrack;<b>attribute*="value"</b>&rbrack;</code></pre>
 
 <p>Selects elements with the given attribute and value where the given
 attribute contains the given value anywhere (as a substring).</p>
 
-<pre><code>&lbrack;class = "foo"&rbrack; {
-  color: red;
+<pre><code>&lbrack;class*= "foo"&rbrack; {
+  <b>color</b>: red;
 }
 
-&lt;div class="foo-123"&gt;This will be red&lt;/div&gt;
-&lt;div class="foo123"&gt;This will be red&lt;/div&gt;
-&lt;div class="bar123foo"&gt;This will be red&lt;/div&gt;
-&lt;div class="barfooo123"&gt;This will be red&lt;/div&gt;
-&lt;div class="barfo0"&gt;Ths will NOT be red&lt;/div&gt;</code></pre>
+<b>&lt;div class="foo-123"&gt;</b>This will be red<b>&lt;/div&gt;</b>
+<b>&lt;div class="foo123"&gt;</b>This will be red<b>&lt;/div&gt;</b>
+<b>&lt;div class="bar123foo"&gt;</b>This will be red<b>&lt;/div&gt;</b>
+<b>&lt;div class="barfooo123"&gt;</b>This will be red<b>&lt;/div&gt;</b>
+<b>&lt;div class="barfo0"&gt;</b>This will NOT be red<b>&lt;/div&gt;</b></code></pre>
 
 <a href="http://jsbin.com/dazige/1/edit?html,css,output">Live Demo on JSBin</a>
 
-<pre><code>&lbrack;attribute~="value"&rbrack;</pre></code>
+<pre><code>&lbrack;<b>attribute~="value"</b>&rbrack;</pre></code>
 
 <p>Selects elements with the given attribute and value where the given
 value appears in a whitespace-separated list.</p>
 
 <pre><code>&lbrack;class~="color-red"&rbrack; {
-  color: red;
+  <b>color</b>: red;
 }
 
-&lt;div class="color-red foo-bar the-div"&gt;This will be red&lt;/div&gt;
-&lt;div class="color-blue" foo-bar the-div"&gt;This will NOT be red&lt;/div&gt;</code></pre>
+<b>&lt;div class="color-red foo-bar the-div"&gt;</b>This will be red<b>&lt;/div&gt;</b>
+<b>&lt;div class="color-blue" foo-bar the-div"&gt;</b>This will NOT be red<b>&lt;/div&gt;</b></code></pre>
 
 <a href="http://jsbin.com/posuhim/1/edit?html,css,output">Live Demo on JSBin</a>
 
-<pre><code>&lbrack;attribute^="value"&rbrack;</code></pre>
+<pre><code>&lbrack;<b>attribute^="value"</b>&rbrack;</code></pre>
 
 <p>Selects elements with the given attribute and value where the given
 attribute begins with the value.</p>
 
 <pre><code>&lbrack;class^="foo-"&rbrack; {
-  color: red;
-  }
+  <b>color</b>: red;
+}
 
-&lt;div class="foobar-file"&gt;This will be red&lt;/div&gt;
-&lt;div class="foobar-file"&gt;This will be red&lt;/div&gt;
-&lt;div class="foobar-input"&gt;This will NOT be red&lt;/div&gt;</code></pre>
+<b>&lt;div class="foobar-file"&gt;</b>This will be red<b>&lt;/div&gt;</b>
+<b>&lt;div class="foobar-file"&gt;</b>This will be red<b>&lt;/div&gt;</b>
+<b>&lt;div class="foobar-input"&gt;</b>This will NOT be red<b>&lt;/div&gt;</b></code></pre>
 
 <a href="http://jsbin.com/yowihi/1/edit?html,css,output">Live Demo on JSBin</a>
 
-<pre><code>&lbrack;attribute$="value"&rbrack;</code></pre>
+<pre><code>&lbrack;<b>attribute$="value"</b>&rbrack;</code></pre>
 
 <p>Selects elements with the given attribute and value where the given
 attribute ends with the given value.</p>
 
 <pre><code>&lbrack;class$="file"&rbrack; {
-  color: red;
+  <b>color</b>: red;
 }
-&lt;div class="foobar-file"&gt;This will be red&lt;/div&gt;
-&lt;div class="foobar-file"&gt;This will be red&lt;/div&gt;
-&lt;div class="foobar-input"&gt;This will NOT be red&lt;/div&gt;</code></pre>
+<b>&lt;div class="foobar-file"&gt;</b>This will be red<b>&lt;/div&gt;</b>
+<b>&lt;div class="foobar-file"&gt;</b>This will be red<b>&lt;/div&gt;</b>
+<b>&lt;div class="foobar-input"&gt;</b>This will NOT be red<b>&lt;/div&gt;</b></code></pre>
 
 <a href="http://jsbin.com/yowihi/2/edit?html,css,output">Live Demo on JSBin</a>
 
-<pre><code>&lbrack;attribute&vert;="value"&rbrack;</code></pre>
+<pre><code>&lbrack;<b>attribute&vert;="value"</b>&rbrack;</code></pre>
 
 <p>Selects elements with a given attribute and value where the
 attribute&apos;s value can be represented as Value, VALUE, vAlUe 
 or any other case-sensitive possibility.</p>
 
-<pre><code>&lbrack;lang="EN" i&rbrack; {
-  color: red;
+<pre><code>&lbrack;lang&vert;="<b>EN</b>" i&rbrack; {
+  <b>color</b>: red;
   }
-&lt;div lang="EN-us">This will be red&lt;/div&gt;
-&lt;div lang="EN-gb">This will be red&lt;/div&gt;
-&lt;div lang="PT-pt"&gt;This will NOT be red&lt;/div&gt;</code></pre>
+<b>&lt;div lang="EN-us"&gt;</b>This will be red<b>&lt;/div&gt;</b>
+<b>&lt;div lang="EN-gb"&gt;</b>This will be red<b>&lt;/div&gt;</b>
+<b>&lt;div lang="PT-pt"&gt;</b>This will NOT be red<b>&lt;/div&gt;</b></code></pre>
 
 <a href="http://jsbin.com/yowihi/3/edit?html,css,output">Live Demo on JSBin</a>
+
+&lbrack;<b>attribute</b>=<b>"value" i</b>&rbrack;
 
 <p>Selects elements with a given attribute and value where the
 attribute&apos;s value can be represented as Value, VALUE, vAlUe or any
 other case-insensitive possibility.</p>
 
-<pre><code>
-&lbrack;lang|="EN"&rbrack; {
-  color: red;
+<pre><code>&lbrack;lang|=<b>"EN"</b>&rbrack; {
+  <b>color</b>: red;
 }
-&lt;div lang="EN-us"&gt;This will be red&lt;/div&gt;
-&lt;div lang="EN-gb"&gt;This will be red&lt;/div&gt;
-&lt;div lang="PT-pt"&gt;This will NOT be red&lt;/div&gt;
-</code></pre>
+<b>&lt;div lang="EN-us"&gt;</b>This will be red<b>&lt;/div&gt;</b>
+<b>&lt;div lang="EN-gb"&gt;</b>This will be red<b>&lt;/div&gt;</b>
+<b>&lt;div lang="PT-pt"&gt;</b>This will NOT be red<b>&lt;/div&gt;</b></code></pre>
 
 <a href="http://jsbin.com/yowihi/4/edit?html,css,output">Live Demo on JSBin</a>
 
@@ -600,7 +599,7 @@ other case-insensitive possibility.</p>
 
 <p>Note that this means an attribute selector can be used to select an
 element by its ID at a lower level of specificity than if it was
-selected with an ID selector: &lbrack;&rbrack; targets the same element as #my-ID
+selected with an ID selector: &lbrack;id=<b>"my-ID"</b>&rbrack; targets the same element as <b>#my-ID</b>
 but with lower specificity.</p>
 
 <p>See the Syntax Section for more details.</p>
@@ -619,8 +618,8 @@ but with lower specificity.</p>
 
 > <b>Note:</b> Sibling selectors target elements that come after them in
 > the source document. CSS, by its nature (it cascades), cannot target
-> *previous* or *parent* elements. However, using the flex order
-> property, &lbrack;&lbrack;a&rbrack; <a href="http://stackoverflow.com/a/36118012/3597276">
+> <i>previous</i> or <i>parent</i> elements. However, using the flex order
+> property, a <a href="http://stackoverflow.com/a/36118012/3597276">
 > previous sibling selector can be simulated on visual media</a>.
 
 <h4>Descendant Combinator: selector selector</h4>
@@ -631,24 +630,24 @@ This combinator selects <b>all</b> descendants of the element (from child
 elements on down).
 
 <pre><code>div p {
-  color: red;
+  <b>color</b>: red;
 }
 
-&lt;div&gt;
-  &lt;p&gt;My text is red&lt;/p&gt;
-  &lt;section&gt;
-    &lt;p&gt;My text is red&lt;/p&gt;
-  &lt;/section&gt;
-&lt;/div&gt;
+<b>&lt;div&gt;</b>
+  <b>&lt;p&gt;</b>My text is red<b>&lt;/p&gt;</b>
+  <b>&lt;section&gt;</b>
+    <b>&lt;p&gt;</b>My text is red<b>&lt;/p&gt;</b>
+  <b>&lt;/section&gt;</b>
+<b>&lt;/div&gt;</b>
 
-&lt;p&gt;My text is not red&lt;/p&gt;</code></pre>
+<b>&lt;p&gt;</b>My text is not red<b>&lt;/p&gt;</b></code></pre>
 
 <a href="http://jsbin.com/xonafuz/2/edit?html,css,output">Live Demo on JSBin</a>
 
 <p>In the above example, the first two <b>&lt;p&gt;</b> elements are selected since they are
 both descendants of the <b>&lt;div&gt;</b>.</p>
 
-<h4>Child Combinator:selector &gt; selector</h4>
+<h4>Child Combinator: selector &gt; selector</h4>
 
 <p>The child (&gt;) combinator is used to select elements that are
 <b>children</b>, or <b>direct descendants</b>, of the specified element.</p>
@@ -657,46 +656,50 @@ both descendants of the <b>&lt;div&gt;</b>.</p>
   <b>color</b>: <span style='color: red;'>red</span>;
 }
 
-&lt;div&gt;
-  &lt;p&gt;My text is <span style='color: red;'>red</span>&lt;/p&gt;
-  &lt;section&gt;
-    &lt;p&gt;My text is not red&lt;/p&gt;
-  &lt/section&gt;
-&lt;/div&gt;</code></pre>
+<b>&lt;div&gt;</b>
+  <b>&lt;p&gt;</b>My text is <span style='color: red;'>red</span><b>&lt;/p&gt;</b>
+  <b>&lt;section&gt;</b>
+    <b>&lt;p&gt;</b>My text is not red<b>&lt;/p&gt;</b>
+  <b>&lt/section&gt;</b>
+<b>&lt;/div&gt;</b></code></pre>
 
 <a href="http://jsbin.com/xonafuz/3/edit?html,css,output">Live Demo on JSBin</a>
 
-<p>The above CSS selects only the first &lt;p&gt; element, as it is the only paragraph directly descended from a &lt;div&gt;.</p>
+<p>The above CSS selects only the first <b>&lt;p&gt;</b> element, as it is the only paragraph directly descended from a <b>&lt;div&gt;</b>.</p>
 
-<p>The second <b>&lt;p</b> element is not selected because it is not a direct child of the &lt;div&gt;.</p>
+<p>The second <b>&lt;p&gt;</b> element is not selected because it is not a direct child of the <b>&lt;div&gt;</b>.</p>
 
-<h4>Adjacent Sibling Combinator:</h4>
+<h4>Adjacent Sibling Combinator: selector &plus; selector</h4>
 
 <p>The adjacent sibling (+) combinator selects a sibling element that immediate follows a specified element.</p>
 
-<pre><code>
-<b>color</b>
-<b>&lt;</b>
-<b>&gt;</b>
-</code></pre>
+<pre><code>p &plus; p {
+  <b>color: red;</b>
+}
+
+<b>&lt;p&gt;</b>My text is not red<b>&lt;/p&gt;</b>
+<b>&lt;p&gt;</b>My text is red<b>&lt;/p&gt;</b>
+<b>&lt;p&gt;</b>My text is red<b>&lt;/p&gt;</b>
+<b>&lt;hr&gt;</b>
+<b>&lt;p&gt;</b>My text is not red<b>&lt;/p&gt;</b></code></pre>
 
 <a href="http://jsbin.com/xonafuz/4/edit?html,css,output">Live Demo on JSBin</a>
 
-<p>The above example selects only those &lt;p&gt; elements which are <i>directly preceded</i> by another &lt;p&gt; element.</p>
+<p>The above example selects only those <b>&lt;p&gt;</b> elements which are <i>directly preceded</i> by another <b>&lt;p&gt;</b> element.</p>
 
 <h4>General Sibling Combinator: selector &#126; selector</h4>
 
-<p>The general sibling (&#126;) combinator selects *all* siblings that follow the specified element.</p>
+<p>The general sibling (&#126;) combinator selects <i>all</i> siblings that follow the specified element.</p>
 
 <pre><code>p &#126; p
-  color: <span style='color: red;'>red</span>;
+  <b>color</b>: <span style='color: red;'>red</span>;
 }
 
-&lt;p&gt;My text is not red&lt;/p&gt;
-&lt;p&gt;My text is <span style='color: red;'>red</span>&lt;/p&gt;
-&lt;hr&gt;
-&lt;h1&gt;And now a title&lt;/h1&gt;
-&lt;p&gt;<span style='color: red;'>My text is red</span>&lt;/p&gt;</code></pre>
+<b>&lt;p&gt;</b>My text is not red<b>&lt;/p&gt;</b>
+<b>&lt;p&gt;</b>My text is <span style='color: red;'>red</span>&lt;/p&gt;
+<b>&lt;hr&gt;</b>
+<b>&lt;h1&gt;</b>And now a title&lt;/h1&gt;
+<b>&lt;p&gt;</b><span style='color: red;'>My text is red</span><b>&lt;/p&gt;</b></code></pre>
 
 <a href="http://jsbin.com/xonafuz/5/edit?html,css,output">Live Demo on JSBin</a>
 
