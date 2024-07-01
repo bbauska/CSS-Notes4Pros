@@ -809,9 +809,9 @@ the mouse is over an element (:hover), a checkbox is checked (:checked), etc.
 > <b>or zero value</b> for n&quot; - &lbrack;MDN :nth-child&rbrack;
 
 | <b>pseudo-selector</b>       | <b>1&nbsp;&nbsp;2&nbsp;&nbsp;&nbsp;3&nbsp;&nbsp;&nbsp;4&nbsp;&nbsp;&nbsp;5&nbsp;&nbsp;&nbsp;6&nbsp;&nbsp;&nbsp;7&nbsp;&nbsp;&nbsp;8&nbsp;&nbsp;&nbsp;9&nbsp;&nbsp;&nbsp;10</b> |
-|------------------------------|---------------------------------------|
+|------------------------------|---------------------------------------------------------------------------------|
 | :first-child                 |  ✔ |
-| :nth-child (3)                | &nbsp;&nbsp;✔ |
+| :nth-child (3)                | &nbsp;&nbsp;&nbsp;✔ |
 | :nth-child (n+3)              | &nbsp;&nbsp;✔&nbsp;  ✔&nbsp;  ✔&nbsp;  ✔&nbsp;  ✔&nbsp;  ✔&nbsp;  ✔&nbsp;  ✔ |
 | :nth-child (3n)               |         ✔       ✔       ✔ |
 | :nth-child (3n+1)             | ✔         ✔       ✔       ✔ |
@@ -828,17 +828,15 @@ The class name selector select all elements with the targeted class
 name. For example, the class name .warning would select the following
 <b>&lt;div&gt;</b> element:
 
-<pre><code>
-<div class="warning">
-  <p>This would be some warning copy.</p>
-</div>
-</code></pre>
+<pre><code>&lt;div class="warning"&gt;
+  &lt;p&gt;This would be some warning copy.&lt;/p&gt;
+&lt;/div&gt;</code></pre>
 
-You can also combine class names to target elements more specifically.
+<p>You can also combine class names to target elements more specifically.
 Let&apos;s build on the example above to showcase a more complicated class
-selection.
+selection.</p>
 
-<h4>CSS</h4>
+<h4>CSS:</h4>
 
 <pre><code>.important {
   color: orange;
@@ -850,16 +848,22 @@ selection.
   color: red;
 }</code></pre>
 
-<h4>HTML</h4>
+<h4>HTML:</h4>
 
-<pre><code><b>&gt;</b></code></pre>
+<pre><code><b>&lt;div class="warning"&gt;
+  <b>&lt;p&gt;</b>This would be some warning copy.<b>&lt;/p&gt;</b>
+<b>&lt;/div&gt;</b>
+
+<b>&lt;div class="important warning"&gt;</b>
+  <b>&lt;p class="important"&gt;</b>This is some really important warning copy.<b>&lt;/p&gt;</b>
+<b>&lt;/div&gt;</b></code></pre>
 
 <p>In this example, all elements with the .warning class will have a blue
 text color, elements with the .important class with have an orange
-text color, and all elements that have *both* the .important and
+text color, and all elements that have <i>both</i> the .important and
 .warning class name will have a red text color.</p>
 
-<p>Notice that within the CSS, the declaration did not have any spaces
+<p>Notice that within the CSS, the .warning.important declaration did not have any spaces
 between the two class names. This means it will only find elements
 which contain both class names warning and important in their class
 attribute. Those class names could be in any order on the element.</p>
@@ -876,16 +880,12 @@ attribute selector to avoid the high specificity of the ID selector.</p>
 
 <h4>HTML:</h4>
 
-<pre><code>
-<div id="element">. . .</div>
-</code></pre>
+<pre><code><b>&lt;div id="element"&gt;</b>. . .<b>&lt;/div&gt;</b></code></pre>
 
 <h4>CSS</h4>
 
-<pre><code>
-#element { . . . } /* High specificity will override many selectors */
-&lbrack;id="element"&rbrack; { . . .} /* Low specificity, can be overridden easily */
-</code></pre>
+<pre><code>#element { . . . } /* High specificity will override many selectors */
+&lbrack;id="element"&rbrack; { . . .} /* Low specificity, can be overridden easily */</code></pre>
 
 <h3 id="ch4-8">Section 4.8: The :last-of-type selector</h3>
 
@@ -893,39 +893,41 @@ The :last-of-type selects the element that is the last child, of a particular ty
 of its parent. In the example below, the css selects the last
 paragraph and the last heading h1.
 
-<pre><code>
-p: last-of-type {
-  background: #C5CAE9;
+<pre><code>p: last-of-type {
+  <b>background: #C5CAE9;</b>
 }
 
 h1: last-of-type {
-  background: #CDDC39;
+  <b>background: #CDDC39;</b>
 }
-&gt;
-</code></pre>
+<b>&lt;div class="container"&gt;</b>
+  <b>&lt;p&gt;</b>First paragraph<b>&lt;/p&gt;</b>
+  <b>&lt;p&gt;</b>Second paragraph<b>&lt;/p&gt;</b>
+  <b>&lt;p&gt;</b>Last paragraph<b>&lt;/p&gt;</b>
+  <b>&lt;h1&gt;</b>Heading 1<b>&lt;/h1&gt;</b>
+  <b>&lt;h2&gt;</b>First Heading 2<b>&lt;/h2&gt;</b>
+  <b>&lt;h2&gt;</b>Last heading 2<b>&lt;/h2&gt;</b>
+<b>&lt;/div&gt;</b></code></pre>
 
-&lbrack;&lbrack;jsFiddle&rbrack;&rbrack;(http://jsfiddle.net/MadalinaTn/YmMZZ/113/)
+<image left justified>
+
+<a href="http://jsfiddle.net/MadalinaTn/YmMZZ/113/">jsFiddle</a>
 
 <h3 id="ch4-9">Section 4.9: CSS3 :in-range selector example</h3>
 
-<pre><code>
-<style>
+<pre><code>&lt;style&gt;
 input:in-range {
   border: 1px solid blue;
 }
-</style>
+&lt;/style&gt;
 
+&lt;input type="number" min="10" max="20" value="15"&gt;
+&lt;p&gt;The border for this value will be blue&lt;/p&gt;</code></pre>
 
-<input type="number" min="10" max="20" value="15">
-<p>The border for this value will be blue</p>
-</code></pre>
-
-
-The :in-range CSS pseudo-class matches when an element has its value attribute
+<p>The :in-range CSS pseudo-class matches when an element has its value attribute
 inside the specified range limitations for this element. It allows the
 page to give a feedback that the value currently defined using the
-element is inside the range
-limits.&lbrack;&lbrack;&lbrack;1&rbrack;&rbrack;&rbrack;(https://developer.mozilla.org/en-US/docs/Web/CSS/:in-range)
+element is inside the range limits.&lbrack<a href=https://developer.mozilla.org/en-US/docs/Web/CSS/:in-range">1</a>&rbrack;.
 
 <h3 id="ch4-10">Section 4.10: A. The :not pseudo-class example & B. :focuswithin CSS pseudo-class</h3>
 
