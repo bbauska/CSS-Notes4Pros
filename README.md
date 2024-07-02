@@ -825,7 +825,6 @@ an+b-1 siblings before it in the document tree, for a given positive
 | :nth-child (3)                | &nbsp;&nbsp;&nbsp;✔ |
 | :nth-child (n+3)              | &nbsp;&nbsp;✔&nbsp;  ✔&nbsp;  ✔&nbsp;  ✔&nbsp;  ✔&nbsp;  ✔&nbsp;  ✔&nbsp;  ✔ |
 | :nth-child (3n)               |         ✔       ✔       ✔ |
-<!-- page 16 -->
 | :nth-child (3n+1)             | ✔         ✔       ✔       ✔ |
 | :nth-child (-n+3)             | ✔  ✔  ✔ |
 | :nth-child (odd)              | ✔      ✔      ✔     ✔     ✔ |
@@ -954,7 +953,7 @@ that are not disabled and don&apos;t have the class .example:</p>
 <pre><code><b>&lt;form&gt;</b>
   Phone: <b>&lt;input</b> type="tel" class="example"&gt;
   E-mail: <b>&lt;input</b> type="email" disabled="disabled"&gt;
-  Pasword: <b>&lt;input</b> type="password"&gt;
+  Password: <b>&lt;input</b> type="password"&gt;
 &lt;/form&gt;</code></pre>
 
 <h4>CSS:</h4>
@@ -1016,15 +1015,16 @@ want with a unique id and the hidden attribute set:</p>
 <pre><code>&lt;input type="checkbox" dis="sidebarShown" hidden /&gt;
 &lt;input type="checkbox" dis="darkThemeUsed" hidden /&gt;
 
-/* here begins actual content, for example: */
+&lt;!-- here begins actual content, for example: --&gt;
 &lt;div id="container"&gt;
   &lt;div id="sider"&gt;
-    /* Menu, Search, ... */
+    &lt;!-- Menu, Search, ... --&gt;
   &lt;/div&gt;
+    &lt;!-- Some more content ... --&gt;
  &lt;/div&gt;
  
  &lt;div id="footer"&gt;
-   <!-- ... -->
+   &lt;!-- ... --&gt;
  &lt;/div&gt;</code></pre>
 
 <h4>Change the boolean&apos;s value</h4>
@@ -1035,9 +1035,9 @@ want with a unique id and the hidden attribute set:</p>
 
 <h4>Accessing boolean value with CSS</h4>
 
-The normal selector (like .color-red) specifies the default
+<p>The normal selector (like .color-red) specifies the default
 properties. They can be overridden by following true / false
-selectors:
+selectors:</p>
 
 <pre><code>/* true: */
 &lt;checkbox&gt;:checked &bsim; &lbrack;sibling of checkbox & parent of target&rbrack; &lt;target&gt;
@@ -1066,10 +1066,10 @@ an implementation of these global booleans</a>.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch4-12">Section 4.12: ID selectors</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-ID selectors select DOM elements with the targeted ID. To select an
-element by a specific ID in CSS, the &num; prefix is used.
+<p>ID selectors select DOM elements with the targeted ID. To select an
+element by a specific ID in CSS, the &num; prefix is used.</p>
 
-For example, the following HTML div element...
+<p>For example, the following HTML div element...</p>
 
 <pre><code>&lt;div id="exampleID"&gt;
   &lt;p&gt;Example&lt;/p&gt;
@@ -1081,7 +1081,9 @@ For example, the following HTML div element...
   width: 20px;
 }</code></pre>
 
-<b>Note</b>: The HTML specs do not allow multiple elements with the same ID
+<blockquote>
+<b>Note</b>: The HTML specs do not allow multiple elements with the same ID.
+</blockquote>
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch4-13">Section 4.13: How to style a Range input</h3>
@@ -1155,16 +1157,16 @@ or initial.</p>
   <li><b>initial</b>, sets this property to its default value.</li>
 </ul>
 
-This can be applied to all elements, and ::first-letter/::first-line pseudo-elements.
+<p>This can be applied to all elements, and ::first-letter/::first-line pseudo-elements.</p>
 
-Colors in CSS can be specified by different methods.
+<p>Colors in CSS can be specified by different methods.</p>
 
 <h4>Color names</h4>
 
 <h4>CSS</h4>
 
 <pre><code>div {
-  background-color: red; /* red */
+  <b>background-color</b>: red; /* red */
 }</code></pre>
 
 <h4>HTML</h4>
@@ -1178,17 +1180,16 @@ Colors in CSS can be specified by different methods.
 
 <h4>Hex color codes</h4>
 
-Hex code is used to denote RGB components of a color in base-16
+<p>Hex code is used to denote RGB components of a color in base-16
 hexadecimal notation. &num;ff0000, for example, is bright red, where the
 red component of the color is 256 bits (ff) and the corresponding
-green and blue portions of the color is 0 (00).
-
-If both values in each of the three RGB pairings (R, G, and B) are the
+green and blue portions of the color is 0 (00).</p>
+<p>If both values in each of the three RGB pairings (R, G, and B) are the
 same, then the color code can be shortened into three characters (the
 first digit of each pairing). &num;ff0000 can be shortened to &num;f00, and
-&num;ffffff can be shortened to &num;fff.
+&num;ffffff can be shortened to &num;fff.</p>
 
-Hex notation is case-insensitive.
+<p>Hex notation is case-insensitive.</p>
 
 <pre><code>body {
   background-color: #de1205; /* red */
@@ -1200,29 +1201,29 @@ Hex notation is case-insensitive.
 
 <h4>RGB / RGBa</h4>
 
-Another way to declare a color is to use RGB or RGBa.
+<p>Another way to declare a color is to use RGB or RGBa.
 
-RGB stands for Red, Green and Blue, and requires of three separate
+<p>RGB stands for Red, Green and Blue, and requires of three separate
 values between 0 and 255, put between brackets, that correspond with
-the decimal color values for respectively red, green and blue.
+the decimal color values for respectively red, green and blue.</p>
 
-RGBa allows you to add an additional alpha parameter between 0.0 and
-1.0 to define opacity.
+<p>RGBa allows you to add an additional alpha parameter between 0.0 and
+1.0 to define opacity.</p>
 
 <pre><code>header {
-  background-color: rgb(0, 0, 0); /* black */
+  <b>background-color</b>: rgb(0, 0, 0); /* black */
 }
 footer {
-  background-color: rgba(0, 0, 0, 0.5); /* black with 50% opacity */
+  <b>background-color</b>: rgba(0, 0, 0, 0.5); /* black with 50% opacity */
 }</code></pre>
 
 <h4>HSL / HSLa</h4>
 
-Another way to declare a color is to use HSL or HSLa and is similar to
-RGB and RGBa.
+<p>Another way to declare a color is to use HSL or HSLa and is similar to
+RGB and RGBa.</p>
 
-HSL stands for hue, saturation, and lightness, and is also often
-called HLS:
+<p>HSL stands for hue, saturation, and lightness, and is also often
+called HLS:</p>
 
 <ul>
   <li>Hue is a degree on the color wheel (from 0 to 360).</li>
@@ -1230,17 +1231,17 @@ called HLS:
   <li>Lightness is also a percentage between 0% and 100%.</li>
 </ul>
 
-HSLa allows you to add an additional alpha parameter between 0.0 and
-1.0 to define opacity.
+<p>HSLa allows you to add an additional alpha parameter between 0.0 and
+1.0 to define opacity.</p>
 
-</code></pre>li a {
+<pre><code>li a {
 <b>background-color</b>: hsl(120, 100&percnt;, 50&percnt;); /* green */
 }
 #p1 {
 <b>background-color</b>: hsla(120, 100&percnt;, 50&percnt;, .3); /* green with 30% opacity */
 }</code></pre>
 
-<b>Interaction with background-image</b>
+<h4>Interaction with background-image</h4>
 
 <p>The following statements are all equivalent:</p>
 
@@ -1261,31 +1262,29 @@ body {
 }</code></pre>
 
 <!-- page 24 -->
-They will all lead to the red color being shown underneath the image,
+<p>They will all lead to the red color being shown underneath the image,
 where the parts of the image are transparent, or the image is not
-showing (perhaps as a result of background-repeat).
+showing (perhaps as a result of background-repeat).</p>
 
-Note that the following is not equivalent:
+<p>Note that the following is not equivalent:</p>
 
-</code></pre>body {
+<pre><code>body {
   <b>background-image</b>: url(partiallytransparentimage.png);
   <b>background</b>: red;
 }</code></pre>
 
-Here, the value of background overrides your background-image.
+<p>Here, the value of background overrides your background-image.</p>
 
-For more info on the background property, see Background Shorthand
-
+<p>For more info on the background property, see Background Shorthand.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch5-2">Section 5.2: Background Gradients</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-
-Gradients are new image types, added in CSS3. As an image, gradients
+<p>Gradients are new image types, added in CSS3. As an image, gradients
 are set with the background-image property, or the background
-shorthand.
+shorthand.</p>
 
-There are two types of gradient functions, linear and radial. Each
-type has a non-repeating variant and a repeating variant:
+<p>There are two types of gradient functions, linear and radial. Each
+type has a non-repeating variant and a repeating variant:</p>
 
 <ul>
   <li>linear-gradient()</li>
@@ -1298,7 +1297,7 @@ type has a non-repeating variant and a repeating variant:
 
 <p>A linear-gradient has the following syntax</p>
 
-<b>background</b>: linear-gradient( &lt;direction&gt;?, &lt;color-stop-1&gt;, &lt;color-stop-2&gt;, ...);
+<p><b>background</b>: linear-gradient( &lt;direction&gt;?, &lt;color-stop-1&gt;, &lt;color-stop-2&gt;, ...);</p>
 
 | Value             | Meaning |
 |:-----------------:|-----------------------------------------------|
@@ -1394,7 +1393,7 @@ cover the entire element, excluding margin.</p>
 
 <pre><code>.myClass {
   <b>background-image</b>: url (&apos;/path/to/image.jpg&apos;), 
-                           url (&apos;/path/to/image2.jpg&apos;);
+                    url (&apos;/path/to/image2.jpg&apos;);
 }</code></pre>
 
 <p>The images will stack according to their order with the first declared
@@ -1412,11 +1411,11 @@ image on top of the others and so on.</p>
 
 <p>The following attributes are very useful and almost essential;</p>
 
-<h5>background-size</b>:&nbsp;&nbsp;&nbsp;&nbsp; xpx ypx | x% y%;</h5>
+<h5><b>background-size</b>:&nbsp;&nbsp;&nbsp;&nbsp; xpx ypx | x% y%;</h5>
 
-<h5>background-repeat</b>:&nbsp; no-repeat &vert; repeat &vert; repeat-x &vert; repeat-y;</h5>
+<h5><b>background-repeat</b>:&nbsp; no-repeat &vert; repeat &vert; repeat-x &vert; repeat-y;</h5>
  
-<h5>background-position</b>: left offset (px/%) right offset (px/%) &vert; center center &vert; left top &vert; right bottom</h5>
+<h5><b>background-position</b>: left offset (px/%) right offset (px/%) &vert; center center &vert; left top &vert; right bottom</h5>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch5-4">Section 5.4: Background Shorthand</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
