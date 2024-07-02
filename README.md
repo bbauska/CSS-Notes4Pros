@@ -1355,7 +1355,7 @@ examples, but tile the gradient across the background of the element.</p>
 }
 .warning {
   <b>background</b>: repeating-linear-gradient(-45deg, yellow, yellow 10&percnt;, black 10&percnt;, black 20&percnt;);
-}</code/</pre>
+}</code/></pre>
 
 | <b>Value</b>   | <b>Meaning</b>  |
 |----------------|-----------------|
