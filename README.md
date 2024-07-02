@@ -1532,32 +1532,32 @@ image:</p>
 <image 3>
 
 <p>The behaviour depends on the 
-<a href="">https://www.w3.org/TR/2014/CR-css3-background-20140909/#the-background-origin">background-origin Demo</a>.</p>
+<a href="https://www.w3.org/TR/2014/CR-css3-background-20140909/#the-background-origin">background-origin Demo</a>.</p>
 
 <h4>Keeping the aspect ratio</h4>
 
-The last example in the previos section lost its original aspect
+<p>The last example in the previos section lost its original aspect
 ratio. The circle got into an ellipse, the square into a rectangle,
 the triangle into another triangle.</p>
 
-The length or percentage approach isn&apos;t flexible enough to keep the
+<p>The length or percentage approach isn&apos;t flexible enough to keep the
 aspect ratio at all times. auto doesn&apos;t help, since you might not
 know which dimension of your element will be larger. However, to cover
 certain areas with an image (and correct aspect ratio) completely or
 to contain an image with correct aspect ratio completely in a
 background area, the values, contain and cover provide the additional
-functionality.
+functionality.</p>
 
 <h4>Eggsplanation for contain and cover</h4>
 
-Sorry for the bad pun, but we&apos;re going to use a <a href="">picture of the day
-by Biswarup Ganguly</a> for demonstration. Lets say that this is your screen, and
-the gray area is outside of your visible screen. For demonstration, we're going to 
-assume a 16 x 9 ratio.
+<p>Sorry for the bad pun, but we&apos;re going to use a <a href="https://commons.wikimedia.org/wiki/File:Chicken_Egg_without_Eggshell_5859.jpg">
+picture of the day by Biswarup Ganguly</a> for demonstration. Lets say that 
+this is your screen, and the gray area is outside of your visible screen. For 
+demonstration, we're going to assume a 16 x 9 ratio.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~ chicken egg without eggshells (xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p align="center" width="100%">
-<img src="https://commons.wikimedia.org/wiki/File:Chicken_Egg_without_Eggshell_5859.jpg"
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~ 07. rectangle 16x9 (xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p align="left" width="100%">
+<img src="./images/image007.png"
   style="width:50%"
   title=""
   alt="." />
@@ -1582,9 +1582,9 @@ size such that both its width and its height can fit inside the background posit
 contained in the background positioning area, however, there could be
 some empty space filled with your background-color in this case:</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 07.  (xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 09. egg in a frame (xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="center" width="100%">
-<img src="./images/image007.png"
+<img src="./images/image009.png"
   style="width:50%"
   title=""
   alt="." />
@@ -1602,23 +1602,13 @@ that both its width and height can completely cover the background positioning a
 There will be no visible background-color, however depending on the
 screen&apos;s ratio a great part of your image could be cut off:</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 09.  (xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p align="center" width="100%">
-<img src="./images/image009.png"
-  style="width:50%"
-  title=""
-  alt="." />
-</p>
-
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 11.  (xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 11. egg in a frame, #2 (xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="center" width="100%">
 <img src="./images/image011.png"
   style="width:50%"
   title=""
   alt="." />
 </p>
-<!-- {width="4.958333333333333in" height="2.7916666666666665in"} -->
 
 <h4>Demonstration with actual code</h4>
 
@@ -1723,7 +1713,14 @@ div
 <b>&lt;</b>
 <b>/div</b>
 <b>&gt;</b></code></pre>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ contain & cover images (xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p align="center" width="100%">
+<img src="./images/contain-cover.png"
+  style="width:50%"
+  title=""
+  alt="." />
+</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch5-6">Section 5.6: Background Position</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -1752,101 +1749,84 @@ using any of the units used within CSS.</p>
 <p>Units in CSS can be specified by different methods (see here).</p>
 
 <h4>Longhand Background Position Properties</h4>
->
-> In addition to the shorthand property above, one can also use the
-> longhand background properties backgroundposition-x and
-> background-position-y. These allow you to control the x or y positions
-> separately.
->
-> <b>NOTE:</b> This is supported in all browsers except Firefox (versions
-> 31-48)
-> &lbrack;&lbrack;2&rbrack;&rbrack;(http://caniuse.com/#search=background-position-x).
-> Firefox 49, to be released September 2016, *will* support these
-> properties. Until then, &lbrack;&lbrack;there is a Firefox hack within this
-> Stack&rbrack; &lbrack;Overflow
-> answer.&rbrack;&rbrack;(http://stackoverflow.com/questions/14844407/background-position-y-doesnt-work-in-firefox-via-css/29282573#29282573)
 
+In addition to the shorthand property above, one can also use the
+longhand background properties backgroundposition-x and
+background-position-y. These allow you to control the x or y positions
+separately.
+
+<blockquote>
+  <b>NOTE:</b> This is supported in all browsers except Firefox (versions
+  31-48)
+  &lbrack;2&rbrack;<a href="http://caniuse.com/#search=background-position-x"></a>.
+  Firefox 49, to be released September 2016, <i>will</i> support these
+  properties. Until then, 
+  <a href="http://stackoverflow.com/questions/14844407/background-position-y-doesnt-work-in-firefox-via-css/29282573#29282573">
+  there is a Firefox hack within this Stack Overflow answer</a>.
+</bockquote>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch5-7">Section 5.7: The background-origin property</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-> The background-origin property specifies where the background image is
-> positioned.
->
-> Note: If the background-attachment property is set to fixed, this
-> property has no effect. Default value: padding-box
->
-> Possible values:
->
-> padding-box - The position is relative to the padding box border-box -
-> The position is relative to the border box content-box - The position
-> is relative to the content box initial inherit
->
+<p>The background-origin property specifies where the background image is positioned.</p>
+
+<p>Note: If the background-attachment property is set to fixed, this
+property has no effect.</p>
+<p>Default value: padding-box</p>
+<p>Possible values:</p>
+
+<ul>
+  <li>padding-box - The position is relative to the padding box</li>
+  <li>border-box - The position is relative to the border box</li>
+  <li>content-box - The position is relative to the content box</li>
+  <li>initial</li>
+  <li>inherit</li>
+</ul>
 
 <h4>CSS</h4>
 
-<pre><code>
-.example
-{
-<b>width</b>: 300px;
-<b>border</b>: 20px solid black;
-<b>padding</b>: 50px;
-<b>background</b>: url (
-*https://static.pexels.com/photos/6440/magazines-desk-work-workspace-medium.jpg*
-);
-<b>background-repeat</b>: no-repeat;
+<pre><code>.example {
+  <b>width</b>: 300px;
+  <b>border</b>: 20px solid black;
+  <b>padding</b>: 50px;
+  <b>background</b>: url (https://static.pexels.com/photos/6440/magazines-desk-work-workspace-medium.jpg);
+  <b>background-repeat</b>: no-repeat;
 }
 
-.example1 {
-}
-.example2 {
-<b>background-origin</b>: border-box;
-}
-.example3 {
-<b>background-origin</b>: content-box;
-}</code></pre>
-
+.example1 {}
+.example2 { <b>background-origin</b>: border-box; }
+.example3 { <b>background-origin</b>: content-box;}</code></pre>
 
 <h4>HTML</h4>
 
-<pre><code><b>&lt;</b>
-<b>p</b>
-<b>&gt;</b>
-No background-origin (padding-box is default):
-<b>&lt;</b>
-<b>/p</b>
-<b>&gt;</b>
-<b>&lt;div</b> class=&quot;example example1&quot;<b>&gt;</b>
+<pre><code><b>&lt;</b><b>p</b><b>&gt;</b>No background-origin (padding-box is default):<b>&lt;</b><b>/p</b><b>&gt;</b>
+<b>&lt;div</b> class=&quot;example example1&quot;<b>&gt;</b><b>&lt;h2&gt;</b>
+  <b>&lt;h2&gt;Lorem Ipsum Dolor<b>&lt;/h2&gt;</b> <b>&lt;p&gt;</b>
+  <b>&lt;p&gt;</b>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod
+  tincidunt ut laoreet dolore magna aliquam erat volutpat.<b>&lt;/p&gt;</b>
+  <b>&lt;p&gt;</b>Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut
+  aliquip ex ea commodo consequat.<b>&lt;/p&gt;
+&lt;/div&gt;</b>
 
-<b>&lt;h2&gt;</b>Lorem Ipsum Dolor<b>&lt;/h2&gt;</b> <b>&lt;p&gt;</b>Lorem ipsum dolor sit
-amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod
-tincidunt ut laoreet dolore magna aliquam erat volutpat.<b>&lt;/p&gt;</b>
-<b>&lt;p&gt;</b>Ut wisi enim ad minim veniam, quis nostrud exerci tation
-ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo
-consequat.<b>&lt;/p&gt; &lt;/div&gt;</b>
+<b>&lt;p&gt;</b>background-origin: border-box:<b>&lt;/p&gt;</b>
 
-**&lt;p&gt;**background-origin: border-box:**&lt;/p&gt;**
+<b>&lt;div</b> class=&quot;example example2&quot;<b>&gt;</b>
+  <b>&lt;h2&gt;</b>Lorem Ipsum Dolor<b>&lt;/h2&gt;</b>
+  <b>&lt;p&gt;</b>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod
+  tincidunt ut laoreet dolore magna aliquam erat volutpat.<b>&lt;/p&gt;</b>
+  <b>&lt;p&gt;</b>Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut 
+  aliquip ex ea commodo consequat.<b>&lt;/p&gt;</b>
+<b>&lt;/div&gt;</b>
 
-**&lt;div** class=&quot;example example2&quot;**&gt;**
+<b>&lt;p&gt;</b>background-origin: content-box:<b>&lt;/p&gt;</b>
+  <b>&lt;div</b> class=&quot;example example3&quot;<b>&gt;</b>
+  <b>&lt;h2&gt;</b>Lorem Ipsum Dolor<b>&lt;/h2&gt;</b> 
+  <b>&lt;p&gt;</b>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod
+  tincidunt ut laoreet dolore magna aliquam erat volutpat.<b>&lt;/p&gt;</b>
+  <b>&lt;p&gt;</b>Ut wisi enim ad minim veniam, quis nostrud exerci tation
+  ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.<b>&lt;/p&gt;</b>
+<b>&lt;/div&gt;</b></code></pre>
 
-**&lt;h2&gt;**Lorem Ipsum Dolor**&lt;/h2&gt;** **&lt;p&gt;**Lorem ipsum dolor sit
-amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod
-tincidunt ut laoreet dolore magna aliquam erat volutpat.**&lt;/p&gt;**
-**&lt;p&gt;**Ut wisi enim ad minim veniam, quis nostrud exerci tation
-ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo
-consequat.**&lt;/p&gt; &lt;/div&gt;**
-
-**&lt;p&gt;**background-origin: content-box:**&lt;/p&gt;**
-
-**&lt;div** class=&quot;example example3&quot;**&gt;**
-
-**&lt;h2&gt;**Lorem Ipsum Dolor**&lt;/h2&gt;** **&lt;p&gt;**Lorem ipsum dolor sit
-amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod
-tincidunt ut laoreet dolore magna aliquam erat volutpat.**&lt;/p&gt;**
-**&lt;p&gt;**Ut wisi enim ad minim veniam, quis nostrud exerci tation
-ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo
-consequat.**&lt;/p&gt; &lt;/div&gt;**</code></pre>
-
-Result:
+<p>Result:</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 13.  (xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="center" width="100%">
@@ -1858,65 +1838,58 @@ Result:
 
 <!-- [image013](./images/image013.jpg) -->
 
-> More:
+<p>More:</p>
 
-&lbrack;&lbrack;https://www.w3.org/TR/css3-background/#the-background-origin&rbrack;&rbrack;(https://www.w3.org/TR/css3-background/#the-background-origin)
-&lbrack;&lbrack;https://developer.mozilla.org/en-US/docs/Web/CSS/background-origin&rbrack;&rbrack;(https://developer.mozilla.org/en-US/docs/Web/CSS/background-origin)
-
+<a href="https://www.w3.org/TR/css3-background/#the-background-origin">https://www.w3.org/TR/css3-background/#the-background-origin</a>
+<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/background-origin">https://developer.mozilla.org/en-US/docs/Web/CSS/background-origin</a>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch5-8">Section 5.8: Multiple Background Image</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
-> In CSS3, we can stack multiple background in the same element.
+<p> In CSS3, we can stack multiple background in the same element.</p>
 
-```
-#mydiv {
+```#mydiv {
   **background-image**: url(img_1.png), /* top image */
-url (img_2.png), /* middle image */
-url (img_3.png); /* bottom image */
-  **background-position**: right bottom, left top, right top;
-  **background-repeat**: no-repeat, repeat, no-repeat;
-}
-```
+                        url (img_2.png), /* middle image */
+                        url (img_3.png); /* bottom image */
+  **background-position**: right bottom, 
+                           left top, 
+						   right top;
+  **background-repeat**: no-repeat, 
+                         repeat, 
+						 no-repeat;
+}```
 
-Images will be stacked atop one another with the first background on
+<p>Images will be stacked atop one another with the first background on
 top and the last background in the back. img_1 will be on top, the
-img_2 and img_3 is on bottom.
+img_2 and img_3 is on bottom.</p>
 
-We can also use background shorthand property for this:
+<p>We can also use background shorthand property for this:</p>
 
-```
-#mydiv {
-  **background**: 
-  url(img_1.png) right bottom no-repeat,
-  url(img_2.png) left top repeat,
-  url(img_3.png) right top no-repeat;
-}
-```
+```#mydiv {
+  **background**: url(img_1.png) right bottom no-repeat,
+                  url(img_2.png) left top repeat,
+                  url(img_3.png) right top no-repeat;
+}```
 
-We can also stack images and gradients:
+<p>We can also stack images and gradients:</p>
 
 ```
 #mydiv {
-  **background**:
-url(*image.png*) right bottom no-repeat,
-linear-gradient (
-  to bottom,
-  #fff 0 &percnt;
-,
-  #000 100 &percnt;
-);
+  **background**: url(*image.png*) right bottom no-repeat,
+  linear-gradient (to bottom, #fff 0 &percnt;, #000 100&percnt;);
 }
 ```
 
-[jsFiddle ](https://jsfiddle.net/z30up2un/)
-
+<ul>
+  <li><a href="https://jsfiddle.net/z30up2un/">jsFiddle Demo</a></li>
+</ul>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch5-9">Section 5.9: Background Attachment</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
-> The background-attachment property sets whether a background image is
-> fixed or scrolls with the rest of the page.
+<p>The background-attachment property sets whether a background image is
+fixed or scrolls with the rest of the page.</p>
 
 ```
 body {
@@ -1925,28 +1898,30 @@ body {
 }
 ```
 
-**Value Description**
-> scroll The background scrolls along with the element. This is default.
-> fixed The background is fixed with regard to the viewport. local The
-> background scrolls along with the element&apos;s contents. initial Sets
-> this property to its default value. inherit Inherits this property
-> from its parent element.
->
-> **Examples**
-***background-attachment: scroll***
-> The default behaviour, when the body is scrolled the background
-> scrolls with it:
+| Value | Description |
+|------------|---------------------------------------------------|
+| scroll | The background scrolls along with the element. This is default. |
+| fixed  | The background is fixed with regard to the viewport. |
+| local  | The background scrolls along with the element&apos;s contents. |
+| initial | Sets this property to its default value. |
+| inherit | Inherits this property from its parent element. |
+
+<h4>Examples</h4>
+
+<h4><i>background-attachment: scroll</i></h4>
+
+<p>The default behaviour, when the body is scrolled the background scrolls with it:</p>
 
 ```
 body {
-**background-image**: url(&apos;image.jpg&apos;);
-**background-attachment**: scroll;
+  **background-image**: url(&apos;image.jpg&apos;);
+  **background-attachment**: scroll;
 }
 ```
 
-***background-attachment: fixed***
-> The background image will be fixed and will not move when the body is
-> scrolled:
+<h4><i>background-attachment: fixed</i></h4>
+
+<p>The background image will be fixed and will not move when the body is scrolled:</p>
 
 ```
 body {
@@ -1955,9 +1930,10 @@ body {
 }
 ```
 
-***background-attachment: local***
-> The background image of the div will scroll when the contents of the
-> div is scrolled.
+<h4><i>background-attachment: local</i></h4>
+
+<p>The background image of the div will scroll when the contents of the
+div is scrolled.</p>
 
 ```
 div {
@@ -1969,22 +1945,20 @@ div {
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch5-10">Section 5.10: Background Clip</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p>Definition and Usage: The background-clip property specifies the painting area of the background.</p>
 
-> Definition and Usage: The background-clip property specifies the
-> painting area of the background.
->
-> Default value: border-box
->
-> Values
->
-> border-box is the default value. This allows the background to extend
-> all the way to the outside edge of the element&apos;s border. padding-box
-> clips the background at the outside edge of the element&apos;s padding and
-> does not let it extend into the border; content-box clips the
-> background at the edge of the content box.
->
-> inherit applies the setting of the parent to the selected element.
->
+<p>Default value: border-box</p>
+
+<p>Values</p>
+
+<ul>
+  <li>border-box is the default value. This allows the background to extend
+    all the way to the outside edge of the element&apos;s border.</li>
+  <li>padding-box clips the background at the outside edge of the element&apos;s padding and
+    does not let it extend into the border;</li>
+  <li>content-box clips the background at the edge of the content box.</li>
+  <li>inherit applies the setting of the parent to the selected element.</li>
+</ul>
 
 <h4>CSS</h4>
 
@@ -2011,117 +1985,44 @@ div {
 <h4>HTML</h4>
 
 ```
-**&lt;**
-**p**
-**&gt;**
-No background-origin (padding-box is default):
-**&lt;**
-**/p**
-**&gt;**
-**&lt;**
-**div**
-class
-=
-&quot;example example1&quot;
-**&gt;**
-**&lt;**
-**h**
-**2**
-**&gt;**
-Lorem Ipsum Dolor
-**&lt;**
-**/h**
-**2**
-<b>&gt;</b>
-<b>&lt;</b>
-<b>p</b>
-<b>&gt;</b>
-Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
-nonummy nibh euismod
-tincidunt ut laoreet dolore magna aliquam erat volutpat.
-<b>&lt;</b>
-<b>/p</b>
-<b>&gt;</b>
-<b>&lt;</b>
-<b>p</b>
-<b>&gt;</b>
-Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper
-suscipit lobortis nisl ut
-aliquip ex ea commodo consequat.
-<b>&lt;</b>
-<b>/p</b>
-<b>&gt;</b>
-<b>&lt;</b>
-<b>/div</b>
-<b>&gt;</b>
-<b>&lt;</b>
-<b>p</b>
-<b>&gt;</b>
-background-origin: border-box:
-<b>&lt;</b>
-<b>/p</b>
-<b>&gt;</b>
-<b>&lt;</b>
-<b>div</b>
-class = &quot;example example2&quot;
-<b>&gt;</b>
-<b>&lt;</b>
-<b>h</b>
-<b>2</b>
-<b>&gt;</b>
-Lorem Ipsum Dolor
-<b>&lt;</b>
-<b>/h</b>
-<b>2</b>
-<b>&gt;</b>
-<b>&lt;</b>
-<b>p</b>
-<b>&gt;</b>
-Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
-nonummy nibh euismod
-tincidunt ut laoreet dolore magna aliquam erat volutpat.
-<b>&lt;</b>
-<b>/p</b>
-<b>&gt;</b>
-<b>&lt;</b>
-<b>p</b>
-<b>&gt;</b>
-Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper
-suscipit lobortis nisl ut
-aliquip ex ea commodo consequat.
-<b>&lt;</b>
-<b>/p</b>
-<b>&gt;</b>
-<b>&lt;</b>
-<b>/div</b>
-<b>&gt;</b>
-<b>&lt;</b>
-<b>p</b>
-<b>&gt;</b>
-background-origin: content-box:
-<b>&lt;</b>
-<b>/p</b>
-<b>&gt;</b>
-<b>&lt;</b>
-<b>div</b>
-class
-=
-&quot;example example3&quot;
-<b>&gt;</b>
-<b>&lt;</b>
-<b>h</b>
-<b>2</b>
-<b>&gt;</b>
-Lorem Ipsum Dolor
-<b>&lt;</b>
-<b>/h</b>
-<b>2</b>
-<b>&gt;</b>
-> <b>&lt;p&gt;</b>There once was a man fron Sash. His balls were made of glass
-> When he rubbed them together, he made stormy weather.
-> And lightning struck out of his ass.<b>&lt;/p&gt;</b> <b>&lt;p&gt;</b>And more goes here, as
-> well. It beats Latin. I don't know Latin so better for me
-> the end.<b>&lt;/p&gt; &lt;/div&gt;</b>
+**&lt;****p****&gt;**No background-origin (padding-box is default):**&lt;****/p****&gt;**
+
+  **&lt;****div** class=&quot;example example1&quot;**&gt;**
+  **&lt;****h****2****&gt;**Lorem Ipsum Dolor**&lt;****/h****2**<b>&gt;</b>
+  <b>&lt;</b><b>p</b><b>&gt;</b>
+  Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
+  nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+  <b>&lt;</b><b>/p</b><b>&gt;</b><b>&lt;</b><b>p</b><b>&gt;</b>
+  Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper
+  suscipit lobortis nisl ut aliquip ex ea commodo consequat.
+  <b>&lt;</b><b>/p</b><b>&gt;</b>
+  <b>&lt;</b><b>/div</b><b>&gt;</b>
+
+  <b>&lt;</b><b>p</b><b>&gt;</b>background-origin: border-box:<b>&lt;</b><b>/p</b><b>&gt;</b>
+  <b>&lt;</b><b>div</b>class = &quot;example example2&quot;<b>&gt;</b>
+  <b>&lt;</b><b>h</b><b>2</b><b>&gt;</b>
+  Lorem Ipsum Dolor<b>&lt;</b><b>/h</b><b>2</b><b>&gt;</b>
+  <b>&lt;</b><b>p</b><b>&gt;</b>
+  Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod
+  tincidunt ut laoreet dolore magna aliquam erat volutpat.
+  <b>&lt;</b><b>/p</b><b>&gt;</b>
+  <b>&lt;</b><b>p</b><b>&gt;</b>
+  Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper
+  suscipit lobortis nisl ut aliquip ex ea commodo consequat.
+  <b>&lt;</b><b>/p</b><b>&gt;</b>
+  <b>&lt;</b><b>/div</b><b>&gt;</b>
+  <b>&lt;</b><b>p</b><b>&gt;</b>
+  background-origin: content-box:
+  <b>&lt;</b><b>/p</b><b>&gt;</b>
+  <b>&lt;</b><b>div</b>class = &quot;example example3&quot;<b>&gt;</b>
+  <b>&lt;</b><b>h</b><b>2</b><b>&gt;</b>
+  Lorem Ipsum Dolor
+  <b>&lt;</b><b>/h</b><b>2</b><b>&gt;</b>
+  <b>&lt;p&gt;</b>There once was a man fron Sash. His balls were made of glass
+  When he rubbed them together, he made stormy weather.
+  And lightning struck out of his ass.<b>&lt;/p&gt;</b> <b>&lt;p&gt;</b>And more goes here, as
+  well. It beats Latin. I don't know Latin so better for me
+  the end.<b>&lt;/p&gt; &lt;/div&gt;</b>
 ```
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
