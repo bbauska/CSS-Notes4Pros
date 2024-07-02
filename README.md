@@ -1583,7 +1583,7 @@ contained in the background positioning area, however, there could be
 some empty space filled with your background-color in this case:</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 09. egg in a frame (xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p align="center" width="100%">
+<p align="left" width="100%">
 <img src="./images/image009.png"
   style="width:50%"
   title=""
@@ -1603,7 +1603,7 @@ There will be no visible background-color, however depending on the
 screen&apos;s ratio a great part of your image could be cut off:</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 11. egg in a frame, #2 (xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p align="center" width="100%">
+<p align="left" width="100%">
 <img src="./images/image011.png"
   style="width:50%"
   title=""
@@ -1630,9 +1630,8 @@ div .cover {
 /*********************************
 Additional styles for the explanation boxes
 *********************************/
-
 div &gt; div {
-  <b>margin</b>: 0 1 ex 1 ex 0;
+  <b>margin</b>: 0 1ex 1ex 0;
   <b>float</b>: left;
 }
 div &plus; div {
@@ -1649,70 +1648,22 @@ div &gt; div::after {
   <b>display</b>: block;
   <b>width</b>: 10ex;
   <b>font-size</b>: 0.7em;
-  <b>content</b>: attr (
-    class 
-  );
+  <b>content</b>: attr (class);
 }
   <b>&lt;div&gt;</b>
-  <b>&lt;div class = &quot;contain&quot;</b>
-  <b>&gt;/div&lt;&gt;</b>
-  <b>&lt;p&gt;</b>
-Note the grey background. The image does not cover the whole region, but
-it&apos;s fully
-<b>&lt;</b>
-<b>em</b>
-<b>&gt;</b>
-contained
-<b>&lt;</b>
-<b>/em</b>
-<b>&gt;</b>
-.
-<b>/p</b>
-<b>&lt;</b>
-<b>&gt;</b>
-<b>&lt;</b>
-<b>/div</b>
-<b>&gt;</b>
-<b>&lt;</b>
-<b>div</b>
-<b>&gt;</b>
-<b>&lt;</b>
-<b>div</b>
-class = &quot;cover&quot;
-<b>&gt;</b>
-<b>/div</b>
-<b>&lt;</b>
-<b>&gt;</b>
-<b>&lt;</b>
-<b>p</b>
-<b>&gt;</b>
-Note the ducks/geese at the bottom of the image. Most of the water is
-cut, as well as a part of the sky. You don&apos;t see the complete 
-image anymore, but neither do you see any background color;
-the image
-<b>&lt;</b>
-<b>em</b>
-<b>&gt;</b>
-covers
-<b>&lt;</b>
-<b>/em</b>
-<b>&gt;</b>
-all of the
-<b>&lt;</b>
-<b>code</b>
-<b>&gt;</b>
-&lt;
-div
-&gt;
-<b>&lt;</b>
-<b>/code</b>
-<b>&gt;</b>.
-<b>&lt;</b>
-<b>/p</b>
-<b>&gt;</b>
-<b>&lt;</b>
-<b>/div</b>
-<b>&gt;</b></code></pre>
+    <b>&lt;div class = &quot;contain&quot;</b><b>&gt;/div&lt;&gt;</b>
+    <b>&lt;p&gt;</b>Note the grey background. The image does not cover the whole region, 
+	  but it&apos;s fully<b>&lt;</b>
+  <b>&lt;em&gt;</b>contained<b>&lt;/em&gt;</b>.
+  <b>&lt;/p&gt;</b>
+<b>&lt;/div&gt;</b>
+<b>&lt;div&gt;</b>
+  <b>&lt;div</b> class = &quot;cover&quot;<b>&gt;&lt;/div&gt;</b>
+  <b>&lt;p&gt;</b>Note the ducks/geese at the bottom of the image. Most of the water is
+    cut, as well as a part of the sky. You don&apos;t see the complete 
+    image anymore, but neither do you see any background color;
+    the image<b>&lt;em&gt;</b> covers<b>&lt;/em&gt;</b> all of the <b>&lt;code&gt;</b>&lt;div&gt;<b>&lt;/code&gt;</b>.<b>&lt;/p&gt;</b>
+<b>&lt;/div&gt;</b>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ contain & cover images (xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="center" width="100%">
