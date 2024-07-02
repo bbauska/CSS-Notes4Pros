@@ -1651,7 +1651,7 @@ div &gt; div::after {
   <b>content</b>: attr (class);
 }
   <b>&lt;div&gt;</b>
-    <b>&lt;div class = &quot;contain&quot;</b><b>&gt;/div&lt;&gt;</b>
+    <b>&lt;div</b> class=&quot;contain&quot;<b>&gt;&lt;/div&lt;</b>
     <b>&lt;p&gt;</b>Note the grey background. The image does not cover the whole region, 
 	  but it&apos;s fully<b>&lt;</b>
   <b>&lt;em&gt;</b>contained<b>&lt;/em&gt;</b>.
@@ -1666,7 +1666,7 @@ div &gt; div::after {
 <b>&lt;/div&gt;</b>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ contain & cover images (xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p align="center" width="100%">
+<p align="left" width="100%">
 <img src="./images/contain-cover.png"
   style="width:50%"
   title=""
@@ -1675,7 +1675,6 @@ div &gt; div::after {
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch5-6">Section 5.6: Background Position</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-
 <p>The <a href="https://drafts.csswg.org/css-backgrounds-3/#background-position">background-position</a> 
 property is used to specify the starting position for a background image or gradient.</p>
 
