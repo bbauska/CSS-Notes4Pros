@@ -2609,11 +2609,18 @@ src
 ```
 
 > Result:
-
-[image015.jpg](./images/image015.jpg)
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 15.  (xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p align="center" width="100%">
+<img src="./images/image015.jpg"
+  style="width:50%"
+  title=""
+  alt="." />
+</p>
+<!-- [image015.jpg](./images/image015.jpg) -->
 
 JSFiddle example: &lbrack;&lbrack;Centering objects with margin: 0
-auto;&rbrack;&rbrack;(https://jsfiddle.net/xf1ze3v9/)
+auto <a href="https://jsfiddle.net/xf1ze3v9/">Demo</a>.
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch6-4">Section 6.4: Using text-align</h3>
@@ -4441,11 +4448,17 @@ teal
 > The browser creates a rectangle for each element in the HTML document.
 > The Box Model describes how the padding, border, and margin are added
 > to the content to create this rectangle.
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 16.  (xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p align="center" width="100%">
+<img src="./images/image016.png"
+  style="width:50%"
+  title=""
+  alt="." />
+</p>
+<!-- [image016.png](./images/image016.png)  <!-- 4.7" -->
 
-[image016.png](./images/image016.png)  <!-- 4.7" -->
-
-*Diagram from &lbrack;&lbrack;CSS2.2 Working
-Draft&rbrack;&rbrack;(https://www.w3.org/TR/CSS22/box.html#mpb-examples)*
+Diagram from CSS2.2 Working Draft <a href="https://www.w3.org/TR/CSS22/box.html#mpb-examples">Demo</a>.
 
 > The perimeter of each of the four areas is called an *edge*. Each edge
 > defines a *box.*
@@ -4468,48 +4481,26 @@ Draft&rbrack;&rbrack;(https://www.w3.org/TR/CSS22/box.html#mpb-examples)*
 >
 > **Example** div {
 
-**border**
-
-:
-
-5
-
-px
-
-solid
-
-red
-
-;
-
-**margin**
-
-:
-
-50
-
-px
-
-;
-
-**padding**
-
-:
-
-20
-
-px
-
-;
-
+```
+**border**: 5px solid red;
+**margin**: 50px;
+**padding**: 20px;
 }
+```
 
 > This CSS styles all div elements to have a top, right, bottom and left
 > border of 5px in width; a top, right, bottom and left margin of 50px;
 > and a top, right, bottom, and left padding of 20px. Ignoring content,
 > our generated box will look like this:
-
-[image017.jpg](./images/image017.jpg) <!-- 1.8" -->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 17.  (xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p align="center" width="100%">
+<img src="./images/image017.jpg"
+  style="width:20%"
+  title=""
+  alt="." />
+</p>
+<!--[image017.jpg](./images/image017.jpg) <!-- 1.8" -->
 
 > *Screenshot of Google Chrome&apos;s Element Styles panel*
 >
@@ -4530,8 +4521,15 @@ px
 > looks at the Box Model of both elements to work out where in relation
 > to the previous element&apos;s content the new element should be
 > positioned:
-
-[image018.jpg 3.6" width, 1.5" height](./images/image018.jpg)
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 18.  (xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p align="center" width="100%">
+<img src="./images/image018.jpg"
+  style="width:30%"
+  title=""
+  alt="." />
+</p>
+<!-- [image018.jpg 3.6" width, 1.5" height](./images/image018.jpg) -->
 
 > The content of each of element is separated by a 150px gap, but the
 > two elements&apos; boxes touch each other.
@@ -4539,8 +4537,15 @@ px
 > If we then modify our first element to have no right margin, the right
 > margin edge would be in the same position as the right border edge,
 > and our two elements would now look like this:
-
-[image019.jpg 3.45" x 1.54"](./images/image019.jpg)
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 19.  (xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p align="center" width="100%">
+<img src="./images/image019.jpg"
+  style="width:30%"
+  title=""
+  alt="." />
+</p>
+<!-- [image019.jpg 3.45" x 1.54"](./images/image019.jpg) -->
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch7-2">Section 7.2: box-sizing</h3>
@@ -5089,8 +5094,15 @@ The following code would add a padding of 5px to the top of the div:
 >
 > Every corner of an element can have up to two values, for the vertical
 > and horizontal radius of that corner (for a maximum of 8 values).
-
-[image025.jpg 6.14 x 1.93](./images/image025.jpg)
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 25.  (xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p align="center" width="100%">
+<img src="./images/image025.jpg"
+  style="width:60%"
+  title=""
+  alt="." />
+</p>
+<!-- [image025.jpg 6.14 x 1.93](./images/image025.jpg) -->
 
 > The first set of values defines the horizontal radius. The optional
 > second set of values, preceded by a '/' , defines the vertical radius.
