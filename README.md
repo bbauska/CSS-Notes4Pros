@@ -1403,10 +1403,11 @@ image on top of the others and so on.</p>
 
 <p>The following attributes are very useful and almost essential;</p>
 
-| <b>background-size</b>: | &nbsp; xpx ypx | x% y%; |
-| <b>background-repeat</b>: |  no-repeat | repeat | repeat-x | repeat-y; |
-| <b>background-position</b>: | left offset (px/%) right offset (px/%) | center center | left top | right |
-|                           |                                        |               |          | bottom; |
+<h5>background-size</b>:&nbsp;&nbsp;&nbsp;&nbsp; xpx ypx | x% y%;</h5>
+
+<h5>background-repeat</b>:&nbsp; no-repeat &vert; repeat &vert; repeat-x &vert; repeat-y;</h5>
+ 
+<h5>background-position</b>: left offset (px/%) right offset (px/%) &vert; center center &vert; left top &vert; right bottom</h5>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch5-4">Section 5.4: Background Shorthand</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -1436,36 +1437,27 @@ image on top of the others and so on.</p>
 <p>The syntax of the background shorthand declaration is:</p>
 
 <b>background</b>: &lbrack;&lt;background-image&gt;&rbrack; &lbrack;&lt;background-color&gt;&rbrack;
-&lbrack;&lt;background-position&gt;&rbrack;/&lbrack;&lt;background-size&gt;&rbrack;
-
+&lbrack;&lt;background-position&gt;&rbrack;/&lbrack;&lt;background-size&gt;&rbrack;<br>
 &lbrack;&lt;background-repeat&gt;&rbrack; &lbrack;&lt;background-origin&gt;&rbrack;
-&lbrack;&lt;background-clip&gt;&rbrack; &lbrack;&lt;background-attachment&gt;&rbrack;
+&lbrack;&lt;background-clip&gt;&rbrack; &lbrack;&lt;background-attachment&gt;&rbrack;<br>
 &lbrack;&lt;initial&vert;inherit&gt;&rbrack;;
 
 <p>Examples</p>
 
-```
-<b>background</b>: red;
-```
+<pre><code><b>background</b>: red;</code></pre>
 
 <p>Simply setting a background-color with the red value.</p>
 
-```
-<b>background</b>: border-box red;
-```
+<pre><code><b>background</b>: border-box red;</code></pre>
 
 <p>Setting a background-clip to border-box and a background-color to red.</p>
 
-```
-<b>background</b>: no-repeat center url(&quot;somepng.jpg&quot;);
-```
+<pre><code><b>background</b>: no-repeat center url(&quot;somepng.jpg&quot;);</code></pre>
 
 <p>Sets a background-repeat to no-repeat, background-origin to center and
 a background-image to an image.</p>
 
-```
-<b>background</b>: url(&apos;pattern.png&apos;) green;
-```
+<pre><code><b>background</b>: url(&apos;pattern.png&apos;) green;</code></pre>
 
 <p>In this example, the background-color of the element would be set to
 green with pattern.png, if it is available, overlayed on the colour,
@@ -1473,9 +1465,7 @@ repeating as often as necessary to fill the element. If pattern.png
 includes any transparency then the green colour will be visible behind
 it;</p>
 
-```
-<b>background</b>: #000000 url(&quot;picture.png&quot;) top left / 600px auto no-repeat;
-```
+<pre><code><b>background</b>: #000000 url(&quot;picture.png&quot;) top left / 600px auto no-repeat;</code></pre>
 
 <p>In this example we have a black background with an image
 &apos;picture.png&apos; on top, the image does not repeat in either axis and
@@ -1505,12 +1495,10 @@ height is optional and can be considered auto. Therefore, on a 256 px
 × 256 px image, all the following background-size settings would yield
 an image with height and width of 50 px:</p>
 
-```
-<b>background-size</b>: 50px;
+<pre><code><b>background-size</b>: 50px;
 <b>background-size</b>: 50px auto; /* same as above */
 <b>background-size</b>: auto 50px;
-<b>background-size</b>: 50px 50px;
-```
+<b>background-size</b>: 50px 50px;</code></pre>
 
 <p>So if we started with the following picture (which has the mentioned
 size of 256 px × 256 px),</p>
@@ -1522,8 +1510,7 @@ the background of our element:</p>
 the element. The following example would yield a 200 px × 133 px drawn
 image:</p>
 
-```
-#withbackground {
+<pre><code>#withbackground {
   <b>background-image</b>: url(to/some/background.png);
   <b>background-size</b>: 100&percnt; 66&percnt;;
   
@@ -1532,8 +1519,8 @@ image:</p>
   
   <b>padding</b>: 0;
   <b>margin</b>: 0; 
-}
-```
+}</code></pre>
+
 <image 3>
 
 <p>The behaviour depends on the 
@@ -1627,8 +1614,7 @@ screen&apos;s ratio a great part of your image could be cut off:</p>
 
 <h4>Demonstration with actual code</h4>
 
-```
-div &gt; div {
+<pre><code>div &gt; div {
   <b>background-image</b>: url(http://i.stack.imgur.com/r5CAq.jpg);
   <b>background-repeat</b>: no-repeat;
   <b>background-position</b>: center center;
@@ -1728,8 +1714,7 @@ div
 <b>&gt;</b>
 <b>&lt;</b>
 <b>/div</b>
-<b>&gt;</b>
-```
+<b>&gt;</b></code></pre>
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch5-6">Section 5.6: Background Position</h3>
@@ -1738,12 +1723,10 @@ div
 <p>The <a href="https://drafts.csswg.org/css-backgrounds-3/#background-position">background-position</a> 
 property is used to specify the starting position for a background image or gradient.</p>
 
-```
-.myClass {
+<pre><code>.myClass {
   <b>background-image</b>: url(&apos;path/to/image.jpg&apos;);
   <b>background-position</b>: 50&percnt; 50&percnt;;
-}
-```
+}</code></pre>
 
 <p>The position is set using an <b>X</b> and <b>Y</b> co-ordinate and be set
 using any of the units used within CSS.</p>
@@ -1817,8 +1800,7 @@ using any of the units used within CSS.</p>
 
 <h4>HTML</h4>
 
-```
-<b>&lt;</b>
+<pre><code><b>&lt;</b>
 <b>p</b>
 <b>&gt;</b>
 No background-origin (padding-box is default):
@@ -1854,8 +1836,7 @@ amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod
 tincidunt ut laoreet dolore magna aliquam erat volutpat.**&lt;/p&gt;**
 **&lt;p&gt;**Ut wisi enim ad minim veniam, quis nostrud exerci tation
 ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo
-consequat.**&lt;/p&gt; &lt;/div&gt;** 
-```
+consequat.**&lt;/p&gt; &lt;/div&gt;**</code></pre>
 
 Result:
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -28374,8 +28355,7 @@ for painting
 
 Animate with transform with the same animation.
 
-```
-#box {
+<pre><code>#box {
   <b>left</b>: 0;
   <b>top</b>: 0;
   <b>position</b>: absolute;
@@ -28388,8 +28368,7 @@ Animate with transform with the same animation.
 
 #box.active {
   <b>transform</b>: translate3d(100px, 100px, 0);
-}
-```
+}</code></pre>
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 268.  (xxx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
