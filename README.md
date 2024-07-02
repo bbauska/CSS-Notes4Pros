@@ -1235,26 +1235,22 @@ HSLa allows you to add an additional alpha parameter between 0.0 and
 
 <p>The following statements are all equivalent:</p>
 
-</code></pre>body {
+<pre><code>body {
   background: red;
-  background-image: url (
-partiallytransparentimage.png
-);
+  background-image: url (partiallytransparentimage.png);
 }
 body {
   background-color: red;
-  background-image: url (
-    partiallytransparentimage.png);
+  background-image: url (partiallytransparentimage.png);
 }
 body {
-  background-image: url(
-    partiallytransparentimage.png);
+  background-image: url(partiallytransparentimage.png);
   background-color: red;
 }
 body {
-  background: redurl (
-    partiallytransparentimage.png);
+  background: red url (partiallytransparentimage.png);
 }</code></pre>
+
 <!-- page 24 -->
 They will all lead to the red color being shown underneath the image,
 where the parts of the image are transparent, or the image is not
@@ -1263,8 +1259,8 @@ showing (perhaps as a result of background-repeat).
 Note that the following is not equivalent:
 
 </code></pre>body {
-<b>background-image</b>: url(partiallytransparentimage.png);
-<b>background</b>: red;
+  <b>background-image</b>: url(partiallytransparentimage.png);
+  <b>background</b>: red;
 }</code></pre>
 
 Here, the value of background overrides your background-image.
@@ -1293,7 +1289,7 @@ type has a non-repeating variant and a repeating variant:
 
 <p>A linear-gradient has the following syntax</p>
 
-<b>background</b>: inear-gradient( &lt;direction&gt;?, &lt;color-stop-1&gt;, &lt;color-stop-2&gt;, ...);
+<b>background</b>: linear-gradient( &lt;direction&gt;?, &lt;color-stop-1&gt;, &lt;color-stop-2&gt;, ...);
 
 | Value             | Meaning |
 |:-----------------:|-----------------------------------------------|
@@ -1304,7 +1300,7 @@ type has a non-repeating variant and a repeating variant:
 |                   | example, yellow 10%, rgba(0,0,0,.5) 40px, #fff 100%... |
 
 
-Can be specified in
+Can be specified in;
 <ul>
   <li><a href="https://www.w3.org/TR/css3-values/#deg">deg</a>,</li>
   <li><a href="https://www.w3.org/TR/css3-values/#grad">grad</a>,</li>
@@ -1315,7 +1311,7 @@ Can be specified in
 For example, this creates a linear gradient that starts from the right and transitions from red to blue.
 
 <pre><code>.linear-gradient {
-  <b>background</b>: linear-gradient (to left top, red, blue); /* you can also use 270deg */
+  <b>background</b>: linear-gradient (to left, red, blue); /* you can also use 270deg */
 }</code></pre>
 
 You can create a diagonal gradient by declaring both a horizontal and vertical starting position.
@@ -1330,7 +1326,7 @@ separating them with commas. The following examples will create a
 gradient with 8 color stops
 
 <pre><code>.linear-gradient-rainbow {
-  <b>background</b>: linear-gradient(to left, red, orange, yellow, green, blue, indigo, violet)
+  <b>background</b>: linear-gradient(to left, red, orange, yellow, green, blue, indigo, violet);
 }</code></pre>
 
 <h4>radial-gradient()</h4>
@@ -1364,21 +1360,11 @@ examples, but tile the gradient across the background of the element.
 
 | <b>Value</b>   | <b>Meaning</b>  |
 |----------------|-----------------|
-| -45deg         | Angle unit. The angle starts from the top and rotates clockwise. Can be specified in deg, grad, rad, or |
-|                | turn. |
+| -45deg         | <a href="https://www.w3.org/TR/css3-values/#angles">Angle unit</a>. The angle starts from the top and rotates clockwise. Can be specified in <a href="https://www.w3.org/TR/css3-values/#deg">deg</a>, <a href="https://www.w3.org/TR/css3-values/#grad">grad</a>, <a href="https://www.w3.org/TR/css3-values/#rad">rad</a>, or |
+|                | <a href="https://www.w3.org/TR/css3-values/#turn">turn</a>. |
 | to left        | Direction of gradient, default is to bottom. Syntax: to &lbrack;y-axis(top or bottom)&rbrack; &lbrackx-asis(left OR |
 |                | right)&rbrack; ie to top right. |
 | yellow 10%     | Color, optionally followed by a percentage or length to display it at. Repeated two or more times. |
-
-[Angle unit](https://www.w3.org/TR/css3-values/#angles)
-
-[degres](https://www.w3.org/TR/css3-values/#deg),
-
-[grad] (https://www.w3.org/TR/css3-values/#grad),
-
-[rad](https://www.w3.org/TR/css3-values/#rad),
-
-[turn](https://www.w3.org/TR/css3-values/#turn).
 
 Note that HEX, RGB, RGBa, HSL, and HSLa color codes may be used instead of color names. Color names were used
 for the sake of illustration. Also note that the radial-gradient syntax is much more complex than linear-gradient, 
@@ -1391,16 +1377,16 @@ and a simplified version is shown here. For a full explanation and specs, see th
 be applied to all matched elements. By default, this image is tiled to
 cover the entire element, excluding margin.</p>
 
-<pre><code..myClass {
+<pre><code>.myClass {
   <b>background-image</b>: url (&apos;/path/to/image.jpg&apos;);
 }</code></pre>
 
+<!-- page 26 -->
 <p>To use multiple images as background-image, define comma separated url()</p>
 
 <pre><code>.myClass {
-  <b>background-image</b>: url 
-  (&apos;/path/to/image.jpg&apos;), url (
-  &apos;/path/to/image2.jpg&apos;);
+  <b>background-image</b>: url (&apos;/path/to/image.jpg&apos;), 
+                           url (&apos;/path/to/image2.jpg&apos;);
 }</code></pre>
 
 <p>The images will stack according to their order with the first declared
