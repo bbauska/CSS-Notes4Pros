@@ -1293,14 +1293,14 @@ type has a non-repeating variant and a repeating variant:
 
 | Value             | Meaning |
 |:-----------------:|-----------------------------------------------|
-| &lt;direction&gt; | Could be an argument like to top, to bottom, to right or to left; or an angle as 0deg, |
-|                   | 90deg... . The angle starts from top and rotates clockwise. Can be specified in deg, grad, rad, |
-|                   | or turn. If omitted, the gradient flows from top to bottom. |
+| &lt;direction&gt; | Could be an argument like to top, to bottom, to right or to left; or an <a href="https://www.w3.org/TR/css3-values/#angles">angle</a> as 0deg, |
+|                   | 90deg... . The angle starts from top and rotates clockwise. Can be specified in <a href="https://www.w3.org/TR/css3-values/#deg">deg</a>, <a href="https://www.w3.org/TR/css3-values/#grad">grad</a>, <a href="https://www.w3.org/TR/css3-values/#rad">rad</a>, |
+|                   | or <a href="https://www.w3.org/TR/css3-values/#turn">turn</a>. If omitted, the gradient flows from top to bottom. |
 | &lt;color-stop-list&gt; | List of colors, optionally followed each one by a percentage or length to display it at. For |
 |                   | example, yellow 10%, rgba(0,0,0,.5) 40px, #fff 100%... |
 
 
-Can be specified in;
+<h4>Can be specified in;</h4>
 <ul>
   <li><a href="https://www.w3.org/TR/css3-values/#deg">deg</a>,</li>
   <li><a href="https://www.w3.org/TR/css3-values/#grad">grad</a>,</li>
@@ -1308,22 +1308,21 @@ Can be specified in;
   <li><a href="https://www.w3.org/TR/css3-values/#turn">turn</a>.</li>
 </ul>
 
-For example, this creates a linear gradient that starts from the right and transitions from red to blue.
+<p>For example, this creates a linear gradient that starts from the right and transitions from red to blue.</p>
 
 <pre><code>.linear-gradient {
   <b>background</b>: linear-gradient (to left, red, blue); /* you can also use 270deg */
 }</code></pre>
 
-You can create a diagonal gradient by declaring both a horizontal and vertical starting position.
+<p>You can create a diagonal gradient by declaring both a horizontal and vertical starting position.</p>
 
 <pre><code>.diagonal-linear-gradient {
   <b>background</b>: linear-gradient (to left top, red, yellow 10&percnt;);
 }</code></pre>
 <!-- page 25 -->
-
-It is possible to specify any number of color stops in a gradient by
+<p>It is possible to specify any number of color stops in a gradient by
 separating them with commas. The following examples will create a
-gradient with 8 color stops
+gradient with 8 color stops;</p>
 
 <pre><code>.linear-gradient-rainbow {
   <b>background</b>: linear-gradient(to left, red, orange, yellow, green, blue, indigo, violet);
@@ -1348,14 +1347,14 @@ gradient with 8 color stops
 
 <h4>Repeating gradients</h4>
 
-Repeating gradient functions take the same arguments as the above
-examples, but tile the gradient across the background of the element.
+<p>Repeating gradient functions take the same arguments as the above
+examples, but tile the gradient across the background of the element.</p>
 
 <pre><code>.bullseye {
   <b>background</b>: repeating-radial-gradient(red, red 10&percnt;, white 10&percnt;, white 20&percnt;);
 }
 .warning {
-  <b>background</b>: repeating-linear-gradient(-45deg, yellow, yellow 10&percnt;, black 10&percnt;, black 20&percnt; );
+  <b>background</b>: repeating-linear-gradient(-45deg, yellow, yellow 10&percnt;, black 10&percnt;, black 20&percnt;);
 }</code/</pre>
 
 | <b>Value</b>   | <b>Meaning</b>  |
@@ -1366,10 +1365,10 @@ examples, but tile the gradient across the background of the element.
 |                | right)&rbrack; ie to top right. |
 | yellow 10%     | Color, optionally followed by a percentage or length to display it at. Repeated two or more times. |
 
-Note that HEX, RGB, RGBa, HSL, and HSLa color codes may be used instead of color names. Color names were used
+<p>Note that HEX, RGB, RGBa, HSL, and HSLa color codes may be used instead of color names. Color names were used
 for the sake of illustration. Also note that the radial-gradient syntax is much more complex than linear-gradient, 
 and a simplified version is shown here. For a full explanation and specs, see the 
-<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/radial-gradient">MDN Docs</a>
+<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/radial-gradient">MDN Docs</a>.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch5-3">Section 5.3: Background Image</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -1382,7 +1381,7 @@ cover the entire element, excluding margin.</p>
 }</code></pre>
 
 <!-- page 26 -->
-<p>To use multiple images as background-image, define comma separated url()</p>
+<p>To use multiple images as background-image, define comma separated url().</p>
 
 <pre><code>.myClass {
   <b>background-image</b>: url (&apos;/path/to/image.jpg&apos;), 
@@ -1402,18 +1401,17 @@ image on top of the others and so on.</p>
 
 <h4>More CSS for Background Image</h4>
 
-This following attributes are very useful and almost essential too.
+<p>The following attributes are very useful and almost essential, too;</p>
 
-<b>background-size</b>: xpx ypx &vertbar; x% y%; 
-<b>background-repeat</b>: no-repeat &vertbar; repeat &vertbar; repeat-x &vertbar; repeat-y; 
+<b>background-size</b>:     xpx ypx &vertbar; x% y%; 
+<b>background-repeat</b>:   no-repeat &vertbar; repeat &vertbar; repeat-x &vertbar; repeat-y; 
 <b>background-position</b>: left offset (px/%) right offset (px/%) &vertbar; center center &vertbar; left top &vertbar; right 
 bottom;
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch5-4">Section 5.4: Background Shorthand</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-
-The background property can be used to set one or more background
-related properties:
+<p>The background property can be used to set one or more background
+related properties:</p>
 
 | <b>Value</b> | <b>Description</b>                                  |
 |--------------|--------------------------------------------------|
