@@ -1663,7 +1663,7 @@ div &gt; div::after {
     cut, as well as a part of the sky. You don&apos;t see the complete 
     image anymore, but neither do you see any background color;
     the image<b>&lt;em&gt;</b> covers<b>&lt;/em&gt;</b> all of the <b>&lt;code&gt;</b>&lt;div&gt;<b>&lt;/code&gt;</b>.<b>&lt;/p&gt;</b>
-<b>&lt;/div&gt;</b>
+<b>&lt;/div&gt;</b></code></pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ contain & cover images (xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left" width="100%">
