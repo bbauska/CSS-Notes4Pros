@@ -1330,7 +1330,7 @@ gradient with 8 color stops;</p>
 
 <h4>radial-gradient()</h4>
 
-<pre><code><b>.radial-gradient-simple {
+<pre><code>.radial-gradient-simple {
   <b>background</b>: radial-gradient(red, blue);
 }
 .radial-gradient {
@@ -1394,14 +1394,14 @@ image on top of the others and so on.</p>
 | <b>Value</b>  |   <b>Result</b>    |
 |---------------|--------------------|
 | url (&apos;/path/to/image.jpg&apos;) | Specify background image&apos;s path(s) or an image resource specified with data URI |
-|                                      | schema (apostrophes can be omitted), separate multiples by comma |
-| none | No backgound image |
-| initial   | Default value |
-| inherit | Inherit parent's value |
+|                                      | schema (apostrophes can be omitted), separate multiples by comma. |
+| none | No backgound image. |
+| initial   | Default value. |
+| inherit | Inherit parent's value. |
 
 <h4>More CSS for Background Image</h4>
 
-<p>The following attributes are very useful and almost essential, too;</p>
+<p>The following attributes are very useful and almost essential;</p>
 
 <b>background-size</b>:     xpx ypx &vertbar; x% y%; 
 <b>background-repeat</b>:   no-repeat &vertbar; repeat &vertbar; repeat-x &vertbar; repeat-y; 
