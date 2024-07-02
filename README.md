@@ -1403,194 +1403,162 @@ image on top of the others and so on.</p>
 
 <p>The following attributes are very useful and almost essential;</p>
 
-<b>background-size</b>:     xpx ypx &vert;; x% y%; 
-<b>background-repeat</b>:   no-repeat &vert;; repeat &vert;; repeat-x &vert;; repeat-y; 
-<b>background-position</b>: left offset (px/%) right offset (px/%) &vert;; center center &vert;; left top &vert;; right 
-bottom;
+| <b>background-size</b>: | &nbsp; xpx ypx | x% y%; |
+| <b>background-repeat</b>: |  no-repeat | repeat | repeat-x | repeat-y; |
+| <b>background-position</b>: | left offset (px/%) right offset (px/%) | center center | left top | right |
+|                           |                                        |               |          | bottom; |
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch5-4">Section 5.4: Background Shorthand</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>The background property can be used to set one or more background
-related properties:</p>
+<p>The background property can be used to set one or more background related properties:</p>
 
-| <b>Value</b> | <b>Description</b>                                  |
+| <b>Value</b> | <b>Description</b>                               |
 |--------------|--------------------------------------------------|
-| back         | Background image to use                          |
-| ground-image |                                                  |
-|--------------|--------------------------------------------------|
-| back         | Background color to apply                        |
-| ground-color |                                                  |
-|--------------|--------------------------------------------------|
-| backgro      | Background image&apos;s position                 |
-| und-position |                                                  |
-|--------------|--------------------------------------------------|
-| bac          | Background image&apos;s size                     |
-| kground-size |                                                  |
-|--------------|--------------------------------------------------|
-| backg        | How to repeat background image                   |
-| round-repeat |                                                  |
-|--------------|--------------------------------------------------|
-| backg        | How the background is positioned (ignored when   |
-| round-origin | background-attachment is fixed)                  |
-|--------------|--------------------------------------------------|
-| bac          | How the background is painted relative to the    |
-| kground-clip | content-box, border-box, or the padding-box      |
-|--------------|--------------------------------------------------|
-| How the      |                                                  |
-| background   |                                                  |
-| image        |                                                  |
-| behaves,     |                                                  |
-| whether it   |                                                  |
-| scrolls      |                                                  |
-| along with   |                                                  |
-| its          |                                                  |
-| containing   |                                                  |
-|              |                                                  |
-| backgroun    |                                                  |
-| d-attachment |                                                  |
-| block or has |                                                  |
-| a fixed      |                                                  |
-| position     |                                                  |
-| within the   |                                                  |
-| viewport     |                                                  |
-|--------------|--------------------------------------------------|
-| initial Sets |                                                  |
-| the property |                                                  |
-| to value to  |                                                  |
-| default      |                                                  |
-|--------------|--------------------------------------------------|
-| inherit      |                                                  |
-| Inherits     |                                                  |
-| property     |                                                  |
-| value from   |                                                  |
-| parent       |                                                  |
+| background-image | Background image to use.  |
+| background-color | Background color to apply. |
+| background-position | Background image&apos;s position. |
+| background-size | Background image&apos;s size. |
+| background-repeat | How to repeat background image. |
+| background-origin | How the background is positioned (ignored when |
+|              | background-attachment is fixed).                 |
+| background-clip | How the background is painted relative to the |
+|              | content-box, border-box, or the padding-box.     |
+| background-attachment | How the background image behaves, whether it |
+|              | scrolls along with its containing block or has a |
+|              | fixed position within the viewport.  |
+| initial      | Sets the property value to default. |
+| inherit      | Inherits property value from parent.       |
 
-> The order of the values does not matter and every value is optional
-> <b>Syntax</b>
->
-> The syntax of the background shorthand declaration is:
->
-> <b>background</b>: &lbrack;&lt;background-image&gt;&rbrack; &lbrack;&lt;background-color&gt;&rbrack;
-> &lbrack;&lt;background-position&gt;&rbrack;/&lbrack;&lt;background-size&gt;&rbrack;
->
-> &lbrack;&lt;background-repeat&gt;&rbrack; &lbrack;&lt;background-origin&gt;&rbrack;
-> &lbrack;&lt;background-clip&gt;&rbrack; &lbrack;&lt;background-attachment&gt;&rbrack;
-> &lbrack;&lt;initial&vert;;inherit&gt;&rbrack;;
->
-> <b>Examples</b>
+<p>The order of the values does not matter and every value is optional.</p>
+
+<h4>Syntax</h4>
+
+<p>The syntax of the background shorthand declaration is:</p>
+
+<b>background</b>: &lbrack;&lt;background-image&gt;&rbrack; &lbrack;&lt;background-color&gt;&rbrack;
+&lbrack;&lt;background-position&gt;&rbrack;/&lbrack;&lt;background-size&gt;&rbrack;
+
+&lbrack;&lt;background-repeat&gt;&rbrack; &lbrack;&lt;background-origin&gt;&rbrack;
+&lbrack;&lt;background-clip&gt;&rbrack; &lbrack;&lt;background-attachment&gt;&rbrack;
+&lbrack;&lt;initial&vert;inherit&gt;&rbrack;;
+
+<p>Examples</p>
 
 ```
 <b>background</b>: red;
 ```
 
-Simply setting a background-color with the redvalue.
+<p>Simply setting a background-color with the red value.</p>
 
 ```
 <b>background</b>: border-box red;
 ```
 
-Setting a background-clip to border-box and a background-color to red.
+<p>Setting a background-clip to border-box and a background-color to red.</p>
 
 ```
 <b>background</b>: no-repeat center url(&quot;somepng.jpg&quot;);
 ```
 
-> Sets a background-repeat to no-repeat, background-origin to center and
-> a background-image to an image.
+<p>Sets a background-repeat to no-repeat, background-origin to center and
+a background-image to an image.</p>
 
 ```
-<b>background</b>: url(&apos;pattern.png&apos;)
-  green;
+<b>background</b>: url(&apos;pattern.png&apos;) green;
 ```
 
-> In this example, the background-color of the element would be set to
-> green with pattern.png, if it is available, overlayed on the colour,
-> repeating as often as necessary to fill the element. If pattern.png
-> includes any transparency then the green colour will be visible behind
-> it. <b>background</b>: #000000 url(&quot;picture.png&quot;) top left / 600px auto
-> no-repeat;
->
-> In this example we have a black background with an image
-> &apos;picture.png&apos; on top, the image does not repeat in either axis and
-> is positioned in the top left corner. The / after the position is to
-> be able to include the size of the background image which in this case
-> is set as 600px width and auto for the height. This example could work
-> well with a feature image that can fade into a solid colour.
->
-> <b>NOTE:</b> Use of the shorthand background property resets all
-> previously set background property values, even if a value is not
-> given. If you wish only to modify a background property value
-> previously set, use a longhand property instead.
+<p>In this example, the background-color of the element would be set to
+green with pattern.png, if it is available, overlayed on the colour,
+repeating as often as necessary to fill the element. If pattern.png
+includes any transparency then the green colour will be visible behind
+it;</p>
 
+```
+<b>background</b>: #000000 url(&quot;picture.png&quot;) top left / 600px auto no-repeat;
+```
+
+<p>In this example we have a black background with an image
+&apos;picture.png&apos; on top, the image does not repeat in either axis and
+is positioned in the top left corner. The / after the position is to
+be able to include the size of the background image which in this case
+is set as 600px width and auto for the height. This example could work
+well with a feature image that can fade into a solid colour;</p>
+
+<blockquote>
+  <b>NOTE:</b> Use of the shorthand background property resets all
+  previously set background property values, even if a value is not
+  given. If you wish only to modify a background property value
+  previously set, use a longhand property instead.
+</blockquote>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch5-5">Section 5.5: Background Size</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h4>General overview</h4>
 
-> <b>General overview</b>
->
-> The <a href="https://www.w3.org/TR/2014/CR-css3-background-20140909/#the-background-size">background-size Demo </a>
-> property enables one to control the scaling of the background-image.
-> It takes up to two values, which determine the scale/size of the
-> resulting image in vertical and and horizontal direction. If the
-> property is missing, its deemed auto in both width and height.
->
-> auto will keep the image&apos;s aspect ratio, if it can be determined. The
-> height is optional and can be considered auto. Therefore, on a 256 px
-> × 256 px image, all the following background-size settings would yield
-> an image with height and width of 50 px:
+<p>The <a href="https://www.w3.org/TR/2014/CR-css3-background-20140909/#the-background-size">background-size Demo </a>
+property enables one to control the scaling of the background-image.
+It takes up to two values, which determine the scale/size of the
+resulting image in vertical and and horizontal direction. If the
+property is missing, its deemed auto in both width and height.<br><br>
+auto will keep the image&apos;s aspect ratio, if it can be determined. The
+height is optional and can be considered auto. Therefore, on a 256 px
+× 256 px image, all the following background-size settings would yield
+an image with height and width of 50 px:</p>
 
 ```
 <b>background-size</b>: 50px;
-<b>background-size</b>: 50px auto;
-/* same as above */
+<b>background-size</b>: 50px auto; /* same as above */
 <b>background-size</b>: auto 50px;
 <b>background-size</b>: 50px 50px;
 ```
 
-> So if we started with the following picture (which has the mentioned
-> size of 256 px × 256 px),
->
-> we&apos;ll end up with a 50 px × 50 px on the user&apos;s screen, contained in
-> the background of our element:
->
-> One can also use percentage values to scale the image with respect of
-> the element. The following example would yield a 200 px × 133 px drawn
-> image:
+<p>So if we started with the following picture (which has the mentioned
+size of 256 px × 256 px),</p>
+<image 1>
+<p>we&apos;ll end up with a 50 px × 50 px on the user&apos;s screen, contained in
+the background of our element:</p>
+<image 2>
+<p>One can also use percentage values to scale the image with respect of
+the element. The following example would yield a 200 px × 133 px drawn
+image:</p>
 
 ```
 #withbackground {
-  <b>background-image</b>: url(*to/some/background.png*);
+  <b>background-image</b>: url(to/some/background.png);
   <b>background-size</b>: 100&percnt; 66&percnt;;
+  
   <b>width</b>:200px;
   <b>height</b>: 200px;
+  
   <b>padding</b>: 0;
   <b>margin</b>: 0; 
 }
 ```
+<image 3>
 
 <p>The behaviour depends on the 
 <a href="">https://www.w3.org/TR/2014/CR-css3-background-20140909/#the-background-origin">background-origin Demo</a>.</p>
 
-> <b>Keeping the aspect ratio</b>
->
-> The last example in the previos section lost its original aspect
-> ratio. The circle got into an ellipse, the square into a rectangle,
-> the triangle into another triangle.
->
-> The length or percentage approach isn&apos;t flexible enough to keep the
-> aspect ratio at all times. auto doesn&apos;t help, since you might not
-> know which dimension of your element will be larger. However, to cover
-> certain areas with an image (and correct aspect ratio) completely or
-> to contain an image with correct aspect ratio completely in a
-> background area, the values, contain and cover provide the additional
-> functionality.
->
-> <b>Eggsplanation for contain and cover</b>
->
-> Sorry for the bad pun, but we&apos;re going to use a &lbrack;&lbrack;picture of the day
-> by Biswarup
-> Ganguly
+<h4>Keeping the aspect ratio</h4>
 
+The last example in the previos section lost its original aspect
+ratio. The circle got into an ellipse, the square into a rectangle,
+the triangle into another triangle.</p>
+
+The length or percentage approach isn&apos;t flexible enough to keep the
+aspect ratio at all times. auto doesn&apos;t help, since you might not
+know which dimension of your element will be larger. However, to cover
+certain areas with an image (and correct aspect ratio) completely or
+to contain an image with correct aspect ratio completely in a
+background area, the values, contain and cover provide the additional
+functionality.
+
+<h4>Eggsplanation for contain and cover</h4>
+
+Sorry for the bad pun, but we&apos;re going to use a <a href="">picture of the day
+by Biswarup Ganguly</a> for demonstration. Lets say that this is your screen, and
+the gray area is outside of your visible screen. For demonstration, we're going to 
+assume a 16 x 9 ratio.
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~ chicken egg without eggshells (xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="center" width="100%">
@@ -1599,9 +1567,25 @@ Setting a background-clip to border-box and a background-color to red.
   title=""
   alt="." />
 </p>
-> for demonstration. Lets say that this is your screen, and the gray
-> area is outside of your visible screen. For demonstration, We&apos;re
-> going to assume a 16 × 9 ratio.
+
+<p>We want to use the aforementioned picture of the day as a background.
+However, we cropped the image to 4x3 for some reason. We could set the
+background-size property to some fixed length, but we will focus on
+contain and cover. Note that I also assume that we didn&apos;t mangle the
+width and/or height of body.</p>
+
+<h4>contain</h4>
+
+<blockquote>
+contain
+
+Scale the image, while preserving its intrinsic aspect ratio (if any), to the largest 
+size such that both its width and its height can fit inside the background positioning area.
+</blockquote>
+
+<p>This makes sure that the background image is always completely
+contained in the background positioning area, however, there could be
+some empty space filled with your background-color in this case:</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 07.  (xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="center" width="100%">
@@ -1611,26 +1595,17 @@ Setting a background-clip to border-box and a background-color to red.
   alt="." />
 </p>
 <!-- [image007.png 4.95x2.79](./images/image007.png) -->
+<h4>cover</h4>
 
-> We want to use the aforementioned picture of the day as a background.
-> However, we cropped the image to 4x3 for some reason. We could set the
-> background-size property to some fixed length, but we will focus on
-> contain and cover. Note that I also assume that we didn&apos;t mangle the
-> width and/or height of body.
+<blockquote>
+cover
 
-<b>contain</b>
-
-contain
-
-Scale the image, while preserving its intrinsic aspect ratio (if any),
-to the largest size such that both its
-
-width and its height can fit inside the background positioning area.
-
-> This makes sure that the background image is always completely
-> contained in the background positioning area, however, there could be
-> some empty space filled with your background-color in this case:
-
+Scale the image, while preserving its intrinsic aspect ratio (if any), to the smallest size suck
+that both its width and height can completely cover the background positioning area.
+</blockquote>
+<p>This makes sure that the background image is covering everything.
+There will be no visible background-color, however depending on the
+screen&apos;s ratio a great part of your image could be cut off:</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 09.  (xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="center" width="100%">
@@ -1639,20 +1614,6 @@ width and its height can fit inside the background positioning area.
   title=""
   alt="." />
 </p>
-
-<b>cover</b>
-
-cover
-
-Scale the image, while preserving its intrinsic aspect ratio (if any),
-to the smallest size such that both its
-
-width and its height can completely cover the background positioning
-area.
-
-> This makes sure that the background image is covering everything.
-> There will be no visible background-color, however depending on the
-> screen&apos;s ratio a great part of your image could be cut off:
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 11.  (xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -1664,7 +1625,7 @@ area.
 </p>
 <!-- {width="4.958333333333333in" height="2.7916666666666665in"} -->
 
-<b>Demonstration with actual code</b>
+<h4>Demonstration with actual code</h4>
 
 ```
 div &gt; div {
@@ -1682,11 +1643,10 @@ div .contain {
 div .cover {
   <b>background-size</b>: cover;
 }
-```
+/*********************************
+Additional styles for the explanation boxes
+*********************************/
 
-<i>Additional styles for the explanation boxes</i>
-
-```
 div &gt; div {
   <b>margin</b>: 0 1 ex 1 ex 0;
   <b>float</b>: left;
@@ -1713,12 +1673,8 @@ div &gt; div::after {
   <b>&lt;div class = &quot;contain&quot;</b>
   <b>&gt;/div&lt;&gt;</b>
   <b>&lt;p&gt;</b>
-```
-
 Note the grey background. The image does not cover the whole region, but
 it&apos;s fully
-
-```
 <b>&lt;</b>
 <b>em</b>
 <b>&gt;</b>
@@ -1746,13 +1702,9 @@ class = &quot;cover&quot;
 <b>&lt;</b>
 <b>p</b>
 <b>&gt;</b>
-```
-
 Note the ducks/geese at the bottom of the image. Most of the water is
 cut, as well as a part of the sky. You don&apos;t see the complete 
 image anymore, but neither do you see any background color;
-
-```
 the image
 <b>&lt;</b>
 <b>em</b>
@@ -1770,8 +1722,7 @@ div
 &gt;
 <b>&lt;</b>
 <b>/code</b>
-<b>&gt;</b>
-.
+<b>&gt;</b>.
 <b>&lt;</b>
 <b>/p</b>
 <b>&gt;</b>
@@ -1784,50 +1735,32 @@ div
 <h3 id="ch5-6">Section 5.6: Background Position</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
-> The
-> &lbrack;&lbrack;background-position&rbrack;&rbrack;(https://drafts.csswg.org/css-backgrounds-3/#background-position)
-> property is used to specify the starting position for a background
-> image or gradient
+<p>The <a href="https://drafts.csswg.org/css-backgrounds-3/#background-position">background-position</a> 
+property is used to specify the starting position for a background image or gradient.</p>
 
 ```
-.myClass
-{
-<b>background-image</b>
-:
-url
-(
-&apos;path/to/image.jpg&apos;
-)
-;
-<b>background-position</b>
-:
-50
-&percnt;
-50
-&percnt;
-;
+.myClass {
+  <b>background-image</b>: url(&apos;path/to/image.jpg&apos;);
+  <b>background-position</b>: 50&percnt; 50&percnt;;
 }
 ```
 
-> The position is set using an <b>X</b> and <b>Y</b> co-ordinate and be set
-> using any of the units used within CSS.
+<p>The position is set using an <b>X</b> and <b>Y</b> co-ordinate and be set
+using any of the units used within CSS.</p>
 
-<b>Unit Description</b>
+| <b>Unit</b>  |  <b>Description</b> |
+| value% value% | A percentage for the horizontal offset is relative to (width of |
+|               | background positioning area - width of background image). |
+|               | A percentage for the vertical offset is relative to |
+|              | (height of background positioning area - height of background image) |
+|             |  The size of the image is the size given by background-size. |
+| valuepx valuepx | Offsets background image by a length given in pixels relative to the |
+|                 | top left of the background *value*px *value*px positioning area |
 
-> A percentage for the horizontal offset is relative to *(width of
-> background positioning area - width of background image)*.
->
-> *value*% *value*% A percentage for the vertical offset is relative to
-> *(height of background positioning area - height of background image)*
->
-> The size of the image is the size given by background-size.
->
-> Offsets background image by a length given in pixels relative to the
-> top left of the background *value*px *value*px positioning area
->
-> Units in CSS can be specified by different methods (see here).
->
-> <b>Longhand Background Position Properties</b>
+
+<p>Units in CSS can be specified by different methods (see here).</p>
+
+<h4>Longhand Background Position Properties</h4>
 >
 > In addition to the shorthand property above, one can also use the
 > longhand background properties backgroundposition-x and
@@ -2267,8 +2200,8 @@ Lorem ipsum
 
 <a href="https://jsfiddle.net/MadalinaTn/y69d28Lb/&rbrack;&rbrack;(https://jsfiddle.net/MadalinaTn/y69d28Lb/">See results here</a>.
 
-> CSS Syntax: background-blend-mode: normal &vert;; multiply &vert;; screen &vert;;
-> overlay &vert;; darken &vert;; lighten &vert;; color-dodge &vert;; saturation &vert;; color &vert;;
+> CSS Syntax: background-blend-mode: normal &vert; multiply &vert; screen &vert;
+> overlay &vert; darken &vert; lighten &vert; color-dodge &vert; saturation &vert; color &vert;
 > luminosity;
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -2791,43 +2724,19 @@ sure the div/image you apply the code to has a parent with a height.
 
 ```
 div
-.vertical
+  .vertical
 {
-<b>position</b>
-:
-relative
-;
-<b>top</b>
-:
-50
-&percnt;
-;
-<b>transform</b>
-:
-translateY
-(
--50
-&percnt;
-)
-;
+  <b>position</b>: relative;
+  <b>top</b>: 50&percnt;;
+  <b>transform</b>: translateY(
+    -50&percnt;
+  );
 }
 ```
 
 <h4>HTML</h4>
 
-```
-<b>&lt;</b>
-<b>div</b>
-class
-=
-&quot;vertical&quot;
-<b>&gt;</b>
-Vertical aligned text!
-<b>&lt;</b>
-<b>/div</b>
-<b>&gt;</b>
-```
-
+<pre<code><b>&lt;</b><b>div</b> class=&quot;vertical&quot;<b>&gt;</b>ertical aligned text!<b>&lt;</b><b>/div</b><b>&gt;</b></code></pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch6-9">Section 6.9: Centering in relation to another item</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -2839,291 +2748,59 @@ Vertical aligned text!
 >
 > <h4>HTML</h4>
 
+```
 <b>&lt;</b>
-
 <b>div</b>
-
-class
-
-=
-
-&quot;content&quot;
-
-<b>&gt;</b>
-
-<b>&lt;</b>
-
-<b>div</b>
-
-class
-
-=
-
-&quot;position-container&quot;
-
-<b>&gt;</b>
-
-<b>&lt;</b>
-
-<b>div</b>
-
-class
-
-=
-
-&quot;thumb&quot;
-
-<b>&gt;</b>
-
-<b>&lt;</b>
-
-<b>img</b>
-
-src
-
-=
-
-&quot;http://lorempixel.com/400/200/&quot;
-
-<b>&gt;</b>
-
-<b>&lt;</b>
-
-<b>/div</b>
-
-<b>&gt;</b>
-
-<b>&lt;</b>
-
-<b>div</b>
-
-class
-
-=
-
-&quot;details&quot;
-
-<b>&gt;</b>
-
-<b>&lt;</b>
-
-<b>p</b>
-
-class
-
-=
-
-&quot;banner-title&quot;
-
-<b>&gt;</b>
-
-text 1
-
-<b>&lt;</b>
-
-<b>/p</b>
-
-<b>&gt;</b>
-
-<b>&lt;</b>
-
-<b>p</b>
-
-class
-
-=
-
-&quot;banner-text&quot;
-
-<b>&gt;</b>
-
-content content content content content content content content
-
-content content content content content content
-
-<b>&lt;</b>
-
-<b>/p</b>
-
-<b>&gt;</b>
-
-<b>&lt;</b>
-
-<b>button</b>
-
-class
-
-=
-
-&quot;btn&quot;
-
-<b>&gt;<b>
-
-button
-
-<b>&lt;</b>
-
-<b>/button</b>
-
-<b>&gt;</b>
-
-<b>&lt;</b>
-
-<b>/div</b>
-
-<b>&gt;</b>
-
-<b>&lt;</b>
-
-<b>/div</b>
-
-<b>&gt;</b>
-
-<b>&lt;</b>
-
-<b>/div</b>
-
-<b>&gt;</b>
-
-> <h4>CSS</h4>
-
+class=&quot;content&quot;<b>&gt;</b>
+<b>&lt;</b><b>div</b> class=&quot;position-container&quot;<b>&gt;</b>
+<b>&lt;</b><b>div</b> class=&quot;thumb&quot;<b>&gt;</b>
+<b>&lt;</b><b>img</b> src=&quot;http://lorempixel.com/400/200/&quot;<b>&gt;</b>
+<b>&lt;</b><b>/div</b><b>&gt;</b>
+<b>&lt;</b><b>div</b> class=&quot;details&quot;<b>&gt;</b>
+<b>&lt;</b><b>p</b> class=&quot;banner-title&quot;<b>&gt;</b>text 1<b>&lt;</b><b>/p</b><b>&gt;</b>
+<b>&lt;</b><b>p</b> class=&quot;banner-text&quot;<b>&gt;</b>content content content content content content content content
+content content content content content content<b>&lt;</b><b>/p</b><b>&gt;</b>
+<b>&lt;</b><b>button</b> class=&quot;btn&quot;<b>&gt;<b>button<b>&lt;</b><b>/button</b><b>&gt;</b>
+<b>&lt;</b><b>/div</b><b>&gt;</b>
+<b>&lt;</b><b>/div</b><b>&gt;</b>
+<b>&lt;</b><b>/div</b><b>&gt;</b>
+```
+
+<h4>CSS</h4>
+
+```
 .content
-
 &ast;
-
 {
-
 <b>box-sizing</b>
-
 :
-
 border-box
-
 ;
-
 }
-
 .content
-
 .position-container
-
 {
-
-<b>display</b>
-
-:
-
-table
-
-;
-
+<b>display</b>: table;
 }
-
-.content
-
-.details
-
-{
-
-<b>display</b>
-
-:
-
-table-cell
-
-;
-
-<b>vertical-align</b>
-
-:
-
-middle
-
-;
-
-<b>width</b>
-
-:
-
-33.333333
-
-&percnt;
-
-;
-
-<b>padding</b>
-
-:
-
-30
-
-px
-
-;
-
-<b>font-size</b>
-
-:
-
-17
-
-px
-
-;
-
-<b>text-align</b>
-
-:
-
-center
-
-;
-
+.content .details {
+  <b>display</b>: table-cell;
+  <b>vertical-align</b>: middle;
+  <b>width</b>: 33.333333&percnt;;
+  <b>padding</b>: 30px;
+  <b>font-size</b>: 17px;
+  <b>text-align</b>: center;
 }
-
-.content
-
-.thumb
-
-{
-
-<b>width</b>
-
-:
-
-100
-
-&percnt;
-
-;
-
+.content .thumb {
+  <b>width</b>: 100&percnt;;
 }
-
-.content
-
-.thumb
-
-img
-
-{
-
-<b>width</b>
-
-:
-
-100
-
-&percnt;
-
-;
-
+.content .thumb img {
+  <b>width</b>: 100&percnt;;
 }
+```
 
-> Link to
-> &lbrack;&lbrack;JSFiddle&rbrack;&rbrack;(https://jsfiddle.net/gasp10/6bv92mko/4/)
->
-> The main points are the 3 .thumb, .details and .position-container
-> containers:
+<a href="https://jsfiddle.net/gasp10/6bv92mko/4/">JS Fiddle Demo</a>.
+
+The main points are the 3 .thumb, .details and .position-container containers:
 
   <b>display</b>                         :     table
 
@@ -5662,10 +5339,10 @@ px
 > appropriate curve (as determined by 'background-clip').
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch10-8">Section 10.8: border-&lbrack;left&vert;;right&vert;;top&vert;;bottom&rbrack;</h3>
+<h3 id="ch10-8">Section 10.8: border-&lbrack;left&vert;right&vert;top&vert;bottom&rbrack;</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
-  border-           &lbrack;   left      &vert;;   right        &vert;;   top     &vert;;   bottom
+  border-           &lbrack;   left      &vert;   right        &vert;   top     &vert;   bottom
 
 
 > The &rbrack; property is used to add a border to a specific side of an
@@ -9108,7 +8785,7 @@ vertical-rl
 > The direction property is used to change the horizontal text direction
 > of an element.
 
-  **direction**   :   ltr &vert;; rtl &vert;; initial &vert;; inherit
+  **direction**   :   ltr &vert; rtl &vert; initial &vert; inherit
 
 
 > Syntax: ;
@@ -9117,7 +8794,7 @@ vertical-rl
 > read from top-to-bottom or from left-to-right, depending on the
 > language.
 
-  **direction**   :   horizontal-tb &vert;; vertical-rl &vert;; vertical-lr
+  **direction**   :   horizontal-tb &vert; vertical-rl &vert; vertical-lr
 
 Syntax: ;
 
@@ -14145,7 +13822,7 @@ number
 
 &rbrack;
 
-&vert;;
+&vert;
 
 auto
 
@@ -15872,7 +15549,7 @@ px
 > You can either specify a set time with a percentage value, or two
 > percentage values, ie
 >
-> &lbrack; from &vert;; to &vert;; **&gt;** &rbrack;
+> &lbrack; from &vert; to &vert; **&gt;** &rbrack;
 >
 > , for a period of time where the keyframe&apos;s set attributes are set.
 >
@@ -16430,7 +16107,7 @@ ease
 > element&apos;s height from 100px to auto.
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-## Section 27.3: Syntax Examples
+<h3 id="ch27-3">Section 27.3: Syntax Examples</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 > Our first syntax example shows the animation shorthand property using
@@ -16438,14 +16115,14 @@ ease
 >
 > **animation**: 3s ease-in 1s 2 reverse both paused slidein;
 >
-> */&ast; duration &vert;; timing-function &vert;; delay &vert;; iteration-count &vert;;
-> direction &vert;; fill-mode &vert;; playstate &vert;; name &ast;/*
+> */&ast; duration &vert; timing-function &vert; delay &vert; iteration-count &vert;
+> direction &vert; fill-mode &vert; playstate &vert; name &ast;/*
 >
 > Our second example is a little more simple, and shows that some
 > properties can be omitted:
 >
-> **animation**: 3s linear 1s slidein; */&ast; duration &vert;; timing-function
-> &vert;; delay &vert;; name &ast;/*
+> **animation**: 3s linear 1s slidein; */&ast; duration &vert; timing-function
+> &vert; delay &vert; name &ast;/*
 >
 > Our third example shows the most minimal declaration. Note that the
 > animation-name and animation-duration must be declared:
@@ -16462,7 +16139,7 @@ slidein
 
 ;
 
-*/&ast; duration &vert;; name &ast;/*
+*/&ast; duration &vert; name &ast;/*
 
 > It&apos;s also worth mentioning that when using the animation shorthand
 > the order of the properties makes a difference. Obviously the browser
@@ -28203,7 +27880,7 @@ deg
 > CSS resets take separate approaches to browser defaults. Eric Meyer's
 > Reset CSS has been around for a while. His approach nullifies many of
 > the browser elements that have been known to cause problems right off
-> the back. The following is from his version (v2.0 &vert;; 20110126) CSS
+> the back. The following is from his version (v2.0 &vert; 20110126) CSS
 > Reset.
 
 html, body, div, span, applet, object, iframe,
