@@ -36,9 +36,9 @@ All on-line.  No money, unless you'd like to donate. I'm game for that.</p>
 
 <h2 id="about">About</h2>
 
-<p align="center">Please feel free to share this Markdown &amp; website with anyone, latest
+<p align="center">Please feel free to share this Advanced CSS website with anyone, latest
 version of this book can be downloaded from:<br>
-<a href="https://goalkicker.com/CSSBook">https://goalkicker.com/CSSBook</a></p>
+<a href="https://goalkicker.com/CSSBook">Advanced CSS Book</a>.</p>
 
 <p align="center">This <i>CSS Notes for Professionals</i> book is compiled from 
 <a href="https://archive.org/details/documentation-dump.7z">Stack Overflow 
@@ -308,7 +308,7 @@ separately, or using the list-style shorthand property.</p>
 </ul>
 
 <p>(For an exhaustive list, see the 
-<a href="https://www.w3.org/wiki/CSS/Properties/list-style-type">W3C specification wiki</a>).</p>
+<a href="https://www.w3.org/wiki/CSS/Properties/list-style-type">W3C specification WIKI</a>).</p>
 <p>To use square bullet points for each list-item, for example, you would use 
 the following property-value pair:</p>
 
@@ -701,7 +701,6 @@ whether or not they are immediately adjacent.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch4-4">Section 4.4: Pseudo-classes</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-
 <p><a href="https://www.w3.org/TR/selectors/#pseudo-classes">Pseudo-classes</a> are <b>keywords</b> 
 which allow selection based on information that lies outside of the document tree that cannot 
 be expressed by other selectors or combinators. This information can be associate to a
@@ -932,7 +931,7 @@ input:in-range {
 <p>The :in-range CSS pseudo-class matches when an element has its value attribute
 inside the specified range limitations for this element. It allows the
 page to give a feedback that the value currently defined using the
-element is inside the range limits.&lbrack;<a href=https://developer.mozilla.org/en-US/docs/Web/CSS/:in-range">1</a>&rbrack;.</p>
+element is inside the range limits.&lbrack;<a href=https://developer.mozilla.org/en-US/docs/Web/CSS/:in-range">:in-range</a>&rbrack;.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch4-10">Section 4.10: A. The :not pseudo-class example & B. :focuswithin CSS pseudo-class</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -1053,8 +1052,8 @@ Examples for the above HTML structure would be:
 
 <h4>In action</h4>
 
-See <a href="https://jsfiddle.net/yokosbm0/1/">this fiddle</a> for
-an implementation of these global booleans.
+<p>See <a href="https://jsfiddle.net/yokosbm0/1/">this Fiddle for
+an implementation of these global booleans</a>.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch4-12">Section 4.12: ID selectors</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -1122,7 +1121,7 @@ child of its parent.</p>
 <p>The above example selects the &lt;p&gt; element that is the unique child from its 
 parent, in this case a &lt;div&gt;.</p>
 
-<a href="https://jsbin.com/dizosi/edit?html,css">Live Demo on JSBin</a>
+<p><a href="https://jsbin.com/dizosi/edit?html,css">Live Demo on JSBin</a>.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ch5">Chapter 5: Backgrounds</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -1367,16 +1366,19 @@ examples, but tile the gradient across the background of the element.
 |----------------|-----------------|
 | -45deg         | Angle unit. The angle starts from the top and rotates clockwise. Can be specified in deg, grad, rad, or |
 |                | turn. |
-| to left        | Direction of gradient, default is to bottom. Syntax: to &lbrack;y-axis(top or bottom)&rbrack; &lbrackx-asis(left OR
-|                | right)&rbrack; ie to top right.
+| to left        | Direction of gradient, default is to bottom. Syntax: to &lbrack;y-axis(top or bottom)&rbrack; &lbrackx-asis(left OR |
+|                | right)&rbrack; ie to top right. |
 | yellow 10%     | Color, optionally followed by a percentage or length to display it at. Repeated two or more times. |
 
+[Angle unit](https://www.w3.org/TR/css3-values/#angles)
 
-Angle unit(https://www.w3.org/TR/css3-values/#angles)
-degres (https://www.w3.org/TR/css3-values/#deg),
-grad (https://www.w3.org/TR/css3-values/#grad),
-rad(https://www.w3.org/TR/css3-values/#rad),
-turn(https://www.w3.org/TR/css3-values/#turn).
+[degres](https://www.w3.org/TR/css3-values/#deg),
+
+[grad] (https://www.w3.org/TR/css3-values/#grad),
+
+[rad](https://www.w3.org/TR/css3-values/#rad),
+
+[turn](https://www.w3.org/TR/css3-values/#turn).
 
 Note that HEX, RGB, RGBa, HSL, and HSLa color codes may be used instead of color names. Color names were used
 for the sake of illustration. Also note that the radial-gradient syntax is much more complex than linear-gradient, 
@@ -1542,8 +1544,7 @@ Setting a background-clip to border-box and a background-color to red.
 
 > <b>General overview</b>
 >
-> The
-> &lbrack;&lbrack;background-size&rbrack;&rbrack;(https://www.w3.org/TR/2014/CR-css3-background-20140909/#the-background-size)
+> The <a href="https://www.w3.org/TR/2014/CR-css3-background-20140909/#the-background-size">background-size Demo </a>
 > property enables one to control the scaling of the background-image.
 > It takes up to two values, which determine the scale/size of the
 > resulting image in vertical and and horizontal direction. If the
@@ -1583,11 +1584,8 @@ Setting a background-clip to border-box and a background-color to red.
 }
 ```
 
-The behaviour depends on the
-
-&lbrack;background-origi&rbrack;
-
-(https://www.w3.org/TR/2014/CR-css3-background-20140909/#the-background-origin)
+<p>The behaviour depends on the 
+<a href="">https://www.w3.org/TR/2014/CR-css3-background-20140909/#the-background-origin">background-origin Demo</a>.</p>
 
 > <b>Keeping the aspect ratio</b>
 >
@@ -1607,7 +1605,16 @@ The behaviour depends on the
 >
 > Sorry for the bad pun, but we&apos;re going to use a &lbrack;&lbrack;picture of the day
 > by Biswarup
-> Ganguly&rbrack;&rbrack;(https://commons.wikimedia.org/wiki/File:Chicken_Egg_without_Eggshell_5859.jpg)
+> Ganguly
+
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~ chicken egg without eggshells (xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p align="center" width="100%">
+<img src="https://commons.wikimedia.org/wiki/File:Chicken_Egg_without_Eggshell_5859.jpg"
+  style="width:50%"
+  title=""
+  alt="." />
+</p>
 > for demonstration. Lets say that this is your screen, and the gray
 > area is outside of your visible screen. For demonstration, We&apos;re
 > going to assume a 16 × 9 ratio.
@@ -1934,8 +1941,16 @@ consequat.**&lt;/p&gt; &lt;/div&gt;**
 ```
 
 Result:
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 13.  (xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p align="center" width="100%">
+<img src="./images/image013.jpg"
+  style="width:50%"
+  title=""
+  alt="." />
+</p>
 
-[image013](./images/image013.jpg)
+<!-- [image013](./images/image013.jpg) -->
 
 > More:
 
@@ -2222,8 +2237,15 @@ div {
 ```
 
 <h4>Here&apos;s how it looks:</h4>
-
-[image014.jpg](./images/image014.jpg)
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 14.  (xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p align="center" width="100%">
+<img src="./images/image014.jpg"
+  style="width:50%"
+  title=""
+  alt="." />
+</p>
+<!-- [image014.jpg](./images/image014.jpg) -->
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch5-12">Section 5.12: background-blend-mode Property</h3>
@@ -5580,8 +5602,15 @@ Border on all sides
 > more information about gradients in the docs). You can find more
 > information about border-image-slice property in the border-image
 > example in same page.
-
-[image028.jpg 3.5"x1.437"](./images/image028.jpg)
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 28.  (xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p align="center" width="100%">
+<img src="./images/image028.jpg"
+  style="width:35%"
+  title=""
+  alt="." />
+</p>
+<!-- [image028.jpg 3.5"x1.437"](./images/image028.jpg) -->
 
 > (*Note: Additional properties were added to the element for
 > presentational purpose.*)
@@ -5604,8 +5633,15 @@ Border on all sides
 > color. If it was a to bottom gradient the top border would be the
 > gradient&apos;s start color and bottom border would be end color. Below is
 > the output of a 5 colored gradient.
-
-[image029.jpg 3.489 x 1.40](./images/image029.jpg)
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 29.  (xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p align="center" width="100%">
+<img src="./images/image029.jpg"
+  style="width:35%"
+  title=""
+  alt="." />
+</p>
+<!-- [image029.jpg 3.489 x 1.40](./images/image029.jpg) -->
 
 > If the border is required only on specific sides of the element then
 > the border-width property can be used just like with any other normal
@@ -6263,8 +6299,15 @@ on the next line.
 **/div**
 
 **&gt;**
-
-[image032.jpg 7.48 x 4.27](./images/image032.jpg)
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 32.  (xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p align="center" width="100%">
+<img src="./images/image032.jpg"
+  style="width:50%"
+  title=""
+  alt="." />
+</p>
+<!--[image032.jpg 7.48 x 4.27](./images/image032.jpg) -->
 
 **overflow-wrap** -- **Value Details**
 
@@ -6508,8 +6551,15 @@ visible
 }
 
 > **Result**
-
-[image034.jpg .67 x 2.427](./images/image034.jpg)
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 34.  (xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p align="center" width="100%">
+<img src="./images/image034.jpg"
+  style="width:10%"
+  title=""
+  alt="." />
+</p>
+<!-- [image034.jpg .67 x 2.427](./images/image034.jpg) -->
 
 > Content is not clipped and will be rendered outside the content box if
 > it exceeds its container size.
@@ -6620,8 +6670,15 @@ debitis sea.
 **&gt;**
 
 > **Result**
-
-[imge035.jpg 6.375 x 3.76](./images/image035.jpg)
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 35.  (xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p align="center" width="100%">
+<img src="./images/image035.jpg"
+  style="width:50%"
+  title=""
+  alt="." />
+</p>
+<!-- [imge035.jpg 6.375 x 3.76](./images/image035.jpg) -->
 
 > This example shows how paragraphs within a div with the overflow
 > property set will interact with a floated image.
@@ -7519,8 +7576,15 @@ img {
 ```
 
 > This will be the output
-
-[image036.jpg 7.48 x 7.05](./images/image036.jpg)
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 36.  (xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p align="center" width="100%">
+<img src="./images/image036.jpg"
+  style="width:50%"
+  title=""
+  alt="." />
+</p>
+<!-- [image036.jpg 7.48 x 7.05](./images/image036.jpg) -->
 
 &lbrack;&lbrack;Codepen
 Link&rbrack;&rbrack;(http://codepen.io/vishak-kavalur/pen/pbxvLx)
@@ -7905,7 +7969,15 @@ This is DIV 2
 
 > The output of the following code will be
 
-[image037.jpg 7.48 x 3.61](./images/image037.jpg)
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 37.  (xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p align="center" width="100%">
+<img src="./images/image037.jpg"
+  style="width:50%"
+  title=""
+  alt="." />
+</p>
+<!--[image037.jpg 7.48 x 3.61](./images/image037.jpg) -->
 
 > We can make them in-line by adding a float css property to the div.
 >
@@ -21043,7 +21115,7 @@ primary-color
 > &lbrack;&lbrack;caniuse.com&rbrack;&rbrack;(http://caniuse.com/#feat=css-variables)
 > for the latest browser support.
 
-## Section 36.4: radial-gradient() function
+<h3 id="ch36-4">Section 36.4: radial-gradient() function</h3>
 
 > Creates an image representing a gradient of colors radiating from the
 > center of the gradient
@@ -21052,7 +21124,7 @@ primary-color
 > the middle of the gradient, red at the center, then orange, until it
 > is finally yellow at the edges&ast;/*
 
-## Section 36.5: linear-gradient() function
+<h3 id="ch36-5">Section 36.5: linear-gradient() function</h3>
 
 > Creates a image representing a linear gradient of colors.
 
@@ -25342,97 +25414,22 @@ polygon
 
 > <h4>CSS</h4>
 
-div
-
-{
-
-**width**
-
-:
-
-200
-
-px
-
-;
-
-**height**
-
-:
-
-200
-
-px
-
-;
-
-**background**
-
-:
-
-url
-
-(
-
-http
-
-:
-
-//lorempixel.com/
-
-200
-
-/
-
-200
-
-/abstract/
-
-6
-
-)
-
-;
-
-**mask-image**
-
-:
-
-radial-gradient
-
-(
-
-circle
-
-farthest-side at
-
-center
-
-,
-
-transparent
-
-49
-
-&percnt;
-
-,
-
-white
-
-50
-
-&percnt;
-
-)
-
-;
-
-*/&ast; check*
-
-*remarks before using &ast;/*
-
-}
+```
+div {
+  **width**: 200px;
+  **height**: 200px;
+  **background**: url (http://lorempixel.com/ 200/200/abstract/6);
+  **mask-image**: radial-gradient (
+    circle
+    farthest-side at
+    center,
+    transparent
+    49&percnt;,
+    white 50&percnt;
+	);
+/* check remarks before using */
+  }
+```
 
 <h4>HTML</h4>
 >
@@ -26739,7 +26736,7 @@ center
 
 > Source:
 
-&lbrack;&lbrack;https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context&rbrack;&rbrack;(https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context).
+;;https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context&rbrack;&rbrack;(https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context).
 
 # Chapter 49: Block Formatting Contexts
 
@@ -26820,12 +26817,19 @@ hidden
 */&ast; creates block formatting context &ast;/*
 
 }
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 261.  (xxx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p align="center" width="100%">
+<img src="./images/image261.jpg"
+  style="width:60%"
+  title=""
+  alt="." />
+</p>
+<!-- [image261.jpg 6 x 3](./images/image261.jpg) -->
 
-[image261.jpg 6 x 3](./images/image261.jpg)
+<a href="https://jsfiddle.net/MadalinaTn/qkwwmu6m/2/&rbrack;&rbrack;(https://jsfiddle.net/MadalinaTn/qkwwmu6m/2/">jsFiddle Demo</a>.
 
-&lbrack;&lbrack;https://jsfiddle.net/MadalinaTn/qkwwmu6m/2/&rbrack;&rbrack;(https://jsfiddle.net/MadalinaTn/qkwwmu6m/2/)
-
-> &lbrack;&lbrack;Using the overflow property with a value different to visible (its
+> Using the overflow property with a value different to visible (its
 > default) will create a new block formatting&rbrack; &lbrack;context.
 > This is technically necessary&rbrack; &lbrack;---&rbrack; &lbrack;if a
 > float intersected with the scrolling element it would
@@ -27763,51 +27767,40 @@ middle
 > .content centered inside .wrapper; and you want .wrapper&apos;s height to
 > expand when .content&apos;s height exceed .wrapper&apos;s min-height.
 
-# Chapter 51: Object Fit and Placement
+<h2 id="ch51">Chapter 51: Object Fit and Placement</h2>
 
-## Section 51.1: object-fit
+<h3 id="ch51-1">Section 51.1: object-fit</h3>
 
 > The **object-fit** property will defines how an element will fit into
 > a box with an established height and width. Usually applied to an
 > image or video, Object-fit accepts the following five values:
 >
 > **FILL**
-
-**object-fit**
-
-:
-
-fill
-
-;
-
+```
+**object-fit**: fill;
+```
 > Fill stretches the image to fit the content box without regard to the
 > image&apos;s original aspect ratio.
 >
-> **CONTAIN**
-
-**object-fit**
-
-:
-
-contain
-
-;
-
+```
+> **CONTAIN****object-fit**:contain;
+```
 > Contain fits the image in the box&apos;s height or width while maintaining
 > the image&apos;s aspect ratio.
 >
-> **COVER**
+```
+> **COVER****object-fit**:cover;
+```
 
-**object-fit**
-
-:
-
-cover
-
-;
-
-[image264.jpg 6.2 x 2.8](./images/image264.jpg)
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 264.  (xxx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p align="center" width="100%">
+<img src="./images/image264.jpg"
+  style="width:100%"
+  title=""
+  alt="." />
+</p>
+<!-- [image264.jpg 6.2 x 2.8](./images/image264.jpg) -->
 
 > Cover fills the entire box with the image. The image aspect ratio is
 > preserved, but the image is cropped to the dimensions of the box.
@@ -27836,8 +27829,15 @@ scale-down
 
 > Scale-down either sizes the object as none or as contain. It displays
 > whichever option results in a smaller image size.
-
-[image266.jpg 7.2 x 3.65](./images/image266.jpg)
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 266.  (xxx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p align="center" width="100%">
+<img src="./images/image266.jpg"
+  style="width:100%"
+  title=""
+  alt="." />
+</p>
+<!-- [image266.jpg 7.2 x 3.65](./images/image266.jpg) -->
 
 <h2 id="ch52">Chapter 52: CSS design patterns</h2>
 
