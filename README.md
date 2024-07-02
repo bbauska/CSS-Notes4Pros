@@ -1403,9 +1403,9 @@ image on top of the others and so on.</p>
 
 <p>The following attributes are very useful and almost essential;</p>
 
-<b>background-size</b>:     xpx ypx &vertbar; x% y%; 
-<b>background-repeat</b>:   no-repeat &vertbar; repeat &vertbar; repeat-x &vertbar; repeat-y; 
-<b>background-position</b>: left offset (px/%) right offset (px/%) &vertbar; center center &vertbar; left top &vertbar; right 
+<b>background-size</b>:     xpx ypx &vert;; x% y%; 
+<b>background-repeat</b>:   no-repeat &vert;; repeat &vert;; repeat-x &vert;; repeat-y; 
+<b>background-position</b>: left offset (px/%) right offset (px/%) &vert;; center center &vert;; left top &vert;; right 
 bottom;
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch5-4">Section 5.4: Background Shorthand</h3>
@@ -1475,7 +1475,7 @@ related properties:</p>
 >
 > &lbrack;&lt;background-repeat&gt;&rbrack; &lbrack;&lt;background-origin&gt;&rbrack;
 > &lbrack;&lt;background-clip&gt;&rbrack; &lbrack;&lt;background-attachment&gt;&rbrack;
-> &lbrack;&lt;initial&vertbar;inherit&gt;&rbrack;;
+> &lbrack;&lt;initial&vert;;inherit&gt;&rbrack;;
 >
 > <b>Examples</b>
 
@@ -2267,8 +2267,8 @@ Lorem ipsum
 
 <a href="https://jsfiddle.net/MadalinaTn/y69d28Lb/&rbrack;&rbrack;(https://jsfiddle.net/MadalinaTn/y69d28Lb/">See results here</a>.
 
-> CSS Syntax: background-blend-mode: normal &vertbar; multiply &vertbar; screen &vertbar;
-> overlay &vertbar; darken &vertbar; lighten &vertbar; color-dodge &vertbar; saturation &vertbar; color &vertbar;
+> CSS Syntax: background-blend-mode: normal &vert;; multiply &vert;; screen &vert;;
+> overlay &vert;; darken &vert;; lighten &vert;; color-dodge &vert;; saturation &vert;; color &vert;;
 > luminosity;
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -5662,10 +5662,10 @@ px
 > appropriate curve (as determined by 'background-clip').
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch10-8">Section 10.8: border-&lbrack;left&vertbar;right&vertbar;top&vertbar;bottom&rbrack;</h3>
+<h3 id="ch10-8">Section 10.8: border-&lbrack;left&vert;;right&vert;;top&vert;;bottom&rbrack;</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
-  border-           &lbrack;   left      &vertbar;   right        &vertbar;   top     &vertbar;   bottom
+  border-           &lbrack;   left      &vert;;   right        &vert;;   top     &vert;;   bottom
 
 
 > The &rbrack; property is used to add a border to a specific side of an
@@ -9108,7 +9108,7 @@ vertical-rl
 > The direction property is used to change the horizontal text direction
 > of an element.
 
-  **direction**   :   ltr &vertbar; rtl &vertbar; initial &vertbar; inherit
+  **direction**   :   ltr &vert;; rtl &vert;; initial &vert;; inherit
 
 
 > Syntax: ;
@@ -9117,7 +9117,7 @@ vertical-rl
 > read from top-to-bottom or from left-to-right, depending on the
 > language.
 
-  **direction**   :   horizontal-tb &vertbar; vertical-rl &vertbar; vertical-lr
+  **direction**   :   horizontal-tb &vert;; vertical-rl &vert;; vertical-lr
 
 Syntax: ;
 
@@ -14145,7 +14145,7 @@ number
 
 &rbrack;
 
-&vertbar;
+&vert;;
 
 auto
 
@@ -15872,7 +15872,7 @@ px
 > You can either specify a set time with a percentage value, or two
 > percentage values, ie
 >
-> &lbrack; from &vertbar; to &vertbar; **&gt;** &rbrack;
+> &lbrack; from &vert;; to &vert;; **&gt;** &rbrack;
 >
 > , for a period of time where the keyframe&apos;s set attributes are set.
 >
@@ -16438,14 +16438,14 @@ ease
 >
 > **animation**: 3s ease-in 1s 2 reverse both paused slidein;
 >
-> */&ast; duration &vertbar; timing-function &vertbar; delay &vertbar; iteration-count &vertbar;
-> direction &vertbar; fill-mode &vertbar; playstate &vertbar; name &ast;/*
+> */&ast; duration &vert;; timing-function &vert;; delay &vert;; iteration-count &vert;;
+> direction &vert;; fill-mode &vert;; playstate &vert;; name &ast;/*
 >
 > Our second example is a little more simple, and shows that some
 > properties can be omitted:
 >
-> **animation**: 3s linear 1s slidein; */&ast; duration &vertbar; timing-function
-> &vertbar; delay &vertbar; name &ast;/*
+> **animation**: 3s linear 1s slidein; */&ast; duration &vert;; timing-function
+> &vert;; delay &vert;; name &ast;/*
 >
 > Our third example shows the most minimal declaration. Note that the
 > animation-name and animation-duration must be declared:
@@ -16462,7 +16462,7 @@ slidein
 
 ;
 
-*/&ast; duration &vertbar; name &ast;/*
+*/&ast; duration &vert;; name &ast;/*
 
 > It&apos;s also worth mentioning that when using the animation shorthand
 > the order of the properties makes a difference. Obviously the browser
@@ -28203,7 +28203,7 @@ deg
 > CSS resets take separate approaches to browser defaults. Eric Meyer's
 > Reset CSS has been around for a while. His approach nullifies many of
 > the browser elements that have been known to cause problems right off
-> the back. The following is from his version (v2.0 &vertbar; 20110126) CSS
+> the back. The following is from his version (v2.0 &vert;; 20110126) CSS
 > Reset.
 
 html, body, div, span, applet, object, iframe,
