@@ -4661,30 +4661,18 @@ one and other. (The spacing will be the sum of two margins.)
 
 <h4>Overlapping with different sizes</h4>
 
-```
-.top {
+<pre><code>.top {
   <b>margin</b>: 10px;
 }
 .bottom {
  <b>margin</b>: 15px;
 }
-**&lt;**
-**div**
-class = &quot;top&quot;
-**&gt;**
-some content
-**&lt;**
-**/div**
-**&gt;**
-**&lt;**
-**div**
-class = &quot;bottom&quot;
-**&gt;**
-some more content
-**&lt;**
-**/div**
-**&gt;**
-```
+**&lt;****div** class = &quot;top&quot;**&gt;**
+  some content
+**&lt;****/div****&gt;**
+**&lt;****div** class = &quot;bottom&quot;**&gt;**
+  some more content
+**&lt;****/div****&gt;**</code></pre>
 
 > These elements will be spaced 15px apart vertically. The margins
 > overlap as much as they can, but the larger margin will determine the
@@ -4692,78 +4680,28 @@ some more content
 >
 > **Overlapping margin gotcha**
 
-```
-.outer-top
-{
-**margin**
-:
-10
-px
-;
+<pre><code>.outer-top {
+  **margin**: 10px;
 }
-.inner-top
-{
-**margin**
-:
-15
-px
-;
+.inner-top {
+  **margin**: 15px;
 }
-.outer-bottom
-{
-**margin**
-:
-20
-px
-;
+.outer-bottom {
+  **margin**: 20px;
 }
-.inner-bottom
-{
-**margin**
-:
-25
-px
-;
+.inner-bottom {
+  **margin**: 25px;
 }
-**&lt;**
-**div**
-class
-=
-&quot;outer-top&quot;
-**&gt;**
-**&lt;**
-**div**
-class
-=
-&quot;inner-top&quot;
-**&gt;**
-some content
-**&lt;**
-**/div**
-**&gt;**
-**&lt;**
-**/div**
-**&gt;**
-**&lt;**
-**div**
-class
-=
-&quot;outer-bottom&quot;
-**&gt;**
-**&lt;**
-**div**
-class
-=
-&quot;inner-bottom&quot;
-**&gt;**
-some more content
-**&lt;**
-**/div**
-**&gt;**
-**&lt;**
-**/div**
-**&gt;**
-```
+**&lt;****div** class = &quot;outer-top&quot;**&gt;**
+    **&lt;****div** class=&quot;inner-top&quot;**&gt;**
+      some content
+    **&lt;****/div****&gt;**
+  **&lt;****/div****&gt;**
+  **&lt;****div** class=&quot;outer-bottom&quot;**&gt;**
+    **&lt;****div** class=&quot;inner-bottom&quot;**&gt;**
+      some more content
+  **&lt;****/div****&gt;**
+**&lt;****/div****&gt;**</code></pre>
 
 > What will be the spacing between the two texts? (hover to see answer)
 >
@@ -4772,18 +4710,9 @@ some more content
 >
 > Now, what about if we add some borders to the markup above.
 
-```
-div
-{
-**border**
-:
-1
-px
-solid
-red
-;
-}
-```
+<pre><code>div {
+  **border**: 1px solid red;
+}</code></pre>
 
 > What will be the spacing between the two texts? (hover to see answer)
 >
@@ -4798,76 +4727,26 @@ red
 >
 <h4>HTML:</h4>
 
-```
-**&lt;**
-**h**
-**1**
-**&gt;**
-Title
-**&lt;**
-**/h**
-**1**
-**&gt;**
-**&lt;**
-**div**
-**&gt;**
-**&lt;**
-**p**
-**&gt;**
-Paragraph
-**&lt;**
-**/p**
-**&gt;**
-**&lt;**
-**/div**
-**&gt;**
-```
+<pre><code.**&lt;****h****1****&gt;**Title**&lt;****/h****1****&gt;**
+**&lt;****div****&gt;**
+  **&lt;****p****&gt;**Paragraph**&lt;****/p****&gt;**
+**&lt;****/div****&gt;**</code></pre>
+
 
 <h4>CSS:</h4>
 
-```
-h1
-{
-**margin**
-:
-0
-;
-**background**
-:
-#cff
-;
+<pre><code>h1 {
+  **margin**: 0;
+  **background**: #cff;
 }
-div
-{
-**margin**
-:
-50
-px
-0
-0
-0
-;
-**background**
-:
-#cfc
-;
+  div {
+  **margin**: 50px 0 0 0;
+  **background**: #cfc;
 }
-p
-{
-**margin**
-:
-25
-px
-0
-0
-0
-;
-**background**
-:
-#cf9
-;
-}
-```
+  p {
+  **margin**: 25px 0 0 0;
+  **background**: #cf9;
+}</code></pre>
 
 > In the example above, only the largest margin applies. You may have
  expected that the paragraph would be located 60px from the h1 (since
@@ -4884,57 +4763,37 @@ px
 CSS allows you to specify a given side to apply margin to. The four
 properties provided for this purpose are:
 
+<ul>
+  <li>margin-left</li>
+  <li>margin-right</li>
+  <li>margin-top</li>
+  <li>margin-bottom</li>
+</ul>
 
 The following code would apply a margin of 30 pixels to the left side
-of the selected div. &lbrack;*&lbrack;View
-Result&rbrack;*&rbrack;(https://jsfiddle.net/wm0100x9/1/)
+of the selected div. <a href="https://jsfiddle.net/wm0100x9/1/">View Result</a>.
 
 <h4>HTML</h4>
 
 ```
-**&lt;**
-**div**
-id
-=
-&quot;myDiv&quot;
-**&gt;**
-**&lt;**
-**/div**
-**&gt;**
+**&lt;****div** id=&quot;myDiv&quot;**&gt;****&lt;****/div****&gt;**
 ```
 
 <h4>CSS:</h4>
 
 ```
-#myDiv
-{
-**margin-left**
-:
-30
-px
-;
-**height**
-:
-40
-px
-;
-**width**
-:
-40
-px
-;
-**background-color**
-:
-red
-;
+#myDiv {
+  **margin-left**: 30px;
+  **height**: 40px;
+  **width**: 40px;
+  **background-color**: red;
 }
 ```
 
-<b>Parameter Details</b>
-
-> margin-left The direction in which the margin should be applied.
-
-30px The width of the margin.
+| <b>Parameter</b> | <b>Details</b> |
+|------------------|-------------------------------------------------|
+| margin-left | The direction in which the margin should be applied. |
+| 30px | The width of the margin. |
 
 <h4>Specifying Direction Using Shorthand Property</h4>
 
@@ -4943,67 +4802,28 @@ widths to each side of the selected elements. The syntax for doing
 this is as follows:
 
 ```
-**margin**
-:
-&lt;top
-&gt;
-&lt;right
-&gt;
-&lt;bottom
-&gt;
-&lt;left
-&gt;
-;
+**margin**: &lt;top&gt; &lt;right&gt; &lt;bottom&gt; &lt;left&gt;;
 ```
 
 > The following example applies a zero-width margin to the top of the
 > div, a 10px margin to the right side, a 50px margin to the left side,
-> and a 100px margin to the left side. &lbrack;*&lbrack;View
-> Result&rbrack;*&rbrack;(https://jsfiddle.net/1979c947/)
+> and a 100px margin to the left side. <a href="https://jsfiddle.net/1979c947/">View
+> Result.
 >
 <h4>HTML</h4>
 
 ```
-**&lt;**
-**div**
-id
-=
-&quot;myDiv&quot;
-**&gt;**
-**&lt;**
-**/div**
-**&gt;**
+**&lt;****div**id=&quot;myDiv&quot;**&gt;****&lt;****/div****&gt;**
 ```
 
 <h4>CSS</h4>
 
 ```
-#myDiv
-{
-**margin**
-:
-0
-10
-px
-50
-px
-100
-px
-;
-**height**
-:
-40
-px
-;
-**width**
-:
-40
-px
-;
-**background-color**
-:
-red
-;
+#myDiv {
+  **margin**: 0 10px 50px 100px;
+  **height**: 40px;
+  **width**: 40px;
+  **background-color**: red;
 }
 ```
 
@@ -5012,86 +4832,33 @@ red
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 ```
-p
-{
-**margin**
-:
-1
-px
-;
-*/&ast; 1px margin in all directions &ast;/*
-*/&ast;equals to:&ast;/*
-**margin**
-:
-1
-px
-1
-px
-;
-*/&ast;equals to:&ast;/*
-**margin**
-:
-1
-px
-1
-px
-1
-px
-;
-*/&ast;equals to:&ast;/*
-**margin**
-:
-1
-px
-1
-px
-1
-px
-1
-px
-;
+p {
+  **margin**: 1px; /* 1px margin in all directions */
+
+  /* equals to: */
+  **margin**: 1px 1px;
+
+  /* equals to: */
+  **margin**: 1px 1px 1px;
+
+  /* equals to: */
+  **margin**: 1px 1px 1px 1px;
 }
 ```
 
 > Another exapmle:
 
-```
-p
-{
-**margin**
-:
-10
-px
-15
-px
-;
-*/&ast; 10px margin-top & bottom And 15px margin-right & left&ast;/*
-*/&ast;equals to:&ast;/*
-**margin**
-:
-10
-px
-15
-px
-10
-px
-15
-px
-;
-*/&ast;equals to:&ast;/*
-**margin**
-:
-10
-px
-15
-px
-10
-px
-;
-*/&ast; margin left will be calculated from the margin right value (=15px)
-&ast;/*
-}
-```
+<pre><code>p {
+  **margin**: 10px 15px; /* 10px margin-top & bottom And 15px margin-right & left */
+
+  /* equals to: */
+  **margin**: 10px 15px 10px 15px;
+
+  /* equals to: */
+  **margin**: 10px 15px 10px;
+
+  /* margin left will be calculated from the margin right value (=15px) */
+}</code></pre>
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch8-4">Section 8.4: Horizontally center elements on a page using margin</h3>
@@ -5105,31 +4872,12 @@ px
 > the auto property of margin then distributes the remaining space to
 > the left and the right:
 
-#myDiv
-
-{
-
-**width**
-
-:
-
-80
-
-&percnt;
-
-;
-
-**margin**
-
-:
-
-0
-
-auto
-
-;
-
+```
+#myDiv {
+  **width**:80&percnt;;
+  **margin**:0 auto;
 }
+```
 
 > In the example above we use the shorthand margin declaration to first
 > set 0 to the top and bottom margin values (although this could be any
@@ -5140,7 +4888,9 @@ auto
 > leaves use 20% leftover. The browser distributes this value to the
 > remaining sides so:
 
+```
 (100% - 80%) / 2 = 10%
+```
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch8-5">Section 8.5: Example 1:</h3>
@@ -5150,17 +4900,14 @@ It is obvious to assume that the percentage value of margin to
 margin-left and margin-right would be relative to its parent element.
 
 ```
-.parent
-{
-**width**: 500px;
-**height**: 300px;
+.parent {
+  **width**: 500px;
+  **height**: 300px;
 }
-.child
-{
-**width**: 100px;
-**height**: 100px;
-**margin-left**: 10&percnt;;
-*/&ast; (parentWidth &ast; 10/100) =&gt; 50px &ast;/*
+.child {
+  **width**: 100px;
+  **height**: 100px;
+  **margin-left**: 10&percnt;; /* (parentWidth &ast; 10/100) =&gt; 50px */
 }
 ```
 
@@ -5170,21 +4917,16 @@ margin-left and margin-right would be relative to its parent element.
 >
 > So,
 
-```
-.parent {
+<pre><code>.parent {
   <b>width</b>: 500px;
   <b>height</b>: 300px;
 }
 .child {
   <b>width</b>: 100px;
   <b>height</b>: 100px;
-  <b>margin-left</b>: 10&percnt;;
-*/&ast; (parentWidth &ast; 10/100) =&gt; 50px &ast;/*
-  <b>margin-top</b>: 20&percnt;;
-*/&ast; (parentWidth &ast; 20/100) =&gt; 100px &ast;/*
-}
-```
-
+  <b>margin-left</b>: 10&percnt;;  /* (parentWidth &ast; 10/100) =&gt; 50px */
+  <b>margin-top</b>: 20&percnt;;  /* (parentWidth &ast; 20/100) =&gt; 100px */
+}</code></pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch8-6">Section 8.6: Negative margins</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -5192,35 +4934,14 @@ margin-left and margin-right would be relative to its parent element.
 values. This property can be used to <b>overlap elements without
 absolute positioning</b>.</p>
 
-```
-div
-{
-**display**
-:
-inline
-;
+<pre><code>div {
+  **display**: inline;
 }
-#over
-{
-**margin-left**
-:
--20
-px
-;
+#over {
+  **margin-left**: -20px;
 }
-&lt;
-div
-&gt;
-Base div&lt;/div
-&gt;
-&lt;
-div id
-=
-&quot;over&quot;
-&gt;
-Overlapping div&lt;/div
-&gt;
-```
+&lt;div&gt;Base div&lt;/div&gt;
+&lt;div id=&quot;over&quot;&gt;Overlapping div&lt;/div&gt;</code></pre>
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ch9">Chapter 9: Padding</h2>
@@ -5236,7 +4957,7 @@ Overlapping div&lt;/div
 > padding-left etc) can you write it as a shorthand, as below:
 >
 
-> **Four values**:
+<h4>Four values:</h4>
 
 ```
 **&lt;**
@@ -5257,7 +4978,11 @@ class
 **&lt;**
 **/div**
 **&gt;**
-> **Three values**:
+```
+
+<h4>Three values:</h4>
+
+```
 **&lt;**
 **style**
 **&gt;**
@@ -5277,7 +5002,11 @@ class
 **&lt;**
 **/div**
 **&gt;**
-> **Two values**:
+```
+
+</h4>Two values:</h4>
+
+```
 **&lt;**
 **style**
 **&gt;**
@@ -5297,7 +5026,11 @@ class
 **&lt;**
 **/div**
 **&gt;**
-> **One value**:
+```
+
+<h4>One value:</h4>
+
+```
 **&lt;**
 **style**
 **&gt;**
@@ -5329,30 +5062,21 @@ element and its border. Negative values are not allowed.
 
 You can specify a side individually:
 
-padding-top padding-right padding-bottom padding-left
+<ul>
+  <li>padding-top </li>
+  <li>padding-right</li>
+  <li>padding-bottom</li>
+  <li>padding-left</li>
+</ul>
 
 The following code would add a padding of 5px to the top of the div:
 
-```
-**&lt;**
-**style**
-**&gt;**
-.myClass {
-padding-top: 5px;
+<pre><code>**&lt;****style****&gt;**
+  .myClass {
+    padding-top: 5px;
 }
-**&lt;**
-**/style**
-**&gt;**
-**&lt;**
-**div**
-class
-=
-&quot;myClass&quot;
-**&gt;**
-**&lt;**
-**/div**
-**&gt;**
-```
+**&lt;****/style****&gt;**
+**&lt;****div** class=&quot;myClass&quot;**&gt;****&lt;****/div****&gt;**</code></pre>
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ch10">Chapter 10: Border</h2>
@@ -5373,37 +5097,9 @@ class
 > If only one set of values is supplied, it is used for both the
 > vertical and horizontal radius.
 
-**border-radius**
-
-:
-
-10
-
-px
-
-5
-
-&percnt;
-
-/
-
-20
-
-px
-
-25
-
-em
-
-30
-
-px
-
-35
-
-em
-
-;
+```
+**border-radius**: 10px 5&percnt; / 20px 25em 30px 35em;
+```
 
 > The 10px is the horizontal radius of the top-left-and-bottom-right.
 > And the 5% is the horizontal radius of the topright-and-bottom-left.
@@ -5415,263 +5111,76 @@ em
 > values. The following shorthand allows you to set the horizontal and
 > vertical radius of every corner to the same value:
 >
-> HTML:
 
+<h4>HTML:</h4>
+
+```
 **&lt;**
-
 **div**
-
 class
-
 =
-
 &apos;box&apos;
-
 **&gt;**
-
 **&lt;**
-
 **/div**
-
 **&gt;**
+```
 
-> CSS:
+<h4>CSS:</h4>
 
-.box
-
-{
-
-**width**
-
-:
-
-250
-
-px
-
-;
-
-**height**
-
-:
-
-250
-
-px
-
-;
-
-**background-color**
-
-:
-
-black
-
-;
-
-**border-radius**
-
-:
-
-10
-
-px
-
-;
-
+```
+.box {
+  **width**: 250px;
+  **height**: 250px;
+  **background-color**: black;
+  **border-radius**: 10px;
 }
+```
 
 > Border-radius is most commonly used to convert box elements into
 > circles. By setting the border-radius to half of the length of a
 > square element, a circular element is created:
 
-.circle
-
-{
-
-**width**
-
-:
-
-200
-
-px
-
-;
-
-**height**
-
-:
-
-200
-
-px
-
-;
-
-**border-radius**
-
-:
-
-100
-
-px
-
-;
-
+```
+.circle {
+  **width**: 200px;
+  **height**: 200px;
+  **border-radius**: 100px;
 }
+```
 
 > Because border-radius accepts percentages, it is common to use 50% to
 > avoid manually calculating the borderradius value:
 
-.circle
-
-{
-
-**width**
-
-:
-
-150
-
-px
-
-;
-
-**height**
-
-:
-
-150
-
-px
-
-;
-
-**border-radius**
-
-:
-
-50
-
-&percnt;
-
-;
-
+```
+.circle {
+  **width**: 150px;
+  **height**: 150px;
+  **border-radius**: 50&percnt;;
 }
+```
 
 > If the width and height properties are not equal, the resulting shape
 > will be an oval rather than a circle.
 >
-> Browser specific border-radius example:
 
--webkit-border-top-right-radius
+<h4>Browser specific border-radius example:</h4>
 
-:
+```
+-webkit-border-top-right-radius: 4px;
+-webkit-border-bottom-right-radius: 4px;
+-webkit-border-bottom-left-radius: 0;
+-webkit-border-top-left-radius: 0;
+-moz-border-radius-topright: 4px;
+-moz-border-radius-bottomright: 4px;
+-moz-border-radius-bottomleft: 0;
+-moz-border-radius-topleft: 0;
 
-4
-
-px
-
-;
-
--webkit-border-bottom-right-radius
-
-:
-
-4
-
-px
-
-;
-
--webkit-border-bottom-left-radius
-
-:
-
-0
-
-;
-
--webkit-border-top-left-radius
-
-:
-
-0
-
-;
-
--moz-border-radius-topright
-
-:
-
-4
-
-px
-
-;
-
--moz-border-radius-bottomright
-
-:
-
-4
-
-px
-
-;
-
--moz-border-radius-bottomleft
-
-:
-
-0
-
-;
-
--moz-border-radius-topleft
-
-:
-
-0
-
-;
-
-**border-top-right-radius**
-
-:
-
-4
-
-px
-
-;
-
-**border-bottom-right-radius**
-
-:
-
-4
-
-px
-
-;
-
-**border-bottom-left-radius**
-
-:
-
-0
-
-;
-
-**border-top-left-radius**
-
-:
-
-0
-
-;
+  **border-top-right-radius**: 4px;
+  **border-bottom-right-radius**: 4px;
+  **border-bottom-left-radius**: 0;
+  **border-top-left-radius**: 0;
+```
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch10-2">Section 10.2: border-style</h3>
@@ -5681,36 +5190,14 @@ px
 > property can have from one to four values (for every side of the
 > element one value.) Examples:
 
-**border-style**
-
-:
-
-dotted
-
-;
-
-**border-style**
-
-:
-
-dotted
-
-solid
-
-double
-
-dashed
-
-;
+```
+**border-style**: dotted;
+**border-style**: dotted solid double dashed;
+```
 
 > border-style can also have the values none and hidden. They have the
-> same effect, except hidden works for
-
-  **&lt;table**      **&gt;** elements. In a                  **&lt;table**
-
-> border conflict resolution for **&gt;** with multiple borders, none has
-> the lowest priority
->
+> same effect, except hidden works for <b>&lt;table&gt;</b> elements. In a
+> <b>&lt;table&gt;</b> with multiple borders, none has the lowest priority 
 > (meaning in a conflict, the border would show), and hidden has the
 > highest priority (meaning in a conflict, the border would not show).
 
@@ -5720,75 +5207,45 @@ dashed
 
 > Using outline:
 
+```
 .div1
-
 {
-
 **border**
-
 :
-
 3
-
 px
-
 solid
-
 black
-
 ;
-
 **outline**
-
 :
-
 6
-
 px
-
 solid
-
 blue
-
 ;
-
 **width**
-
 :
-
 100
-
 px
-
 ;
-
 **height**
-
 :
-
 100
-
 px
-
 ;
-
 **margin**
-
 :
-
 20
-
 px
-
 ;
-
 }
+```
 
 > Using box-shadow:
 
-.div2
-
-{
+```
+.div2 {
 
 **border**
 
@@ -5859,160 +5316,40 @@ px
 ;
 
 }
+```
 
 > Using a pseudo element:
 
-.div3
-
-{
-
-**position**
-
-:
-
-relative
-
-;
-
-**border**
-
-:
-
-5
-
-px
-
-solid
-
-#000
-
-;
-
-**width**
-
-:
-
-100
-
-px
-
-;
-
-**height**
-
-:
-
-100
-
-px
-
-;
-
-**margin**
-
-:
-
-20
-
-px
-
-;
-
+```
+.div3 {
+  **position**: relative;
+  **border**: 5px solid #000;
+  **width**: 100px;
+  **height**: 100px;
+  **margin**: 20px;
 }
-
-.div3
-
-:
-
-before
-
-{
-
-**content**
-
-:
-
-&quot; &quot;
-
-;
-
-**position**
-
-:
-
-absolute
-
-;
-
-**border**
-
-:
-
-5
-
-px
-
-solid
-
-blue
-
-;
-
-**z-index**
-
-:
-
-&minus;
-
-1
-
-;
-
-**top**
-
-:
-
-5
-
-px
-
-;
-
-**left**
-
-:
-
-5
-
-px
-
-;
-
-**right**
-
-:
-
-5
-
-px
-
-;
-
-**bottom**
-
-:
-
-5
-
-px
-
-;
-
+.div3:before {
+  **content**: &quot; &quot;;
+  **position**: absolute;
+  **border**: 5px solid blue;
+  **z-index**: &minus;1;
+  **top**: 5px;
+  **left**: 5px;
+  **right**: 5px;
+  **bottom**: 5px;
 }
+```
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 27.  (xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p align="center" width="100%">
+<img src="./images/image027.jpg"
+  style="width:20%"
+  title=""
+  alt="." />
+</p>
+<!-- [image027.jpg 1.458 x 4.021](./images/image027.jpg) -->
 
-[image027.jpg 1.458 x 4.021](./images/image027.jpg)
-
-&lbrack;&lbrack;http://jsfiddle.net/MadalinaTn/bvqpcohm/2/&rbrack;&rbrack;(http://jsfiddle.net/MadalinaTn/bvqpcohm/2/)
+<a href="http://jsfiddle.net/MadalinaTn/bvqpcohm/2/&rbrack;&rbrack;(http://jsfiddle.net/MadalinaTn/bvqpcohm/2/">jsFiddle Demo</a>.
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch10-4">Section 10.4: border (shorthands)</h3>
@@ -29290,55 +28627,28 @@ white-on-black
 <a href="https://msdn.microsoft.com/en-us/library/windows/apps/hh465764.aspx">Microsoft Documentation</a>
 on -ms-high-contrast
 
-## Section 55.3: Internet Explorer 6 & Internet Explorer 7 only
+<h3 id="ch55-3">Section 55.3: Internet Explorer 6 & Internet Explorer 7 only</h3>
 
 > To target Internet Explorer 6 and Internet Explorer 7, start your
 > properties with &ast;:
 
-.hide-on-ie6-and-ie7
-
-{
-
+```
+.hide-on-ie6-and-ie7 {
 &ast;
-
-<b>display</b>
-
-:
-
-none
-
-;
-
+<b>display</b>: none;
 // This line is processed only on IE6 and IE7
-
 }
-
-  property: value
-
-
-> Non-alphanumeric prefixes (other than hyphens and underscores) are
-> ignored in IE6 and IE7, so this hack works for any unprefixed pair.
-
-<h3 id="ch55-4">Section 55.4: Internet Explorer 8 only</h3>
-
-  <b>&commat;media</b> &bsol;&bsol;                 0 screen { }
-
+```
 
 > To target Internet Explorer 8, wrap your selectors inside :
 
 ```
 <b>&commat;media</b>
-&bsol;&bsol;
-0
-screen
-{
-.hide-on-ie8
-{
-<b>display</b>
-:
-none
-;
-}
+&bsol;&bsol; 0
+screen {
+  .hide-on-ie8 {
+    <b>display</b>: none;
+  }
 }
 ```
 
@@ -29359,219 +28669,68 @@ animate at 60fps.
 Animate with left and top trigger layout.
 
 ```
-#box
-{
-<b>left</b>
-:
-0
-;
-<b>top</b>
-:
-0
-;
-<b>transition</b>
-:
-left
-0.5
-s
-,
-top
-0.5
-s
-;
-<b>position</b>
-:
-absolute
-;
-<b>width</b>
-:
-50
-px
-;
-<b>height</b>
-:
-50
-px
-;
-<b>background-color</b>
-:
-gray
-;
+#box {
+  <b>left</b>: 0;
+  <b>top</b>: 0;
+  <b>transition</b>: left 0.5s, top 0.5s;
+  <b>position</b>: absolute;
+  <b>width</b>: 50px;
+  <b>height</b>: 50px;
+  <b>background-color</b>: gray;
 }
-#box
-.active
-{
-<b>left</b>
-:
-100
-px
-;
-<b>top</b>
-:
-100
-px
-;
+#box.active {
+  <b>left</b>: 100px;
+  <b>top</b>: 100px;
 }
 ```
 
-<b>&lbrack;Dem&rbrack;</b>
-
-&lbrack;<b>&lbrack;o&rbrack;</b>&rbrack;(https://jsfiddle.net/trungdq88/gmpzxLyq/)
-
-took
-
-<b>11.7</b>
-
-<b>ms</b>
-
-for rendering,
-
-<b>9.8</b>
-
-<b>ms</b>
-
+<a href="https://jsfiddle.net/trungdq88/gmpzxLyq/">Demo</a>
+took 11.7ms for rendering 9.8ms
 for painting
-
-[image267.jpg 7.5 x 7.5](./images/image267.jpg)
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 267.  (xxx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p align="center" width="100%">
+<img src="./images/image267.jpg"
+  style="width:100%"
+  title=""
+  alt="." />
+</p>
+<!-- [image267.jpg 7.5 x 7.5](./images/image267.jpg) -->
 
 > <b>DO</b>
 
-Animate with
+Animate with transform with the same animation.
 
-transform
-
-with the same animation.
-
-#box
-
-{
-
-<b>left</b>
-
-:
-
-0
-
-;
-
-<b>top</b>
-
-:
-
-0
-
-;
-
-<b>position</b>
-
-:
-
-absolute
-
-;
-
-<b>width</b>
-
-:
-
-50
-
-px
-
-;
-
-<b>height</b>
-
-:
-
-50
-
-px
-
-;
-
-<b>background-color</b>
-
-:
-
-gray
-
-;
-
-<b>transition</b>
-
-:
-
-transform
-
-0.5
-
-s
-
-;
-
-<b>transform</b>
-
-:
-
-translate3d
-
-(
-
-0
-
-,
-
-0
-
-,
-
-0
-
-)
-
-;
-
+```
+#box {
+  <b>left</b>: 0;
+  <b>top</b>: 0;
+  <b>position</b>: absolute;
+  <b>width</b>: 50px;
+  <b>height</b>: 50px;
+  <b>background-color</b>: gray;
+  <b>transition</b>: transform 0.5s;
+  <b>transform</b>: translate3d(0, 0, 0);
 }
 
-#box
-
-.active
-
-{
-
-<b>transform</b>
-
-:
-
-translate3d
-
-(
-
-100
-
-px
-
-,
-
-100
-
-px
-
-,
-
-0
-
-)
-
-;
-
+#box.active {
+  <b>transform</b>: translate3d(100px, 100px, 0);
 }
+```
 
-> &lbrack;<b>&lbrack;Demo&rbrack;</b>&rbrack;(https://jsfiddle.net/trungdq88/Logdo0rn/)
-> same animation, took <b>1.3ms</b> for rendering, <b>2.0ms</b> for painting.
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 268.  (xxx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p align="center" width="100%">
+<img src="./images/image268.jpg"
+  style="width:50%"
+  title=""
+  alt="." />
+</p>
 
-[imge268.jpg](./images/image268.jpg)
+<a href="https://jsfiddle.net/trungdq88/Logdo0rn/">jsFiddle Demo</a>
+same animation, took <b>1.3ms</b> for rendering, <b>2.0ms</b> for painting.
+
+<!-- [imge268.jpg](./images/image268.jpg) -->
 <!-- width 6.2" -->
 
 <!-- the end -->
