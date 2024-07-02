@@ -56,6 +56,7 @@ their respective company owners.</p>
 nor accurate, use at your own risk.</p>
 
 <p align="center">Please send feedback and corrections to <a href="web@petercv.com">web@petercv.com</a></p>
+<!-- page 2 -->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2>Chapter 1: Getting started with CSS</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -122,7 +123,7 @@ throughout all 100 pages than it is to go into 100 separate pages and
 make the same change 100 times. Again, if you want to completely
 change the look of your website, you only need to update this one
 file.</p>
-
+<!-- 6 lines up at 'colors from blue to green' - begin pg 3 -->
 <p>You can load as many CSS files in your HTML page as needed.</p>
 
 <pre><code>&lt;link rel="stylesheet" type="text/css" href="main.css"&gt;
@@ -182,6 +183,7 @@ will work in all current &lt;head&gt; browsers if placed in body).</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch1-3">Section 1.3: CSS &commat;import rule (one of CSS at-rule)</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!-- page 4 -->
 <p>The &commat;import CSS at-rule is used to import style rules from other style 
 sheets. These rules must precede all other types of rules, except &commat;charset 
 rules; as it is not a nested statement, &commat;import cannot be used inside 
@@ -243,7 +245,7 @@ can be time-consuming to write and a bit challenging to manage.</p>
 
 <p>It&apos;s possible to add, remove or change CSS property values with JavaScript 
 through an element&apos;s style property.</p>
-
+<!-- page 5 -->
 <pre><code>var el = document.getElementById("element");
 el.style.opacity = 0.5;
 el.style.fontFamily = 'sans-serif';</code></pre>
@@ -309,6 +311,7 @@ separately, or using the list-style shorthand property.</p>
 
 <p>(For an exhaustive list, see the 
 <a href="https://www.w3.org/wiki/CSS/Properties/list-style-type">W3C specification WIKI</a>).</p>
+<!-- page 6 -->
 <p>To use square bullet points for each list-item, for example, you would use 
 the following property-value pair:</p>
 
@@ -330,6 +333,7 @@ list-item marker, and it accepts one of two values: &quot;inside&quot; or
 
 <pre><code>li {list-style-position: inside;
 }</code></pre>
+<!-- page 7 -->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ch2">Chapter 2: Structure and Formatting of a CSS Rule</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -380,6 +384,7 @@ a <b>&lt;div&gt;</b> would be red.</p>
 <p>A CSS <b>rule</b> consists of a <b>selector</b> (e.g. h1) and <b>declaration block</b> ({}).
 
 <pre><code>h1 {}</code></pre>
+<!-- page 8 -->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ch3">Chapter 3: Comments</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -402,6 +407,7 @@ div {
 div {
   color: red;
 }</code></pre>
+<!-- page 9 -->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ch4">Chapter 4: Selectors</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -465,7 +471,7 @@ using the presence of a given attribute or attribute value.</p>
 1.  The attribute value can be surrounded by either single-quotes or
     double-quotes. No quotes at all may also work, but it&apos;s not valid
     according to the CSS standard, and is discouraged.
-
+<!-- page 10 -->
 2.  There is no single, integrated CSS4 specification, because it is
     split into separate modules. However, there are &quot;level 4&quot; modules.
     <a href="http://caniuse.com/#feat=css-case-insensitive">See browser support</a>.
@@ -527,7 +533,7 @@ value appears in a whitespace-separated list.</p>
 
 <b>&lt;div class="color-red foo-bar the-div"&gt;</b>This will be red<b>&lt;/div&gt;</b>
 <b>&lt;div class="color-blue" foo-bar the-div"&gt;</b>This will NOT be red<b>&lt;/div&gt;</b></code></pre>
-
+<!-- page 11 -->
 <a href="http://jsbin.com/posuhim/1/edit?html,css,output">Live Demo on JSBin</a>
 
 <pre><code>&lbrack;<b>attribute^="value"</b>&rbrack;</code></pre>
@@ -588,7 +594,7 @@ other case-insensitive possibility.</p>
 <b>&lt;div lang="PT-pt"&gt;</b>This will NOT be red<b>&lt;/div&gt;</b></code></pre>
 
 <a href="http://jsbin.com/yowihi/4/edit?html,css,output">Live Demo on JSBin</a>
-
+<!-- page 12 -->
 <h4>Specificity of attribute selectors<br>
 0-1-0</h4>
 
@@ -602,7 +608,6 @@ selected with an ID selector: &lbrack;id=<b>"my-ID"</b>&rbrack; targets the same
 but with lower specificity.</p>
 
 <p>See the Syntax Section for more details.</p>
-
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch4-3">Section 4.3: Combinators</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -649,17 +654,19 @@ both descendants of the <b>&lt;div&gt;</b>.</p>
 <h4>Child Combinator: selector &gt; selector</h4>
 <p>The child (&gt;) combinator is used to select elements that are
 <b>children</b>, or <b>direct descendants</b>, of the specified element.</p>
+<!-- page 13 -->
 <pre><code>div &gt; p {
   <b>color</b>: <span style='color: red;'>red</span>;
 }
-
 <b>&lt;div&gt;</b>
   <b>&lt;p&gt;</b>My text is <span style='color: red;'>red</span><b>&lt;/p&gt;</b>
   <b>&lt;section&gt;</b>
     <b>&lt;p&gt;</b>My text is not red<b>&lt;/p&gt;</b>
   <b>&lt;/section&gt;</b>
 <b>&lt;/div&gt;</b></code></pre>
+
 <a href="http://jsbin.com/xonafuz/3/edit?html,css,output">Live Demo on JSBin</a>
+
 <p>The above CSS selects only the first <b>&lt;p&gt;</b> element, as it is the only paragraph directly descended from a <b>&lt;div&gt;</b>.</p>
 <p>The second <b>&lt;p&gt;</b> element is not selected because it is not a direct child of the <b>&lt;div&gt;</b>.</p>
 <h4>Adjacent Sibling Combinator: selector &plus; selector</h4>
@@ -701,6 +708,7 @@ whether or not they are immediately adjacent.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch4-4">Section 4.4: Pseudo-classes</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!-- page 14 -->
 <p><a href="https://www.w3.org/TR/selectors/#pseudo-classes">Pseudo-classes</a> are <b>keywords</b> 
 which allow selection based on information that lies outside of the document tree that cannot 
 be expressed by other selectors or combinators. This information can be associate to a
@@ -763,6 +771,7 @@ the mouse is over an element (:hover), a checkbox is checked (:checked), etc.</p
 | <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/:last-child">:last-child</a>  | Represents any element that is the last child element of its parent. |
 | <a href="https://www.w3.org/TR/css3-selectors/#last-of-type-pseudo">:last-of-type</a>  | Applies when an element is the last of the selected element type inside |
 |             | its parent. This may or may not be the last-child. |
+<!-- page 15 -->
 | <a href="http://tympanus.net/codrops/css_reference/left_pseudo-class/">:left</a> | Used in conjunction with the &commat;page rule, this selects all the left |
 |             | pages in a printed document. |
 | <a href="https://www.w3.org/TR/css3-selectors/#the-link-pseudo-classes-link-and-visited">:link | Applies to any links which haven&apos;t been visited by the user. |
@@ -817,6 +826,7 @@ an+b-1 siblings before it in the document tree, for a given positive
 | :nth-child (3)                | &nbsp;&nbsp;&nbsp;✔ |
 | :nth-child (n+3)              | &nbsp;&nbsp;✔&nbsp;  ✔&nbsp;  ✔&nbsp;  ✔&nbsp;  ✔&nbsp;  ✔&nbsp;  ✔&nbsp;  ✔ |
 | :nth-child (3n)               |         ✔       ✔       ✔ |
+<!-- page 16 -->
 | :nth-child (3n+1)             | ✔         ✔       ✔       ✔ |
 | :nth-child (-n+3)             | ✔  ✔  ✔ |
 | :nth-child (odd)              | ✔      ✔      ✔     ✔     ✔ |
