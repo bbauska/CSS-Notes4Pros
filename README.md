@@ -8319,7 +8319,7 @@ center
 }
 </code></pre>
 
-> **Outcome:**
+**Outcome:**
 
 [image040.jpg ](./images/image040.jpg)
 
@@ -8327,14 +8327,13 @@ Here is the <a href="https://jsfiddle.net/d6pc5bmd/">demo jsFiddle</a>.
 
   **justify-content**                            **:**   **center**
 
-> **Example: on a vertical flexbox**
->
-> **CSS:**
+**Example: on a vertical flexbox**
+
+**CSS:**
 
 <pre><code>
 div
-#container
-{
+#container {
 **display**
 :
 flex
@@ -8350,38 +8349,28 @@ center
 }
 </code></pre>
 
-> **Outcome:**
+**Outcome:**
 
 [image041.jpg](./images/image041.jpg)
 
 Here is a <a href="https://jsfiddle.net/d6pc5bmd/1/">demo jsFiddle</a>.
 
-  **align-content**                           **:**   **center**
+**align-content** 
+**:**
+**center**
 
-> **Example: on a horizontal flexbox**
->
-> **CSS:**
+**Example: on a horizontal flexbox**
 
-<pre><code>
-div
-#container
-{
-**display**
-:
-flex
-;
-**flex-direction**
-:
-row
-;
-**align-items**
-:
-center
-;
-}
-</code></pre>
+<h4>CSS:</h4>
 
-> **Outcome:**
+<pre><code>div
+#container {
+  **display**: flex;
+  **flex-direction**: row;
+  **align-items**: center;
+}</code></pre>
+
+**Outcome:**
 
 [image042.jpg](./images/image042.jpg)
 
@@ -8389,9 +8378,9 @@ Here is the <a href="https://jsfiddle.net/d6pc5bmd/2/">demo jsFiddle</a>.
 
   **align-content**                           **:**   **center**
 
-> **Example: on a vertical flexbox**
->
-> **CSS:**
+**Example: on a vertical flexbox**
+
+<h4>CSS:</h4>
 
 <pre><code>
 div
@@ -8416,65 +8405,64 @@ center
 
 [image043.jpg 6.97 x 6.15](./images/image043.jpg)
 
-> Here is a &lbrack;&lbrack;demo&rbrack;&rbrack;(https://jsfiddle.net/d6pc5bmd/3/).
->
-> **Example: Combination for centering both on horizontal flexbox**
+Here is a &lbrack;&lbrack;demo&rbrack;&rbrack;(https://jsfiddle.net/d6pc5bmd/3/).
+
+**Example: Combination for centering both on horizontal flexbox</b>
 
 <pre><code>
 div
-#container
-{
-**display**
+#container {
+  <b>display</b>
 :
 flex
 ;
-**flex-direction**
+<b>flex-direction</b>
 :
 row
 ;
-**justify-content**
+<b>justify-content</b>
 :
 center
 ;
-**align-items**
+<b>align-items</b>
 :
 center
 ;
 }
 </code></pre>
 
-> **Outcome:**
+<b>Outcome:</b>
 
 [image044.jpog 6.93 x 6.13](./images/image044.jpg)
 
-> Here is a &lbrack;&lbrack;demo&rbrack;&rbrack;(https://jsfiddle.net/d6pc5bmd/4/).
->
-> **Example: Combination for centering both on vertical flexbox**
+Here is a &lbrack;&lbrack;demo&rbrack;&rbrack;(https://jsfiddle.net/d6pc5bmd/4/).
+
+<b>Example: Combination for centering both on vertical flexbox</b>
 
 <pre><code>
 div
 #container
 {
-**display**
+<b>display</b>
 :
 flex
 ;
-**flex-direction**
+<b>flex-direction</b>
 :
 column
 ;
-**justify-content**
+<b>justify-content</b>
 :
 center
 ;
-**align-items**
+<b>align-items</b>
 :
 center
 ;
 }
 </code></pre>
 
-> **Outcome:**
+> <b>Outcome:</b>
 
 [image045.jpg 6.93 x 6.11](./images/image045.jpg)
 
@@ -8493,42 +8481,42 @@ is also pushed out of the viewport.
 <h4>HTML:</h4>
 
 <pre><code>
-**&lt;**
-**div**
+<b>&lt;</b>
+<b>div</b>
 class
 =
 &quot;header&quot;
-**&gt;**
-**&lt;**
-**h**
-**2**
-**&gt;**
+<b>&gt;</b>
+<b>&lt;</b>
+<b>h</b>
+<b>2</b>
+<b>&gt;</b>
 Header
-**&lt;**
-**/h**
-**2**
-**&gt;**
-**&lt;**
-**/div**
-**&gt;**
-**&lt;**
-**div**
+<b>&lt;</b>
+<b>/h</b>
+<b>2</b>
+<b>&gt;</b>
+<b>&lt;</b>
+<b>/div</b>
+<b>&gt;</b>
+<b>&lt;</b>
+<b>div</b>
 class
 =
 &quot;content&quot;
-**&gt;**
-**&lt;**
-**h**
-**1**
-**&gt;**
+<b>&gt;</b>
+<b>&lt;</b>
+<b>h</b>
+<b>1</b>
+<b>&gt;</b>
 Content
-**&lt;**
-**/h**
-**1**
-**&gt;**
-**&lt;**
-**p**
-**&gt;**
+<b>&lt;</b>
+<b>/h</b>
+<b>1</b>
+<b>&gt;</b>
+<b>&lt;</b>
+<b>p</b>
+<b>&gt;</b>
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec
 odio. Praesent libero.
 Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum
@@ -8538,33 +8526,17 @@ massa. Vestibulum lacinia
 arcu eget nulla. Class aptent taciti sociosqu ad litora torquent per
 conubia nostra, per inceptos
 himenaeos. Curabitur sodales ligula in libero.
-**&lt;**
-**/p**
-**&gt;**
-**&lt;**
-**/div**
-**&gt;**
-**&lt;**
-**div**
-class
-=
-&quot;footer&quot;
-**&gt;**
-**&lt;**
-**h**
-**4**
-**&gt;**
-Footer
-**&lt;**
-**/h**
-**4**
-**&gt;**
-**&lt;**
-**/div**
-**&gt;**
+<b>&lt;</b><b>/p</b><b>&gt;</b>
+<b>&lt;</b><b>/div</b><b>&gt;</b>
+<b>&lt;</b><b>div</b> class=&quot;footer&quot;<b>&gt;</b>
+<b>&lt;</b><b>h</b><b>4</b><b>&gt;</b>Footer<b>&lt;</b><b>/h</b><b>4</b>
+<b>&gt;</b>
+<b>&lt;</b>
+<b>/div</b>
+<b>&gt;</b>
 </code></pre>
 
-> **CSS:**
+</h4>CSS:</h4>
 
 <pre><code>
 html, body {
@@ -8588,7 +8560,6 @@ body {
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch16-3">Section 16.3: Optimally fit elements to their container</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-
 <p>One of the nicest features of flexbox is to allow optimally fitting
 containers to their parent element.</p>
 
@@ -8610,13 +8581,11 @@ containers to their parent element.</p>
 
 <h4>CSS:</h4>
 
-<pre><code>
-.flex-container
-{
-<b>background-color</b>:#000;
-<b>height</b>:100&percnt;; display: flex; flex-direction: row;
-<b>flex-wrap</b>: wrap; justify-content: flex-start; align-content: stretch;
-<b>align-items</b>: stretch;
+<pre><code>.flex-container {
+  <b>background-color</b>:#000;
+  <b>height</b>:100&percnt;; display: flex; flex-direction: row;
+  <b>flex-wrap</b>: wrap; justify-content: flex-start; align-content: stretch;
+  <b>align-items</b>: stretch;
 }
 .flex-item {
   <b>background-color</b>: #ccf;
@@ -8624,217 +8593,134 @@ containers to their parent element.</p>
   <b>flex-shrink</b>:0;
   <b>flex-basis</b>:200px;
 /* or % could be used to ensure a specific layout */
-}
-</code></pre>
+}</code></pre>
 
-> **Outcome:**
->
-> Columns adapt as screen is resized.
+<b>Outcome:</b>
 
-!&lbrack;&rbrack;(./images/image046.png){width="7.48037510936133in"
-height="3.182736220472441in"}
+<p>Columns adapt as screen is resized.</p>
+
+[image046.png 7.48 x 3.18](./images/image046.png)
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch16-4">Section 16.4: Holy Grail Layout using Flexbox</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
-> &lbrack;&lbrack;Holy Grail
-> layout&rbrack;&rbrack;(http://alistapart.com/article/holygrail) is a
-> layout with a fixed height header and footer, and a center with 3
-> columns. The 3 columns include a fixed width sidenav, a fluid center,
-> and a column for other content like ads (the fluid center appears
-> first in the markup). CSS Flexbox can be used to achieve this with a
-> very simple markup:
->
+[Holy Grail layout](http://alistapart.com/article/holygrail) is a
+layout with a fixed height header and footer, and a center with 3
+columns. The 3 columns include a fixed width sidenav, a fluid center,
+and a column for other content like ads (the fluid center appears
+first in the markup). CSS Flexbox can be used to achieve this with a
+very simple markup:
 
 <h4>HTML:</h4>
 
 <pre><code>
-**&lt;**
-**div**
+<b>&lt;</b>
+<b>div</b>
 class
 =
 &quot;container&quot;
-**&gt;**
-**&lt;**
-**header**
+<b>&gt;</b>
+<b>&lt;</b>
+<b>header</b>
 class
 =
 &quot;header&quot;
-**&gt;**
+<b>&gt;</b>
 Header
-**&lt;**
-**/header**
-**&gt;**
-**&lt;**
-**div**
+<b>&lt;</b>
+<b>/header</b>
+<b>&gt;</b>
+<b>&lt;</b>
+<b>div</b>
 class
 =
 &quot;content-body&quot;
-**&gt;**
-**&lt;**
-**main**
+<b>&gt;</b>
+<b>&lt;</b>
+<b>main</b>
 class
 =
 &quot;content&quot;
-**&gt;**
+<b>&gt;</b>
 Content
-**&lt;**
-**/main**
-**&gt;**
-**&lt;**
-**nav**
+<b>&lt;</b>
+<b>/main</b>
+<b>&gt;</b>
+<b>&lt;</b>
+<b>nav</b>
 class
 =
 &quot;sidenav&quot;
-**&gt;**
+<b>&gt;</b>
 Nav
-**&lt;**
-**/nav**
-**&gt;**
-**&lt;**
-**aside**
+<b>&lt;</b>
+<b>/nav</b>
+<b>&gt;</b>
+<b>&lt;</b>
+<b>aside</b>
 class
 =
 &quot;ads&quot;
-**&gt;**
+<b>&gt;</b>
 Ads
-**&lt;**
-**/aside**
-**&gt;**
-**&lt;**
-**/div**
-**&gt;**
-*&lt;**
-**footer**
+<b>&lt;</b>
+<b>/aside</b>
+<b>&gt;</b>
+<b>&lt;</b>
+<b>/div</b>
+<b>&gt;</b>
+<b>&lt;</b>
+<b>footer</b>
 class
 =
 &quot;footer&quot;
-**&gt;**
+<b>&gt;</b>
 Footer
-**&lt;**
-**/footer**
-**&gt;**
-**&lt;**
-**/div**
-**&gt;**
+<b>&lt;</b>
+<b>/footer</b>
+<b>&gt;</b>
+<b>&lt;</b>
+<b>/div</b>
+<b>&gt;</b>
 </code></pre>
 
-> CSS:
+<h4>CSS:</h4>
 
 <pre><code>
-body
-{
-**margin**
-:
-0
-;
-**padding**
-:
-0
-;
+body {
+  <b>margin</b>: 0; 
+  <b>padding</b>: 0;
 }
-.container
-{
-**display**
-:
-flex
-;
-**flex-direction**
-:
-column
-;
-**height**
-:
-100
-vh
-;
+.container {
+  <b>display</b>: flex;
+  <b>flex-direction</b>: column;
+  <b>height</b>: 100vh;
 }
-.header
-{
-**flex**
-:
-0
-0
-50
-px
-;
+.header {
+  <b>flex</b>: 0 0 50px;
+}
+.content-body {
+  <b>flex</b>: 1 1 auto;
+  <b>display</b>: flex;
+  <b>flex-direction</b>: row;
 }
 .content-body
-{
-**flex**
-:
-1
-1
-auto
-;
-**display**
-:
-flex
-;
-**flex-direction**
-:
-row
-;
+.content {
+  <b>flex</b>: 1 1 auto;
+  <b>overflow</b>: auto;
 }
-.content-body
-.content
-{
-**flex**
-:
-1
-1
-auto
-;
-**overflow**
-:
-auto
-;
+.content-body .sidenav {
+  <b>order</b>: &minus; 1;
+  <b>flex</b>: 0 0 100px;
+  <b>overflow</b>: auto;
 }
-.content-body
-.sidenav
-{
-**order**
-:
-&minus;
-1
-;
-**flex**
-:
-0
-0
-100
-px
-;
-**overflow**
-:
-auto
-;
+.content-body .ads {
+  <b>flex</b>: 0 0 100px;
+  <b>overflow</b>: auto;
 }
-.content-body
-.ads
-{
-**flex**
-:
-0
-0
-100
-px
-;
-**overflow**
-:
-auto
-;
-}
-.footer
-{
-**flex**
-:
-0
-0
-50
-px
-;
+.footer {
+  <b>flex</b>: 0 0 50px;
 }
 </code></pre>
 
@@ -8844,118 +8730,79 @@ px
 <h3 id="ch16-5">Section 16.5: Perfectly aligned buttons inside cards with flexbox</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
-> It&apos;s a regular pattern in design these days to vertically align
-> **call to actions** inside its containing cards like this:
+It&apos;s a regular pattern in design these days to vertically align
+<b>call to actions</b> inside its containing cards like this:
 
-!&lbrack;&rbrack;(./images/image047.jpg){width="7.48037510936133in"
-height="3.3848195538057744in"}
+[image047.jpg 7.49 x 3.38](./images/image047.jpg)
 
-> This can be achieved using a special trick with flexbox
->
+This can be achieved using a special trick with flexbox
+
 <h4>HTML:</h4>
 
-**&lt;div** class=&quot;cards&quot;**&gt;**
+```
+<b>&lt;div</b> class=&quot;cards&quot;<b>&gt;</b>
 
-**&lt;div** class=&quot;card&quot;**&gt;** **&lt;p&gt;**Lorem ipsum Magna proident ex
+<b>&lt;div</b> class=&quot;card&quot;<b>&gt;</b> <b>&lt;p&gt;</b>Lorem ipsum Magna proident ex
 anim dolor ullamco pariatur reprehenderit culpa esse enim mollit
-labore dolore voluptate ullamco et ut sed qui minim.**&lt;/p&gt;**
-**&lt;p&gt;&lt;button&gt;**Action**&lt;/button&gt;&lt;/p&gt;**
+labore dolore voluptate ullamco et ut sed qui minim.<b>&lt;/p&gt;</b>
+<b>&lt;p&gt;&lt;button&gt;</b>Action<b>&lt;/button&gt;&lt;/p&gt;</b>
 
-**&lt;/div&gt;**
+<b>&lt;/div&gt;</b>
 
-**&lt;div** class=&quot;card&quot;**&gt;** **&lt;p&gt;**Lorem ipsum Magna proident ex
+<b>&lt;div</b> class=&quot;card&quot;<b>&gt;</b> <b>&lt;p&gt;</b>Lorem ipsum Magna proident ex
 anim dolor ullamco pariatur reprehenderit culpa esse enim mollit
-labore dolore voluptate ullamco et ut sed qui minim.**&lt;/p&gt;**
-**&lt;p&gt;**Lorem ipsum Magna proident ex anim dolor ullamco pariatur
+labore dolore voluptate ullamco et ut sed qui minim.<b>&lt;/p&gt;</b>
+<b>&lt;p&gt;</b>Lorem ipsum Magna proident ex anim dolor ullamco pariatur
 reprehenderit culpa esse enim mollit labore dolore voluptate ullamco
-et ut sed qui minim.**&lt;/p&gt;** **&lt;p&gt;**Lorem ipsum Magna proident ex
+et ut sed qui minim.<b>&lt;/p&gt;</b> <b>&lt;p&gt;</b>Lorem ipsum Magna proident ex
 anim dolor ullamco pariatur reprehenderit culpa esse enim mollit
-labore dolore voluptate ullamco et ut sed qui minim.**&lt;/p&gt;**
-**&lt;p&gt;**Lorem ipsum Magna proident ex anim dolor ullamco pariatur
+labore dolore voluptate ullamco et ut sed qui minim.<b>&lt;/p&gt;</b>
+<b>&lt;p&gt;</b>Lorem ipsum Magna proident ex anim dolor ullamco pariatur
 reprehenderit culpa esse enim mollit labore dolore voluptate ullamco
-et ut sed qui minim.**&lt;/p&gt;**
-**&lt;p&gt;&lt;button&gt;**Action**&lt;/button&gt;&lt;/p&gt;**
+et ut sed qui minim.<b>&lt;/p&gt;</b>
+<b>&lt;p&gt;&lt;button&gt;</b>Action<b>&lt;/button&gt;&lt;/p&gt;</b>
 
-**&lt;/div&gt;**
+<b>&lt;/div&gt;</b>
 
-**&lt;/div&gt;**
+<b>&lt;/div&gt;</b>
+```
 
-**display**                            :     flex
+<b>display</b>:flex
 
-
-First of all, we use CSS to apply ; to the container. This will create
-2 columns equal in height with the content flowing naturally inside it
+<p>First of all, we use CSS to apply ; to the container. This will create
+2 columns equal in height with the content flowing naturally inside it.</p>
 
 <h4>CSS:</h4>
 
-<pre><code>
-.cards {
-  **display**: flex;
+<pre><code>.cards {
+  <b>display</b>: flex;
 }
 .card {
-  **border**: 1px solid #ccc;
-**margin**
-:
-10
-px
-10
-px
-;
-**padding**
-:
-0
-20
-px
-;
+  <b>border</b>: 1px solid #ccc;
+  <b>margin</b>: 10px 10px;
+  <b>padding</b>: 0 20px;
 }
-button
-{
-**height**
-:
-40
-px
-;
-**background**
-:
-#fff
-;
-**padding**
-:
-0
-40
-px
-;
-**border**
-:
-1
-px
-solid
-#000
-;
+button {
+  <b>height</b>: 40px;
+  <b>background</b>: #fff;
+  <b>padding</b>: 0 40px;
+  <b>border</b>: 1px solid #000;
 }
-p
-:
-last-child
-{
-**text-align**
-:
-center
-;
-}
-</code></pre>
+p: last-child {
+  **text-align**: center;
+}</code></pre>
 
 <p>The layout will change and become like this:</p>
 
 [image048.jpg 7.48 x 3"](./images/image048.jpg)
 
-**display**                            :     flex
+**display**: flex
 
-
-In order to move the buttons to the bottom of the block, we need to
+<p>In order to move the buttons to the bottom of the block, we need to
 apply ; to the card itself with the direction set to column. After
 that, we should select the last element inside the card and set the
 margin-top to auto. This will push the last paragraph to the bottom of
-the card and achieve the required result.
+the card and achieve the required result.</p>
 
 
 <h4>Final CSS:</h4>
