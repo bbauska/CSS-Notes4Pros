@@ -1801,7 +1801,7 @@ property has no effect.</p>
 <p>Result:</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 13.  (xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p align="center" width="100%">
+<p align="left" width="100%">
 <img src="./images/image013.jpg"
   style="width:50%"
   title=""
@@ -1812,25 +1812,25 @@ property has no effect.</p>
 
 <p>More:</p>
 
-<a href="https://www.w3.org/TR/css3-background/#the-background-origin">https://www.w3.org/TR/css3-background/#the-background-origin</a>
-<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/background-origin">https://developer.mozilla.org/en-US/docs/Web/CSS/background-origin</a>
+<p><a href="https://www.w3.org/TR/css3-background/#the-background-origin">https://www.w3.org/TR/css3-background/#the-background-origin</a></p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/background-origin">https://developer.mozilla.org/en-US/docs/Web/CSS/background-origin</a></p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch5-8">Section 5.8: Multiple Background Image</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 <p> In CSS3, we can stack multiple background in the same element.</p>
 
-```#mydiv {
-  **background-image**: url(img_1.png), /* top image */
+<pre><code>#mydiv {
+  <b>background-image</b>: url(img_1.png), /* top image */
                         url (img_2.png), /* middle image */
                         url (img_3.png); /* bottom image */
-  **background-position**: right bottom, 
+  <b>background-position</b>: right bottom, 
                            left top, 
 						   right top;
-  **background-repeat**: no-repeat, 
+  <b>background-repeat</b>: no-repeat, 
                          repeat, 
 						 no-repeat;
-}```
+}</code></pre>
 
 <p>Images will be stacked atop one another with the first background on
 top and the last background in the back. img_1 will be on top, the
@@ -1838,20 +1838,19 @@ img_2 and img_3 is on bottom.</p>
 
 <p>We can also use background shorthand property for this:</p>
 
-```#mydiv {
-  **background**: url(img_1.png) right bottom no-repeat,
+<pre><code>#mydiv {
+  <b>background</b>: url(img_1.png) right bottom no-repeat,
                   url(img_2.png) left top repeat,
                   url(img_3.png) right top no-repeat;
-}```
+}</code></pre>
 
 <p>We can also stack images and gradients:</p>
 
-```
-#mydiv {
-  **background**: url(*image.png*) right bottom no-repeat,
+<pre><code>#mydiv {
+  <b>background</b>: url(*image.png*) right bottom no-repeat,
   linear-gradient (to bottom, #fff 0 &percnt;, #000 100&percnt;);
-}
-```
+}</code></pre>
+
 
 <ul>
   <li><a href="https://jsfiddle.net/z30up2un/">jsFiddle Demo</a></li>
@@ -1863,12 +1862,12 @@ img_2 and img_3 is on bottom.</p>
 <p>The background-attachment property sets whether a background image is
 fixed or scrolls with the rest of the page.</p>
 
-```
+<pre><code>
 body {
-**background-image**: url(&apos;img.jpg&apos;);
-**background-attachment**: fixed;
+<b>background-image</b>: url(&apos;img.jpg&apos;);
+<b>background-attachment</b>: fixed;
 }
-```
+</code></pre>
 
 | Value | Description |
 |------------|---------------------------------------------------|
@@ -1884,35 +1883,35 @@ body {
 
 <p>The default behaviour, when the body is scrolled the background scrolls with it:</p>
 
-```
+<pre><code>
 body {
-  **background-image**: url(&apos;image.jpg&apos;);
-  **background-attachment**: scroll;
+  <b>background-image</b>: url(&apos;image.jpg&apos;);
+  <b>background-attachment</b>: scroll;
 }
-```
+</code></pre>
 
 <h4><i>background-attachment: fixed</i></h4>
 
 <p>The background image will be fixed and will not move when the body is scrolled:</p>
 
-```
+<pre><code>
 body {
-  **background-image**: url(&apos;image.jpg&apos;);
-  **background-attachment**: fixed;
+  <b>background-image</b>: url(&apos;image.jpg&apos;);
+  <b>background-attachment</b>: fixed;
 }
-```
+</code></pre>
 
 <h4><i>background-attachment: local</i></h4>
 
 <p>The background image of the div will scroll when the contents of the
 div is scrolled.</p>
 
-```
+<pre><code>
 div {
-  **background-image**: url(&apos;image.jpg&apos;);
-  **background-attachment**: local;
+  <b>background-image</b>: url(&apos;image.jpg&apos;);
+  <b>background-attachment</b>: local;
 }
-```
+</code></pre>
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch5-10">Section 5.10: Background Clip</h3>
@@ -1934,33 +1933,33 @@ div {
 
 <h4>CSS</h4>
 
-```
+<pre><code>
 .example {
-  **width**:300px;
-  **border**:20px solid black;
-  **padding**:50px;
-  **background**:url (
+  <b>width</b>:300px;
+  <b>border</b>:20px solid black;
+  <b>padding</b>:50px;
+  <b>background</b>:url (
     https://static.pexels.com/photos/6440/magazines-desk-work-workspace-medium.jpg
   );
-  **background-repeat**: no-repeat;
+  <b>background-repeat</b>: no-repeat;
 }
 .example1 {
 }
 .example2 {
-  **background-origin**: border-box;
+  <b>background-origin</b>: border-box;
 }
 .example3 {
-  **background-origin**: content-box;
+  <b>background-origin</b>: content-box;
 }
-```
+</code></pre>
 
 <h4>HTML</h4>
 
-```
-**&lt;****p****&gt;**No background-origin (padding-box is default):**&lt;****/p****&gt;**
+<pre><code>
+<b>&lt;</b><b>p</b><b>&gt;</b>No background-origin (padding-box is default):<b>&lt;</b><b>/p</b><b>&gt;</b>
 
-  **&lt;****div** class=&quot;example example1&quot;**&gt;**
-  **&lt;****h****2****&gt;**Lorem Ipsum Dolor**&lt;****/h****2**<b>&gt;</b>
+  <b>&lt;</b><b>div</b> class=&quot;example example1&quot;<b>&gt;</b>
+  <b>&lt;</b><b>h</b><b>2</b><b>&gt;</b>Lorem Ipsum Dolor<b>&lt;</b><b>/h</b><b>2</b><b>&gt;</b>
   <b>&lt;</b><b>p</b><b>&gt;</b>
   Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
   nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
@@ -1995,7 +1994,7 @@ div {
   And lightning struck out of his ass.<b>&lt;/p&gt;</b> <b>&lt;p&gt;</b>And more goes here, as
   well. It beats Latin. I don't know Latin so better for me
   the end.<b>&lt;/p&gt; &lt;/div&gt;</b>
-```
+</code></pre>
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch5-11">Section 5.11: Background Repeat</h3>
@@ -2005,7 +2004,7 @@ The background-repeat property sets if/how a background image will be repeated.
 
 By default, a background-image is repeated both vertically and horizontally.
 
-```
+<pre><code>
 div {
   <b>background-image</b>: url (
     &quot;img.jpg&quot;
@@ -2013,7 +2012,7 @@ div {
   <b>background-repeat</b>: repeat-y;
 }
   <b>background-repeat</b>: repeat-y
-```
+</code></pre>
 
 <h4>Here&apos;s how it looks:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -2030,7 +2029,7 @@ div {
 <h3 id="ch5-12">Section 5.12: background-blend-mode Property</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
-```
+<pre><code>
 .my-div
 {
 <b>width</b>:300px;
@@ -2058,7 +2057,7 @@ Lorem ipsum
 <b>&lt;</b>
 <b>/div</b>
 <b>&gt;</b>
-```
+</code></pre>
 
 <a href="https://jsfiddle.net/MadalinaTn/y69d28Lb/&rbrack;&rbrack;(https://jsfiddle.net/MadalinaTn/y69d28Lb/">See results here</a>.
 
@@ -2077,7 +2076,7 @@ Lorem ipsum
 
 /* Fallback for web browsers that don&apos;t support RGBa */
 
-```
+<pre><code>
 <b>background-color</b>:rgb (
   0,0,0
   );
@@ -2096,7 +2095,7 @@ endColorstr = #99000000
 ms-filter:
 &quot;progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000,
 endColorstr=#99000000)&quot;;
-```
+</code></pre>
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ch6">Chapter 6: Centering</h2>
@@ -2106,7 +2105,7 @@ endColorstr=#99000000)&quot;;
 
 <h4>HTML:</h4>
 
-```
+<pre><code>
 <b>&lt;</b>
 <b>div</b>
 class
@@ -2122,11 +2121,11 @@ src
 <b>&lt;</b>
 <b>/div</b>
 <b>&gt;</b>
-```
+</code></pre>
 
 <h4>CSS:</h4>
 
-```
+<pre><code>
 html, body, .container
 {
 <b>height</b>:100&percnt;;
@@ -2140,13 +2139,13 @@ img {
 <b>align-self</b>:center;
 /* vertical center */
 }
-```
+</code></pre>
 
 &lbrack;&lbrack;View Result&rbrack;&rbrack;(https://jsfiddle.net/aLu05kjy/1/) 
 
 <h4>HTML:</h4>
 
-```
+<pre><code>
 <b>&lt;</b>
 <b>img</b>
 src = &quot;http://lorempixel.com/400/200&quot;
@@ -2162,7 +2161,7 @@ body {
 <b>align-items</b>:center;
 /* vertical center */
 }
-```
+</code></pre>
 
 &lbrack;&lbrack;View Result&rbrack;&rbrack;(https://jsfiddle.net/ttp0bzfm/1/)
 
@@ -2205,7 +2204,7 @@ body {
 
 <h4>HTML</h4>
 
-```
+<pre><code>
 <b>&lt;</b>
 <b>div</b>
 class
@@ -2224,11 +2223,11 @@ class
 <b>&lt;</b>
 <b>/div</b>
 <b>&gt;</b>
-```
+</code></pre>
 
 <h4>CSS</h4>
 
-```
+<pre><code>
 .container
 {
 <b>position</b>
@@ -2264,7 +2263,7 @@ translate
 )
 ;
 }
-```
+</code></pre>
 
 &lbrack;&lbrack;View example in
 JSFiddle&rbrack;&rbrack;(https://jsfiddle.net/webtiki/rz3p3ufs/)
@@ -2324,7 +2323,7 @@ JSFiddle&rbrack;&rbrack;(https://jsfiddle.net/webtiki/rz3p3ufs/)
 >
 <h4>HTML</h4>
 
-```
+<pre><code>
 <b>&lt;</b>
 <b>div</b>
 class
@@ -2382,11 +2381,11 @@ src
 <b>&lt;</b>
 <b>/div</b>
 <b>&gt;</b>
-```
+</code></pre>
 
 <h4>CSS</h4>
 
-```
+<pre><code>
 .containerDiv {
   <b>width</b>: 100&percnt;;
   <b>height</b>: 100px;
@@ -2407,7 +2406,7 @@ src
   <b>width</b>: 200px;
   <b>margin</b>: 0 auto;
 }
-```
+</code></pre>
 
 > Result:
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -2437,7 +2436,7 @@ auto <a href="https://jsfiddle.net/xf1ze3v9/">Demo</a>.
 
 <h4>HTML</h4>
 
-```
+<pre><code>
 <b>&lt;</b>
 <b>p</b>
 <b>&gt;</b>
@@ -2445,15 +2444,15 @@ Lorem ipsum
 <b>&lt;</b>
 <b>/p</b>
 <b>&gt;</b>
-```
+</code></pre>
 
 <h4>CSS</h4>
 
-```
+<pre><code>
 p {
   <b>text-align</b>: center;
 }
-```
+</code></pre>
 
 > *This does not work for centering entire block elements*. text-align
 > controls only alignment of inline content like text in its parent
@@ -2475,16 +2474,16 @@ p {
 
 <h4>HTML</h4>
 
-```
+<pre><code>
 <b>&lt;</b> <b>div</b> class=&quot;parent&quot;<b>&gt;</b>
 <b>&lt;</b> <b>img</b> class=&quot;center&quot; src=&quot;http://lorempixel.com/400/200/&quot;<b>/&gt;</b>
 <b>&lt;</b> <b>/div</b>
 <b>&gt;</b>
-```
+</code></pre>
 
 <h4>CSS</h4>
 
-```
+<pre><code>
 .parent {
   <b>position</b>: relative;
   <b>height</b>: 500px;
@@ -2498,7 +2497,7 @@ p {
   <b>bottom</b>: 0;
   <b>left</b>: 0;
 }
-```
+</code></pre>
 
 Elements that don&apos;t have their own implicit width and height like
 images do, will need those values defined.
@@ -2520,7 +2519,7 @@ between two values ).
 
 <h4>CSS</h4>
 
-```
+<pre><code>
 .center {
   <b>position</b>: absolute;
   <b>height</b>: 50px;
@@ -2532,12 +2531,12 @@ between two values ).
   <b>left</b>: calc (50&percnt; &minus; 50px / 2);
 /* width divided by 2 */
 }
-```
+</code></pre>
 
 
 <h4>HTML</h4>
 
-```
+<pre><code>
 <b>&lt;</b>
 <b>div</b>
 class
@@ -2547,7 +2546,7 @@ class
 <b>&lt;</b>
 <b>/div</b>
 <b>&gt;</b>
-```
+</code></pre>
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch6-7">Section 6.7: Using line-height</h3>
@@ -2558,13 +2557,13 @@ text inside a container :
 
 <h4>CSS</h4>
 
-```
+<pre><code>
 div {
   <b>height</b>: 200px;
   <b>line-height</b>: 200px;
 }
   <b>&lt;input</b> <b>/&gt;</b>
-```
+</code></pre>
 
 That&apos;s quite ugly, but can be useful inside an element. The
 line-height property works only when the text to be centered spans a
@@ -2584,7 +2583,7 @@ sure the div/image you apply the code to has a parent with a height.
 
 <h4>CSS</h4>
 
-```
+<pre><code>
 div
   .vertical
 {
@@ -2594,7 +2593,7 @@ div
     -50&percnt;
   );
 }
-```
+</code></pre>
 
 <h4>HTML</h4>
 
@@ -2610,7 +2609,7 @@ div
 >
 > <h4>HTML</h4>
 
-```
+<pre><code>
 <b>&lt;</b>
 <b>div</b>
 class=&quot;content&quot;<b>&gt;</b>
@@ -2626,11 +2625,11 @@ content content content content content content<b>&lt;</b><b>/p</b><b>&gt;</b>
 <b>&lt;</b><b>/div</b><b>&gt;</b>
 <b>&lt;</b><b>/div</b><b>&gt;</b>
 <b>&lt;</b><b>/div</b><b>&gt;</b>
-```
+</code></pre>
 
 <h4>CSS</h4>
 
-```
+<pre><code>
 .content
 &ast;
 {
@@ -2658,7 +2657,7 @@ border-box
 .content .thumb img {
   <b>width</b>: 100&percnt;;
 }
-```
+</code></pre>
 
 <a href="https://jsfiddle.net/gasp10/6bv92mko/4/">JS Fiddle Demo</a>.
 
@@ -2840,6 +2839,7 @@ normal
 
 > <h4>HTML</h4>
 
+<pre><code>
 <b>&lt;</b>
 
 <b>div</b>
@@ -2856,11 +2856,7 @@ class
 
 <b>div</b>
 
-class
-
-=
-
-&quot;centered&quot;
+class=&quot;centered&quot;
 
 <b>&gt;</b>
 
@@ -2875,47 +2871,47 @@ class
 <b>/div</b>
 
 <b>&gt;</b>
+</code></pre>
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="6-11">Section 6.11: Centering vertically and horizontally without worrying about height or width</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p>The following technique allows you to add your content to an HTML
+element and center it both horizontally and vertically <b>without
+worrying about its height or width</b>.</p>
 
-> The following technique allows you to add your content to an HTML
-> element and center it both horizontally and vertically **without
-> worrying about its height or width**.
+  <b>display</b>: table;
 
-  **display**: table;
+<b>The outer container</b> should have
 
-> **The outer container** should have
->
-> **The inner container**
+<b>The inner container</b>
 
-  **display**: table-cell;
+  <b>display</b>: table-cell;
 
-  **vertical-align**: middle;
+  <b>vertical-align</b>: middle;
 
-  **text-align**: center;
+  <b>text-align</b>: center;
 
 > should have should have should have
 >
-> **The content box**
+> <b>The content box</b>
 
-  **display**: inline-block;
+  <b>display</b>: inline-block;
 
-  **text-align**: left;           or    **text-align**: right;
+  <b>text-align</b>: left;           or    <b>text-align</b>: right;
 
 > should have
 >
 > should re-adjust the horizontal text-alignment to eg. , unless you
 > want text to be centered
 >
-> **Demo**
+> <b>Demo</b>
 >
 > <h4>HTML</h4>
 
-**&lt;**
+<b>&lt;</b>
 
-**div**
+<b>div</b>
 
 class
 
@@ -2923,11 +2919,11 @@ class
 
 &quot;outer-container&quot;
 
-**&gt;**
+<b>&gt;</b>
 
-**&lt;**
+<b>&lt;</b>
 
-**div**
+<b>div</b>
 
 class
 
@@ -2935,11 +2931,11 @@ class
 
 &quot;inner-container&quot;
 
-**&gt;**
+<b>&gt;</b>
 
-**&lt;**
+<b>&lt;</b>
 
-**div**
+<b>div</b>
 
 class
 
@@ -2947,27 +2943,27 @@ class
 
 &quot;centered-content&quot;
 
-**&gt;**
+<b>&gt;</b>
 
 You can put anything here!
 
-**&lt;**
+<b>&lt;</b>
 
-**/div**
+<b>/div</b>
 
-**&gt;**
+<b>&gt;</b>
 
-**&lt;**
+<b>&lt;</b>
 
-**/div**
+<b>/div</b>
 
-**&gt;**
+<b>&gt;</b>
 
-**&lt;**
+<b>&lt;</b>
 
-**/div**
+<b>/div</b>
 
-**&gt;**
+<b>&gt;</b>
 
 > <h4>CSS</h4>
 
@@ -2975,7 +2971,7 @@ body
 
 {
 
-**margin**
+<b>margin</b>
 
 :
 
@@ -2989,7 +2985,7 @@ body
 
 {
 
-**position**
+<b>position</b>
 
 :
 
@@ -2997,7 +2993,7 @@ absolute
 
 ;
 
-**display**
+<b>display</b>
 
 :
 
@@ -3005,7 +3001,7 @@ table
 
 ;
 
-**width**
+<b>width</b>
 
 :
 
@@ -3017,7 +3013,7 @@ table
 
 */&ast; This could be ANY width &ast;/*
 
-**height**
+<b>height</b>
 
 :
 
@@ -3029,7 +3025,7 @@ table
 
 */&ast; This could be ANY height &ast;/*
 
-**background**
+<b>background</b>
 
 :
 
@@ -4028,12 +4024,12 @@ Diagram from CSS2.2 Working Draft <a href="https://www.w3.org/TR/CSS22/box.html#
 >
 > **Example** div {
 
-```
+<pre><code>
 **border**: 5px solid red;
 **margin**: 50px;
 **padding**: 20px;
 }
-```
+</code></pre>
 
 > This CSS styles all div elements to have a top, right, bottom and left
 > border of 5px in width; a top, right, bottom and left margin of 50px;
@@ -4106,13 +4102,13 @@ Diagram from CSS2.2 Working Draft <a href="https://www.w3.org/TR/CSS22/box.html#
 > The following example demonstrates this potential issue with
 > content-box:
 
-```
+<pre><code>
 textarea {
   <b>width</b>: 100&percnt;;
   <b>padding</b>: 3px;
   <b>box-sizing</b>: content-box; /* default value */
 }
-```
+</code></pre>
 
 <p>Since the padding will be added to the width of the textarea, the
 resulting element is a textarea that is wider than 100%.</p>
@@ -4136,18 +4132,18 @@ property available:</p>
 box-sizing property to padding-box or borderbox. border-box is most
 commonly used.</p>
 
-```
+<pre><code>
 textarea {
   <b>width</b>: 100&percnt;;
   <b>padding</b>: 3px;
   <b>box-sizing</b>: border-box;
 }
-```
+</code></pre>
 
 <p>To apply a specific box model to every element on the page, use the following 
 snippet:</p>
 
-```
+<pre><code>
 html {
   <b>box-sizing</b>: border-box;
 }
@@ -4155,7 +4151,7 @@ html {
 &ast;, &ast;:before, &ast;:after {
   <b>box-sizing</b>: inherit;
 }
-```
+</code></pre>
 
 <p>In this box-sizing: border-box; is not directly applied to &ast;, so you can easily
 overwrite this property on individual elements.</p>
@@ -4182,7 +4178,7 @@ collapsed. When two margins touch horizontally, they do not collapse.</p>
 
 <p>Consider the following styles and markup:</p>
 
-```
+<pre><code>
 div {
   <b>margin</b>: 10px;
 }
@@ -4193,7 +4189,7 @@ div {
 <b>&lt;div&gt;</b>
   some more content
 <b>&lt;/div&gt;</b>
-```
+</code></pre>
 
 <p>They will be 10px apart since vertical margins collapse over one and
 other. (The spacing will not be the sum of two margins.)</p>
@@ -4202,13 +4198,13 @@ other. (The spacing will not be the sum of two margins.)</p>
 
 <p>Consider the following styles and markup:</p>
 
-```
+<pre><code>
 span {
   <b>margin</b>: 10px;
 }
 
 <b>&lt;span&gt;</b>some<b>&lt;/span&gt;&lt;span&gt;</b>content<b>&lt;/span&gt;</b>
-```
+</code></pre>
 
 They will be 20px apart since horizontal margins don&apos;t collapse over
 one and other. (The spacing will be the sum of two margins.)
@@ -4329,20 +4325,20 @@ of the selected div. <a href="https://jsfiddle.net/wm0100x9/1/">View Result</a>.
 
 <h4>HTML</h4>
 
-```
+<pre><code>
 **&lt;****div** id=&quot;myDiv&quot;**&gt;****&lt;****/div****&gt;**
-```
+</code></pre>
 
 <h4>CSS:</h4>
 
-```
+<pre><code>
 #myDiv {
   **margin-left**: 30px;
   **height**: 40px;
   **width**: 40px;
   **background-color**: red;
 }
-```
+</code></pre>
 
 | <b>Parameter</b> | <b>Details</b> |
 |------------------|-------------------------------------------------|
@@ -27719,16 +27715,16 @@ deg
 > So, by including normalize.css in your project your design will look
 > more alike and consistent across different browsers.
 >
-> **Difference to reset.css**
+> <b>Difference to reset.css</b>
 >
 > You may have heard of reset.css. What&apos;s the difference between the
 > two?
 >
 > While normalize.css provides consistency by setting different
 > properties to unified defaults, reset.css achieves consistency by
-> **removing** all basic styling that a browser may apply. While this
+> <b>removing</b> all basic styling that a browser may apply. While this
 > might sound like a good idea at first, this actually means you have to
-> write **all** rules yourself, which goes against having a solid
+> write <b>all</b> rules yourself, which goes against having a solid
 > standard.
 
 ## Section 54.2: Approaches and Examples
@@ -27743,7 +27739,7 @@ html, body, div, span, applet, object, iframe,
 
 h1, h2, h3, h4, h5, h6,
 
-**p**
+<b>p</b>
 
 , blockquote, pre,
 
@@ -27753,7 +27749,7 @@ del, dfn, em, img, ins, kbd, q, s, samp,
 
 small, strike, strong,
 
-**sub**
+<b>sub</b>
 
 , sup, tt, var,
 
@@ -27773,7 +27769,7 @@ menu, nav, output, ruby, section, summary,
 
 time, mark, audio, video
 
-**{**
+<b>{</b>
 
 margin:
 
@@ -27795,13 +27791,13 @@ border:
 
 font
 
-**-**
+<b>-</b>
 
 size:
 
 100
 
-**%**
+<b>%</b>
 
 ;
 
@@ -27809,11 +27805,11 @@ font: inherit;
 
 vertical
 
-**-**
+<b>-</b>
 
 align: baseline;
 
-**}**
+<b>}</b>
 
 &lbrack;&lbrack;Eric Meyer&apos;s Reset
 CSS&rbrack;&rbrack;(http://meyerweb.com/eric/tools/css/reset/)
@@ -27841,7 +27837,7 @@ html
 
 {
 
-**font-family**
+<b>font-family</b>
 
 :
 
@@ -27851,7 +27847,7 @@ sans-serif
 
 */&ast; 1 &ast;/*
 
-**line-height**
+<b>line-height</b>
 
 :
 
@@ -27902,7 +27898,7 @@ body
 
 {
 
-**margin**
+<b>margin</b>
 
 :
 
@@ -27942,7 +27938,7 @@ section
 
 {
 
-**display**
+<b>display</b>
 
 :
 
@@ -27965,7 +27961,7 @@ h1
 
 {
 
-**font-size**
+<b>font-size</b>
 
 :
 
@@ -27975,7 +27971,7 @@ em
 
 ;
 
-**margin**
+<b>margin</b>
 
 :
 
@@ -27997,7 +27993,7 @@ em
 <h3 id="ch55-1">Section 55.1: Adding Inline Block support to IE6 and IE7</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
-**display**
+<b>display</b>
 
 :
 
@@ -28018,7 +28014,7 @@ zoom
 
 &ast;
 
-**display**
+<b>display</b>
 
 :
 
@@ -28045,9 +28041,9 @@ inline
 > and white-on-black. In IE10+ it also had a none state, but that is no
 > longer supported in Edge going forward.
 >
-> **Examples**
+> <b>Examples</b>
 
-**&commat;media**
+<b>&commat;media</b>
 
 screen and
 
@@ -28083,7 +28079,7 @@ black-on-white
 
 {
 
-**background**
+<b>background</b>
 
 :
 
@@ -28091,7 +28087,7 @@ black-on-white
 
 ;
 
-**color**
+<b>color</b>
 
 :
 
@@ -28163,17 +28159,17 @@ on -ms-high-contrast
 > To target Internet Explorer 6 and Internet Explorer 7, start your
 > properties with &ast;:
 
-```
+<pre><code>
 .hide-on-ie6-and-ie7 {
 &ast;
 <b>display</b>: none;
 // This line is processed only on IE6 and IE7
 }
-```
+</code></pre>
 
 > To target Internet Explorer 8, wrap your selectors inside :
 
-```
+<pre><code>
 <b>&commat;media</b>
 &bsol;&bsol; 0
 screen {
@@ -28181,7 +28177,7 @@ screen {
     <b>display</b>: none;
   }
 }
-```
+</code></pre>
 
 | <b>&commat;media</b> &bsol;&bsol;0             | > screen { }                           |
 
@@ -28201,7 +28197,7 @@ animate at 60fps.
 
 Animate with left and top trigger layout.
 
-```
+<pre><code>
 #box {
   <b>left</b>: 0;
   <b>top</b>: 0;
@@ -28215,7 +28211,7 @@ Animate with left and top trigger layout.
   <b>left</b>: 100px;
   <b>top</b>: 100px;
 }
-```
+</code></pre>
 
 <a href="https://jsfiddle.net/trungdq88/gmpzxLyq/">Demo</a>
 took 11.7ms for rendering 9.8ms
