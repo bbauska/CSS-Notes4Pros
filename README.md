@@ -984,10 +984,15 @@ Selectors Level 4:</p>
   <b>&lt;/div&gt;</b></code></pre>
 
 <h4>CSS:</h4>
-
-<p width="100%">
-  <p align="left" width="50%">
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~ 02. input focused, background blue (0x) ~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<div style="load: right">
+  <img src="./images/image002.png"
+    align="right"
+    title="Input focused, background blue"
+    alt="Input focused, background blue." />
+</div>
+<p>
   <pre><code>div {
     <b>height</b>: 80px;
   }
@@ -997,15 +1002,6 @@ Selectors Level 4:</p>
   div:focus-within {
     <b>background-color</b>: #1565C0;
   }</code></pre>
-  </p>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~ 02. input focused, background blue (0x) ~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-  <p align="right" width="50%">
-  <img src="./images/image002.png"
-    style="width:50%"
-    title="Input focused, background blue"
-    alt="Input focused, background blue." />
-  </p>
 </p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~ 03. :focus-within css pseudo-class (0x) ~~~~~~~~~~~~~~~~~~~~~~~~~~-->
