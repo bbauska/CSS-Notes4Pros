@@ -424,14 +424,14 @@ pseudo-classes, and patterns.</p>
 | Selector     | Description                                         |
 |--------------|-----------------------------------------------------|
 |  &ast;       | Universal selector (all elements) |
-|  div		   | Tag selector (all <b>&lt;div&gt;</b> elements) |
+|  div           | Tag selector (all <b>&lt;div&gt;</b> elements) |
 |  .blue       | Class selector (all elements with class blue) |
 |  .blue.red   | All elements with class blue and red (a type of Compound selector) |
 |  #headline   | ID selector (the element with "id" attribute set to headline) |
 |  :pseudo-class | All Elements with pseudo-class |
 |  ::pseudo-element | Element that matches pseudo-element |
-|  :lang(en)		| Element that matches :lang declaration, for example <b>&lt;span lang="en"&gt;</b> |
-|  div > p			| child selector |
+|  :lang(en)        | Element that matches :lang declaration, for example <b>&lt;span lang="en"&gt;</b> |
+|  div > p            | child selector |
   
 <blockquote>
   <b>Note:</b> The value of an ID must be unique in a web page. It is a
@@ -1493,7 +1493,7 @@ well with a feature image that can fade into a solid colour;</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>General overview</h4>
 
-<p>The <a href="https://www.w3.org/TR/2014/CR-css3-background-20140909/#the-background-size">background-size Demo </a>
+<p>The <a href="https://www.w3.org/TR/2014/CR-css3-background-20140909/#the-background-size">Demo (background-size)</a>
 property enables one to control the scaling of the background-image.
 It takes up to two values, which determine the scale/size of the
 resulting image in vertical and and horizontal direction. If the
@@ -1554,7 +1554,7 @@ image:</p>
 </p>
 
 <p>The behaviour depends on the 
-<a href="https://www.w3.org/TR/2014/CR-css3-background-20140909/#the-background-origin">background-origin Demo</a>.</p>
+<a href="https://www.w3.org/TR/2014/CR-css3-background-20140909/#the-background-origin">Demo (background-origin)</a>.</p>
 
 <h4>Keeping the aspect ratio</h4>
 
@@ -1675,7 +1675,7 @@ div &gt; div::after {
   <b>&lt;div&gt;</b>
     <b>&lt;div</b> class=&quot;contain&quot;<b>&gt;&lt;/div&gt;</b>
     <b>&lt;p&gt;</b>Note the grey background. The image does not cover the whole region, 
-	  but it&apos;s fully<b>&lt;</b>
+      but it&apos;s fully<b>&lt;</b>
   <b>&lt;em&gt;</b>contained<b>&lt;/em&gt;</b>.
   <b>&lt;/p&gt;</b>
 <b>&lt;/div&gt;</b>
@@ -1804,12 +1804,12 @@ property has no effect.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 13.  (xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left" width="100%">
 <img src="./images/image013.jpg"
-  style="width:75%"
-  title=""
-  alt="." />
+  style="width:100%"
+  title="no-background-origin (padding-box is default), background origin: 
+    border-box, background-origin: content-box"
+  alt="no-background-origin (padding-box is default), background origin: 
+    border-box, background-origin: content-box." />
 </p>
-
-<!-- [image013](./images/image013.jpg) -->
 
 <p>More:</p>
 
@@ -1818,19 +1818,18 @@ property has no effect.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch5-8">Section 5.8: Multiple Background Image</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-
 <p> In CSS3, we can stack multiple background in the same element.</p>
 
 <pre><code>#mydiv {
-  <b>background-image</b>: url(img_1.png), /* top image */
+  <b>background-image</b>: url(img_1.png),     /* top image */
                         url (img_2.png), /* middle image */
                         url (img_3.png); /* bottom image */
   <b>background-position</b>: right bottom, 
-                           left top, 
-						   right top;
+                        left top,
+                        right top;
   <b>background-repeat</b>: no-repeat, 
-                         repeat, 
-						 no-repeat;
+                      repeat, 
+                      no-repeat;
 }</code></pre>
 
 <p>Images will be stacked atop one another with the first background on
@@ -1848,13 +1847,13 @@ img_2 and img_3 is on bottom.</p>
 <p>We can also stack images and gradients:</p>
 
 <pre><code>#mydiv {
-  <b>background</b>: url(*image.png*) right bottom no-repeat,
-  linear-gradient (to bottom, #fff 0 &percnt;, #000 100&percnt;);
+  <b>background</b>: url(image.png) right bottom no-repeat,
+                         linear-gradient (to bottom, #fff 0 &percnt;, #000 100&percnt;);
 }</code></pre>
 
 
 <ul>
-  <li><a href="https://jsfiddle.net/z30up2un/">jsFiddle Demo</a></li>
+  <li><a href="https://jsfiddle.net/z30up2un/">Demo (jsFiddle)</a></li>
 </ul>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch5-9">Section 5.9: Background Attachment</h3>
@@ -1863,12 +1862,10 @@ img_2 and img_3 is on bottom.</p>
 <p>The background-attachment property sets whether a background image is
 fixed or scrolls with the rest of the page.</p>
 
-<pre><code>
-body {
-<b>background-image</b>: url(&apos;img.jpg&apos;);
-<b>background-attachment</b>: fixed;
-}
-</code></pre>
+<pre><code>body {
+  <b>background-image</b>: url(&apos;img.jpg&apos;);
+  <b>background-attachment</b>: fixed;
+}</code></pre>
 
 | Value | Description |
 |------------|---------------------------------------------------|
@@ -1884,12 +1881,10 @@ body {
 
 <p>The default behaviour, when the body is scrolled the background scrolls with it:</p>
 
-<pre><code>
-body {
+<pre><code>body {
   <b>background-image</b>: url(&apos;image.jpg&apos;);
   <b>background-attachment</b>: scroll;
-}
-</code></pre>
+}</code></pre>
 
 <h4><i>background-attachment: fixed</i></h4>
 
@@ -1907,13 +1902,10 @@ body {
 <p>The background image of the div will scroll when the contents of the
 div is scrolled.</p>
 
-<pre><code>
-div {
+<pre><code>div {
   <b>background-image</b>: url(&apos;image.jpg&apos;);
   <b>background-attachment</b>: local;
-}
-</code></pre>
-
+}</code></pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch5-10">Section 5.10: Background Clip</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -1938,8 +1930,7 @@ div {
   <b>width</b>:300px;
   <b>border</b>:20px solid black;
   <b>padding</b>:50px;
-  <b>background</b>:url (
-    https://static.pexels.com/photos/6440/magazines-desk-work-workspace-medium.jpg);
+  <b>background</b>:url (https://static.pexels.com/photos/6440/magazines-desk-work-workspace-medium.jpg);
   <b>background-repeat</b>: no-repeat;
 }
 .example1 {}
@@ -1965,18 +1956,15 @@ div {
     tincidunt ut laoreet dolore magna aliquam erat volutpat.<b>&lt;</b><b>/p</b><b>&gt;</b>
   <b>&lt;</b><b>p</b><b>&gt;</b>Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut 
     aliquip ex ea commodo consequat.<b>&lt;</b><b>/p</b><b>&gt;</b>
-<b>&lt;</b><b>/div</b><b>&gt;</b>  <b>&lt;</b><b>p</b><b>&gt;</b>
-  background-origin: content-box:
-  <b>&lt;</b><b>/p</b><b>&gt;</b>
+<b>&lt;</b><b>/div</b><b>&gt;</b>  
+  <b>&lt;</b><b>p</b><b>&gt;</b>background-origin: content-box:  <b>&lt;</b><b>/p</b><b>&gt;</b>
   <b>&lt;</b><b>div</b>class = &quot;example example3&quot;<b>&gt;</b>
-  <b>&lt;</b><b>h</b><b>2</b><b>&gt;</b>
-  Lorem Ipsum Dolor
-  <b>&lt;</b><b>/h</b><b>2</b><b>&gt;</b>
+  <b>&lt;</b><b>h</b><b>2</b><b>&gt;</b>Lorem Ipsum Dolor<b>&lt;</b><b>/h</b><b>2</b><b>&gt;</b>
   <b>&lt;p&gt;</b>There once was a man fron Sash. His balls were made of glass
   When he rubbed them together, he made stormy weather.
   And lightning struck out of his ass.<b>&lt;/p&gt;</b> <b>&lt;p&gt;</b>And more goes here, as
-  well. It beats Latin. I don't know Latin so better for me
-  the end.<b>&lt;/p&gt; &lt;/div&gt;</b></code></pre>
+  well. It beats Latin. I don't know Latin so better for me the end.<b>&lt;/p&gt; 
+&lt;/div&gt;</b></code></pre>
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch5-11">Section 5.11: Background Repeat</h3>
@@ -1986,98 +1974,60 @@ The background-repeat property sets if/how a background image will be repeated.
 
 By default, a background-image is repeated both vertically and horizontally.
 
-<pre><code>
-div {
-  <b>background-image</b>: url (
-    &quot;img.jpg&quot;
-  );
+<pre><code>div {
+  <b>background-image</b>: url (&quot;img.jpg&quot;);
   <b>background-repeat</b>: repeat-y;
-}
-  <b>background-repeat</b>: repeat-y
-</code></pre>
+}</code></pre>
 
-<h4>Here&apos;s how it looks:</h4>
+<p>Here's how a <b>background-repeat</b>: repeat-y looks like:</p>
+
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 14.  (xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p align="center" width="100%">
+<p align="left" width="100%">
 <img src="./images/image014.jpg"
-  style="width:50%"
-  title=""
-  alt="." />
+  style="width:75%"
+  title="Cat repeat furthest left column"
+  alt="Cat repeat furthest left column." />
 </p>
-<!-- [image014.jpg](./images/image014.jpg) -->
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch5-12">Section 5.12: background-blend-mode Property</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-
 <pre><code>
 .my-div
 {
-<b>width</b>:300px;
-<b>height</b>:200px;
-<b>background-size</b>:100&percnt;;
-<b>background-repeat</b>:no-repeat;
-<b>background-image</b>:linear-gradient
-(
-to right, black 0&percnt;
-,white 100&percnt;
-),
-url
-(
-&apos;https://static.pexels.com/photos/54624/strawberry-fruit-red-sweet-54624-medium.jpeg&apos;
-);
-<b>background-blend-mode</b>:saturation;
+  <b>width</b>:300px;
+  <b>height</b>:200px;
+  <b>background-size</b>:100&percnt;;
+  <b>background-repeat</b>:no-repeat;
+  <b>background-image</b>:linear-gradient (to right, black 0&percnt; ,white 100&percnt;),
+url(&apos;https://static.pexels.com/photos/54624/strawberry-fruit-red-sweet-54624-medium.jpeg&apos;);
+  <b>background-blend-mode</b>:saturation;
 }
-<b>&lt;</b>
-<b>div</b>
-class
-=
-&quot;my-div&quot;
-<b>&gt;</b>
-Lorem ipsum
-<b>&lt;</b>
-<b>/div</b>
-<b>&gt;</b>
-</code></pre>
+<b>&lt;</b><b>div</b> class=&quot;my-div&quot;<b>&gt;</b>Lorem ipsum<b>&lt;</b><b>/div</b><b>&gt;</b></code></pre>
 
-<a href="https://jsfiddle.net/MadalinaTn/y69d28Lb/&rbrack;&rbrack;(https://jsfiddle.net/MadalinaTn/y69d28Lb/">See results here</a>.
+<p>See result here: <a href="https://jsfiddle.net/MadalinaTn/y69d28Lb/">(https://jsfiddle.net/MadalinaTn/y69d28Lb/">Demo (jsFiddle)</a>.</p>
 
-> CSS Syntax: background-blend-mode: normal &vert; multiply &vert; screen &vert;
-> overlay &vert; darken &vert; lighten &vert; color-dodge &vert; saturation &vert; color &vert;
-> luminosity;
-
+<p>CSS Syntax: background-blend-mode: normal &vert; multiply &vert; screen &vert;
+overlay &vert; darken &vert; lighten &vert; color-dodge &vert; saturation &vert; color &vert;
+luminosity;</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch5-13">Section 5.13: Background Color with Opacity</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p>If you set opacity on an element it will affect all its child elements. To set an opacity just on the background of an element you
+will have to use RGBA colors. Following example will have a black background with 0.6 opacity.</p>
 
-> If you set opacity on an element it will affect all its child
-> elements. To set an opacity just on the background of an element you
-> will have to use RGBA colors. Following example will have a black
-> background with 0.6 opacity.
+<pre><code>/* Fallback for web browsers that don&apos;t support RGBa */
+<b>background-color</b>:rgb (0,0,0);
 
-/* Fallback for web browsers that don&apos;t support RGBa */
-
-<pre><code>
-<b>background-color</b>:rgb (
-  0,0,0
-  );
 /* RGBa with 0.6 opacity */
-<b>background-color</b>:rgba (
-  0,0,0,0.6
-);
+<b>background-color</b>:rgba (0,0,0,0.6);
+
 /* For IE 5.5 - 7 */
-<b>filter</b>: progid: DXImageTransform.Microsoft.gradient
-(
-startColorstr = #99000000,
-endColorstr = #99000000 
-);
+<b>filter</b>: progid:DXImageTransform.Microsoft.gradient(startColorstr = #99000000, endColorstr = #99000000);
 /* For IE 8 */
-&minus;
-ms-filter:
-&quot;progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000,
-endColorstr=#99000000)&quot;;
-</code></pre>
+&minus;ms-filter: &quot;progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000,
+endColorstr=#99000000)&quot;;</code></pre>
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ch6">Chapter 6: Centering</h2>
@@ -2087,102 +2037,78 @@ endColorstr=#99000000)&quot;;
 
 <h4>HTML:</h4>
 
-<pre><code>
-<b>&lt;</b>
-<b>div</b>
-class
-=
-&quot;container&quot;
-<b>&gt;</b>
-<b>&lt;</b>
-<b>img</b>
-src
-=
-&quot;http://lorempixel.com/400/200&quot;
-<b>/&gt;</b>
-<b>&lt;</b>
-<b>/div</b>
-<b>&gt;</b>
-</code></pre>
+<pre><code><b>&lt;</b><b>div</b> class=&quot;container&quot;<b>&gt;</b>
+<b>&lt;</b><b>img</b> src=&quot;http://lorempixel.com/400/200&quot; <b>/&gt;</b>
+<b>&lt;</b><b>/div</b><b>&gt;</b></code></pre>
 
 <h4>CSS:</h4>
 
-<pre><code>
-html, body, .container
-{
-<b>height</b>:100&percnt;;
+<pre><code>html, body, .container {
+  <b>height</b>:100&percnt;;
 }
 .container {
-<b>display</b>: flex;
-<b>justify-content</b>: center;
-/* horizontal center */
+  <b>display</b>: flex;
+  <b>justify-content</b>: center;  /* horizontal center */
 }
 img {
-<b>align-self</b>:center;
-/* vertical center */
-}
-</code></pre>
+  <b>align-self</b>:center;  /* vertical center */
+}</code></pre>
 
-&lbrack;&lbrack;View Result&rbrack;&rbrack;(https://jsfiddle.net/aLu05kjy/1/) 
+<p><a href="https://jsfiddle.net/aLu05kjy/1/">Demo (View result-jsFiddle)</a>.</p>
 
 <h4>HTML:</h4>
 
-<pre><code>
-<b>&lt;</b>
-<b>img</b>
-src = &quot;http://lorempixel.com/400/200&quot;
-<b>/&gt;</b>
-> <b>CSS:</b>
-html, body {
-<b>height</b>:100&percnt;;
+<pre><code><b>&lt;</b><b>img</b> src = &quot;http://lorempixel.com/400/200&quot; <b>/&gt;</b></code></pre>
+
+<h4>CSS:</h4>
+
+<pre><code>html, body {
+  <b>height</b>:100&percnt;;
 }
 body {
-<b>display</b>:flex;
-<b>justify-content</b>:center;
-*/&ast; horizontal center &ast;/*
-<b>align-items</b>:center;
-/* vertical center */
-}
-</code></pre>
+  <b>display</b>:flex;
+  <b>justify-content</b>:center;  /* horizontal center */
+  <b>align-items</b>:center;      /* vertical center */
+}</code></pre>
 
-&lbrack;&lbrack;View Result&rbrack;&rbrack;(https://jsfiddle.net/ttp0bzfm/1/)
+<p><a href="https://jsfiddle.net/ttp0bzfm/1/">Demo (View Result)</a>.</p>
 
-> See Dynamic Vertical and Horizontal Centering under the Flexbox
-> documentation for more details on flexbox and what the styles mean.
->
-> <b>Browser Support</b>
->
-> Flexbox is supported by all major browsers, &lbrack;&lbrack;except IE versions
-> before 10&rbrack;&rbrack;(http://caniuse.com/#search=flex).
->
-> Some recent browser versions, such as Safari 8 and IE10, require
-> &lbrack;&lbrack;vendor
-> prefixes&rbrack;&rbrack;(https://developer.mozilla.org/en-US/docs/Glossary/Vendor_Prefix).
->
-> For a quick way to generate prefixes there is
-> &lbrack;&lbrack;Autoprefixer&rbrack;&rbrack;(https://autoprefixer.github.io/), a
-> third-party tool.
->
-> For older browsers (like IE 8 & 9) a &lbrack;&lbrack;Polyfill is
-> available&rbrack;&rbrack;(https://github.com/jonathantneal/flexibility).
->
-> For a more detailed look at flexbox browser support, see &lbrack;&lbrack;this
-> answer&rbrack;&rbrack;(http://stackoverflow.com/a/35137869/3597276).
+See Dynamic Vertical and Horizontal Centering under the Flexbox
+documentation for more details on flexbox and what the styles mean.
+
+<b>Browser Support</b>
+
+Flexbox is supported by all major browsers, &lbrack;&lbrack;except IE versions
+before 10&rbrack;&rbrack;(http://caniuse.com/#search=flex).
+
+Some recent browser versions, such as Safari 8 and IE10, require
+&lbrack;&lbrack;vendor
+prefixes&rbrack;&rbrack;(https://developer.mozilla.org/en-US/docs/Glossary/Vendor_Prefix).
+
+For a quick way to generate prefixes there is
+&lbrack;&lbrack;Autoprefixer&rbrack;&rbrack;(https://autoprefixer.github.io/), a
+third-party tool.
+
+For older browsers (like IE 8 & 9) a &lbrack;&lbrack;Polyfill is
+available&rbrack;&rbrack;(https://github.com/jonathantneal/flexibility).
+
+For a more detailed look at flexbox browser support, see &lbrack;&lbrack;this
+answer&rbrack;&rbrack;(http://stackoverflow.com/a/35137869/3597276).
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch6-2">Section 6.2: Using CSS transform</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
-> CSS transforms are based on the size of the elements so if you don&apos;t
-> know how tall or wide your element is, you can position it absolutely
-> 50% from the top and left of a relative container and translate it by
-> 50% left and upwards to center it vertically and horizontally.
->
-> Keep in mind that with this technique, the element could end being
-> rendered at a non-integer pixel boundary, making it look blurry. See
-> &lbrack;&lbrack;this answer in
-> SO&rbrack;&rbrack;(http://stackoverflow.com/a/32329785/1385678) for a
-> workaround.
+CSS transforms are based on the size of the elements so if you don&apos;t
+know how tall or wide your element is, you can position it absolutely
+50% from the top and left of a relative container and translate it by
+50% left and upwards to center it vertically and horizontally.
+
+Keep in mind that with this technique, the element could end being
+rendered at a non-integer pixel boundary, making it look blurry. See
+&lbrack;&lbrack;this answer in
+SO&rbrack;&rbrack;(http://stackoverflow.com/a/32329785/1385678) for a
+workaround.
 
 <h4>HTML</h4>
 
@@ -2401,9 +2327,8 @@ src
 </p>
 <!-- [image015.jpg](./images/image015.jpg) -->
 
-JSFiddle example: &lbrack;&lbrack;Centering objects with margin: 0
-auto <a href="https://jsfiddle.net/xf1ze3v9/">Demo</a>.
-
+<p>JSFiddle example: Centering objects with margin: 0
+auto <a href="https://jsfiddle.net/xf1ze3v9/">Demo (jsFiddle)</a>.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch6-4">Section 6.4: Using text-align</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -2611,19 +2536,13 @@ content content content content content content<b>&lt;</b><b>/p</b><b>&gt;</b>
 
 <h4>CSS</h4>
 
-<pre><code>
-.content
-&ast;
+<pre><code>.content
+  &ast;
 {
-<b>box-sizing</b>
-:
-border-box
-;
+  <b>box-sizing</b>: border-box;
 }
-.content
-.position-container
-{
-<b>display</b>: table;
+.content .position-container {
+  <b>display</b>: table;
 }
 .content .details {
   <b>display</b>: table-cell;
@@ -2638,188 +2557,70 @@ border-box
 }
 .content .thumb img {
   <b>width</b>: 100&percnt;;
-}
-</code></pre>
+}</code></pre>
 
-<a href="https://jsfiddle.net/gasp10/6bv92mko/4/">JS Fiddle Demo</a>.
+<p><a href="https://jsfiddle.net/gasp10/6bv92mko/4/">Demo (jsFiddle)</a>.</p>
 
 The main points are the 3 .thumb, .details and .position-container containers:
 
-  <b>display</b>                         :     table
 
 
-  <b>width</b>   :   &period;...   and    <b>display</b>   :   table-cell      ,   <b>vertical-align</b>
+The .position-container must have .
+
+The .details must have the real width set : middle.
 
 
-> The .position-container must have .
->
-> The .details must have the real width set : middle.
+The .thumb must have if you want that it will take all the remaining
+space and it will be influenced by the .details width.
 
-  <b>width</b>                        :      100%
 
-> The .thumb must have if you want that it will take all the remaining
-> space and it will be influenced by the .details width.
-
-  <b>width</b>                        :      100%
-
-> The image (if you have an image) inside .thumb should have , but it is
-> not necessary if you have correct proportions.
+The image (if you have an image) inside .thumb should have , but it is
+not necessary if you have correct proportions.
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch6-10">Section 6.10: Ghost element technique (Michał Czernow&apos;s hack)</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-
-> This technique works even when the container&apos;s dimensions are
-> unknown.
-
-  <b>vertical-align</b>
-
-> Set up a &quot;ghost&quot; element inside the container to be centered that is
-> 100% height, then use :
->
-> middle on both that and the element to be centered.
->
-> <h4>CSS</h4>
-
-*/&ast; This parent can be any width and height &ast;/*
-
-.block
-
-{
-
-<b>text-align</b>
-
-:
-
-center
-
-;
-
-*/&ast; May want to do this if there is risk the container may be narrower
-than the element inside &ast;/*
-
-<b>white-space</b>
-
-:
-
-nowrap
-
-;
-
-}
-
-*/&ast; The ghost element &ast;/*
-
-.block
-
-:
-
-before
-
-{
-
-<b>content</b>
-
-:
-
-&apos;&apos;
-
-;
-
-<b>display</b>
-
-:
-
-inline-block
-
-;
-
-<b>height</b>
-
-:
-
-100
-
-&percnt;
-
-;
+<p>This technique works even when the container&apos;s dimensions are unknown.</p>
 
 <b>vertical-align</b>
 
-:
+Set up a &quot;ghost&quot; element inside the container to be centered that is
+100% height, then use :
 
-middle
+middle on both that and the element to be centered.
 
-;
+<h4>CSS:</h4>
 
-*/&ast; There is a gap between ghost element and .centered,*
-
-*caused by space character rendered. Could be eliminated by*
-
-*nudging .centered (nudge distance depends on font family),*
-
-*or by zeroing font-size in .parent and resetting it back*
-
-*(probably to 1rem) in .centered. &ast;/*
-
-<b>margin-right</b>
-
-:
-
--0.25
-
-em
-
-;
-
+<pre><code>/* This parent can be any width and height */
+.block {
+  <b>text-align</b>: center;
+/* May want to do this if there is risk the container may be 
+  narrower than the element inside */
+  <b>white-space</b>: nowrap;
 }
-
-*/&ast; The element to be centered, can also be of any width and height
-&ast;/*
-
-.centered
-
-{
-
-<b>display</b>
-
-:
-
-inline-block
-
-;
-
-<b>vertical-align</b>
-
-:
-
-middle
-
-;
-
-<b>width</b>
-
-:
-
-300
-
-px
-
-;
-
-<b>white-space</b>
-
-:
-
-normal
-
-;
-
-*/&ast; Resetting inherited nowrap behavior &ast;/*
-
+/* The ghost element */
+.block: before {
+  <b>content</b>: &apos;&apos;;
+  <b>display</b>: inline-block;
+  <b>height</b>: 100&percnt;;
+  <b>vertical-align</b>: middle;
+/* There is a gap between ghost element and .centered,
+caused by space character rendered. Could be eliminated by
+nudging .centered (nudge distance depends on font family),
+or by zeroing font-size in .parent and resetting it back
+(probably to 1rem) in .centered. &ast; */
+  <b>margin-right</b>: -0.25em;
 }
+/* The element to be centered, can also be of any width and height */
+.centered {
+  <b>display</b>: inline-block;
+  <b>vertical-align</b>: middle;
+  <b>width</b>: 300px;
+  <b>white-space</b>: normal;
+/* Resetting inherited nowrap behavior */
+}</code></pre>
 
-> <h4>HTML</h4>
+<h4>HTML:</h4>
 
 <pre><code>
 <b>&lt;</b>
@@ -24899,7 +24700,7 @@ div {
     transparent
     49&percnt;,
     white 50&percnt;
-	);
+    );
 /* check remarks before using */
   }
 ```
