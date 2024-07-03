@@ -1567,7 +1567,7 @@ to contain an image with correct aspect ratio completely in a
 background area, the values, contain and cover provide the additional
 functionality.</p>
 
-<h4>Eggsplanation for <span style="font-family: consolas">contain</span> and <span style="font-family: consolas">cover</span></h4>
+<h4>Eggsplanation for <span style="font-family: Consolas; font-size: 16px;">contain</span> and <span style="font-family: consolas">cover</span></h4>
 
 <p>Sorry for the bad pun, but we&apos;re going to use a <a href="https://commons.wikimedia.org/wiki/File:Chicken_Egg_without_Eggshell_5859.jpg">
 picture of the day by Biswarup Ganguly</a> for demonstration. Lets say that 
