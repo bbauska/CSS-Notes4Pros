@@ -3,7 +3,7 @@ title: |
   CSS Notes for Professionals
   by web@petercv.com, PDF https://goalkicker.com/CSSBook
 author: "bbauska"
-date last editted: "7/1/2024 Mon 2+am"
+date last editted: "7/2/2024 Tue 6+pm"
 output: 
   markdown:
     with some style
@@ -58,7 +58,7 @@ nor accurate, use at your own risk.</p>
 <p align="center">Please send feedback and corrections to <a href="web@petercv.com">web@petercv.com</a></p>
 <!-- page 2 -->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2>Chapter 1: Getting started with CSS</h2>
+<h2 id="ch1">Chapter 1: Getting started with CSS</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch1-1">Section 1.1: External Stylesheet</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -1510,10 +1510,25 @@ an image with height and width of 50 px:</p>
 
 <p>So if we started with the following picture (which has the mentioned
 size of 256 px × 256 px),</p>
-<image 1>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~ 256x256. 256 x 256 image, circle, triangle and square (xx) ~~~~~~~~~~~~~~~~-->
+<p align="left" width="100%">
+<img src="./images/256x256.png"
+  style="width:256px height:256px;"
+  title="256 x 256 image, circle, triangle and square"
+  alt="256 x 256 image, circle, triangle and square." />
+</p>
 <p>we&apos;ll end up with a 50 px × 50 px on the user&apos;s screen, contained in
 the background of our element:</p>
-<image 2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~ 50x50.  (xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p align="left" width="100%">
+<img src="./images/50x50.png"
+  style="width:50px height:50px;"
+  title="50px by 50px image; circle, triangle, and square"
+  alt="50px by 50px image; circle, triangle, and square." />
+</p>
+
 <p>One can also use percentage values to scale the image with respect of
 the element. The following example would yield a 200 px × 133 px drawn
 image:</p>
@@ -1529,7 +1544,14 @@ image:</p>
   <b>margin</b>: 0; 
 }</code></pre>
 
-<image 3>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~ 200x200. circle, triangle and square (xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p align="left" width="100%">
+<img src="./images/256x256.png"
+  style="width:200px height:200px;"
+  title="200 by 200; circle, triangle and square"
+  alt="200 by 200; circle, triangle and square." />
+</p>
 
 <p>The behaviour depends on the 
 <a href="https://www.w3.org/TR/2014/CR-css3-background-20140909/#the-background-origin">background-origin Demo</a>.</p>
@@ -1648,10 +1670,10 @@ div &gt; div::after {
   <b>display</b>: block;
   <b>width</b>: 10ex;
   <b>font-size</b>: 0.7em;
-  <b>content</b>: attr (class);
+  <b>content</b>: attr(class);
 }
   <b>&lt;div&gt;</b>
-    <b>&lt;div</b> class=&quot;contain&quot;<b>&gt;&lt;/div&lt;</b>
+    <b>&lt;div</b> class=&quot;contain&quot;<b>&gt;&lt;/div&gt;</b>
     <b>&lt;p&gt;</b>Note the grey background. The image does not cover the whole region, 
 	  but it&apos;s fully<b>&lt;</b>
   <b>&lt;em&gt;</b>contained<b>&lt;/em&gt;</b>.
@@ -3952,7 +3974,9 @@ teal
 
 }
 
-# Chapter 7: The Box Model
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h2 id="ch7">Chapter 7: The Box Model</h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 **Parameter Detail**
 
@@ -4136,7 +4160,9 @@ html {
 <p>In this box-sizing: border-box; is not directly applied to &ast;, so you can easily
 overwrite this property on individual elements.</p>
 
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ch8">Chapter 8: Margins</h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 | <b>Parameter</b>  | <b>Details</b> |
 |-------------------|------------------------------------------------------------------|
@@ -5213,7 +5239,9 @@ black
 
 }
 
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ch11">Chapter 11: Outlines</h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 **Parameter Details**
 
@@ -5595,7 +5623,9 @@ An outset outline
 
 **&gt;**
 
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ch12">Chapter 12: Overflow</h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 **Overflow Value Details**
 
@@ -6184,7 +6214,9 @@ debitis sea.
 > This example shows how paragraphs within a div with the overflow
 > property set will interact with a floated image.
 
-<h2 id="ch12">Chapter 13: Media Queries</h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h2 id="ch13">Chapter 13: Media Queries</h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 | **          | > **Details**                                          |
 |-------------|--------------------------------------------------------|
@@ -6668,7 +6700,7 @@ dpi
 > This hasn&apos;t been implemented in engines other than WebKit and Blink.
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-## Section 13.5: Width vs Viewport
+<h3 id="ch13-5">Section 13.5: Width vs Viewport</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
   **&lt;head**
@@ -6703,7 +6735,7 @@ dpi
 > (smaller texts and images).
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-## Section 13.6: Using Media Queries to Target Dierent Screen Sizes0
+<h3 id="ch13-6">Section 13.6: Using Media Queries to Target Dierent Screen Sizes0</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 > Often times, responsive web design involves media queries, which are
@@ -6862,7 +6894,7 @@ px
 }
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-## Section 13.7: Use on link tag
+<h3 id="ch13-7">Section 13.7: Use on link tag</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 > **&lt;link** rel=&quot;stylesheet&quot; media=&quot;min-width: 600px&quot;
@@ -6872,7 +6904,7 @@ px
 > with screen width larger than 600px.
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-## Section 13.8: Media queries and IE8
+<h3 id="ch13-8">Section 13.8: Media queries and IE8</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 > &lbrack;**&lbrack;Media
@@ -7409,7 +7441,7 @@ effect&rbrack;&rbrack;(http://codepen.io/PhilippeVay/pen/OXEqgW?editors=0100)
 > to outdated browsers IE6 maybe 7)
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-## Section 14.4: In-line DIV using float
+<h3 id="ch14-4">Section 14.4: In-line DIV using float</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 > The div is a block-level element, i.e it occupies the whole of the
@@ -8145,7 +8177,7 @@ right
 }
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-## Section 14.8: Two-Column Lazy/Greedy Layout
+<h3 id="ch14-8">Section 14.8: Two-Column Lazy/Greedy Layout</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 > This layout uses one floated column to create a two-column layout with
@@ -8240,7 +8272,9 @@ yellow
 
 &lbrack;&lbrack;Fiddle&rbrack;&rbrack;(https://jsfiddle.net/ooprqsL0/)
 
-# Chapter 15: Typography
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h2 id="ch15">Chapter 15: Typography</h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 **Parameter Details**
 
@@ -8271,7 +8305,7 @@ yellow
 > inherit;
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-## Section 15.1: The Font Shorthand
+<h3 id="ch15-1">Section 15.1: The Font Shorthand</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 > With the syntax:
@@ -8423,7 +8457,7 @@ sans-serif
 > font-family -- depends on user agent
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-## Section 15.2: Quotes
+<h3 id="ch15-2>Section 15.2: Quotes</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
   **&lt;q**
@@ -8456,7 +8490,7 @@ q
 }
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-## Section 15.3: Font Size
+<h3 id="ch15-3">Section 15.3: Font Size</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 > **HTML:**
@@ -8539,7 +8573,7 @@ px
 > #element-two will be 10px in size.
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-## Section 15.4: Text Direction
+<h3 id="ch15-4">Section 15.4: Text Direction</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 div
@@ -8639,7 +8673,7 @@ vertical-rl
 Syntax: ;
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-## Section 15.5: Font Stacks
+<h3 id="ch15-5">Section 15.5: Font Stacks</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 **font-family**
@@ -8689,7 +8723,7 @@ monospace
 > and, if necessary, any monospace font on the user&apos;s computer.
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-## Section 15.6: Text Overflow
+<h3 id="ch15-6">Section 15.6: Text Overflow</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 > The text-overflow property deals with how overflowed content should be
@@ -8805,7 +8839,7 @@ N
 &lbrack;&lbrack;https://www.w3.org/TR/2012/WD-css3-ui-20120117/#text-overflow0&rbrack;&rbrack;(https://www.w3.org/TR/2012/WD-css3-ui-20120117/#text-overflow0)
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-## Section 15.7: Text Shadow
+<h3 id="ch15-7">Section 15.7: Text Shadow</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 > To add shadows to text, use the text-shadow property. The syntax is as
@@ -8914,7 +8948,7 @@ px
 }
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-## Section 15.8: Text Transform
+<h3 id="ch15-8">Section 15.8: Text Transform</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 > The text-transform property allows you to change the capitalization of
@@ -9005,7 +9039,7 @@ all letters in lowercase
 </code></pre>
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-## Section 15.9: Letter Spacing
+<h3 id="ch15-9">Section 15.9: Letter Spacing</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 <pre><code>
@@ -9047,7 +9081,7 @@ Resources:
 &lbrack;&lbrack;https://developer.mozilla.org/en-US/docs/Web/CSS/letter-spacing&rbrack;&rbrack;(https://developer.mozilla.org/en-US/docs/Web/CSS/letter-spacing)
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-## Section 15.10: Text Indent
+<h3 id="ch15-10">Section 15.10: Text Indent</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 <pre><code>
@@ -9074,7 +9108,7 @@ px
 &lbrack;&lbrack;https://developer.mozilla.org/en-US/docs/Web/CSS/text-indent&rbrack;&rbrack;(https://developer.mozilla.org/en-US/docs/Web/CSS/text-indent)
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-## Section 15.11: Text Decoration
+<h3 id="ch15-11">Section 15.11: Text Decoration</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 > The text-decoration property is used to set or remove decorations from
@@ -9153,7 +9187,7 @@ blue
 > text-decoration-skip
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-## Section 15.12: Word Spacing
+<h3 id="ch15-12">Section 15.12: Word Spacing</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 > The word-spacing property specifies the spacing behavior between tags
@@ -9220,7 +9254,7 @@ px
 &lbrack;w3.org&rbrack;&rbrack;(https://www.w3.org/wiki/CSS/Properties/word-spacing)
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-## Section 15.13: Font Variant
+<h3 id="ch15-13">Section 15.13: Font Variant</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 > Attributes:
@@ -9273,7 +9307,7 @@ aNd ExAmpLe
 > font-variant-ligatures, and font-variant-east-asian.
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-# Chapter 16: Flexible Box Layout (Flexbox)
+<h2 id="ch16">Chapter 16: Flexible Box Layout (Flexbox)</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 > The Flexible Box module, or just &apos;flexbox&apos; for short, is a box model
@@ -9284,7 +9318,7 @@ aNd ExAmpLe
 > and shrinks them to prevent overflow.
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-## Section 16.1: Dynamic Vertical and Horizontal Centering (alignitems, justify-content)
+<h3 id="ch16-1">Section 16.1: Dynamic Vertical and Horizontal Centering (alignitems, justify-content)</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 > **Simple Example (centering a single element)**
@@ -9590,7 +9624,7 @@ center
 Here is a <a href="https://jsfiddle.net/d6pc5bmd/5/">demo</a>.
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-## Section 16.2: Sticky Variable-Height Footer
+<h3 id="ch16-2">Section 16.2: Sticky Variable-Height Footer</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 > This code creates a sticky footer. When the content doesn&apos;t reach the
 > end of the viewport, the footer sticks to the bottom of the viewport.
@@ -9741,7 +9775,9 @@ containers to their parent element.</p>
 !&lbrack;&rbrack;(./images/image046.png){width="7.48037510936133in"
 height="3.182736220472441in"}
 
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch16-4">Section 16.4: Holy Grail Layout using Flexbox</h3>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 > &lbrack;&lbrack;Holy Grail
 > layout&rbrack;&rbrack;(http://alistapart.com/article/holygrail) is a
@@ -10752,7 +10788,7 @@ normal
 rules&rbrack;**&rbrack;(https://www.w3.org/TR/CSS22/cascade.html#important-rules)
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-## Section 17.3: Cascading
+<h3 id="ch17-3">Section 17.3: Cascading</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 > Cascading and specificity are used together to determine the final
@@ -10997,7 +11033,7 @@ red
 > Inline styles trump everything.
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-## Section 17.4: More complex specificity example
+<h3 id="ch17-4">Section 17.4: More complex specificity example</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 div
@@ -11232,9 +11268,9 @@ Hello, world!
 > &quot;wins&quot;.
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-# Chapter 18: Colors
+<h2 id="ch18">Chapter 18: Colors</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-## Section 18.1: currentColor
+<h3 id="ch18-1">Section 18.1: currentColor</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 > currentColor returns the computed color value of the current element.
@@ -11407,7 +11443,7 @@ currentColor
 [image049.png 5.2 x 3.09](./images/image049.png)
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-## Section 18.2: Color Keywords
+<h3 id="ch18-2">Section 18.2: Color Keywords</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 > Most browsers support using color keywords to specify a color. For
@@ -11779,7 +11815,7 @@ YellowGreen #9ACD32 rgb(154,205,50)
 > (0,0,0,0)
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-## Section 18.3: Hexadecimal Value
+<h3 id="ch18-3">Section 18.3: Hexadecimal Value</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 > **Background**
@@ -11889,7 +11925,7 @@ can!*
 > about capitalization. #FFC125 and #ffc125 are the same color.
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-## Section 18.4: rgb() Notation
+<h3 id="ch18-4">Section 18.4: rgb() Notation</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 > RGB is an additive color model which represents colors as mixtures of
@@ -12016,7 +12052,7 @@ red
 > integer from 0 - 255 or percentage from 0 - 100%
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-## Section 18.5: rgba() Notation
+<h3 id="ch18-5">Section 18.5: rgba() Notation</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 > Similar to rgb() notation, but with an additional alpha (opacity)
@@ -12160,7 +12196,7 @@ red
 > fully opaque
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-## Section 18.6: hsl() Notation
+<h3 id="ch18-6">Section 18.6: hsl() Notation</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 > HSL stands for **hue** (&quot;which color&quot;), **saturation** (&quot;how much
@@ -12281,7 +12317,7 @@ hue
 > white; changing the hue or saturation has no effect.
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-## Section 18.7: hsla() Notation
+<h3 id="ch18-7">Section 18.7: hsla() Notation</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 > Similar to hsl() notation, but with an added alpha (opacity) value.
@@ -12368,9 +12404,9 @@ hue
 opaque
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-# Chapter 19: Opacity
+<h2 id="ch19">Chapter 19: Opacity</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-## Section 19.1: Opacity Property
+<h3 id="ch19-1">Section 19.1: Opacity Property</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 > An element&apos;s opacity can be set using the opacity property. Values
@@ -12439,7 +12475,7 @@ This is a partially transparent element
 > 75% transparent (25% Opaque) Transparent
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-## Section 19.2: IE Compatibility for &apos;opacity&apos;
+<h3 id="ch19-2">Section 19.2: IE Compatibility for &apos;opacity&apos;</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 To use
@@ -12504,7 +12540,9 @@ opacity
 
 }
 
-# Chapter 20: Length Units
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h2 id="ch20">Chapter 20: Length Units</h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 **Unit Description**
 
@@ -12528,7 +12566,7 @@ opacity
 > or relative.
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-## Section 20.1: Creating scalable elements using rems and ems
+<h3 id="ch20-1">Section 20.1: Creating scalable elements using rems and ems</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 Version ≥ 3
@@ -12724,7 +12762,7 @@ em
 height="2.9583333333333335in"}
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-## Section 20.2: Font size with rem
+<h3 id="ch20-2">Section 20.2: Font size with rem</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 > CSS3 introduces a few new units, including the
@@ -12836,7 +12874,7 @@ em
 }
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-## Section 20.3: vmin and vmax
+<h3 id="ch20-3">Section 20.3: vmin and vmax</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 > **vmin**: Relative to 1 percent of the viewport&apos;s smaller dimension
@@ -12852,7 +12890,7 @@ supported&rbrack;&rbrack;(http://caniuse.com/#feat=viewport-units) in:
 > any version of Internet Explorer Safari before version 6.1
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-## Section 20.4: vh and vw
+<h3 id="ch20-4">Section 20.4: vh and vw</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 CSS3 introduced two units for representing size.
@@ -12909,7 +12947,7 @@ vh
 > the viewport
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-## Section 20.5: using percent %
+<h3 id="ch20-5">Section 20.5: using percent %</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 > One of the useful unit when creating a responsive application.
@@ -13015,13 +13053,10 @@ width: 50%;
 
 !&lbrack;&rbrack;(./images/image191.jpg){width="1.40625in" height="0.875in"}
 
-# Chapter 21: Pseudo-Elements
-
-  -------------------------------------------------------------------------
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h2 id="ch21">Chapter 21: Pseudo-Elements</h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
   **pseudo-element**   **Description**
-  -------------------- ----------------------------------------------------
-
-  -------------------------------------------------------------------------
 
 ::after Insert content after the content of an element
 
@@ -13068,7 +13103,7 @@ width: 50%;
 > letter of a block element specified by the selector.
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-## Section 21.1: Pseudo-Elements
+<h3 id="ch21-1">Section 21.1: Pseudo-Elements</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 > Pseudo-elements are added to selectors but instead of describing a
@@ -13204,7 +13239,7 @@ green
 }
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-## Section 21.2: Pseudo-Elements in Lists
+<h3 id="ch21-2">Section 21.2: Pseudo-Elements in Lists</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 > Pseudo-elements are often used to change the look of lists (mostly for
@@ -13350,7 +13385,9 @@ Test II
 !&lbrack;&rbrack;(./images/image193.jpg){width="2.4479166666666665in"
 height="1.3125in"}
 
-# Chapter 22: Positioning
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h2 id="ch22">Chapter 22: Positioning</h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 **Parameter Details**
 
@@ -13401,7 +13438,7 @@ unset Combination of initial and inherit. More info
 &lbrack;&lbrack;here&rbrack;&rbrack;(https://developer.mozilla.org/en-US/docs/Web/CSS/unset).
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-## Section 22.1: Overlapping Elements with z-index
+<h3 id="ch22-1">Section 22.1: Overlapping Elements with z-index</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 > To change the default &lbrack;&lbrack;stack
@@ -13692,7 +13729,7 @@ auto Gives the element the same stacking context as its parent.
 > Network&rbrack;&rbrack;(https://developer.mozilla.org/en-US/docs/Web/CSS/z-index).
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-## Section 22.2: Absolute Position
+<h3 id="ch22-2">Section 22.2: Absolute Position</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 > When absolute positioning is used the box of the desired element is
@@ -13754,7 +13791,7 @@ px
 > and right 500px relative to its containing element.
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-## Section 22.3: Fixed position
+<h3 id="ch22-3">Section 22.3: Fixed position</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 > Defining position as fixed we can remove an element from the document
@@ -13797,7 +13834,7 @@ px
 }
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-## Section 22.4: Relative Position
+<h3 id="ch22-4">Section 22.4: Relative Position</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 > Relative positioning moves the element in relation to where it would
@@ -13853,7 +13890,7 @@ px
 > have been in normal flow.
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-## Section 22.5: Static positioning
+<h3 id="ch22-5">Section 22.5: Static positioning</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 > The default position of an element is static. To quote
@@ -13878,7 +13915,9 @@ static
 
 }
 
-# Chapter 23: Layout Control
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h2 id="ch23">Chapter 23: Layout Control</h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 **Value Effect**
 
@@ -14540,7 +14579,7 @@ I behave like a table now
 **&gt;**
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-# Chapter 24: Grid
+<h2 id="ch24">Chapter 24: Grid</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 > Grid layout is a new and powerful CSS layout system that allows to
@@ -14839,30 +14878,23 @@ px
 > test with them.
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-# Chapter 25: Tables
+<h2 id="ch25">Chapter 25: Tables</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-## Section 25.1: table-layout
+<h3 id="ch25-1">Section 25.1: table-layout</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 > The table-layout property changes the algorithm that is used for the
 > layout of a table.
 
-  -----------------------------------------------------------------------
   **width**                     :     150px
-  ----------------------------- ----- -----------------------------------
-
-  -----------------------------------------------------------------------
 
 > Below an example of two tables both set to :
 
 !&lbrack;&rbrack;(./images/image200.jpg){width="4.625in" height="1.125in"}
 
-  ------------------------------------------------------------------------------------------
   **table-layout**   :   auto   while the one on the right    **table-layout**   :   fixed
                                 has                                                  
-  ------------------ --- ------ ----------------------------- ------------------ --- -------
 
-  ------------------------------------------------------------------------------------------
 
 > The table on the left has . The former is
 >
@@ -14882,7 +14914,7 @@ be determined by the contents of its&apos; cells.
 > instead, let the content overflow.
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-## Section 25.2: empty-cells
+<h3 id="ch25-2">Section 25.2: empty-cells</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 > The empty-cells property determines if cells with no content should be
@@ -14895,11 +14927,8 @@ be determined by the contents of its&apos; cells.
 !&lbrack;&rbrack;(./images/image201.jpg){width="5.708333333333333in"
 height="0.8854166666666666in"}
 
-  -----------------------------------------------------------------------------------------
   **empty-cells**   :   show   while the one on the right has  **empty-cells**   :   hide
-  ----------------- --- ------ ------------------------------- ----------------- --- ------
 
-  -----------------------------------------------------------------------------------------
 
 > The table on the left has . The former does display the empty cells
 > whereas the latter does not.
@@ -14995,12 +15024,8 @@ vary between browsers.
 !&lbrack;&rbrack;(./images/image204.jpg){width="5.729166666666667in"
 height="1.1458333333333333in"}
 
-  ------------------------------------------------------------------------------------------
   **caption-side**   :   top   while the one on the right    **caption-side**   :   bottom
                                has                                                  
-  ------------------ --- ----- ----------------------------- ------------------ --- --------
-
-  ------------------------------------------------------------------------------------------
 
 > The table on the left has .
 
@@ -15009,7 +15034,9 @@ height="1.1458333333333333in"}
 > *top* This is the default value. It places the caption above the
 > table. bottom This value places the caption below the table.
 
-# Chapter 26: Transitions
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h2 id="ch26">Chapter 26: Transitions</h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 **Parameter Details**
 
@@ -15021,11 +15048,7 @@ height="1.1458333333333333in"}
 > The duration (or period) in seconds (s) or milliseconds (ms) over
 > which the transition transition-duration must take place.
 
-  -----------------------------------------------------------------------
   cubic-bezier                               (),        steps
-  ------------------------------------------ ---------- -----------------
-
-  -----------------------------------------------------------------------
 
 > A function that describes how the intermediate values during the
 > transition are calculated. Commonly used values are ease, ease-in,
@@ -15347,7 +15370,9 @@ px
 > before the transition effect starts. In this case, the height will
 > start transitioning immediately, whereas the width will wait 1 second.
 
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ch27">Chapter 27: Animations</h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 | &gt;             |                                                      |
 | *Transition** |                                                      |
@@ -16100,112 +16125,66 @@ opacity
 > attempt to create paint layers for every element, significantly
 > increasing the amount of processing done by the GPU.
 
-# Chapter 28: 2D Transforms
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h2 id="ch28">Chapter 28: 2D Transforms</h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 **Function/Parameter Details**
 
-  -----------------------------------------------------------------------
   rotate
-  -----------------------------------------------------------------------
-
-  -----------------------------------------------------------------------
 
 &lpar;x&rpar; Defines a transformation that moves the element around a fixed
 point on the Z axis
 
-  -----------------------------------------------------------------------
   translate
-  -----------------------------------------------------------------------
-
-  -----------------------------------------------------------------------
 
 (x,y) Moves the position of the element on the X and Y axis
 
-  -----------------------------------------------------------------------
   translateX
-  -----------------------------------------------------------------------
-
-  -----------------------------------------------------------------------
 
 (x) Moves the position of the element on the X axis
 
-  -----------------------------------------------------------------------
   translateY
-  -----------------------------------------------------------------------
-
-  -----------------------------------------------------------------------
 
 (y) Moves the position of the element on the Y axis
 
-  -----------------------------------------------------------------------
   scale
-  -----------------------------------------------------------------------
-
-  -----------------------------------------------------------------------
 
 (x,y) Modifies the size of the element on the X and Y axis
 
-  -----------------------------------------------------------------------
   scaleX
-  -----------------------------------------------------------------------
 
-  -----------------------------------------------------------------------
-
-  -----------------------------------------------------------------------
   scaleY
-  -----------------------------------------------------------------------
-
-  -----------------------------------------------------------------------
 
 > &lpar;x&rpar; Modifies the size of the element on the X axis (y) Modifies the
 > size of the element on the Y axis
 
-  -----------------------------------------------------------------------
   skew
-  -----------------------------------------------------------------------
-
-  -----------------------------------------------------------------------
 
 > Shear mapping, or transvection, distorting each point of an element by
 > a certain angle in
 >
 > (x,y) each direction
 
-  -----------------------------------------------------------------------
   skewX
-  -----------------------------------------------------------------------
-
-  -----------------------------------------------------------------------
 
 > Horizontal shear mapping distorting each point of an element by a
 > certain angle in the
 
 (x) horizontal direction
 
-  -----------------------------------------------------------------------
   skewY
-  -----------------------------------------------------------------------
-
-  -----------------------------------------------------------------------
 
 > Vertical shear mapping distorting each point of an element by a
 > certain angle in the vertical
 
 (y) direction
 
-  -----------------------------------------------------------------------
   matrix
-  -----------------------------------------------------------------------
-
-  -----------------------------------------------------------------------
 
 () Defines a 2D transformation in the form of a transformation matrix.
 
-  -----------------------------------------------------------------------
   skew
-  -----------------------------------------------------------------------
-
-  -----------------------------------------------------------------------
 
 > The angle by which the element should be rotated or skewed (depending
 > on the function with which it is used). Angle can be provided in
@@ -16216,11 +16195,7 @@ point on the Z axis
 > The distance expressed as a length or a percentage by which the
 > element should be
 
-  -----------------------------------------------------------------------
   translate
-  -----------------------------------------------------------------------
-
-  -----------------------------------------------------------------------
 
 > length-or-percentage translated. In () function, the second
 > length-or-percentage is optional. If not provided, then there would be
@@ -16229,17 +16204,13 @@ point on the Z axis
 > A number which defines how many times the element should be scaled in
 > the specified axis.
 
-  -----------------------------------------------------------------------
   scale
-  -----------------------------------------------------------------------
-
-  -----------------------------------------------------------------------
 
 > scale-factor In () function, the second scale-factor is optional. If
 > not provided, the first scale-factor will be applied for Y-axis also.
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-## Section 28.1: Rotate
+<h3 id="28-1">Section 28.1: Rotate</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 > <h4>HTML</h4>
@@ -16899,9 +16870,11 @@ deg
 > The default value for the transform-origin property is which is the
 > center of the element.
 
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ch29">Chapter 29: 3D Transforms</h2>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch29-1">Section 29.1: Compass pointer or needle shape using 3D transforms</h3>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 <h4>CSS</h4>
 
@@ -17694,7 +17667,9 @@ height="6.386666666666667in"}
 >
 > 4 faces are made with pseudo elements chained transforms are applied
 
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ch30">Chapter 30: Filter Property</h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 > **Value Description** blur(x) Blurs the image by x pixels.
 >
@@ -18114,9 +18089,11 @@ height="1.1979166666666667in"}
 
 > Turns from white to black.
 
-# Chapter 31: Cursor Styling
-
-## Section 31.1: Changing cursor type
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h2 id="ch31">Chapter 31: Cursor Styling</h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h3 id="ch31-1">Section 31.1: Changing cursor type</h3>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 **cursor**
 
@@ -18212,7 +18189,9 @@ red
 >
 > &lbrack;&lbrack;https://developer.mozilla.org/en-US/docs/Web/CSS/caret-color&rbrack;&rbrack;(https://developer.mozilla.org/en-US/docs/Web/CSS/caret-color)
 
-# Chapter 32: box-shadow
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h2 id="ch32">Chapter 32: box-shadow</h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 **Parameters Details**
 
@@ -18227,15 +18206,11 @@ red
 > 0 by default. positive values will cause the shadow to expand.
 > negative values will cause the shadow spread-radius to shrink.
 
-  -----------------------------------------------------------------------------
   rgb()          ,   rgba()            ,   hsl()          ,   hsla()
-  -------------- --- ----------------- --- -------------- --- -----------------
-
-  -----------------------------------------------------------------------------
 
 color can be of various notations: a color keyword, hexadecimal,
 
-## Section 32.1: bottom-only drop shadow using a pseudoelement
+<h3 id="ch32-1">Section 32.1: bottom-only drop shadow using a pseudoelement</h3>
 
 JSFiddle:
 &lbrack;&lbrack;https://jsfiddle.net/UnsungHero97/80qod7aL/2/&rbrack;&rbrack;(https://jsfiddle.net/UnsungHero97/80qod7aL/2/)
@@ -18873,7 +18848,9 @@ px
 !&lbrack;&rbrack;(./images/image222.jpg){width="6.125in"
 height="5.833333333333333in"}
 
-# Chapter 33: Shapes for Floats
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h2 id="ch33">Chapter 33: Shapes for Floats</h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 **Parameter Details**
 
@@ -18881,11 +18858,7 @@ height="5.833333333333333in"}
 > wrapping content around a float none element) is unaffected. This is
 > the default/initial value.
 
-  -----------------------------------------------------------------------
   inset     (),   circle      (),   ellipse       () or     polygon
-  --------- ----- ----------- ----- ------------- --------- -------------
-
-  -----------------------------------------------------------------------
 
 > Refers to one among (). Using one of these functions and its
 > basic-shape values the shape is defined.
@@ -19285,7 +19258,9 @@ px
 !&lbrack;&rbrack;(./images/image225.jpg){width="3.3333333333333335in"
 height="1.3958333333333333in"}
 
-# Chapter 34: List Styles
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h2 id="ch34">Chapter 34: List Styles</h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 > **Value Description** list-style-type the type of list-item marker.
 >
@@ -19474,7 +19449,9 @@ Uppercase letters (A., B., C., D., &period;..) &ast;/* Non-specific:
 > **list-style**: none; */&ast; No visible list marker &ast;/* **list-style**:
 > inherit; */&ast; Inherits from parent &ast;/*
 
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ch35">Chapter 35: Counters</h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 | Para  | &gt; Details                                              |
 | meter |                                                            |
@@ -20284,9 +20261,11 @@ Level 3
 > The output is printed using the () function is designed to prefix the
 > value of all higher level counters (parent) when printing the output.
 
-# Chapter 36: Functions
-
-## Section 36.1: calc() function
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h2 id="ch36">Chapter 36: Functions</h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h3 id="ch36-1">Section 36.1: calc() function</h3>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 > Accepts a mathematical expression and returns a numerical value.
 >
@@ -20660,7 +20639,9 @@ blue
 > This creates a gradient going from bottom to top, with colors starting
 > at red, then yellow at 50%, and finishing in blue.
 
-# Chapter 37: Custom Properties (Variables)
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h2 id="ch37">Chapter 37: Custom Properties (Variables)</h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 > CSS Variables allow authors to create reusable values which can be
 > used throughout a CSS document.
@@ -20672,7 +20653,7 @@ blue
 > places. This makes changing values easier and is more semantic than
 > using traditional CSS values.
 
-## Section 37.1: Variable Color
+<h3 id="ch37-1">Section 37.1: Variable Color</h3>
 
 :
 
@@ -21786,9 +21767,11 @@ red
 !&lbrack;&rbrack;(./images/image227.jpg){width="7.48037510936133in"
 height="4.327166447944007in"}
 
-# Chapter 38: Single Element Shapes
-
-## Section 38.1: Trapezoid
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h2 id="ch38">Chapter 38: Single Element Shapes</h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h3 id="ch38-1">Section 38.1: Trapezoid</h3>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 > A trapezoid can be made by a block element with zero height (height of
 > 0px), a width greater than zero and a border, that is transparent
@@ -23608,9 +23591,11 @@ deg
 
 }
 
-# Chapter 39: Columns
-
-## Section 39.1: Simple Example (column-count)
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h2 id="ch39">Chapter 39: Columns</h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h3 id="ch39-1">Section 39.1: Simple Example (column-count)</h3>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 > The CSS multi-column layout makes it easy to create multiple columns
 > of text.
@@ -23700,8 +23685,9 @@ px
 !&lbrack;&rbrack;(./images/image247.jpg){width="6.125in"
 height="3.7083333333333335in"}
 
-# Chapter 40: Multiple columns
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h2 id="ch40">Chapter 40: Multiple columns</h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 > CSS allows to define that element contents wrap into multiple columns
 > with gaps and rules between them.
 
@@ -23823,9 +23809,11 @@ gray
 See a &lbrack;&lbrack;live sample of this on
 JSFiddle&rbrack;&rbrack;(https://jsfiddle.net/vjL9ewmb/).
 
-# Chapter 41: Inline-Block Layout
-
-## Section 41.1: Justified navigation bar
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h2 id="ch41">Chapter 41: Inline-Block Layout</h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h3 id="41-1">Section 41.1: Justified navigation bar</h3>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 > The horizontally justified navigation (menu) bar has some number of
 > items that should be justified. The first (left) item has no left
@@ -24066,9 +24054,11 @@ inline-block
 > will break to a new line (starting from the right) and be justified on
 > this line. The total height of the menu will grow as needed.
 
-# Chapter 42: Inheritance
-
-## Section 42.1: Automatic inheritance
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h2 id="ch42">Chapter 42: Inheritance</h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h3 id="ch42-1">Section 42.1: Automatic inheritance</h3>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 > Inheritance the a fundamental mechanism of CSS by which the computed
 > values of some properties of an element are applied to its&apos; children.
@@ -24288,9 +24278,11 @@ Some paragraph
 
 **&gt;**
 
-# Chapter 43: CSS Image Sprites
-
-## Section 43.1: A Basic Implementation
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h2 id="ch43">Chapter 43: CSS Image Sprites</h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h3 id="ch43-1">Section 43.1: A Basic Implementation</h3>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 > **What&apos;s an image sprite?**
 >
@@ -24483,7 +24475,9 @@ px
 > background-position property in CSS (with an x and y value) you can
 > easily extract sprites from a sprite sheet using CSS.
 
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ch44">Chapter 44: Clipping and Masking</h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 | **          | > **Details**                                          |
 | Parameter** |                                                        |
@@ -25175,7 +25169,9 @@ no-repeat
 
 [image258.jpg 4.26 x 2.21](./images/image258.jpg)
 
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ch45">Chapter 45: Fragmentation</h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 **Value Description**
 
@@ -25186,7 +25182,9 @@ no-repeat
 > property to its default value. inherit Inherits this property from its
 > parent element.
 
-## Section 45.1: Media print page-break
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h3 id="ch45-1">Section 45.1: Media print page-break</h3>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 **&commat;media**
 
@@ -25248,9 +25246,11 @@ avoid
 >
 > it prevents page-breaks right after any h2
 
-# Chapter 46: CSS Object Model (CSSOM)
-
-## Section 46.1: Adding a background-image rule via the CSSOM
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h2 id="ch46">Chapter 46: CSS Object Model (CSSOM)</h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h3 id="ch46-1">Section 46.1: Adding a background-image rule via the CSSOM</h3>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 > To add a background-image rule via the CSSOM, first get a reference to
 > the rules of the first stylesheet:
@@ -25318,7 +25318,9 @@ stylesheet
 
 [image259.jpg 7.5 x 3](./images/image259.jpg)
 
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ch47">Chapter 47: Feature Queries</h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 **Parameter Details**
 
@@ -25641,9 +25643,11 @@ px
 
 3.  Supports ).
 
-# Chapter 48: Stacking Context
-
-## Section 48.1: Stacking Context
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h2 id="ch48">Chapter 48: Stacking Context</h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h3 id="ch48-1">Section 48.1: Stacking Context</h3>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 > In this example every positioned element creates its own stacking
 > context, because of their positioning and z-index values. The
@@ -26239,9 +26243,11 @@ center
 
 ;;https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context&rbrack;&rbrack;(https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context).
 
-# Chapter 49: Block Formatting Contexts
-
-## Section 49.1: Using the overflow property with a value dierent to visible
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h2 id="ch49">Chapter 49: Block Formatting Contexts</h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h3 id="ch49-1">Section 49.1: Using the overflow property with a value dierent to visible</h3>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 img
 
@@ -26346,11 +26352,13 @@ hidden
 &lbrack;&lbrack;https://developer.mozilla.org/en-US/docs/Web/CSS/overflow&rbrack;&rbrack;(https://developer.mozilla.org/en-US/docs/Web/CSS/overflow)
 MDN
 
-# Chapter 50: Vertical Centering
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h2 id="ch50">Chapter 50: Vertical Centering</h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h3 id="ch50-1">Section 50.1: Centering with display: table</h3>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
-## Section 50.1: Centering with display: table
-
-> **HTML:**
+<h4>HTML:</h4>
 
 **&lt;**
 
@@ -27268,9 +27276,11 @@ middle
 > .content centered inside .wrapper; and you want .wrapper&apos;s height to
 > expand when .content&apos;s height exceed .wrapper&apos;s min-height.
 
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ch51">Chapter 51: Object Fit and Placement</h2>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch51-1">Section 51.1: object-fit</h3>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 > The **object-fit** property will defines how an element will fit into
 > a box with an established height and width. Usually applied to an
@@ -27340,7 +27350,9 @@ scale-down
 </p>
 <!-- [image266.jpg 7.2 x 3.65](./images/image266.jpg) -->
 
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ch52">Chapter 52: CSS design patterns</h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 > These examples are for documenting CSS-specific design patterns like
 > &lbrack;&lbrack;BEM&rbrack;&rbrack;(http://getbem.com/),
@@ -27489,7 +27501,9 @@ type
 
 **&gt;**
 
-# Chapter 53: Browser Support & Prefixes
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h2 id="ch53">Chapter 53: Browser Support & Prefixes</h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 **Prefix Browser(s)**
 
@@ -27661,7 +27675,9 @@ deg
 
 }
 
-# Chapter 54: Normalizing Browser Styles
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h2 id="ch54">Chapter 54: Normalizing Browser Styles</h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 > Every browser has a default set of CSS styles that it uses for
 > rendering elements. These default styles may not be consistent across
@@ -27975,9 +27991,11 @@ em
 
 <a href="http://normalize.css/">Normalize CSS</a>
 
-# Chapter 55: Internet Explorer Hacks
-
-## Section 55.1: Adding Inline Block support to IE6 and IE7
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h2 id="ch55">Chapter 55: Internet Explorer Hacks</h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h3 id="ch55-1">Section 55.1: Adding Inline Block support to IE6 and IE7</h3>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 **display**
 
@@ -28169,7 +28187,9 @@ screen {
 
 > Everything between is processed only by I
 
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ch56">Chapter 56: Performance</h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 <h3 id="ch56-1">Section 56.1: Use transform and opacity to avoid trigger layout</h3>
 
@@ -28247,3 +28267,4 @@ same animation, took <b>1.3ms</b> for rendering, <b>2.0ms</b> for painting.
 <!-- the end -->
 <!-- 6/28/2024 Fri 5:41pm -->
 <!-- 7/1/2024 Mon 2:24am -->
+<!-- 7/2/2024 Tue 6:39pm -->
