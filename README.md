@@ -1508,9 +1508,9 @@ an image with height and width of 50 px:</p>
 <p>So if we started with the following picture (which has the mentioned
 size of 256 px × 256 px),</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<!--~~~~~~~~~~~~~~~~ 256x256. 256 x 256 image, circle, triangle and square (xx) ~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~ 04. 256 x 256 image, circle, triangle and square (xx) ~~~~~~~~~~~~~~~~-->
 <p align="left" width="100%">
-<img src="./images/256x256.png"
+<img src="./images/image004.png"
   style="width:256px height:256px;"
   title="256 x 256 image, circle, triangle and square"
   alt="256 x 256 image, circle, triangle and square." />
@@ -1518,9 +1518,9 @@ size of 256 px × 256 px),</p>
 <p>we&apos;ll end up with a 50 px × 50 px on the user&apos;s screen, contained in
 the background of our element:</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~ 50x50.  (xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~ 05. 50px x 50px; circle, triangle, and square (xx) ~~~~~~~~~~~~~~~~~~~~-->
 <p align="left" width="100%">
-<img src="./images/50x50.png"
+<img src="./images/image005.png"
   style="width:50px height:50px;"
   title="50px by 50px image; circle, triangle, and square"
   alt="50px by 50px image; circle, triangle, and square." />
@@ -1542,9 +1542,9 @@ image:</p>
 }</code></pre>
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~ 200x200. circle, triangle and square (xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~ 06. 200x200, circle, triangle and square (xx) ~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left" width="100%">
-<img src="./images/256x256.png"
+<img src="./images/image006.png"
   style="width:200px height:200px;"
   title="200 by 200; circle, triangle and square"
   alt="200 by 200; circle, triangle and square." />
@@ -1574,12 +1574,12 @@ picture of the day by Biswarup Ganguly</a> for demonstration. Lets say that
 this is your screen, and the gray area is outside of your visible screen. For 
 demonstration, we're going to assume a 16 x 9 ratio.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~ 07. rectangle 16x9 (xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 07. rectangle 16x9 (xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left" width="100%">
 <img src="./images/image007.png"
   style="width:50%"
-  title=""
-  alt="." />
+  title="Rectangle, 16 by 9"
+  alt="Rectangle, 16 by 9." />
 </p>
 
 <p>We want to use the aforementioned picture of the day as a background.
@@ -1601,14 +1601,14 @@ size such that both its width and its height can fit inside the background posit
 contained in the background positioning area, however, there could be
 some empty space filled with your background-color in this case:</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 09. egg in a frame (xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 09. egg in a frame (xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left" width="100%">
 <img src="./images/image009.png"
   style="width:50%"
-  title=""
-  alt="." />
+  title="Egg in a frame"
+  alt="Egg in a frame." />
 </p>
-<!-- [image007.png 4.95x2.79](./images/image007.png) -->
+<!-- [image007.png 4.95x2.79] -->
 <h4>cover</h4>
 
 <blockquote>
