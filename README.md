@@ -2613,15 +2613,13 @@ of the content:</p>
 
 <h4>HTML:</h4>
 
-```
-<b>&lt;</b><b>div</b> class=&quot;vcenter&minus;-container&quot;<b>&gt;</b>
+<pre><code><b>&lt;</b><b>div</b> class=&quot;vcenter&minus;-container&quot;<b>&gt;</b>
   <b>&lt;</b><b>div</b> class=&quot;vcenter&minus;-helper&quot;<b>&gt;</b>
     <b>&lt;</b><b>div</b> class=&quot;vcenter&minus;-content&quot;<b>&gt;</b>
       <!-- stuff -->
     <b>&lt;/div&gt;</b>
   <b>&lt;/div&gt;</b>
-<b>&lt;/div&gt;</b>
-```
+<b>&lt;/div&gt;</b></code></pre>
 
 <h4>CSS</h4>
 
@@ -2658,18 +2656,15 @@ of the content:</p>
 
 <h4>HTML:</h4>
 
-```
-<b>&lt;div</b> class=&quot;wrapper&quot;<b>&gt;</b>
+<pre><code><b>&lt;div</b> class=&quot;wrapper&quot;<b>&gt;</b>
   <b>&lt;div</b> class=&quot;parent&quot;<b>&gt;</b>
     <b>&lt;div</b> class=&quot;child&quot;<b>&gt;&lt;/div&gt;</b>
   <b>&lt;/div&gt;</b>
-<b>&lt;/div&gt;</b>
-```
+<b>&lt;/div&gt;</b></code></pre>
 
 <h4>CSS:</h4>
 
-```
-.wrapper {
+<pre><code>.wrapper {
   <b>display</b>: table;
   <b>vertical-align</b>: center;
   <b>width</b>: 200px;
@@ -2688,8 +2683,7 @@ of the content:</p>
   <b>width</b>: 100px;
   <b>height</b>: 100px;
   <b>background-color</b>: teal;
-}
-```
+}</code></pre>
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ch7">Chapter 7: The Box Model</h2>
@@ -4683,16 +4677,10 @@ scroll
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>HTML:</h4>
 
-```
-<b>&lt;</b>
-<b>div</b>
-<b>&gt;</b>
+<pre><code><b>&lt;div&gt;</b>
 Even if this div is too small to display its contents, the content is
 not clipped.
-<b>&lt;</b>
-<b>/div</b>
-<b>&gt;</b>
-```
+<b>&lt;/div&gt;</b></code></pre>
 
 <h4>CSS</h4>
 
@@ -5363,249 +5351,82 @@ useful for responsive web design because you can use media queries to
 specify different CSS styles for the mobile version of your website
 versus the desktop version.</p>
 
-```
-<b>&commat;media</b>
-only screen and
-(
-<b>min-width</b>
-:
-300
-px
-)
-and
-(
-<b>max-width</b>: 767px
-)
-{
-.site-title
-{
-<b>font-size</b>: 80&percnt;;
+<pre><code><b>&commat;media</b> only screen and (<b>min-width</b>: 300px) and (<b>max-width</b>: 767px) {
+  .site-title {
+    <b>font-size</b>: 80&percnt;;
 }
-/* Styles in this block are only applied if the screen size is at least
-300px wide, but no more than 767px */
+/* Styles in this block are only applied if the screen size is at least 300px wide, 
+but no more than 767px */
 }
-<b>&commat;media</b>
-only screen and
-(
-<b>min-width</b>
-:
-768px
-)
-and
-(
-<b>max-width</b>
-:
-1023px
-)
-{
-.site-title
-{
-<b>font-size</b>
-:
-90
-&percnt;
-;
+<b>&commat;media</b> only screen and (<b>min-width</b>: 768px) and (<b>max-width</b>:1023px) {
+  .site-title {
+    <b>font-size</b>: 90&percnt;;
 }
 /* Styles in this block are only applied if the screen size is at least
 768px wide, but no more than 1023px */
 }
-<b>&commat;media</b>
-only screen and
-(
-<b>min-width</b>
-:
-1024px
-)
-{
-.site-title
-{
-<b>font-size</b>
-:
-120
-&percnt;
-;
+<b>&commat;media</b> only screen and (<b>min-width</b>: 1024px) {
+  .site-title {
+    <b>font-size</b>: 120&percnt;;
 }
 /* Styles in this block are only applied if the screen size is over 1024px wide. */
-}
-```
+}</code></pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch13-7">Section 13.7: Use on link tag</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
-<b>&lt;link</b> rel=&quot;stylesheet&quot; media=&quot;min-width: 600px&quot;
-href=&quot;example.css&quot; <b>/&gt;</b>
+<pre><code><b>&lt;link</b> rel=&quot;stylesheet&quot; media=&quot;min-width: 600px&quot;
+href=&quot;example.css&quot; <b>/&gt;</b></code></pre>
 
-This stylesheet is still downloaded but is applied only on devices
-with screen width larger than 600px.
-
+<p>This stylesheet is still downloaded but is applied only on devices
+with screen width larger than 600px.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch13-8">Section 13.8: Media queries and IE8</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p><a href="http://www.brianhadaway.com/responsive-web-design-using-css3-media-queries/">
+Media queries</a> are not supported at all in IE8 and below.</p>
 
-&lbrack;<b>&lbrack;Media
-queries&rbrack;</b>&rbrack;(http://www.brianhadaway.com/responsive-web-design-using-css3-media-queries/)
-are not supported at all in IE8 and below.
+<h4>A Javascript based workaround</h4>
 
-<b>A Javascript based workaround</b>
+<p>To add support for IE8, you could use one of several JS solutions. For
+example, <a href="https://github.com/scottjehl/Respond">Respond</a> can be added to add media query support for IE8 only With
+the following code:</p>
 
-To add support for IE8, you could use one of several JS solutions. For
-example,
-&lbrack;<b>&lbrack;Respond&rbrack;</b>&rbrack;(https://github.com/scottjehl/Respond) can
-be added to add media query support for IE8 only with the following
-code :
+<pre><code>
+&lt;!&minus;-&lbrack;if lt IE 9&rbrack;<b>&gt;</b>
+<b>&lt;script</b>
+  src=&quot;respond.min.js&quot;<b>&gt;</b>
+<b>&lt;/script&gt;</b>
+&lt;!&lbrack;endif&rbrack;&minus;-<b>&gt;</b></code></pre>
 
-&lt;!&minus;-
-
-&lbrack;
-
-if lt IE 9
-
-&rbrack;
-
-<b>&gt;</b>
-
-<b>&lt;</b>
-
-<b>script</b>
-
-src
-
-=
-
-&quot;respond.min.js&quot;
-
-<b>&gt;</b>
-
-<b>&lt;</b>
-
-<b>/script</b>
-
-<b>&gt;</b>
-
-&lt;!
-
-&lbrack;
-
-endif
-
-&rbrack;
-
-&minus;-
-
-<b>&gt;</b>
-
-&lbrack;<b>&lbrack;CSS
-Mediaqueries&rbrack;</b>&rbrack;(https://code.google.com/p/css3-mediaqueries-js/)
+<p><a href="https://code.google.com/p/css3-mediaqueries-js/">CSS Mediaqueries</a>
 is another library that does the same thing. The code for adding that
-library to your HTML would be identical :
+library to your HTML would be identical:</p>
 
-&lt;!&minus;-
+<pre><code>&lt;!&minus;-&lbrack;if lt IE 9&rbrack;<b>&gt;</b>
+<b>&lt;</b><b>script</b>
+  src=&quot;css3-mediaqueries.js&quot;<b>&gt;</b>
+<b>&lt;/script&gt;</b>
+&lt;!&lbrack;endif&rbrack;&minus;-<b>&gt;</b></code></pre>
 
-&lbrack;
+<h4>The alternative</h4>
 
-if lt IE 9
-
-&rbrack;
-
-<b>&gt;</b>
-
-<b>&lt;</b>
-
-<b>script</b>
-
-src
-
-=
-
-&quot;css3-mediaqueries.js&quot;
-
-<b>&gt;</b>
-
-<b>&lt;</b>
-
-<b>/script</b>
-
-<b>&gt;</b>
-
-&lt;!
-
-&lbrack;
-
-endif
-
-&rbrack;
-
-&minus;-
-
-<b>&gt;</b>
-
-<b>The alternative</b>
->
-If you don&apos;t like a JS based solution, you should also consider
+<p>If you don&apos;t like a JS based solution, you should also consider
 adding an IE&lt;9 only stylesheet where you adjust your styling specific
-to IE&lt;9. For that, you should add the following HTML to your code:
+to IE&lt;9. For that, you should add the following HTML to your code:</p>
 
-&lt;!&minus;-
+<pre><code>&lt;!&minus;-&lbrack;if lt IE 9&rbrack;<b>&gt;</b>
+<b>&lt;link</b> rel=&quot;stylesheet&quot; type=&quot;text/css&quot; media=&quot;all&quot; href=&quot;style-ielt9.css&quot;<b>/&gt;</b>
+&lt;!&lbrack;endif&rbrack;&minus;-<b>&gt;</b></code></pre>
 
-&lbrack;
+<h4>Note:</h4>
 
-if lt IE 9
-
-&rbrack;
-
-<b>&gt;</b>
-
-<b>&lt;</b>
-
-<b>link</b>
-
-rel
-
-=
-
-&quot;stylesheet&quot;
-
-type
-
-=
-
-&quot;text/css&quot;
-
-media
-
-=
-
-&quot;all&quot;
-
-href
-
-=
-
-&quot;style-ielt9.css&quot;
-
-<b>/&gt;</b>
-
-&lt;!
-
-&lbrack;
-
-endif
-
-&rbrack;
-
-&minus;-
-
-<b>&gt;</b>
-
-<b>Note :</b>
->
 Technically it&apos;s one more alternative: using &lbrack;<b>&lbrack;CSS
 hacks&rbrack;</b>&rbrack;(http://browserhacks.com/) to target IE&lt;9. It
 has the same impact as an IE&lt;9 only stylesheet, but you don&apos;t need a
 separate stylesheet for that. I do not recommend this option, though,
 as they produce invalid CSS code (which is but one of several reasons
 why the use of CSS hacks is generally frowned upon today).
-
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ch14">Chapter 14: Floats</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -13955,11 +13776,9 @@ On the X axis:
 
 <p>On the Y axis:</p>
 
-```
-.translate {
-  **transform**: translateY ( 50&percnt; );
-}
-```
+<pre><code>.translate {
+  <b>transform</b>: translateY ( 50&percnt; );
+}</code></pre>
 
 <h3 id="ch28-6">Section 28.6: Transform Origin</h3>
 
