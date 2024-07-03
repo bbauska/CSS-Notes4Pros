@@ -1950,29 +1950,29 @@ div is scrolled.</p>
 <b>&lt;</b><b>/div</b><b>&gt;</b>
 
 <b>&lt;</b><b>p</b><b>&gt;</b>background-origin: border-box:<b>&lt;</b><b>/p</b><b>&gt;</b>
-<b>&lt;</b><b>div</b>class = &quot;example example2&quot;<b>&gt;</b>
+<b>&lt;</b><b>div</b> class=&quot;example example2&quot;<b>&gt;</b>
   <b>&lt;</b><b>h</b><b>2</b><b>&gt;</b>Lorem Ipsum Dolor<b>&lt;</b><b>/h</b><b>2</b><b>&gt;</b>
   <b>&lt;</b><b>p</b><b>&gt;</b>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod
     tincidunt ut laoreet dolore magna aliquam erat volutpat.<b>&lt;</b><b>/p</b><b>&gt;</b>
   <b>&lt;</b><b>p</b><b>&gt;</b>Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut 
     aliquip ex ea commodo consequat.<b>&lt;</b><b>/p</b><b>&gt;</b>
 <b>&lt;</b><b>/div</b><b>&gt;</b>  
-  <b>&lt;</b><b>p</b><b>&gt;</b>background-origin: content-box:  <b>&lt;</b><b>/p</b><b>&gt;</b>
-  <b>&lt;</b><b>div</b>class = &quot;example example3&quot;<b>&gt;</b>
+<b>&lt;</b><b>p</b><b>&gt;</b>background-origin: content-box:<b>&lt;</b><b>/p</b><b>&gt;</b>
+<b>&lt;</b><b>div</b> class=&quot;example example3&quot;<b>&gt;</b>
   <b>&lt;</b><b>h</b><b>2</b><b>&gt;</b>Lorem Ipsum Dolor<b>&lt;</b><b>/h</b><b>2</b><b>&gt;</b>
   <b>&lt;p&gt;</b>There once was a man fron Sash. His balls were made of glass
   When he rubbed them together, he made stormy weather.
-  And lightning struck out of his ass.<b>&lt;/p&gt;</b> <b>&lt;p&gt;</b>And more goes here, as
-  well. It beats Latin. I don't know Latin so better for me the end.<b>&lt;/p&gt; 
+  And lightning struck out of his ass.<b>&lt;/p&gt;</b> 
+  <b>&lt;p&gt;</b>And more goes here, as well. It beats Latin. I don't know Latin so better 
+  for me the end.<b>&lt;/p&gt; 
 &lt;/div&gt;</b></code></pre>
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch5-11">Section 5.11: Background Repeat</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p>The background-repeat property sets if/how a background image will be repeated.</p>
 
-The background-repeat property sets if/how a background image will be repeated.
-
-By default, a background-image is repeated both vertically and horizontally.
+<p>By default, a background-image is repeated both vertically and horizontally.</p>
 
 <pre><code>div {
   <b>background-image</b>: url (&quot;img.jpg&quot;);
@@ -1982,7 +1982,7 @@ By default, a background-image is repeated both vertically and horizontally.
 <p>Here's how a <b>background-repeat</b>: repeat-y looks like:</p>
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 14.  (xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~ 14. cat repeat first y column (xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left" width="100%">
 <img src="./images/image014.jpg"
   style="width:75%"
@@ -2006,7 +2006,7 @@ url(&apos;https://static.pexels.com/photos/54624/strawberry-fruit-red-sweet-5462
 }
 <b>&lt;</b><b>div</b> class=&quot;my-div&quot;<b>&gt;</b>Lorem ipsum<b>&lt;</b><b>/div</b><b>&gt;</b></code></pre>
 
-<p>See result here: <a href="https://jsfiddle.net/MadalinaTn/y69d28Lb/">(https://jsfiddle.net/MadalinaTn/y69d28Lb/">Demo (jsFiddle)</a>.</p>
+<p>See result here: <a href="https://jsfiddle.net/MadalinaTn/y69d28Lb/">Demo (jsFiddle)</a>.</p>
 
 <p>CSS Syntax: background-blend-mode: normal &vert; multiply &vert; screen &vert;
 overlay &vert; darken &vert; lighten &vert; color-dodge &vert; saturation &vert; color &vert;
@@ -2078,23 +2078,20 @@ documentation for more details on flexbox and what the styles mean.
 
 <b>Browser Support</b>
 
-Flexbox is supported by all major browsers, &lbrack;&lbrack;except IE versions
-before 10&rbrack;&rbrack;(http://caniuse.com/#search=flex).
+<p>Flexbox is supported by all major browsers, <a href="http://caniuse.com/#search=flex">
+except IE versions before 10</a>.</p>
 
-Some recent browser versions, such as Safari 8 and IE10, require
-&lbrack;&lbrack;vendor
-prefixes&rbrack;&rbrack;(https://developer.mozilla.org/en-US/docs/Glossary/Vendor_Prefix).
+<p>Some recent browser versions, such as Safari 8 and IE10, require 
+<a href="https://developer.mozilla.org/en-US/docs/Glossary/Vendor_Prefix">vendor prefixes</a>.</p>
 
-For a quick way to generate prefixes there is
-&lbrack;&lbrack;Autoprefixer&rbrack;&rbrack;(https://autoprefixer.github.io/), a
-third-party tool.
+<p>For a quick way to generate prefixes there is <a href="https://autoprefixer.github.io/">
+Autoprefixer</a>, a third-party tool.</p>
 
-For older browsers (like IE 8 & 9) a &lbrack;&lbrack;Polyfill is
-available&rbrack;&rbrack;(https://github.com/jonathantneal/flexibility).
+<p>For older shitty browsers (like IE 8 & 9) a <a href="https://github.com/jonathantneal/flexibility">Polyfill</a> is
+available.</p>
 
-For a more detailed look at flexbox browser support, see &lbrack;&lbrack;this
-answer&rbrack;&rbrack;(http://stackoverflow.com/a/35137869/3597276).
-
+<p>For a more detailed look at flexbox browser support, see 
+<a href="http://stackoverflow.com/a/35137869/3597276">this answer.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch6-2">Section 6.2: Using CSS transform</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -2105,7 +2102,8 @@ know how tall or wide your element is, you can position it absolutely
 
 <p>Keep in mind that with this technique, the element could end up being
 rendered at a non-integer pixel boundary, making it look blurry. 
-See <a href="http://stackoverflow.com/a/32329785/1385678">this answer in Stack Overflow </a>for a workaround.</p>
+See <a href="http://stackoverflow.com/a/32329785/1385678">
+this answer in Stack Overflow </a>for a workaround.</p>
 
 <h4>HTML:</h4>
 
@@ -2136,10 +2134,9 @@ IE8 and older versions.</p>
 
 Here is a common transform declaration for the previous example:
 
--webkit-transform: translate(-50%, -50%); /* Chrome, Safari, Opera, Android */
-    -ms-transform: translate(-50%, -50%); */&ast; IE 9 &ast;/* 
-     <b>transform</b>: translate(-50%, -50%);
-
+<pre><code>-webkit-transform: translate(-50%, -50%); /* Chrome, Safari, Opera, Android */
+    -ms-transform: translate(-50%, -50%); /* IE 9 */
+     <b>transform</b>: translate(-50%, -50%);</code></pre>
 
 <p>For more information see <a href="http://caniuse.com/#feat=transforms2d">canIuse</a>.</p>
 
@@ -2203,11 +2200,11 @@ Here is a common transform declaration for the previous example:
 
 <p>Result:</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 15. this is a centered paragraph (xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~ 15. this is a centered paragraph (xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="center" width="100%">
 <img src="./images/image015.jpg"
-  style="width:50%"
-  title=""
+  style="width:100%"
+  title="This is a centered paragraph"
   alt="This is a centered paragraph." />
 </p>
 
@@ -2246,9 +2243,9 @@ elements within its parent.</p>
 
 <h4>HTML:</h4>
 
-<pre><code><b>&lt;</b> <b>div</b> class=&quot;parent&quot;<b>&gt;</b>
-<b>&lt;</b> <b>img</b> class=&quot;center&quot; src=&quot;http://lorempixel.com/400/200/&quot;<b>/&gt;</b>
-<b>&lt;</b> <b>/div</b><b>&gt;</b></code></pre>
+<pre><code><b>&lt;</b><b>div</b> class=&quot;parent&quot;<b>&gt;</b>
+  <b>&lt;</b><b>img</b> class=&quot;center&quot; src=&quot;http://lorempixel.com/400/200/&quot;<b>/&gt;</b>
+<b>&lt;</b><b>/div</b><b>&gt;</b></code></pre>
 
 <h4>CSS</h4>
 
@@ -2256,8 +2253,7 @@ elements within its parent.</p>
   <b>position</b>: relative;
   <b>height</b>: 500px;
 }
-.center
-{
+.center {
   <b>position</b>: absolute;
   <b>margin</b>: auto;
   <b>top</b>: 0;
@@ -2342,29 +2338,23 @@ sure the div/image you apply the code to has a parent with a height.</p>
 
 <h4>HTML:</h4>
 
-<pre><code>
-<b>&lt;</b>
-<b>div</b>
-class=&quot;content&quot;<b>&gt;</b>
-<b>&lt;</b><b>div</b> class=&quot;position-container&quot;<b>&gt;</b>
-<b>&lt;</b><b>div</b> class=&quot;thumb&quot;<b>&gt;</b>
-<b>&lt;</b><b>img</b> src=&quot;http://lorempixel.com/400/200/&quot;<b>&gt;</b>
-<b>&lt;</b><b>/div</b><b>&gt;</b>
-<b>&lt;</b><b>div</b> class=&quot;details&quot;<b>&gt;</b>
-<b>&lt;</b><b>p</b> class=&quot;banner-title&quot;<b>&gt;</b>text 1<b>&lt;</b><b>/p</b><b>&gt;</b>
-<b>&lt;</b><b>p</b> class=&quot;banner-text&quot;<b>&gt;</b>content content content content content content content content
-content content content content content content<b>&lt;</b><b>/p</b><b>&gt;</b>
-<b>&lt;</b><b>button</b> class=&quot;btn&quot;<b>&gt;<b>button<b>&lt;</b><b>/button</b><b>&gt;</b>
-<b>&lt;</b><b>/div</b><b>&gt;</b>
-<b>&lt;</b><b>/div</b><b>&gt;</b>
-<b>&lt;</b><b>/div</b><b>&gt;</b>
-</code></pre>
+<pre><code><b>&lt;</b><b>div</b> class=&quot;content&quot;<b>&gt;</b>
+  <b>&lt;</b><b>div</b> class=&quot;position-container&quot;<b>&gt;</b>
+    <b>&lt;</b><b>div</b> class=&quot;thumb&quot;<b>&gt;</b>
+      <b>&lt;</b><b>img</b> src=&quot;http://lorempixel.com/400/200/&quot;<b>&gt;</b>
+    <b>&lt;</b><b>/div</b><b>&gt;</b>
+    <b>&lt;</b><b>div</b> class=&quot;details&quot;<b>&gt;</b>
+      <b>&lt;</b><b>p</b> class=&quot;banner-title&quot;<b>&gt;</b>text 1<b>&lt;</b><b>/p</b><b>&gt;</b>
+      <b>&lt;</b><b>p</b> class=&quot;banner-text&quot;<b>&gt;</b>content content content content content content content content
+        content content content content content content<b>&lt;</b><b>/p</b><b>&gt;</b>
+      <b>&lt;</b><b>button</b> class=&quot;btn&quot;<b>&gt;<b>button<b>&lt;</b><b>/button</b><b>&gt;</b>
+    <b>&lt;</b><b>/div</b><b>&gt;</b>
+  <b>&lt;</b><b>/div</b><b>&gt;</b>
+<b>&lt;</b><b>/div</b><b>&gt;</b></code></pre>
 
 <h4>CSS</h4>
 
-<pre><code>.content
-  &ast;
-{
+<pre><code>.content &ast; {
   <b>box-sizing</b>: border-box;
 }
 .content .position-container {
@@ -2387,33 +2377,24 @@ content content content content content content<b>&lt;</b><b>/p</b><b>&gt;</b>
 
 <p><a href="https://jsfiddle.net/gasp10/6bv92mko/4/">Demo (jsFiddle)</a>.</p>
 
-The main points are the 3 .thumb, .details and .position-container containers:
+<p>The main points are the 3 .thumb, .details and .position-container containers:</p>
 
-
-
-The .position-container must have .
-
-The .details must have the real width set : middle.
-
-
-The .thumb must have if you want that it will take all the remaining
-space and it will be influenced by the .details width.
-
-
-The image (if you have an image) inside .thumb should have , but it is
-not necessary if you have correct proportions.
-
+<ul>
+  <li>The .position-container must have <b>display</b>: table.</li>
+  <li>The .details must have the real width set width: .... and display: 
+    table-cell , vertical-align: middle.</li>
+  <li>The .thumb must have <b>width: 100%</b> if you want that it will take all 
+    the remaining space and it will be influenced by the .details width.</li>
+  <li>The image (if you have an image) inside .thumb should have <b>width: 100%</b>, 
+    but it is not necessary if you have correct proportions.</li>
+</ul>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch6-10">Section 6.10: Ghost element technique (Michał Czernow&apos;s hack)</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>This technique works even when the container&apos;s dimensions are unknown.</p>
 
-<b>vertical-align</b>
-
-Set up a &quot;ghost&quot; element inside the container to be centered that is
-100% height, then use :
-
-middle on both that and the element to be centered.
+<p>Set up a &quot;ghost&quot; element inside the container to be centered that is
+100% height, then use <b>vertical-align</b>: middle on both that and the element to be centered.</p>
 
 <h4>CSS:</h4>
 
