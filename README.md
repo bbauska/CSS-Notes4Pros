@@ -12307,31 +12307,16 @@ static
 >
 > table Behaves like the HTML table element.
 
-  -----------------------------------------------------------------------
   **&lt;td**
-  -----------------------------------------------------------------------
-
-  -----------------------------------------------------------------------
 
 > table-cell Let the element behave like a **&gt;** element
 
-  -----------------------------------------------------------------------
   **&lt;col**
-  -----------------------------------------------------------------------
 
-  -----------------------------------------------------------------------
-
-  -----------------------------------------------------------------------
   **&lt;tr**
-  -----------------------------------------------------------------------
 
-  -----------------------------------------------------------------------
-
-  -----------------------------------------------------------------------
   **&lt;li**
-  -----------------------------------------------------------------------
 
-  -----------------------------------------------------------------------
 
 > table-column Let the element behave like a **&gt;** element table-row
 > Let the element behave like a **&gt;** element list-item Let the element
@@ -12382,11 +12367,8 @@ text!
 
 **&gt;**
 
-  -----------------------------------------------------------------------
   **&lt;span**                   **&gt;** and                     **&lt;b**
-  ---------------------------- ------------------------------ -----------
 
-  -----------------------------------------------------------------------
 
 > As demonstrated above, two inline elements, **&gt;**, are in-line (hence
 > the name) and do not break the flow of the text.
@@ -12755,22 +12737,16 @@ none
 
 }
 
-  -----------------------------------------------------------------------
   **display**                               :     none
-  ----------------------------------------- ----- -----------------------
 
-  -----------------------------------------------------------------------
 
 > When an element has been set to be ; the browser ignores every other
 > layout property for that specific element (both position and float).
 > No box will be rendered for that element and its existence in html
 > does not affect the position of following elements.
 
-  -----------------------------------------------------------------------
   **visibility**                          :   hidden
-  --------------------------------------- --- ---------------------------
 
-  -----------------------------------------------------------------------
 
 > Note that this is different from setting the visibility property to
 > hidden. Setting ; for an element would not display the element on the
@@ -13255,7 +13231,6 @@ px
   **table-layout**   :   auto   while the one on the right    **table-layout**   :   fixed
                                 has                                                  
 
-
 > The table on the left has . The former is
 >
 > wider than the specified width (210px instead of 150px) but the
@@ -13284,7 +13259,7 @@ be determined by the contents of its&apos; cells.
 > Below an example with two tables with different values set to the
 > empty-cells property:
 
-!&lbrack;&rbrack;(./images/image201.jpg){width="5.708333333333333in"
+[imag201.jpg](./images/image201.jpg){width="5.708333333333333in"
 height="0.8854166666666666in"}
 
   **empty-cells**   :   show   while the one on the right has  **empty-cells**   :   hide
@@ -13320,12 +13295,9 @@ height="0.8854166666666666in"}
 !&lbrack;&rbrack;(./images/image202.jpg){width="5.666666666666667in"
 height="0.9270833333333334in"}
 
-  --------------------------------------------------------------------------------------------------
   **border-collapse**   :   separate   while the one on the     **border-collapse**   :   collapse
                                        right has                                          
-  --------------------- --- ---------- ------------------------ --------------------- --- ----------
 
-  --------------------------------------------------------------------------------------------------
 
 > The table on the left has .
 
@@ -13347,12 +13319,9 @@ height="0.9270833333333334in"}
 
 !&lbrack;&rbrack;(./images/image203.jpg){width="6.03125in" height="1.15625in"}
 
-  -----------------------------------------------------------------------------------------------
   **border-spacing**   :   2px   (default) while the one on the    **border-spacing**   :   8px
                                  right has                                                  
-  -------------------- --- ----- --------------------------------- -------------------- --- -----
 
-  -----------------------------------------------------------------------------------------------
 
 > The table on the left has .
 
@@ -13368,11 +13337,8 @@ vary between browsers.
 ## Section 25.5: caption-side
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
-  -----------------------------------------------------------------------
   **&lt;caption**
-  -----------------------------------------------------------------------
 
-  -----------------------------------------------------------------------
 
 The caption-side property determines the vertical positioning of the
 **&gt;** element within a table. This has no effect if such element does
