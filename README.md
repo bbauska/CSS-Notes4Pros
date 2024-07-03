@@ -2098,17 +2098,14 @@ answer&rbrack;&rbrack;(http://stackoverflow.com/a/35137869/3597276).
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch6-2">Section 6.2: Using CSS transform</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-
-CSS transforms are based on the size of the elements so if you don&apos;t
+<p>CSS transforms are based on the size of the elements so if you don&apos;t
 know how tall or wide your element is, you can position it absolutely
 50% from the top and left of a relative container and translate it by
-50% left and upwards to center it vertically and horizontally.
+50% left and upwards to center it vertically and horizontally.</p>
 
-Keep in mind that with this technique, the element could end being
-rendered at a non-integer pixel boundary, making it look blurry. See
-&lbrack;&lbrack;this answer in
-SO&rbrack;&rbrack;(http://stackoverflow.com/a/32329785/1385678) for a
-workaround.
+<p>Keep in mind that with this technique, the element could end up being
+rendered at a non-integer pixel boundary, making it look blurry. 
+See <a href="http://stackoverflow.com/a/32329785/1385678">this answer in Stack Overflow </a>for a workaround.</p>
 
 <h4>HTML:</h4>
 
@@ -2118,8 +2115,7 @@ workaround.
 
 <h4>CSS:</h4>
 
-<pre><code>.container
-{
+<pre><code>.container {
   <b>position</b>: relative;
 }
 .element {
@@ -2129,127 +2125,62 @@ workaround.
   <b>transform</b>: translate(-50&percnt;, -50&percnt);
 }</code></pre>
 
-&lbrack;&lbrack;View example in
-JSFiddle&rbrack;&rbrack;(https://jsfiddle.net/webtiki/rz3p3ufs/)
+<p><a href="https://jsfiddle.net/webtiki/rz3p3ufs/">View example in jsFiddle</a>.</p>
 
 <h4>CROSS BROWSER COMPATIBILITY</h4>
 
-The transform property needs prefixes to be supported by older
+<p>The transform property needs prefixes to be supported by older
 browsers. Prefixes are needed for Chrome&lt;=35, Safari&lt;=8, Opera&lt;=22,
 Android Browser&lt;=4.4.4, and IE9. CSS transforms are not supported by
-IE8 and older versions.
+IE8 and older versions.</p>
 
 Here is a common transform declaration for the previous example:
 
--webkit-transform: translate(-50%, -50%); */&ast; Chrome, Safari, Opera,
-Android &ast;/*
-
--ms-transform: translate(-50%, -50%); */&ast; IE 9 &ast;/* <b>transform</b>:
-translate(-50%, -50%);
-
-For more information see
-&lbrack;&lbrack;canIuse&rbrack;&rbrack;(http://caniuse.com/#feat=transforms2d).
-
-<b>MORE INFORMATION</b>
-
-<b>position</b>                    :   relative
-
-The element is being positioned according to the first non-static
-parent ( , absolute, or fixed). Explore more in this
-&lbrack;&lbrack;fiddle&rbrack;&rbrack;(https://jsfiddle.net/siavasfiroozbakht/ox8kyypa/)
-and this documentation topic.
-
-  <b>left</b>   :   50%     and     <b>transform</b>    :   translateX          (   -50%
-
-  </b>top</b>   :   50%     and     <b>transform</b>    :   translateY           (   -50%
-
-For horizontal-only centering, use ). The same goes for verticalonly
-centering: center with ).
-
-  <b>right</b>   :   -50%       ; and      <b>margin-bottom</b>          :   -50%
+-webkit-transform: translate(-50%, -50%); /* Chrome, Safari, Opera, Android */
+    -ms-transform: translate(-50%, -50%); */&ast; IE 9 &ast;/* 
+     <b>transform</b>: translate(-50%, -50%);
 
 
-Using a non-static width/height elements with this method of centering
-can cause the centered element to appear squished. This mostly happens
-with elements containing text, and can be fixed by adding:
-<b>margin</b>;. View this
-&lbrack;&lbrack;fiddle&rbrack;&rbrack;(https://jsfiddle.net/4xxmxca0/) for more
-information.
+<p>For more information see <a href="http://caniuse.com/#feat=transforms2d">canIuse</a>.</p>
+
+<h4>MORE INFORMATION</h4>
+
+<ul>
+  <li>The element is being positioned according to the first non-static
+    parent (<b>position</b>: relative, absolute, or fixed). Explore more in this
+    <a href="https://jsfiddle.net/siavasfiroozbakht/ox8kyypa/">fiddle </a> and 
+	this documentation topic.</li>
+  <li>For horizontal-only centering, use <b>left</b>. 50% and <b>transform</b>: translateX(-50%).
+    The same goes for vertical-only centering: center with <b>top</b>: 50% and <b>transform</b>: translateY(-50%).</li>
+  <li>Using a non-static width/height elements with this method of centering can cause the centered 
+    element to appear squished. This mostly happens with elements containing text, and can be fixed 
+	by adding: <b>margin-right</b>: -50%; and <b>margin-bottom</b>: -50%;. View this
+    <a href="https://jsfiddle.net/4xxmxca0/">fiddle for more information.</li>
+</ul>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch6-3">Section 6.3: Using margin: 0 auto;</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
-| <b>margin</b>: 0                         | auto;                      |
+<p>Objects can be centered by using if they are block elements and have a defined width.</p>
 
-Objects can be centered by using if they are block elements and have a
-defined width.
+<h4>HTML:</h4>
 
-<h4>HTML</h4>
+<pre><code><b>&lt;</b><b>div</b> class=&quot;containerDiv&quot;<b>&gt;</b>
+  <b>&lt;</b><b>div</b>id=&quot;centeredDiv&quot;<b>&gt;</b><b>&lt;</b><b>/div</b><b>&gt;</b>
+<b>&lt;</b><b>/div</b><b>&gt;</b>
 
-<pre><code>
-<b>&lt;</b>
-<b>div</b>
-class
-=
-&quot;containerDiv&quot;
-<b>&gt;</b>
-<b>&lt;</b>
-<b>div</b>
-id
-=
-&quot;centeredDiv&quot;
-<b>&gt;</b>
-<b>&lt;</b>
-<b>/div</b>
-<b>&gt;</b>
-<b>&lt;</b>
-<b>/div</b>
-<b>&gt;</b>
-<b>&lt;</b>
-<b>div</b>
-class
-=
-&quot;containerDiv&quot;
-<b>&gt;</b>
-<b>&lt;</b>
-<b>p</b>
-id
-=
-&quot;centeredParagraph&quot;
-<b>&gt;</b>
-This is a centered paragraph.
-<b>&lt;</b>
-<b>/p</b>
-<b>&gt;</b>
-<b>&lt;</b>
-<b>/div</b>
-<b>&gt;</b>
-<b>&lt;</b>
-<b>div</b>
-class
-=
-&quot;containerDiv&quot;
-<b>&gt;</b>
-<b>&lt;</b>
-<b>img</b>
-id
-=
-&quot;centeredImage&quot;
-src
-=
-&quot;https://i.kinja-img.com/gawker-media/image/upload/s&minus;-c7Q9b4Eh&minus;-/c_scale,fl_progressive,q_80,w&lowbar;
-800
-/qqyvc3bkpyl3mfhr8all.jpg&quot;
-<b>/&gt;</b>
-<b>&lt;</b>
-<b>/div</b>
-<b>&gt;</b>
-</code></pre>
+<b>&lt;</b><b>div</b> class=&quot;containerDiv&quot;<b>&gt;</b>
+  <b>&lt;</b><b>p</b> id=&quot;centeredParagraph&quot;<b>&gt;</b>This is a centered paragraph.<b>&lt;</b><b>/p</b><b>&gt;</b>
+<b>&lt;</b><b>/div</b><b>&gt;</b>
 
-<h4>CSS</h4>
+<b>&lt;</b><b>div</b> class=&quot;containerDiv&quot;<b>&gt;</b>
+  <b>&lt;</b><b>img</b> id=&quot;centeredImage&quot;
+    src=&quot;https://i.kinja-img.com/gawker-media/image/upload/s--c7Q9b4Eh&minus;-/c_scale,fl_progressive,q_80,w_800/qqyvc3bkpyl3mfhr8all.jpg&quot; <b>/&gt;</b>
+<b>&lt;</b><b>/div</b><b>&gt;</b></code></pre>
 
-<pre><code>
-.containerDiv {
+<h4>CSS:</h4>
+
+<pre><code>.containerDiv {
   <b>width</b>: 100&percnt;;
   <b>height</b>: 100px;
   <b>padding-bottom</b>: 40px;
@@ -2268,52 +2199,35 @@ src
   <b>display</b>: block;
   <b>width</b>: 200px;
   <b>margin</b>: 0 auto;
-}
-</code></pre>
+}</code></pre>
 
-> Result:
+<p>Result:</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 15.  (xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 15. this is a centered paragraph (xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="center" width="100%">
 <img src="./images/image015.jpg"
   style="width:50%"
   title=""
-  alt="." />
+  alt="This is a centered paragraph." />
 </p>
-<!-- [image015.jpg](./images/image015.jpg) -->
 
 <p>JSFiddle example: Centering objects with margin: 0
 auto <a href="https://jsfiddle.net/xf1ze3v9/">Demo (jsFiddle)</a>.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch6-4">Section 6.4: Using text-align</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-
-<b>text-align</b>
-
-The most common and easiest type of centering is that of lines of text
-in an element. CSS has the rule :
-
-center for this purpose:
+<p>The most common and easiest type of centering is that of lines of text
+in an element. CSS has the rule <b>text-align</b>: center for this purpose:</p>
 
 <h4>HTML:</h4>
 
-<pre><code>
-<b>&lt;</b>
-<b>p</b>
-<b>&gt;</b>
-Lorem ipsum
-<b>&lt;</b>
-<b>/p</b>
-<b>&gt;</b>
-</code></pre>
+<pre><code><b>&lt;</b><b>p</b><b>&gt;</b>Lorem ipsum<b>&lt;</b><b>/p</b><b>&gt;</b></code></pre>
 
 <h4>CSS</h4>
 
-<pre><code>
-p {
+<pre><code>p {
   <b>text-align</b>: center;
-}
-</code></pre>
+}</code></pre>
 
 <p><i>This does not work for centering entire block elements</i>. text-align
 controls only alignment of inline content like text in its parent block element.</p>
@@ -2322,28 +2236,23 @@ controls only alignment of inline content like text in its parent block element.
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch6-5">Section 6.5: Using position: absolute</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p><i>Working in old browsers (IE &gt;= 8)</i></p>
 
-<i>Working in old browsers (IE &gt;= 8)</i>
-
-Automatic margins, paired with values of zero for the left and right
+<p>Automatic margins, paired with values of zero for the left and right
 or top and bottom offsets, will center an absolutely positioned
-elements within its parent.
+elements within its parent.</p>
 
 <p><a href="https://jsfiddle.net/stuttufu/sj2m0oo2/1/">Demo (View Result)</a>.</p>
 
 <h4>HTML:</h4>
 
-<pre><code>
-<b>&lt;</b> <b>div</b> class=&quot;parent&quot;<b>&gt;</b>
+<pre><code><b>&lt;</b> <b>div</b> class=&quot;parent&quot;<b>&gt;</b>
 <b>&lt;</b> <b>img</b> class=&quot;center&quot; src=&quot;http://lorempixel.com/400/200/&quot;<b>/&gt;</b>
-<b>&lt;</b> <b>/div</b>
-<b>&gt;</b>
-</code></pre>
+<b>&lt;</b> <b>/div</b><b>&gt;</b></code></pre>
 
 <h4>CSS</h4>
 
-<pre><code>
-.parent {
+<pre><code>.parent {
   <b>position</b>: relative;
   <b>height</b>: 500px;
 }
@@ -2355,57 +2264,35 @@ elements within its parent.
   <b>right</b>: 0;
   <b>bottom</b>: 0;
   <b>left</b>: 0;
-}
-</code></pre>
+}</code></pre>
 
-Elements that don&apos;t have their own implicit width and height like
-images do, will need those values defined.
+<p>Elements that don&apos;t have their own implicit width and height like
+images do, will need those values defined.</p>
 
-Other resources: 
-
-<p><a href="http://codepen.io/shshaw/details/gEiDt">Absolute Centering in CSS (CodePen)</a>.</p>
+<p>Other resources: <a href="http://codepen.io/shshaw/details/gEiDt">Absolute Centering in CSS (CodePen)</a>.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch6-6">Section 6.6: Using calc()</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p>The calc() function is the part of a new syntax in CSS3 in which you can 
+calculate (mathematically) what size/position your element occupies by using 
+a variety of values like pixels, percentages, etc. Note: Whenever you use this 
+function, always take care of the space between two values calc(100% - 80px).</p>
 
+<h4>CSS:</h4>
 
-
-The calc() function is the part of a new syntax in CSS3 in which you
-can calculate (mathematically) what size/position your element
-occupies by using a variety of values like pixels, percentages, etc.
-Note: Whenever you use this function, always take care of the space
-between two values ). 
-
-<h4>CSS</h4>
-
-<pre><code>
-.center {
+<pre><code>.center {
   <b>position</b>: absolute;
   <b>height</b>: 50px;
   <b>width</b>: 50px;
   <b>background</b>: red;
-  <b>top</b>: calc (50&percnt; &minus; 50px/2
-);
-/* height divided by 2 */
-  <b>left</b>: calc (50&percnt; &minus; 50px / 2);
-/* width divided by 2 */
-}
-</code></pre>
+  <b>top</b>: calc (50&percnt; &minus; 50px/2); /* height divided by 2 */
+  <b>left</b>: calc (50&percnt; &minus; 50px / 2); /* width divided by 2 */
+}</code></pre>
 
 
-<h4>HTML</h4>
+<h4>HTML:</h4>
 
-<pre><code>
-<b>&lt;</b>
-<b>div</b>
-class
-=
-&quot;center&quot;
-<b>&gt;</b>
-<b>&lt;</b>
-<b>/div</b>
-<b>&gt;</b>
-</code></pre>
+<pre><code><b>&lt;</b><b>div</b> class=&quot;center&quot;<b>&gt;</b><b>&lt;</b><b>/div</b><b>&gt;</b></code></pre>
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch6-7">Section 6.7: Using line-height</h3>
@@ -2413,20 +2300,17 @@ class
 <p>You can also use line-height to center vertically a single line of
 text inside a container:</p>
 
-<h4>CSS</h4>
+<h4>CSS:</h4>
 
-<pre><code>
-div {
+<pre><code>div {
   <b>height</b>: 200px;
   <b>line-height</b>: 200px;
-}
-  <b>&lt;input</b> <b>/&gt;</b>
-</code></pre>
+}</code></pre>
 
-<p>That&apos;s quite ugly, but can be useful inside an element. The
-line-height property works only when the text to be centered spans a
-single line. If the text wraps into multiple lines, the resulting
-output won&apos;t be centered.</p>
+<p>That&apos;s quite ugly, but can be useful inside an <b>&lt;input</b> <b>/&gt;</b> 
+element. The line-height property works only when the text to be centered spans a 
+single line. If the text wraps into multiple lines, the resulting output won&apos;t 
+be centered.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch6-8">Section 6.8: Vertical align anything with 3 lines of code</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -2448,17 +2332,15 @@ sure the div/image you apply the code to has a parent with a height.</p>
 
 <h4>HTML:</h4>
 
-<pre<code><b>&lt;</b><b>div</b> class=&quot;vertical&quot;<b>&gt;</b>ertical aligned text!<b>&lt;</b><b>/div</b><b>&gt;</b></code></pre>
+<pre<code><b>&lt;</b><b>div</b> class=&quot;vertical&quot;<b>&gt;</b>Vertical aligned text!<b>&lt;</b><b>/div</b><b>&gt;</b></code></pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch6-9">Section 6.9: Centering in relation to another item</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p>We will see how to center content based on the height of a near element.</p>
 
-> We will see how to center content based on the height of a near
-> element.
->
-> Compatibility: IE8+, all other modern browsers.
->
-> <h4>HTML:</h4>
+<p>Compatibility: IE8+, all other modern browsers.</p>
+
+<h4>HTML:</h4>
 
 <pre><code>
 <b>&lt;</b>
