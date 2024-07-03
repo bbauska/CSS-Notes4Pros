@@ -2430,7 +2430,7 @@ or by zeroing font-size in .parent and resetting it back
 
 <h4>HTML:</h4>
 
-<pre><code><b>&lt;</b><b>div</b> class=&quot;block&quot;<b>&gt;</b><b>&lt;</b>
+<pre><code><b>&lt;</b><b>div</b> class=&quot;block&quot;<b>&gt;</b>
   <b>div</b> class=&quot;centered&quot;<b>&gt;</b><b>&lt;</b><b>/div</b><b>&gt;</b>
 <b>&lt;</b><b>/div</b><b>&gt;</b></code></pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -2526,7 +2526,6 @@ worrying about its height or width</b>.</p>
 img {
   <b>vertical-align</b>: middle;
 }</code></pre>
-
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch6-13">Section 6.13: Centering with fixed size</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -2554,7 +2553,7 @@ with margin that reduces half of your content&apos;s width and height:</p>
   <b>margin-top</b>: -100px;  /* height &ast; -0.5 */
 }</code></pre>
 
-<b>Horizontal centering with only fixed width</b>
+<h5>Horizontal centering with only fixed width</h5>
 
 <p>You can center the element horizontally even if you don&apos;t know the height 
 of the content:</p>
@@ -2576,7 +2575,7 @@ of the content:</p>
   <b>margin-left</b>: -75px;  /* width &ast; -0.5 */
 }</code></pre>
 
-<h4>Vertical centering with fixed height</h4>
+<h5>Vertical centering with fixed height</h5>
 
 <p>You can center the element vertically if you know the element&apos;s height:</p>
 
@@ -2614,65 +2613,15 @@ of the content:</p>
 
 <h4>HTML:</h4>
 
-<b>&lt;</b>
-
-<b>div</b>
-
-class
-
-=
-
-&quot;vcenter&minus;-container&quot;
-
-<b>&gt;</b>
-
-<b>&lt;</b>
-
-<b>div</b>
-
-class
-
-=
-
-&quot;vcenter&minus;-helper&quot;
-
-<b>&gt;</b>
-
-<b>&lt;</b>
-
-<b>div</b>
-
-class
-
-=
-
-&quot;vcenter&minus;-content&quot;
-
-<b>&gt;</b>
-
-*&lt;!&minus;-*
-
-*stuff*
-
-*&minus;-&gt;*
-
-<b>&lt;</b>
-
-<b>/div</b>
-
-<b>&gt;</b>
-
-<b>&lt;</b>
-
-<b>/div</b>
-
-<b>&gt;</b>
-
-<b>&lt;</b>
-
-<b>/div</b>
-
-<b>&gt;</b>
+```
+<b>&lt;</b><b>div</b> class=&quot;vcenter&minus;-container&quot;<b>&gt;</b>
+  <b>&lt;</b><b>div</b> class=&quot;vcenter&minus;-helper&quot;<b>&gt;</b>
+    <b>&lt;</b><b>div</b> class=&quot;vcenter&minus;-content&quot;<b>&gt;</b>
+      <!-- stuff -->
+    <b>&lt;/div&gt;</b>
+  <b>&lt;/div&gt;</b>
+<b>&lt;/div&gt;</b>
+```
 
 <h4>CSS</h4>
 
@@ -2695,234 +2644,76 @@ class
 <a href="http://jsfiddle.net/ovfiddle/yVAW9/">Demo (jsFiddle)</a> from
 <a href="http://stackoverflow.com/a/12417336/1081234">original question</a>.
 
-<p>This approach works with dynamic height elements respects content flow is supported
-by legacy browsers.</p>
+<p>This approach;</p>
+
+<ul>
+  <li>works with dynamic height elements,</li>
+  <li>respects content flow,</li>
+  <li>is supported by legacy browsers.</li>
+</ul>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch6-15">Section 6.15: Horizontal and Vertical centering using table layout</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-
-One could easily center a child element using table display property.
+<p>One could easily center a child element using table display property.</p>
 
 <h4>HTML:</h4>
 
-<b>&lt;</b>
-
-<b>div</b>
-
-class
-
-=
-
-&quot;wrapper&quot;
-
-<b>&gt;</b>
-
-<b>&lt;</b>
-
-<b>div</b>
-
-class
-
-=
-
-&quot;parent&quot;
-
-<b>&gt;</b>
-
-<b>&lt;</b>
-
-<b>div</b>
-
-class
-
-=
-
-&quot;child&quot;
-
-<b>&gt;</b>
-
-<b>&lt;</b>
-
-<b>/div</b>
-
-<b>&gt;</b>
-
-<b>&lt;</b>
-
-<b>/div</b>
-
-<b>&gt;</b>
-
-<b>&lt;</b>
-
-<b>/div</b>
-
-<b>&gt;</b>
+```
+<b>&lt;div</b> class=&quot;wrapper&quot;<b>&gt;</b>
+  <b>&lt;div</b> class=&quot;parent&quot;<b>&gt;</b>
+    <b>&lt;div</b> class=&quot;child&quot;<b>&gt;&lt;/div&gt;</b>
+  <b>&lt;/div&gt;</b>
+<b>&lt;/div&gt;</b>
+```
 
 <h4>CSS:</h4>
 
-.wrapper
-
-{
-
-<b>display</b>
-
-:
-
-table
-
-;
-
-<b>vertical-align</b>
-
-:
-
-center
-
-;
-
-<b>width</b>
-
-:
-
-200
-
-px
-
-;
-
-<b>height</b>
-
-:
-
-200
-
-px
-
-;
-
-<b>background-color</b>
-
-:
-
-#9e9e9e
-
-;
-
+```
+.wrapper {
+  <b>display</b>: table;
+  <b>vertical-align</b>: center;
+  <b>width</b>: 200px;
+  <b>height</b>: 200px;
+  <b>background-color</b>: #9e9e9e;
 }
-
-.parent
-
-{
-
-<b>display</b>
-
-:
-
-table-cell
-
-;
-
-<b>vertical-align</b>
-
-:
-
-middle
-
-;
-
-<b>text-align</b>
-
-:
-
-center
-
-;
-
+.parent {
+  <b>display</b>: table-cell;
+  <b>vertical-align</b>: middle;
+  <b>text-align</b>: center;
 }
-
-.child
-
-{
-
-<b>display</b>
-
-:
-
-inline-block
-
-;
-
-<b>vertical-align</b>
-
-:
-
-middle
-
-;
-
-<b>text-align</b>
-
-:
-
-center
-
-;
-
-<b>width</b>
-
-:
-
-100
-
-px
-
-;
-
-<b>height</b>
-
-:
-
-100
-
-px
-
-;
-
-<b>background-color</b>
-
-:
-
-teal
-
-;
-
+.child {
+  <b>display</b>: inline-block;
+  <b>vertical-align</b>: middle;
+  <b>text-align</b>: center;
+  <b>width</b>: 100px;
+  <b>height</b>: 100px;
+  <b>background-color</b>: teal;
 }
+```
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ch7">Chapter 7: The Box Model</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
-<b>Parameter Detail</b>
-
-> content-box Width and height of the element only includes content
-> area. padding-box Width and height of the element includes content and
-> padding. border-box Width and height of the element includes content,
-> padding and border. initial Sets the box model to its default state.
-> inherit Inherits the box model of the parent element.
+| <b>Parameter</b> | <b>Detail</b> |
+|------------------|---------------------------------------------|
+| content-box | Width and height of the element only includes content area. |
+| padding-box | Width and height of the element includes content and padding. |
+| border-box  | Width and height of the element includes content, padding and border. |
+| initial | Sets the box model to its default state. |
+| inherit | Inherits the box model of the parent element. |
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch7-1">Section 7.1: What is the Box Model?</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-
 <h4>The Edges</h4>
 
-> The browser creates a rectangle for each element in the HTML document.
-> The Box Model describes how the padding, border, and margin are added
-> to the content to create this rectangle.
+<p>The browser creates a rectangle for each element in the HTML document.
+The Box Model describes how the padding, border, and margin are added
+to the content to create this rectangle.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 16.  (xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p align="center" width="100%">
+<p align="left" width="100%">
 <img src="./images/image016.png"
   style="width:50%"
   title=""
@@ -2930,92 +2721,85 @@ teal
 </p>
 <!-- [image016.png](./images/image016.png)  <!-- 4.7" -->
 
-Diagram from CSS2.2 Working Draft <a href="https://www.w3.org/TR/CSS22/box.html#mpb-examples">Demo</a>.
+<p>Diagram from <a href="https://www.w3.org/TR/CSS22/box.html#mpb-examples">CSS2.2 Working Draft Demo</a>.</p>
 
-> The perimeter of each of the four areas is called an *edge*. Each edge
-> defines a *box.*
->
-> The innermost rectangle is the <b>content box</b>. The width and height
-> of this depends on the element&apos;s rendered content (text, images and
-> any child elements it may have).
->
-> Next is the <b>padding box</b>, as defined by the padding property. If
-> there is no padding width defined, the padding edge is equal to the
-> content edge.
->
-> Then we have the <b>border box</b>, as defined by the border property. If
-> there is no border width defined, the border edge is equal to the
-> padding edge.
->
-> The outermost rectangle is the <b>margin box</b>, as defined by the
-> margin property. If there is no margin width defined, the margin edge
-> is equal to the border edge.
->
-> <b>Example</b> div {
+<p>The perimeter of each of the four areas is called an <i>edge</i>. Each edge defines a <i>box</i>.</p>
 
-<pre><code>
-<b>border</b>: 5px solid red;
-<b>margin</b>: 50px;
-<b>padding</b>: 20px;
-}
-</code></pre>
+The innermost rectangle is the <b>content box</b>. The width and height
+of this depends on the element&apos;s rendered content (text, images and
+any child elements it may have).
 
-> This CSS styles all div elements to have a top, right, bottom and left
-> border of 5px in width; a top, right, bottom and left margin of 50px;
-> and a top, right, bottom, and left padding of 20px. Ignoring content,
-> our generated box will look like this:
+Next is the <b>padding box</b>, as defined by the padding property. If
+there is no padding width defined, the padding edge is equal to the
+content edge.
+
+Then we have the <b>border box</b>, as defined by the border property. If
+there is no border width defined, the border edge is equal to the
+padding edge.
+
+The outermost rectangle is the <b>margin box</b>, as defined by the
+margin property. If there is no margin width defined, the margin edge
+is equal to the border edge.
+
+<h4>Example</h4>
+
+<pre><code>div {
+  <b>border</b>: 5px solid red;
+  <b>margin</b>: 50px;
+  <b>padding</b>: 20px;
+}</code></pre>
+
+<p>This CSS styles all div elements to have a top, right, bottom and left
+border of 5px in width; a top, right, bottom and left margin of 50px;
+and a top, right, bottom, and left padding of 20px. Ignoring content,
+our generated box will look like this:</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 17.  (xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p align="center" width="100%">
+<!--~~~~~~~~~~ 17. generated box from border 5px, margin 50px, and padding 20px (xx) ~~~~~~~~~~~-->
+<p align="left" width="100%">
 <img src="./images/image017.jpg"
   style="width:20%"
-  title=""
-  alt="." />
+  title="Generated box from border 5px, margin 50px, and padding 20px"
+  alt="Generated box from border 5px, margin 50px, and padding 20px." />
 </p>
-<!--[image017.jpg](./images/image017.jpg) <!-- 1.8" -->
+<h6>Screenshot of Google Chrome&apos;s Element Styles panel</h6>
 
-> *Screenshot of Google Chrome&apos;s Element Styles panel*
->
-> As there is no content, the content region (the blue box in the
-> middle) has no height or width (0px by 0px). The padding box by
-> default is the same size as the content box, plus the 20px width on
-> all four edges we&apos;re defining above with the padding property (40px
-> by 40px).
->
-> The border box is the same size as the padding box, plus the 5px width
-> we&apos;re defining above with the border property (50px by 50px).
->
-> Finally the margin box is the same size as the border box, plus the
-> 50px width we&apos;re defining above with the margin property (giving our
-> element a total size of 150px by 150px).
->
-> Now lets give our element a sibling with the same style. The browser
-> looks at the Box Model of both elements to work out where in relation
-> to the previous element&apos;s content the new element should be
-> positioned:
+<ul>
+  <li>As there is no content, the content region (the blue box in the middle) has no height or width (0px by 0px).</li>
+  <li>The padding box by default is the same size as the content box, plus the 20px width on all four edges we&apos;re
+    defining above with the padding property (40px by 40px).</li>
+  <li>The border box is the same size as the padding box, plus the 5px width we&apos;re defining above with the border
+    property (50px by 50px).</li>
+  <li>Finally the margin box is the same size as the border box, plus the 50px width we&apos;re defining above with the 
+    margin property (giving our element a total size of 150px by 150px).</li>
+</ul>
+
+<p>Now lets give our element a sibling with the same style. The browser
+looks at the Box Model of both elements to work out where in relation
+to the previous element&apos;s content the new element should be
+positioned:</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 18.  (xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p align="center" width="100%">
+<p align="left" width="100%">
 <img src="./images/image018.jpg"
-  style="width:30%"
+  style="width:40%"
   title=""
-  alt="." />
+  alt="Separate images with 150px gap of padding+border+margin." />
 </p>
 <!-- [image018.jpg 3.6" width, 1.5" height](./images/image018.jpg) -->
 
-> The content of each of element is separated by a 150px gap, but the
-> two elements&apos; boxes touch each other.
->
-> If we then modify our first element to have no right margin, the right
-> margin edge would be in the same position as the right border edge,
-> and our two elements would now look like this:
+<p>The content of each of element is separated by a 150px gap, but the
+two elements&apos; boxes touch each other.</p>
+
+<p>If we then modify our first element to have no right margin, the right
+margin edge would be in the same position as the right border edge,
+and our two elements would now look like this:</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 19.  (xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="center" width="100%">
 <img src="./images/image019.jpg"
-  style="width:30%"
+  style="width:40%"
   title=""
-  alt="." />
+  alt="Remove right margin from 1st image." />
 </p>
 <!-- [image019.jpg 3.45" x 1.54"](./images/image019.jpg) -->
 
