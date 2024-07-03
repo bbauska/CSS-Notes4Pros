@@ -3205,85 +3205,42 @@ absolute positioning</b>.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch9-1">Section 9.1: Padding Shorthand</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p>The padding property sets the padding space on all sides of an
+element. The padding area is the space between the content of the
+element and its border. Negative values are not allowed.</p>
 
-> The padding property sets the padding space on all sides of an
-> element. The padding area is the space between the content of the
-> element and its border. Negative values are not allowed.
->
-> To save adding padding to each side individually (using padding-top,
-> padding-left etc) can you write it as a shorthand, as below:
->
+<p>To save adding padding to each side individually (using padding-top,
+padding-left etc) can you write it as a shorthand, as below:</p>
 
 <h4>Four values:</h4>
 
-<pre><code>
-<b>&lt;</b>
-<b>style</b>
-<b>&gt;</b>
-.myDiv {
-padding: 25px 50px 75px 100px; /&ast; top right bottom left; &ast;/
-}
-<b>&lt;</b>
-<b>/style</b>
-<b>&gt;</b>
-<b>&lt;</b>
-<b>div</b>
-class
-=
-&quot;myDiv&quot;
-<b>&gt;</b>
-<b>&lt;</b>
-<b>/div</b>
-<b>&gt;</b>
-</code></pre>
+<pre><code><b>&lt;style&gt;</b>
+  .myDiv {
+    padding: 25px 50px 75px 100px; /* top right bottom left; */
+  }
+<b>&lt;/style&gt;</b>
+<b>&lt;div</b> class=&quot;myDiv&quot;<b>&gt;&lt;/div&gt;</b></code></pre>
+<image 1 of 4>
 
 <h4>Three values:</h4>
 
-<pre><code>
-<b>&lt;</b>
-<b>style</b>
-<b>&gt;</b>
-.myDiv
-{
-padding: 25px 50px 75px; /&ast; top left/right bottom &ast;/
-}
-<b>&lt;</b>
-<b>/style</b>
-<b>&gt;</b>
-<b>&lt;</b>
-<b>div</b>
-class
-=
-&quot;myDiv&quot;
-<b>&gt;</b>
-<b>&lt;</b>
-<b>/div</b>
-<b>&gt;</b>
-</code></pre>
+<pre><code><b>&lt;style&gt;</b>
+  .myDiv {
+    padding: 25px 50px 75px; /* top left/right bottom */
+  }
+  <b>&lt;/style&gt;</b>
+<b>&lt;div</b> class=&quot;myDiv&quot;<b>&gt;&lt;/div&gt;</b></code></pre>
+<image 2 of 4>
 
 </h4>Two values:</h4>
 
-<pre><code>
-<b>&lt;</b>
-<b>style</b>
-<b>&gt;</b>
-.myDiv
-{
-padding: 25px 50px; /&ast; top/bottom left/right &ast;/
-}
-<b>&lt;</b>
-<b>/style</b>
-<b>&gt;</b>
-<b>&lt;</b>
-<b>div</b>
-class
-=
-&quot;myDiv&quot;
-<b>&gt;</b>
-<b>&lt;</b>
-<b>/div</b>
-<b>&gt;</b>
-</code></pre>
+<pre><code><b>&lt;style&gt;</b>
+  .myDiv {
+    padding: 25px 50px; /* top/bottom left/right */
+  }
+<b>&lt;/style&gt;</b>
+<b>&lt;div</b> class=&quot;myDiv&quot;<b>&gt;&lt;/div&gt;</b>
+<image 3 of 4>
 
 <h4>One value:</h4>
 
@@ -3308,7 +3265,7 @@ class
 <b>/div</b>
 <b>&gt;</b>
 </code></pre>
-
+<image 4 of 4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch9-2">Section 9.2: Padding on a given side</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
