@@ -1832,14 +1832,14 @@ property has no effect.</p>
 
 <pre><code>#mydiv {
   <b>background-image</b>: url(img_1.png),     /* top image */
-                        url (img_2.png), /* middle image */
-                        url (img_3.png); /* bottom image */
+                     url (img_2.png), /* middle image */
+                     url (img_3.png); /* bottom image */
   <b>background-position</b>: right bottom, 
-                        left top,
-                        right top;
+                       left top,
+                       right top;
   <b>background-repeat</b>: no-repeat, 
-                      repeat, 
-                      no-repeat;
+                     repeat, 
+                     no-repeat;
 }</code></pre>
 
 <p>Images will be stacked atop one another with the first background on
@@ -1850,15 +1850,15 @@ img_2 and img_3 is on bottom.</p>
 
 <pre><code>#mydiv {
   <b>background</b>: url(img_1.png) right bottom no-repeat,
-                  url(img_2.png) left top repeat,
-                  url(img_3.png) right top no-repeat;
+               url(img_2.png) left top repeat,
+               url(img_3.png) right top no-repeat;
 }</code></pre>
 
 <p>We can also stack images and gradients:</p>
 
 <pre><code>#mydiv {
   <b>background</b>: url(image.png) right bottom no-repeat,
-                         linear-gradient (to bottom, #fff 0 &percnt;, #000 100&percnt;);
+               linear-gradient (to bottom, #fff 0&percnt;, #000 100&percnt;);
 }</code></pre>
 
 
@@ -1975,7 +1975,6 @@ div is scrolled.</p>
   <b>&lt;p&gt;</b>And more goes here, as well. It beats Latin. I don't know Latin so better 
   for me the end.<b>&lt;/p&gt; 
 &lt;/div&gt;</b></code></pre>
-
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch5-11">Section 5.11: Background Repeat</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -1997,12 +1996,10 @@ div is scrolled.</p>
   title="Cat repeat furthest left column"
   alt="Cat repeat furthest left column." />
 </p>
-
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch5-12">Section 5.12: background-blend-mode Property</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<pre><code>
-.my-div
+<pre><code>.my-div
 {
   <b>width</b>:300px;
   <b>height</b>:200px;
@@ -2022,14 +2019,15 @@ luminosity;</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch5-13">Section 5.13: Background Color with Opacity</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>If you set opacity on an element it will affect all its child elements. To set an opacity just on the background of an element you
-will have to use RGBA colors. Following example will have a black background with 0.6 opacity.</p>
+<p>If you set opacity on an element it will affect all its child elements. To 
+set an opacity just on the background of an element you will have to use RGBA 
+colors. Following example will have a black background with 0.6 opacity.</p>
 
 <pre><code>/* Fallback for web browsers that don&apos;t support RGBa */
-<b>background-color</b>:rgb (0,0,0);
+<b>background-color</b>:rgb (0, 0, 0);
 
 /* RGBa with 0.6 opacity */
-<b>background-color</b>:rgba (0,0,0,0.6);
+<b>background-color</b>:rgba (0, 0, 0, 0.6);
 
 /* For IE 5.5 - 7 */
 <b>filter</b>: progid:DXImageTransform.Microsoft.gradient(startColorstr = #99000000, endColorstr = #99000000);
@@ -2045,7 +2043,7 @@ endColorstr=#99000000)&quot;;</code></pre>
 <h4>HTML:</h4>
 
 <pre><code><b>&lt;</b><b>div</b> class=&quot;container&quot;<b>&gt;</b>
-<b>&lt;</b><b>img</b> src=&quot;http://lorempixel.com/400/200&quot; <b>/&gt;</b>
+  <b>&lt;</b><b>img</b> src=&quot;http://lorempixel.com/400/200&quot; <b>/&gt;</b>
 <b>&lt;</b><b>/div</b><b>&gt;</b></code></pre>
 
 <h4>CSS:</h4>
@@ -2164,13 +2162,12 @@ Here is a common transform declaration for the previous example:
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch6-3">Section 6.3: Using margin: 0 auto;</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-
 <p>Objects can be centered by using if they are block elements and have a defined width.</p>
 
 <h4>HTML:</h4>
 
 <pre><code><b>&lt;</b><b>div</b> class=&quot;containerDiv&quot;<b>&gt;</b>
-  <b>&lt;</b><b>div</b>id=&quot;centeredDiv&quot;<b>&gt;</b><b>&lt;</b><b>/div</b><b>&gt;</b>
+  <b>&lt;</b><b>div</b> id=&quot;centeredDiv&quot;<b>&gt;</b><b>&lt;</b><b>/div</b><b>&gt;</b>
 <b>&lt;</b><b>/div</b><b>&gt;</b>
 
 <b>&lt;</b><b>div</b> class=&quot;containerDiv&quot;<b>&gt;</b>
@@ -2351,7 +2348,7 @@ sure the div/image you apply the code to has a parent with a height.</p>
       <b>&lt;</b><b>p</b> class=&quot;banner-title&quot;<b>&gt;</b>text 1<b>&lt;</b><b>/p</b><b>&gt;</b>
       <b>&lt;</b><b>p</b> class=&quot;banner-text&quot;<b>&gt;</b>content content content content content content content content
         content content content content content content<b>&lt;</b><b>/p</b><b>&gt;</b>
-      <b>&lt;</b><b>button</b> class=&quot;btn&quot;<b>&gt;<b>button<b>&lt;</b><b>/button</b><b>&gt;</b>
+      <b>&lt;</b><b>button</b> class=&quot;btn&quot;<b>&gt;</b>button<b>&lt;</b><b>/button</b><b>&gt;</b>
     <b>&lt;</b><b>/div</b><b>&gt;</b>
   <b>&lt;</b><b>/div</b><b>&gt;</b>
 <b>&lt;</b><b>/div</b><b>&gt;</b></code></pre>
@@ -2415,6 +2412,7 @@ sure the div/image you apply the code to has a parent with a height.</p>
   <b>display</b>: inline-block;
   <b>height</b>: 100&percnt;;
   <b>vertical-align</b>: middle;
+  
 /* There is a gap between ghost element and .centered,
 caused by space character rendered. Could be eliminated by
 nudging .centered (nudge distance depends on font family),
@@ -2427,8 +2425,7 @@ or by zeroing font-size in .parent and resetting it back
   <b>display</b>: inline-block;
   <b>vertical-align</b>: middle;
   <b>width</b>: 300px;
-  <b>white-space</b>: normal;
-/* Resetting inherited nowrap behavior */
+  <b>white-space</b>: normal; /* Resetting inherited nowrap behavior */
 }</code></pre>
 
 <h4>HTML:</h4>
@@ -2506,424 +2503,120 @@ worrying about its height or width</b>.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>HTML:</h4>
 
-<b>&lt;</b>
-
-<b>div</b>
-
-class
-
-=
-
-&quot;wrap&quot;
-
-<b>&gt;</b>
-
-<b>&lt;</b>
-
-<b>img</b>
-
-src
-
-=
-
-&quot;http://lorempixel.com/400/200/&quot;
-
-<b>/&gt;</b>
-
-<b>&lt;</b>
-
-<b>/div</b>
-
-<b>&gt;</b>
+<pre><code><b>&lt;</b><b>div</b> class=&quot;wrap&quot;<b>&gt;</b>
+  <b>&lt;</b><b>img</b> src=&quot;http://lorempixel.com/400/200/&quot;<b>/&gt;</b>
+<b>&lt;</b><b>/div</b><b>&gt;</b></code></pre>
 
 <h4>CSS</h4>
 
-.wrap
-
-{
-
-<b>height</b>
-
-:
-
-50
-
-px
-
-;
-
-*/&ast; max image height &ast;/*
-
-<b>width</b>
-
-:
-
-100
-
-px
-
-;
-
-<b>border</b>
-
-:
-
-1
-
-px
-
-solid
-
-blue
-
-;
-
-<b>text-align</b>
-
-:
-
-center
-
-;
-
+<pre><code>.wrap {
+  <b>height</b>: 50px; /* max image height */
+  <b>width</b>: 100px;
+  <b>border</b>: 1px solid blue;
+  <b>text-align</b>: center;
+}
+.wrap:before {
+  <b>content</b>:&quot;&quot;;
+  <b>display</b>: inline-block;
+  <b>height</b>: 100&percnt;;
+  <b>vertical-align</b>: middle;
+  <b>width</b>: 1px;
 }
 
-.wrap
-
-:
-
-before
-
-{
-
-<b>content</b>
-
-:
-
-&quot;&quot;
-
-;
-
-<b>display</b>
-
-:
-
-inline-block
-
-;
-
-<b>height</b>
-
-:
-
-100
-
-&percnt;
-
-;
-
-<b>vertical-align</b>
-
-:
-
-middle
-
-;
-
-<b>width</b>
-
-:
-
-1
-
-px
-
-;
-
-}
-
-img
-
-{
-
-<b>vertical-align</b>
-
-:
-
-middle
-
-;
-
-}
+img {
+  <b>vertical-align</b>: middle;
+}</code></pre>
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch6-13">Section 6.13: Centering with fixed size</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-
-> If the size of your content is fixed, you can use absolute positioning
-> to 50% with margin that reduces half of your content&apos;s width and
-> height:
->
-> <h4>HTML:</h4>
-
-<b>&lt;</b>
-
-<b>div</b>
-
-class
-
-=
-
-&quot;center&quot;
-
-<b>&gt;</b>
-
-Center vertically and horizontally
-
-<b>&lt;</b>
-
-<b>/div</b>
-
-<b>&gt;</b>
-
-<h4>CSS:</h4>
-
-.center
-
-{
-
-<b>position</b>
-
-:
-
-absolute
-
-;
-
-<b>background</b>
-
-:
-
-#ccc
-
-;
-
-<b>left</b>
-
-:
-
-50
-
-&percnt;
-
-;
-
-<b>width</b>
-
-:
-
-150
-
-px
-
-;
-
-<b>margin-left</b>
-
-:
-
--75
-
-px
-
-;
-
-*/&ast; width &ast; -0.5 &ast;/*
-
-<b>top</b>
-
-:
-
-50
-
-&percnt;
-
-;
-
-<b>height</b>
-
-:
-
-200
-
-px
-
-;
-
-<b>margin-top</b>
-
-:
-
--100
-
-px
-
-;
-
-*/&ast; height &ast; -0.5 &ast;/*
-
-}
-
-<b>Horizontal centering with only fixed width</b>
-
-You can center the element horizontally even if you don&apos;t know the
-height of the content:
+<p>If the size of your content is fixed, you can use absolute positioning to 50% 
+with margin that reduces half of your content&apos;s width and height:</p>
 
 <h4>HTML:</h4>
 
-<b>&lt;</b>
-
-<b>div</b>
-
-class
-
-=
-
-&quot;center&quot;
-
-<b>&gt;</b>
-
-Center only horizontally
-
-<b>&lt;</b>
-
-<b>/div</b>
-
-<b>&gt;</b>
-
-<h4>CSS:</h4>
-
-.center
-
-{
-
-<b>position</b>
-
-:
-
-absolute
-
-;
-
-<b>background</b>
-
-:
-
-#ccc
-
-;
-
-<b>left</b>
-
-:
-
-50
-
-&percnt;
-
-;
-
-<b>width</b>
-
-:
-
-150
-
-px
-
-;
-
-<b>margin-left</b>
-
-:
-
--75
-
-px
-
-;
-
-*/&ast; width &ast; -0.5 &ast;/*
-
-}
-
-<b>Vertical centering with fixed height</b>
-
-You can center the element vertically if you know the element&apos;s
-height:
-
-<h4>HTML:</h4>
-
-<b>&lt;</b>
-
-<b>div</b>
-
-class
-
-=
-
-&quot;center&quot;
-
-<b>&gt;</b>
-
-Center only vertically
-
-<b>&lt;</b>
-
-<b>/div</b>
-
-<b>&gt;</b>
+<pre><code><b>&lt;</b><b>div</b> class=&quot;center&quot;<b>&gt;</b>
+  Center vertically and horizontally
+<b>&lt;</b><b>/div</b><b>&gt;</b></code></pre>
 
 <h4>CSS:</h4>
 
 <pre><code>.center {
   <b>position</b>: absolute;
   <b>background</b>: #ccc;
-  <b>top</b>:50&percnt;;
+
+  <b>left</b>: 50&percnt;;
+  <b>width</b>: 150px;
+  <b>margin-left</b>: -75px;  /* width &ast; -0.5 */
+
+  <b>top</b>: 50&percnt;;
   <b>height</b>: 200px;
-  <b>margin-top</b>: -100px;
-/* width &ast; -0.5 */
+  <b>margin-top</b>: -100px;  /* height &ast; -0.5 */
 }</code></pre>
 
+<b>Horizontal centering with only fixed width</b>
+
+<p>You can center the element horizontally even if you don&apos;t know the height 
+of the content:</p>
+
+<h4>HTML:</h4>
+
+<pre><code><b>&lt;</b><b>div</b> class=&quot;center&quot;<b>&gt;</b>
+  Center only horizontally
+<b>&lt;</b><b>/div</b><b>&gt;</b></code></pre>
+
+<h4>CSS:</h4>
+
+<pre><code>.center {
+  <b>position</b>: absolute;
+  <b>background</b>: #ccc;
+  
+  <b>left</b>: 50&percnt;;
+  <b>width</b>: 150px;
+  <b>margin-left</b>: -75px;  /* width &ast; -0.5 */
+}</code></pre>
+
+<h4>Vertical centering with fixed height</h4>
+
+<p>You can center the element vertically if you know the element&apos;s height:</p>
+
+<h4>HTML:</h4>
+
+<pre><code><b>&lt;</b><b>div</b> class=&quot;center&quot;<b>&gt;</b>
+  Center only vertically
+<b>&lt;</b><b>/div</b><b>&gt;</b></code></pre>
+
+<h4>CSS:</h4>
+
+<pre><code>.center {
+  <b>position</b>: absolute;
+  <b>background</b>: #ccc;
+  
+  <b>top</b>:50&percnt;;
+  <b>height</b>: 200px;
+  <b>margin-top</b>: -100px;  /* width &ast; -0.5 */
+}</code></pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch6-14">Section 6.14: Vertically align dynamic height elements</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p>Applying css intuitively doesn&apos;t produce the desired results because;</p>
+<ul>
+  <li><b>vertical-align</b>:middle <a href="http://www.w3.org/TR/CSS21/visudet.html#propdef-vertical-align">
+    isn&apos;t applicable to block-level elements</a></li>
+  <li><b>margin-top</b>:auto and <b>margin-bottom</b>:auto 
+    <a href="http://www.w3.org/TR/CSS2/visudet.html#Computing_heights_and_margins">
+	used values would compute as zero</a></li>
+  <li><b>margin-top</b>:-50% <a href="http://www.w3.org/TR/CSS2/box.html#margin-properties">
+    percentage-based margin values are calculated relative to the width of containing block</a></li>
+</ul>
 
-Applying css intuitively doesn&apos;t produce the desired results because
+<p>For widest browser support, a workaround with helper elements:</p>
 
-  **vertical-align**:middle
+<h4>HTML:</h4>
 
-  **margin-top**:auto          and      **margin-bottom**:auto
+<b>&lt;</b>
 
-  **margin-top**:-50%
-
-
-> &lbrack;***&lbrack;isn&apos;t&rbrack;*** &lbrack;applicable to block-level
-> elements&rbrack;&rbrack;(http://www.w3.org/TR/CSS21/visudet.html#propdef-vertical-align)
-> &lbrack;&lbrack;used values would compute as&rbrack;
-> ***&lbrack;zero&rbrack;***&rbrack;(http://www.w3.org/TR/CSS2/visudet.html#Computing_heights_and_margins)
->
-> &lbrack;&lbrack;percentage-based margin values are calculated relative to
-> the&rbrack; ***&lbrack;width&rbrack;*** &lbrack;of containing
-> block&rbrack;&rbrack;(http://www.w3.org/TR/CSS2/box.html#margin-properties)
->
-> For widest browser support, a workaround with helper elements:
->
-> <h4>HTML:</h4>
-
-**&lt;</b>
-
-**div</b>
+<b>div</b>
 
 class
 
@@ -2931,11 +2624,11 @@ class
 
 &quot;vcenter&minus;-container&quot;
 
-**&gt;</b>
+<b>&gt;</b>
 
-**&lt;</b>
+<b>&lt;</b>
 
-**div</b>
+<b>div</b>
 
 class
 
@@ -3800,39 +3493,39 @@ class
 {
 padding: 25px 50px; /&ast; top/bottom left/right &ast;/
 }
-**&lt;**
-**/style**
-**&gt;**
-**&lt;**
-**div**
+<b>&lt;</b>
+<b>/style</b>
+<b>&gt;</b>
+<b>&lt;</b>
+<b>div</b>
 class
 =
 &quot;myDiv&quot;
-**&gt;**
-**&lt;**
-**/div**
-**&gt;**
+<b>&gt;</b>
+<b>&lt;</b>
+<b>/div</b>
+<b>&gt;</b>
 </code></pre>
 
 <h4>One value:</h4>
 
 <pre><code>
-**&lt;**
-**style**
-**&gt;**
+<b>&lt;</b>
+<b>style</b>
+<b>&gt;</b>
 .myDiv
 {
 padding: 25px; /&ast; top/right/bottom/left &ast;/
 }
-**&lt;**
-**/style**
-**&gt;**
-**&lt;**
-**div**
+<b>&lt;</b>
+<b>/style</b>
+<b>&gt;</b>
+<b>&lt;</b>
+<b>div</b>
 class
 =
 &quot;myDiv&quot;
-**&gt;**
+<b>&gt;</b>
 <b>&lt;</b>
 <b>/div</b>
 <b>&gt;</b>
@@ -5572,26 +5265,26 @@ skyblue
 
 }
 
-> The above media query specifies two conditions:
+The above media query specifies two conditions:
 
 1.  The page must be viewed on a normal screen (not a printed page,
     projector, etc).
 
 2.  The width of the user&apos;s view port must be at least 720 pixels.
 
-> If these conditions are met, the styles inside the media query will be
-> active, and the background color of the page will be sky blue.
+If these conditions are met, the styles inside the media query will be
+active, and the background color of the page will be sky blue.
 >
-> Media queries are applied dynamically. If on page load the conditions
-> specified in the media query are met, the CSS will be applied, but
-> will be immediately disabled should the conditions cease to be met.
-> Conversely, if the conditions are initially not met, the CSS will not
-> be applied until the specified conditions are met.
+Media queries are applied dynamically. If on page load the conditions
+specified in the media query are met, the CSS will be applied, but
+will be immediately disabled should the conditions cease to be met.
+Conversely, if the conditions are initially not met, the CSS will not
+be applied until the specified conditions are met.
 >
-> In our example, if the user&apos;s view port width is initially greater
-> than 720 pixels, but the user shrinks the browser&apos;s width, the
-> background color will cease to be sky blue as soon as the user has
-> resized the view port to less than 720 pixels in width.
+In our example, if the user&apos;s view port width is initially greater
+than 720 pixels, but the user shrinks the browser&apos;s width, the
+background color will cease to be sky blue as soon as the user has
+resized the view port to less than 720 pixels in width.
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch13-3">Section 13.3: mediatype</h3>
@@ -5599,8 +5292,8 @@ skyblue
 
   <b>&commat;media</b> mediatype
 
-> Media queries have an optional mediatype parameter. This parameter is
-> placed directly after the &commat;media declaration (), for example:
+Media queries have an optional mediatype parameter. This parameter is
+placed directly after the &commat;media declaration (), for example:
 
 <b>&commat;media</b>
 
@@ -5624,14 +5317,14 @@ white
 
 }
 
-> The above CSS code will give the DOM HTML element a white background
-> color when being printed.
+The above CSS code will give the DOM HTML element a white background
+color when being printed.
 >
-> The mediatype parameter has an optional not or only prefix that will
-> apply the styles to everything except the specified mediatype *or*
-> only the specified media type, respectively. For example, the
-> following code example will apply the style to every media type except
-> print.
+The mediatype parameter has an optional not or only prefix that will
+apply the styles to everything except the specified mediatype *or*
+only the specified media type, respectively. For example, the
+following code example will apply the style to every media type except
+print.
 
 <b>&commat;media</b>
 
@@ -5657,8 +5350,8 @@ green
 
 }
 
-> And the same way, for just showing it only on the screen, this can be
-> used:
+And the same way, for just showing it only on the screen, this can be
+used:
 
 <b>&commat;media</b>
 
@@ -5682,28 +5375,28 @@ block
 
 }
 
-> The list of mediatype can be understood better with the following
-> table:
+The list of mediatype can be understood better with the following
+table:
 
 <b>Media Type Description</b>
 
-> all Apply to all devices screen Default computers
->
-> print Printers in general. Used to style print-versions of websites
-> handheld PDA&apos;s, cellphones and hand-held devices with a small screen
-> projection For projected presentation, for example projectors
+all Apply to all devices screen Default computers
+
+print Printers in general. Used to style print-versions of websites
+handheld PDA&apos;s, cellphones and hand-held devices with a small screen
+projection For projected presentation, for example projectors
 
 aural Speech Systems
 
-> braille Braille tactile devices embossed Paged braille printers tv
-> Television-type devices tty Devices with a fixed-pitch character grid.
-> Terminals, portables.
+braille Braille tactile devices embossed Paged braille printers tv
+Television-type devices tty Devices with a fixed-pitch character grid.
+Terminals, portables.
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch13-4">Section 13.4: Media Queries for Retina and Non Retina Screens</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
-> Although this works only for WebKit based browsers, this is helpful:
+Although this works only for WebKit based browsers, this is helpful:
 
 /* Non-Retina Screens */
 
@@ -5823,244 +5516,159 @@ dpi
 
 }
 
-> **Background Information**
->
-> There are two types of pixels in the display. One is the logical
-> pixels and the other is the physical pixels. Mostly, the physical
-> pixels always stay the same, because it is the same for all the
-> display devices. The logical pixels change based on the resolution of
-> the devices to display higher quality pixels. The device pixel ratio
-> is the ratio between physical pixels and logical pixels. For instance,
-> the MacBook Pro Retina, iPhone 4 and above report a device pixel ratio
-> of 2, because the physical linear resolution is double the logical
-> resolution.
->
-> The reason why this works only with WebKit based browsers is because
-> of:
->
-> The vendor prefix -webkit- before the rule.
->
-> This hasn&apos;t been implemented in engines other than WebKit and Blink.
+<b>Background Information</b>
+
+There are two types of pixels in the display. One is the logical
+pixels and the other is the physical pixels. Mostly, the physical
+pixels always stay the same, because it is the same for all the
+display devices. The logical pixels change based on the resolution of
+the devices to display higher quality pixels. The device pixel ratio
+is the ratio between physical pixels and logical pixels. For instance,
+the MacBook Pro Retina, iPhone 4 and above report a device pixel ratio
+of 2, because the physical linear resolution is double the logical
+resolution.
+
+The reason why this works only with WebKit based browsers is because
+of:
+
+The vendor prefix -webkit- before the rule.
+
+This hasn&apos;t been implemented in engines other than WebKit and Blink.
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch13-5">Section 13.5: Width vs Viewport</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
-  **&lt;head**
+  <b>&lt;head</b>
 
-> When we are using &quot;width&quot; with media queries it is important to set
-> the meta tag correctly. Basic meta tag looks like this and it needs to
-> be put inside the **&gt;** tag.
->
-> **&lt;meta** name=&quot;viewport&quot;
-> content=&quot;width=device-width,initial-scale=1&quot;**&gt;**
->
-> **Why this is important?**
->
-> Based on MDN&apos;s definition &quot;width&quot; is
->
-> The width media feature describes the width of the rendering surface
-> of the output device (such as the width of the document window, or the
-> width of the page box on a printer).
->
-> What does that mean?
->
-> View-port is the width of the device itself. If your screen resolution
-> says the resolution is 1280 x 720, your view-port width is &quot;1280px&quot;.
->
-> More often many devices allocate different pixel amount to display one
-> pixel. For an example iPhone 6 Plus has 1242 x 2208 resolution. But
-> the actual viewport-width and viewport-height is 414 x 736. That means
-> 3 pixels are used to create 1 pixel.
->
-> But if you did not set the meta tag correctly it will try to show your
-> webpage with its native resolution which results in a zoomed out view
-> (smaller texts and images).
+When we are using &quot;width&quot; with media queries it is important to set
+the meta tag correctly. Basic meta tag looks like this and it needs to
+be put inside the <b>&gt;</b> tag.
+
+<b>&lt;meta</b> name=&quot;viewport&quot;
+content=&quot;width=device-width,initial-scale=1&quot;<b>&gt;</b>
+
+<b>Why this is important?</b>
+
+Based on MDN&apos;s definition &quot;width&quot; is
+
+The width media feature describes the width of the rendering surface
+of the output device (such as the width of the document window, or the
+width of the page box on a printer).
+
+What does that mean?
+
+View-port is the width of the device itself. If your screen resolution
+says the resolution is 1280 x 720, your view-port width is &quot;1280px&quot;.
+
+More often many devices allocate different pixel amount to display one
+pixel. For an example iPhone 6 Plus has 1242 x 2208 resolution. But
+the actual viewport-width and viewport-height is 414 x 736. That means
+3 pixels are used to create 1 pixel.
+
+But if you did not set the meta tag correctly it will try to show your
+webpage with its native resolution which results in a zoomed out view
+(smaller texts and images).
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch13-6">Section 13.6: Using Media Queries to Target Dierent Screen Sizes0</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p>Often times, responsive web design involves media queries, which are
+CSS blocks that are only executed if a condition is satisfied. This is
+useful for responsive web design because you can use media queries to
+specify different CSS styles for the mobile version of your website
+versus the desktop version.</p>
 
-> Often times, responsive web design involves media queries, which are
-> CSS blocks that are only executed if a condition is satisfied. This is
-> useful for responsive web design because you can use media queries to
-> specify different CSS styles for the mobile version of your website
-> versus the desktop version.
-
-**&commat;media**
-
+```
+<b>&commat;media</b>
 only screen and
-
 (
-
-**min-width**
-
+<b>min-width</b>
 :
-
 300
-
 px
-
 )
-
 and
-
 (
-
-**max-width**
-
-:
-
-767
-
-px
-
+<b>max-width</b>: 767px
 )
-
 {
-
 .site-title
-
 {
-
-**font-size**
-
-:
-
-80
-
-&percnt;
-
-;
-
+<b>font-size</b>: 80&percnt;;
 }
-
-*/&ast; Styles in this block are only applied if the screen size is atleast
-300px wide, but no more*
-
-*than 767px &ast;/*
-
+/* Styles in this block are only applied if the screen size is at least
+300px wide, but no more than 767px */
 }
-
-**&commat;media**
-
+<b>&commat;media</b>
 only screen and
-
 (
-
-**min-width**
-
+<b>min-width</b>
 :
-
-768
-
-px
-
+768px
 )
-
 and
-
 (
-
-**max-width**
-
+<b>max-width</b>
 :
-
-1023
-
-px
-
+1023px
 )
-
 {
-
 .site-title
-
 {
-
-**font-size**
-
+<b>font-size</b>
 :
-
 90
-
 &percnt;
-
 ;
-
 }
-
-*/&ast; Styles in this block are only applied if the screen size is atleast
-768px wide, but no more*
-
-*than 1023px &ast;/*
-
+/* Styles in this block are only applied if the screen size is at least
+768px wide, but no more than 1023px */
 }
-
-**&commat;media**
-
+<b>&commat;media</b>
 only screen and
-
 (
-
-**min-width**
-
+<b>min-width</b>
 :
-
-1024
-
-px
-
+1024px
 )
-
 {
-
 .site-title
-
 {
-
-**font-size**
-
+<b>font-size</b>
 :
-
 120
-
 &percnt;
-
 ;
-
 }
-
-*/&ast; Styles in this block are only applied if the screen size is over
-1024px wide. &ast;/*
-
+/* Styles in this block are only applied if the screen size is over 1024px wide. */
 }
-
+```
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch13-7">Section 13.7: Use on link tag</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
-> **&lt;link** rel=&quot;stylesheet&quot; media=&quot;min-width: 600px&quot;
-> href=&quot;example.css&quot; **/&gt;**
->
-> This stylesheet is still downloaded but is applied only on devices
-> with screen width larger than 600px.
+<b>&lt;link</b> rel=&quot;stylesheet&quot; media=&quot;min-width: 600px&quot;
+href=&quot;example.css&quot; <b>/&gt;</b>
+
+This stylesheet is still downloaded but is applied only on devices
+with screen width larger than 600px.
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch13-8">Section 13.8: Media queries and IE8</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
-> &lbrack;**&lbrack;Media
-> queries&rbrack;**&rbrack;(http://www.brianhadaway.com/responsive-web-design-using-css3-media-queries/)
-> are not supported at all in IE8 and below.
->
-> **A Javascript based workaround**
->
-> To add support for IE8, you could use one of several JS solutions. For
-> example,
-> &lbrack;**&lbrack;Respond&rbrack;**&rbrack;(https://github.com/scottjehl/Respond) can
-> be added to add media query support for IE8 only with the following
-> code :
+&lbrack;<b>&lbrack;Media
+queries&rbrack;</b>&rbrack;(http://www.brianhadaway.com/responsive-web-design-using-css3-media-queries/)
+are not supported at all in IE8 and below.
+
+<b>A Javascript based workaround</b>
+
+To add support for IE8, you could use one of several JS solutions. For
+example,
+&lbrack;<b>&lbrack;Respond&rbrack;</b>&rbrack;(https://github.com/scottjehl/Respond) can
+be added to add media query support for IE8 only with the following
+code :
 
 &lt;!&minus;-
 
@@ -6070,11 +5678,11 @@ if lt IE 9
 
 &rbrack;
 
-**&gt;**
+<b>&gt;</b>
 
-**&lt;**
+<b>&lt;</b>
 
-**script**
+<b>script</b>
 
 src
 
@@ -6082,13 +5690,13 @@ src
 
 &quot;respond.min.js&quot;
 
-**&gt;**
+<b>&gt;</b>
 
-**&lt;**
+<b>&lt;</b>
 
-**/script**
+<b>/script</b>
 
-**&gt;**
+<b>&gt;</b>
 
 &lt;!
 
@@ -6100,12 +5708,12 @@ endif
 
 &minus;-
 
-**&gt;**
+<b>&gt;</b>
 
-> &lbrack;**&lbrack;CSS
-> Mediaqueries&rbrack;**&rbrack;(https://code.google.com/p/css3-mediaqueries-js/)
-> is another library that does the same thing. The code for adding that
-> library to your HTML would be identical :
+&lbrack;<b>&lbrack;CSS
+Mediaqueries&rbrack;</b>&rbrack;(https://code.google.com/p/css3-mediaqueries-js/)
+is another library that does the same thing. The code for adding that
+library to your HTML would be identical :
 
 &lt;!&minus;-
 
@@ -6115,11 +5723,11 @@ if lt IE 9
 
 &rbrack;
 
-**&gt;**
+<b>&gt;</b>
 
-**&lt;**
+<b>&lt;</b>
 
-**script**
+<b>script</b>
 
 src
 
@@ -6127,13 +5735,13 @@ src
 
 &quot;css3-mediaqueries.js&quot;
 
-**&gt;**
+<b>&gt;</b>
 
-**&lt;**
+<b>&lt;</b>
 
-**/script**
+<b>/script</b>
 
-**&gt;**
+<b>&gt;</b>
 
 &lt;!
 
@@ -6145,13 +5753,13 @@ endif
 
 &minus;-
 
-**&gt;**
+<b>&gt;</b>
 
-> **The alternative**
+<b>The alternative</b>
 >
-> If you don&apos;t like a JS based solution, you should also consider
-> adding an IE&lt;9 only stylesheet where you adjust your styling specific
-> to IE&lt;9. For that, you should add the following HTML to your code:
+If you don&apos;t like a JS based solution, you should also consider
+adding an IE&lt;9 only stylesheet where you adjust your styling specific
+to IE&lt;9. For that, you should add the following HTML to your code:
 
 &lt;!&minus;-
 
@@ -6161,11 +5769,11 @@ if lt IE 9
 
 &rbrack;
 
-**&gt;**
+<b>&gt;</b>
 
-**&lt;**
+<b>&lt;</b>
 
-**link**
+<b>link</b>
 
 rel
 
@@ -6191,7 +5799,7 @@ href
 
 &quot;style-ielt9.css&quot;
 
-**/&gt;**
+<b>/&gt;</b>
 
 &lt;!
 
@@ -6203,16 +5811,16 @@ endif
 
 &minus;-
 
-**&gt;**
+<b>&gt;</b>
 
-> **Note :**
+<b>Note :</b>
 >
-> Technically it&apos;s one more alternative: using &lbrack;**&lbrack;CSS
-> hacks&rbrack;**&rbrack;(http://browserhacks.com/) to target IE&lt;9. It
-> has the same impact as an IE&lt;9 only stylesheet, but you don&apos;t need a
-> separate stylesheet for that. I do not recommend this option, though,
-> as they produce invalid CSS code (which is but one of several reasons
-> why the use of CSS hacks is generally frowned upon today).
+Technically it&apos;s one more alternative: using &lbrack;<b>&lbrack;CSS
+hacks&rbrack;</b>&rbrack;(http://browserhacks.com/) to target IE&lt;9. It
+has the same impact as an IE&lt;9 only stylesheet, but you don&apos;t need a
+separate stylesheet for that. I do not recommend this option, though,
+as they produce invalid CSS code (which is but one of several reasons
+why the use of CSS hacks is generally frowned upon today).
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ch14">Chapter 14: Floats</h2>
@@ -6220,38 +5828,38 @@ endif
 <h3 id="ch14-1">Section 14.1: Float an Image Within Text</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
-> The most basic use of a float is having text wrap around an image. The
-> below code will produce two paragraphs and an image, with the second
-> paragraph flowing around the image. Notice that it is always content
-> *after* the floated element that flows around the floated element.
->
-<h4>HTML:</h4>
->
-> **&lt;p&gt;**Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-> Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed
-> nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum.
-> Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris
-> massa. Vestibulum lacinia arcu eget nulla. **&lt;/p&gt; &lt;img**
-> src=&quot;http://lorempixel.com/200/100/&quot; **/&gt;**
+<p>The most basic use of a float is having text wrap around an image. The
+below code will produce two paragraphs and an image, with the second
+paragraph flowing around the image. Notice that it is always content
+<i>after</i> the floated element that flows around the floated element.</p>
 
-**&lt;p&gt;**Class aptent taciti sociosqu ad litora torquent per conubia
+<h4>HTML:</h4>
+
+<p><b>&lt;p&gt;</b>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed
+nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum.
+Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris
+massa. Vestibulum lacinia arcu eget nulla. <b>&lt;/p&gt; &lt;img</b>
+src=&quot;http://lorempixel.com/200/100/&quot; <b>/&gt;</b></p>
+
+<p><b>&lt;p&gt;</b>Class aptent taciti sociosqu ad litora torquent per conubia
 nostra, per inceptos himenaeos. Curabitur sodales ligula in libero. Sed
 dignissim lacinia nunc. Curabitur tortor. Pellentesque nibh. Aenean
 quam. In scelerisque sem at dolor. Maecenas mattis. Sed convallis
 tristique sem. Proin ut ligula vel nunc egestas porttitor. Morbi lectus
 risus, iaculis vel, suscipit quis, luctus non, massa. Fusce ac turpis
-quis ligula lacinia aliquet. **&lt;/p&gt;** 
+quis ligula lacinia aliquet. <b>&lt;/p&gt;</b></p>
 
 <h4>CSS:</h4>
 
 <pre><code>
 img {
-  **float**: left;
-  **margin-right**: 1rem;
+  <b>float</b>: left;
+  <b>margin-right</b>: 1rem;
 }
 </code></pre>
 
-> This will be the output
+This will be the output
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 36.  (xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="center" width="100%">
@@ -6262,169 +5870,123 @@ img {
 </p>
 <!-- [image036.jpg 7.48 x 7.05](./images/image036.jpg) -->
 
-&lbrack;&lbrack;Codepen
-Link&rbrack;&rbrack;(http://codepen.io/vishak-kavalur/pen/pbxvLx)
-
+<p><a href="http://codepen.io/vishak-kavalur/pen/pbxvLx">Demo (CodePen)</a>.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch14-2">Section 14.2: clear property</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p>The clear property is directly related to floats.</p>
 
-The clear property is directly related to floats. Property Values:
 
-none - Default. Allows floating elements on both sides
-
-left - No floating elements allowed on the left side
-
-right - No floating elements allowed on the right side
-
-both - No floating elements allowed on either the left or the right side
-
-initial - Sets this property to its default value. Read about initial
-
-inherit - Inherits this property from its parent element. Read about inherit
+| Property | Values: |
+|----------|---------------------------------------------|
+| none | Default. Allows floating elements on both sides |
+| left | No floating elements allowed on the left side |
+| right | No floating elements allowed on the right side |
+| both | No floating elements allowed on either the left or the right side |
+| initial | Sets this property to its default value. Read about initial |
+| inherit | Inherits this property from its parent element. Read about inherit |
 
 <pre><code>
-**&lt;**
+<b>&lt;</b>
 </code></pre>
 
 <h4>HTML:</h4>
 
 <pre><code>
-**&gt;**
-**&lt;**
-**head**
-**&gt;**
-**&lt;**
-**style**
-**&gt;**
+<b>&gt;</b>
+<b>&lt;</b>
+<b>head</b>
+<b>&gt;</b>
+<b>&lt;</b>
+<b>style</b>
+<b>&gt;</b>
 img {
 float: left;
 }
 p.clear {
 clear: both;
 }
-**&lt;**
-**/style**
-**&gt;**
-**&lt;**
-**/head**
-**&gt;**
-**&lt;**
-**body**
-**&gt;**
-**&lt;**
-**img**
+<b>&lt;</b>
+<b>/style</b>
+<b>&gt;</b>
+<b>&lt;</b>
+<b>/head</b>
+<b>&gt;</b>
+<b>&lt;</b>
+<b>body</b>
+<b>&gt;</b>
+<b>&lt;</b>
+<b>img</b>
 src
 =
 &quot;https://static.pexels.com/photos/69372/pexels-photo-69372-medium.jpeg&quot;
 width
 =
 &quot;100&quot;
-**&gt;**
-**&lt;**
-**p**
-**&gt;**
+<b>&gt;</b>
+<b>&lt;</b>
+<b>p</b>
+<b>&gt;</b>
 Lorem ipsoum Lorem ipsoum Lorem ipsoum Lorem ipsoum Lorem ipsoum Lorem
 ipsoum Lorem ipsoum Lorem
 ipsoum Lorem ipsoum Lorem ipsoum Lorem ipsoum Lorem ipsoum
-**&lt;**
-**/p**
-**&gt;**
-**&lt;**
-**p**
+<b>&lt;</b>
+<b>/p</b>
+<b>&gt;</b>
+<b>&lt;</b>
+<b>p</b>
 class
 =
 &quot;clear&quot;
-**&gt;**
+<b>&gt;</b>
 Lorem ipsoum Lorem ipsoum Lorem ipsoum Lorem ipsoum Lorem ipsoum Lorem
 ipsoum
 Lorem ipsoum Lorem ipsoum Lorem ipsoum Lorem ipsoum Lorem ipsoum Lorem
 ipsoum
-**&lt;**
-**/p**
-**&gt;**
-**&lt;**
-**/body**
-**&gt;**
-**&lt;**
-**/html**
-**&gt;**
-</code></pre>
-
+<b>&lt;</b>
+<b>/p</b>
+<b>&gt;</b>
+<b>&lt;</b>
+<b>/body</b>
+<b>&gt;</b>
+<b>&lt;</b>
+<b>/html</b>
+<b>&gt;</b></code></pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch14-3">Section 14.3: Clearfix</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p>The clearfix hack is a popular way to contain floats (N. Gallagher aka &commat;necolas)</p>
 
-The clearfix hack is a popular way to contain floats (N. Gallagher aka
-&commat;necolas)
+<p>Not to be confused with the clear property, clearfix is a <i>concept</i>
+(that is also related to floats, thus the possible confusion). To <i>contain 
+floats</i>, you&apos;ve to add .cf or .clearfix class on the container (<b>the 
+parent</b>) and style this class with a few rules described below.</p>
 
-> Not to be confused with the clear property, clearfix is a *concept*
-> (that is also related to floats, thus the possible confusion). To
-> *contain floats*, you&apos;ve to add .cf or .clearfix class on the
-> container (**the parent**) and style this class with a few rules
-> described below.
->
-> 3 versions with slightly different effects (sources :&lbrack;&lbrack;A new micro
-> clearfix
-> hack&rbrack;&rbrack;(http://nicolasgallagher.com/micro-clearfix-hack/)
-> by N. Gallagher and &lbrack;&lbrack;clearfix
-> reloaded&rbrack;&rbrack;(http://yuiblog.com/blog/2010/09/27/clearfix-reloaded-overflowhidden-demystified/)
-> by T. J. Koblentz):
->
-> **Clearfix (with top margin collapsing of contained floats still
-> occurring)**
+<p>3 versions with slightly different effects (sources clearfix)
+<a href="http://nicolasgallagher.com/micro-clearfix-hack/">clearFix</a>
+by N. Gallagher and &lbrack;&lbrack;clearfix
+reloaded&rbrack;&rbrack;(http://yuiblog.com/blog/2010/09/27/clearfix-reloaded-overflowhidden-demystified/)
+by T. J. Koblentz):
 
-.cf
+<b>Clearfix (with top margin collapsing of contained floats still
+occurring)</b>
 
-:
-
-after
-
-{
-
-**content**
-
-:
-
-&quot;&quot;
-
-;
-
-**display**
-
-:
-
-table
-
-;
-
+```
+.cf: after {
+  <b>content</b>: &quot;&quot;;
+  <b>display</b>: table;
 }
-
-.cf
-
-:
-
-after
-
-{
-
-**clear**
-
-:
-
-both
-
-;
-
+.cf: after {
+  <b>clear</b>: both;
 }
+```
 
-> **Clearfix also preventing top margin collapsing of contained floats**
+<p><b>Clearfix also preventing top margin collapsing of contained floats</b></p>
 
-*/&ast;&ast;*
+/**/
 
-*&ast; For modern browsers*
-
-*&ast; 1. The space content is one way to avoid an Opera bug when the*
+/* For modern browsers* */ 
+1. The space content is one way to avoid an Opera bug when the*
 
 *&ast; contenteditable attribute is included anywhere else in the
 document.*
@@ -6457,7 +6019,7 @@ after
 
 {
 
-**content**
+<b>content</b>
 
 :
 
@@ -6467,7 +6029,7 @@ after
 
 */&ast; 1 &ast;/*
 
-**display**
+<b>display</b>
 
 :
 
@@ -6487,7 +6049,7 @@ after
 
 {
 
-**clear**
+<b>clear</b>
 
 :
 
@@ -6497,7 +6059,7 @@ both
 
 }
 
-> **Clearfix with support of outdated browsers IE6 and IE7**
+<b>Clearfix with support of outdated browsers IE6 and IE7</b>
 
 .cf
 
@@ -6515,7 +6077,7 @@ after
 
 {
 
-**content**
+<b>content</b>
 
 :
 
@@ -6523,7 +6085,7 @@ after
 
 ;
 
-**display**
+<b>display</b>
 
 :
 
@@ -6541,7 +6103,7 @@ after
 
 {
 
-**clear**
+<b>clear</b>
 
 :
 
@@ -6578,72 +6140,72 @@ zoom
 &lbrack;&lbrack;Codepen showing clearfix
 effect&rbrack;&rbrack;(http://codepen.io/PhilippeVay/pen/OXEqgW?editors=0100)
 
-> Other resource: &lbrack;&lbrack;Everything you know about clearfix is
-> wrong&rbrack;&rbrack;(http://www.cssmojo.com/clearfix_block-formatting-context_and_hasLayout/)
-> (clearfix and BFC - Block Formatting Context while hasLayout relates
-> to outdated browsers IE6 maybe 7)
+Other resource: &lbrack;&lbrack;Everything you know about clearfix is
+wrong&rbrack;&rbrack;(http://www.cssmojo.com/clearfix_block-formatting-context_and_hasLayout/)
+(clearfix and BFC - Block Formatting Context while hasLayout relates
+to outdated browsers IE6 maybe 7)
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch14-4">Section 14.4: In-line DIV using float</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
-> The div is a block-level element, i.e it occupies the whole of the
-> page width and the siblings are place one below the other irrespective
-> of their width.
+The div is a block-level element, i.e it occupies the whole of the
+page width and the siblings are place one below the other irrespective
+of their width.
 
-**&lt;**
+<b>&lt;</b>
 
-**div**
+<b>div</b>
 
-**&gt;**
+<b>&gt;</b>
 
-**&lt;**
+<b>&lt;</b>
 
-**p**
+<b>p</b>
 
-**&gt;**
+<b>&gt;</b>
 
 This is DIV 1
 
-**&lt;**
+<b>&lt;</b>
 
-**/p**
+<b>/p</b>
 
-**&gt;**
+<b>&gt;</b>
 
-**&lt;**
+<b>&lt;</b>
 
-**/div**
+<b>/div</b>
 
-**&gt;**
+<b>&gt;</b>
 
-**&lt;**
+<b>&lt;</b>
 
-**div**
+<b>div</b>
 
-**&gt;**
+<b>&gt;</b>
 
-**&lt;**
+<b>&lt;</b>
 
-**p**
+<b>p</b>
 
-**&gt;**
+<b>&gt;</b>
 
 This is DIV 2
 
-**&lt;**
+<b>&lt;</b>
 
-**/p**
+<b>/p</b>
 
-**&gt;**
+<b>&gt;</b>
 
-**&lt;**
+<b>&lt;</b>
 
-**/div**
+<b>/div</b>
 
-**&gt;**
+<b>&gt;</b>
 
-> The output of the following code will be
+The output of the following code will be
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 37.  (xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -6659,9 +6221,9 @@ This is DIV 2
 
 <h4>HTML:</h4>
 
-**&lt;**
+<b>&lt;</b>
 
-**div**
+<b>div</b>
 
 class
 
@@ -6669,11 +6231,11 @@ class
 
 &quot;outer-div&quot;
 
-**&gt;**
+<b>&gt;</b>
 
-**&lt;**
+<b>&lt;</b>
 
-**div**
+<b>div</b>
 
 class
 
@@ -6681,31 +6243,31 @@ class
 
 &quot;inner-div1&quot;
 
-**&gt;**
+<b>&gt;</b>
 
-**&lt;**
+<b>&lt;</b>
 
-**p**
+<b>p</b>
 
-**&gt;**
+<b>&gt;</b>
 
 This is DIV 1
 
-**&lt;**
+<b>&lt;</b>
 
-**/p**
+<b>/p</b>
 
-**&gt;**
+<b>&gt;</b>
 
-**&lt;**
+<b>&lt;</b>
 
-**/div**
+<b>/div</b>
 
-**&gt;**
+<b>&gt;</b>
 
-**&lt;**
+<b>&lt;</b>
 
-**div**
+<b>div</b>
 
 class
 
@@ -6713,41 +6275,41 @@ class
 
 &quot;inner-div2&quot;
 
-**&gt;**
+<b>&gt;</b>
 
-**&lt;**
+<b>&lt;</b>
 
-**p**
+<b>p</b>
 
-**&gt;**
+<b>&gt;</b>
 
 This is DIV 2
 
-**&lt;**
+<b>&lt;</b>
 
-**/p**
+<b>/p</b>
 
-**&gt;**
+<b>&gt;</b>
 
-**&lt;**
+<b>&lt;</b>
 
-**/div**
+<b>/div</b>
 
-**&gt;**
+<b>&gt;</b>
 
-**&lt;**
+<b>&lt;</b>
 
-**/div**
+<b>/div</b>
 
-**&gt;**
+<b>&gt;</b>
 
-> CSS
+CSS
 
 .inner-div1
 
 {
 
-**width**
+<b>width</b>
 
 :
 
@@ -6757,7 +6319,7 @@ This is DIV 2
 
 ;
 
-**margin-right**
+<b>margin-right</b>
 
 :
 
@@ -6767,7 +6329,7 @@ px
 
 ;
 
-**float**
+<b>float</b>
 
 :
 
@@ -6775,7 +6337,7 @@ left
 
 ;
 
-**background**
+<b>background</b>
 
 :
 
@@ -6783,7 +6345,7 @@ left
 
 ;
 
-**padding**
+<b>padding</b>
 
 :
 
@@ -6803,7 +6365,7 @@ px
 
 {
 
-**width**
+<b>width</b>
 
 :
 
@@ -6813,7 +6375,7 @@ px
 
 ;
 
-**margin-right**
+<b>margin-right</b>
 
 :
 
@@ -6823,7 +6385,7 @@ px
 
 ;
 
-**float**
+<b>float</b>
 
 :
 
@@ -6831,7 +6393,7 @@ left
 
 ;
 
-**background**
+<b>background</b>
 
 :
 
@@ -6839,7 +6401,7 @@ left
 
 ;
 
-**padding**
+<b>padding</b>
 
 :
 
@@ -6859,7 +6421,7 @@ p
 
 {
 
-**text-align**
+<b>text-align</b>
 
 :
 
@@ -6877,76 +6439,76 @@ center
 <h3 id="ch14-5">Section 14.5: Use of overflow property to clear floats</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
-> Setting overflow value to hidden,auto or scroll to an element, will
-> clear all the floats within that element.
+Setting overflow value to hidden,auto or scroll to an element, will
+clear all the floats within that element.
 
-  **overflow**:scroll
+  <b>overflow</b>:scroll
 
-**Note:** using will always show the scrollbox
+<b>Note:</b> using will always show the scrollbox
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch14-6">Section 14.6: Simple Two Fixed-Width Column Layout</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
-> A simple two-column layout consists of two fixed-width, floated
-> elements. Note that the sidebar and content area are not the same
-> height in this example. This is one of the tricky parts with
-> multi-column layouts using floats, and requires workarounds to make
-> multiple columns appear to be the same height.
+A simple two-column layout consists of two fixed-width, floated
+elements. Note that the sidebar and content area are not the same
+height in this example. This is one of the tricky parts with
+multi-column layouts using floats, and requires workarounds to make
+multiple columns appear to be the same height.
 >
 <h4>HTML:</h4>
 
 <pre><code>
-**&lt;**
-**div**
+<b>&lt;</b>
+<b>div</b>
 class
 =
 &quot;wrapper&quot;
-**&gt;**
-**&lt;**
-**div**
+<b>&gt;</b>
+<b>&lt;</b>
+<b>div</b>
 class
 =
 &quot;sidebar&quot;
-**&gt;**
-**&lt;**
-**h**
-**2**
-**&gt;**
+<b>&gt;</b>
+<b>&lt;</b>
+<b>h</b>
+<b>2</b>
+<b>&gt;</b>
 Sidebar
-**&lt;**
-**/h**
-**2**
-**&gt;**
-**&lt;**
-**p**
-**&gt;**
+<b>&lt;</b>
+<b>/h</b>
+<b>2</b>
+<b>&gt;</b>
+<b>&lt;</b>
+<b>p</b>
+<b>&gt;</b>
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec
 odio.
-**&lt;**
-**/p**
-**&gt;**
-**&lt;**
-**/div**
-**&gt;**
-**&lt;**
-**div**
+<b>&lt;</b>
+<b>/p</b>
+<b>&gt;</b>
+<b>&lt;</b>
+<b>/div</b>
+<b>&gt;</b>
+<b>&lt;</b>
+<b>div</b>
 class
 =
 &quot;content&quot;
-**&gt;**
-**&lt;**
-**h**
-**1**
-**&gt;**
+<b>&gt;</b>
+<b>&lt;</b>
+<b>h</b>
+<b>1</b>
+<b>&gt;</b>
 Content
-**&lt;**
-**/h**
-**1**
-**&gt;**
-**&lt;**
-**p**
-**&gt;**
+<b>&lt;</b>
+<b>/h</b>
+<b>1</b>
+<b>&gt;</b>
+<b>&lt;</b>
+<b>p</b>
+<b>&gt;</b>
 Class aptent taciti sociosqu ad litora torquent per conubia nostra, per
 inceptos himenaeos.
 
@@ -6961,15 +6523,15 @@ suscipit quis, luctus non,
 
 massa. Fusce ac turpis quis ligula lacinia aliquet.
 
-**&lt;**
-**/p**
-**&gt;**
-**&lt;**
-**/div**
-**&gt;**
-**&lt;**
-**/div**
-**&gt;**
+<b>&lt;</b>
+<b>/p</b>
+<b>&gt;</b>
+<b>&lt;</b>
+<b>/div</b>
+<b>&gt;</b>
+<b>&lt;</b>
+<b>/div</b>
+<b>&gt;</b>
 </code></pre>
 
 <h4>CSS:</h4>
@@ -6977,17 +6539,17 @@ massa. Fusce ac turpis quis ligula lacinia aliquet.
 <pre><code>
 .wrapper
 {
-**width**
+<b>width</b>
 :
 600
 px
 ;
-**padding**
+<b>padding</b>
 :
 20
 px
 ;
-**background-color**
+<b>background-color</b>
 :
 pink
 ;
@@ -6996,39 +6558,39 @@ forces the*
 
 *parent element to expand to contain its floated children. &ast;/*
 
-**overflow**
+<b>overflow</b>
 :
 hidden
 ;
 }
 .sidebar
 {
-**width**
+<b>width</b>
 :
 150
 px
 ;
-**float**
+<b>float</b>
 :
 left
 ;
-**background-color**
+<b>background-color</b>
 :
 blue
 ;
 }
 .content
 {
-**width**
+<b>width</b>
 :
 450
 px
 ;
-**float**
+<b>float</b>
 :
 right
 ;
-**background-color**
+<b>background-color</b>
 :
 yellow
 ;
@@ -7041,55 +6603,55 @@ yellow
 <h4>HTML:</h4>
 
 <pre><code>
-**&lt;**
-**div**
+<b>&lt;</b>
+<b>div</b>
 class
 =
 &quot;wrapper&quot;
-**&gt;**
-**&lt;**
-**div**
+<b>&gt;</b>
+<b>&lt;</b>
+<b>div</b>
 class
 =
 &quot;left-sidebar&quot;
-**&gt;**
-**&lt;**
-**h**
-**1**
-**&gt;**
+<b>&gt;</b>
+<b>&lt;</b>
+<b>h</b>
+<b>1</b>
+<b>&gt;</b>
 Left Sidebar
-**&lt;**
-**/h**
-**1**
-**&gt;**
-**&lt;**
-**p**
-**&gt;**
+<b>&lt;</b>
+<b>/h</b>
+<b>1</b>
+<b>&gt;</b>
+<b>&lt;</b>
+<b>p</b>
+<b>&gt;</b>
 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-**&lt;**
-**/p**
-**&gt;**
-**&lt;**
-**/div**
-**&gt;**
-**&lt;**
-**div**
+<b>&lt;</b>
+<b>/p</b>
+<b>&gt;</b>
+<b>&lt;</b>
+<b>/div</b>
+<b>&gt;</b>
+<b>&lt;</b>
+<b>div</b>
 class
 =
 &quot;content&quot;
-**&gt;**
-**&lt;**
-**h**
-**1**
-**&gt;**
+<b>&gt;</b>
+<b>&lt;</b>
+<b>h</b>
+<b>1</b>
+<b>&gt;</b>
 Content
-**&lt;**
-**/h**
-**1**
-**&gt;**
-**&lt;**
-**p**
-**&gt;**
+<b>&lt;</b>
+<b>/h</b>
+<b>1</b>
+<b>&gt;</b>
+<b>&lt;</b>
+<b>p</b>
+<b>&gt;</b>
 </code></pre>
 
 Class aptent taciti sociosqu ad litora torquent per conubia nostra, per
@@ -7102,9 +6664,7 @@ nibh. Aenean quam. In scelerisque sem at dolor. Maecenas mattis. Sed
 convallis tristique sem. Proin
 
 ut ligula vel nunc egestas porttitor. Morbi lectus risus, iaculis vel,
-suscipit quis, luctus non,
-
-massa.
+suscipit quis, luctus non, massa.
 
 **&lt;**
 
@@ -7174,7 +6734,7 @@ Fusce ac turpis quis ligula lacinia aliquet.
 
 **&gt;**
 
-> CSS:
+CSS:
 
 .wrapper
 
@@ -7443,14 +7003,14 @@ yellow
   *text-align*     start, end, left, right, center, justify, match-parent
 
 
-> *text-decoration* none, underline, overline, line-through, initial,
-> inherit;
+*text-decoration* none, underline, overline, line-through, initial,
+inherit;
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch15-1">Section 15.1: The Font Shorthand</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
-> With the syntax:
+With the syntax:
 
 element
 
@@ -7494,12 +7054,12 @@ font-family
 
 }
 
-> You can have all your font-related styles in one declaration with the
-> font shorthand. Simply use the font property, and put your values in
-> the correct order.
+You can have all your font-related styles in one declaration with the
+font shorthand. Simply use the font property, and put your values in
+the correct order.
 >
-> For example, to make all p elements bold with a font size of 20px and
-> using Arial as the font family typically you would code it as follows:
+For example, to make all p elements bold with a font size of 20px and
+using Arial as the font family typically you would code it as follows:
 
 p
 
@@ -7537,7 +7097,7 @@ sans-serif
 
 }
 
-> However with the font shorthand it can be condensed as follows:
+However with the font shorthand it can be condensed as follows:
 
 p
 
@@ -7563,27 +7123,27 @@ sans-serif
 
 }
 
-> **Note**: that since font-style, font-variant, font-weight and
-> line-height are optional, the three of them are skipped in this
-> example. It is important to note that using the shortcut **resets**
-> the other attributes not given. Another important point is that the
-> two necessary attributes for the font shortcut to work are font-size
-> and fontfamily. If they are not both included the shortcut is ignored.
+**Note**: that since font-style, font-variant, font-weight and
+line-height are optional, the three of them are skipped in this
+example. It is important to note that using the shortcut **resets**
+the other attributes not given. Another important point is that the
+two necessary attributes for the font shortcut to work are font-size
+and fontfamily. If they are not both included the shortcut is ignored.
 >
-> Initial value for each of the properties:
+Initial value for each of the properties:
 
   **font-style**                          :   normal
 
   **font-variant**                           :   normal
   **font-weight**                           :   normal
 
-> ;
+;
 >
-> ;
+;
 >
-> ;
+;
 >
-> ;
+;
 
   **font-stretch**                           :   normal
 
@@ -7592,11 +7152,11 @@ sans-serif
 
   **line-height**                           :   normal
 
-> ;
+;
 >
-> ;
+;
 >
-> font-family -- depends on user agent
+font-family -- depends on user agent
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch15-2>Section 15.2: Quotes</h3>
@@ -7604,8 +7164,8 @@ sans-serif
 
   **&lt;q**
 
-> The quotes property is used to customize the opening and closing
-> quotation marks of the **&gt;** tag.
+The quotes property is used to customize the opening and closing
+quotation marks of the **&gt;** tag.
 
 q
 
@@ -7935,10 +7495,10 @@ px
 }
 </code></pre>
 
-> The letter-spacing property is used to specify the space between the
-> characters in a text.
+The letter-spacing property is used to specify the space between the
+characters in a text.
 >
-> ! letter-spacing also supports negative values:
+! letter-spacing also supports negative values:
 
 <pre><code>
 p
@@ -7969,14 +7529,14 @@ px
 }
 </code></pre>
 
-> The text-indent property specifies how much horizontal space text
-> should be moved before the beginning of the first line of the text
-> content of an element.
+The text-indent property specifies how much horizontal space text
+should be moved before the beginning of the first line of the text
+content of an element.
 >
-> Resources:
+Resources:
 >
-> &lbrack;&lbrack;Indenting only the first line of text in a
-> paragraph?&rbrack;&rbrack;(http://stackoverflow.com/questions/5856952/indenting-only-the-first-line-of-text-in-a-paragraph)
+&lbrack;&lbrack;Indenting only the first line of text in a
+paragraph?&rbrack;&rbrack;(http://stackoverflow.com/questions/5856952/indenting-only-the-first-line-of-text-in-a-paragraph)
 
 &lbrack;&lbrack;https://www.w3.org/TR/CSS21/text.html#propdef-text-indent&rbrack;&rbrack;(https://www.w3.org/TR/CSS21/text.html#propdef-text-indent)
 &lbrack;&lbrack;https://developer.mozilla.org/en-US/docs/Web/CSS/text-indent&rbrack;&rbrack;(https://developer.mozilla.org/en-US/docs/Web/CSS/text-indent)
@@ -7985,8 +7545,8 @@ px
 <h3 id="ch15-11">Section 15.11: Text Decoration</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
-> The text-decoration property is used to set or remove decorations from
-> text.
+The text-decoration property is used to set or remove decorations from
+text.
 
 <pre><code>
 h1
@@ -8019,8 +7579,8 @@ underline
 }
 </code></pre>
 
-> text-decoration can be used in combination with text-decoration-style
-> and text-decoration-color as a shorthand property:
+text-decoration can be used in combination with text-decoration-style
+and text-decoration-color as a shorthand property:
 
 <pre><code>
 .title
@@ -8034,19 +7594,17 @@ blue
 }
 </code></pre>
 
-> This is a shorthand version of
+This is a shorthand version of
 
 <pre><code>
 .title
 {
 <b>text-decoration-style</b>
 :
-dotted
-;
+dotted;
 <b>text-decoration-line</b>
 :
-underline
-;
+underline;
 <b>text-decoration-color</b>
 :
 blue
@@ -8101,25 +7659,25 @@ px
 }
 </code></pre>
 
-> <h4>HTML:</h4>
->
-> <b>&lt;p&gt;</b>
->
-> <b>&lt;span</b> class=&quot;normal&quot;<b>&gt;</b>This is an example, showing the
-> effect of &quot;word-spacing&quot;.<b>&lt;/span&gt;&lt;br&gt;</b>
->
-> <b>&lt;span</b> class=&quot;narrow&quot;<b>&gt;</b>This is an example, showing the
-> effect of &quot;word-spacing&quot;.<b>&lt;/span&gt;&lt;br&gt;</b> <b>&lt;span</b>
-> class=&quot;extensive&quot;<b>&gt;</b>This is an example, showing the effect of
-> &quot;word-spacing&quot;.<b>&lt;/span&gt;&lt;br&gt;</b>
->
-> <b>&lt;/p&gt;</b>
->
-> <b>Online-Demo</b>
+<h4>HTML:</h4>
+
+<b>&lt;p&gt;</b>
+
+<b>&lt;span</b> class=&quot;normal&quot;<b>&gt;</b>This is an example, showing the
+effect of &quot;word-spacing&quot;.<b>&lt;/span&gt;&lt;br&gt;</b>
+
+<b>&lt;span</b> class=&quot;narrow&quot;<b>&gt;</b>This is an example, showing the
+effect of &quot;word-spacing&quot;.<b>&lt;/span&gt;&lt;br&gt;</b> <b>&lt;span</b>
+class=&quot;extensive&quot;<b>&gt;</b>This is an example, showing the effect of
+&quot;word-spacing&quot;.<b>&lt;/span&gt;&lt;br&gt;</b>
+
+<b>&lt;/p&gt;</b>
+
+<b>Online-Demo</b>
 
 &lbrack;&lbrack;Try it yourself&rbrack;&rbrack;(https://jsfiddle.net/91742Lxt/)
 
-> <b>Further reading:</b>
+<b>Further reading:</b>
 
 &lbrack;&lbrack;word-spacing&rbrack; &lbrack;--&rbrack;
 &lbrack;MDN&rbrack;&rbrack;(https://developer.mozilla.org/de/docs/Web/CSS/word-spacing)
@@ -8209,7 +7767,7 @@ class
 **&gt;**
 </code></pre>
 
-> <h4>CSS</h4>
+<h4>CSS</h4>
 
 <pre><code>
 .aligner
@@ -8238,34 +7796,34 @@ center
 }
 </code></pre>
 
-> Here is a
-> &lbrack;&lbrack;demo&rbrack;&rbrack;(http://codepen.io/asim-coder/pen/ZOobqz).
+Here is a
+&lbrack;&lbrack;demo&rbrack;&rbrack;(http://codepen.io/asim-coder/pen/ZOobqz).
 >
-> **Reasoning**
+**Reasoning**
 
 **Property Value Description**
 
-> This centers the elements along the axis other than the one specified
-> by flex-direction,
+This centers the elements along the axis other than the one specified
+by flex-direction,
 >
-> align-items center i.e., vertical centering for a horizontal flexbox
-> and horizontal centering for a vertical flexbox.
+align-items center i.e., vertical centering for a horizontal flexbox
+and horizontal centering for a vertical flexbox.
 >
-> This centers the elements along the axis specified by flex-direction.
-> I.e., for a
+This centers the elements along the axis specified by flex-direction.
+I.e., for a
 
 <pre><code>
   **flex-direction**                                   :   row
   **flex-direction**                            :   column
 </code></pre>
 
-> justify-contentcenter horizontal () flexbox, this centers
-> horizontally, and for a vertical flexbox () flexbox, this centers
-> vertically)
+justify-contentcenter horizontal () flexbox, this centers
+horizontally, and for a vertical flexbox () flexbox, this centers
+vertically)
 >
-> **Individual Property Examples**
+**Individual Property Examples**
 >
-> All of the below styles are applied onto this simple layout:
+All of the below styles are applied onto this simple layout:
 
 <pre><code>
 **&lt;**
@@ -8301,9 +7859,9 @@ where #container is the flex-box
 </code></pre>
 
 
-> **Example: on a horizontal flexbox**
+**Example: on a horizontal flexbox**
 >
-> **CSS:**
+**CSS:**
 
 <pre><code>
 div
@@ -8406,7 +7964,7 @@ center
 }
 </code></pre>
 
-> **Outcome:**
+**Outcome:**
 
 [image043.jpg 6.97 x 6.15](./images/image043.jpg)
 
@@ -8467,7 +8025,7 @@ center
 }
 </code></pre>
 
-> <b>Outcome:</b>
+<b>Outcome:</b>
 
 [image045.jpg 6.93 x 6.11](./images/image045.jpg)
 
@@ -9018,7 +8576,7 @@ both declarations. ID selectors have a Group *A* specificity and class
 selectors have a Group *B* specificity. An ID selector outweighs any
 number of class selectors.
 
-**color**   :   blue   ; from the #foo selector and the      **background**   :   black
+**color</b>   :   blue   ; from the #foo selector and the      **background</b>   :   black
 
 Because of this, ; from the .bar selector will be
 
@@ -9030,18 +8588,18 @@ Now imagine a different CSS implementation:
 ```
 .bar
 {
-**color**
+**color</b>
 :
 red
 ;
-**background**
+**background</b>
 :
 black
 ;
 }
 .baz
 {
-**background**
+**background</b>
 :
 white
 ;
@@ -9059,7 +8617,7 @@ cascading nature of CSS resolves this for us: as .baz is defined
 *after* .bar, our element ends up with the *red* color from .bar but
 the *white* background from .baz.
 
-**Example 3: How to manipulate specificity**
+**Example 3: How to manipulate specificity</b>
 
 The last snippet from Example 2 above can be manipulated to ensure our
 .bar class selector&apos;s color declaration is used instead of that of
@@ -9076,12 +8634,12 @@ the .baz class selector.
 */&ast; a=0, b=1, c=0 &ast;/*
 ```
 
-> The most common way to achieve this would be to find out what other
-> selectors can be applied to the .bar selector sequence. For example,
-> if the .bar class was only ever applied to span elements, we could
-> modify the .bar selector to span.bar. This would give it a new Group
-> *C* specificity, which would override the .baz selector&apos;s lack
-> thereof:
+The most common way to achieve this would be to find out what other
+selectors can be applied to the .bar selector sequence. For example,
+if the .bar class was only ever applied to span elements, we could
+modify the .bar selector to span.bar. This would give it a new Group
+*C* specificity, which would override the .baz selector&apos;s lack
+thereof:
 
 ```
 span
@@ -9098,14 +8656,14 @@ span
   .bar.bar
 
 
-> However it may not always possible to find another common selector
-> which is shared between any element which uses the .bar class. Because
-> of this, CSS allows us to duplicate selectors to increase specificity.
-> Instead of just .bar, we can use instead (See &lbrack;&lbrack;The grammar of
-> Selectors, W3C
-> Recommendation&rbrack;&rbrack;(https://www.w3.org/TR/css3-selectors/#grammar)).
-> This still selects any element with a class of .bar, but now has
-> double the Group *B* specificity:
+However it may not always possible to find another common selector
+which is shared between any element which uses the .bar class. Because
+of this, CSS allows us to duplicate selectors to increase specificity.
+Instead of just .bar, we can use instead (See &lbrack;&lbrack;The grammar of
+Selectors, W3C
+Recommendation&rbrack;&rbrack;(https://www.w3.org/TR/css3-selectors/#grammar)).
+This still selects any element with a class of .bar, but now has
+double the Group *B* specificity:
 
 ```
 .bar
@@ -9119,38 +8677,38 @@ span
 /* a=0, b=1, c=0 */
 ```
 
-> **!important and inline style declarations**
+**!important and inline style declarations</b>
 >
-> The !important flag on a style declaration and styles declared by the
-> HTML style attribute are considered to have a greater specificity than
-> any selector. If these exist, the style declaration they affect will
-> overrule other declarations regardless of their specificity. That is,
-> unless you have more than one declaration that contains an !important
-> flag for the same property that apply to the same element. Then,
-> normal specificity rules will apply to those properties in reference
-> to each other.
+The !important flag on a style declaration and styles declared by the
+HTML style attribute are considered to have a greater specificity than
+any selector. If these exist, the style declaration they affect will
+overrule other declarations regardless of their specificity. That is,
+unless you have more than one declaration that contains an !important
+flag for the same property that apply to the same element. Then,
+normal specificity rules will apply to those properties in reference
+to each other.
 >
-> Because they completely override specificity, the use of !important is
-> frowned upon in most use cases. One should use it as little as
-> possible. To keep CSS code efficient and maintainable in the long run,
-> it&apos;s almost always better to increase the specificity of the
-> surrounding selector than to use !important.
+Because they completely override specificity, the use of !important is
+frowned upon in most use cases. One should use it as little as
+possible. To keep CSS code efficient and maintainable in the long run,
+it&apos;s almost always better to increase the specificity of the
+surrounding selector than to use !important.
 >
-> One of those rare exceptions where !important is not frowned upon, is
-> when implementing generic helper classes like a .hidden or
-> .background-yellow class that are supposed to always override one or
-> more properties wherever they are encountered. And even then, you need
+One of those rare exceptions where !important is not frowned upon, is
+when implementing generic helper classes like a .hidden or
+.background-yellow class that are supposed to always override one or
+more properties wherever they are encountered. And even then, you need
 > to know what you&apos;re doing. The last thing you want, when writing
-> maintainable CSS, is to have !important flags throughout your CSS.
+maintainable CSS, is to have !important flags throughout your CSS.
 >
-> **A final note**
+**A final note</b>
 
   b                    =5,                            c
 
 
 A common misconception about CSS specificity is that the Group *A*,
 *B* and *c* values should be combined with each other (a=1,=1 =&gt;
-151). This is **not** the case. If this were the case, having 20 of a
+151). This is **not</b> the case. If this were the case, having 20 of a
 Group *B* or *c* selector would be enough to override a single Group
 *A* or *B* selector respectively. The three groups should be regarded
 as individual levels of specificity. Specificity cannot be represented
@@ -9190,7 +8748,7 @@ rule. Its usage is: ;
 ```
 #mydiv
 {
-**font-weight**
+**font-weight</b>
 :
 bold
 !important
@@ -9201,7 +8759,7 @@ bold
 #outerdiv
 #mydiv
 {
-**font-weight**
+**font-weight</b>
 :
 normal
 ;
@@ -9233,7 +8791,7 @@ See also:
 
 &lbrack;**&lbrack;W3C - 6 Assigning property values, Cascading, and Inheritance &minus;-
 6.4.2 !important
-rules&rbrack;**&rbrack;(https://www.w3.org/TR/CSS22/cascade.html#important-rules)
+rules&rbrack;</b>&rbrack;(https://www.w3.org/TR/CSS22/cascade.html#important-rules)
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch17-3">Section 17.3: Cascading</h3>
@@ -9243,7 +8801,7 @@ Cascading and specificity are used together to determine the final
 value of a CSS styling property. They also define the mechanisms for
 resolving conflicts in CSS rule sets.
 
-**CSS Loading order**
+**CSS Loading order</b>
 
 Styles are read from the following sources, in this order:
 
@@ -9255,19 +8813,19 @@ Styles are read from the following sources, in this order:
 3.  Author stylesheet (Author here means the creator of the
     webpage/website)
 
-**&lt;style**
+**&lt;style</b>
  
  
 Maybe one or more .css files
 
-In the **&gt;** element of the HTML document
+In the **&gt;</b> element of the HTML document
 
 4.  Inline styles (In the style attribute on an HTML element)
 
 The browser will lookup the corresponding style(s) when rendering an
 element.
 
-**How are conflicts resolved?**
+**How are conflicts resolved?</b>
 
 When only one CSS rule set is trying to set a style for an element,
 then there is no conflict, and that rule set is used.
@@ -9276,12 +8834,12 @@ When multiple rule sets are found with conflicting settings, first the
 Specificty rules, and then the Cascading rules are used to determine
 what style to use.
 
-**Example 1 - Specificity rules**
+**Example 1 - Specificity rules</b>
 
 ```
 .mystyle
 {
-**color**
+**color</b>
 :
 blue
 ;
@@ -9289,22 +8847,22 @@ blue
 /* specificity: 0, 0, 1, 0 */
 div
 {
-**color**
+**color</b>
 :
 red
 ;
 }
 /* specificity: 0, 0, 0, 1 */
-**&lt;**
-**div**
+**&lt;</b>
+**div</b>
 class
 =
 &quot;mystyle&quot;
-**&gt;**
+<b>&gt;</b>
 Hello World
-**&lt;**
-**/div**
-**&gt;**
+<b>&lt;</b>
+<b>/div</b>
+<b>&gt;</b>
 ```
 
 What color will the text be? (hover to see the answer)
@@ -9314,14 +8872,14 @@ blue
 First the specificity rules are applied, and the one with the highest
 specificity &quot;wins&quot;.
 
-**Example 2 - Cascade rules with identical selectors**
+<b>Example 2 - Cascade rules with identical selectors</b>
 
 *External css file*
 
 ```
 .class
 {
-**background**
+<b>background</b>
 :
 #FFF
 ;
@@ -9331,28 +8889,28 @@ specificity &quot;wins&quot;.
 *Internal css (in HTML file)*
 
 ```
-**&lt;**
-**style**
-**&gt;**
+<b>&lt;</b>
+<b>style</b>
+<b>&gt;</b>
 .class {
 background: #000;
 }
-**&lt;**
-**style**
-**&gt;**
+<b>&lt;</b>
+<b>style</b>
+<b>&gt;</b>
 ```
 
 In this case, where you have identical selectors, the cascade kicks
 in, and determines that the last one loaded &quot;wins&quot;.
 
-**Example 3 - Cascade rules after Specificity rules**
+<b>Example 3 - Cascade rules after Specificity rules</b>
 
 ```
 body
 &gt;
 .mystyle
 {
-**background-color**
+<b>background-color</b>
 :
 blue
 ;
@@ -9362,31 +8920,31 @@ blue
 &gt;
 div
 {
-**background-color**
+<b>background-color</b>
 :
 red
 ;
 }
 /* specificity: 0, 0, 1, 1 */
-**&lt;**
-**body**
+<b>&lt;</b>
+<b>body</b>
 class
 =
 &quot;otherstyle&quot;
-**&gt;**
-**&lt;**
-**div**
+<b>&gt;</b>
+<b>&lt;</b>
+<b>div</b>
 class
 =
 &quot;mystyle&quot;
-**&gt;**
+<b>&gt;</b>
 Hello World
-**&lt;**
-**/div**
-**&gt;**
-**&lt;**
-**/body**
-**&gt;**
+<b>&lt;</b>
+<b>/div</b>
+<b>&gt;</b>
+<b>&lt;</b>
+<b>/body</b>
+<b>&gt;</b>
 ```
 
 What color will the background be?
@@ -9403,7 +8961,7 @@ whether inside the same .css file or in the collection of style
 sources. The last one loaded overrides any earlier ones. In this case,
 the rule &quot;wins&quot;.
 
-**A final note**
+<b>A final note</b>
 
 Selector specificity always take precedence.
 
@@ -9419,7 +8977,7 @@ div
 
 {
 
-**font-size**
+<b>font-size</b>
 
 :
 
@@ -9429,7 +8987,7 @@ px
 
 ;
 
-**border**
+<b>border</b>
 
 :
 
@@ -9443,7 +9001,7 @@ pink
 
 ;
 
-**background-color**
+<b>background-color</b>
 
 :
 
@@ -9451,7 +9009,7 @@ yellow
 
 ;
 
-**color**
+<b>color</b>
 
 :
 
@@ -9473,7 +9031,7 @@ div
 
 {
 
-**font-size**
+<b>font-size</b>
 
 :
 
@@ -9483,7 +9041,7 @@ px
 
 ;
 
-**background-color**
+<b>background-color</b>
 
 :
 
@@ -9497,7 +9055,7 @@ green
 
 {
 
-**font-size**
+<b>font-size</b>
 
 :
 
@@ -9507,7 +9065,7 @@ px
 
 ;
 
-**border-color**
+<b>border-color</b>
 
 :
 
@@ -9523,7 +9081,7 @@ red
 
 {
 
-**font-size**
+<b>font-size</b>
 
 :
 
@@ -9533,7 +9091,7 @@ px
 
 ;
 
-**background-color**
+<b>background-color</b>
 
 :
 
@@ -9541,7 +9099,7 @@ black
 
 ;
 
-**color**
+<b>color</b>
 
 :
 
@@ -9551,9 +9109,9 @@ red
 
 }
 
-**&lt;**
+<b>&lt;</b>
 
-**body**
+<b>body</b>
 
 class
 
@@ -9561,11 +9119,11 @@ class
 
 &quot;mystyle&quot;
 
-**&gt;**
+<b>&gt;</b>
 
-**&lt;**
+<b>&lt;</b>
 
-**div**
+<b>div</b>
 
 id
 
@@ -9579,72 +9137,57 @@ class
 
 &quot;myotherstyle&quot;
 
-**&gt;**
+<b>&gt;</b>
 
 Hello, world!
 
-**&lt;**
+<b>&lt;</b>
 
-**/div**
+<b>/div</b>
 
-**&gt;**
+<b>&gt;</b>
 
-**&lt;**
+<b>&lt;</b>
 
-**/body**
+<b>/body</b>
 
-**&gt;**
+<b>&gt;</b>
 
-> What borders, colors, and font-sizes will the text be? font-size:
+What borders, colors, and font-sizes will the text be? font-size:
 
-  ------------------------------------------------------------------------------------------
-  **font-size**   :   24   ;, since #elmnt1 rule set has the highest specificity **&lt;div**
+  <b>font-size</b>   :   24   ;, since #elmnt1 rule set has the highest specificity <b>&lt;div</b>
                            for the                                               
-  --------------- --- ---- ----------------------------------------------------- -----------
 
-  ------------------------------------------------------------------------------------------
+<b>&gt;</b> in question, every property here is set.
 
-> **&gt;** in question, every property here is set.
->
-> border:
->
-> ;. The border-color red is taken from #elmnt1 rule set, since it has
-> the highest
+border:
 
-  ------------------------------------------------------------------------
-  **border**          :   3px dotted red
-  ------------------- --- ------------------------------------------------
+;. The border-color red is taken from #elmnt1 rule set, since it has
+the highest
 
-  ------------------------------------------------------------------------
+  <b>border</b>          :   3px dotted red
 
-> specificity. The other properties of the border, border-thickness, and
-> border-style are from the div rule set.
->
-> background-color:
+specificity. The other properties of the border, border-thickness, and
+border-style are from the div rule set.
 
-  ------------------------------------------------------------------------------------------------------
-  **background-color**   :   green   ;. The background-color is   body.mystyle   &gt;   div.myotherstyle
+background-color:
+
+  <b>background-color</b>   :   green   ;. The background-color is   body.mystyle   &gt;   div.myotherstyle
                                      set in the div,                                  
-  ---------------------- --- ------- ---------------------------- -------------- ---- ------------------
 
-  ------------------------------------------------------------------------------------------------------
 
-  -----------------------------------------------------------------------
   .mystyle .myotherstyle
-  -----------------------------------------------------------------------
 
-  -----------------------------------------------------------------------
+, and rule sets. The specificities are (0, 0, 1) vs. (0, 2, 2) vs. (0,
+2, 0), so the middle one &quot;wins&quot;.
 
-> , and rule sets. The specificities are (0, 0, 1) vs. (0, 2, 2) vs. (0,
-> 2, 0), so the middle one &quot;wins&quot;.
->
-> color:
+color:
 
-  **color**   :   red   ;. The color is set in both the div .mystyle .myotherstyle
+  <b>color</b>   :   red   ;. The color is set in both the div .mystyle .myotherstyle
                         and                                 
 
-> rule sets. The latter has the higher specificity of (0, 2, 0) and
-> &quot;wins&quot;.
+rule sets. The latter has the higher specificity of (0, 2, 0) and
+&quot;wins&quot;.
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ch18">Chapter 18: Colors</h2>
@@ -9652,18 +9195,18 @@ Hello, world!
 <h3 id="ch18-1">Section 18.1: currentColor</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
-> currentColor returns the computed color value of the current element.
->
-> **Use in same element**
->
-> Here currentColor evaluates to red since the color property is set to
-> red:
+currentColor returns the computed color value of the current element.
+
+<b>Use in same element</b>
+
+Here currentColor evaluates to red since the color property is set to
+red:
 
 div
 
 {
 
-**color**
+<b>color</b>
 
 :
 
@@ -9671,7 +9214,7 @@ red
 
 ;
 
-**border**
+<b>border</b>
 
 :
 
@@ -9685,7 +9228,7 @@ currentColor
 
 ;
 
-**box-shadow**
+<b>box-shadow</b>
 
 :
 
@@ -9703,19 +9246,19 @@ currentColor
 
 }
 
-> In this case, specifying currentColor for the border is most likely
-> redundant because omitting it should produce identical results. Only
-> use currentColor inside the border property within the same element if
-> it would be overwritten otherwise due to a more specific selector.
+In this case, specifying currentColor for the border is most likely
+redundant because omitting it should produce identical results. Only
+use currentColor inside the border property within the same element if
+it would be overwritten otherwise due to a more specific selector.
 >
-> Since it&apos;s the computed color, the border will be green in the
-> following example due to the second rule overriding the first:
+Since it&apos;s the computed color, the border will be green in the
+following example due to the second rule overriding the first:
 
 div
 
 {
 
-**color**
+<b>color</b>
 
 :
 
@@ -9723,7 +9266,7 @@ blue
 
 ;
 
-**border**
+<b>border</b>
 
 :
 
@@ -9737,7 +9280,7 @@ currentColor
 
 ;
 
-**color**
+<b>color</b>
 
 :
 
@@ -9747,16 +9290,16 @@ green
 
 }
 
-> **Inherited from parent element**
->
-> The parent&apos;s color is inherited, here currentColor evaluates to
-> &apos;blue&apos;, making the child element&apos;s border-color blue.
+<b>Inherited from parent element</b>
+
+The parent&apos;s color is inherited, here currentColor evaluates to
+&apos;blue&apos;, making the child element&apos;s border-color blue.
 
 .parent-class
 
 {
 
-**color**
+<b>color</b>
 
 :
 
@@ -9772,7 +9315,7 @@ blue
 
 {
 
-**border-color**
+<b>border-color</b>
 
 :
 
@@ -9782,16 +9325,16 @@ currentColor
 
 }
 
-> currentColor can also be used by other rules which normally would not
-> inherit from the color property, such as background-color. The example
-> below shows the children using the color set in the parent as its
-> background:
+currentColor can also be used by other rules which normally would not
+inherit from the color property, such as background-color. The example
+below shows the children using the color set in the parent as its
+background:
 
 .parent-class
 
 {
 
-**color**
+<b>color</b>
 
 :
 
@@ -9807,7 +9350,7 @@ blue
 
 {
 
-**background-color**
+<b>background-color</b>
 
 :
 
@@ -9817,7 +9360,7 @@ currentColor
 
 }
 
-> **Possible Result:**
+<b>Possible Result:</b>
 
 [image049.png 5.2 x 3.09](./images/image049.png)
 
@@ -9825,21 +9368,21 @@ currentColor
 <h3 id="ch18-2">Section 18.2: Color Keywords</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
-> Most browsers support using color keywords to specify a color. For
-> example, to set the color of an element to blue, use the blue keyword:
+Most browsers support using color keywords to specify a color. For
+example, to set the color of an element to blue, use the blue keyword:
 
 <pre><code>
 .some-class {
-  **color**: blue;
+  <b>color</b>: blue;
 }
 </code></pre>
 
-> CSS keywords are not case sensitive---blue, Blue and BLUE will all
-> result in #0000FF.
+CSS keywords are not case sensitive---blue, Blue and BLUE will all
+result in #0000FF.
 >
-> **Color Keywords**
+<b>Color Keywords</b>
 
-**Color name Hex value RGB values Color**
+<b>Color name Hex value RGB values Color</b>
 
 AliceBlue #F0F8FF rgb(240,248,255)
 
@@ -10006,56 +9549,30 @@ Brown #A52A2A rgb(165,42,42)
 | | #FAFAD2 rgb(250,250,210) |                               |   |     |
 | | LightGray                | #D3D3D3 rgb(211,211,211)      |   |     |
 | | LightGrey                | #D3D3D3 rgb(211,211,211)      |   |     |
-| |--------------------------|-------------------------------|   |     |
 | | LightGreen               | #90EE90 rgb(144,238,144)      |   |     |
-| |--------------------------|-------------------------------|   |     |
 | | LightPink                | #FFB6C1 rgb(255,182,193)      |   |     |
-| |--------------------------|-------------------------------|   |     |
 | | LightSalmon              | #FFA07A rgb(255,160,122)      |   |     |
-| |--------------------------|-------------------------------|   |     |
 | | LightSeaGreen            | #20B2AA rgb(32,178,170)       |   |     |
-| |--------------------------|-------------------------------|   |     |
 | | LightSkyBlue             | #87CEFA rgb(135,206,250)      |   |     |
-| |--------------------------|-------------------------------|   |     |
 | | LightSlateGray           | #778899 rgb(119,136,153)      |   |     |
-| |--------------------------|-------------------------------|   |     |
 | | LightSlateGrey           | #778899 rgb(119,136,153)      |   |     |
-| |--------------------------|-------------------------------|   |     |
 | | LightSteelBlue           | #B0C4DE rgb(176,196,222)      |   |     |
-| |--------------------------|-------------------------------|   |     |
 | | LightYellow              | #FFFFE0 rgb(255,255,224)      |   |     |
-| |--------------------------|-------------------------------|   |     |
 | | Lime                     | #00FF00 rgb(0,255,0)          |   |     |
-| |--------------------------|-------------------------------|   |     |
 | | LimeGreen                | #32CD32 rgb(50,205,50)        |   |     |
-| |--------------------------|-------------------------------|   |     |
 | | Linen                    | #FAF0E6 rgb(250,240,230)      |   |     |
-| |--------------------------|-------------------------------|   |     |
 | | Magenta                  | #FF00FF rgb(255,0,255)        |   |     |
-| |--------------------------|-------------------------------|   |     |
 | | Maroon                   | #800000 rgb(128,0,0)          |   |     |
-| |--------------------------|-------------------------------|   |     |
 | | MediumAquaMarine         | #66CDAA rgb(102,205,170)      |   |     |
-| |--------------------------|-------------------------------|   |     |
 | | MediumBlue               | #0000CD rgb(0,0,205)          |   |     |
-| |--------------------------|-------------------------------|   |     |
 | | MediumOrchid             | #BA55D3 rgb(186,85,211)       |   |     |
-| |--------------------------|-------------------------------|   |     |
 | | MediumPurple             | #9370DB rgb(147,112,219)      |   |     |
-| |--------------------------|-------------------------------|   |     |
 | | MediumSeaGreen           | #3CB371 rgb(60,179,113)       |   |     |
-| |--------------------------|-------------------------------|   |     |
 | | MediumSlateBlue          | #7B68EE rgb(123,104,238)      |   |     |
-| |--------------------------|-------------------------------|   |     |
 | | MediumSpringGreen        | #00FA9A rgb(0,250,154)        |   |     |
-| |--------------------------|-------------------------------|   |     |
 | | MediumTurquoise          | #48D1CC rgb(72,209,204)       |   |     |
-| |--------------------------|-------------------------------|   |     |
-| | MediumVioletRed          | #C71585 rgb(199,21,133)       |   |     |
-| -------------------------------------------------------------- |     |
+|  MediumVioletRed          | #C71585 rgb(199,21,133)       |   |     |
 |   MidnightBlue               #191970            rgb(25,25,112) |     |
-|   ---                                                          |     |
-| ----------------------- ------------------ ------------------- |     |
 |                                                                |     |
 | MintCream                  #F5FFFA            rgb(245,255,250) |     |
 |                                                                |     |
@@ -10182,37 +9699,33 @@ Yellow #FFFF00 rgb(255,255,0)
 
 YellowGreen #9ACD32 rgb(154,205,50)
 
-> In addition to the named colors, there is also the keyword
-> transparent, which represents a fully-transparent black:
+In addition to the named colors, there is also the keyword
+transparent, which represents a fully-transparent black:
 
-  -----------------------------------------------------------------------
   rgba
-  -----------------------------------------------------------------------
 
-  -----------------------------------------------------------------------
-
-> (0,0,0,0)
+(0,0,0,0)
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch18-3">Section 18.3: Hexadecimal Value</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
-> **Background**
->
-> CSS colors may also be represented as a hex triplet, where the members
-> represent the red, green and blue components of a color. Each of these
-> values represents a number in the range of 00 to FF, or 0 to 255 in
-> decimal notation. Uppercase and/or lowercase Hexadecimal values may be
-> used (i.e. #3fc = #3FC = #33ffCC). The browser interprets #369 as
-> #336699. If that is not what you intended but rather wanted #306090,
-> you need to specify that explicitly.
->
-> The total number of colors that can be represented with hex notation
-> is 256 &Hat; 3 or 16,777,216.
->
-> **Syntax**
+<b>Background</b>
 
-**color**
+CSS colors may also be represented as a hex triplet, where the members
+represent the red, green and blue components of a color. Each of these
+values represents a number in the range of 00 to FF, or 0 to 255 in
+decimal notation. Uppercase and/or lowercase Hexadecimal values may be
+used (i.e. #3fc = #3FC = #33ffCC). The browser interprets #369 as
+#336699. If that is not what you intended but rather wanted #306090,
+you need to specify that explicitly.
+
+The total number of colors that can be represented with hex notation
+is 256 &Hat; 3 or 16,777,216.
+
+<b>Syntax</b>
+
+<b>color</b>
 
 :
 
@@ -10220,7 +9733,7 @@ YellowGreen #9ACD32 rgb(154,205,50)
 
 ;
 
-**color**
+<b>color</b>
 
 :
 
@@ -10228,7 +9741,7 @@ YellowGreen #9ACD32 rgb(154,205,50)
 
 rgb
 
-**Value Description**
+<b>Value Description</b>
 
 rr 00 - FF for the amount of red
 
@@ -10258,7 +9771,7 @@ for the amount of blue
 
 */&ast; This is equivalent to using the color keyword &apos;blue&apos; &ast;/*
 
-**color**
+<b>color</b>
 
 :
 
@@ -10272,12 +9785,10 @@ for the amount of blue
 
 {
 
-*/&ast; If you want to specify each range value with a single number, you
-can!*
+/* If you want to specify each range value with a single number, you can!
+This is equivalent to &apos;#0000FF&apos; (and &apos;blue&apos;) */
 
-*This is equivalent to &apos;#0000FF&apos; (and &apos;blue&apos;) &ast;/*
-
-**color**
+<b>color</b>
 
 :
 
@@ -10287,99 +9798,69 @@ can!*
 
 }
 
-> &lbrack;&lbrack;Hexadecimal
-> notation&rbrack;&rbrack;(https://en.wikipedia.org/wiki/Hexadecimal) is
-> used to specify color values in the RGB color format, per the &lbrack;&lbrack;W3C&apos;s
-> &apos;Numerical color&rbrack;
-> &lbrack;values&apos;&rbrack;&rbrack;(https://www.w3.org/TR/css3-color/#numerical).
->
-> There are a lot of tools available on the Internet for looking up
-> hexadecimal (or simply hex) color values.
->
-> Search for &quot;**hex color palette**&quot; or &quot;**hex color picker**&quot; with
-> your favorite web browser to find a bunch of options!
->
-> Hex values always start with a pound sign (#), are up to six
-> &quot;digits&quot; long, and are case-insensitive: that is, they don&apos;t care
-> about capitalization. #FFC125 and #ffc125 are the same color.
+&lbrack;&lbrack;Hexadecimal
+notation&rbrack;&rbrack;(https://en.wikipedia.org/wiki/Hexadecimal) is
+used to specify color values in the RGB color format, per the &lbrack;&lbrack;W3C&apos;s
+&apos;Numerical color&rbrack;
+&lbrack;values&apos;&rbrack;&rbrack;(https://www.w3.org/TR/css3-color/#numerical).
+
+There are a lot of tools available on the Internet for looking up
+hexadecimal (or simply hex) color values.
+
+Search for &quot;<b>hex color palette<b>&quot; or &quot;</b>hex color picker&quot; with
+your favorite web browser to find a bunch of options!
+
+Hex values always start with a pound sign (#), are up to six
+&quot;digits&quot; long, and are case-insensitive: that is, they don&apos;t care
+about capitalization. #FFC125 and #ffc125 are the same color.
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch18-4">Section 18.4: rgb() Notation</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-
-> RGB is an additive color model which represents colors as mixtures of
-> red, green, and blue light. In essence, the RGB representation is the
-> decimal equivalent of the Hexadecimal Notation. In Hexadecimal each
-> number ranges from 00-FF which is equivalent to 0-255 in decimal and
-> 0%-100% in percentages.
+RGB is an additive color model which represents colors as mixtures of
+red, green, and blue light. In essence, the RGB representation is the
+decimal equivalent of the Hexadecimal Notation. In Hexadecimal each
+number ranges from 00-FF which is equivalent to 0-255 in decimal and
+0%-100% in percentages.
 
 .some-class
 
 {
 
-*/&ast; Scalar RGB, equivalent to &apos;blue&apos;&ast;/*
+/* Scalar RGB, equivalent to &apos;blue&apos; */
 
-**color**
-
+<b>color</b>
 :
-
 rgb
-
 (
-
 0
-
 ,
-
 0
-
 ,
-
 255
-
 )
-
 ;
-
 }
-
 .also-blue
-
 {
-
-*/&ast; Percentile RGB values&ast;/*
-
-**color**
-
+/* Percentile RGB values */
+<b>color</b>
 :
-
 rgb
-
 (
-
 0
-
 &percnt;
-
 ,
-
 0
-
 &percnt;
-
 ,
-
 100
-
 &percnt;
-
 )
-
 ;
-
 }
 
-> **Syntax**
+<b>Syntax</b>
 
 rgb
 
@@ -10405,37 +9886,26 @@ red
 
 )
 
-**Value Description**
+<b>Value Description</b>
 
-  -----------------------------------------------------------------------
-  **&lt;red**
-  -----------------------------------------------------------------------
+  <b>&lt;red</b>
 
-  -----------------------------------------------------------------------
 
-> **&gt;** an integer from 0 - 255 or percentage from 0 - 100%
+<b>&gt;</b> an integer from 0 - 255 or percentage from 0 - 100%
 
-  -----------------------------------------------------------------------
-  **&lt;green**
-  -----------------------------------------------------------------------
+  <b>&lt;green</b>
 
-  -----------------------------------------------------------------------
+  <b>&lt;blue</b>
 
-  -----------------------------------------------------------------------
-  **&lt;blue**
-  -----------------------------------------------------------------------
-
-  -----------------------------------------------------------------------
-
-> **&gt;** an integer from 0 - 255 or percentage from 0 - 100% **&gt;** an
-> integer from 0 - 255 or percentage from 0 - 100%
+<b>&gt;</b> an integer from 0 - 255 or percentage from 0 - 100% <b>&gt;</b> an
+integer from 0 - 255 or percentage from 0 - 100%
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch18-5">Section 18.5: rgba() Notation</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
-> Similar to rgb() notation, but with an additional alpha (opacity)
-> value.
+Similar to rgb() notation, but with an additional alpha (opacity)
+value.
 
 .red
 
@@ -10443,7 +9913,7 @@ red
 
 */&ast; Opaque red &ast;/*
 
-**color**
+<b>color</b>
 
 :
 
@@ -10477,7 +9947,7 @@ rgba
 
 */&ast; Half-translucent red. &ast;/*
 
-**color**
+<b>color</b>
 
 :
 
@@ -10505,7 +9975,7 @@ rgba
 
 }
 
-> **Syntax**
+<b>Syntax</b>
 
 rgba
 
@@ -10539,56 +10009,38 @@ red
 
 ;
 
-**Value Description**
+<b>Value Description</b>
 
-  -----------------------------------------------------------------------
-  **&lt;red**
-  -----------------------------------------------------------------------
+  <b>&lt;red</b>
 
-  -----------------------------------------------------------------------
+<b>&gt;</b> an integer from 0 - 255 or percentage from 0 - 100%
 
-> **&gt;** an integer from 0 - 255 or percentage from 0 - 100%
+  <b>&lt;green</b>
 
-  -----------------------------------------------------------------------
-  **&lt;green**
-  -----------------------------------------------------------------------
+<b>&gt;</b> an integer from 0 - 255 or percentage from 0 - 100%
 
-  -----------------------------------------------------------------------
+  <b>&lt;blue</b>
 
-> **&gt;** an integer from 0 - 255 or percentage from 0 - 100%
+<b>&gt;</b> an integer from 0 - 255 or percentage from 0 - 100%
 
-  -----------------------------------------------------------------------
-  **&lt;blue**
-  -----------------------------------------------------------------------
+  <b>&lt;alpha</b>
 
-  -----------------------------------------------------------------------
-
-> **&gt;** an integer from 0 - 255 or percentage from 0 - 100%
-
-  -----------------------------------------------------------------------
-  **&lt;alpha**
-  -----------------------------------------------------------------------
-
-  -----------------------------------------------------------------------
-
-> **&gt;** a number from 0 - 1, where 0.0 is fully transparent and 1.0 is
-> fully opaque
-
+<b>&gt;</b> a number from 0 - 1, where 0.0 is fully transparent and 1.0 is fully opaque
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch18-6">Section 18.6: hsl() Notation</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
-> HSL stands for **hue** (&quot;which color&quot;), **saturation** (&quot;how much
-> color&quot;) and **lightness** (&quot;how much white&quot;).
+HSL stands for <b>hue</b> (&quot;which color&quot;), <b>saturation</b> (&quot;how much
+color&quot;) and <b>lightness</b> (&quot;how much white&quot;).
 >
-> Hue is represented as an angle from 0° to 360° (without units), while
-> saturation and lightness are represented as percentages.
+Hue is represented as an angle from 0° to 360° (without units), while
+saturation and lightness are represented as percentages.
 
 p
 
 {
 
-**color**
+<b>color</b>
 
 :
 
@@ -10617,95 +10069,64 @@ hsl
 */&ast; Blue &ast;/*
 
 }
+[]<img src="./images/image189.jpg">{width="7.48037510936133in" height="5.610277777777778in"}
 
-!&lbrack;&rbrack;(./images/image189.jpg){width="7.48037510936133in"
-height="5.610277777777778in"}
-
-> **Syntax**
-
-**color**
-
+<b>Syntax</b>
+<b>color</b>
 :
-
 hsl
-
 (
-
 &lt;
-
 hue
-
 &gt;
-
 ,
-
 &lt;saturation
-
 &gt;
-
 &percnt;
-
 ,
-
 &lt;lightness
-
 &gt;
-
 &percnt;
-
 )
-
 ;
+<b>Value Description</b>
+  <b>&lt;hue</b>
 
-**Value Description**
 
-  -----------------------------------------------------------------------
-  **&lt;hue**
-  -----------------------------------------------------------------------
+specified in degrees around the color wheel (without units), where 0°
+is red, 60° is yellow, 120° is
 
-  -----------------------------------------------------------------------
+  <b>&lt;saturation</b>
 
-> specified in degrees around the color wheel (without units), where 0°
-> is red, 60° is yellow, 120° is
+<b>&gt;</b> green, 180° is cyan, 240° is blue, 300° is magenta, and 360° is
+red specified in percentage where 0% is fully desaturated (grayscale)
+and 100% is fully saturated (vividly <b>&gt;</b> colored)
 
-  -----------------------------------------------------------------------
-  **&lt;saturation**
-  -----------------------------------------------------------------------
+  <b>&lt;lightness</b>
 
-  -----------------------------------------------------------------------
 
-> **&gt;** green, 180° is cyan, 240° is blue, 300° is magenta, and 360° is
-> red specified in percentage where 0% is fully desaturated (grayscale)
-> and 100% is fully saturated (vividly **&gt;** colored)
+<b>&gt;</b> specified in percentage where 0% is fully black and 100% is
+fully white
 
-  -----------------------------------------------------------------------
-  **&lt;lightness**
-  -----------------------------------------------------------------------
+<b>Notes</b>
 
-  -----------------------------------------------------------------------
+A saturation of 0% always produces a grayscale color; changing the hue
+has no effect.
 
-> **&gt;** specified in percentage where 0% is fully black and 100% is
-> fully white
->
-> **Notes**
->
-> A saturation of 0% always produces a grayscale color; changing the hue
-> has no effect.
->
-> A lightness of 0% always produces black, and 100% always produces
-> white; changing the hue or saturation has no effect.
+A lightness of 0% always produces black, and 100% always produces
+white; changing the hue or saturation has no effect.
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch18-7">Section 18.7: hsla() Notation</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
-> Similar to hsl() notation, but with an added alpha (opacity) value.
->
-> hsla(240, 100%, 50%, 0) */&ast; transparent &ast;/* hsla(240, 100%, 50%,
-> 0.5) */&ast; half-translucent blue &ast;/* hsla(240, 100%, 50%, 1) */&ast;
-> fully opaque blue &ast;/*
->
-> **Syntax**
+Similar to hsl() notation, but with an added alpha (opacity) value.
+
+hsla(240, 100%, 50%, 0) */&ast; transparent &ast;/* hsla(240, 100%, 50%,
+0.5) */&ast; half-translucent blue &ast;/* hsla(240, 100%, 50%, 1) */&ast;
+fully opaque blue &ast;/*
+
+<b>Syntax</b>
 
 hsla
 
@@ -10743,43 +10164,28 @@ hue
 
 ;
 
-**Value Description**
+<b>Value Description</b>
 
-  -----------------------------------------------------------------------
-  **&lt;hue**
-  -----------------------------------------------------------------------
+  <b>&lt;hue</b>
 
-  -----------------------------------------------------------------------
 
-> specified in degrees around the color wheel (without units), where 0°
-> is red, 60° is yellow, 120° is
->
-> **&gt;** green, 180° is cyan, 240° is blue, 300° is magenta, and 360° is
-> red
+specified in degrees around the color wheel (without units), where 0°
+is red, 60° is yellow, 120° is
 
-  -----------------------------------------------------------------------
-  **&lt;saturation**
-  -----------------------------------------------------------------------
+<b>&gt;</b> green, 180° is cyan, 240° is blue, 300° is magenta, and 360° is
+red
 
-  -----------------------------------------------------------------------
+  <b>&lt;saturation</b>
 
-  -----------------------------------------------------------------------
-  **&lt;lightness**
-  -----------------------------------------------------------------------
+  <b>&lt;lightness</b>
 
-  -----------------------------------------------------------------------
+<b>&gt;</b> percentage where 0% is fully desaturated (grayscale) and 100%
+is fully saturated (vividly colored) <b>&gt;</b> percentage where 0% is
+fully black and 100% is fully white
 
-> **&gt;** percentage where 0% is fully desaturated (grayscale) and 100%
-> is fully saturated (vividly colored) **&gt;** percentage where 0% is
-> fully black and 100% is fully white
+  <b>&lt;alpha</b>
 
-  -----------------------------------------------------------------------
-  **&lt;alpha**
-  -----------------------------------------------------------------------
-
-  -----------------------------------------------------------------------
-
-**&gt;** a number from 0 - 1 where 0 is fully transparent and 1 is fully
+<b>&gt;</b> a number from 0 - 1 where 0 is fully transparent and 1 is fully
 opaque
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -10787,15 +10193,14 @@ opaque
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch19-1">Section 19.1: Opacity Property</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p>An element&apos;s opacity can be set using the opacity property. Values
+can be anywhere from 0.0 (transparent) to 1.0 (opaque).
 
-> An element&apos;s opacity can be set using the opacity property. Values
-> can be anywhere from 0.0 (transparent) to 1.0 (opaque).
->
-> **Example Usage**
+<h4>Example Usage</h4>
 
-**&lt;**
+<b>&lt;</b>
 
-**div**
+<b>div</b>
 
 style
 
@@ -10803,50 +10208,41 @@ style
 
 &quot;opacity:0.8;&quot;
 
-**&gt;**
+<b>&gt;</b>
 
 This is a partially transparent element
 
-**&lt;**
+<b>&lt;</b>
 
-**/div**
+<b>/div</b>
 
-**&gt;**
+<b>&gt;</b>
 
-**Property Value Transparency**
+<b>Property Value Transparency</b>
 
-  -----------------------------------------------------------------------
-  **opacity**: 1.0;
-  -----------------------------------------------------------------------
+  <b>opacity</b>: 1.0;
 
-  -----------------------------------------------------------------------
 
 > Opaque
 
-  -----------------------------------------------------------------------
-  **opacity**: 0.75;
-  -----------------------------------------------------------------------
+  <b>opacity</b>: 0.75;
 
-  -----------------------------------------------------------------------
 
 > 25% transparent (75% Opaque)
 
-  -----------------------------------------------------------------------
-  **opacity**: 0.5;
-  -----------------------------------------------------------------------
+  <b>opacity</b>: 0.5;
 
-  -----------------------------------------------------------------------
 
 > 50% transparent (50% Opaque)
 
   -----------------------------------------------------------------------
-  **opacity**: 0.25;
+  <b>opacity</b>: 0.25;
   -----------------------------------------------------------------------
 
   -----------------------------------------------------------------------
 
   -----------------------------------------------------------------------
-  **opacity**: 0.0;
+  <b>opacity</b>: 0.0;
   -----------------------------------------------------------------------
 
   -----------------------------------------------------------------------
@@ -10881,7 +10277,7 @@ in all versions of IE, the order is:
 
 */&ast; works in IE 8 & 9 too, but also 5, 6, 7 &ast;/*
 
-**filter**
+<b>filter</b>
 
 :
 
@@ -10909,7 +10305,7 @@ opacity
 
 */&ast; Modern Browsers &ast;/*
 
-**opacity**
+<b>opacity</b>
 
 :
 
@@ -10923,7 +10319,7 @@ opacity
 <h2 id="ch20">Chapter 20: Length Units</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
-**Unit Description**
+<b>Unit Description</b>
 
 > &percnt; Define sizes in terms of parent objects or current object dependent
 > on property em Relative to the font-size of the element (2em means 2
@@ -10950,16 +10346,16 @@ opacity
 
 Version ≥ 3
 
-> You can use rem defined by the font-size of your html tag to style
-> elements by setting their font-size to a value of rem and use em
-> inside the element to create elements that scale with your global
-> font-size.
->
-> **HTML:**
+You can use rem defined by the font-size of your html tag to style
+elements by setting their font-size to a value of rem and use em
+inside the element to create elements that scale with your global
+font-size.
 
-**&lt;**
+<b>HTML:</b>
 
-**input**
+<b>&lt;</b>
+
+<b>input</b>
 
 type
 
@@ -10973,11 +10369,11 @@ value
 
 &quot;Button&quot;
 
-**&gt;**
+<b>&gt;</b>
 
-**&lt;**
+<b>&lt;</b>
 
-**input**
+<b>input</b>
 
 type
 
@@ -10985,11 +10381,11 @@ type
 
 &quot;range&quot;
 
-**&gt;**
+<b>&gt;</b>
 
-**&lt;**
+<b>&lt;</b>
 
-**input**
+<b>input</b>
 
 type
 
@@ -11003,64 +10399,17 @@ value
 
 &quot;Text&quot;
 
-**&gt;**
+<b>&gt;</b>
 
-> **Relevant CSS:**
-
-html
-
-{
-
-**font-size**
-
-:
-
-16
-
-px
-
-;
-
+> <b>Relevant CSS:</b>
+html {
+  **font-size</b>: 16px;
 }
-
 input
-
-&lbrack;
-
-type
-
-=
-
-&quot;button&quot;
-
-&rbrack;
-
+&lbrack;type=&quot;button&quot;&rbrack;
 {
-
-**font-size**
-
-:
-
-1
-
-rem
-
-;
-
-**padding**
-
-:
-
-0.5
-
-em
-
-2
-
-em
-
-;
-
+  **font-size</b>: 1rem;
+  **padding</b>: 0.5em 2em;
 }
 
 input
@@ -11077,7 +10426,7 @@ type
 
 {
 
-**font-size**
+<b>font-size</b>
 
 :
 
@@ -11087,7 +10436,7 @@ rem
 
 ;
 
-**width**
+<b>width</b>
 
 :
 
@@ -11113,7 +10462,7 @@ text
 
 {
 
-**font-size**
+<b>font-size</b>
 
 :
 
@@ -11123,7 +10472,7 @@ rem
 
 ;
 
-**padding**
+<b>padding</b>
 
 :
 
@@ -11135,7 +10484,7 @@ em
 
 }
 
-> **Possible Result:**
+> <b>Possible Result:</b>
 
 !&lbrack;&rbrack;(./images/image190.jpg){width="6.34375in"
 height="2.9583333333333335in"}
@@ -11144,126 +10493,79 @@ height="2.9583333333333335in"}
 <h3 id="ch20-2">Section 20.2: Font size with rem</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
-> CSS3 introduces a few new units, including the
-> &lbrack;&lbrack;rem&rbrack;&rbrack;(https://www.w3.org/TR/css-values/#font-relative-lengths)
-> unit, which stands for &quot;root em&quot;. Let&apos;s look at how rem works.
->
-> First, let&apos;s look at the differences between em and rem.
+CSS3 introduces a few new units, including the
+&lbrack;&lbrack;rem&rbrack;&rbrack;(https://www.w3.org/TR/css-values/#font-relative-lengths)
+unit, which stands for &quot;root em&quot;. Let&apos;s look at how rem works.
 
-  -----------------------------------------------------------------------
-  **&lt;html**
-  -----------------------------------------------------------------------
+First, let&apos;s look at the differences between em and rem.
 
-  -----------------------------------------------------------------------
+<b>&lt;html</b>
 
-> **em**: Relative to the font size of the parent. This causes the
-> compounding issue **rem**: Relative to the font size of the root or
-> **&gt;** element. This means it&apos;s possible to declare a single font
-> size for the html element and define all rem units to be a percentage
-> of that.
->
-> The main issue with using rem for font sizing is that the values are
-> somewhat difficult to use. Here is an example of some common font
-> sizes expressed in rem units, assuming that the base size is 16px :
->
-> 10px = 0.625rem 12px = 0.75rem
->
-> 14px = 0.875rem
->
-> 16px = 1rem (base)
->
-> 18px = 1.125rem
->
-> 20px = 1.25rem
->
-> 24px = 1.5rem
->
-> 30px = 1.875rem
->
-> 32px = 2rem
->
-> **CODE:**
+<b>em</b>: Relative to the font size of the parent. This causes the
+compounding issue <b>rem</b>: Relative to the font size of the root or
+<b>&gt;</b> element. This means it&apos;s possible to declare a single font
+size for the html element and define all rem units to be a percentage
+of that.
 
+The main issue with using rem for font sizing is that the values are
+somewhat difficult to use. Here is an example of some common font
+sizes expressed in rem units, assuming that the base size is 16px :
+
+10px = 0.625rem 12px = 0.75rem
+14px = 0.875rem
+16px = 1rem (base)
+18px = 1.125rem
+20px = 1.25rem
+24px = 1.5rem
+30px = 1.875rem
+32px = 2rem
+
+<b>CODE:</b>
 Version ≥ 3 html {
-
-**font-size**
-
+<b>font-size</b>
 :
-
 16
-
 px
-
 ;
-
 }
-
 h1
-
 {
-
-**font-size**
-
+<b>font-size</b>
 :
-
 2
-
 rem
-
 ;
-
 */&ast; 32px &ast;/*
-
 }
-
 p
-
 {
-
-**font-size**
-
+<b>font-size</b>
 :
-
 1
-
 rem
-
 ;
-
-*/&ast; 16px &ast;/*
-
+/* 16px */
 }
-
 li
-
 {
-
-**font-size**
-
+<b>font-size</b>
 :
-
-1.5
-
-em
-
-;
-
-*/&ast; 24px &ast;/*
-
+1.5em;
+/* 24px */
 }
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch20-3">Section 20.3: vmin and vmax</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
-> **vmin**: Relative to 1 percent of the viewport&apos;s smaller dimension
-> **vmax**: Relative to 1 percent of the viewport&apos;s larger dimension
+> <b>vmin</b>: Relative to 1 percent of the viewport&apos;s smaller dimension
+> <b>vmax</b>: Relative to 1 percent of the viewport&apos;s larger dimension
 >
 > In other words, 1 vmin is equal to the smaller of *1 vh* and *1 vw*
 >
 > 1 vmax is equal to the larger of *1 vh* and *1 vw*
 
-**Note**: vmax is &lbrack;&lbrack;not
+<b>Note</b>: vmax is &lbrack;&lbrack;not
 supported&rbrack;&rbrack;(http://caniuse.com/#feat=viewport-units) in:
 
 > any version of Internet Explorer Safari before version 6.1
@@ -11300,7 +10602,7 @@ div
 
 {
 
-**width**
+<b>width</b>
 
 :
 
@@ -11310,7 +10612,7 @@ vw
 
 ;
 
-**height**
+<b>height</b>
 
 :
 
@@ -11333,22 +10635,22 @@ One of the useful unit when creating a responsive application.
 
 Its size depends on its parent container.
 
-**Equation:**
+<b>Equation:</b>
 
 ( Parent Container&apos;s width ) &ast; ( Percentage(%) ) = Output
 
-**For Example:**
+<b>For Example:</b>
 
-*Parent* has **100px** width while the *Child* has **50%**.
+*Parent* has <b>100px</b> width while the *Child* has <b>50%</b>.
 
-**On the output**, the *Child*&apos;s width will be half(50%) of the
-*Parent*&apos;s, which is **50px**.
+<b>On the output</b>, the *Child*&apos;s width will be half(50%) of the
+*Parent*&apos;s, which is <b>50px</b>.
 
 <h4>HTML:</h4>
 
-**&lt;**
+<b>&lt;</b>
 
-**div**
+<b>div</b>
 
 class
 
@@ -11356,13 +10658,13 @@ class
 
 &quot;parent&quot;
 
-**&gt;**
+<b>&gt;</b>
 
 PARENT
 
-**&lt;**
+<b>&lt;</b>
 
-**div**
+<b>div</b>
 
 class
 
@@ -11370,29 +10672,29 @@ class
 
 &quot;child&quot;
 
-**&gt;**
+<b>&gt;</b>
 
 CHILD
 
-**&lt;**
+<b>&lt;</b>
 
-**/div**
+<b>/div</b>
 
-**&gt;**
+<b>&gt;</b>
 
-**&lt;**
+<b>&lt;</b>
 
-**/div**
+<b>/div</b>
 
-**&gt;**
+<b>&gt;</b>
 
 > <h4>CSS</h4>
 
-**&lt;**
+<b>&lt;</b>
 
-**style**
+<b>style</b>
 
-**&gt;**
+<b>&gt;</b>
 
 &ast;
 
@@ -11422,16 +10724,15 @@ width: 50%;
 
 }
 
-**&lt;**
+<b>&lt;</b>
 
-**/style**
+<b>/style</b>
 
-**&gt;**
+<b>&gt;</b>
 
-> **OUTPUT**
+<b>OUTPUT</b>
 
-!&lbrack;&rbrack;(./images/image191.jpg){width="1.40625in" height="0.875in"}
-
+[image191.jpg 1.4 x .875](./images/image191.jpg)
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ch21">Chapter 21: Pseudo-Elements</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -24795,19 +24096,19 @@ centered
 
 **&gt;**
 
-**&lt;**
+<b>&lt;</b>
 
-**/div**
+<b>/div</b>
 
-**&gt;**
+<b>&gt;</b>
 
-> **CSS:**
+> <b>CSS:</b>
 
 .wrapper
 
 {
 
-**position**
+<b>position</b>
 
 :
 
@@ -24815,7 +24116,7 @@ relative
 
 ;
 
-**height**
+<b>height</b>
 
 :
 
@@ -24831,7 +24132,7 @@ px
 
 {
 
-**position**
+<b>position</b>
 
 :
 
@@ -24839,7 +24140,7 @@ absolute
 
 ;
 
-**z-index**
+<b>z-index</b>
 
 :
 
@@ -24847,7 +24148,7 @@ absolute
 
 ;
 
-**transform**
+<b>transform</b>
 
 :
 
@@ -24869,7 +24170,7 @@ translate
 
 ;
 
-**top**
+<b>top</b>
 
 :
 
@@ -24879,7 +24180,7 @@ translate
 
 ;
 
-**left**
+<b>left</b>
 
 :
 
@@ -24893,11 +24194,11 @@ translate
 
 ## Section 50.4: Centering Text with Line Height
 
-> **HTML:**
+> <b>HTML:</b>
 
-**&lt;**
+<b>&lt;</b>
 
-**div**
+<b>div</b>
 
 class
 
@@ -24905,35 +24206,35 @@ class
 
 &quot;container&quot;
 
-**&gt;**
+<b>&gt;</b>
 
-**&lt;**
+<b>&lt;</b>
 
-**span**
+<b>span</b>
 
-**&gt;**
+<b>&gt;</b>
 
 vertically centered
 
-**&lt;**
+<b>&lt;</b>
 
-**/span**
+<b>/span</b>
 
-**&gt;**
+<b>&gt;</b>
 
-**&lt;**
+<b>&lt;</b>
 
-**/div**
+<b>/div</b>
 
-**&gt;**
+<b>&gt;</b>
 
-> **CSS:**
+> <b>CSS:</b>
 
 .container
 
 {
 
-**height**
+<b>height</b>
 
 :
 
@@ -24945,7 +24246,7 @@ px
 
 */&ast; set height &ast;/*
 
-**line-height**
+<b>line-height</b>
 
 :
 
@@ -24957,7 +24258,7 @@ px
 
 */&ast; set line-height equal to the height &ast;/*
 
-**vertical-align**
+<b>vertical-align</b>
 
 :
 
@@ -24970,17 +24271,17 @@ middle
 
 }
 
-> **Note:** This method will only vertically center a *single line of
+> <b>Note:</b> This method will only vertically center a *single line of
 > text*. It will not center block elements correctly and if the text
 > breaks onto a new line, you will have two very tall lines of text.
 
 ## Section 50.5: Centering with Position: absolute
 
-> **HTML:**
+> <b>HTML:</b>
 
-**&lt;**
+<b>&lt;</b>
 
-**div**
+<b>div</b>
 
 class
 
@@ -24988,11 +24289,11 @@ class
 
 &quot;wrapper&quot;
 
-**&gt;**
+<b>&gt;</b>
 
-**&lt;**
+<b>&lt;</b>
 
-**img**
+<b>img</b>
 
 src
 
@@ -25000,21 +24301,21 @@ src
 
 &quot;http://cdn.sstatic.net/Sites/stackoverflow/company/img/logos/so/so-icon.png?v=c78bd457575a&quot;
 
-**&gt;**
+<b>&gt;</b>
 
-**&lt;**
+<b>&lt;</b>
 
-**/div**
+<b>/div</b>
 
-**&gt;**
+<b>&gt;</b>
 
-> **CSS:**
+> <b>CSS:</b>
 
 .wrapper
 
 {
 
-**position**
+<b>position</b>
 
 :
 
@@ -25022,7 +24323,7 @@ relative
 
 ;
 
-**height**
+<b>height</b>
 
 :
 
@@ -25040,7 +24341,7 @@ img
 
 {
 
-**position**
+<b>position</b>
 
 :
 
@@ -25048,7 +24349,7 @@ absolute
 
 ;
 
-**top**
+<b>top</b>
 
 :
 
@@ -25056,7 +24357,7 @@ absolute
 
 ;
 
-**left**
+<b>left</b>
 
 :
 
@@ -25064,7 +24365,7 @@ absolute
 
 ;
 
-**right**
+<b>right</b>
 
 :
 
@@ -25072,7 +24373,7 @@ absolute
 
 ;
 
-**bottom**
+<b>bottom</b>
 
 :
 
@@ -25080,7 +24381,7 @@ absolute
 
 ;
 
-**margin**
+<b>margin</b>
 
 :
 
@@ -25093,11 +24394,11 @@ auto
 > If you want to center other then images, then you must give height and
 > width to that element.
 >
-> **HTML:**
+> <b>HTML:</b>
 
-**&lt;**
+<b>&lt;</b>
 
-**div**
+<b>div</b>
 
 class
 
@@ -25105,11 +24406,11 @@ class
 
 &quot;wrapper&quot;
 
-**&gt;**
+<b>&gt;</b>
 
-**&lt;**
+<b>&lt;</b>
 
-**div**
+<b>div</b>
 
 class
 
@@ -25117,29 +24418,29 @@ class
 
 &quot;child&quot;
 
-**&gt;**
+<b>&gt;</b>
 
 make me center
 
-**&lt;**
+<b>&lt;</b>
 
-**/div**
+<b>/div</b>
 
-**&gt;**
+<b>&gt;</b>
 
-**&lt;**
+<b>&lt;</b>
 
-**/div**
+<b>/div</b>
 
-**&gt;**
+<b>&gt;</b>
 
-> **CSS:**
+> <b>CSS:</b>
 
 .wrapper
 
 {
 
-**position**
+<b>position</b>
 
 :
 
@@ -25147,7 +24448,7 @@ relative
 
 ;
 
-**height**
+<b>height</b>
 
 :
 
@@ -25165,7 +24466,7 @@ px
 
 {
 
-**position**
+<b>position</b>
 
 :
 
@@ -25173,7 +24474,7 @@ absolute
 
 ;
 
-**top**
+<b>top</b>
 
 :
 
@@ -25181,7 +24482,7 @@ absolute
 
 ;
 
-**left**
+<b>left</b>
 
 :
 
@@ -25189,7 +24490,7 @@ absolute
 
 ;
 
-**right**
+<b>right</b>
 
 :
 
@@ -25197,7 +24498,7 @@ absolute
 
 ;
 
-**bottom**
+<b>bottom</b>
 
 :
 
@@ -25205,7 +24506,7 @@ absolute
 
 ;
 
-**margin**
+<b>margin</b>
 
 :
 
