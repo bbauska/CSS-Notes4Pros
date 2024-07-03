@@ -431,7 +431,7 @@ pseudo-classes, and patterns.</p>
 |  :pseudo-class | All Elements with pseudo-class |
 |  ::pseudo-element | Element that matches pseudo-element |
 |  :lang(en)        | Element that matches :lang declaration, for example <b>&lt;span lang="en"&gt;</b> |
-|  div > p            | child selector |
+|  div &gt; p            | child selector |
   
 <blockquote>
   <b>Note:</b> The value of an ID must be unique in a web page. It is a
@@ -2110,125 +2110,80 @@ rendered at a non-integer pixel boundary, making it look blurry. See
 SO&rbrack;&rbrack;(http://stackoverflow.com/a/32329785/1385678) for a
 workaround.
 
-<h4>HTML</h4>
+<h4>HTML:</h4>
 
-<pre><code>
-<b>&lt;</b>
-<b>div</b>
-class
-=
-&quot;container&quot;
-<b>&gt;</b>
-<b>&lt;</b>
-<b>div</b>
-class
-=
-&quot;element&quot;
-<b>&gt;</b>
-<b>&lt;</b>
-<b>/div</b>
-<b>&gt;</b>
-<b>&lt;</b>
-<b>/div</b>
-<b>&gt;</b>
-</code></pre>
+<pre><code><b>&lt;</b><b>div</b> class=&quot;container&quot;<b>&gt;</b>
+  <b>&lt;</b><b>div</b> class=&quot;element&quot;<b>&gt;</b><b>&lt;</b><b>/div</b><b>&gt;</b>
+<b>&lt;</b><b>/div</b><b>&gt;</b></code></pre>
 
-<h4>CSS</h4>
+<h4>CSS:</h4>
 
-<pre><code>
-.container
+<pre><code>.container
 {
-<b>position</b>
-:
-relative
-;
+  <b>position</b>: relative;
 }
-.element
-{
-<b>position</b>
-:
-absolute
-;
-<b>top</b>
-:
-50
-&percnt;
-;
-<b>left</b>
-:
-50
-&percnt;
-;
-<b>transform</b>
-:
-translate
-(
--50
-&percnt;
-,
--50
-&percnt;
-)
-;
-}
-</code></pre>
+.element {
+  <b>position</b>: absolute;
+  <b>top</b>: 50&percnt;;
+  <b>left</b>: 50&percnt;;
+  <b>transform</b>: translate(-50&percnt;, -50&percnt);
+}</code></pre>
 
 &lbrack;&lbrack;View example in
 JSFiddle&rbrack;&rbrack;(https://jsfiddle.net/webtiki/rz3p3ufs/)
 
-> <b>CROSS BROWSER COMPATIBILITY</b>
->
-> The transform property needs prefixes to be supported by older
-> browsers. Prefixes are needed for Chrome&lt;=35, Safari&lt;=8, Opera&lt;=22,
-> Android Browser&lt;=4.4.4, and IE9. CSS transforms are not supported by
-> IE8 and older versions.
->
-> Here is a common transform declaration for the previous example:
->
-> -webkit-transform: translate(-50%, -50%); */&ast; Chrome, Safari, Opera,
-> Android &ast;/*
->
-> -ms-transform: translate(-50%, -50%); */&ast; IE 9 &ast;/* <b>transform</b>:
-> translate(-50%, -50%);
->
-> For more information see
-> &lbrack;&lbrack;canIuse&rbrack;&rbrack;(http://caniuse.com/#feat=transforms2d).
->
-> <b>MORE INFORMATION</b>
+<h4>CROSS BROWSER COMPATIBILITY</h4>
 
-  <b>position</b>                    :   relative
+The transform property needs prefixes to be supported by older
+browsers. Prefixes are needed for Chrome&lt;=35, Safari&lt;=8, Opera&lt;=22,
+Android Browser&lt;=4.4.4, and IE9. CSS transforms are not supported by
+IE8 and older versions.
 
-> The element is being positioned according to the first non-static
-> parent ( , absolute, or fixed). Explore more in this
-> &lbrack;&lbrack;fiddle&rbrack;&rbrack;(https://jsfiddle.net/siavasfiroozbakht/ox8kyypa/)
-> and this documentation topic.
+Here is a common transform declaration for the previous example:
+
+-webkit-transform: translate(-50%, -50%); */&ast; Chrome, Safari, Opera,
+Android &ast;/*
+
+-ms-transform: translate(-50%, -50%); */&ast; IE 9 &ast;/* <b>transform</b>:
+translate(-50%, -50%);
+
+For more information see
+&lbrack;&lbrack;canIuse&rbrack;&rbrack;(http://caniuse.com/#feat=transforms2d).
+
+<b>MORE INFORMATION</b>
+
+<b>position</b>                    :   relative
+
+The element is being positioned according to the first non-static
+parent ( , absolute, or fixed). Explore more in this
+&lbrack;&lbrack;fiddle&rbrack;&rbrack;(https://jsfiddle.net/siavasfiroozbakht/ox8kyypa/)
+and this documentation topic.
 
   <b>left</b>   :   50%     and     <b>transform</b>    :   translateX          (   -50%
 
   </b>top</b>   :   50%     and     <b>transform</b>    :   translateY           (   -50%
 
-> For horizontal-only centering, use ). The same goes for verticalonly
-> centering: center with ).
+For horizontal-only centering, use ). The same goes for verticalonly
+centering: center with ).
 
   <b>right</b>   :   -50%       ; and      <b>margin-bottom</b>          :   -50%
 
 
-> Using a non-static width/height elements with this method of centering
-> can cause the centered element to appear squished. This mostly happens
-> with elements containing text, and can be fixed by adding:
-> <b>margin</b>;. View this
-> &lbrack;&lbrack;fiddle&rbrack;&rbrack;(https://jsfiddle.net/4xxmxca0/) for more
-> information.
-
+Using a non-static width/height elements with this method of centering
+can cause the centered element to appear squished. This mostly happens
+with elements containing text, and can be fixed by adding:
+<b>margin</b>;. View this
+&lbrack;&lbrack;fiddle&rbrack;&rbrack;(https://jsfiddle.net/4xxmxca0/) for more
+information.
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch6-3">Section 6.3: Using margin: 0 auto;</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
-| <b>margin</b>: 0                         | > auto;                      |
+| <b>margin</b>: 0                         | auto;                      |
 
-> Objects can be centered by using if they are block elements and have a
-> defined width.
->
+Objects can be centered by using if they are block elements and have a
+defined width.
+
 <h4>HTML</h4>
 
 <pre><code>
@@ -2333,15 +2288,14 @@ auto <a href="https://jsfiddle.net/xf1ze3v9/">Demo (jsFiddle)</a>.</p>
 <h3 id="ch6-4">Section 6.4: Using text-align</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
-  <b>text-align</b>
+<b>text-align</b>
 
-> The most common and easiest type of centering is that of lines of text
-> in an element. CSS has the rule :
->
-> center for this purpose:
->
+The most common and easiest type of centering is that of lines of text
+in an element. CSS has the rule :
 
-<h4>HTML</h4>
+center for this purpose:
+
+<h4>HTML:</h4>
 
 <pre><code>
 <b>&lt;</b>
@@ -2361,25 +2315,23 @@ p {
 }
 </code></pre>
 
-> *This does not work for centering entire block elements*. text-align
-> controls only alignment of inline content like text in its parent
-> block element.
->
-> See more about text-align in Typography section.
+<p><i>This does not work for centering entire block elements</i>. text-align
+controls only alignment of inline content like text in its parent block element.</p>
 
+<p>See more about text-align in Typography section.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch6-5">Section 6.5: Using position: absolute</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
-> *Working in old browsers (IE &gt;= 8)*
->
-> Automatic margins, paired with values of zero for the left and right
-> or top and bottom offsets, will center an absolutely positioned
-> elements within its parent.
+<i>Working in old browsers (IE &gt;= 8)</i>
 
-&lbrack;&lbrack;View Result&rbrack;&rbrack;(https://jsfiddle.net/stuttufu/sj2m0oo2/1/)
+Automatic margins, paired with values of zero for the left and right
+or top and bottom offsets, will center an absolutely positioned
+elements within its parent.
 
-<h4>HTML</h4>
+<p><a href="https://jsfiddle.net/stuttufu/sj2m0oo2/1/">Demo (View Result)</a>.</p>
+
+<h4>HTML:</h4>
 
 <pre><code>
 <b>&lt;</b> <b>div</b> class=&quot;parent&quot;<b>&gt;</b>
@@ -2409,14 +2361,14 @@ p {
 Elements that don&apos;t have their own implicit width and height like
 images do, will need those values defined.
 
-Other resources: &lbrack;&lbrack;Absolute Centering in
-CSS&rbrack;&rbrack;(http://codepen.io/shshaw/details/gEiDt)
+Other resources: 
 
+<p><a href="http://codepen.io/shshaw/details/gEiDt">Absolute Centering in CSS (CodePen)</a>.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch6-6">Section 6.6: Using calc()</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
-  calc              (    100% - 80px
+
 
 The calc() function is the part of a new syntax in CSS3 in which you
 can calculate (mathematically) what size/position your element
@@ -2458,9 +2410,8 @@ class
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch6-7">Section 6.7: Using line-height</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-
-You can also use line-height to center vertically a single line of
-text inside a container :
+<p>You can also use line-height to center vertically a single line of
+text inside a container:</p>
 
 <h4>CSS</h4>
 
@@ -2472,37 +2423,30 @@ div {
   <b>&lt;input</b> <b>/&gt;</b>
 </code></pre>
 
-That&apos;s quite ugly, but can be useful inside an element. The
+<p>That&apos;s quite ugly, but can be useful inside an element. The
 line-height property works only when the text to be centered spans a
 single line. If the text wraps into multiple lines, the resulting
-output won&apos;t be centered.
-
+output won&apos;t be centered.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch6-8">Section 6.8: Vertical align anything with 3 lines of code</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p><a href="http://caniuse.com/#search=transform">Supported by IE11+</a>.</p>
 
-Supported by IE11+ (http://caniuse.com/#search=transform)
+<p><a href="https://jsfiddle.net/bnqrLgk9/1/">View Result (jsFiddle)</a>.</p>
 
-View Result (https://jsfiddle.net/bnqrLgk9/1/)
+<p>Use these 3 lines to vertical align practically everything. Just make
+sure the div/image you apply the code to has a parent with a height.</p>
 
-Use these 3 lines to vertical align practically everything. Just make
-sure the div/image you apply the code to has a parent with a height.
+<h4>CSS:</h4>
 
-<h4>CSS</h4>
+<pre><code>div
+  .vertical {
+    <b>position</b>: relative;
+    <b>top</b>: 50&percnt;;
+    <b>transform</b>: translateY(-50&percnt;);
+  }</code></pre>
 
-<pre><code>
-div
-  .vertical
-{
-  <b>position</b>: relative;
-  <b>top</b>: 50&percnt;;
-  <b>transform</b>: translateY(
-    -50&percnt;
-  );
-}
-</code></pre>
-
-<h4>HTML</h4>
+<h4>HTML:</h4>
 
 <pre<code><b>&lt;</b><b>div</b> class=&quot;vertical&quot;<b>&gt;</b>ertical aligned text!<b>&lt;</b><b>/div</b><b>&gt;</b></code></pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -2514,7 +2458,7 @@ div
 >
 > Compatibility: IE8+, all other modern browsers.
 >
-> <h4>HTML</h4>
+> <h4>HTML:</h4>
 
 <pre><code>
 <b>&lt;</b>
@@ -2690,7 +2634,7 @@ worrying about its height or width</b>.</p>
 >
 > <b>Demo</b>
 >
-> <h4>HTML</h4>
+> <h4>HTML:</h4>
 
 <b>&lt;</b>
 
@@ -2822,7 +2766,7 @@ table
 
 {
 
-**display**
+<b>display</b>
 
 :
 
@@ -2830,7 +2774,7 @@ table-cell
 
 ;
 
-**vertical-align**
+<b>vertical-align</b>
 
 :
 
@@ -2838,7 +2782,7 @@ middle
 
 ;
 
-**text-align**
+<b>text-align</b>
 
 :
 
@@ -2852,7 +2796,7 @@ center
 
 {
 
-**display**
+<b>display</b>
 
 :
 
@@ -2860,7 +2804,7 @@ inline-block
 
 ;
 
-**text-align**
+<b>text-align</b>
 
 :
 
@@ -2868,7 +2812,7 @@ left
 
 ;
 
-**background**
+<b>background</b>
 
 :
 
@@ -2876,7 +2820,7 @@ left
 
 ;
 
-**padding**
+<b>padding</b>
 
 :
 
@@ -2886,7 +2830,7 @@ px
 
 ;
 
-**border**
+<b>border</b>
 
 :
 
@@ -2902,14 +2846,14 @@ solid
 
 }
 
-See also &lbrack;**&lbrack;this
+See also &lbrack;<b>&lbrack;this
 Fiddle&rbrack;**&rbrack;(http://jsfiddle.net/WXLsY/621/)!
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch6-12">Section 6.12: Vertically align an image inside div</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
-<h4>HTML</h4>
+<h4>HTML:</h4>
 
 **&lt;**
 
@@ -3069,7 +3013,7 @@ middle
 > to 50% with margin that reduces half of your content&apos;s width and
 > height:
 >
-> <h4>HTML</h4>
+> <h4>HTML:</h4>
 
 **&lt;**
 
@@ -3184,7 +3128,7 @@ px
 > You can center the element horizontally even if you don&apos;t know the
 > height of the content:
 >
-> <h4>HTML</h4>
+> <h4>HTML:</h4>
 
 **&lt;**
 
@@ -3267,7 +3211,7 @@ px
 > You can center the element vertically if you know the element&apos;s
 > height:
 >
-> <h4>HTML</h4>
+> <h4>HTML:</h4>
 
 **&lt;**
 
@@ -3369,7 +3313,7 @@ px
 >
 > For widest browser support, a workaround with helper elements:
 >
-> <h4>HTML</h4>
+> <h4>HTML:</h4>
 
 **&lt;**
 
@@ -3557,7 +3501,7 @@ This approach
 
 One could easily center a child element using table display property.
 
-<h4>HTML</h4>
+<h4>HTML:</h4>
 
 **&lt;**
 
@@ -4058,7 +4002,7 @@ one and other. (The spacing will be the sum of two margins.)
 >
 > **Collapsing Margins Between Parent and Child Elements:**
 >
-<h4>HTML:</h4>
+<h4>HTML::</h4>
 
 <pre><code.**&lt;****h****1****&gt;**Title**&lt;****/h****1****&gt;**
 **&lt;****div****&gt;**
@@ -4106,7 +4050,7 @@ properties provided for this purpose are:
 The following code would apply a margin of 30 pixels to the left side
 of the selected div. <a href="https://jsfiddle.net/wm0100x9/1/">View Result</a>.
 
-<h4>HTML</h4>
+<h4>HTML:</h4>
 
 <pre><code>
 **&lt;****div** id=&quot;myDiv&quot;**&gt;****&lt;****/div****&gt;**
@@ -4134,37 +4078,37 @@ The standard margin property can be expanded to specify differing
 widths to each side of the selected elements. The syntax for doing
 this is as follows:
 
-```
+<pre><code>
 **margin**: &lt;top&gt; &lt;right&gt; &lt;bottom&gt; &lt;left&gt;;
-```
+</code></pre>
 
 > The following example applies a zero-width margin to the top of the
 > div, a 10px margin to the right side, a 50px margin to the left side,
 > and a 100px margin to the left side. <a href="https://jsfiddle.net/1979c947/">View
 > Result.
 >
-<h4>HTML</h4>
+<h4>HTML:</h4>
 
-```
+<pre><code>
 **&lt;****div**id=&quot;myDiv&quot;**&gt;****&lt;****/div****&gt;**
-```
+</code></pre>
 
 <h4>CSS</h4>
 
-```
+<pre><code>
 #myDiv {
   **margin**: 0 10px 50px 100px;
   **height**: 40px;
   **width**: 40px;
   **background-color**: red;
 }
-```
+</code></pre>
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch8-3">Section 8.3: Margin property simplification</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
-```
+<pre><code>
 p {
   **margin**: 1px; /* 1px margin in all directions */
 
@@ -4177,7 +4121,7 @@ p {
   /* equals to: */
   **margin**: 1px 1px 1px 1px;
 }
-```
+</code></pre>
 
 > Another exapmle:
 
@@ -4205,12 +4149,12 @@ p {
 > the auto property of margin then distributes the remaining space to
 > the left and the right:
 
-```
+<pre><code>
 #myDiv {
   **width**:80&percnt;;
   **margin**:0 auto;
 }
-```
+</code></pre>
 
 > In the example above we use the shorthand margin declaration to first
 > set 0 to the top and bottom margin values (although this could be any
@@ -4221,9 +4165,9 @@ p {
 > leaves use 20% leftover. The browser distributes this value to the
 > remaining sides so:
 
-```
+<pre><code>
 (100% - 80%) / 2 = 10%
-```
+</code></pre>
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch8-5">Section 8.5: Example 1:</h3>
@@ -4232,7 +4176,7 @@ p {
 It is obvious to assume that the percentage value of margin to
 margin-left and margin-right would be relative to its parent element.
 
-```
+<pre><code>
 .parent {
   **width**: 500px;
   **height**: 300px;
@@ -4242,7 +4186,7 @@ margin-left and margin-right would be relative to its parent element.
   **height**: 100px;
   **margin-left**: 10&percnt;; /* (parentWidth &ast; 10/100) =&gt; 50px */
 }
-```
+</code></pre>
 
 > But that is not the case, when comes to margin-top and margin-bottom.
 > Both these properties, in percentages, aren&apos;t relative to the height
@@ -4292,7 +4236,7 @@ absolute positioning</b>.</p>
 
 <h4>Four values:</h4>
 
-```
+<pre><code>
 **&lt;**
 **style**
 **&gt;**
@@ -4311,11 +4255,11 @@ class
 **&lt;**
 **/div**
 **&gt;**
-```
+</code></pre>
 
 <h4>Three values:</h4>
 
-```
+<pre><code>
 **&lt;**
 **style**
 **&gt;**
@@ -4335,11 +4279,11 @@ class
 **&lt;**
 **/div**
 **&gt;**
-```
+</code></pre>
 
 </h4>Two values:</h4>
 
-```
+<pre><code>
 **&lt;**
 **style**
 **&gt;**
@@ -4359,11 +4303,11 @@ class
 **&lt;**
 **/div**
 **&gt;**
-```
+</code></pre>
 
 <h4>One value:</h4>
 
-```
+<pre><code>
 **&lt;**
 **style**
 **&gt;**
@@ -4380,10 +4324,10 @@ class
 =
 &quot;myDiv&quot;
 **&gt;**
-**&lt;**
-**/div**
-**&gt;**
-```
+<b>&lt;</b>
+<b>/div</b>
+<b>&gt;</b>
+</code></pre>
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch9-2">Section 9.2: Padding on a given side</h3>
@@ -4404,12 +4348,12 @@ You can specify a side individually:
 
 The following code would add a padding of 5px to the top of the div:
 
-<pre><code>**&lt;****style****&gt;**
+<pre><code><b>&lt;</b><b>style</b><b>&gt;</b>
   .myClass {
     padding-top: 5px;
 }
-**&lt;****/style****&gt;**
-**&lt;****div** class=&quot;myClass&quot;**&gt;****&lt;****/div****&gt;**</code></pre>
+<b>&lt;</b><b>/style</b><b>&gt;</b>
+<b>&lt;</b><b>div</b> class=&quot;myClass&quot;<b>&gt;</b><b>&lt;</b><b>/div</b><b>&gt;</b></code></pre>
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ch10">Chapter 10: Border</h2>
@@ -4437,9 +4381,9 @@ The following code would add a padding of 5px to the top of the div:
 > If only one set of values is supplied, it is used for both the
 > vertical and horizontal radius.
 
-```
-**border-radius**: 10px 5&percnt; / 20px 25em 30px 35em;
-```
+<pre><code>
+<b>border-radius<b>: 10px 5&percnt; / 20px 25em 30px 35em;
+</code></pre>
 
 > The 10px is the horizontal radius of the top-left-and-bottom-right.
 > And the 5% is the horizontal radius of the topright-and-bottom-left.
@@ -4454,51 +4398,42 @@ The following code would add a padding of 5px to the top of the div:
 
 <h4>HTML:</h4>
 
-```
-**&lt;**
-**div**
-class
-=
-&apos;box&apos;
-**&gt;**
-**&lt;**
-**/div**
-**&gt;**
-```
+<pre><code><b>&lt;</b><b>div</b> class=&apos;box&apos;<b>&gt;</b>
+<b>&lt;</b><b>/div</b><b>&gt;</b></code></pre>
 
 <h4>CSS:</h4>
 
-```
+<pre><code>
 .box {
-  **width**: 250px;
-  **height**: 250px;
-  **background-color**: black;
-  **border-radius**: 10px;
+  <b>width</b>: 250px;
+  <b>height</b>: 250px;
+  <b>background-color</b>: black;
+  <b>border-radius</b>: 10px;
 }
-```
+</code></pre>
 
 > Border-radius is most commonly used to convert box elements into
 > circles. By setting the border-radius to half of the length of a
 > square element, a circular element is created:
 
-```
+<pre><code>
 .circle {
-  **width**: 200px;
-  **height**: 200px;
-  **border-radius**: 100px;
+  <b>width</b>: 200px;
+  <b>height</b>: 200px;
+  <b>border-radius</b>: 100px;
 }
-```
+</code></pre>
 
 > Because border-radius accepts percentages, it is common to use 50% to
 > avoid manually calculating the borderradius value:
 
-```
+<pre><code>
 .circle {
-  **width**: 150px;
-  **height**: 150px;
-  **border-radius**: 50&percnt;;
+  <b>width</b>: 150px;
+  <b>height</b>: 150px;
+  <b>border-radius</b>: 50&percnt;;
 }
-```
+</code></pre>
 
 > If the width and height properties are not equal, the resulting shape
 > will be an oval rather than a circle.
@@ -4506,7 +4441,7 @@ class
 
 <h4>Browser specific border-radius example:</h4>
 
-```
+<pre><code>
 -webkit-border-top-right-radius: 4px;
 -webkit-border-bottom-right-radius: 4px;
 -webkit-border-bottom-left-radius: 0;
@@ -4516,11 +4451,11 @@ class
 -moz-border-radius-bottomleft: 0;
 -moz-border-radius-topleft: 0;
 
-  **border-top-right-radius**: 4px;
-  **border-bottom-right-radius**: 4px;
-  **border-bottom-left-radius**: 0;
-  **border-top-left-radius**: 0;
-```
+  <b>border-top-right-radius</b>: 4px;
+  <b>border-bottom-right-radius</b>: 4px;
+  <b>border-bottom-left-radius</b>: 0;
+  <b>border-top-left-radius</b>: 0;
+</code></pre>
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch10-2">Section 10.2: border-style</h3>
@@ -4530,10 +4465,10 @@ class
 > property can have from one to four values (for every side of the
 > element one value.) Examples:
 
-```
-**border-style**: dotted;
-**border-style**: dotted solid double dashed;
-```
+<pre><code>
+<b>border-style</b>: dotted;
+<b>border-style</b>: dotted solid double dashed;
+</code></pre>
 
 > border-style can also have the values none and hidden. They have the
 > same effect, except hidden works for <b>&lt;table&gt;</b> elements. In a
@@ -4547,47 +4482,47 @@ class
 
 > Using outline:
 
-```
+<pre><code>
 .div1
 {
-**border**
+<b>border</b>
 :
 3
 px
 solid
 black
 ;
-**outline**
+<b>outline</b>
 :
 6
 px
 solid
 blue
 ;
-**width**
+<b>width</b>
 :
 100
 px
 ;
-**height**
+<b>height</b>
 :
 100
 px
 ;
-**margin**
+<b>margin</b>
 :
 20
 px
 ;
 }
-```
+</code></pre>
 
 > Using box-shadow:
 
-```
+<pre><code>
 .div2 {
 
-**border**
+<b>border</b>
 
 :
 
@@ -4601,7 +4536,7 @@ green
 
 ;
 
-**box-shadow**
+<b>box-shadow</b>
 
 :
 
@@ -4625,7 +4560,7 @@ px
 
 ;
 
-**width**
+<b>width</b>
 
 :
 
@@ -4635,7 +4570,7 @@ px
 
 ;
 
-**height**
+<b>height</b>
 
 :
 
@@ -4645,7 +4580,7 @@ px
 
 ;
 
-**margin**
+<b>margin</b>
 
 :
 
@@ -4656,29 +4591,29 @@ px
 ;
 
 }
-```
+</code></pre>
 
 > Using a pseudo element:
 
-```
+<pre><code>
 .div3 {
-  **position**: relative;
-  **border**: 5px solid #000;
-  **width**: 100px;
-  **height**: 100px;
-  **margin**: 20px;
+  <b>position</b>: relative;
+  <b>border</b>: 5px solid #000;
+  <b>width</b>: 100px;
+  <b>height</b>: 100px;
+  <b>margin</b>: 20px;
 }
 .div3:before {
-  **content**: &quot; &quot;;
-  **position**: absolute;
-  **border**: 5px solid blue;
-  **z-index**: &minus;1;
-  **top**: 5px;
-  **left**: 5px;
-  **right**: 5px;
-  **bottom**: 5px;
+  <b>content</b>: &quot; &quot;;
+  <b>position</b>: absolute;
+  <b>border</b>: 5px solid blue;
+  <b>z-index</b>: &minus;1;
+  <b>top</b>: 5px;
+  <b>left</b>: 5px;
+  <b>right</b>: 5px;
+  <b>bottom</b>: 5px;
 }
-```
+</code></pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 27.  (xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="center" width="100%">
@@ -4701,7 +4636,7 @@ px
 >
 > Instead of writing:
 
-**border-width**
+<b>border-width</b>
 
 :
 
@@ -4711,7 +4646,7 @@ px
 
 ;
 
-**border-style**
+<b>border-style</b>
 
 :
 
@@ -4719,7 +4654,7 @@ solid
 
 ;
 
-**border-color**
+<b>border-color</b>
 
 :
 
@@ -4729,7 +4664,7 @@ solid
 
 > You can simply write:
 
-**border**
+<b>border</b>
 
 :
 
@@ -4747,7 +4682,7 @@ solid
 > border-top, border-left, border-right and border-bottom. So you can
 > do:
 
-**border-top**
+<b>border-top</b>
 
 :
 
@@ -4765,7 +4700,7 @@ double
 <h3 id="ch10-5">Section 10.5: border-collapse</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
-  **display**                         :     table
+  <b>display</b>                         :     table
 
 > The border-collapse property applies only to tables (and elements
 > displayed as or inlinetable) and sets whether the table borders are
@@ -4775,7 +4710,7 @@ table
 
 {
 
-**border-collapse**
+<b>border-collapse</b>
 
 :
 
@@ -4785,7 +4720,7 @@ separate
 
 */&ast; default &ast;/*
 
-**border-spacing**
+<b>border-spacing</b>
 
 :
 
@@ -4812,8 +4747,8 @@ px
 >
 > border-image-source: The path to the image to be used
 > border-image-slice: Specifies the offset that is used to divide the
-> image into **nine regions** (four **corners**, four **edges** and a
-> **middle**)
+> image into <b>nine regions</b> (four <b>corners</b>, four <b>edges</b> and a
+> <b>middle</b>)
 >
 > border-image-repeat: Specifies how the images for the sides and the
 > middle of the border image are scaled
@@ -4821,14 +4756,14 @@ px
 > Consider the following example wheras border.png is a image of 90x90
 > pixels:
 
-  **border-image**     :   url    (   &quot;border.png&quot;       )   30 stretch
+  <b>border-image</b>     :   url    (   &quot;border.png&quot;       )   30 stretch
 
 > ;
 >
 > The image will be split into nine regions with 30x30 pixels. The edges
 > will be used as the corners of the border while the side will be used
 > in between. If the element is higher / wider than 30px this part of
-> the image will be **stretched**. The middle part of the image defaults
+> the image will be <b>stretched</b>. The middle part of the image defaults
 > to be transparent.
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -4837,10 +4772,10 @@ px
 
 <h4>CSS</h4>
 
-```
+<pre><code>
 .bordered
 {
-**border-image**
+<b>border-image</b>
 :
 linear-gradient
 (
@@ -4881,27 +4816,27 @@ chocolate
 )
 ;
 */&ast; gradient with required colors &ast;/*
-**border-image-slice**
+<b>border-image-slice</b>
 :
 1
 ;
 }
-```
+</code></pre>
 
-<h4>HTML</h4>
+<h4>HTML:</h4>
 
-```
-**&lt;**
-**div**
+<pre><code>
+<b>&lt;</b>
+<b>div</b>
 class
 =
 &apos;bordered&apos;
-**&gt;**
+<b>&gt;</b>
 Border on all sides
-**&lt;**
-**/div**
-**&gt;**
-```
+<b>&lt;</b>
+<b>/div</b>
+<b>&gt;</b>
+</code></pre>
 
 > The above example would produce a border that comprises of 5 different
 > colors. The colors are defined through a linear-gradient (you can find
@@ -4954,7 +4889,7 @@ Border on all sides
 > border. For example, adding the below code would produce a border only
 > on the top of the element.
 
-**border-width**
+<b>border-width</b>
 
 :
 
@@ -4976,8 +4911,8 @@ px
 
 ;
 
-> Note that, any element that has border-image property **won&apos;t respect
-> the** border-radius (that is the border won&apos;t curve). This is based
+> Note that, any element that has border-image property <b>won&apos;t respect
+> the</b> border-radius (that is the border won&apos;t curve). This is based
 > on the below statement in the spec:
 >
 > A box&apos;s backgrounds, but not its border-image, are clipped to the
@@ -5002,7 +4937,7 @@ element
 
 {
 
-**border-left**
+<b>border-left</b>
 
 :
 
@@ -5022,7 +4957,7 @@ black
 <h2 id="ch11">Chapter 11: Outlines</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
-**Parameter Details**
+<b>Parameter Details</b>
 
   dotted       dotted outline
 
@@ -5069,7 +5004,7 @@ margin of the element. However, it is
 
 different from the border property.
 
-**outline**
+<b>outline</b>
 
 :
 
@@ -5094,7 +5029,7 @@ p
 
 {
 
-**border**
+<b>border</b>
 
 :
 
@@ -5108,7 +5043,7 @@ black
 
 ;
 
-**outline-color**
+<b>outline-color</b>
 
 :
 
@@ -5116,7 +5051,7 @@ blue
 
 ;
 
-**line-height**
+<b>line-height</b>
 
 :
 
@@ -5132,7 +5067,7 @@ px
 
 {
 
-**outline-style**
+<b>outline-style</b>
 
 :
 
@@ -5146,7 +5081,7 @@ dotted
 
 {
 
-**outline-style**
+<b>outline-style</b>
 
 :
 
@@ -5160,7 +5095,7 @@ dashed
 
 {
 
-**outline-style**
+<b>outline-style</b>
 
 :
 
@@ -5174,7 +5109,7 @@ solid
 
 {
 
-**outline-style**
+<b>outline-style</b>
 
 :
 
@@ -5188,7 +5123,7 @@ double
 
 {
 
-**outline-style**
+<b>outline-style</b>
 
 :
 
@@ -5202,7 +5137,7 @@ groove
 
 {
 
-**outline-style**
+<b>outline-style</b>
 
 :
 
@@ -5216,7 +5151,7 @@ ridge
 
 {
 
-**outline-style**
+<b>outline-style</b>
 
 :
 
@@ -5230,7 +5165,7 @@ inset
 
 {
 
-**outline-style**
+<b>outline-style</b>
 
 :
 
@@ -5240,11 +5175,11 @@ outset
 
 }
 
-> <h4>HTML</h4>
+> <h4>HTML:</h4>
 
-**&lt;**
+<b>&lt;</b>
 
-**p**
+<b>p</b>
 
 class
 
@@ -5252,19 +5187,19 @@ class
 
 &quot;p1&quot;
 
-**&gt;**
+<b>&gt;</b>
 
 A dotted outline
 
-**&lt;**
+<b>&lt;</b>
 
-**/p**
+<b>/p</b>
 
-**&gt;**
+<b>&gt;</b>
 
-**&lt;**
+<b>&lt;</b>
 
-**p**
+<b>p</b>
 
 class
 
@@ -5272,19 +5207,19 @@ class
 
 &quot;p2&quot;
 
-**&gt;**
+<b>&gt;</b>
 
 A dashed outline
 
-**/p**
+<b>/p</b>
 
-**&lt;**
+<b>&lt;</b>
 
-**&gt;**
+<b>&gt;</b>
 
-**&lt;**
+<b>&lt;</b>
 
-**p**
+<b>p</b>
 
 class
 
@@ -5292,19 +5227,19 @@ class
 
 &quot;p3&quot;
 
-**&gt;**
+<b>&gt;</b>
 
 A solid outline
 
-**&lt;**
+<b>&lt;</b>
 
-**/p**
+<b>/p</b>
 
-**&gt;**
+<b>&gt;</b>
 
-**&lt;**
+<b>&lt;</b>
 
-**p**
+<b>p</b>
 
 class
 
@@ -5312,19 +5247,19 @@ class
 
 &quot;p4&quot;
 
-**&gt;**
+<b>&gt;</b>
 
 A double outline
 
-**/p**
+<b>/p</b>
 
-**&lt;**
+<b>&lt;</b>
 
-**&gt;**
+<b>&gt;</b>
 
-**&lt;**
+<b>&lt;</b>
 
-**p**
+<b>p</b>
 
 class
 
@@ -5332,19 +5267,19 @@ class
 
 &quot;p5&quot;
 
-**&gt;**
+<b>&gt;</b>
 
 A groove outline
 
-**/p**
+<b>/p</b>
 
-**&lt;**
+<b>&lt;</b>
 
-**&gt;**
+<b>&gt;</b>
 
-**&lt;**
+<b>&lt;</b>
 
-**p**
+<b>p</b>
 
 class
 
@@ -5352,19 +5287,19 @@ class
 
 &quot;p6&quot;
 
-**&gt;**
+<b>&gt;</b>
 
 A ridge outline
 
-**/p**
+<b>/p</b>
 
-**&lt;**
+<b>&lt;</b>
 
-**&gt;**
+<b>&gt;</b>
 
-**&lt;**
+<b>&lt;</b>
 
-**p**
+<b>p</b>
 
 class
 
@@ -5372,19 +5307,19 @@ class
 
 &quot;p7&quot;
 
-**&gt;**
+<b>&gt;</b>
 
 An inset outline
 
-**&lt;**
+<b>&lt;</b>
 
-**/p**
+<b>/p</b>
 
-**&gt;**
+<b>&gt;</b>
 
-**&lt;**
+<b>&lt;</b>
 
-**p**
+<b>p</b>
 
 class
 
@@ -5392,21 +5327,21 @@ class
 
 &quot;p8&quot;
 
-**&gt;**
+<b>&gt;</b>
 
 An outset outline
 
-**&lt;**
+<b>&lt;</b>
 
-**/p**
+<b>/p</b>
 
-**&gt;**
+<b>&gt;</b>
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ch12">Chapter 12: Overflow</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
-**Overflow Value Details**
+<b>Overflow Value Details</b>
 
   visible     Shows all overflowing content outside the element
   scroll      Hides the overflowing content and adds a scroll bar
@@ -5423,76 +5358,29 @@ An outset outline
 <h3 id="ch12-1">Section 12.1: overflow-wrap</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
-> overflow-wrap tells a browser that it can break a line of text inside
-> a targeted element onto multiple lines in an otherwise unbreakable
-> place. Helpful in preventing an long string of text causing layout
-> problems due to overflowing it&apos;s container.
->
-> <h4>CSS</h4>
+overflow-wrap tells a browser that it can break a line of text inside
+a targeted element onto multiple lines in an otherwise unbreakable
+place. Helpful in preventing an long string of text causing layout
+problems due to overflowing it&apos;s container.
 
-div
+<h4>CSS:</h4>
 
-{
-
-**width**
-
-:
-
-100
-
-px
-
-;
-
-**outline**
-
-:
-
-1
-
-px
-
-dashed
-
-#bbb
-
-;
-
+<pre><code>div {
+  <b>width</b>: 100px;
+  <b>outline</b>: 1px dashed #bbb;
 }
-
-#div1
-
-{
-
-**overflow-wrap**
-
-:
-
-normal
-
-;
-
+#div1 {
+  <b>overflow-wrap</b>: normal;
 }
+#div2 {
+  <b>overflow-wrap</b>: break-word;
+}</code></pre>
 
-#div2
+<h4>HTML:</h4>
 
-{
+<b>&lt;</b>
 
-**overflow-wrap**
-
-:
-
-break-word
-
-;
-
-}
-
-<h4>HTML</h4>
-
-**&lt;**
-
-**div**
+<b>div</b>
 
 id
 
@@ -5500,29 +5388,29 @@ id
 
 &quot;div1&quot;
 
-**&gt;**
+<b>&gt;</b>
 
-**&lt;**
+<b>&lt;</b>
 
-**strong**
+<b>strong</b>
 
-**&gt;**
+<b>&gt;</b>
 
 #div1
 
-**&lt;**
+<b>&lt;</b>
 
-**/strong**
+<b>/strong</b>
 
-**&gt;**
+<b>&gt;</b>
 
 :
 
 Small words are displayed normally, but a long word like
 
-**&lt;**
+<b>&lt;</b>
 
-**span**
+<b>span</b>
 
 style
 
@@ -5530,29 +5418,29 @@ style
 
 &quot;red;&quot;
 
-**&gt;**
+<b>&gt;</b>
 
 supercalifragilisticexpialidocious
 
-**&lt;**
+<b>&lt;</b>
 
-**/span**
+<b>/span</b>
 
-**&gt;**
+<b>&gt;</b>
 
 is too long so it will overflow past the
 
 edge of the line-break
 
-**&lt;**
+<b>&lt;</b>
 
-**/div**
+<b>/div</b>
 
-**&gt;**
+<b>&gt;</b>
 
-**&lt;**
+<b>&lt;</b>
 
-**div**
+<b>div</b>
 
 id
 
@@ -5560,29 +5448,29 @@ id
 
 &quot;div2&quot;
 
-**&gt;**
+<b>&gt;</b>
 
-**&lt;**
+<b>&lt;</b>
 
-**strong**
+<b>strong</b>
 
-**&gt;**
+<b>&gt;</b>
 
 #div2
 
-**&lt;**
+<b>&lt;</b>
 
-**/strong**
+<b>/strong</b>
 
-**&gt;**
+<b>&gt;</b>
 
 :
 
 Small words are displayed normally, but a long word like
 
-**&lt;**
+<b>&lt;</b>
 
-**span**
+<b>span</b>
 
 style
 
@@ -5590,25 +5478,25 @@ style
 
 &quot;red;&quot;
 
-**&gt;**
+<b>&gt;</b>
 
 supercalifragilisticexpialidocious
 
-**&lt;**
+<b>&lt;</b>
 
-**/span**
+<b>/span</b>
 
-**&gt;**
+<b>&gt;</b>
 
 will be split at the line break and continue
 
 on the next line.
 
-**&lt;**
+<b>&lt;</b>
 
-**/div**
+<b>/div</b>
 
-**&gt;**
+<b>&gt;</b>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 32.  (xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="center" width="100%">
@@ -5619,7 +5507,7 @@ on the next line.
 </p>
 <!--[image032.jpg 7.48 x 4.27](./images/image032.jpg) -->
 
-**overflow-wrap** -- **Value Details**
+<b>overflow-wrap</b> -- <b>Value Details</b>
 
 > normal Lets a word overflow if it is longer than the line break-word
 > Will split a word into multiple lines, if necessary inherit Inherits
@@ -5634,11 +5522,11 @@ on the next line.
 > only on the x or left-to-right axis. The overflow-y works on the y or
 > top-to-bottom axis.
 >
-<h4>HTML</h4>
+<h4>HTML:</h4>
 
-**&lt;**
+<b>&lt;</b>
 
-**div**
+<b>div</b>
 
 id
 
@@ -5646,21 +5534,21 @@ id
 
 &quot;div-x&quot;
 
-**&gt;**
+<b>&gt;</b>
 
 If this div is too small to display its contents,
 
 the content to the left and right will be clipped.
 
-**&lt;**
+<b>&lt;</b>
 
-**/div**
+<b>/div</b>
 
-**&gt;**
+<b>&gt;</b>
 
-**&lt;**
+<b>&lt;</b>
 
-**div**
+<b>div</b>
 
 id
 
@@ -5668,17 +5556,17 @@ id
 
 &quot;div-y&quot;
 
-**&gt;**
+<b>&gt;</b>
 
 If this div is too small to display its contents,
 
 the content to the top and bottom will be clipped.
 
-**&lt;**
+<b>&lt;</b>
 
-**/div**
+<b>/div</b>
 
-**&gt;**
+<b>&gt;</b>
 
 > <h4>CSS</h4>
 
@@ -5686,7 +5574,7 @@ div
 
 {
 
-**width**
+<b>width</b>
 
 :
 
@@ -5696,7 +5584,7 @@ px
 
 ;
 
-**height**
+<b>height</b>
 
 :
 
@@ -5712,7 +5600,7 @@ px
 
 {
 
-**overflow-x**
+<b>overflow-x</b>
 
 :
 
@@ -5726,7 +5614,7 @@ hidden
 
 {
 
-**overflow-y**
+<b>overflow-y</b>
 
 :
 
@@ -5739,22 +5627,22 @@ hidden
 <h3 id="ch12-3">Section 12.3: overflow: scroll</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
-<h4>HTML</h4>
+<h4>HTML:</h4>
 
-**&lt;**
+<b>&lt;</b>
 
-**div**
+<b>div</b>
 
-**&gt;**
+<b>&gt;</b>
 
 This div is too small to display its contents to display the effects of
 the overflow property.
 
-**&lt;**
+<b>&lt;</b>
 
-**/div**
+<b>/div</b>
 
-**&gt;**
+<b>&gt;</b>
 
 > <h4>CSS</h4>
 
@@ -5762,7 +5650,7 @@ div
 
 {
 
-**width**
+<b>width</b>
 
 :
 
@@ -5772,7 +5660,7 @@ px
 
 ;
 
-**height**
+<b>height</b>
 
 :
 
@@ -5782,7 +5670,7 @@ px
 
 ;
 
-**overflow**
+<b>overflow</b>
 
 :
 
@@ -5792,7 +5680,7 @@ scroll
 
 }
 
-> **Result**
+> <b>Result</b>
 
 [image033.jpg 1.16 x 1.18](./images/image033.jpg)
 
@@ -5807,22 +5695,22 @@ scroll
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch12-4">Section 12.4: overflow: visible</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h4>HTML</h4>
+<h4>HTML:</h4>
 
-**&lt;**
+<b>&lt;</b>
 
-**div**
+<b>div</b>
 
-**&gt;**
+<b>&gt;</b>
 
 Even if this div is too small to display its contents, the content is
 not clipped.
 
-**&lt;**
+<b>&lt;</b>
 
-**/div**
+<b>/div</b>
 
-**&gt;**
+<b>&gt;</b>
 
 > <h4>CSS</h4>
 
@@ -5830,7 +5718,7 @@ div
 
 {
 
-**width**
+<b>width</b>
 
 :
 
@@ -5840,7 +5728,7 @@ px
 
 ;
 
-**height**
+<b>height</b>
 
 :
 
@@ -5850,7 +5738,7 @@ px
 
 ;
 
-**overflow**
+<b>overflow</b>
 
 :
 
@@ -5860,7 +5748,7 @@ visible
 
 }
 
-> **Result**
+> <b>Result</b>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 34.  (xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="center" width="100%">
@@ -5879,7 +5767,7 @@ visible
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 > Using the overflow property with a value different to visible will
-> create a new **block formatting context**. This is useful for aligning
+> create a new <b>block formatting context</b>. This is useful for aligning
 > a block element next to a floated element.
 >
 <h4>CSS</h4>
@@ -5888,7 +5776,7 @@ img
 
 {
 
-**float**
+<b>float</b>
 
 :
 
@@ -5896,7 +5784,7 @@ left
 
 ;
 
-**margin-right**
+<b>margin-right</b>
 
 :
 
@@ -5912,7 +5800,7 @@ div
 
 {
 
-**overflow**
+<b>overflow</b>
 
 :
 
@@ -5924,11 +5812,11 @@ hidden
 
 }
 
-> <h4>HTML</h4>
+> <h4>HTML:</h4>
 
-**&lt;**
+<b>&lt;</b>
 
-**img**
+<b>img</b>
 
 src
 
@@ -5936,50 +5824,50 @@ src
 
 &quot;http://placehold.it/100x100&quot;
 
-**&gt;**
+<b>&gt;</b>
 
-**&lt;**
+<b>&lt;</b>
 
-**div**
+<b>div</b>
 
-**&gt;**
+<b>&gt;</b>
 
-**&lt;**
+<b>&lt;</b>
 
-**p**
+<b>p</b>
 
-**&gt;**
+<b>&gt;</b>
 
 Lorem ipsum dolor sit amet, cum no paulo mollis pertinacia.
 
-**&lt;**
+<b>&lt;</b>
 
-**/p**
+<b>/p</b>
 
-**&gt;**
+<b>&gt;</b>
 
-**&lt;**
+<b>&lt;</b>
 
-**p**
+<b>p</b>
 
-**&gt;**
+<b>&gt;</b>
 
 Ad case omnis nam, mutat deseruisse persequeris eos ad, in tollit
 debitis sea.
 
-**&lt;**
+<b>&lt;</b>
 
-**/p**
+<b>/p</b>
 
-**&gt;**
+<b>&gt;</b>
 
-**&lt;**
+<b>&lt;</b>
 
-**/div**
+<b>/div</b>
 
-**&gt;**
+<b>&gt;</b>
 
-> **Result**
+> <b>Result</b>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 35.  (xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="center" width="100%">
@@ -5997,9 +5885,9 @@ debitis sea.
 <h2 id="ch13">Chapter 13: Media Queries</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
-| **          | > **Details**                                          |
+|             | <b>Details</b>                                          |
 |-------------|--------------------------------------------------------|
-| Parameter** |                                                        |
+| Parameter |                                                        |
 | mediatype   | (Optional) This is the type of media. Could be         |
 |             | anything in the range of all to screen.                |
 |-------------|--------------------------------------------------------|
@@ -6009,8 +5897,8 @@ debitis sea.
 | media       | Logic to identify use case for CSS. Options outlined   |
 | feature     | below.                                                 |
 |-------------|--------------------------------------------------------|
-| **Media     | **Details**                                            |
-| Feature**   |                                                        |
+| <b>Media</b>     | <b>Details</b>                                            |
+| <b>Feature</b>   |                                                        |
 |-------------|--------------------------------------------------------|
 | a           | Describes the aspect ratio of the targeted display     |
 | spect-ratio | area of the output device.                             |
@@ -6058,30 +5946,30 @@ debitis sea.
 |             | box on a printer).                                     |
 |-------------|--------------------------------------------------------|
 
-> **Deprecated Features Details**
+> <b>Deprecated Features Details</b>
 >
-> **Deprecated** CSS will only display on devices whose height/width
+> <b>Deprecated</b> CSS will only display on devices whose height/width
 > ratio matches the specified
 >
 > device-aspect-ratio ratio. This is adeprecatedfeature and is not
 > guaranteed to work.
 >
-> **Deprecated** Same as max-width but measures the physical screen
+> <b>Deprecated</b> Same as max-width but measures the physical screen
 > width, rather than the
 >
 > max-device-width display width of the browser.
 >
-> **Deprecated** Same as min-width but measures the physical screen
+> <b>Deprecated</b> Same as min-width but measures the physical screen
 > width, rather than the
 >
 > min-device-width display width of the browser.
 >
-> **Deprecated** Same as max-height but measures the physical screen
+> <b>Deprecated</b> Same as max-height but measures the physical screen
 > width, rather than the
 >
 > max-device-height display width of the browser.
 >
-> **Deprecated** Same as min-height but measures the physical screen
+> <b>Deprecated</b> Same as min-height but measures the physical screen
 > width, rather than the
 >
 > min-device-height
@@ -6092,14 +5980,14 @@ debitis sea.
 <h3 id="ch13-1">Section 13.1: Terminology and Structure</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
-> **Media queries** allow one to apply CSS rules based on the type of
-> device / media (e.g. screen, print or handheld) called **media type**,
-> additional aspects of the device are described with **media features**
+> <b>Media queries</b> allow one to apply CSS rules based on the type of
+> device / media (e.g. screen, print or handheld) called <b>media type</b>,
+> additional aspects of the device are described with <b>media features</b>
 > such as the availability of color or viewport dimensions.
 >
-> **General Structure of a Media Query**
+> <b>General Structure of a Media Query</b>
 
-**&commat;media**
+<b>&commat;media</b>
 
 &lbrack;
 
@@ -6113,9 +6001,9 @@ debitis sea.
 
 }
 
-> **A Media Query containing a Media Type**
+> <b>A Media Query containing a Media Type</b>
 
-**&commat;media**
+<b>&commat;media</b>
 
 print
 
@@ -6125,15 +6013,15 @@ print
 
 }
 
-**A Media Query containing a Media Type and a Media Feature**
+<b>A Media Query containing a Media Type and a Media Feature</b>
 
-**&commat;media**
+<b>&commat;media</b>
 
 screen and
 
 (
 
-**max-width**
+<b>max-width</b>
 
 :
 
@@ -6149,10 +6037,10 @@ px
 
 }
 
-**A Media Query containing a Media Feature (and an implicit Media Type
-of &quot;all&quot;)**
+<b>A Media Query containing a Media Feature (and an implicit Media Type
+of &quot;all&quot;)</b>
 
-**&commat;media**
+<b>&commat;media</b>
 
 (
 
@@ -6174,13 +6062,13 @@ portrait
 <h3 id="ch13-2">Section 13.2: Basic Example</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
-**&commat;media**
+<b>&commat;media</b>
 
 screen and
 
 (
 
-**min-width**
+<b>min-width</b>
 
 :
 
@@ -6196,7 +6084,7 @@ body
 
 {
 
-**background-color**
+<b>background-color</b>
 
 :
 
@@ -6233,12 +6121,12 @@ skyblue
 <h3 id="ch13-3">Section 13.3: mediatype</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
-  **&commat;media** mediatype
+  <b>&commat;media</b> mediatype
 
 > Media queries have an optional mediatype parameter. This parameter is
 > placed directly after the &commat;media declaration (), for example:
 
-**&commat;media**
+<b>&commat;media</b>
 
 print
 
@@ -6248,7 +6136,7 @@ html
 
 {
 
-**background-color**
+<b>background-color</b>
 
 :
 
@@ -6269,7 +6157,7 @@ white
 > following code example will apply the style to every media type except
 > print.
 
-**&commat;media**
+<b>&commat;media</b>
 
 not
 
@@ -6281,7 +6169,7 @@ html
 
 {
 
-**background-color**
+<b>background-color</b>
 
 :
 
@@ -6296,7 +6184,7 @@ green
 > And the same way, for just showing it only on the screen, this can be
 > used:
 
-**&commat;media**
+<b>&commat;media</b>
 
 only screen
 
@@ -6306,7 +6194,7 @@ only screen
 
 {
 
-**display**
+<b>display</b>
 
 :
 
@@ -6321,7 +6209,7 @@ block
 > The list of mediatype can be understood better with the following
 > table:
 
-**Media Type Description**
+<b>Media Type Description</b>
 
 > all Apply to all devices screen Default computers
 >
@@ -6343,7 +6231,7 @@ aural Speech Systems
 
 /* Non-Retina Screens */
 
-**&commat;media**
+<b>&commat;media</b>
 
 screen
 
@@ -6351,7 +6239,7 @@ and
 
 (
 
-**min-width**
+<b>min-width</b>
 
 :
 
@@ -6365,7 +6253,7 @@ and
 
 (
 
-**max-width**
+<b>max-width</b>
 
 :
 
@@ -6395,7 +6283,7 @@ webkit-min-device-pixel-ratio
 
 */&ast; &minus;&minus;&minus;&minus;&minus;&minus;&minus;&minus;&minus;&minus;- Retina Screens &minus;&minus;&minus;&minus;&minus;&minus;&minus;&minus;&minus;&minus;- &ast;/*
 
-**&commat;media**
+<b>&commat;media</b>
 
 screen
 
@@ -6403,7 +6291,7 @@ and
 
 (
 
-**min-width**
+<b>min-width</b>
 
 :
 
@@ -6417,7 +6305,7 @@ and
 
 (
 
-**max-width**
+<b>max-width</b>
 
 :
 
@@ -6880,12 +6768,12 @@ quis ligula lacinia aliquet. **&lt;/p&gt;**
 
 <h4>CSS:</h4>
 
-```
+<pre><code>
 img {
   **float**: left;
   **margin-right**: 1rem;
 }
-```
+</code></pre>
 
 > This will be the output
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -6919,13 +6807,13 @@ initial - Sets this property to its default value. Read about initial
 
 inherit - Inherits this property from its parent element. Read about inherit
 
-```
+<pre><code>
 **&lt;**
-```
+</code></pre>
 
-<h4>HTML</h4>
+<h4>HTML:</h4>
 
-```
+<pre><code>
 **&gt;**
 **&lt;**
 **head**
@@ -6985,7 +6873,7 @@ ipsoum
 **&lt;**
 **/html**
 **&gt;**
-```
+</code></pre>
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch14-3">Section 14.3: Clearfix</h3>
@@ -7291,9 +7179,9 @@ This is DIV 2
 </p>
 <!--[image037.jpg 7.48 x 3.61](./images/image037.jpg) -->
 
-> We can make them in-line by adding a float css property to the div.
->
-> HTML:
+<p>We can make them in-line by adding a float css property to the div.</p>
+
+<h4>HTML:</h4>
 
 **&lt;**
 
@@ -7532,7 +7420,7 @@ center
 >
 <h4>HTML:</h4>
 
-```
+<pre><code>
 **&lt;**
 **div**
 class
@@ -7606,11 +7494,11 @@ massa. Fusce ac turpis quis ligula lacinia aliquet.
 **&lt;**
 **/div**
 **&gt;**
-```
+</code></pre>
 
 <h4>CSS:</h4>
 
-```
+<pre><code>
 .wrapper
 {
 **width**
@@ -7669,14 +7557,14 @@ right
 yellow
 ;
 }
-```
+</code></pre>
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch14-7">Section 14.7: Simple Three Fixed-Width Column Layout</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>HTML:</h4>
 
-```
+<pre><code>
 **&lt;**
 **div**
 class
@@ -7726,7 +7614,7 @@ Content
 **&lt;**
 **p**
 **&gt;**
-```
+</code></pre>
 
 Class aptent taciti sociosqu ad litora torquent per conubia nostra, per
 inceptos himenaeos.
@@ -7959,23 +7847,22 @@ right
 <h3 id="ch14-8">Section 14.8: Two-Column Lazy/Greedy Layout</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
-> This layout uses one floated column to create a two-column layout with
-> no defined widths. In this example the left sidebar is &quot;lazy,&quot; in
-> that it only takes up as much space as it needs. Another way to say
-> this is that the left sidebar is &quot;shrink-wrapped.&quot; The right content
-> column is &quot;greedy,&quot; in that it takes up all the remaining space.
->
-> HTML:
->
-> **&lt;div** class=&quot;sidebar&quot;**&gt;**
->
-> **&lt;h1&gt;**Sidebar**&lt;/h1&gt;**
->
-> **&lt;img** src=&quot;http://lorempixel.com/150/200/&quot; **/&gt;**
->
-> **&lt;/div&gt;**
->
-> **&lt;div** class=&quot;content&quot;**&gt;**
+This layout uses one floated column to create a two-column layout with
+no defined widths. In this example the left sidebar is &quot;lazy,&quot; in
+that it only takes up as much space as it needs. Another way to say
+this is that the left sidebar is &quot;shrink-wrapped.&quot; The right content
+column is &quot;greedy,&quot; in that it takes up all the remaining space.
+
+<h4>HTML:</h4>
+**&lt;div** class=&quot;sidebar&quot;**&gt;**
+
+**&lt;h1&gt;**Sidebar**&lt;/h1&gt;**
+
+**&lt;img** src=&quot;http://lorempixel.com/150/200/&quot; **/&gt;**
+
+**&lt;/div&gt;**
+
+**&lt;div** class=&quot;content&quot;**&gt;**
 
 **&lt;h1&gt;**Content**&lt;/h1&gt; &lt;p&gt;**Lorem ipsum dolor sit amet,
 consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed
@@ -8271,8 +8158,7 @@ q
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch15-3">Section 15.3: Font Size</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-
-> **HTML:**
+<h4>HTML:</h4>
 
 **&lt;**
 
@@ -8773,7 +8659,7 @@ lowercase
 }
 </code></pre>
 
-> <h4>HTML</h4>
+> <h4>HTML:</h4>
 
 <pre><code>
 **&lt;**
@@ -9007,7 +8893,7 @@ px
 }
 </code></pre>
 
-> <h4>HTML</h4>
+> <h4>HTML:</h4>
 >
 > **&lt;p&gt;**
 >
@@ -9036,17 +8922,17 @@ px
 <h3 id="ch15-13">Section 15.13: Font Variant</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
-> Attributes:
+Attributes:
 
 ***normal***
 
-> Default attribute of fonts. ***small-caps***
->
-> Sets every letter to uppercase, **but** makes the lowercase
-> letters(from original text) smaller in size than the letters that
-> originally uppercase.
->
-> **CSS:**
+Default attribute of fonts. ***small-caps***
+
+Sets every letter to uppercase, **but** makes the lowercase
+letters(from original text) smaller in size than the letters that
+originally uppercase.
+
+<h4>CSS:</h4>
 
 <pre><code>
 .smallcaps
@@ -9058,7 +8944,7 @@ small-caps
 }
 </code></pre>
 
-> **HTML:**
+<h4>HTML:</h4>
 
 <pre><code>
 **&lt;**
@@ -9102,7 +8988,7 @@ aNd ExAmpLe
 
 > **Simple Example (centering a single element)**
 >
-> <h4>HTML</h4>
+> <h4>HTML:</h4>
 
 <pre><code>
 **&lt;**
@@ -9342,7 +9228,7 @@ center
 >
 > **Example: Combination for centering both on horizontal flexbox**
 
-```
+<pre><code>
 div
 #container
 {
@@ -9363,7 +9249,7 @@ center
 center
 ;
 }
-```
+</code></pre>
 
 > **Outcome:**
 
@@ -9373,7 +9259,7 @@ center
 >
 > **Example: Combination for centering both on vertical flexbox**
 
-```
+<pre><code>
 div
 #container
 {
@@ -9394,7 +9280,7 @@ center
 center
 ;
 }
-```
+</code></pre>
 
 > **Outcome:**
 
@@ -9405,15 +9291,16 @@ Here is a <a href="https://jsfiddle.net/d6pc5bmd/5/">demo</a>.
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch16-2">Section 16.2: Sticky Variable-Height Footer</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-> This code creates a sticky footer. When the content doesn&apos;t reach the
-> end of the viewport, the footer sticks to the bottom of the viewport.
-> When the content extends past the bottom of the viewport, the footer
-> is also pushed out of the viewport. &lbrack;*&lbrack;View
-> Result&rbrack;*&rbrack;(https://jsfiddle.net/0t1f84tL/)
->
-> **HTML:**
+This code creates a sticky footer. When the content doesn&apos;t reach the
+end of the viewport, the footer sticks to the bottom of the viewport.
+When the content extends past the bottom of the viewport, the footer
+is also pushed out of the viewport. 
 
-```
+<p><a href="https://jsfiddle.net/0t1f84tL/">View Result (jsFiddle)</a>.</p>
+
+<h4>HTML:</h4>
+
+<pre><code>
 **&lt;**
 **div**
 class
@@ -9483,11 +9370,11 @@ Footer
 **&lt;**
 **/div**
 **&gt;**
-```
+</code></pre>
 
 > **CSS:**
 
-```
+<pre><code>
 html, body {
   <b>height</b>: 100&percnt;;
 }
@@ -9504,7 +9391,7 @@ body {
   <b>color</b>: white;
   <b>flex</b>: none;
 }
-```
+</code></pre>
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch16-3">Section 16.3: Optimally fit elements to their container</h3>
@@ -9513,11 +9400,12 @@ body {
 <p>One of the nicest features of flexbox is to allow optimally fitting
 containers to their parent element.</p>
 
-&lbrack;&lbrack;Live demo&rbrack;&rbrack;(https://jsfiddle.net/6gfogoqk/).
+<p><a href="https://jsfiddle.net/6gfogoqk/">Live Demo (jsFiddle)</a>.</p>
 
-> HTML:
 
-```
+<h4>HTML:</h4>
+
+<pre><code>
 &lt;div class = &quot;flex-container&quot;&gt;
 &lt;div class = &quot;flex-item&quot;&gt;1 &lt;/div&gt;
 &lt;div class = &quot;flex-item&quot;&gt;2 &lt;/div&gt;
@@ -9526,11 +9414,11 @@ containers to their parent element.</p>
 &lt;div class = &quot;flex-item&quot;&gt;5 &lt;/div&gt;
 &lt;/div
 &gt;
-```
+</code></pre>
 
-> CSS:
+<h4>CSS:</h4>
 
-```
+<pre><code>
 .flex-container
 {
 <b>background-color</b>:#000;
@@ -9545,7 +9433,7 @@ containers to their parent element.</p>
   <b>flex-basis</b>:200px;
 /* or % could be used to ensure a specific layout */
 }
-```
+</code></pre>
 
 > **Outcome:**
 >
@@ -9567,9 +9455,9 @@ height="3.182736220472441in"}
 > very simple markup:
 >
 
-<h4>HTML Markup:</h4>
+<h4>HTML:</h4>
 
-```
+<pre><code>
 **&lt;**
 **div**
 class
@@ -9638,11 +9526,11 @@ Footer
 **&lt;**
 **/div**
 **&gt;**
-```
+</code></pre>
 
 > CSS:
 
-```
+<pre><code>
 body
 {
 **margin**
@@ -9756,7 +9644,7 @@ auto
 px
 ;
 }
-```
+</code></pre>
 
 <a href="https://jsfiddle.net/adityarb88/hek6ms0x/">jsFiddle Demo</a>
 
@@ -9772,43 +9660,43 @@ height="3.3848195538057744in"}
 
 > This can be achieved using a special trick with flexbox
 >
-> HTML
->
-> **&lt;div** class=&quot;cards&quot;**&gt;**
->
-> **&lt;div** class=&quot;card&quot;**&gt;** **&lt;p&gt;**Lorem ipsum Magna proident ex
-> anim dolor ullamco pariatur reprehenderit culpa esse enim mollit
-> labore dolore voluptate ullamco et ut sed qui minim.**&lt;/p&gt;**
-> **&lt;p&gt;&lt;button&gt;**Action**&lt;/button&gt;&lt;/p&gt;**
->
-> **&lt;/div&gt;**
->
-> **&lt;div** class=&quot;card&quot;**&gt;** **&lt;p&gt;**Lorem ipsum Magna proident ex
-> anim dolor ullamco pariatur reprehenderit culpa esse enim mollit
-> labore dolore voluptate ullamco et ut sed qui minim.**&lt;/p&gt;**
-> **&lt;p&gt;**Lorem ipsum Magna proident ex anim dolor ullamco pariatur
-> reprehenderit culpa esse enim mollit labore dolore voluptate ullamco
-> et ut sed qui minim.**&lt;/p&gt;** **&lt;p&gt;**Lorem ipsum Magna proident ex
-> anim dolor ullamco pariatur reprehenderit culpa esse enim mollit
-> labore dolore voluptate ullamco et ut sed qui minim.**&lt;/p&gt;**
-> **&lt;p&gt;**Lorem ipsum Magna proident ex anim dolor ullamco pariatur
-> reprehenderit culpa esse enim mollit labore dolore voluptate ullamco
-> et ut sed qui minim.**&lt;/p&gt;**
-> **&lt;p&gt;&lt;button&gt;**Action**&lt;/button&gt;&lt;/p&gt;**
->
-> **&lt;/div&gt;**
->
-> **&lt;/div&gt;**
+<h4>HTML:</h4>
 
-  **display**                            :     flex
+**&lt;div** class=&quot;cards&quot;**&gt;**
+
+**&lt;div** class=&quot;card&quot;**&gt;** **&lt;p&gt;**Lorem ipsum Magna proident ex
+anim dolor ullamco pariatur reprehenderit culpa esse enim mollit
+labore dolore voluptate ullamco et ut sed qui minim.**&lt;/p&gt;**
+**&lt;p&gt;&lt;button&gt;**Action**&lt;/button&gt;&lt;/p&gt;**
+
+**&lt;/div&gt;**
+
+**&lt;div** class=&quot;card&quot;**&gt;** **&lt;p&gt;**Lorem ipsum Magna proident ex
+anim dolor ullamco pariatur reprehenderit culpa esse enim mollit
+labore dolore voluptate ullamco et ut sed qui minim.**&lt;/p&gt;**
+**&lt;p&gt;**Lorem ipsum Magna proident ex anim dolor ullamco pariatur
+reprehenderit culpa esse enim mollit labore dolore voluptate ullamco
+et ut sed qui minim.**&lt;/p&gt;** **&lt;p&gt;**Lorem ipsum Magna proident ex
+anim dolor ullamco pariatur reprehenderit culpa esse enim mollit
+labore dolore voluptate ullamco et ut sed qui minim.**&lt;/p&gt;**
+**&lt;p&gt;**Lorem ipsum Magna proident ex anim dolor ullamco pariatur
+reprehenderit culpa esse enim mollit labore dolore voluptate ullamco
+et ut sed qui minim.**&lt;/p&gt;**
+**&lt;p&gt;&lt;button&gt;**Action**&lt;/button&gt;&lt;/p&gt;**
+
+**&lt;/div&gt;**
+
+**&lt;/div&gt;**
+
+**display**                            :     flex
 
 
-> First of all, we use CSS to apply ; to the container. This will create
-> 2 columns equal in height with the content flowing naturally inside it
->
-> CSS
+First of all, we use CSS to apply ; to the container. This will create
+2 columns equal in height with the content flowing naturally inside it
 
-```
+<h4>CSS:</h4>
+
+<pre><code>
 .cards
 {
 **display**
@@ -9873,190 +9761,80 @@ last-child
 center
 ;
 }
-```
+</code></pre>
 
-> The layout will change and become like this:
+<p>The layout will change and become like this:</p>
 
-!&lbrack;&rbrack;(./images/image048.jpg){width="7.48037510936133in"
-height="3.0046391076115486in"}
+[image048.jpg 7.48 x 3"](./images/image048.jpg)
 
-  **display**                            :     flex
+**display**                            :     flex
 
 
-> In order to move the buttons to the bottom of the block, we need to
-> apply ; to the card itself with the direction set to column. After
-> that, we should select the last element inside the card and set the
-> margin-top to auto. This will push the last paragraph to the bottom of
-> the card and achieve the required result.
->
+In order to move the buttons to the bottom of the block, we need to
+apply ; to the card itself with the direction set to column. After
+that, we should select the last element inside the card and set the
+margin-top to auto. This will push the last paragraph to the bottom of
+the card and achieve the required result.
+
 
 <h4>Final CSS:</h4>
 
-```
-.cards
-{
-**display**
-:
-flex
-;
+<pre><code>.cards {
+  **display**: flex;
 }
-.card
-{
-**border**
-:
-1
-px
-solid
-#ccc
-;
-**margin**
-:
-10
-px
-10
-px
-;
-**padding**
-:
-0
-20
-px
-;
-**display**
-:
-flex
-;
-**flex-direction**
-:
-column
-;
+.card {
+  **border**: 1px solid #ccc;
+  **margin**: 10px 10px;
+  **padding**: 0 20px;
+  **display**: flex;
+  **flex-direction**: column; }
+button {
+  **height**: 40px;
+  **background**: #fff;
+  **padding**: 0 40px;
+  **border**: 1px solid #000; 
 }
-button
-{
-**height**
-:
-40
-px
-;
-**background**
-:
-#fff
-;
-**padding**
-:
-0
-40
-px
-;
-**border**
-:
-1
-px
-solid
-#000
-;
-}
-p
-:
-last-child
-{
-**text-align**
-:
-center
-;
-**margin-top**
-:
-auto
-;
-}
-```
-
+p: last-child {
+  **text-align**: center;
+  **margin-top**: auto;
+}</code></pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch16-6">Section 16.6: Same height on nested containers</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-
-> This code makes sure that all nested containers are always the same
-> height. This is done by assuring that all nested elements are the same
-> height as the containing parent div. &lbrack;&lbrack;See working
-> example&rbrack;&rbrack;(https://jsfiddle.net/3wwh7ewp/):
-> &lbrack;&lbrack;https://jsfiddle.net/3wwh7ewp/&rbrack;&rbrack;(https://jsfiddle.net/3wwh7ewp/)
-> This effect is achieved due to the property align-items being set to
-> stretch by default.
->
+<p>This code makes sure that all nested containers are always the same
+height. This is done by assuring that all nested elements are the same
+height as the containing parent div. <a href="https://jsfiddle.net/3wwh7ewp/">See working example:</a>
+This effect is achieved due to the property align-items being set to stretch by default.</p>
 
 <h4>HTML</h4>
 
-```
-**&lt;**
-**div**
-class
-=
-&quot;container&quot;
-**&gt;**
-**&lt;**
-**div**
-style
-=
-&quot;background-color: red&quot;
-**&gt;**
+<pre><code>**&lt;****div** class=&quot;container&quot;**&gt;**
+**&lt;****div** style=&quot;background-color: red&quot;**&gt;**
 Some
-**&lt;**
-**br**
-**/&gt;**
+**&lt;****br****/&gt;**
 data
-**&lt;**
-**br**
-**/&gt;**
+**&lt;****br****/&gt;**
 to make
-**&lt;**
-**br**
-**/&gt;**
+**&lt;****br****/&gt;**
 a height
-**&lt;**
-**br**
-**/&gt;**
-**&lt;**
-**/div**
-**&gt;**
-**&lt;**
-**div**
-style
-=
-&quot;background-color: blue&quot;
-**&gt;**
+**&lt;****br****/&gt;**
+**&lt;****/div****&gt;**
+**&lt;****div** style=&quot;background-color: blue&quot;**&gt;**
 Fewer
-**&lt;**
-**br**
-**/&gt;**
+**&lt;****br****/&gt;**
 lines
-**&lt;**
-**br**
-**/&gt;**
-**&lt;**
-**/div**
-**&gt;**
-**&lt;**
-**/div**
-**&gt;**
-```
+**&lt;****br****/&gt;**
+**&lt;****/div****&gt;**
+**&lt;****/div****&gt;**</code></pre>
 
 <h4>CSS</h4>
 
-```
-.container
-{
-**display**
-:
-flex
-;
-**align-items**
-:
-stretch
-;
-// Default
-value
+<pre><code>.container {
+  **display**: flex;
+  **align-items**: stretch;
+  // Default value
 }
-```
+</code></pre>
 
 Note: &lbrack;&lbrack;Does not work on IE versions under 10&rbrack;&rbrack;(http://caniuse.com/#search=flexbox)
 
@@ -11228,11 +11006,11 @@ currentColor
 > Most browsers support using color keywords to specify a color. For
 > example, to set the color of an element to blue, use the blue keyword:
 
-```
+<pre><code>
 .some-class {
   **color**: blue;
 }
-```
+</code></pre>
 
 > CSS keywords are not case sensitive---blue, Blue and BLUE will all
 > result in #0000FF.
@@ -14793,12 +14571,12 @@ vary between browsers.
 
   -----------------------------------------------------------------------
 
-> The caption-side property determines the vertical positioning of the
-> **&gt;** element within a table. This has no effect if such element does
-> not exist.
->
-> Below an example with two tables with different values set to the
-> caption-side property:
+The caption-side property determines the vertical positioning of the
+**&gt;** element within a table. This has no effect if such element does
+not exist.
+
+Below an example with two tables with different values set to the
+caption-side property:
 
 !&lbrack;&rbrack;(./images/image204.jpg){width="5.729166666666667in"
 height="1.1458333333333333in"}
@@ -14806,12 +14584,12 @@ height="1.1458333333333333in"}
   **caption-side**   :   top   while the one on the right    **caption-side**   :   bottom
                                has                                                  
 
-> The table on the left has .
+The table on the left has .
 
 **Value Description**
 
-> *top* This is the default value. It places the caption above the
-> table. bottom This value places the caption below the table.
+*top* This is the default value. It places the caption above the
+table. bottom This value places the caption below the table.
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ch26">Chapter 26: Transitions</h2>
@@ -14819,29 +14597,29 @@ height="1.1458333333333333in"}
 
 **Parameter Details**
 
-> The specific CSS property whose value change needs to be transitioned
-> (or) all, if all the transition-property &lbrack;&lbrack;transitionable
-> properties&rbrack;&rbrack;(https://www.w3.org/TR/css3-transitions/#animatable-properties)
-> need to be transitioned.
->
-> The duration (or period) in seconds (s) or milliseconds (ms) over
-> which the transition transition-duration must take place.
+The specific CSS property whose value change needs to be transitioned
+(or) all, if all the transition-property &lbrack;&lbrack;transitionable
+properties&rbrack;&rbrack;(https://www.w3.org/TR/css3-transitions/#animatable-properties)
+need to be transitioned.
+
+The duration (or period) in seconds (s) or milliseconds (ms) over
+which the transition transition-duration must take place.
 
   cubic-bezier                               (),        steps
 
-> A function that describes how the intermediate values during the
-> transition are calculated. Commonly used values are ease, ease-in,
-> ease-out, ease-in-out, linear, transition-timing-function
->
-> (). More information about the various timing functions can be
->
-> found in the &lbrack;&lbrack;W3C
-> specs&rbrack;&rbrack;(https://www.w3.org/TR/css3-transitions/#transition-timing-function).
->
-> The amount of time that must have elapsed before the transition can
-> start. Can be transition-delay
->
-> specified in seconds (s) or milliseconds (ms)
+A function that describes how the intermediate values during the
+transition are calculated. Commonly used values are ease, ease-in,
+ease-out, ease-in-out, linear, transition-timing-function
+
+(). More information about the various timing functions can be
+
+found in the &lbrack;&lbrack;W3C
+specs&rbrack;&rbrack;(https://www.w3.org/TR/css3-transitions/#transition-timing-function).
+
+The amount of time that must have elapsed before the transition can
+start. Can be transition-delay
+
+specified in seconds (s) or milliseconds (ms)
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 ## Section 26.1: Transition shorthand
@@ -14913,7 +14691,7 @@ green
 
 }
 
-> <h4>HTML</h4>
+<h4>HTML</h4>
 
 **&lt;**
 
@@ -14927,79 +14705,53 @@ green
 
 **&gt;**
 
-> This example will change the background color when the div is hovered
-> the background-color change will last 1 second.
+This example will change the background color when the div is hovered
+the background-color change will last 1 second.
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 ## Section 26.2: cubic-bezier
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
-> The cubic-bezier function is a transition timing function which is
-> often used for custom and smooth transitions.
+The cubic-bezier function is a transition timing function which is
+often used for custom and smooth transitions.
 
-  --------------------------------------------------------------------------------------------
   **transition-timing-function**   :   cubic-bezier    (   0.1   ,   0.7   ,   1.0   ,   0.1
-  -------------------------------- --- --------------- --- ----- --- ----- --- ----- --- -----
 
-  --------------------------------------------------------------------------------------------
+);
 
-> );
->
-> The function takes four parameters:
+The function takes four parameters:
 
-  ----------------------------------------------------------------------------------
   cubic-bezier             (   P1_x     ,   P1_y       ,   P2_x       ,   P2_y
-  ------------------------ --- -------- --- ---------- --- ---------- --- ----------
 
-  ----------------------------------------------------------------------------------
-
-> )
+)
 
 !&lbrack;&rbrack;(./images/image205.jpg){width="4.395833333333333in"
 height="2.2083333333333335in"}
 
-> These parameters will be mapped to points which are part of a &lbrack;&lbrack;Bézier
-> curve&rbrack;&rbrack;(https://en.wikipedia.org/wiki/B%C3%A9zier_curve#Cubic_B.C3.A9zier_curves):
+These parameters will be mapped to points which are part of a &lbrack;&lbrack;Bézier
+curve&rbrack;&rbrack;(https://en.wikipedia.org/wiki/B%C3%A9zier_curve#Cubic_B.C3.A9zier_curves):
 
 !&lbrack;&rbrack;(./images/image206.jpg){width="4.96875in"
 height="4.958333333333333in"}
 
-> For CSS Bézier Curves, P0 and P3 are always in the same spot. P0 is at
-> (0,0) and P3 is at (1,1), which menas that the parameters passed to
-> the cubic-bezier function can only be between 0 and 1.
->
-> If you pass parameters which aren&apos;t in this interval the function
-> will default to a linear transition.
->
-> Since cubic-bezier is the most flexible transition in CSS, you can
-> translate all other transition timing function to cubic-bezier
-> functions:
+For CSS Bézier Curves, P0 and P3 are always in the same spot. P0 is at
+(0,0) and P3 is at (1,1), which menas that the parameters passed to
+the cubic-bezier function can only be between 0 and 1.
 
-  -----------------------------------------------------------------------
-  cubic-bezier
-  -----------------------------------------------------------------------
+If you pass parameters which aren&apos;t in this interval the function
+will default to a linear transition.
 
-  -----------------------------------------------------------------------
+Since cubic-bezier is the most flexible transition in CSS, you can
+translate all other transition timing function to cubic-bezier
+functions:
 
-> linear: (0,0,1,1)
+cubic-bezier
 
-  ------------------------------------------------------------------------------
+linear: (0,0,1,1)
+
   cubic-bezier               (   0.42     ,   0.0      ,   1.0      ,   1.0
-  -------------------------- --- -------- --- -------- --- -------- --- --------
-
-  ------------------------------------------------------------------------------
-
-  -------------------------------------------------------------------------------
   cubic-bezier               (   0.0    ,   0.0      ,   0.58        ,   1.0
-  -------------------------- --- ------ --- -------- --- ----------- --- --------
-
-  -------------------------------------------------------------------------------
-
-  -------------------------------------------------------------------------------
   cubic-bezier              (   0.42     ,   0.0      ,   0.58       ,   1.0
-  ------------------------- --- -------- --- -------- --- ---------- --- --------
-
-  -------------------------------------------------------------------------------
 
 ease-in: ) ease-out: ) ease-in-out: )
 
@@ -15129,88 +14881,76 @@ px
 
 }
 
-> <h4>HTML</h4>
->
-> **&lt;div&gt;&lt;/div&gt;**
->
-> **transition-property**: Specifies the CSS properties the transition
-> effect is for. In this case, the div will expand both horizontally and
-> vertically when hovered.
->
-> **transition-duration**: Specifies the length of time a transition
-> takes to complete. In the above example, the height and width
-> transitions will take 1 second and 500 milliseconds respectively.
->
-> **transition-timing-function**: Specifies the speed curve of the
-> transition effect. A *linear* value indicates the transition will have
-> the same speed from start to finish.
->
-> **transition-delay**: Specifies the amount of time needed to wait
-> before the transition effect starts. In this case, the height will
-> start transitioning immediately, whereas the width will wait 1 second.
+<h4>HTML</h4>
+
+**&lt;div&gt;&lt;/div&gt;**
+
+**transition-property**: Specifies the CSS properties the transition
+effect is for. In this case, the div will expand both horizontally and
+vertically when hovered.
+
+**transition-duration**: Specifies the length of time a transition
+takes to complete. In the above example, the height and width
+transitions will take 1 second and 500 milliseconds respectively.
+
+**transition-timing-function**: Specifies the speed curve of the
+transition effect. A *linear* value indicates the transition will have
+the same speed from start to finish.
+
+**transition-delay**: Specifies the amount of time needed to wait
+before the transition effect starts. In this case, the height will
+start transitioning immediately, whereas the width will wait 1 second.
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ch27">Chapter 27: Animations</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 | &gt;             |                                                      |
-| *Transition** |                                                      |
-| Parameter     | > Details                                            |
+| Transition |                                                      |
+| Parameter     | Details                                            |
 |---------------|------------------------------------------------------|
-| property      | > Either the CSS property to transition on, or all,  |
-|               | > which specifies all transition-able properties.    |
-|---------------|------------------------------------------------------|
-| duration      | > Transition time, either in seconds or              |
-|               | > milliseconds.                                      |
-|---------------|------------------------------------------------------|
-| ti            | > Specifies a function to define how intermediate    |
-| ming-function | > values for properties are computed. Common values  |
-|               | > are ease, linear, and step-end. Check out the      |
-|               | > &lbrack;&lbrack;easing function                                  |
-|               | > cheatsheet&rbrack;&rbrack;(http://easings.net/) for  |
-|               | > more.                                              |
-|---------------|------------------------------------------------------|
-| delay         | > Amount of time, in seconds or milliseconds, to     |
-|               | > wait before playing the animation.                 |
-|---------------|------------------------------------------------------|
+| property      | Either the CSS property to transition on, or all,  |
+|               | which specifies all transition-able properties.    |
+| duration      | Transition time, either in seconds or              |
+|               | milliseconds.                                      |
+| ti            | Specifies a function to define how intermediate    |
+| ming-function | values for properties are computed. Common values  |
+|               | are ease, linear, and step-end. Check out the      |
+|               | &lbrack;&lbrack;easing function                                  |
+|               | cheatsheet&rbrack;&rbrack;(http://easings.net/) for  |
+|               | more.                                              |
+| delay         | Amount of time, in seconds or milliseconds, to     |
+|               | wait before playing the animation.                 |
 |               |                                                      |
-|---------------|------------------------------------------------------|
 | **            |                                                      |
 | &commat;keyframes |                                                      |
 
-  -----------------------------------------------------------------------
   <b>&lt;percentage</b>
-  -----------------------------------------------------------------------
 
-  -----------------------------------------------------------------------
 
-  -----------------------------------------------------------------------
   10%                        ,        20%
-  -------------------------- -------- -----------------------------------
 
-  -----------------------------------------------------------------------
 
-> You can either specify a set time with a percentage value, or two
-> percentage values, ie
->
-> &lbrack; from &vert; to &vert; **&gt;** &rbrack;
->
-> , for a period of time where the keyframe&apos;s set attributes are set.
->
-> block Any amount of CSS attributes for the keyframe.
+You can either specify a set time with a percentage value, or two
+percentage values, ie
+
+&lbrack; from &vert; to &vert; **&gt;** &rbrack;
+
+, for a period of time where the keyframe&apos;s set attributes are set.
+
+block Any amount of CSS attributes for the keyframe.
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-## Section 27.1: Animations with keyframes
+<h3 id="ch27-1">Section 27.1: Animations with keyframes</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+For multi-stage CSS animations, you can create CSS &commat;keyframes.
+Keyframes allow you to define multiple animation points, called a
+keyframe, to define more complex animations.
 
-> For multi-stage CSS animations, you can create CSS &commat;keyframes.
-> Keyframes allow you to define multiple animation points, called a
-> keyframe, to define more complex animations.
->
-> **Basic Example**
->
-> In this example, we&apos;ll make a basic background animation that cycles
-> between all colors.
+**Basic Example**
+
+In this example, we&apos;ll make a basic background animation that cycles
+between all colors.
 
 **&commat;keyframes**
 
@@ -15450,8 +15190,8 @@ infinite
 
 &lbrack;*&lbrack;View Result&rbrack;*&rbrack;(https://jsfiddle.net/s9m3od3p/6/)
 
-> There&apos;s a few different things to note here. First, the actual
-> &commat;keyframes syntax.
+There&apos;s a few different things to note here. First, the actual
+&commat;keyframes syntax.
 
 **&commat;keyframes**
 
@@ -15459,7 +15199,7 @@ rainbow-background
 
 {
 
-> This sets the name of the animation to rainbow-background.
+This sets the name of the animation to rainbow-background.
 
 0
 
@@ -15477,15 +15217,15 @@ rainbow-background
 
 }
 
-> This is the definition for a keyframe within the animation. The first
-> part, the 0% in the case, defines where the keyframe is during the
-> animation. The 0% implies it is 0% of the total animation time from
-> the beginning.
->
-> The animation will automatically transition between keyframes. So, by
-> setting the next background color at 8.333%, the animation will
-> smoothly take 8.333% of the time to transition between those
-> keyframes.
+This is the definition for a keyframe within the animation. The first
+part, the 0% in the case, defines where the keyframe is during the
+animation. The 0% implies it is 0% of the total animation time from
+the beginning.
+
+The animation will automatically transition between keyframes. So, by
+setting the next background color at 8.333%, the animation will
+smoothly take 8.333% of the time to transition between those
+keyframes.
 
 .RainbowBackground
 
@@ -15507,40 +15247,36 @@ infinite
 
 }
 
-> This code attaches our animation to all elements which have the
-> .RainbowBackground class.
->
-> The actual animation property takes the following arguments.
->
-> **animation-name**: The name of our animation. In this case,
-> rainbow-background **animation-duration**: How long the animation will
-> take, in this case 5 seconds.
->
-> **animation-iteration-count (Optional)**: The number of times the
-> animation will loop. In this case, the animation will go on
-> indefinitely. By default, the animation will play once.
->
-> **animation-delay (Optional)**: Specifies how long to wait before the
-> animation starts. It defaults to 0 seconds, and can take negative
-> values. For example, -2s would start the animation 2 seconds into its
-> loop.
->
-> **animation-timing-function (Optional)**: Specifies the speed curve of
-> the animation. It defaults to ease, where the animation starts slow,
-> gets faster and ends slow.
+This code attaches our animation to all elements which have the
+.RainbowBackground class.
 
-  ------------------------------------------------------------------------
+The actual animation property takes the following arguments.
+
+**animation-name**: The name of our animation. In this case,
+rainbow-background **animation-duration**: How long the animation will
+take, in this case 5 seconds.
+
+**animation-iteration-count (Optional)**: The number of times the
+animation will loop. In this case, the animation will go on
+indefinitely. By default, the animation will play once.
+
+**animation-delay (Optional)**: Specifies how long to wait before the
+animation starts. It defaults to 0 seconds, and can take negative
+values. For example, -2s would start the animation 2 seconds into its
+loop.
+
+**animation-timing-function (Optional)**: Specifies the speed curve of
+the animation. It defaults to ease, where the animation starts slow,
+gets faster and ends slow.
+
   **background-color**                           :   #ff0000
-  ---------------------------------------------- --- ---------------------
 
-  ------------------------------------------------------------------------
+In this particular example, both the 0% and 100% keyframes specify {;
+}. Wherever
 
-> In this particular example, both the 0% and 100% keyframes specify {;
-> }. Wherever
->
-> two or more keyframes share a state, one may specify them in a single
-> statement. In this case, the two 0% and 100% lines could be replaced
-> with this single line:
+two or more keyframes share a state, one may specify them in a single
+statement. In this case, the two 0% and 100% lines could be replaced
+with this single line:
 
 0
 
@@ -15564,11 +15300,11 @@ infinite
 
 }
 
-> **Cross-browser compatibility**
->
-> For older WebKit-based browsers, you&apos;ll need to use the vendor prefix
-> on both the &commat;keyframes declaration and the animation property, like
-> so:
+**Cross-browser compatibility**
+
+For older WebKit-based browsers, you&apos;ll need to use the vendor prefix
+on both the &commat;keyframes declaration and the animation property, like
+so:
 
 **@-webkit-keyframes**
 
@@ -15588,8 +15324,8 @@ webkit-animation
 ## Section 27.2: Animations with the transition property
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
-> Useful for simple animations, the CSS transition property allows
-> number-based CSS properties to animate between states.
+Useful for simple animations, the CSS transition property allows
+number-based CSS properties to animate between states.
 
 **Example**
 
@@ -15647,12 +15383,12 @@ px
 
 &lbrack;*&lbrack;View Result&rbrack;*&rbrack;(https://jsfiddle.net/0kcm6rwo/)
 
-> By default, hovering over an element with the .Example class would
-> immediately cause the element&apos;s height to jump to 120px and its
-> background color to red (#ff0000).
->
-> By adding the transition property, we can cause these changes to occur
-> over time:
+By default, hovering over an element with the .Example class would
+immediately cause the element&apos;s height to jump to 120px and its
+background color to red (#ff0000).
+
+By adding the transition property, we can cause these changes to occur
+over time:
 
 .Example
 
@@ -15678,23 +15414,23 @@ ease
 
 &lbrack;*&lbrack;View Result&rbrack;*&rbrack;(https://jsfiddle.net/v2j4ggue/1/)
 
-> The all value applies the transition to all compatible (numbers-based)
-> properties. Any compatible property name (such as height or top) can
-> be substituted for this keyword.
->
-> 400ms specifies the amount of time the transition takes. In this case,
-> the element&apos;s change in height will take 400 milliseconds to
-> complete.
->
-> Finally, the value ease is the animation function, which determines
-> how the animation is played. ease means start slow, speed up, then end
-> slow again. Other values are linear, ease-out, and ease-in.
->
-> **Cross-Browser Compatibility**
->
-> The transition property is generally well-supported across all major
-> browsers, excepting IE 9. For earlier versions of Firefox and
-> Webkit-based browsers, use vendor prefixes like so:
+The all value applies the transition to all compatible (numbers-based)
+properties. Any compatible property name (such as height or top) can
+be substituted for this keyword.
+
+400ms specifies the amount of time the transition takes. In this case,
+the element&apos;s change in height will take 400 milliseconds to
+complete.
+
+Finally, the value ease is the animation function, which determines
+how the animation is played. ease means start slow, speed up, then end
+slow again. Other values are linear, ease-out, and ease-in.
+
+**Cross-Browser Compatibility**
+
+The transition property is generally well-supported across all major
+browsers, excepting IE 9. For earlier versions of Firefox and
+Webkit-based browsers, use vendor prefixes like so:
 
 .Example
 
@@ -15744,32 +15480,32 @@ ease
 
 }
 
-> *Note:* The transition property can animate changes between any two
-> numerical values, regardless of unit. It can also transition between
-> units, such as 100px to 50vh. However, it cannot transition between a
-> number and a default or automatic value, such as transitioning an
-> element&apos;s height from 100px to auto.
+*Note:* The transition property can animate changes between any two
+numerical values, regardless of unit. It can also transition between
+units, such as 100px to 50vh. However, it cannot transition between a
+number and a default or automatic value, such as transitioning an
+element&apos;s height from 100px to auto.
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch27-3">Section 27.3: Syntax Examples</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
-> Our first syntax example shows the animation shorthand property using
-> all of the available properties/parameters:
->
-> **animation**: 3s ease-in 1s 2 reverse both paused slidein;
->
-> */&ast; duration &vert; timing-function &vert; delay &vert; iteration-count &vert;
-> direction &vert; fill-mode &vert; playstate &vert; name &ast;/*
->
-> Our second example is a little more simple, and shows that some
-> properties can be omitted:
->
-> **animation**: 3s linear 1s slidein; */&ast; duration &vert; timing-function
-> &vert; delay &vert; name &ast;/*
->
-> Our third example shows the most minimal declaration. Note that the
-> animation-name and animation-duration must be declared:
+Our first syntax example shows the animation shorthand property using
+all of the available properties/parameters:
+
+**animation**: 3s ease-in 1s 2 reverse both paused slidein;
+
+*/&ast; duration &vert; timing-function &vert; delay &vert; iteration-count &vert;
+direction &vert; fill-mode &vert; playstate &vert; name &ast;/*
+
+Our second example is a little more simple, and shows that some
+properties can be omitted:
+
+**animation**: 3s linear 1s slidein; */&ast; duration &vert; timing-function
+&vert; delay &vert; name &ast;/*
+
+Our third example shows the most minimal declaration. Note that the
+animation-name and animation-duration must be declared:
 
 **animation**
 
@@ -15785,12 +15521,12 @@ slidein
 
 */&ast; duration &vert; name &ast;/*
 
-> It&apos;s also worth mentioning that when using the animation shorthand
-> the order of the properties makes a difference. Obviously the browser
-> may confuse your duration with your delay.
->
-> If brevity isn&apos;t your thing, you can also skip the shorthand property
-> and write out each property individually:
+It&apos;s also worth mentioning that when using the animation shorthand
+the order of the properties makes a difference. Obviously the browser
+may confuse your duration with your delay.
+
+If brevity isn&apos;t your thing, you can also skip the shorthand property
+and write out each property individually:
 
 **animation-duration**
 
@@ -15864,20 +15600,20 @@ slidein
 ## Section 27.4: Increasing Animation Performance Using the &apos;will-change&apos; Attribute
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
-> When creating animations and other GPU-heavy actions, it&apos;s important
-> to understand the will-change attribute.
->
-> Both CSS keyframes and the transition property use GPU acceleration.
-> Performance is increased by offloading calculations to the device&apos;s
-> GPU. This is done by creating paint layers (parts of the page that are
-> individually rendered) that are offloaded to the GPU to be calculated.
-> The will-change property tells the browser what will animate, allowing
-> the browser to create smaller paint areas, thus increasing
-> performance.
->
-> The will-change property accepts a comma-separated list of properties
-> to be animated. For example, if you plan on transforming an object and
-> changing its opacity, you would specify:
+When creating animations and other GPU-heavy actions, it&apos;s important
+to understand the will-change attribute.
+
+Both CSS keyframes and the transition property use GPU acceleration.
+Performance is increased by offloading calculations to the device&apos;s
+GPU. This is done by creating paint layers (parts of the page that are
+individually rendered) that are offloaded to the GPU to be calculated.
+The will-change property tells the browser what will animate, allowing
+the browser to create smaller paint areas, thus increasing
+performance.
+
+The will-change property accepts a comma-separated list of properties
+to be animated. For example, if you plan on transforming an object and
+changing its opacity, you would specify:
 
 .Example
 
@@ -15899,10 +15635,10 @@ opacity
 
 }
 
-> **Note:** Use will-change sparingly. Setting will-change for every
-> element on a page can cause performance problems, as the browser may
-> attempt to create paint layers for every element, significantly
-> increasing the amount of processing done by the GPU.
+**Note:** Use will-change sparingly. Setting will-change for every
+element on a page can cause performance problems, as the browser may
+attempt to create paint layers for every element, significantly
+increasing the amount of processing done by the GPU.
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ch28">Chapter 28: 2D Transforms</h2>
@@ -15935,27 +15671,27 @@ point on the Z axis
 
   scaleY
 
-> &lpar;x&rpar; Modifies the size of the element on the X axis (y) Modifies the
-> size of the element on the Y axis
+&lpar;x&rpar; Modifies the size of the element on the X axis (y) Modifies the
+size of the element on the Y axis
 
   skew
 
-> Shear mapping, or transvection, distorting each point of an element by
-> a certain angle in
->
-> (x,y) each direction
+Shear mapping, or transvection, distorting each point of an element by
+a certain angle in
+
+(x,y) each direction
 
   skewX
 
-> Horizontal shear mapping distorting each point of an element by a
-> certain angle in the
+Horizontal shear mapping distorting each point of an element by a
+certain angle in the
 
 (x) horizontal direction
 
   skewY
 
-> Vertical shear mapping distorting each point of an element by a
-> certain angle in the vertical
+Vertical shear mapping distorting each point of an element by a
+certain angle in the vertical
 
 (y) direction
 
@@ -15965,34 +15701,34 @@ point on the Z axis
 
   skew
 
-> The angle by which the element should be rotated or skewed (depending
-> on the function with which it is used). Angle can be provided in
-> degrees (deg), gradians (grad), radians (rad) angle or turns (turn).
-> In () function, the second angle is optional. If not provided, there
-> will be no (0) skew in Y-axis.
->
-> The distance expressed as a length or a percentage by which the
-> element should be
+The angle by which the element should be rotated or skewed (depending
+on the function with which it is used). Angle can be provided in
+degrees (deg), gradians (grad), radians (rad) angle or turns (turn).
+In () function, the second angle is optional. If not provided, there
+will be no (0) skew in Y-axis.
+
+The distance expressed as a length or a percentage by which the
+element should be
 
   translate
 
-> length-or-percentage translated. In () function, the second
-> length-or-percentage is optional. If not provided, then there would be
-> no (0) translation in Y-axis.
->
-> A number which defines how many times the element should be scaled in
-> the specified axis.
+length-or-percentage translated. In () function, the second
+length-or-percentage is optional. If not provided, then there would be
+no (0) translation in Y-axis.
+
+A number which defines how many times the element should be scaled in
+the specified axis.
 
   scale
 
-> scale-factor In () function, the second scale-factor is optional. If
-> not provided, the first scale-factor will be applied for Y-axis also.
+scale-factor In () function, the second scale-factor is optional. If
+not provided, the first scale-factor will be applied for Y-axis also.
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="28-1">Section 28.1: Rotate</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
-> <h4>HTML</h4>
+<h4>HTML</h4>
 
 **&lt;**
 
@@ -16012,7 +15748,7 @@ class
 
 **&gt;**
 
-> <h4>CSS</h4>
+<h4>CSS</h4>
 
 .rotate
 
@@ -16064,10 +15800,10 @@ deg
 
 }
 
-> This example will rotate the div by 45 degrees clockwise. The center
-> of rotation is in the center of the div, 50% from left and 50% from
-> top. You can change the center of rotation by setting the
-> transform-origin property.
+This example will rotate the div by 45 degrees clockwise. The center
+of rotation is in the center of the div, 50% from left and 50% from
+top. You can change the center of rotation by setting the
+transform-origin property.
 
 **transform-origin**
 
@@ -16083,8 +15819,8 @@ deg
 
 ;
 
-> The above example will set the center of rotation to the middle of the
-> right side end.
+The above example will set the center of rotation to the middle of the
+right side end.
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 ## Section 28.2: Scale
@@ -16164,114 +15900,49 @@ scale
 
 }
 
-  --------------------------------------------------------------------------------------
   100px   &ast;   0.5    =   50px   on the X axis and to    100px   &ast;   1.3    =   130px
-  ------- ---- ------ --- ------ ----------------------- ------- ---- ------ --- -------
 
-  --------------------------------------------------------------------------------------
+This example will scale the div to on the Y axis.
 
-> This example will scale the div to on the Y axis.
->
-> The center of the transform is in the center of the div, 50% from left
-> and 50% from top.
+The center of the transform is in the center of the div, 50% from left
+and 50% from top.
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 ## Section 28.3: Skew
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
-<h4>HTML</h4>
+<h4>HTML:</h4>
 
-**&lt;**
+```
+**&lt;****div** class=&quot;skew&quot;**&gt;**
+**&lt;****/div****&gt;**
+```
 
-**div**
+<h4>CSS:</h4>
 
-class
-
-=
-
-&quot;skew&quot;
-
-**&gt;**
-
-**&lt;**
-
-**/div**
-
-**&gt;**
-
-> <h4>CSS</h4>
-
-.skew
-
-{
-
-**width**
-
-:
-
-100
-
-px
-
-;
-
-**height**
-
-:
-
-100
-
-px
-
-;
-
-**background**
-
-:
-
-teal
-
-;
-
-**transform**
-
-:
-
-skew
-
-(
-
-20
-
-deg
-
-,
-
--30
-
-deg
-
-)
-
-;
-
+```
+.skew {
+  **width**: 100px;
+  **height**: 100px;
+  **background**: teal;
+  **transform**: skew (20deg, -30deg);
 }
+```
 
-> This example will skew the div by 20 degrees on the X axis and by - 30
-> degrees on the Y axis.
->
-> The center of the transform is in the center of the div, 50% from left
-> and 50% from top.
+This example will skew the div by 20 degrees on the X axis and by - 30
+degrees on the Y axis.
+
+The center of the transform is in the center of the div, 50% from left
+and 50% from top.
 
 See the result
 &lbrack;&lbrack;here&rbrack;&rbrack;(https://jsfiddle.net/MadalinaTn/gtt4osms/1/).
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-## Section 28.4: Multiple transforms
+<h3 id="ch28-4">Section 28.4: Multiple transforms</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
-> Multiple transforms can be applied to an element in one property like
-> this:
+Multiple transforms can be applied to an element in one property like this:
 
 **transform**
 
@@ -16299,18 +15970,18 @@ px
 
 ;
 
-> This will rotate the element 15 degrees clockwise and then translate
-> it 200px to the right.
->
-> In chained transforms, **the coordinate system moves with the
-> element**. This means that the translation won&apos;t be horizontal but on
-> an axis rotate 15 degrees clockwise as shown in the following image:
+This will rotate the element 15 degrees clockwise and then translate
+it 200px to the right.
+
+In chained transforms, **the coordinate system moves with the
+element**. This means that the translation won&apos;t be horizontal but on
+an axis rotate 15 degrees clockwise as shown in the following image:
 
 !&lbrack;&rbrack;(./images/image207.jpg){width="7.48037510936133in"
 height="2.7919728783902014in"}
 
-> Changing the order of the transforms will change the output. The first
-> example will be different to
+Changing the order of the transforms will change the output. The first
+example will be different to
 
 **transform**
 
@@ -16388,14 +16059,14 @@ px
 
 }
 
-> As shown in this image:
+As shown in this image:
 
 !&lbrack;&rbrack;(./images/image208.jpg){width="7.48037510936133in"
 height="2.7919728783902014in"}
 
 ## Section 28.5: Translate
 
-> <h4>HTML</h4>
+<h4>HTML</h4>
 
 **&lt;**
 
@@ -16415,7 +16086,7 @@ class
 
 **&gt;**
 
-> <h4>CSS</h4>
+<h4>CSS</h4>
 
 .translate
 
@@ -16473,18 +16144,14 @@ px
 
 }
 
-  ------------------------------------------------------------------------
   100px                   &ast;   50%                 =   50px
-  ----------------------- ---- ------------------- --- -------------------
 
-  ------------------------------------------------------------------------
+This example will move the div by 200px on the X axis and by on the Y
+axis.
 
-> This example will move the div by 200px on the X axis and by on the Y
-> axis.
->
-> You can also specify translations on a single axis.
->
-> On the X axis:
+You can also specify translations on a single axis.
+
+On the X axis:
 
 .translate
 
@@ -16508,7 +16175,7 @@ px
 
 }
 
-> On the Y axis:
+On the Y axis:
 
 .translate
 
@@ -16534,8 +16201,8 @@ translateY
 
 ## Section 28.6: Transform Origin
 
-> Transformations are done with respect to a point which is defined by
-> the transform-origin property.
+Transformations are done with respect to a point which is defined by
+the transform-origin property.
 
   ------------------------------------------------------------------------
   **transform-origin**                                   :   X Y
@@ -16543,7 +16210,7 @@ translateY
 
   ------------------------------------------------------------------------
 
-> The property takes 2 values : ;
+The property takes 2 values : ;
 
   -----------------------------------------------------------------------
   **transform-origin**
@@ -16557,13 +16224,13 @@ translateY
 
   ------------------------------------------------------------------------
 
-> In the following example the first div (.tl) is rotate around the top
-> left corner with : 0 0; and the second (.tr)is transformed around
-> it&apos;s top right corner with 0. The rotation is applied **on hover** :
->
+In the following example the first div (.tl) is rotate around the top
+left corner with : 0 0; and the second (.tr)is transformed around
+it&apos;s top right corner with 0. The rotation is applied **on hover** :
+
 <h4>HTML:</h4>
 
-```
+<pre><code>
 **&lt;**
 **div**
 class
@@ -16582,11 +16249,11 @@ class
 **&lt;**
 **/div**
 **&gt;**
-```
+</code></pre>
 
 <h4>CSS:</h4>
 
-```
+<pre><code>
 .transform
 {
 **display**
@@ -16644,10 +16311,10 @@ deg
 )
 ;
 }
-```
+</code></pre>
 
-> The default value for the transform-origin property is which is the
-> center of the element.
+The default value for the transform-origin property is which is the
+center of the element.
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ch29">Chapter 29: 3D Transforms</h2>
@@ -16657,7 +16324,7 @@ deg
 
 <h4>CSS</h4>
 
-```
+<pre><code>
 div
 .needle
 {
@@ -16729,11 +16396,11 @@ px
 #272727
 ;
 }
-```
+</code></pre>
 
 <h4>HTML</h4>
 
-```
+<pre><code>
 **&lt;**
 **div**
 class
@@ -16743,39 +16410,39 @@ class
 **&lt;**
 **/div**
 **&gt;**
-```
+</code></pre>
 
-> In the above example, a needle or compass pointer shape is created
-> using 3D transforms. Generally when we apply the rotate transform on
-> an element, the rotation happens only in the Z-axis and at best we
-> will end up with diamond shapes only. But when a rotateY transform is
-> added on top of it, the element gets squeezed in the Y-axis and thus
-> ends up looking like a needle. The more the rotation of the Y-axis the
-> more squeezed the element looks.
+In the above example, a needle or compass pointer shape is created
+using 3D transforms. Generally when we apply the rotate transform on
+an element, the rotation happens only in the Z-axis and at best we
+will end up with diamond shapes only. But when a rotateY transform is
+added on top of it, the element gets squeezed in the Y-axis and thus
+ends up looking like a needle. The more the rotation of the Y-axis the
+more squeezed the element looks.
 
   rotateX           (   85deg        )   rotateZ              (   45deg
   ----------------- --- ------------ --- -------------------- --- ------------
 
-> The output of the above example would be a needle resting on its tip.
-> For creating a needle that is resting on its base, the rotation should
-> be along the X-axis instead of along Y-axis. So the transform
-> property&apos;s value would have to be something like );.
->
-> &lbrack;&lbrack;This pen&rbrack;&rbrack;(http://codepen.io/hari_shanx/pen/YXzoBo) uses
-> a similar approach to create something that resembles the Safari logo
-> or a compass dial.
->
-> **Screenshot of element with no transform:**
+The output of the above example would be a needle resting on its tip.
+For creating a needle that is resting on its base, the rotation should
+be along the X-axis instead of along Y-axis. So the transform
+property&apos;s value would have to be something like );.
+
+&lbrack;&lbrack;This pen&rbrack;&rbrack;(http://codepen.io/hari_shanx/pen/YXzoBo) uses
+a similar approach to create something that resembles the Safari logo
+or a compass dial.
+
+**Screenshot of element with no transform:**
 
 !&lbrack;&rbrack;(./images/image209.jpg){width="1.6979166666666667in"
 height="1.6979166666666667in"}
 
-> **Screenshot of element with only 2D transform:**
+**Screenshot of element with only 2D transform:**
 
 !&lbrack;&rbrack;(./images/image210.jpg){width="2.3541666666666665in"
 height="2.3645833333333335in"}
 
-> **Screenshot of element with 3D transform:**
+**Screenshot of element with 3D transform:**
 
 !&lbrack;&rbrack;(./images/image211.jpg){width="0.7395833333333334in"
 height="2.4791666666666665in"}
@@ -16784,7 +16451,7 @@ height="2.4791666666666665in"}
 
 <h4>HTML:</h4>
 
-```
+<pre><code>
 **&lt;**
 **div**
 id
@@ -16806,11 +16473,11 @@ HOVER
 **&lt;**
 **/div**
 **&gt;**
-```
+</code></pre>
 
 <h4>CSS:</h4>
 
-```
+<pre><code>
 &ast;
 {
 **margin**
@@ -17062,7 +16729,7 @@ deg
 0
 ;
 }
-```
+</code></pre>
 
 &lbrack;&lbrack;View example with additional hover
 effect&rbrack;&rbrack;(http://codepen.io/web-tiki/pen/azeKNy)
@@ -17070,25 +16737,25 @@ effect&rbrack;&rbrack;(http://codepen.io/web-tiki/pen/azeKNy)
 !&lbrack;&rbrack;(./images/image212.jpg){width="7.48037510936133in"
 height="3.642194881889764in"}
 
-> In this example, the text is transformed to make it look like it is
-> going into the screen away from the user.
->
-> The shadow is transformed accordingly so it follows the text. As it is
-> made with a pseudo element and the data attribute, it inherits the
-> transforms form it&apos;s parent (the H1 tag).
->
-> The white &quot;light&quot; is made with a pseudo element on the #title
-> element. It is skewed and uses border-radius for the rounded corner.
+In this example, the text is transformed to make it look like it is
+going into the screen away from the user.
+
+The shadow is transformed accordingly so it follows the text. As it is
+made with a pseudo element and the data attribute, it inherits the
+transforms form it&apos;s parent (the H1 tag).
+
+The white &quot;light&quot; is made with a pseudo element on the #title
+element. It is skewed and uses border-radius for the rounded corner.
 
 ## Section 29.3: backface-visibility
 
-> The backface-visibility property relates to 3D transforms.
->
-> With 3D transforms and the backface-visibility property, you&apos;re able
-> to rotate an element such that the original front of an element no
-> longer faces the screen.
->
-> For example, this would flip an element away from the screen:
+The backface-visibility property relates to 3D transforms.
+
+With 3D transforms and the backface-visibility property, you&apos;re able
+to rotate an element such that the original front of an element no
+longer faces the screen.
+
+For example, this would flip an element away from the screen:
 
 &lbrack;&lbrack;JSFIDDLE&rbrack;&rbrack;(https://jsfiddle.net/3z3z843c/)
 
@@ -17242,11 +16909,11 @@ hidden
 
 }
 
-> Firefox 10+ and IE 10+ support backface-visibility without a prefix.
-> Opera, Chrome, Safari, iOS, and Android all need
-> -webkit-backface-visibility.
->
-> It has 4 values:
+Firefox 10+ and IE 10+ support backface-visibility without a prefix.
+Opera, Chrome, Safari, iOS, and Android all need
+-webkit-backface-visibility.
+
+It has 4 values:
 
 1.  **visible** (default) - the element will always be visible even when
     not facing the screen.
@@ -17260,10 +16927,10 @@ hidden
 
 ## Section 29.4: 3D cube
 
-> 3D transforms can be use to create many 3D shapes. Here is a simple 3D
-> CSS cube example:
->
-> *HTML:*
+3D transforms can be use to create many 3D shapes. Here is a simple 3D
+CSS cube example:
+
+<h4>HTML:</h4>
 
 **&lt;**
 
@@ -17319,7 +16986,7 @@ class
 
 **&gt;**
 
-> *CSS:*
+*CSS:*
 
 body
 
@@ -17439,12 +17106,12 @@ height="6.386666666666667in"}
 
 <a href="http://codepen.io/web-tiki/pen/NNwqBa">View this example</a>
 
-> Additional styling is added in the demo and a transform is applied on
-> hover to view the 6 faces of the cube.
->
-> Should be noted that:
->
-> 4 faces are made with pseudo elements chained transforms are applied
+Additional styling is added in the demo and a transform is applied on
+hover to view the 6 faces of the cube.
+
+Should be noted that:
+
+4 faces are made with pseudo elements chained transforms are applied
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ch30">Chapter 30: Filter Property</h2>
@@ -24258,7 +23925,7 @@ px
 <h2 id="ch44">Chapter 44: Clipping and Masking</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
-| **          | > **Details**                                          |
+| **          | **Details**                                          |
 | Parameter** |                                                        |
 |-------------|--------------------------------------------------------|
 | clip-source | A URL which can point to an inline SVG element (or) an |
@@ -24504,14 +24171,14 @@ transparent
 
 <h4>HTML</h4>
 
-```
+<pre><code>
 **&lt;**
 **div**
 **&gt;**
 **&lt;**
 **/div**
 **&gt;**
-```
+</code></pre>
 
 > In the above example there is an element with an image as its
 > background. The mask that is applied on the image (using CSS) makes it
@@ -24539,7 +24206,7 @@ transparent
 
 <h4>CSS:</h4>
 
-```
+<pre><code>
 div
 {
 **width**
@@ -24571,18 +24238,18 @@ at
 ;
 */&ast; refer remarks before usage &ast;/*
 }
-```
+</code></pre>
 
 <h4>HTML</h4>
 
-```
+<pre><code>
 **&lt;**
 **div**
 **&gt;**
 **&lt;**
 **/div**
 **&gt;**
-```
+</code></pre>
 
 > This example shows how to clip a div to a circle. The element is
 > clipped into a circle whose radius is 30% based on the dimensions of
@@ -24596,11 +24263,11 @@ at
 
 circle
 
-```
+<pre><code>
 (
 radius at x y
 )
-```
+</code></pre>
 
 &lbrack;**&lbrack;View Example&rbrack;**&rbrack;(https://jsfiddle.net/webtiki/qp69n494/)
 **Output:**
@@ -24611,7 +24278,7 @@ radius at x y
 
 <h4>CSS:</h4>
 
-```
+<pre><code>
 div
 {
 **width**
@@ -24647,18 +24314,18 @@ polygon
 ;
 */&ast; refer remarks before usage &ast;/*
 }
-```
+</code></pre>
 
 <h4>HTML:</h4>
 
-```
+<pre><code>
 **&lt;**
 **div**
 **&gt;**
 **&lt;**
 **/div**
 **&gt;**
-```
+</code></pre>
 
 > In the above example, a **polygonal** clipping path is used to clip
 > the square (200 x 200) element into a triangle shape. The output shape
@@ -24688,7 +24355,7 @@ polygon
 
 > <h4>CSS</h4>
 
-```
+<pre><code>
 div {
   **width**: 200px;
   **height**: 200px;
@@ -24703,7 +24370,7 @@ div {
     );
 /* check remarks before using */
   }
-```
+</code></pre>
 
 <h4>HTML</h4>
 >
@@ -27066,21 +26733,21 @@ middle
 > image or video, Object-fit accepts the following five values:
 >
 > **FILL**
-```
+<pre><code>
 **object-fit**: fill;
-```
+</code></pre>
 > Fill stretches the image to fit the content box without regard to the
 > image&apos;s original aspect ratio.
 >
-```
+<pre><code>
 > **CONTAIN****object-fit**:contain;
-```
+</code></pre>
 > Contain fits the image in the box&apos;s height or width while maintaining
 > the image&apos;s aspect ratio.
 >
-```
+<pre><code>
 > **COVER****object-fit**:cover;
-```
+</code></pre>
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 264.  (xxx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -27167,22 +26834,14 @@ scale-down
 > **Elements:** Part of blocks that have no standalone meaning and are
 > semantically tied to their blocks.
 
-  -----------------------------------------------------------------------
   menu item         , list item,          checkbox caption
-  ----------------- --------------------- -------------------------------
-
-  -----------------------------------------------------------------------
 
 > Examples are & header title
 >
-> **Modifiers:** Flags on a block or element, used to change appearance
+> <b>Modifiers:</b> Flags on a block or element, used to change appearance
 > or behavior
 
-  -----------------------------------------------------------------------
   color yellow
-  -----------------------------------------------------------------------
-
-  -----------------------------------------------------------------------
 
 > Examples are disabled, highlighted, checked, fixed, size big &
 >
@@ -27190,11 +26849,7 @@ scale-down
 > and flexibility of your CSS code. The way to achieve this, is to apply
 > the following rules.
 
-  -----------------------------------------------------------------------
   blockname&minus;-modifiername        and   blockname&lowbar;&lowbar;elementname&minus;-
-  ------------------------------- ----- ---------------------------------
-
-  -----------------------------------------------------------------------
 
 > Block styles are never dependent on other elements on a page
 >
@@ -27208,7 +26863,7 @@ scale-down
 > the block or element it is modifying except the properties the
 > modifier is supposed to modify
 >
-> **Code example**
+> <b>Code example</b>
 >
 > If you apply BEM to your form elements, your CSS selectors should look
 > something like this:
@@ -27226,9 +26881,9 @@ scale-down
 >
 > The corresponding HTML should look something like this:
 
-**&lt;**
+<b>&lt;</b>
 
-**form**
+<b>form</b>
 
 class
 
@@ -27236,11 +26891,11 @@ class
 
 &quot;form form&minus;-theme-xmas form&minus;-simple&quot;
 
-**&gt;**
+<b>&gt;</b>
 
-**&lt;**
+<b>&lt;</b>
 
-**input**
+<b>input</b>
 
 class
 
@@ -27254,11 +26909,11 @@ type
 
 &quot;text&quot;
 
-**/&gt;**
+<b>/&gt;</b>
 
-**&lt;**
+<b>&lt;</b>
 
-**input**
+<b>input</b>
 
 class
 
@@ -27272,37 +26927,30 @@ type
 
 &quot;submit&quot;
 
-**/&gt;**
+<b>/&gt;</b>
 
-**&lt;**
+<b>&lt;</b>
 
-**/form**
+<b>/form</b>
 
-**&gt;**
+<b>&gt;</b>
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ch53">Chapter 53: Browser Support & Prefixes</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-
-**Prefix Browser(s)**
+<b>Prefix Browser(s)</b>
 
 > -webkit- Google Chrome, Safari, newer versions of Opera 12 and up,
 > Android, Blackberry and UC browsers -moz- Mozilla Firefox
 
 -ms- Internet Explorer, Edge
 
-  -----------------------------------------------------------------------
-  -o-                                 
-  ----------------------------------- -----------------------------------
-  , -xv-                              
-
-  -----------------------------------------------------------------------
-
 > Opera until version 12
 >
 > -khtml- Konquerer
-
-## Section 53.1: Transitions
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h3 id="ch53-1">Section 53.1: Transitions</h3>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 div
 
@@ -27350,7 +26998,7 @@ ease
 
 ;
 
-**transition**
+<b>transition</b>
 
 :
 
@@ -27436,7 +27084,7 @@ deg
 
 ;
 
-**transform**
+<b>transform</b>
 
 :
 
@@ -27483,7 +27131,7 @@ deg
 > comes into play. It overrides the most common inconsistencies and
 > fixes known bugs.
 >
-> **What does it do**
+> <b>What does it do</b>
 >
 > Preserves useful defaults, unlike many CSS resets.
 >
@@ -27962,7 +27610,7 @@ screen {
 }
 </code></pre>
 
-| <b>&commat;media</b> &bsol;&bsol;0             | > screen { }                           |
+| <b>&commat;media</b> &bsol;&bsol;0             | screen { }                           |
 
 > Everything between is processed only by I
 
