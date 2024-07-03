@@ -2285,11 +2285,9 @@ function, always take care of the space between two values calc(100% - 80px).</p
   <b>left</b>: calc (50&percnt; &minus; 50px / 2); /* width divided by 2 */
 }</code></pre>
 
-
 <h4>HTML:</h4>
 
 <pre><code><b>&lt;</b><b>div</b> class=&quot;center&quot;<b>&gt;</b><b>&lt;</b><b>/div</b><b>&gt;</b></code></pre>
-
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch6-7">Section 6.7: Using line-height</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -2414,7 +2412,7 @@ sure the div/image you apply the code to has a parent with a height.</p>
 caused by space character rendered. Could be eliminated by
 nudging .centered (nudge distance depends on font family),
 or by zeroing font-size in .parent and resetting it back
-(probably to 1rem) in .centered. &ast; */
+(probably to 1rem) in .centered. */
   <b>margin-right</b>: -0.25em;
 }
 /* The element to be centered, can also be of any width and height */
@@ -2428,40 +2426,9 @@ or by zeroing font-size in .parent and resetting it back
 
 <h4>HTML:</h4>
 
-<pre><code>
-<b>&lt;</b>
-
-<b>div</b>
-
-class
-
-=
-
-&quot;block&quot;
-
-<b>&gt;</b>
-
-<b>&lt;</b>
-
-<b>div</b>
-
-class=&quot;centered&quot;
-
-<b>&gt;</b>
-
-<b>&lt;</b>
-
-<b>/div</b>
-
-<b>&gt;</b>
-
-<b>&lt;</b>
-
-<b>/div</b>
-
-<b>&gt;</b>
-</code></pre>
-
+<pre><code><b>&lt;</b><b>div</b> class=&quot;block&quot;<b>&gt;</b><b>&lt;</b>
+  <b>div</b> class=&quot;centered&quot;<b>&gt;</b><b>&lt;</b><b>/div</b><b>&gt;</b>
+<b>&lt;</b><b>/div</b><b>&gt;</b></code></pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="6-11">Section 6.11: Centering vertically and horizontally without worrying about height or width</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -2469,32 +2436,68 @@ class=&quot;centered&quot;
 element and center it both horizontally and vertically <b>without
 worrying about its height or width</b>.</p>
 
+<h4>The outer container</h4>
+<ul>
+  <li>should have <b>display</b>: table;</li>
+</ul>
+
+<h4>The inner container</h4>
+
+<ul>
+  <li>should have <b>display</b>: table-cell;</li>
+  <li>should have <b>vertical-align</b>: middle;</li>
+  <li>should have <b>text-align</b>: center;</li>
+</ul>
+
+<h4>The content box</h4>
+<ul>
+  <li>should have <b>display</b>: inline-block;</li>
+  <li>should re-adjust the horizontal text-alignment to eg. <b>text-align</b>:
+  left; or <b>text-align</b>: right;, unless you want text to be centered</li>
+</ul>
+
+<h4>Demo</h4>
+
+<h4>HTML:</h4>
+
+<pre><code><b>&lt;</b><b>div</b> class=&quot;outer-container&quot;<b>&gt;</b>
+  <b>&lt;</b><b>div</b> class=&quot;inner-container&quot;<b>&gt;</b>
+    <b>&lt;</b><b>div</b> class=&quot;centered-content&quot;<b>&gt;</b>
+      You can put anything here!
+    <b>&lt;</b><b>/div</b><b>&gt;</b>
+  <b>&lt;</b><b>/div</b><b>&gt;</b>
+<b>&lt;</b><b>/div</b><b>&gt;</b></code></pre>
+
+<h4>CSS:</h4>
+
+<pre><code>body {
+  <b>margin</b>: 0;
+}
+.outer-container {
+  <b>position</b>: absolute;
   <b>display</b>: table;
-
-<b>The outer container</b> should have
-
-<b>The inner container</b>
-
+  <b>width</b>: 100&percnt;;  /* This could be ANY width */
+  <b>height</b>: 100&percnt;; /* This could be ANY height */
+  <b>background</b>: #ccc;
+}
+.inner-container {
   <b>display</b>: table-cell;
-
   <b>vertical-align</b>: middle;
-
   <b>text-align</b>: center;
-
-should have should have should have
-
-<b>The content box</b>
-
+}
+.centered-content {
   <b>display</b>: inline-block;
+  <b>text-align</b>: left;
+  <b>background</b>: #fff;
+  <b>padding</b>: 20px;
+  <b>border</b>: 1px solid #000;
+}</code></pre>
 
-  <b>text-align</b>: left;           or    <b>text-align</b>: right;
+<p>See also <a href="http://jsfiddle.net/WXLsY/621/">this jsFiddle!</a></p>
 
-should have
-
-should re-adjust the horizontal text-alignment to eg. , unless you
-want text to be centered
-
-<b>Demo</b>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h3 id="ch6-12">Section 6.12: Vertically align an image inside div</h3>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 <h4>HTML:</h4>
 
@@ -2506,7 +2509,434 @@ class
 
 =
 
-&quot;outer-container&quot;
+&quot;wrap&quot;
+
+<b>&gt;</b>
+
+<b>&lt;</b>
+
+<b>img</b>
+
+src
+
+=
+
+&quot;http://lorempixel.com/400/200/&quot;
+
+<b>/&gt;</b>
+
+<b>&lt;</b>
+
+<b>/div</b>
+
+<b>&gt;</b>
+
+<h4>CSS</h4>
+
+.wrap
+
+{
+
+<b>height</b>
+
+:
+
+50
+
+px
+
+;
+
+*/&ast; max image height &ast;/*
+
+<b>width</b>
+
+:
+
+100
+
+px
+
+;
+
+<b>border</b>
+
+:
+
+1
+
+px
+
+solid
+
+blue
+
+;
+
+<b>text-align</b>
+
+:
+
+center
+
+;
+
+}
+
+.wrap
+
+:
+
+before
+
+{
+
+<b>content</b>
+
+:
+
+&quot;&quot;
+
+;
+
+<b>display</b>
+
+:
+
+inline-block
+
+;
+
+<b>height</b>
+
+:
+
+100
+
+&percnt;
+
+;
+
+<b>vertical-align</b>
+
+:
+
+middle
+
+;
+
+<b>width</b>
+
+:
+
+1
+
+px
+
+;
+
+}
+
+img
+
+{
+
+<b>vertical-align</b>
+
+:
+
+middle
+
+;
+
+}
+
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h3 id="ch6-13">Section 6.13: Centering with fixed size</h3>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+
+> If the size of your content is fixed, you can use absolute positioning
+> to 50% with margin that reduces half of your content&apos;s width and
+> height:
+>
+> <h4>HTML:</h4>
+
+<b>&lt;</b>
+
+<b>div</b>
+
+class
+
+=
+
+&quot;center&quot;
+
+<b>&gt;</b>
+
+Center vertically and horizontally
+
+<b>&lt;</b>
+
+<b>/div</b>
+
+<b>&gt;</b>
+
+<h4>CSS:</h4>
+
+.center
+
+{
+
+<b>position</b>
+
+:
+
+absolute
+
+;
+
+<b>background</b>
+
+:
+
+#ccc
+
+;
+
+<b>left</b>
+
+:
+
+50
+
+&percnt;
+
+;
+
+<b>width</b>
+
+:
+
+150
+
+px
+
+;
+
+<b>margin-left</b>
+
+:
+
+-75
+
+px
+
+;
+
+*/&ast; width &ast; -0.5 &ast;/*
+
+<b>top</b>
+
+:
+
+50
+
+&percnt;
+
+;
+
+<b>height</b>
+
+:
+
+200
+
+px
+
+;
+
+<b>margin-top</b>
+
+:
+
+-100
+
+px
+
+;
+
+*/&ast; height &ast; -0.5 &ast;/*
+
+}
+
+<b>Horizontal centering with only fixed width</b>
+
+You can center the element horizontally even if you don&apos;t know the
+height of the content:
+
+<h4>HTML:</h4>
+
+<b>&lt;</b>
+
+<b>div</b>
+
+class
+
+=
+
+&quot;center&quot;
+
+<b>&gt;</b>
+
+Center only horizontally
+
+<b>&lt;</b>
+
+<b>/div</b>
+
+<b>&gt;</b>
+
+<h4>CSS:</h4>
+
+.center
+
+{
+
+<b>position</b>
+
+:
+
+absolute
+
+;
+
+<b>background</b>
+
+:
+
+#ccc
+
+;
+
+<b>left</b>
+
+:
+
+50
+
+&percnt;
+
+;
+
+<b>width</b>
+
+:
+
+150
+
+px
+
+;
+
+<b>margin-left</b>
+
+:
+
+-75
+
+px
+
+;
+
+*/&ast; width &ast; -0.5 &ast;/*
+
+}
+
+<b>Vertical centering with fixed height</b>
+
+You can center the element vertically if you know the element&apos;s
+height:
+
+<h4>HTML:</h4>
+
+<b>&lt;</b>
+
+<b>div</b>
+
+class
+
+=
+
+&quot;center&quot;
+
+<b>&gt;</b>
+
+Center only vertically
+
+<b>&lt;</b>
+
+<b>/div</b>
+
+<b>&gt;</b>
+
+<h4>CSS:</h4>
+
+<pre><code>.center {
+  <b>position</b>: absolute;
+  <b>background</b>: #ccc;
+  <b>top</b>:50&percnt;;
+  <b>height</b>: 200px;
+  <b>margin-top</b>: -100px;
+/* width &ast; -0.5 */
+}</code></pre>
+
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h3 id="ch6-14">Section 6.14: Vertically align dynamic height elements</h3>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+
+Applying css intuitively doesn&apos;t produce the desired results because
+
+  **vertical-align**:middle
+
+  **margin-top**:auto          and      **margin-bottom**:auto
+
+  **margin-top**:-50%
+
+
+> &lbrack;***&lbrack;isn&apos;t&rbrack;*** &lbrack;applicable to block-level
+> elements&rbrack;&rbrack;(http://www.w3.org/TR/CSS21/visudet.html#propdef-vertical-align)
+> &lbrack;&lbrack;used values would compute as&rbrack;
+> ***&lbrack;zero&rbrack;***&rbrack;(http://www.w3.org/TR/CSS2/visudet.html#Computing_heights_and_margins)
+>
+> &lbrack;&lbrack;percentage-based margin values are calculated relative to
+> the&rbrack; ***&lbrack;width&rbrack;*** &lbrack;of containing
+> block&rbrack;&rbrack;(http://www.w3.org/TR/CSS2/box.html#margin-properties)
+>
+> For widest browser support, a workaround with helper elements:
+>
+> <h4>HTML:</h4>
+
+**&lt;</b>
+
+**div</b>
+
+class
+
+=
+
+&quot;vcenter&minus;-container&quot;
+
+**&gt;</b>
+
+**&lt;</b>
+
+**div</b>
+
+class
+
+=
+
+&quot;vcenter&minus;-helper&quot;
 
 <b>&gt;</b>
 
@@ -2518,7 +2948,74 @@ class
 
 =
 
-&quot;inner-container&quot;
+&quot;vcenter&minus;-content&quot;
+
+<b>&gt;</b>
+
+*&lt;!&minus;-*
+
+*stuff*
+
+*&minus;-&gt;*
+
+<b>&lt;</b>
+
+<b>/div</b>
+
+<b>&gt;</b>
+
+<b>&lt;</b>
+
+<b>/div</b>
+
+<b>&gt;</b>
+
+<b>&lt;</b>
+
+<b>/div</b>
+
+<b>&gt;</b>
+
+<h4>CSS</h4>
+
+<pre><center>.vcenter &minus;- container {
+  <b>display</b>: table;
+  <b>height</b>: 100&percnt;;
+  <b>position</b>: absolute;
+  <b>overflow</b>: hidden;
+  <b>width</b>: 100&percnt;;
+}
+.vcenter &minus;- helper {
+  <b>display</b>: table-cell;
+  <b>vertical-align</b>: middle;
+}
+.vcenter &minus;- content {
+  <b>margin</b>: 0 auto;
+  <b>width</b>: 200px;
+}</center></pre>
+
+<a href="http://jsfiddle.net/ovfiddle/yVAW9/">Demo (jsFiddle)</a> from
+<a href="http://stackoverflow.com/a/12417336/1081234">original question</a>.
+
+<p>This approach works with dynamic height elements respects content flow is supported
+by legacy browsers.</p>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h3 id="ch6-15">Section 6.15: Horizontal and Vertical centering using table layout</h3>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+
+One could easily center a child element using table display property.
+
+<h4>HTML:</h4>
+
+<b>&lt;</b>
+
+<b>div</b>
+
+class
+
+=
+
+&quot;wrapper&quot;
 
 <b>&gt;</b>
 
@@ -2530,11 +3027,21 @@ class
 
 =
 
-&quot;centered-content&quot;
+&quot;parent&quot;
 
 <b>&gt;</b>
 
-You can put anything here!
+<b>&lt;</b>
+
+<b>div</b>
+
+class
+
+=
+
+&quot;child&quot;
+
+<b>&gt;</b>
 
 <b>&lt;</b>
 
@@ -2556,31 +3063,9 @@ You can put anything here!
 
 <h4>CSS:</h4>
 
-body
+.wrapper
 
 {
-
-<b>margin</b>
-
-:
-
-0
-
-;
-
-}
-
-.outer-container
-
-{
-
-<b>position</b>
-
-:
-
-absolute
-
-;
 
 <b>display</b>
 
@@ -2590,41 +3075,45 @@ table
 
 ;
 
+<b>vertical-align</b>
+
+:
+
+center
+
+;
+
 <b>width</b>
 
 :
 
-100
+200
 
-&percnt;
+px
 
 ;
-
-*/&ast; This could be ANY width &ast;/*
 
 <b>height</b>
 
 :
 
-100
+200
 
-&percnt;
+px
 
 ;
 
-*/&ast; This could be ANY height &ast;/*
-
-<b>background</b>
+<b>background-color</b>
 
 :
 
-#ccc
+#9e9e9e
 
 ;
 
 }
 
-.inner-container
+.parent
 
 {
 
@@ -2654,7 +3143,7 @@ center
 
 }
 
-.centered-content
+.child
 
 {
 
@@ -2666,106 +3155,23 @@ inline-block
 
 ;
 
+<b>vertical-align</b>
+
+:
+
+middle
+
+;
+
 <b>text-align</b>
 
 :
 
-left
+center
 
 ;
 
-<b>background</b>
-
-:
-
-#fff
-
-;
-
-<b>padding</b>
-
-:
-
-20
-
-px
-
-;
-
-<b>border</b>
-
-:
-
-1
-
-px
-
-solid
-
-#000
-
-;
-
-}
-
-See also &lbrack;<b>&lbrack;this
-Fiddle&rbrack;**&rbrack;(http://jsfiddle.net/WXLsY/621/)!
-
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch6-12">Section 6.12: Vertically align an image inside div</h3>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-
-<h4>HTML:</h4>
-
-**&lt;**
-
-**div**
-
-class
-
-=
-
-&quot;wrap&quot;
-
-**&gt;**
-
-**&lt;**
-
-**img**
-
-src
-
-=
-
-&quot;http://lorempixel.com/400/200/&quot;
-
-**/&gt;**
-
-**&lt;**
-
-**/div**
-
-**&gt;**
-
-<h4>CSS</h4>
-
-.wrap
-
-{
-
-**height**
-
-:
-
-50
-
-px
-
-;
-
-*/&ast; max image height &ast;/*
-
-**width**
+<b>width</b>
 
 :
 
@@ -2775,684 +3181,17 @@ px
 
 ;
 
-**border**
-
-:
-
-1
-
-px
-
-solid
-
-blue
-
-;
-
-**text-align**
-
-:
-
-center
-
-;
-
-}
-
-.wrap
-
-:
-
-before
-
-{
-
-**content**
-
-:
-
-&quot;&quot;
-
-;
-
-**display**
-
-:
-
-inline-block
-
-;
-
-**height**
+<b>height</b>
 
 :
 
 100
 
-&percnt;
-
-;
-
-**vertical-align**
-
-:
-
-middle
-
-;
-
-**width**
-
-:
-
-1
-
 px
 
 ;
 
-}
-
-img
-
-{
-
-**vertical-align**
-
-:
-
-middle
-
-;
-
-}
-
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch6-13">Section 6.13: Centering with fixed size</h3>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-
-> If the size of your content is fixed, you can use absolute positioning
-> to 50% with margin that reduces half of your content&apos;s width and
-> height:
->
-> <h4>HTML:</h4>
-
-**&lt;**
-
-**div**
-
-class
-
-=
-
-&quot;center&quot;
-
-**&gt;**
-
-Center vertically and horizontally
-
-**&lt;**
-
-**/div**
-
-**&gt;**
-
-<h4>CSS:</h4>
-
-.center
-
-{
-
-**position**
-
-:
-
-absolute
-
-;
-
-**background**
-
-:
-
-#ccc
-
-;
-
-**left**
-
-:
-
-50
-
-&percnt;
-
-;
-
-**width**
-
-:
-
-150
-
-px
-
-;
-
-**margin-left**
-
-:
-
--75
-
-px
-
-;
-
-*/&ast; width &ast; -0.5 &ast;/*
-
-**top**
-
-:
-
-50
-
-&percnt;
-
-;
-
-**height**
-
-:
-
-200
-
-px
-
-;
-
-**margin-top**
-
-:
-
--100
-
-px
-
-;
-
-*/&ast; height &ast; -0.5 &ast;/*
-
-}
-
-**Horizontal centering with only fixed width**
-
-You can center the element horizontally even if you don&apos;t know the
-height of the content:
-
-<h4>HTML:</h4>
-
-**&lt;**
-
-**div**
-
-class
-
-=
-
-&quot;center&quot;
-
-**&gt;**
-
-Center only horizontally
-
-**&lt;**
-
-**/div**
-
-**&gt;**
-
-<h4>CSS:</h4>
-
-.center
-
-{
-
-**position**
-
-:
-
-absolute
-
-;
-
-**background**
-
-:
-
-#ccc
-
-;
-
-**left**
-
-:
-
-50
-
-&percnt;
-
-;
-
-**width**
-
-:
-
-150
-
-px
-
-;
-
-**margin-left**
-
-:
-
--75
-
-px
-
-;
-
-*/&ast; width &ast; -0.5 &ast;/*
-
-}
-
-**Vertical centering with fixed height**
-
-You can center the element vertically if you know the element&apos;s
-height:
-
-<h4>HTML:</h4>
-
-**&lt;**
-
-**div**
-
-class
-
-=
-
-&quot;center&quot;
-
-**&gt;**
-
-Center only vertically
-
-**&lt;**
-
-**/div**
-
-**&gt;**
-
-<h4>CSS:</h4>
-
-.center
-
-{
-
-**position**
-
-:
-
-absolute
-
-;
-
-**background**
-
-:
-
-#ccc
-
-;
-
-**top**
-
-:
-
-50
-
-&percnt;
-
-;
-
-**height**
-
-:
-
-200
-
-px
-
-;
-
-**margin-top**
-
-:
-
--100
-
-px
-
-;
-
-*/&ast; width &ast; -0.5 &ast;/*
-
-}
-
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch6-14">Section 6.14: Vertically align dynamic height elements</h3>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-
-> Applying css intuitively doesn&apos;t produce the desired results because
-
-  **vertical-align**:middle
-
-  **margin-top**:auto          and      **margin-bottom**:auto
-
-  **margin-top**:-50%
-
-
-> &lbrack;***&lbrack;isn&apos;t&rbrack;*** &lbrack;applicable to block-level
-> elements&rbrack;&rbrack;(http://www.w3.org/TR/CSS21/visudet.html#propdef-vertical-align)
-> &lbrack;&lbrack;used values would compute as&rbrack;
-> ***&lbrack;zero&rbrack;***&rbrack;(http://www.w3.org/TR/CSS2/visudet.html#Computing_heights_and_margins)
->
-> &lbrack;&lbrack;percentage-based margin values are calculated relative to
-> the&rbrack; ***&lbrack;width&rbrack;*** &lbrack;of containing
-> block&rbrack;&rbrack;(http://www.w3.org/TR/CSS2/box.html#margin-properties)
->
-> For widest browser support, a workaround with helper elements:
->
-> <h4>HTML:</h4>
-
-**&lt;**
-
-**div**
-
-class
-
-=
-
-&quot;vcenter&minus;-container&quot;
-
-**&gt;**
-
-**&lt;**
-
-**div**
-
-class
-
-=
-
-&quot;vcenter&minus;-helper&quot;
-
-**&gt;**
-
-**&lt;**
-
-**div**
-
-class
-
-=
-
-&quot;vcenter&minus;-content&quot;
-
-**&gt;**
-
-*&lt;!&minus;-*
-
-*stuff*
-
-*&minus;-&gt;*
-
-**&lt;**
-
-**/div**
-
-**&gt;**
-
-**&lt;**
-
-**/div**
-
-**&gt;**
-
-**&lt;**
-
-**/div**
-
-**&gt;**
-
-<h4>CSS</h4>
-
-<pre><center>.vcenter &minus;- container {
-  **display**: table;
-  **height**: 100&percnt;;
-  **position**: absolute;
-  **overflow**: hidden;
-  **width**: 100&percnt;;
-}
-.vcenter &minus;- helper {
-  **display**: table-cell;
-  **vertical-align**: middle;
-}
-.vcenter &minus;- content {
-  **margin**: 0 auto;
-  **width**: 200px;
-}</center></pre>
-
-<a href="http://jsfiddle.net/ovfiddle/yVAW9/">Demo (jsFiddle)</a> from
-<a href="http://stackoverflow.com/a/12417336/1081234">original question</a>.
-
-<p>This approach works with dynamic height elements respects content flow is supported
-by legacy browsers.</p>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch6-15">Section 6.15: Horizontal and Vertical centering using table layout</h3>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-
-One could easily center a child element using table display property.
-
-<h4>HTML:</h4>
-
-**&lt;**
-
-**div**
-
-class
-
-=
-
-&quot;wrapper&quot;
-
-**&gt;**
-
-**&lt;**
-
-**div**
-
-class
-
-=
-
-&quot;parent&quot;
-
-**&gt;**
-
-**&lt;**
-
-**div**
-
-class
-
-=
-
-&quot;child&quot;
-
-**&gt;**
-
-**&lt;**
-
-**/div**
-
-**&gt;**
-
-**&lt;**
-
-**/div**
-
-**&gt;**
-
-**&lt;**
-
-**/div**
-
-**&gt;**
-
-<h4>CSS:</h4>
-
-.wrapper
-
-{
-
-**display**
-
-:
-
-table
-
-;
-
-**vertical-align**
-
-:
-
-center
-
-;
-
-**width**
-
-:
-
-200
-
-px
-
-;
-
-**height**
-
-:
-
-200
-
-px
-
-;
-
-**background-color**
-
-:
-
-#9e9e9e
-
-;
-
-}
-
-.parent
-
-{
-
-**display**
-
-:
-
-table-cell
-
-;
-
-**vertical-align**
-
-:
-
-middle
-
-;
-
-**text-align**
-
-:
-
-center
-
-;
-
-}
-
-.child
-
-{
-
-**display**
-
-:
-
-inline-block
-
-;
-
-**vertical-align**
-
-:
-
-middle
-
-;
-
-**text-align**
-
-:
-
-center
-
-;
-
-**width**
-
-:
-
-100
-
-px
-
-;
-
-**height**
-
-:
-
-100
-
-px
-
-;
-
-**background-color**
+<b>background-color</b>
 
 :
 
@@ -3466,7 +3205,7 @@ teal
 <h2 id="ch7">Chapter 7: The Box Model</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
-**Parameter Detail**
+<b>Parameter Detail</b>
 
 > content-box Width and height of the element only includes content
 > area. padding-box Width and height of the element includes content and
@@ -3498,28 +3237,28 @@ Diagram from CSS2.2 Working Draft <a href="https://www.w3.org/TR/CSS22/box.html#
 > The perimeter of each of the four areas is called an *edge*. Each edge
 > defines a *box.*
 >
-> The innermost rectangle is the **content box**. The width and height
+> The innermost rectangle is the <b>content box</b>. The width and height
 > of this depends on the element&apos;s rendered content (text, images and
 > any child elements it may have).
 >
-> Next is the **padding box**, as defined by the padding property. If
+> Next is the <b>padding box</b>, as defined by the padding property. If
 > there is no padding width defined, the padding edge is equal to the
 > content edge.
 >
-> Then we have the **border box**, as defined by the border property. If
+> Then we have the <b>border box</b>, as defined by the border property. If
 > there is no border width defined, the border edge is equal to the
 > padding edge.
 >
-> The outermost rectangle is the **margin box**, as defined by the
+> The outermost rectangle is the <b>margin box</b>, as defined by the
 > margin property. If there is no margin width defined, the margin edge
 > is equal to the border edge.
 >
-> **Example** div {
+> <b>Example</b> div {
 
 <pre><code>
-**border**: 5px solid red;
-**margin**: 50px;
-**padding**: 20px;
+<b>border</b>: 5px solid red;
+<b>margin</b>: 50px;
+<b>padding</b>: 20px;
 }
 </code></pre>
 
@@ -3709,41 +3448,41 @@ one and other. (The spacing will be the sum of two margins.)
 .bottom {
  <b>margin</b>: 15px;
 }
-**&lt;****div** class = &quot;top&quot;**&gt;**
+<b>&lt;</b><b>div</b> class = &quot;top&quot;<b>&gt;</b>
   some content
-**&lt;****/div****&gt;**
-**&lt;****div** class = &quot;bottom&quot;**&gt;**
+<b>&lt;</b><b>/div</b><b>&gt;</b>
+<b>&lt;</b><b>div</b> class = &quot;bottom&quot;<b>&gt;</b>
   some more content
-**&lt;****/div****&gt;**</code></pre>
+<b>&lt;</b><b>/div</b><b>&gt;</b></code></pre>
 
 > These elements will be spaced 15px apart vertically. The margins
 > overlap as much as they can, but the larger margin will determine the
 > spacing between the elements.
 >
-> **Overlapping margin gotcha**
+> <b>Overlapping margin gotcha</b>
 
 <pre><code>.outer-top {
-  **margin**: 10px;
+  <b>margin</b>: 10px;
 }
 .inner-top {
-  **margin**: 15px;
+  <b>margin</b>: 15px;
 }
 .outer-bottom {
-  **margin**: 20px;
+  <b>margin</b>: 20px;
 }
 .inner-bottom {
-  **margin**: 25px;
+  <b>margin</b>: 25px;
 }
-**&lt;****div** class = &quot;outer-top&quot;**&gt;**
-    **&lt;****div** class=&quot;inner-top&quot;**&gt;**
+<b>&lt;</b><b>div</b> class = &quot;outer-top&quot;<b>&gt;</b>
+    <b>&lt;</b><b>div</b> class=&quot;inner-top&quot;<b>&gt;</b>
       some content
-    **&lt;****/div****&gt;**
-  **&lt;****/div****&gt;**
-  **&lt;****div** class=&quot;outer-bottom&quot;**&gt;**
-    **&lt;****div** class=&quot;inner-bottom&quot;**&gt;**
+    <b>&lt;</b><b>/div</b><b>&gt;</b>
+  <b>&lt;</b><b>/div</b><b>&gt;</b>
+  <b>&lt;</b><b>div</b> class=&quot;outer-bottom&quot;<b>&gt;</b>
+    <b>&lt;</b><b>div</b> class=&quot;inner-bottom&quot;<b>&gt;</b>
       some more content
-  **&lt;****/div****&gt;**
-**&lt;****/div****&gt;**</code></pre>
+  <b>&lt;</b><b>/div</b><b>&gt;</b>
+<b>&lt;</b><b>/div</b><b>&gt;</b></code></pre>
 
 > What will be the spacing between the two texts? (hover to see answer)
 >
@@ -3753,7 +3492,7 @@ one and other. (The spacing will be the sum of two margins.)
 > Now, what about if we add some borders to the markup above.
 
 <pre><code>div {
-  **border**: 1px solid red;
+  <b>border</b>: 1px solid red;
 }</code></pre>
 
 > What will be the spacing between the two texts? (hover to see answer)
@@ -3765,29 +3504,29 @@ one and other. (The spacing will be the sum of two margins.)
 > 10px + 1px + 15px + 20px + 1px + 25px + 1px. (The 1px&apos;s are the
 > borders&period;..)
 >
-> **Collapsing Margins Between Parent and Child Elements:**
+> <b>Collapsing Margins Between Parent and Child Elements:</b>
 >
 <h4>HTML::</h4>
 
-<pre><code.**&lt;****h****1****&gt;**Title**&lt;****/h****1****&gt;**
-**&lt;****div****&gt;**
-  **&lt;****p****&gt;**Paragraph**&lt;****/p****&gt;**
-**&lt;****/div****&gt;**</code></pre>
+<pre><code><b>&lt;</b><b>h</b><b>1</b><b>&gt;</b>Title<b>&lt;</b><b>/h</b><b>1</b><b>&gt;</b>
+<b>&lt;</b><b>div</b><b>&gt;</b>
+  <b>&lt;</b><b>p</b><b>&gt;</b>Paragraph<b>&lt;</b><b>/p</b><b>&gt;</b>
+<b>&lt;</b><b>/div</b><b>&gt;</b></code></pre>
 
 
 <h4>CSS:</h4>
 
 <pre><code>h1 {
-  **margin**: 0;
-  **background**: #cff;
+  <b>margin</b>: 0;
+  <b>background</b>: #cff;
 }
   div {
-  **margin**: 50px 0 0 0;
-  **background**: #cfc;
+  <b>margin</b>: 50px 0 0 0;
+  <b>background</b>: #cfc;
 }
   p {
-  **margin**: 25px 0 0 0;
-  **background**: #cf9;
+  <b>margin</b>: 25px 0 0 0;
+  <b>background</b>: #cf9;
 }</code></pre>
 
 > In the example above, only the largest margin applies. You may have
@@ -3818,17 +3557,17 @@ of the selected div. <a href="https://jsfiddle.net/wm0100x9/1/">View Result</a>.
 <h4>HTML:</h4>
 
 <pre><code>
-**&lt;****div** id=&quot;myDiv&quot;**&gt;****&lt;****/div****&gt;**
+<b>&lt;</b><b>div</b> id=&quot;myDiv&quot;<b>&gt;</b><b>&lt;</b><b>/div</b><b>&gt;</b>
 </code></pre>
 
 <h4>CSS:</h4>
 
 <pre><code>
 #myDiv {
-  **margin-left**: 30px;
-  **height**: 40px;
-  **width**: 40px;
-  **background-color**: red;
+  <b>margin-left</b>: 30px;
+  <b>height</b>: 40px;
+  <b>width</b>: 40px;
+  <b>background-color</b>: red;
 }
 </code></pre>
 
@@ -3844,7 +3583,7 @@ widths to each side of the selected elements. The syntax for doing
 this is as follows:
 
 <pre><code>
-**margin**: &lt;top&gt; &lt;right&gt; &lt;bottom&gt; &lt;left&gt;;
+<b>margin</b>: &lt;top&gt; &lt;right&gt; &lt;bottom&gt; &lt;left&gt;;
 </code></pre>
 
 > The following example applies a zero-width margin to the top of the
@@ -3855,17 +3594,17 @@ this is as follows:
 <h4>HTML:</h4>
 
 <pre><code>
-**&lt;****div**id=&quot;myDiv&quot;**&gt;****&lt;****/div****&gt;**
+<b>&lt;</b><b>div</b>id=&quot;myDiv&quot;<b>&gt;</b><b>&lt;</b><b>/div</b><b>&gt;</b>
 </code></pre>
 
 <h4>CSS:</h4>
 
 <pre><code>
 #myDiv {
-  **margin**: 0 10px 50px 100px;
-  **height**: 40px;
-  **width**: 40px;
-  **background-color**: red;
+  <b>margin</b>: 0 10px 50px 100px;
+  <b>height</b>: 40px;
+  <b>width</b>: 40px;
+  <b>background-color</b>: red;
 }
 </code></pre>
 
@@ -3875,29 +3614,29 @@ this is as follows:
 
 <pre><code>
 p {
-  **margin**: 1px; /* 1px margin in all directions */
+  <b>margin</b>: 1px; /* 1px margin in all directions */
 
   /* equals to: */
-  **margin**: 1px 1px;
+  <b>margin</b>: 1px 1px;
 
   /* equals to: */
-  **margin**: 1px 1px 1px;
+  <b>margin</b>: 1px 1px 1px;
 
   /* equals to: */
-  **margin**: 1px 1px 1px 1px;
+  <b>margin</b>: 1px 1px 1px 1px;
 }
 </code></pre>
 
 > Another exapmle:
 
 <pre><code>p {
-  **margin**: 10px 15px; /* 10px margin-top & bottom And 15px margin-right & left */
+  <b>margin</b>: 10px 15px; /* 10px margin-top & bottom And 15px margin-right & left */
 
   /* equals to: */
-  **margin**: 10px 15px 10px 15px;
+  <b>margin</b>: 10px 15px 10px 15px;
 
   /* equals to: */
-  **margin**: 10px 15px 10px;
+  <b>margin</b>: 10px 15px 10px;
 
   /* margin left will be calculated from the margin right value (=15px) */
 }</code></pre>
@@ -3906,8 +3645,8 @@ p {
 <h3 id="ch8-4">Section 8.4: Horizontally center elements on a page using margin</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
-> As long as the element is a **block**, and it has an **explicitly set
-> width value**, margins can be used to center block elements on a page
+> As long as the element is a <b>block</b>, and it has an <b>explicitly set
+> width value</b>, margins can be used to center block elements on a page
 > horizontally.
 >
 > We add a width value that is lower than the width of the window and
@@ -3916,8 +3655,8 @@ p {
 
 <pre><code>
 #myDiv {
-  **width**:80&percnt;;
-  **margin**:0 auto;
+  <b>width</b>:80&percnt;;
+  <b>margin</b>:0 auto;
 }
 </code></pre>
 
@@ -3943,19 +3682,19 @@ margin-left and margin-right would be relative to its parent element.
 
 <pre><code>
 .parent {
-  **width**: 500px;
-  **height**: 300px;
+  <b>width</b>: 500px;
+  <b>height</b>: 300px;
 }
 .child {
-  **width**: 100px;
-  **height**: 100px;
-  **margin-left**: 10&percnt;; /* (parentWidth &ast; 10/100) =&gt; 50px */
+  <b>width</b>: 100px;
+  <b>height</b>: 100px;
+  <b>margin-left</b>: 10&percnt;; /* (parentWidth &ast; 10/100) =&gt; 50px */
 }
 </code></pre>
 
 > But that is not the case, when comes to margin-top and margin-bottom.
 > Both these properties, in percentages, aren&apos;t relative to the height
-> of the parent container but to the **width** of the parent container.
+> of the parent container but to the <b>width</b> of the parent container.
 >
 > So,
 
@@ -3977,10 +3716,10 @@ values. This property can be used to <b>overlap elements without
 absolute positioning</b>.</p>
 
 <pre><code>div {
-  **display**: inline;
+  <b>display</b>: inline;
 }
 #over {
-  **margin-left**: -20px;
+  <b>margin-left</b>: -20px;
 }
 &lt;div&gt;Base div&lt;/div&gt;
 &lt;div id=&quot;over&quot;&gt;Overlapping div&lt;/div&gt;</code></pre>
@@ -4002,56 +3741,56 @@ absolute positioning</b>.</p>
 <h4>Four values:</h4>
 
 <pre><code>
-**&lt;**
-**style**
-**&gt;**
+<b>&lt;</b>
+<b>style</b>
+<b>&gt;</b>
 .myDiv {
 padding: 25px 50px 75px 100px; /&ast; top right bottom left; &ast;/
 }
-**&lt;**
-**/style**
-**&gt;**
-**&lt;**
-**div**
+<b>&lt;</b>
+<b>/style</b>
+<b>&gt;</b>
+<b>&lt;</b>
+<b>div</b>
 class
 =
 &quot;myDiv&quot;
-**&gt;**
-**&lt;**
-**/div**
-**&gt;**
+<b>&gt;</b>
+<b>&lt;</b>
+<b>/div</b>
+<b>&gt;</b>
 </code></pre>
 
 <h4>Three values:</h4>
 
 <pre><code>
-**&lt;**
-**style**
-**&gt;**
+<b>&lt;</b>
+<b>style</b>
+<b>&gt;</b>
 .myDiv
 {
 padding: 25px 50px 75px; /&ast; top left/right bottom &ast;/
 }
-**&lt;**
-**/style**
-**&gt;**
-**&lt;**
-**div**
+<b>&lt;</b>
+<b>/style</b>
+<b>&gt;</b>
+<b>&lt;</b>
+<b>div</b>
 class
 =
 &quot;myDiv&quot;
-**&gt;**
-**&lt;**
-**/div**
-**&gt;**
+<b>&gt;</b>
+<b>&lt;</b>
+<b>/div</b>
+<b>&gt;</b>
 </code></pre>
 
 </h4>Two values:</h4>
 
 <pre><code>
-**&lt;**
-**style**
-**&gt;**
+<b>&lt;</b>
+<b>style</b>
+<b>&gt;</b>
 .myDiv
 {
 padding: 25px 50px; /&ast; top/bottom left/right &ast;/
@@ -9150,22 +8889,11 @@ First of all, we use CSS to apply ; to the container. This will create
 <h4>CSS:</h4>
 
 <pre><code>
-.cards
-{
-**display**
-:
-flex
-;
+.cards {
+  **display**: flex;
 }
-.card
-{
-**border**
-:
-1
-px
-solid
-#ccc
-;
+.card {
+  **border**: 1px solid #ccc;
 **margin**
 :
 10
@@ -9297,305 +9025,204 @@ Note: &lbrack;&lbrack;Does not work on IE versions under 10&rbrack;&rbrack;(http
 <h3 id="ch17-1">Section 17.1: Calculating Selector Specificity</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
-> Each individual CSS Selector has its own specificity value. Every
-> selector in a sequence increases the sequence&apos;s overall specificity.
-> Selectors fall into one of three different specificity groups: *A*,
-> *B* and *c*. When multiple selector sequences select a given element,
-> the browser uses the styles applied by the sequence with the highest
-> overall specificity.
+Each individual CSS Selector has its own specificity value. Every
+selector in a sequence increases the sequence&apos;s overall specificity.
+Selectors fall into one of three different specificity groups: *A*,
+*B* and *c*. When multiple selector sequences select a given element,
+the browser uses the styles applied by the sequence with the highest
+overall specificity.
 
 **Group Comprised of Examples**
 
 A.  id selectors #foo class selectors .bar
 
-  title
-  hover
-  colspan                                       =      &quot;2&quot;
-  nth-child
+title
+hover
+colspan                                       =      &quot;2&quot;
+nth-child
 
 B.  attribute selectors &lbrack;&rbrack;, &lbrack;&rbrack; pseudo-classes :, :(2)
 
 type selectors div, li
 
-  ::before                 ,   ::first-letter
+::before                 ,   ::first-letter
 
 
-> *c* pseudo-elements
->
-> Group *A* is the most specific, followed by Group *B*, then finally
-> Group *c*.
->
-> The universal selector (&ast;) and combinators (like &gt; and &#126;) have no
-> specificity.
->
-> **Example 1: Specificity of various selector sequences**
+*c* pseudo-elements
 
+Group *A* is the most specific, followed by Group *B*, then finally
+Group *c*.
+
+The universal selector (&ast;) and combinators (like &gt; and &#126;) have no
+specificity.
+
+**Example 1: Specificity of various selector sequences**
+
+```
 #foo
-
 #baz
-
 {
-
 }
-
-*/&ast; a=2, b=0, c=0 &ast;/*
-
+/* a=2, b=0, c=0 */
 #foo
-
 .bar
-
 {
-
 }
-
-*/&ast; a=1, b=1, c=0 &ast;/*
-
+/* a=1, b=1, c=0 */
 #foo
-
 {
-
 }
-
-*/&ast; a=1, b=0, c=0 &ast;/*
-
+/* a=1, b=0, c=0 */
 .bar
-
 :
-
 hover
-
 {
-
 }
-
-*/&ast; a=0, b=2, c=0 &ast;/*
-
+/* a=0, b=2, c=0 */
 div
-
 .bar
-
 {
-
 }
-
-*/&ast; a=0, b=1, c=1 &ast;/*
-
+/* a=0, b=1, c=1 */
 :
-
 hover
-
 {
-
 }
-
-*/&ast; a=0, b=1, c=0 &ast;/*
-
+/* a=0, b=1, c=0 */
 &lbrack;
-
 title
-
 &rbrack;
-
 {
-
 }
-
-*/&ast; a=0, b=1, c=0 &ast;/*
-
+/* a=0, b=1, c=0 */
 .bar
-
 {
-
 }
-
-*/&ast; a=0, b=1, c=0 &ast;/*
-
+/* a=0, b=1, c=0 */
 div ul
-
 &plus;
-
 li
-
 {
-
 }
-
-*/&ast; a=0, b=0, c=3 &ast;/*
-
+/* a=0, b=0, c=3 */
 p
-
 ::
-
 after
-
 {
-
 }
-
-*/&ast; a=0, b=0, c=2 &ast;/*
-
+/* a=0, b=0, c=2 */
 &ast;::
-
 before
-
 {
-
 }
-
-*/&ast; a=0, b=0, c=1 &ast;/*
-
+/* a=0, b=0, c=1 */
 ::
-
 before
-
 {
-
 }
-
-*/&ast; a=0, b=0, c=1 &ast;/*
-
+/* a=0, b=0, c=1 */
 div
-
 {
-
 }
-
-*/&ast; a=0, b=0, c=1 &ast;/*
-
+/* a=0, b=0, c=1 */
 &ast;
-
 {
-
 }
+```
 
-*/&ast; a=0, b=0, c=0 &ast;/*
+/* a=0, b=0, c=0 */
 
-> **Example 2: How specificity is used by the browser**
->
-> Imagine the following CSS implementation:
+**Example 2: How specificity is used by the browser**
 
+Imagine the following CSS implementation:
+
+```
 #foo
-
 {
-
 **color**
-
 :
-
 blue
-
 ;
-
 }
-
 .bar
-
 {
-
 **color**
-
 :
-
 red
-
 ;
-
 **background**
-
 :
-
 black
-
 ;
-
 }
+```
 
-> Here we have an ID selector which declares color as *blue*, and a
-> class selector which declares color as *red* and background as
-> *black*.
->
-> An element with an ID of #foo and a class of .bar will be selected by
-> both declarations. ID selectors have a Group *A* specificity and class
-> selectors have a Group *B* specificity. An ID selector outweighs any
-> number of class selectors.
+Here we have an ID selector which declares color as *blue*, and a
+class selector which declares color as *red* and background as
+*black*.
 
-  **color**   :   blue   ; from the #foo selector and the      **background**   :   black
+An element with an ID of #foo and a class of .bar will be selected by
+both declarations. ID selectors have a Group *A* specificity and class
+selectors have a Group *B* specificity. An ID selector outweighs any
+number of class selectors.
 
-> Because of this, ; from the .bar selector will be
->
-> applied to the element. The higher specificity of the ID selector will
-> cause the browser to ignore the .bar selector&apos;s color declaration.
->
-> Now imagine a different CSS implementation:
+**color**   :   blue   ; from the #foo selector and the      **background**   :   black
 
+Because of this, ; from the .bar selector will be
+
+applied to the element. The higher specificity of the ID selector will
+cause the browser to ignore the .bar selector&apos;s color declaration.
+
+Now imagine a different CSS implementation:
+
+```
 .bar
-
 {
-
 **color**
-
 :
-
 red
-
 ;
-
 **background**
-
 :
-
 black
-
 ;
-
 }
-
 .baz
-
 {
-
 **background**
-
 :
-
 white
-
 ;
-
 }
+```
 
-> Here we have two class selectors; one of which declares color as *red*
-> and background as *black*, and the other declares background as
-> *white*.
->
-> An element with both the .bar and .baz classes will be affected by
-> both of these declarations, however the problem we have now is that
-> both .bar and .baz have an identical Group *B* specificity. The
-> cascading nature of CSS resolves this for us: as .baz is defined
-> *after* .bar, our element ends up with the *red* color from .bar but
-> the *white* background from .baz.
->
-> **Example 3: How to manipulate specificity**
->
-> The last snippet from Example 2 above can be manipulated to ensure our
-> .bar class selector&apos;s color declaration is used instead of that of
-> the .baz class selector.
+Here we have two class selectors; one of which declares color as *red*
+and background as *black*, and the other declares background as
+*white*.
 
+An element with both the .bar and .baz classes will be affected by
+both of these declarations, however the problem we have now is that
+both .bar and .baz have an identical Group *B* specificity. The
+cascading nature of CSS resolves this for us: as .baz is defined
+*after* .bar, our element ends up with the *red* color from .bar but
+the *white* background from .baz.
+
+**Example 3: How to manipulate specificity**
+
+The last snippet from Example 2 above can be manipulated to ensure our
+.bar class selector&apos;s color declaration is used instead of that of
+the .baz class selector.
+
+```
 .bar
-
 {
-
 }
-
-*/&ast; a=0, b=1, c=0 &ast;/*
-
+/* a=0, b=1, c=0 */
 .baz
-
 {
-
 }
-
 */&ast; a=0, b=1, c=0 &ast;/*
+```
 
 > The most common way to achieve this would be to find out what other
 > selectors can be applied to the .bar selector sequence. For example,
@@ -9604,23 +9231,17 @@ white
 > *C* specificity, which would override the .baz selector&apos;s lack
 > thereof:
 
+```
 span
-
 .bar
-
 {
-
 }
-
-*/&ast; a=0, b=1, c=1 &ast;/*
-
+/* a=0, b=1, c=1 */
 .baz
-
 {
-
 }
-
-*/&ast; a=0, b=1, c=0 &ast;/*
+/* a=0, b=1, c=0 */
+```
 
   .bar.bar
 
@@ -9634,23 +9255,17 @@ span
 > This still selects any element with a class of .bar, but now has
 > double the Group *B* specificity:
 
+```
 .bar
-
 .bar
-
 {
-
 }
-
-*/&ast; a=0, b=2, c=0 &ast;/*
-
+/* a=0, b=2, c=0 */
 .baz
-
 {
-
 }
-
-*/&ast; a=0, b=1, c=0 &ast;/*
+/* a=0, b=1, c=0 */
+```
 
 > **!important and inline style declarations**
 >
@@ -9681,117 +9296,88 @@ span
   b                    =5,                            c
 
 
-> A common misconception about CSS specificity is that the Group *A*,
-> *B* and *c* values should be combined with each other (a=1,=1 =&gt;
-> 151). This is **not** the case. If this were the case, having 20 of a
-> Group *B* or *c* selector would be enough to override a single Group
-> *A* or *B* selector respectively. The three groups should be regarded
-> as individual levels of specificity. Specificity cannot be represented
-> by a single value.
->
-> When creating your CSS style sheet, you should maintain the lowest
-> specificity as possible. If you need to make the specificity a little
-> higher to overwrite another method, make it higher but as low as
-> possible to make it higher. You shouldn&apos;t need to have a selector
-> like this:
+A common misconception about CSS specificity is that the Group *A*,
+*B* and *c* values should be combined with each other (a=1,=1 =&gt;
+151). This is **not** the case. If this were the case, having 20 of a
+Group *B* or *c* selector would be enough to override a single Group
+*A* or *B* selector respectively. The three groups should be regarded
+as individual levels of specificity. Specificity cannot be represented
+by a single value.
 
+When creating your CSS style sheet, you should maintain the lowest
+specificity as possible. If you need to make the specificity a little
+higher to overwrite another method, make it higher but as low as
+possible to make it higher. You shouldn&apos;t need to have a selector
+like this:
+
+```
 body
-
 .page
-
 header
-
 .container
-
 nav div
-
 #main-nav
-
 li a
-
 {
-
 }
+```
 
-> This makes future changes harder and pollutes that css page.
->
-> You can calculate the specificity of your selector
-> &lbrack;&lbrack;here&rbrack;&rbrack;(http://specificity.keegan.st/)
+This makes future changes harder and pollutes that css page.
+
+You can calculate the specificity of your selector
+here (http://specificity.keegan.st/)
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch17-2">Section 17.2: The !important declaration</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+The !important declaration is used to override the usual specificity
+in a style sheet by giving a higher priority to a
+property                :   value !important
+rule. Its usage is: ;
 
-> The !important declaration is used to override the usual specificity
-> in a style sheet by giving a higher priority to a
-
-  property                :   value !important
- 
- 
-> rule. Its usage is: ;
-
+```
 #mydiv
-
 {
-
 **font-weight**
-
 :
-
 bold
-
 !important
-
 ;
-
-*/&ast; This property won&apos;t be overridden*
-
-*by the rule below &ast;/*
-
+/* This property won&apos;t be overridden*
+*by the rule below */
 }
-
 #outerdiv
-
 #mydiv
-
 {
-
 **font-weight**
-
 :
-
 normal
-
 ;
-
-*/&ast; #mydiv font-weight won&apos;t be set to normal*
-
-*even if it has a higher specificity because*
-
-*of the !important declaration above &ast;/*
-
+/* #mydiv font-weight won&apos;t be set to normal
+ even if it has a higher specificity because
+ of the !important declaration above */
 }
+```
 
-> Avoiding the usage of !important is strongly recommended (unless
-> absolutely necessary), because it will disturb the natural flow of css
-> rules which can bring uncertainty in your style sheet. Also it is
-> important to note that when multiple !important declarations are
-> applied to the same rule on a certain element, the one with the higher
-> specificity will be the ona applied.
->
-> Here are some examples where using !important declaration can be
-> justified:
->
-> If your rules shouldn&apos;t be overridden by any inline style of the
-> element which is written inside style attribute of the html element.
->
-> To give the user more control over the web accessibility, like
-> increasing or decreasing size of the font-size, by overriding the
-> author style using !important.
->
-> For testing and debugging using inspect element.
->
-> See also:
+Avoiding the usage of !important is strongly recommended (unless
+absolutely necessary), because it will disturb the natural flow of css
+rules which can bring uncertainty in your style sheet. Also it is
+important to note that when multiple !important declarations are
+applied to the same rule on a certain element, the one with the higher
+specificity will be the ona applied.
+
+Here are some examples where using !important declaration can be
+justified:
+
+If your rules shouldn&apos;t be overridden by any inline style of the
+element which is written inside style attribute of the html element.
+
+To give the user more control over the web accessibility, like
+increasing or decreasing size of the font-size, by overriding the
+author style using !important.
+For testing and debugging using inspect element.
+
+See also:
 
 &lbrack;**&lbrack;W3C - 6 Assigning property values, Cascading, and Inheritance &minus;-
 6.4.2 !important
@@ -9801,13 +9387,13 @@ rules&rbrack;**&rbrack;(https://www.w3.org/TR/CSS22/cascade.html#important-rules
 <h3 id="ch17-3">Section 17.3: Cascading</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
-> Cascading and specificity are used together to determine the final
-> value of a CSS styling property. They also define the mechanisms for
-> resolving conflicts in CSS rule sets.
->
-> **CSS Loading order**
->
-> Styles are read from the following sources, in this order:
+Cascading and specificity are used together to determine the final
+value of a CSS styling property. They also define the mechanisms for
+resolving conflicts in CSS rule sets.
+
+**CSS Loading order**
+
+Styles are read from the following sources, in this order:
 
 1.  User Agent stylesheet (The styles supplied by the browser vendor)
 
@@ -9817,208 +9403,139 @@ rules&rbrack;**&rbrack;(https://www.w3.org/TR/CSS22/cascade.html#important-rules
 3.  Author stylesheet (Author here means the creator of the
     webpage/website)
 
-  **&lt;style**
+**&lt;style**
  
  
-> Maybe one or more .css files
->
-> In the **&gt;** element of the HTML document
+Maybe one or more .css files
+
+In the **&gt;** element of the HTML document
 
 4.  Inline styles (In the style attribute on an HTML element)
 
-> The browser will lookup the corresponding style(s) when rendering an
-> element.
->
-> **How are conflicts resolved?**
->
-> When only one CSS rule set is trying to set a style for an element,
-> then there is no conflict, and that rule set is used.
->
-> When multiple rule sets are found with conflicting settings, first the
-> Specificty rules, and then the Cascading rules are used to determine
-> what style to use.
->
-> **Example 1 - Specificity rules**
+The browser will lookup the corresponding style(s) when rendering an
+element.
 
+**How are conflicts resolved?**
+
+When only one CSS rule set is trying to set a style for an element,
+then there is no conflict, and that rule set is used.
+
+When multiple rule sets are found with conflicting settings, first the
+Specificty rules, and then the Cascading rules are used to determine
+what style to use.
+
+**Example 1 - Specificity rules**
+
+```
 .mystyle
-
 {
-
 **color**
-
 :
-
 blue
-
 ;
-
 }
-
-*/&ast; specificity: 0, 0, 1, 0 &ast;/*
-
+/* specificity: 0, 0, 1, 0 */
 div
-
 {
-
 **color**
-
 :
-
 red
-
 ;
-
 }
-
-*/&ast; specificity: 0, 0, 0, 1 &ast;/*
-
+/* specificity: 0, 0, 0, 1 */
 **&lt;**
-
 **div**
-
 class
-
 =
-
 &quot;mystyle&quot;
-
 **&gt;**
-
 Hello World
-
 **&lt;**
-
 **/div**
-
 **&gt;**
+```
 
-> What color will the text be? (hover to see the answer)
+What color will the text be? (hover to see the answer)
 
 blue
 
-> First the specificity rules are applied, and the one with the highest
-> specificity &quot;wins&quot;.
->
-> **Example 2 - Cascade rules with identical selectors**
->
-> *External css file*
+First the specificity rules are applied, and the one with the highest
+specificity &quot;wins&quot;.
 
+**Example 2 - Cascade rules with identical selectors**
+
+*External css file*
+
+```
 .class
-
 {
-
 **background**
-
 :
-
 #FFF
-
 ;
-
 }
+```
 
-> *Internal css (in HTML file)*
+*Internal css (in HTML file)*
 
+```
 **&lt;**
-
 **style**
-
 **&gt;**
-
 .class {
-
 background: #000;
-
 }
-
 **&lt;**
-
 **style**
-
 **&gt;**
+```
 
-> In this case, where you have identical selectors, the cascade kicks
-> in, and determines that the last one loaded &quot;wins&quot;.
+In this case, where you have identical selectors, the cascade kicks
+in, and determines that the last one loaded &quot;wins&quot;.
 
 **Example 3 - Cascade rules after Specificity rules**
 
+```
 body
-
 &gt;
-
 .mystyle
-
 {
-
 **background-color**
-
 :
-
 blue
-
 ;
-
 }
-
-*/&ast; specificity: 0, 0, 1, 1 &ast;/*
-
+/* specificity: 0, 0, 1, 1 */
 .otherstyle
-
 &gt;
-
 div
-
 {
-
 **background-color**
-
 :
-
 red
-
 ;
-
 }
-
-*/&ast; specificity: 0, 0, 1, 1 &ast;/*
-
+/* specificity: 0, 0, 1, 1 */
 **&lt;**
-
 **body**
-
 class
-
 =
-
 &quot;otherstyle&quot;
-
 **&gt;**
-
 **&lt;**
-
 **div**
-
 class
-
 =
-
 &quot;mystyle&quot;
-
 **&gt;**
-
 Hello World
-
 **&lt;**
-
 **/div**
-
 **&gt;**
-
 **&lt;**
-
 **/body**
-
 **&gt;**
+```
 
 What color will the background be?
 
@@ -10027,20 +9544,20 @@ red
   .otherstyle                                        &gt;   div
  
  
-> After applying the specificity rules, there&apos;s still a conflict
-> between blue and red, so the cascading rules are applied on top of the
-> specificity rules. Cascading looks at the load order of the rules,
-> whether inside the same .css file or in the collection of style
-> sources. The last one loaded overrides any earlier ones. In this case,
-> the rule &quot;wins&quot;.
->
-> **A final note**
->
-> Selector specificity always take precedence.
->
-> Stylesheet order break ties.
->
-> Inline styles trump everything.
+After applying the specificity rules, there&apos;s still a conflict
+between blue and red, so the cascading rules are applied on top of the
+specificity rules. Cascading looks at the load order of the rules,
+whether inside the same .css file or in the collection of style
+sources. The last one loaded overrides any earlier ones. In this case,
+the rule &quot;wins&quot;.
+
+**A final note**
+
+Selector specificity always take precedence.
+
+Stylesheet order break ties.
+
+Inline styles trump everything.
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch17-4">Section 17.4: More complex specificity example</h3>
@@ -25986,7 +25503,7 @@ auto
 
 ;
 
-**width**
+<b>width</b>
 
 :
 
@@ -25996,7 +25513,7 @@ px
 
 ;
 
-**height**
+<b>height</b>
 
 :
 
@@ -26006,7 +25523,7 @@ px
 
 ;
 
-**border**
+<b>border</b>
 
 :
 
@@ -26024,11 +25541,11 @@ solid
 
 ## Section 50.6: Centering with pseudo element
 
-> **HTML:**
+> <b>HTML:</b>
 
-**&lt;**
+<b>&lt;</b>
 
-**div**
+<b>div</b>
 
 class
 
@@ -26036,11 +25553,11 @@ class
 
 &quot;wrapper&quot;
 
-**&gt;**
+<b>&gt;</b>
 
-**&lt;**
+<b>&lt;</b>
 
-**div**
+<b>div</b>
 
 class
 
@@ -26048,27 +25565,27 @@ class
 
 &quot;content&quot;
 
-**&gt;**
+<b>&gt;</b>
 
-**&lt;**
+<b>&lt;</b>
 
-**/div**
+<b>/div</b>
 
-**&gt;**
+<b>&gt;</b>
 
-**&lt;**
+<b>&lt;</b>
 
-**/div**
+<b>/div</b>
 
-**&gt;**
+<b>&gt;</b>
 
-> **CSS:**
+> <b>CSS:</b>
 
 .wrapper
 
 {
 
-**min-height**
+<b>min-height</b>
 
 :
 
@@ -26088,7 +25605,7 @@ before
 
 {
 
-**content**
+<b>content</b>
 
 :
 
@@ -26096,7 +25613,7 @@ before
 
 ;
 
-**display**
+<b>display</b>
 
 :
 
@@ -26104,7 +25621,7 @@ inline-block
 
 ;
 
-**height**
+<b>height</b>
 
 :
 
@@ -26114,7 +25631,7 @@ inline-block
 
 ;
 
-**vertical-align**
+<b>vertical-align</b>
 
 :
 
@@ -26128,7 +25645,7 @@ middle
 
 {
 
-**display**
+<b>display</b>
 
 :
 
@@ -26136,7 +25653,7 @@ inline-block
 
 ;
 
-**height**
+<b>height</b>
 
 :
 
@@ -26146,7 +25663,7 @@ px
 
 ;
 
-**vertical-align**
+<b>vertical-align</b>
 
 :
 
@@ -26166,25 +25683,25 @@ middle
 <h3 id="ch51-1">Section 51.1: object-fit</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
-> The **object-fit** property will defines how an element will fit into
+> The <b>object-fit</b> property will defines how an element will fit into
 > a box with an established height and width. Usually applied to an
 > image or video, Object-fit accepts the following five values:
 >
-> **FILL**
+> <b>FILL</b>
 <pre><code>
-**object-fit**: fill;
+<b>object-fit</b>: fill;
 </code></pre>
 > Fill stretches the image to fit the content box without regard to the
 > image&apos;s original aspect ratio.
 >
 <pre><code>
-> **CONTAIN****object-fit**:contain;
+> <b>CONTAIN</b><b>object-fit</b>:contain;
 </code></pre>
 > Contain fits the image in the box&apos;s height or width while maintaining
 > the image&apos;s aspect ratio.
 >
 <pre><code>
-> **COVER****object-fit**:cover;
+> <b>COVER</b><b>object-fit</b>:cover;
 </code></pre>
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -26200,9 +25717,9 @@ middle
 > Cover fills the entire box with the image. The image aspect ratio is
 > preserved, but the image is cropped to the dimensions of the box.
 >
-> **NONE**
+> <b>NONE</b>
 
-**object-fit**
+<b>object-fit</b>
 
 :
 
@@ -26212,9 +25729,9 @@ none
 
 > None ignores the size of the box and is not resized.
 >
-> **SCALE-DOWN**
+> <b>SCALE-DOWN</b>
 
-**object-fit**
+<b>object-fit</b>
 
 :
 
@@ -26265,11 +25782,11 @@ scale-down
 > As the same implies, BEM metholology is all about componentization of
 > your HTML and CSS code into three types of components:
 >
-> **Blocks:** standalone entities that are meaningful on their own
+> <b>Blocks:</b> standalone entities that are meaningful on their own
 >
 > Examples are header, container, menu, checkbox & textbox
 >
-> **Elements:** Part of blocks that have no standalone meaning and are
+> <b>Elements:</b> Part of blocks that have no standalone meaning and are
 > semantically tied to their blocks.
 
   menu item         , list item,          checkbox caption
