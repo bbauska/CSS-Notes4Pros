@@ -989,6 +989,7 @@ Selectors Level 4:</p>
 <div style="load: right">
   <img src="./images/image002.png"
     align="right"
+	width="50%"
     title="Input focused, background blue"
     alt="Input focused, background blue." />
 </div>
