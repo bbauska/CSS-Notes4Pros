@@ -216,7 +216,6 @@ queries:</p>
 
 <pre><code>@import '/print-styles.css' print;
 @import url('landscape.css') screen and (orientation: landscape);</code></pre>
-
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch1-4">Section 1.4: Inline Styles</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -996,8 +995,19 @@ div:focus-within {
   <b>background-color</b>: #1565C0;
 }</code></pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<image about 7x7>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 02/03. input focused, background blue (0x) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p align="right" width="50%">
+<img src="./images/image002.png"
+  style="width:20%"
+  title="Input focused, background blue"
+  alt="Input focused, background blue." />
+</p>
+<p align="center" width="100%">
+<img src="./images/image003.png"
+  style="width:100%"
+  title=":focus-within CSS pseudo-class"
+  alt=":focus-within CSS pseudo-class." />
+</p>
 <!-- page 19 -->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch4-11">Section 4.11: Global boolean with checkbox:checked and &#126; (general sibling combinator)</h3>
@@ -1540,7 +1550,6 @@ image:</p>
   <b>padding</b>: 0;
   <b>margin</b>: 0; 
 }</code></pre>
-
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~ 06. 200x200, circle, triangle and square (xx) ~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left" width="100%">
@@ -1677,19 +1686,19 @@ div &gt; div::after {
   <b>&lt;/p&gt;</b>
 <b>&lt;/div&gt;</b>
 <b>&lt;div&gt;</b>
-  <b>&lt;div</b> class = &quot;cover&quot;<b>&gt;&lt;/div&gt;</b>
+  <b>&lt;div</b> class=&quot;cover&quot;<b>&gt;&lt;/div&gt;</b>
   <b>&lt;p&gt;</b>Note the ducks/geese at the bottom of the image. Most of the water is
     cut, as well as a part of the sky. You don&apos;t see the complete 
     image anymore, but neither do you see any background color;
-    the image<b>&lt;em&gt;</b> covers<b>&lt;/em&gt;</b> all of the <b>&lt;code&gt;</b>&lt;div&gt;<b>&lt;/code&gt;</b>.<b>&lt;/p&gt;</b>
+    the image<b>&lt;em&gt;</b>covers<b>&lt;/em&gt;</b> all of the <b>&lt;code&gt;</b>&lt;div&gt;<b>&lt;/code&gt;</b>.<b>&lt;/p&gt;</b>
 <b>&lt;/div&gt;</b></code></pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ contain & cover images (xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~ 12. example, contain & cover images (xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left" width="100%">
-<img src="./images/contain-cover.png"
+<img src="./images/image012.png"
   style="width:50%"
-  title=""
-  alt="." />
+  title="Example, contain and cover images"
+  alt="Example, contain and cover images." />
 </p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch5-6">Section 5.6: Background Position</h3>
@@ -1855,7 +1864,6 @@ img_2 and img_3 is on bottom.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch5-9">Section 5.9: Background Attachment</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-
 <p>The background-attachment property sets whether a background image is
 fixed or scrolls with the rest of the page.</p>
 
@@ -2489,11 +2497,9 @@ worrying about its height or width</b>.</p>
 }</code></pre>
 
 <p>See also <a href="http://jsfiddle.net/WXLsY/621/">this jsFiddle!</a></p>
-
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch6-12">Section 6.12: Vertically align an image inside div</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-
 <h4>HTML:</h4>
 
 <b>&lt;</b>
