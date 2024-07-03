@@ -985,6 +985,7 @@ Selectors Level 4:</p>
 
 <h4>CSS:</h4>
 
+<p>
 <p align="left" width="50%">
 
   <pre><code>div {
@@ -1010,6 +1011,7 @@ Selectors Level 4:</p>
   style="width:100%"
   title=":focus-within CSS pseudo-class"
   alt=":focus-within CSS pseudo-class." />
+</p>
 </p>
 <!-- page 19 -->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
