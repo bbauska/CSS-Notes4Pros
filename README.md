@@ -893,7 +893,7 @@ attribute selector to avoid the high specificity of the ID selector.</p>
 
 <pre><code><b>&lt;div id="element"&gt;</b>. . .<b>&lt;/div&gt;</b></code></pre>
 
-<h4>CSS</h4>
+<h4>CSS:</h4>
 
 <pre><code>#element { . . . } /* High specificity will override many selectors */
 &lbrack;id="element"&rbrack; { . . .} /* Low specificity, can be overridden easily */</code></pre>
@@ -1089,11 +1089,11 @@ element by a specific ID in CSS, the &num; prefix is used.</p>
 <h3 id="ch4-13">Section 4.13: How to style a Range input</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!-- page 21 -->
-<h4>HTML</h4>
+<h4>HTML:</h4>
 
 <pre><code>&lt;input type="range"&gt;&lt;/input&gt;</code></pre>
 
-<h4>CSS</h4>
+<h4>CSS:</h4>
 
 | <b>Effect</b>  | <b>Pseudo Selector</b>                             |
 |----------------|----------------------------------------------------|
@@ -1163,13 +1163,13 @@ or initial.</p>
 
 <h4>Color names</h4>
 
-<h4>CSS</h4>
+<h4>CSS:</h4>
 
 <pre><code>div {
   <b>background-color</b>: red; /* red */
 }</code></pre>
 
-<h4>HTML</h4>
+<h4>HTML:</h4>
 
 <pre><code>&lt;div&gt;This will have a red background&lt;/div&gt;</code></pre>
 
@@ -1755,7 +1755,7 @@ property has no effect.</p>
   <li>inherit</li>
 </ul>
 
-<h4>CSS</h4>
+<h4>CSS:</h4>
 
 <pre><code>.example {
   <b>width</b>: 300px;
@@ -1769,7 +1769,7 @@ property has no effect.</p>
 .example2 { <b>background-origin</b>: border-box; }
 .example3 { <b>background-origin</b>: content-box;}</code></pre>
 
-<h4>HTML</h4>
+<h4>HTML:</h4>
 
 <pre><code><b>&lt;</b><b>p</b><b>&gt;</b>No background-origin (padding-box is default):<b>&lt;</b><b>/p</b><b>&gt;</b>
 <b>&lt;div</b> class=&quot;example example1&quot;<b>&gt;</b><b>&lt;h2&gt;</b>
@@ -1924,7 +1924,7 @@ div is scrolled.</p>
   <li>inherit applies the setting of the parent to the selected element.</li>
 </ul>
 
-<h4>CSS</h4>
+<h4>CSS:</h4>
 
 <pre><code>.example {
   <b>width</b>:300px;
@@ -1937,7 +1937,7 @@ div is scrolled.</p>
 .example2 { <b>background-origin</b>: border-box; }
 .example3 { <b>background-origin</b>: content-box; }</code></pre>
 
-<h4>HTML</h4>
+<h4>HTML:</h4>
 
 <pre><code><b>&lt;</b><b>p</b><b>&gt;</b>No background-origin (padding-box is default):<b>&lt;</b><b>/p</b><b>&gt;</b>
 
@@ -2220,7 +2220,7 @@ in an element. CSS has the rule <b>text-align</b>: center for this purpose:</p>
 
 <pre><code><b>&lt;</b><b>p</b><b>&gt;</b>Lorem ipsum<b>&lt;</b><b>/p</b><b>&gt;</b></code></pre>
 
-<h4>CSS</h4>
+<h4>CSS:</h4>
 
 <pre><code>p {
   <b>text-align</b>: center;
@@ -2247,7 +2247,7 @@ elements within its parent.</p>
   <b>&lt;</b><b>img</b> class=&quot;center&quot; src=&quot;http://lorempixel.com/400/200/&quot;<b>/&gt;</b>
 <b>&lt;</b><b>/div</b><b>&gt;</b></code></pre>
 
-<h4>CSS</h4>
+<h4>CSS:</h4>
 
 <pre><code>.parent {
   <b>position</b>: relative;
@@ -2319,16 +2319,15 @@ sure the div/image you apply the code to has a parent with a height.</p>
 
 <h4>CSS:</h4>
 
-<pre><code>div
-  .vertical {
-    <b>position</b>: relative;
-    <b>top</b>: 50&percnt;;
-    <b>transform</b>: translateY(-50&percnt;);
-  }</code></pre>
+<pre><code>div .vertical {
+  <b>position</b>: relative;
+  <b>top</b>: 50&percnt;;
+  <b>transform</b>: translateY(-50&percnt;);
+}</code></pre>
 
 <h4>HTML:</h4>
 
-<pre<code><b>&lt;</b><b>div</b> class=&quot;vertical&quot;<b>&gt;</b>Vertical aligned text!<b>&lt;</b><b>/div</b><b>&gt;</b></code></pre>
+<pre><code><b>&lt;</b><b>div</b> class=&quot;vertical&quot;<b>&gt;</b>Vertical aligned text!<b>&lt;</b><b>/div</b><b>&gt;</b></code></pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch6-9">Section 6.9: Centering in relation to another item</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -2352,7 +2351,7 @@ sure the div/image you apply the code to has a parent with a height.</p>
   <b>&lt;</b><b>/div</b><b>&gt;</b>
 <b>&lt;</b><b>/div</b><b>&gt;</b></code></pre>
 
-<h4>CSS</h4>
+<h4>CSS:</h4>
 
 <pre><code>.content &ast; {
   <b>box-sizing</b>: border-box;
@@ -2482,22 +2481,22 @@ worrying about its height or width</b>.</p>
 
   <b>text-align</b>: center;
 
-> should have should have should have
->
-> <b>The content box</b>
+should have should have should have
+
+<b>The content box</b>
 
   <b>display</b>: inline-block;
 
   <b>text-align</b>: left;           or    <b>text-align</b>: right;
 
-> should have
->
-> should re-adjust the horizontal text-alignment to eg. , unless you
-> want text to be centered
->
-> <b>Demo</b>
->
-> <h4>HTML:</h4>
+should have
+
+should re-adjust the horizontal text-alignment to eg. , unless you
+want text to be centered
+
+<b>Demo</b>
+
+<h4>HTML:</h4>
 
 <b>&lt;</b>
 
@@ -2555,7 +2554,7 @@ You can put anything here!
 
 <b>&gt;</b>
 
-> <h4>CSS</h4>
+<h4>CSS:</h4>
 
 body
 
@@ -2748,7 +2747,7 @@ src
 
 **&gt;**
 
-> <h4>CSS</h4>
+<h4>CSS</h4>
 
 .wrap
 
@@ -2898,7 +2897,7 @@ Center vertically and horizontally
 
 **&gt;**
 
-> <h4>CSS</h4>
+<h4>CSS:</h4>
 
 .center
 
@@ -2986,12 +2985,12 @@ px
 
 }
 
-> **Horizontal centering with only fixed width**
->
-> You can center the element horizontally even if you don&apos;t know the
-> height of the content:
->
-> <h4>HTML:</h4>
+**Horizontal centering with only fixed width**
+
+You can center the element horizontally even if you don&apos;t know the
+height of the content:
+
+<h4>HTML:</h4>
 
 **&lt;**
 
@@ -3013,7 +3012,7 @@ Center only horizontally
 
 **&gt;**
 
-> <h4>CSS</h4>
+<h4>CSS:</h4>
 
 .center
 
@@ -3069,12 +3068,12 @@ px
 
 }
 
-> **Vertical centering with fixed height**
->
-> You can center the element vertically if you know the element&apos;s
-> height:
->
-> <h4>HTML:</h4>
+**Vertical centering with fixed height**
+
+You can center the element vertically if you know the element&apos;s
+height:
+
+<h4>HTML:</h4>
 
 **&lt;**
 
@@ -3096,7 +3095,7 @@ Center only vertically
 
 **&gt;**
 
-> <h4>CSS</h4>
+<h4>CSS:</h4>
 
 .center
 
@@ -3238,126 +3237,29 @@ class
 
 **&gt;**
 
-> <h4>CSS</h4>
+<h4>CSS</h4>
 
-.vcenter
-
-&minus;-
-
-container
-
-{
-
-**display**
-
-:
-
-table
-
-;
-
-**height**
-
-:
-
-100
-
-&percnt;
-
-;
-
-**position**
-
-:
-
-absolute
-
-;
-
-**overflow**
-
-:
-
-hidden
-
-;
-
-**width**
-
-:
-
-100
-
-&percnt;
-
-;
-
+<pre><center>.vcenter &minus;- container {
+  **display**: table;
+  **height**: 100&percnt;;
+  **position**: absolute;
+  **overflow**: hidden;
+  **width**: 100&percnt;;
 }
-
-.vcenter
-
-&minus;-
-
-helper
-
-{
-
-**display**
-
-:
-
-table-cell
-
-;
-
-**vertical-align**
-
-:
-
-middle
-
-;
-
+.vcenter &minus;- helper {
+  **display**: table-cell;
+  **vertical-align**: middle;
 }
+.vcenter &minus;- content {
+  **margin**: 0 auto;
+  **width**: 200px;
+}</center></pre>
 
-.vcenter
+<a href="http://jsfiddle.net/ovfiddle/yVAW9/">Demo (jsFiddle)</a> from
+<a href="http://stackoverflow.com/a/12417336/1081234">original question</a>.
 
-&minus;-
-
-content
-
-{
-
-**margin**
-
-:
-
-0
-
-auto
-
-;
-
-**width**
-
-:
-
-200
-
-px
-
-;
-
-}
-
-&lbrack;&lbrack;jsfiddle&rbrack;&rbrack;(http://jsfiddle.net/ovfiddle/yVAW9/) from
-&lbrack;&lbrack;original
-question&rbrack;&rbrack;(http://stackoverflow.com/a/12417336/1081234).
-This approach
-
-> works with dynamic height elements respects content flow is supported
-> by legacy browsers
-
+<p>This approach works with dynamic height elements respects content flow is supported
+by legacy browsers.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch6-15">Section 6.15: Horizontal and Vertical centering using table layout</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -3420,7 +3322,7 @@ class
 
 **&gt;**
 
-> <h4>CSS</h4>
+<h4>CSS:</h4>
 
 .wrapper
 
@@ -3956,7 +3858,7 @@ this is as follows:
 **&lt;****div**id=&quot;myDiv&quot;**&gt;****&lt;****/div****&gt;**
 </code></pre>
 
-<h4>CSS</h4>
+<h4>CSS:</h4>
 
 <pre><code>
 #myDiv {
@@ -4633,7 +4535,7 @@ px
 <h3 id="ch10-7">Section 10.7: Creating a multi-colored border using borderimage</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
-<h4>CSS</h4>
+<h4>CSS:</h4>
 
 <pre><code>
 .bordered
@@ -5431,7 +5333,7 @@ the content to the top and bottom will be clipped.
 
 <b>&gt;</b>
 
-> <h4>CSS</h4>
+<h4>CSS</h4>
 
 div
 
@@ -5507,7 +5409,7 @@ the overflow property.
 
 <b>&gt;</b>
 
-> <h4>CSS</h4>
+> <h4>CSS:</h4>
 
 div
 
@@ -5560,58 +5462,26 @@ scroll
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>HTML:</h4>
 
+```
 <b>&lt;</b>
-
 <b>div</b>
-
 <b>&gt;</b>
-
 Even if this div is too small to display its contents, the content is
 not clipped.
-
 <b>&lt;</b>
-
 <b>/div</b>
-
 <b>&gt;</b>
+```
 
-> <h4>CSS</h4>
+<h4>CSS</h4>
 
-div
+<pre><code>div {
+  <b>width</b>: 50px;
+  <b>height</b>: 50px;
+  <b>overflow</b>: visible;
+}</code></pre>
 
-{
-
-<b>width</b>
-
-:
-
-50
-
-px
-
-;
-
-<b>height</b>
-
-:
-
-50
-
-px
-
-;
-
-<b>overflow</b>
-
-:
-
-visible
-
-;
-
-}
-
-> <b>Result</b>
+<h4>Result</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 34.  (xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="center" width="100%">
@@ -5622,18 +5492,17 @@ visible
 </p>
 <!-- [image034.jpg .67 x 2.427](./images/image034.jpg) -->
 
-> Content is not clipped and will be rendered outside the content box if
-> it exceeds its container size.
-
+<p>Content is not clipped and will be rendered outside the content box if
+it exceeds its container size.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch12-5">Section 12.5: Block Formatting Context Created with Overflow</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
-> Using the overflow property with a value different to visible will
-> create a new <b>block formatting context</b>. This is useful for aligning
-> a block element next to a floated element.
->
-<h4>CSS</h4>
+Using the overflow property with a value different to visible will
+create a new <b>block formatting context</b>. This is useful for aligning
+a block element next to a floated element.
+
+<h4>CSS:</h4>
 
 img
 
@@ -8023,180 +7892,82 @@ q
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>HTML:</h4>
 
+```
 **&lt;**
-
 **div**
-
 id
-
 =
-
 &quot;element-one&quot;
-
 **&gt;**
-
 Hello I am some text.
-
 **&lt;**
-
 **/div**
-
 **&gt;**
-
 **&lt;**
-
 **div**
-
 id
-
 =
-
 &quot;element-two&quot;
-
 **&gt;**
-
 Hello I am some smaller text.
-
 **&lt;**
-
 **/div**
-
 **&gt;**
-
 > **CSS:**
-
 #element-one
-
 {
-
 **font-size**
-
 :
-
 30
-
 px
-
 ;
-
 }
-
 #element-two
-
 {
-
 **font-size**
-
 :
-
 10
-
 px
-
 ;
-
 }
+```
 
-> The text inside #element-one will be 30px in size, while the text in
-> #element-two will be 10px in size.
-
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p>The text inside #element-one will be 30px in size, while the text in #element-two will be 10px in size.</p>
+a<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch15-4">Section 15.4: Text Direction</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
-div
-
-{
-
-**direction**
-
-:
-
-ltr
-
-;
-
-*/&ast; Default, text read read from left-to-right &ast;/*
-
+```
+div {
+  **direction**: ltr; /* Default, text read read from left-to-right */
 }
-
-.ex
-
-{
-
-**direction**
-
-:
-
-rtl
-
-;
-
-*/&ast; text read from right-to-left &ast;/*
-
+.ex {
+  **direction**: rtl; /* text read from right-to-left */
 }
-
-.horizontal-tb
-
-{
-
-**writing-mode**
-
-:
-
-horizontal-tb
-
-;
-
-*/&ast; Default, text read from left-to-right and top-to-bottom. &ast;/*
-
+.horizontal-tb {
+  **writing-mode**: horizontal-tb;  /* Default, text read from left-to-right and top-to-bottom. */
 }
-
-.vertical-rtl
-
-{
-
-**writing-mode**
-
-:
-
-vertical-rl
-
-;
-
-*/&ast; text read from right-to-left and top-to-bottom &ast;/*
-
+.vertical-rtl {
+  **writing-mode**: vertical-rl;  /* text read from right-to-left and top-to-bottom */
 }
-
-.vertical-ltr
-
-{
-
-**writing-mode**
-
-:
-
-vertical-rl
-
-;
-
-*/&ast; text read from left-to-right and top to bottom &ast;/*
-
+.vertical-ltr {
+  **writing-mode**: vertical-rl;  /* text read from left-to-right and top to bottom */
 }
+```
 
-> The direction property is used to change the horizontal text direction
-> of an element.
+<p>The direction property is used to change the horizontal text direction
+of an element.</p>
 
-  **direction**   :   ltr &vert; rtl &vert; initial &vert; inherit
+**direction**   :   ltr &vert; rtl &vert; initial &vert; inherit
 
 
-> Syntax: ;
->
-> The writing-mode property changes the alignment of text so it can be
-> read from top-to-bottom or from left-to-right, depending on the
-> language.
+Syntax: ;
 
-  **direction**   :   horizontal-tb &vert; vertical-rl &vert; vertical-lr
+The writing-mode property changes the alignment of text so it can be
+read from top-to-bottom or from left-to-right, depending on the
+language.
+
+**direction**   :   horizontal-tb &vert; vertical-rl &vert; vertical-lr
 
 Syntax: ;
 
@@ -8204,165 +7975,90 @@ Syntax: ;
 <h3 id="ch15-5">Section 15.5: Font Stacks</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
-**font-family**
+```
+**font-family**: &apos;Segoe UI&apos;, Tahoma, sans-serif;
+```
 
-:
+The browser will attempt to apply the font face &quot;Segoe UI&quot; to the
+characters within the elements targeted by the above property. If this
+font is not available, or the font does not contain a glyph for the
+required character, the browser will fall back to Tahoma, and, if
+necessary, any sans-serif font on the user&apos;s computer. Note that any
+font names with more than one word such as &quot;Segoe UI&quot; need to have
+single or double quotes around them.
 
-&apos;Segoe UI&apos;
+```
+**font-family**: Consolas, &apos;Courier New&apos;, monospace;
+```
 
-,
-
-Tahoma
-
-,
-
-sans-serif
-
-;
-
-> The browser will attempt to apply the font face &quot;Segoe UI&quot; to the
-> characters within the elements targeted by the above property. If this
-> font is not available, or the font does not contain a glyph for the
-> required character, the browser will fall back to Tahoma, and, if
-> necessary, any sans-serif font on the user&apos;s computer. Note that any
-> font names with more than one word such as &quot;Segoe UI&quot; need to have
-> single or double quotes around them.
-
-**font-family**
-
-:
-
-Consolas
-
-,
-
-&apos;Courier New&apos;
-
-,
-
-monospace
-
-;
-
-> The browser will attempt to apply the font face &quot;Consolas&quot; to the
-> characters within the elements targeted by the above property. If this
-> font is not available, or the font does not contain a glyph for the
-> required character, the browser will fall back to &quot;Courier New,&quot;
-> and, if necessary, any monospace font on the user&apos;s computer.
-
+<p>The browser will attempt to apply the font face &quot;Consolas&quot; to the
+characters within the elements targeted by the above property. If this
+font is not available, or the font does not contain a glyph for the
+required character, the browser will fall back to &quot;Courier New,&quot;
+and, if necessary, any monospace font on the user&apos;s computer.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch15-6">Section 15.6: Text Overflow</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p>The text-overflow property deals with how overflowed content should be signaled 
+to users. In this example, the ellipsis represents clipped text.</p>
 
-> The text-overflow property deals with how overflowed content should be
-> signaled to users. In this example, the ellipsis represents clipped
-> text.
-
-.text
-
-{
-
-**overflow**
-
-:
-
-hidden
-
-;
-
-**text-overflow**
-
-:
-
-ellipsis
-
-;
-
+```
+.text {
+  **overflow**: hidden;
+  **text-overflow**: ellipsis;
 }
+```
 
   **text-overflow**                        :   ellipsis
 
-> Unfortunately, only works on a single line of text. There is no way to
-> support ellipsis on the last line in standard CSS, but it can be
-> achieved with non-standard webkit-only implementation of flexboxes.
+Unfortunately, only works on a single line of text. There is no way to
+support ellipsis on the last line in standard CSS, but it can be
+achieved with non-standard webkit-only implementation of flexboxes.
 
+```
 .giveMeEllipsis
-
 {
-
 **overflow**
-
 :
-
 hidden
-
 ;
-
 **text-overflow**
-
 :
-
 ellipsis
-
 ;
-
 **display**
-
 :
-
 -webkit-box
-
 ;
-
 -webkit-box-orient
-
 :
-
 vertical
-
 ;
-
 -webkit-line-clamp
-
 :
-
 N
-
 ;
+/* number of lines to show */
+**line-height**: X;
+```
 
-*/&ast; number of lines to show &ast;/*
-
-**line-height**
-
-:
-
-X
-
-;
-
-*/&ast; fallback &ast;/*
-
+```
+/* fallback */
 **max-height**
-
 :
-
 X
-
 &ast;
-
 N
-
 ;
-
-*/&ast; fallback &ast;/*
-
+/* fallback */
 }
+```
 
-> Example (open in Chrome or Safari):
+Example (open in Chrome or Safari):
 
 &lbrack;&lbrack;http://jsfiddle.net/csYjC/1131/&rbrack;&rbrack;(http://jsfiddle.net/csYjC/1131/)
 
-> Resources:
+Resources:
 
 &lbrack;&lbrack;https://www.w3.org/TR/2012/WD-css3-ui-20120117/#text-overflow0&rbrack;&rbrack;(https://www.w3.org/TR/2012/WD-css3-ui-20120117/#text-overflow0)
 
@@ -8370,200 +8066,106 @@ N
 <h3 id="ch15-7">Section 15.7: Text Shadow</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
-> To add shadows to text, use the text-shadow property. The syntax is as
-> follows:
+To add shadows to text, use the text-shadow property. The syntax is as
+follows:
 
-**text-shadow**
+```
+**text-shadow**:
+horizontal-offset vertical-offset blur color;
+```
 
-:
+**Shadow without blur radius**
 
-horizontal-offset vertical-offset blur color
-
-;
-
-> **Shadow without blur radius**
-
-h1
-
-{
-
-**text-shadow**
-
-:
-
-2
-
-px
-
-2
-
-px
-
-#0000FF
-
-;
-
+```
+h1 {
+  **text-shadow**: 2px 2px #0000FF;
 }
+```
 
-> This creates a blue shadow effect around a heading
->
-> **Shadow with blur radius**
->
-> To add a blur effect, add an option blur radius argument
+This creates a blue shadow effect around a heading
 
-h1
+**Shadow with blur radius**
 
-{
+To add a blur effect, add an option blur radius argument
 
-**text-shadow**
-
-:
-
-2
-
-px
-
-2
-
-px
-
-10
-
-px
-
-#0000FF
-
-;
-
+```
+h1 {
+  **text-shadow**: 2px 2px 10px #0000FF;
 }
+```
 
-> **Multiple Shadows**
->
-> To give an element multiple shadows, separate them with commas
+**Multiple Shadows**
 
-h1
+To give an element multiple shadows, separate them with commas
 
-{
-
-**text-shadow**
-
-:
-
-0
-
-0
-
-3
-
-px
-
-#FF0000
-
-,
-
-0
-
-0
-
-5
-
-px
-
-#0000FF
-
-;
-
+```
+h1 {
+  **text-shadow**: 0 0 3px #FF0000, 0 0 5px #0000FF;
 }
+```
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch15-8">Section 15.8: Text Transform</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
-> The text-transform property allows you to change the capitalization of
-> text. Valid values are: uppercase, capitalize, lowercase, initial,
-> inherit, and none
->
-> <h4>CSS</h4>
+The text-transform property allows you to change the capitalization of
+text. Valid values are: uppercase, capitalize, lowercase, initial,
+inherit, and none
 
-.example1
+<h4>CSS:</h4>
 
-{
-
-**text-transform**
-
-:
-
-uppercase
-
-;
-
+<pre><code>.example1 {
+  <b>text-transform</b>: uppercase;
 }
-
-.example2
-
-{
-
-**text-transform**
-
-:
-
-capitalize
-
-;
-
+.example2 {
+  <b>text-transform</b>: capitalize;
 }
+.example3 {
+  <b>text-transform</b>: lowercase;
+}</code></pre>
 
-.example3
-{
-**text-transform**
-:
-lowercase
-;
-}
-</code></pre>
-
-> <h4>HTML:</h4>
+<h4>HTML:</h4>
 
 <pre><code>
-**&lt;**
-**p**
+<b>&lt;</b>
+<b>p</b>
 class
 =
 &quot;example1&quot;
-**&gt;**
+<b>&gt;</b>
 all letters in uppercase
 *&lt;!&minus;-*
 *&quot;ALL LETTERS IN UPPERCASE&quot;*
 *&minus;-&gt;*
-**&lt;**
-**/p**
-**&gt;**
-**&lt;**
-**p**
+<b>&lt;</b>
+<b>/p</b>
+<b>&gt;</b>
+<b>&lt;</b>
+<b>p</b>
 class
 =
 &quot;example2&quot;
-**&gt;**
+<b>&gt;</b>
 all letters in capitalize
 *&lt;!&minus;-*
 *&quot;All Letters In Capitalize (Sentence Case)&quot;*
 *&minus;-&gt;*
-**&lt;**
-**/p**
-**&gt;**
-**&lt;**
-**p**
+<b>&lt;</b>
+<b>/p</b>
+<b>&gt;</b>
+<b>&lt;</b>
+<b>p</b>
 class
 =
 &quot;example3&quot;
-**&gt;**
+<b>&gt;</b>
 all letters in lowercase
 *&lt;!&minus;-*
 *&quot;all letters in lowercase&quot;*
 *&minus;-&gt;*
-**&lt;**
-**/p**
-**&gt;**
+<b>&lt;</b>
+<b>/p</b>
+<b>&gt;</b>
 </code></pre>
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -8579,7 +8181,7 @@ h2
 
 *also known as tracking &ast;/*
 
-**letter-spacing**
+<b>letter-spacing</b>
 
 <pre><code>
 :
@@ -8597,7 +8199,7 @@ px
 <pre><code>
 p
 {
-**letter-spacing**
+<b>letter-spacing</b>
 :
 -1
 px
@@ -8615,7 +8217,7 @@ Resources:
 <pre><code>
 p
 {
-**text-indent**
+<b>text-indent</b>
 :
 50
 px
@@ -8645,28 +8247,28 @@ px
 <pre><code>
 h1
 {
-**text-decoration**
+<b>text-decoration</b>
 :
 none
 ;
 }
 h2
 {
-**text-decoration**
+<b>text-decoration</b>
 :
 overline
 ;
 }
 h3
 {
-**text-decoration**
+<b>text-decoration</b>
 :
 line-through
 ;
 }
 h4
 {
-**text-decoration**
+<b>text-decoration</b>
 :
 underline
 ;
@@ -8679,7 +8281,7 @@ underline
 <pre><code>
 .title
 {
-**text-decoration**
+<b>text-decoration</b>
 :
 underline
 dotted
@@ -8693,54 +8295,53 @@ blue
 <pre><code>
 .title
 {
-**text-decoration-style**
+<b>text-decoration-style</b>
 :
 dotted
 ;
-**text-decoration-line**
+<b>text-decoration-line</b>
 :
 underline
 ;
-**text-decoration-color**
+<b>text-decoration-color</b>
 :
 blue
 ;
 }
 </code></pre>
 
-> It should be noted that the following properties are only supported in
-> Firefox
->
-> text-decoration-color text-decoration-line text-decoration-style
-> text-decoration-skip
+It should be noted that the following properties are only supported in
+Firefox
+
+text-decoration-color text-decoration-line text-decoration-style
+text-decoration-skip
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch15-12">Section 15.12: Word Spacing</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
-> The word-spacing property specifies the spacing behavior between tags
-> and words.
->
-> **Possible values**
->
-> a positive or negative *length* (using em px vh cm etc.) or
-> *percentage* (using %) the keyword normal uses the font&apos;s default
-> word spacing the keyword inherit takes the value from the parent
-> element
->
-> <h4>CSS</h4>
+The word-spacing property specifies the spacing behavior between tags and words.
+
+<b>Possible values</b>
+
+a positive or negative *length* (using em px vh cm etc.) or
+*percentage* (using %) the keyword normal uses the font&apos;s default
+word spacing the keyword inherit takes the value from the parent
+element
+
+<h4>CSS</h4>
 
 <pre><code>
 .normal
 {
-**word-spacing**
+<b>word-spacing</b>
 :
 normal
 ;
 }
 .narrow
 {
-**word-spacing**
+<b>word-spacing</b>
 :
 -3
 px
@@ -8748,7 +8349,7 @@ px
 }
 .extensive
 {
-**word-spacing**
+<b>word-spacing</b>
 :
 10
 px
@@ -8758,23 +8359,23 @@ px
 
 > <h4>HTML:</h4>
 >
-> **&lt;p&gt;**
+> <b>&lt;p&gt;</b>
 >
-> **&lt;span** class=&quot;normal&quot;**&gt;**This is an example, showing the
-> effect of &quot;word-spacing&quot;.**&lt;/span&gt;&lt;br&gt;**
+> <b>&lt;span</b> class=&quot;normal&quot;<b>&gt;</b>This is an example, showing the
+> effect of &quot;word-spacing&quot;.<b>&lt;/span&gt;&lt;br&gt;</b>
 >
-> **&lt;span** class=&quot;narrow&quot;**&gt;**This is an example, showing the
-> effect of &quot;word-spacing&quot;.**&lt;/span&gt;&lt;br&gt;** **&lt;span**
-> class=&quot;extensive&quot;**&gt;**This is an example, showing the effect of
-> &quot;word-spacing&quot;.**&lt;/span&gt;&lt;br&gt;**
+> <b>&lt;span</b> class=&quot;narrow&quot;<b>&gt;</b>This is an example, showing the
+> effect of &quot;word-spacing&quot;.<b>&lt;/span&gt;&lt;br&gt;</b> <b>&lt;span</b>
+> class=&quot;extensive&quot;<b>&gt;</b>This is an example, showing the effect of
+> &quot;word-spacing&quot;.<b>&lt;/span&gt;&lt;br&gt;</b>
 >
-> **&lt;/p&gt;**
+> <b>&lt;/p&gt;</b>
 >
-> **Online-Demo**
+> <b>Online-Demo</b>
 
 &lbrack;&lbrack;Try it yourself&rbrack;&rbrack;(https://jsfiddle.net/91742Lxt/)
 
-> **Further reading:**
+> <b>Further reading:</b>
 
 &lbrack;&lbrack;word-spacing&rbrack; &lbrack;--&rbrack;
 &lbrack;MDN&rbrack;&rbrack;(https://developer.mozilla.org/de/docs/Web/CSS/word-spacing)
@@ -8785,82 +8386,71 @@ px
 <h3 id="ch15-13">Section 15.13: Font Variant</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
-Attributes:
+<h4>Attributes:</h4>
 
-***normal***
+<b><i>normal</i></b>
 
-Default attribute of fonts. ***small-caps***
+Default attribute of fonts. <b><i>small-caps</i></b>
 
-Sets every letter to uppercase, **but** makes the lowercase
+Sets every letter to uppercase, <b>but</b> makes the lowercase
 letters(from original text) smaller in size than the letters that
 originally uppercase.
 
 <h4>CSS:</h4>
 
-<pre><code>
-.smallcaps
-{
-**font-variant**
-:
-small-caps
-;
-}
-</code></pre>
+<pre><code>.smallcaps {
+  <b>font-variant</b>: small-caps;
+}</code></pre>
 
 <h4>HTML:</h4>
 
 <pre><code>
-**&lt;**
-**p**
-class
-=
-&quot;smallcaps&quot;
-**&gt;**
+<b>&lt;</b><b>p</b> class=&quot;smallcaps&quot;<b>&gt;</b>
 Documentation about CSS Fonts
-**&lt;**
-**br**
-**&gt;**
+<b>&lt;</b>
+<b>br</b>
+<b>&gt;</b>
 aNd ExAmpLe
-**&lt;**
-**/p**
-**&gt;**
+<b>&lt;</b>
+<b>/p</b>
+<b>&gt;</b>
 </code></pre>
 
-> **Output:**
+<b>Output:</b>
 
 [image039.jpg 2.34 x .375](./images/image039.jpg)
 
-> Note: The font-variant property is a shorthand for the properties:
-> font-variant-caps, font-variant-numeric, fontvariant-alternates,
-> font-variant-ligatures, and font-variant-east-asian.
+Note: The font-variant property is a shorthand for the properties:
+font-variant-caps, font-variant-numeric, fontvariant-alternates,
+font-variant-ligatures, and font-variant-east-asian.
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ch16">Chapter 16: Flexible Box Layout (Flexbox)</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
-> The Flexible Box module, or just &apos;flexbox&apos; for short, is a box model
-> designed for user interfaces, and it allows users to align and
-> distribute space among items in a container such that elements behave
-> predictably when the page layout must accommodate different, unknown
-> screen sizes. A flex container expands items to fill available space
-> and shrinks them to prevent overflow.
+The Flexible Box module, or just &apos;flexbox&apos; for short, is a box model
+designed for user interfaces, and it allows users to align and
+distribute space among items in a container such that elements behave
+predictably when the page layout must accommodate different, unknown
+screen sizes. A flex container expands items to fill available space
+and shrinks them to prevent overflow.
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch16-1">Section 16.1: Dynamic Vertical and Horizontal Centering (alignitems, justify-content)</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
-> **Simple Example (centering a single element)**
->
-> <h4>HTML:</h4>
+<b>Simple Example (centering a single element)</b>
+
+<h4>HTML:</h4>
 
 <pre><code>
-**&lt;**
-**div**
+<b>&lt;</b>
+<b>div</b>
 class
 =
 &quot;aligner&quot;
-**&gt;**
-**&lt;**
+<b>&gt;</b>
+<b>&lt;</b>
 **div**
 class
 =
@@ -9669,7 +9259,7 @@ height. This is done by assuring that all nested elements are the same
 height as the containing parent div. <a href="https://jsfiddle.net/3wwh7ewp/">See working example:</a>
 This effect is achieved due to the property align-items being set to stretch by default.</p>
 
-<h4>HTML</h4>
+<h4>HTML:</h4>
 
 <pre><code>**&lt;****div** class=&quot;container&quot;**&gt;**
 **&lt;****div** style=&quot;background-color: red&quot;**&gt;**
@@ -12363,29 +11953,29 @@ vh
 
 }
 
-> Above, the size for the div takes up 20% of the width and height of
-> the viewport
+Above, the size for the div takes up 20% of the width and height of
+the viewport
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch20-5">Section 20.5: using percent %</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
-> One of the useful unit when creating a responsive application.
->
-> Its size depends on its parent container.
->
-> **Equation:**
+One of the useful unit when creating a responsive application.
+
+Its size depends on its parent container.
+
+**Equation:**
 
 ( Parent Container&apos;s width ) &ast; ( Percentage(%) ) = Output
 
-> **For Example:**
->
-> *Parent* has **100px** width while the *Child* has **50%**.
->
-> **On the output**, the *Child*&apos;s width will be half(50%) of the
-> *Parent*&apos;s, which is **50px**.
->
-> <h4>HTML</h4>
+**For Example:**
+
+*Parent* has **100px** width while the *Child* has **50%**.
+
+**On the output**, the *Child*&apos;s width will be half(50%) of the
+*Parent*&apos;s, which is **50px**.
+
+<h4>HTML:</h4>
 
 **&lt;**
 
@@ -12758,7 +12348,7 @@ blue
 
 }
 
-> <h4>HTML</h4>
+<h4>HTML:</h4>
 
 **&lt;**
 
@@ -12811,19 +12401,14 @@ height="1.3125in"}
 
 **Parameter Details**
 
-> Default value. Elements render in order, as they appear in the
-> document flow. The top, right, bottom, static left and z-index
-> properties do not apply.
+Default value. Elements render in order, as they appear in the
+document flow. The top, right, bottom, static left and z-index
+properties do not apply.
 
-  -----------------------------------------------------------------------
   **left**                        :       20px
-  ------------------------------- ------- -------------------------------
 
-  -----------------------------------------------------------------------
-
-  -------------------------------------------------------------------------
   relative   LEFT position
-  ---------- --------------------------------------------------------------
+
   fixed      The element is positioned relative to the browser window
 
   absolute   The element is positioned relative to its first positioned
@@ -12832,27 +12417,18 @@ height="1.3125in"}
   initial    Sets this property to its default value.
 
   inherit    Inherits this property from its parent element.
-  -------------------------------------------------------------------------
 
-> The element is positioned relative to its normal position, so adds 20
-> pixels to the element&apos;s
+The element is positioned relative to its normal position, so adds 20
+pixels to the element&apos;s
 
-  ------------------------------------------------------------------------
   **position**                        :    static
-  ----------------------------------- ---- -------------------------------
 
-  ------------------------------------------------------------------------
+Experimental feature. It behaves like within its parent until a given
+offset threshold sticky
 
-> Experimental feature. It behaves like within its parent until a given
-> offset threshold sticky
-
-  -----------------------------------------------------------------------
   **position**                          :    fixed
-  ------------------------------------- ---- ----------------------------
 
-  -----------------------------------------------------------------------
-
-> is reached, then it acts as .
+is reached, then it acts as .
 
 unset Combination of initial and inherit. More info
 &lbrack;&lbrack;here&rbrack;&rbrack;(https://developer.mozilla.org/en-US/docs/Web/CSS/unset).
@@ -12861,21 +12437,21 @@ unset Combination of initial and inherit. More info
 <h3 id="ch22-1">Section 22.1: Overlapping Elements with z-index</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
-> To change the default &lbrack;&lbrack;stack
-> order&rbrack;&rbrack;(https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context)
-> positioned elements (position property set to relative, absolute or
-> fixed), use the z-index property.
->
-> The higher the z-index, the higher up in the stacking context (on the
-> z-axis) it is placed.
->
-> **Example**
->
-> In the example below, a z-index value of 3 puts green on top, a
-> z-index of 2 puts red just under it, and a z-index of 1 puts blue
-> under that.
->
-> <h4>HTML</h4>
+To change the default &lbrack;&lbrack;stack
+order&rbrack;&rbrack;(https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context)
+positioned elements (position property set to relative, absolute or
+fixed), use the z-index property.
+
+The higher the z-index, the higher up in the stacking context (on the
+z-axis) it is placed.
+
+**Example**
+
+In the example below, a z-index value of 3 puts green on top, a
+z-index of 2 puts red just under it, and a z-index of 1 puts blue
+under that.
+
+<h4>HTML:</h4>
 
 **&lt;**
 
@@ -14554,7 +14130,7 @@ green
 
 }
 
-<h4>HTML</h4>
+<h4>HTML:</h4>
 
 **&lt;**
 
@@ -14744,7 +14320,7 @@ px
 
 }
 
-<h4>HTML</h4>
+<h4>HTML:</h4>
 
 **&lt;div&gt;&lt;/div&gt;**
 
@@ -15591,7 +15167,7 @@ not provided, the first scale-factor will be applied for Y-axis also.
 <h3 id="28-1">Section 28.1: Rotate</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
-<h4>HTML</h4>
+<h4>HTML:</h4>
 
 **&lt;**
 
@@ -15689,7 +15265,7 @@ right side end.
 ## Section 28.2: Scale
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
-<h4>HTML</h4>
+<h4>HTML:</h4>
 
 **&lt;**
 
@@ -15929,7 +15505,7 @@ height="2.7919728783902014in"}
 
 ## Section 28.5: Translate
 
-<h4>HTML</h4>
+<h4>HTML:</h4>
 
 **&lt;**
 
@@ -16261,7 +15837,7 @@ px
 }
 </code></pre>
 
-<h4>HTML</h4>
+<h4>HTML:</h4>
 
 <pre><code>
 **&lt;**
@@ -17006,7 +16582,7 @@ Should be noted that:
 
 <h3 id="ch30-1">Section 30.1: Blur</h3>
 
-<h4>HTML</h4>
+<h4>HTML:</h4>
 
 > **&lt;img** src=&apos;donald-duck.png&apos; alt=&apos;Donald Duck&apos; title=&apos;Donald
 > Duck&apos; **/&gt;**
@@ -17060,7 +16636,7 @@ height="2.8125in"}
 
 <h3 id="ch30-2">Section 30.2: Drop Shadow (use box-shadow instead if possible)</h3>
 
-<h4>HTML</h4>
+<h4>HTML:</h4>
 
 **&lt;**
 
@@ -17143,7 +16719,7 @@ height="0.5729166666666666in"}
 
 <h3 id="ch30-3">Section 30.3: Hue Rotate</h3>
 
-<h4>HTML</h4>
+<h4>HTML:</h4>
 >
 > **&lt;img** src=&apos;donald-duck.png&apos; alt=&apos;Donald Duck&apos; title=&apos;Donald
 > Duck&apos; **/&gt;**
@@ -17197,7 +16773,7 @@ height="2.8125in"}
 
 > To use multiple filters, separate each value with a space.
 
-<h4>HTML</h4>
+<h4>HTML:</h4>
 
 > **&lt;img** src=&apos;donald-duck.png&apos; alt=&apos;Donald Duck&apos; title=&apos;Donald
 > Duck&apos; **/&gt;**
@@ -17309,7 +16885,7 @@ height="2.7083333333333335in"}
 
 <h3 id="ch30-5">Section 30.5: Invert Color</h3>
 
-<h4>HTML</h4>
+<h4>HTML:</h4>
 
 **&lt;**
 
@@ -17464,7 +17040,7 @@ HTML element &lbrack;&lbrack;1&rbrack;&rbrack;
 > visible indicator of the insertion point in an element where text and
 > other content is inserted by the user&apos;s typing or editing.
 >
-<h4>HTML</h4>
+<h4>HTML:</h4>
 
 **&lt;**
 
@@ -17524,7 +17100,7 @@ color can be of various notations: a color keyword, hexadecimal,
 JSFiddle:
 &lbrack;&lbrack;https://jsfiddle.net/UnsungHero97/80qod7aL/2/&rbrack;&rbrack;(https://jsfiddle.net/UnsungHero97/80qod7aL/2/)
 
-> <h4>HTML</h4>
+> <h4>HTML:</h4>
 
 **&lt;**
 
@@ -17753,7 +17329,7 @@ px
 JSFiddle:
 &lbrack;&lbrack;https://jsfiddle.net/UnsungHero97/80qod7aL/&rbrack;&rbrack;(https://jsfiddle.net/UnsungHero97/80qod7aL/)
 
-<h4>HTML</h4>
+<h4>HTML:</h4>
 
 **&lt;**
 
@@ -17855,7 +17431,7 @@ px
 
 <h3 id="ch32-3">Section 32.3: inner drop shadow</h3>
 
-<h4>HTML</h4>
+<h4>HTML:</h4>
 
 **&lt;**
 
@@ -18012,7 +17588,7 @@ JSFiddle:
 JSFiddle:
 &lbrack;&lbrack;https://jsfiddle.net/UnsungHero97/80qod7aL/5/&rbrack;&rbrack;(https://jsfiddle.net/UnsungHero97/80qod7aL/5/)
 
-<h4>HTML</h4>
+<h4>HTML:</h4>
 
 **&lt;**
 
@@ -18336,7 +17912,7 @@ px
 
 }
 
-<h4>HTML</h4>
+<h4>HTML:</h4>
 >
 > **&lt;img**
 > src=&quot;http://images.clipartpanda.com/circle-clip-art-circlergb.jpg&quot;**&gt;**
@@ -18544,7 +18120,7 @@ px
 
 }
 
-<h4>HTML</h4>
+<h4>HTML:</h4>
 >
 > **&lt;img**
 > src=&quot;http://images.clipartpanda.com/circle-clip-art-circlergb.jpg&quot;**&gt;**
@@ -18868,7 +18444,7 @@ upper-roman
 
 }
 
-<h4>HTML</h4>
+<h4>HTML:</h4>
 
 **&lt;**
 
@@ -19106,7 +18682,7 @@ px
 
 }
 
-<h4>HTML</h4>
+<h4>HTML:</h4>
 
 **&lt;**
 
@@ -19369,7 +18945,7 @@ list-item-number
 
 }
 
-<h4>HTML</h4>
+<h4>HTML:</h4>
 
 **&lt;**
 
@@ -20730,7 +20306,7 @@ width
 > Here, a media query changes the variables used to set up a very simple
 > grid:
 >
-<h4>HTML</h4>
+<h4>HTML:</h4>
 
 **&lt;**
 
@@ -21945,7 +21521,7 @@ transparent
 !&lbrack;&rbrack;(./images/image239.jpg){width="1.1458333333333333in"
 height="1.1875in"}
 
-<h4>HTML</h4>
+<h4>HTML:</h4>
 
 **&lt;**
 
@@ -22032,7 +21608,7 @@ rgb
 
 !&lbrack;&rbrack;(./images/image240.jpg){width="0.9375in" height="0.9375in"}
 
-<h4>HTML</h4>
+<h4>HTML:</h4>
 
 **&lt;**
 
@@ -23130,7 +22706,7 @@ JSFiddle&rbrack;&rbrack;(https://jsfiddle.net/vjL9ewmb/).
 > within the container. The distance between items is equal, independent
 > on the individual item width.
 
-<h4>HTML</h4>
+<h4>HTML:</h4>
 
 **&lt;**
 
@@ -23610,7 +23186,7 @@ Some paragraph
 >
 > So how do you implement one? Here&apos;s some example code.
 >
-<h4>HTML</h4>
+<h4>HTML:</h4>
 
 **&lt;**
 
@@ -23666,7 +23242,7 @@ class
 
 **&gt;**
 
-> <h4>CSS</h4>
+<h4>CSS:</h4>
 
 .icon
 
@@ -23780,10 +23356,9 @@ px
 
 }
 
-> By using setting the sprite&apos;s width and height and by using the
-> background-position property in CSS (with an x and y value) you can
-> easily extract sprites from a sprite sheet using CSS.
-
+By using setting the sprite&apos;s width and height and by using the
+background-position property in CSS (with an x and y value) you can
+easily extract sprites from a sprite sheet using CSS.
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ch44">Chapter 44: Clipping and Masking</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -23798,7 +23373,7 @@ px
   inset     (),   circle      (),   ellipse       () or     polygon
 
 
-> Refers to one among (). Using one of these
+Refers to one among (). Using one of these
 
   basic-shape         functions the clipping path is defined. These shape
                       functions work exactly the same way as they do in Shapes
@@ -23835,7 +23410,7 @@ px
   top right                             ,   50% 50%
 
 
-> syntax (like ).
+syntax (like ).
 
   geometry-box   This specifies the box to which the mask should be clipped (*mask
                  painting area*) or the box which should be used as reference for the
@@ -23850,34 +23425,34 @@ px
                  or cover or contain. Length, percentage and auto can either be provided
                  as a single value or as one for each axis.
 
-> This can be any one among add, subtract, exclude, multiply per layer
-> and defines the type
->
-> compositing-operator of compositing operation that should be used for
-> this layer with those below it. Detailed explanation about each value
-> is available in the &lbrack;&lbrack;W3C
-> Specs&rbrack;&rbrack;(https://www.w3.org/TR/css-masking/#the-mask-composite).
+This can be any one among add, subtract, exclude, multiply per layer
+and defines the type
+
+compositing-operator of compositing operation that should be used for
+this layer with those below it. Detailed explanation about each value
+is available in the &lbrack;&lbrack;W3C
+Specs&rbrack;&rbrack;(https://www.w3.org/TR/css-masking/#the-mask-composite).
 
 <h3 id="ch44-1">Section 44.1: Clipping and Masking: Overview and Dierence</h3>
 
-> With **Clipping** and **Masking** you can make some specified parts of
-> elements transparent or opaque. Both can be applied to any HTML
-> element.
->
-> **Clipping**
+With **Clipping** and **Masking** you can make some specified parts of
+elements transparent or opaque. Both can be applied to any HTML
+element.
+
+**Clipping**
 
   circle          (),     polygon           () or        ellipse
 
 
-> Clips are vector paths. Outside of this path the element will be
-> transparent, inside it&apos;s opaque. Therefore you can define a clip-path
-> property on elements. Every graphical element that also exists in SVG
-> you can use here as a function to define the path. Examples are ().
+Clips are vector paths. Outside of this path the element will be
+transparent, inside it&apos;s opaque. Therefore you can define a clip-path
+property on elements. Every graphical element that also exists in SVG
+you can use here as a function to define the path. Examples are ().
 
 !&lbrack;&rbrack;(./images/image249.jpg){width="3.3333333333333335in"
 height="2.71875in"}
 
-> Example
+Example
 
 **clip-path**
 
@@ -23899,33 +23474,33 @@ center
 
 ;
 
-> The element will be only visible inside of this circle, which is
-> positioned at the center of the element and has a radius of 100px.
->
-> **Masking**
->
-> Masks are similar to Clips, but instead of defining a path you define
-> a mask what layers over the element. You can imagine this mask as an
-> image what consist of mainly two colors: black and white.
->
-> **Luminance Mask**: Black means the region is opaque, and white that
-> it&apos;s transparent, but there is also a grey area which is
-> semi-transparent, so you are able to make smooth transitions.
->
-> **Alpha Mask**: Only on the transparent areas of the mask the element
-> will be opaque.
+The element will be only visible inside of this circle, which is
+positioned at the center of the element and has a radius of 100px.
+
+**Masking**
+
+Masks are similar to Clips, but instead of defining a path you define
+a mask what layers over the element. You can imagine this mask as an
+image what consist of mainly two colors: black and white.
+
+**Luminance Mask**: Black means the region is opaque, and white that
+it&apos;s transparent, but there is also a grey area which is
+semi-transparent, so you are able to make smooth transitions.
+
+**Alpha Mask**: Only on the transparent areas of the mask the element
+will be opaque.
 
 !&lbrack;&rbrack;(./images/image250.jpg){width="3.3333333333333335in"
 height="2.0625in"}
 
-> This image for example can be used as a luminance mask to make for an
-> element a very smooth transition from right to left and from opaque to
-> transparent.
->
-> The mask property let you specify the the mask type and an image to be
-> used as layer.
->
-> Example
+This image for example can be used as a luminance mask to make for an
+element a very smooth transition from right to left and from opaque to
+transparent.
+
+The mask property let you specify the the mask type and an image to be
+used as layer.
+
+Example
 
 **mask**
 
@@ -23947,12 +23522,12 @@ luminance
 
 ;
 
-> An element called rectangle defined in masks.svg will be used as an
-> **luminance mask** on the element.
+An element called rectangle defined in masks.svg will be used as an
+**luminance mask** on the element.
 
 ## Section 44.2: Simple mask that fades an image from solid to transparent
 
-> <h4>CSS</h4>
+<h4>CSS:</h4>
 
 div
 
@@ -24032,7 +23607,7 @@ transparent
 
 }
 
-<h4>HTML</h4>
+<h4>HTML:</h4>
 
 <pre><code>
 **&lt;**
@@ -24103,7 +23678,7 @@ at
 }
 </code></pre>
 
-<h4>HTML</h4>
+<h4>HTML:</h4>
 
 <pre><code>
 **&lt;**
@@ -24190,33 +23765,33 @@ polygon
 **&gt;**
 </code></pre>
 
-> In the above example, a **polygonal** clipping path is used to clip
-> the square (200 x 200) element into a triangle shape. The output shape
-> is a triangle because the path starts at (that is, first coordinates
-> are at) 0 0 - which is the top-left
+In the above example, a **polygonal** clipping path is used to clip
+the square (200 x 200) element into a triangle shape. The output shape
+is a triangle because the path starts at (that is, first coordinates
+are at) 0 0 - which is the top-left
 
   100%   &minus; which is bottom-left corner of the box and then       100% 50%
          finally to                                               
 
 
-> corner of the box, then goes to 0 which is
->
-> nothing but the right-middle point of the box. These paths are self
-> closing (that is, the starting point will be the ending point) and so
-> the final shape is that of a triangle.
->
-> This can also be used on an element with an image or a gradient as
-> background.
+corner of the box, then goes to 0 which is
+
+nothing but the right-middle point of the box. These paths are self
+closing (that is, the starting point will be the ending point) and so
+the final shape is that of a triangle.
+
+This can also be used on an element with an image or a gradient as
+background.
 
 &lbrack;**&lbrack;View Example&rbrack;**&rbrack;(https://jsfiddle.net/eoa4a94k/)
 
-> **Output:**
+**Output:**
 
 [image254.jpg 2.16 x 2.16](./images/image254.jpg)
 
 <h3 id="ch44-5">Section 44.5: Using masks to cut a hole in the middle of an image</h3>
 
-> <h4>CSS</h4>
+<h4>CSS:</h4>
 
 <pre><code>
 div {
@@ -24235,23 +23810,23 @@ div {
   }
 </code></pre>
 
-<h4>HTML</h4>
->
-> In the above example, a transparent circle is created at the center
-> using radial-gradient and this is then used as a mask to produce the
-> effect of a circle being cut out from the center of an image.
->
-> **Image without mask:**
+<h4>HTML:</h4>
+
+In the above example, a transparent circle is created at the center
+using radial-gradient and this is then used as a mask to produce the
+effect of a circle being cut out from the center of an image.
+
+**Image without mask:**
 
 [image255.jpg 2.16 x 2.16](./images/image255.jpg)
 
-> **Image with mask:**
+**Image with mask:**
 
 [image256.jpg 2.16 x 2.16](./images/image256.jpg)
 
 <h3 id="ch44-6">Section 44.6: Using masks to create images with irregular shapes</h3>
 
-> <h4>CSS</h4>
+<h4>CSS:</h4>
 
 div
 
@@ -24451,7 +24026,7 @@ no-repeat
 
 }
 
-> <h4>HTML</h4>
+> <h4>HTML:</h4>
 
 **&lt;**
 
