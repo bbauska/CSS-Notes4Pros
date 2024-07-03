@@ -3244,37 +3244,21 @@ padding-left etc) can you write it as a shorthand, as below:</p>
 
 <h4>One value:</h4>
 
-<pre><code>
-<b>&lt;</b>
-<b>style</b>
-<b>&gt;</b>
-.myDiv
-{
-padding: 25px; /&ast; top/right/bottom/left &ast;/
+<pre><code><b>&lt;</b><b>style</b><b>&gt;</b>
+  .myDiv {
+    padding: 25px; /* top/right/bottom/left */
 }
-<b>&lt;</b>
-<b>/style</b>
-<b>&gt;</b>
-<b>&lt;</b>
-<b>div</b>
-class
-=
-&quot;myDiv&quot;
-<b>&gt;</b>
-<b>&lt;</b>
-<b>/div</b>
-<b>&gt;</b>
-</code></pre>
+<b>&lt;/style&gt;</b>
+<b>&lt;div</b> class=&quot;myDiv&quot;<b>&gt;&lt;/div&gt;</b></code></pre>
 <image 4 of 4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch9-2">Section 9.2: Padding on a given side</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-
-The padding property sets the padding space on all sides of an
+<p>The padding property sets the padding space on all sides of an
 element. The padding area is the space between the content of the
-element and its border. Negative values are not allowed.
+element and its border. Negative values are not allowed.</p>
 
-You can specify a side individually:
+<p>You can specify a side individually:</p>
 
 <ul>
   <li>padding-top </li>
@@ -3283,26 +3267,24 @@ You can specify a side individually:
   <li>padding-left</li>
 </ul>
 
-The following code would add a padding of 5px to the top of the div:
+<p>The following code would add a padding of 5px to the top of the div:</p>
 
-<pre><code><b>&lt;</b><b>style</b><b>&gt;</b>
+<pre><code><b>&lt;style&gt;</b>
   .myClass {
     padding-top: 5px;
 }
-<b>&lt;</b><b>/style</b><b>&gt;</b>
-<b>&lt;</b><b>div</b> class=&quot;myClass&quot;<b>&gt;</b><b>&lt;</b><b>/div</b><b>&gt;</b></code></pre>
-
+<b>&lt;/style&gt;</b>
+<b>&lt;div</b> class=&quot;myClass&quot;<b>&gt;&lt;/div&gt;</b></code></pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ch10">Chapter 10: Border</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch10-1">Section 10.1: border-radius</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p>The border-radius property allows you to change the shape of the basic
+box model.</p>
 
-> The border-radius property allows you to change the shape of the basic
-> box model.
->
-> Every corner of an element can have up to two values, for the vertical
-> and horizontal radius of that corner (for a maximum of 8 values).
+<p>Every corner of an element can have up to two values, for the vertical
+and horizontal radius of that corner (for a maximum of 8 values).</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 25.  (xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="center" width="100%">
@@ -3313,73 +3295,63 @@ The following code would add a padding of 5px to the top of the div:
 </p>
 <!-- [image025.jpg 6.14 x 1.93](./images/image025.jpg) -->
 
-> The first set of values defines the horizontal radius. The optional
-> second set of values, preceded by a '/' , defines the vertical radius.
-> If only one set of values is supplied, it is used for both the
-> vertical and horizontal radius.
+<p>The first set of values defines the horizontal radius. The optional
+second set of values, preceded by a '/' , defines the vertical radius.
+If only one set of values is supplied, it is used for both the
+vertical and horizontal radius.</p>
 
-<pre><code>
-<b>border-radius<b>: 10px 5&percnt; / 20px 25em 30px 35em;
-</code></pre>
+<pre><code><b>border-radius<b>: 10px 5&percnt; / 20px 25em 30px 35em;</code></pre>
 
-> The 10px is the horizontal radius of the top-left-and-bottom-right.
-> And the 5% is the horizontal radius of the topright-and-bottom-left.
-> The other four values after &apos;/&apos; are the vertical radii for top-left,
-> top-right, bottom-right and bottom-left.
->
-> As with many CSS properties, shorthands can be used for any or all
-> possible values. You can therefore specify anything from one to eight
-> values. The following shorthand allows you to set the horizontal and
-> vertical radius of every corner to the same value:
->
+<p>The 10px is the horizontal radius of the top-left-and-bottom-right.
+And the 5% is the horizontal radius of the topright-and-bottom-left.
+The other four values after &apos;/&apos; are the vertical radii for top-left,
+top-right, bottom-right and bottom-left.</p>
+
+<p>As with many CSS properties, shorthands can be used for any or all
+possible values. You can therefore specify anything from one to eight
+values. The following shorthand allows you to set the horizontal and
+vertical radius of every corner to the same value:</p>
 
 <h4>HTML:</h4>
 
-<pre><code><b>&lt;</b><b>div</b> class=&apos;box&apos;<b>&gt;</b>
-<b>&lt;</b><b>/div</b><b>&gt;</b></code></pre>
+<pre><code><b>&lt;div</b> class=&apos;box&apos;<b>&gt;</b>
+<b>&lt;/div&gt;</b></code></pre>
 
 <h4>CSS:</h4>
 
-<pre><code>
-.box {
+<pre><code>.box {
   <b>width</b>: 250px;
   <b>height</b>: 250px;
   <b>background-color</b>: black;
   <b>border-radius</b>: 10px;
-}
-</code></pre>
+}</code></pre>
 
-> Border-radius is most commonly used to convert box elements into
-> circles. By setting the border-radius to half of the length of a
-> square element, a circular element is created:
+<p>Border-radius is most commonly used to convert box elements into
+circles. By setting the border-radius to half of the length of a
+square element, a circular element is created:</p>
 
-<pre><code>
-.circle {
+<pre><code>.circle {
   <b>width</b>: 200px;
   <b>height</b>: 200px;
   <b>border-radius</b>: 100px;
-}
-</code></pre>
+}</code></pre>
 
-> Because border-radius accepts percentages, it is common to use 50% to
-> avoid manually calculating the borderradius value:
+<p>Because border-radius accepts percentages, it is common to use 50% to
+avoid manually calculating the borderradius value:</p>
 
-<pre><code>
-.circle {
+<pre><code>.circle {
   <b>width</b>: 150px;
   <b>height</b>: 150px;
   <b>border-radius</b>: 50&percnt;;
-}
-</code></pre>
+}</code></pre>
 
-> If the width and height properties are not equal, the resulting shape
-> will be an oval rather than a circle.
->
+<p>If the width and height properties are not equal, the resulting shape
+will be an oval rather than a circle.</p>
+
 
 <h4>Browser specific border-radius example:</h4>
 
-<pre><code>
--webkit-border-top-right-radius: 4px;
+<pre><code>-webkit-border-top-right-radius: 4px;
 -webkit-border-bottom-right-radius: 4px;
 -webkit-border-bottom-left-radius: 0;
 -webkit-border-top-left-radius: 0;
@@ -3391,149 +3363,51 @@ The following code would add a padding of 5px to the top of the div:
   <b>border-top-right-radius</b>: 4px;
   <b>border-bottom-right-radius</b>: 4px;
   <b>border-bottom-left-radius</b>: 0;
-  <b>border-top-left-radius</b>: 0;
-</code></pre>
-
+  <b>border-top-left-radius</b>: 0;</code></pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch10-2">Section 10.2: border-style</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p>The border-style property sets the style of an element&apos;s border. This
+property can have from one to four values (for every side of the
+element one value.)</p>
 
-> The border-style property sets the style of an element&apos;s border. This
-> property can have from one to four values (for every side of the
-> element one value.) Examples:
+<h4>Examples:</h4>
 
-<pre><code>
-<b>border-style</b>: dotted;
-<b>border-style</b>: dotted solid double dashed;
-</code></pre>
+<pre><code><b>border-style</b>: dotted;
+<b>border-style</b>: dotted solid double dashed;</code></pre>
+<image here>
 
-> border-style can also have the values none and hidden. They have the
-> same effect, except hidden works for <b>&lt;table&gt;</b> elements. In a
-> <b>&lt;table&gt;</b> with multiple borders, none has the lowest priority 
-> (meaning in a conflict, the border would show), and hidden has the
-> highest priority (meaning in a conflict, the border would not show).
-
+<p>border-style can also have the values none and hidden. They have the
+same effect, except hidden works for <b>&lt;table&gt;</b> elements. In a
+<b>&lt;table&gt;</b> with multiple borders, none has the lowest priority 
+(meaning in a conflict, the border would show), and hidden has the
+highest priority (meaning in a conflict, the border would not show).</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch10-3">Section 10.3: Multiple Borders</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p>Using outline:</p>
 
-> Using outline:
+<pre><code>.div1 {
+  <b>border</b>: 3px solid black;
+  <b>outline</b>: 6px solid blue;
+  <b>width</b>: 100px;
+  <b>height</b>: 100px;
+  <b>margin</b>: 20px;
+}</code></pre>
 
-<pre><code>
-.div1
-{
-<b>border</b>
-:
-3
-px
-solid
-black
-;
-<b>outline</b>
-:
-6
-px
-solid
-blue
-;
-<b>width</b>
-:
-100
-px
-;
-<b>height</b>
-:
-100
-px
-;
-<b>margin</b>
-:
-20
-px
-;
-}
-</code></pre>
+<p>Using box-shadow:</p>
 
-> Using box-shadow:
+<pre><code>.div2 {
+  <b>border</b>: 5px solid green;
+  <b>box-shadow</b>: 0px 0px 0px 4px #000;
+  <b>width</b>: 100px;
+  <b>height</b>: 100px;
+  <b>margin</b>: 20px;
+}</code></pre>
 
-<pre><code>
-.div2 {
+<p>Using a pseudo element:</p>
 
-<b>border</b>
-
-:
-
-5
-
-px
-
-solid
-
-green
-
-;
-
-<b>box-shadow</b>
-
-:
-
-0
-
-px
-
-0
-
-px
-
-0
-
-px
-
-4
-
-px
-
-#000
-
-;
-
-<b>width</b>
-
-:
-
-100
-
-px
-
-;
-
-<b>height</b>
-
-:
-
-100
-
-px
-
-;
-
-<b>margin</b>
-
-:
-
-20
-
-px
-
-;
-
-}
-</code></pre>
-
-> Using a pseudo element:
-
-<pre><code>
-.div3 {
+<pre><code>.div3 {
   <b>position</b>: relative;
   <b>border</b>: 5px solid #000;
   <b>width</b>: 100px;
@@ -3549,8 +3423,7 @@ px
   <b>left</b>: 5px;
   <b>right</b>: 5px;
   <b>bottom</b>: 5px;
-}
-</code></pre>
+}</code></pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 27.  (xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="center" width="100%">
@@ -3566,117 +3439,42 @@ px
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch10-4">Section 10.4: border (shorthands)</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p>In most cases you want to define several border properties
+(border-width, border-style and border-color) for all sides of an
+element.</p>
 
-> In most cases you want to define several border properties
-> (border-width, border-style and border-color) for all sides of an
-> element.
->
-> Instead of writing:
+<p>Instead of writing:</p>
 
-<b>border-width</b>
+<pre><code><b>border-width</b>: 1px;
+<b>border-style</b>: solid;
+<b>border-color</b>: #000;</code></pre>
 
-:
+<p>You can simply write:</p>
 
-1
+<pre><code><b>border</b>: 1px solid #000;</code></pre>
 
-px
+<p>These shorthands are also available for every side of an element:
+border-top, border-left, border-right and border-bottom. So you can
+do:</p>
 
-;
-
-<b>border-style</b>
-
-:
-
-solid
-
-;
-
-<b>border-color</b>
-
-:
-
-#000
-
-;
-
-> You can simply write:
-
-<b>border</b>
-
-:
-
-1
-
-px
-
-solid
-
-#000
-
-;
-
-> These shorthands are also available for every side of an element:
-> border-top, border-left, border-right and border-bottom. So you can
-> do:
-
-<b>border-top</b>
-
-:
-
-2
-
-px
-
-double
-
-#aaaaaa
-
-;
-
+<pre><code><b>border-top</b>: 2px double #aaaaaa;</code><pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch10-5">Section 10.5: border-collapse</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p>The border-collapse property applies only to tables (and elements
+displayed as or inlinetable) and sets whether the table borders are
+collapsed into a single border or detached as in standard HTML.</p>
 
-  <b>display</b>                         :     table
 
-> The border-collapse property applies only to tables (and elements
-> displayed as or inlinetable) and sets whether the table borders are
-> collapsed into a single border or detached as in standard HTML.
+<pre><code>table {
+  <b>border-collapse</b>: separate; /* default */
+  <b>border-spacing</b>: 2px; /* Only works if border-collapse is separate */
+}</code></pre>
 
-table
-
-{
-
-<b>border-collapse</b>
-
-:
-
-separate
-
-;
-
-*/&ast; default &ast;/*
-
-<b>border-spacing</b>
-
-:
-
-2
-
-px
-
-;
-
-*/&ast; Only works if border-collapse is separate &ast;/*
-
-}
-
-> Also see Tables - border-collapse documentation entry
-
+<p>Also see Tables - border-collapse documentation entry</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch10-6">Section 10.6: border-image</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-
 > With the border-image property you have the possibility to set an
 > image to be used instead of normal border styles.
 >
