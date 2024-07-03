@@ -1709,6 +1709,7 @@ property is used to specify the starting position for a background image or grad
 using any of the units used within CSS.</p>
 
 | <b>Unit</b>  |  <b>Description</b> |
+|--------------|------------------------------------------------------------------|
 | value% value% | A percentage for the horizontal offset is relative to (width of |
 |               | background positioning area - width of background image). |
 |               | A percentage for the vertical offset is relative to |
@@ -1772,7 +1773,7 @@ property has no effect.</p>
 
 <pre><code><b>&lt;</b><b>p</b><b>&gt;</b>No background-origin (padding-box is default):<b>&lt;</b><b>/p</b><b>&gt;</b>
 <b>&lt;div</b> class=&quot;example example1&quot;<b>&gt;</b><b>&lt;h2&gt;</b>
-  <b>&lt;h2&gt;Lorem Ipsum Dolor<b>&lt;/h2&gt;</b> <b>&lt;p&gt;</b>
+  <b>&lt;h2&gt;</b>Lorem Ipsum Dolor<b>&lt;/h2&gt;</b> <b>&lt;p&gt;</b>
   <b>&lt;p&gt;</b>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod
   tincidunt ut laoreet dolore magna aliquam erat volutpat.<b>&lt;/p&gt;</b>
   <b>&lt;p&gt;</b>Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut
@@ -1803,7 +1804,7 @@ property has no effect.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 13.  (xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left" width="100%">
 <img src="./images/image013.jpg"
-  style="width:50%"
+  style="width:75%"
   title=""
   alt="." />
 </p>
@@ -1933,56 +1934,38 @@ div {
 
 <h4>CSS</h4>
 
-<pre><code>
-.example {
+<pre><code>.example {
   <b>width</b>:300px;
   <b>border</b>:20px solid black;
   <b>padding</b>:50px;
   <b>background</b>:url (
-    https://static.pexels.com/photos/6440/magazines-desk-work-workspace-medium.jpg
-  );
+    https://static.pexels.com/photos/6440/magazines-desk-work-workspace-medium.jpg);
   <b>background-repeat</b>: no-repeat;
 }
-.example1 {
-}
-.example2 {
-  <b>background-origin</b>: border-box;
-}
-.example3 {
-  <b>background-origin</b>: content-box;
-}
-</code></pre>
+.example1 {}
+.example2 { <b>background-origin</b>: border-box; }
+.example3 { <b>background-origin</b>: content-box; }</code></pre>
 
 <h4>HTML</h4>
 
-<pre><code>
-<b>&lt;</b><b>p</b><b>&gt;</b>No background-origin (padding-box is default):<b>&lt;</b><b>/p</b><b>&gt;</b>
+<pre><code><b>&lt;</b><b>p</b><b>&gt;</b>No background-origin (padding-box is default):<b>&lt;</b><b>/p</b><b>&gt;</b>
 
-  <b>&lt;</b><b>div</b> class=&quot;example example1&quot;<b>&gt;</b>
+<b>&lt;</b><b>div</b> class=&quot;example example1&quot;<b>&gt;</b>
   <b>&lt;</b><b>h</b><b>2</b><b>&gt;</b>Lorem Ipsum Dolor<b>&lt;</b><b>/h</b><b>2</b><b>&gt;</b>
-  <b>&lt;</b><b>p</b><b>&gt;</b>
-  Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
-  nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
-  <b>&lt;</b><b>/p</b><b>&gt;</b><b>&lt;</b><b>p</b><b>&gt;</b>
-  Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper
-  suscipit lobortis nisl ut aliquip ex ea commodo consequat.
-  <b>&lt;</b><b>/p</b><b>&gt;</b>
-  <b>&lt;</b><b>/div</b><b>&gt;</b>
+  <b>&lt;</b><b>p</b><b>&gt;</b>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod 
+    tincidunt ut laoreet dolore magna aliquam erat volutpat.<b>&lt;</b><b>/p</b><b>&gt;</b>
+  <b>&lt;</b><b>p</b><b>&gt;</b>Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut 
+    aliquip ex ea commodo consequat.<b>&lt;</b><b>/p</b><b>&gt;</b>
+<b>&lt;</b><b>/div</b><b>&gt;</b>
 
-  <b>&lt;</b><b>p</b><b>&gt;</b>background-origin: border-box:<b>&lt;</b><b>/p</b><b>&gt;</b>
-  <b>&lt;</b><b>div</b>class = &quot;example example2&quot;<b>&gt;</b>
-  <b>&lt;</b><b>h</b><b>2</b><b>&gt;</b>
-  Lorem Ipsum Dolor<b>&lt;</b><b>/h</b><b>2</b><b>&gt;</b>
-  <b>&lt;</b><b>p</b><b>&gt;</b>
-  Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod
-  tincidunt ut laoreet dolore magna aliquam erat volutpat.
-  <b>&lt;</b><b>/p</b><b>&gt;</b>
-  <b>&lt;</b><b>p</b><b>&gt;</b>
-  Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper
-  suscipit lobortis nisl ut aliquip ex ea commodo consequat.
-  <b>&lt;</b><b>/p</b><b>&gt;</b>
-  <b>&lt;</b><b>/div</b><b>&gt;</b>
-  <b>&lt;</b><b>p</b><b>&gt;</b>
+<b>&lt;</b><b>p</b><b>&gt;</b>background-origin: border-box:<b>&lt;</b><b>/p</b><b>&gt;</b>
+<b>&lt;</b><b>div</b>class = &quot;example example2&quot;<b>&gt;</b>
+  <b>&lt;</b><b>h</b><b>2</b><b>&gt;</b>Lorem Ipsum Dolor<b>&lt;</b><b>/h</b><b>2</b><b>&gt;</b>
+  <b>&lt;</b><b>p</b><b>&gt;</b>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod
+    tincidunt ut laoreet dolore magna aliquam erat volutpat.<b>&lt;</b><b>/p</b><b>&gt;</b>
+  <b>&lt;</b><b>p</b><b>&gt;</b>Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut 
+    aliquip ex ea commodo consequat.<b>&lt;</b><b>/p</b><b>&gt;</b>
+<b>&lt;</b><b>/div</b><b>&gt;</b>  <b>&lt;</b><b>p</b><b>&gt;</b>
   background-origin: content-box:
   <b>&lt;</b><b>/p</b><b>&gt;</b>
   <b>&lt;</b><b>div</b>class = &quot;example example3&quot;<b>&gt;</b>
@@ -1993,8 +1976,7 @@ div {
   When he rubbed them together, he made stormy weather.
   And lightning struck out of his ass.<b>&lt;/p&gt;</b> <b>&lt;p&gt;</b>And more goes here, as
   well. It beats Latin. I don't know Latin so better for me
-  the end.<b>&lt;/p&gt; &lt;/div&gt;</b>
-</code></pre>
+  the end.<b>&lt;/p&gt; &lt;/div&gt;</b></code></pre>
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch5-11">Section 5.11: Background Repeat</h3>
