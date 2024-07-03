@@ -985,20 +985,23 @@ Selectors Level 4:</p>
 
 <h4>CSS:</h4>
 
-<pre><code>div {
-  <b>height</b>: 80px;
-}
-input {
-  <b>margin</b>: 30px;
-}
-div:focus-within {
-  <b>background-color</b>: #1565C0;
-}</code></pre>
+<p align="left" width="50%">
+
+  <pre><code>div {
+    <b>height</b>: 80px;
+  }
+  input {
+    <b>margin</b>: 30px;
+  }
+  div:focus-within {
+    <b>background-color</b>: #1565C0;
+  }</code></pre>
+</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 02/03. input focused, background blue (0x) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="right" width="50%">
 <img src="./images/image002.png"
-  style="width:20%"
+  style="width:50%"
   title="Input focused, background blue"
   alt="Input focused, background blue." />
 </p>
