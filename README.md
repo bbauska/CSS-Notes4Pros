@@ -943,7 +943,7 @@ element is inside the range limits.&lbrack;<a href=https://developer.mozilla.org
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch4-10">Section 4.10: A. The :not pseudo-class example & B. :focuswithin CSS pseudo-class</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-A.  The syntax is presented above.
+<h5>A. The syntax is presented above.</h5>
 
 <p>The following selector matches all <b>&lt;input&gt;</b> elements in an HTML document
 that are not disabled and don&apos;t have the class .example:</p>
@@ -954,7 +954,7 @@ that are not disabled and don&apos;t have the class .example:</p>
   Phone: <b>&lt;input</b> type="tel" class="example"&gt;
   E-mail: <b>&lt;input</b> type="email" disabled="disabled"&gt;
   Password: <b>&lt;input</b> type="password"&gt;
-&lt;/form&gt;</code></pre>
+<b>&lt;/form&gt;</b></code></pre>
 
 <h4>CSS:</h4>
 
@@ -973,9 +973,9 @@ Selectors Level 4:</p>
 
 <a href="http://jsbin.com/japere/edit?html,css,output">Live Demo on JSBin</a>
 
-See background syntax here.
+<p>See background syntax here.</p>
 
-B.  The :focus-within CSS pseudo-classHTML:
+<h5>B. The :focus-within CSS pseudo-classHTML:</h5>
 
 <h4>HTML:</h4>
 
@@ -995,8 +995,6 @@ input {
 div:focus-within {
   <b>background-color</b>: #1565C0;
 }</code></pre>
-
-
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <image about 7x7>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -1043,7 +1041,7 @@ selectors:</p>
 &lt;checkbox&gt;:checked &bsim; &lbrack;sibling of checkbox & parent of target&rbrack; &lt;target&gt;
 
 /* false: */
-&lt;checkbox*gt;:not(:checked) ~ &lbrack;sibling of checkbox & parent of target&rbrack; &lt;target&gt;</code></pre>
+&lt;checkbox&gt;:not(:checked) ~ &lbrack;sibling of checkbox & parent of target&rbrack; &lt;target&gt;</code></pre>
 
 Note that &lt;checkbox&gt;, &lbrack;sibling ...&rbrack; and &lt;target&gt; should be replaced by the proper selectors. &lbrack;sibling ...&rbrack;
 can be a specific selector, (often if you're lazy) simply * or nothing if the target is already a sibling of the checkbox.
@@ -1082,7 +1080,7 @@ element by a specific ID in CSS, the &num; prefix is used.</p>
 }</code></pre>
 
 <blockquote>
-<b>Note</b>: The HTML specs do not allow multiple elements with the same ID.
+  <b>Note</b>: The HTML specs do not allow multiple elements with the same ID.
 </blockquote>
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -1188,7 +1186,6 @@ green and blue portions of the color is 0 (00).</p>
 same, then the color code can be shortened into three characters (the
 first digit of each pairing). &num;ff0000 can be shortened to &num;f00, and
 &num;ffffff can be shortened to &num;fff.</p>
-
 <p>Hex notation is case-insensitive.</p>
 
 <pre><code>body {
@@ -1246,19 +1243,19 @@ called HLS:</p>
 <p>The following statements are all equivalent:</p>
 
 <pre><code>body {
-  background: red;
-  background-image: url (partiallytransparentimage.png);
+  <b>background:</b> red;
+  <b>background-image:</b> url (partiallytransparentimage.png);
 }
 body {
-  background-color: red;
-  background-image: url (partiallytransparentimage.png);
+  <b>background-color:</b> red;
+  <b>background-image:</b> url (partiallytransparentimage.png);
 }
 body {
-  background-image: url(partiallytransparentimage.png);
-  background-color: red;
+  <b>background-image:</b> url(partiallytransparentimage.png);
+  <b>background-color:</b> red;
 }
 body {
-  background: red url (partiallytransparentimage.png);
+  <b>background:</b> red url (partiallytransparentimage.png);
 }</code></pre>
 
 <!-- page 24 -->
@@ -1411,7 +1408,7 @@ image on top of the others and so on.</p>
 
 <p>The following attributes are very useful and almost essential;</p>
 
-<h5><b>background-size</b>:&nbsp;&nbsp;&nbsp;&nbsp; xpx ypx | x% y%;</h5>
+<h5><b>background-size</b>:&nbsp;&nbsp;&nbsp;&nbsp; xpx ypx &vert; x% y%;</h5>
 
 <h5><b>background-repeat</b>:&nbsp; no-repeat &vert; repeat &vert; repeat-x &vert; repeat-y;</h5>
  
@@ -1570,7 +1567,7 @@ to contain an image with correct aspect ratio completely in a
 background area, the values, contain and cover provide the additional
 functionality.</p>
 
-<h4>Eggsplanation for contain and cover</h4>
+<h4>Eggsplanation for <span style="font-family: consolas">contain</span> and <span style="font-family: consolas">cover</span></h4>
 
 <p>Sorry for the bad pun, but we&apos;re going to use a <a href="https://commons.wikimedia.org/wiki/File:Chicken_Egg_without_Eggshell_5859.jpg">
 picture of the day by Biswarup Ganguly</a> for demonstration. Lets say that 
@@ -1980,7 +1977,6 @@ div is scrolled.</p>
 }</code></pre>
 
 <p>Here's how a <b>background-repeat</b>: repeat-y looks like:</p>
-
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~ 14. cat repeat first y column (xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left" width="100%">
@@ -2025,16 +2021,15 @@ will have to use RGBA colors. Following example will have a black background wit
 
 /* For IE 5.5 - 7 */
 <b>filter</b>: progid:DXImageTransform.Microsoft.gradient(startColorstr = #99000000, endColorstr = #99000000);
+
 /* For IE 8 */
 &minus;ms-filter: &quot;progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000,
 endColorstr=#99000000)&quot;;</code></pre>
-
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ch6">Chapter 6: Centering</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch6-1">Section 6.1: Using Flexbox</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-
 <h4>HTML:</h4>
 
 <pre><code><b>&lt;</b><b>div</b> class=&quot;container&quot;<b>&gt;</b>
@@ -14837,83 +14832,18 @@ height="2.7919728783902014in"}
 
 <h4>HTML:</h4>
 
-**&lt;**
-
-**div**
-
-class
-
-=
-
-&quot;translate&quot;
-
-**&gt;**
-
-**&lt;**
-
-**/div**
-
-**&gt;**
+**&lt;****div** class=&quot;translate&quot;**&gt;****&lt;****/div****&gt;**
 
 <h4>CSS</h4>
 
-.translate
-
-{
-
-**width**
-
-:
-
-100
-
-px
-
-;
-
-**height**
-
-:
-
-100
-
-px
-
-;
-
-**background**
-
-:
-
-teal
-
-;
-
-**transform**
-
-:
-
-translate
-
-(
-
-200
-
-px
-
-,
-
-50
-
-&percnt;
-
-)
-
-;
-
+```
+.translate {
+  **width**: 100px;
+  **height**: 100px;
+  **background**: teal;
+  **transform**: translate ( 200px, 50&percnt;);
 }
-
-  100px                   &ast;   50%                 =   50px
+```
 
 This example will move the div by 200px on the X axis and by on the Y
 axis.
@@ -14922,76 +14852,33 @@ You can also specify translations on a single axis.
 
 On the X axis:
 
-.translate
-
-{
-
-**transform**
-
-:
-
-translateX
-
-(
-
-200
-
-px
-
-)
-
-;
-
+```
+.translate {
+  **transform**: translateX ( 200px );
 }
+```
 
-On the Y axis:
+<p>On the Y axis:</p>
 
-.translate
-
-{
-
-**transform**
-
-:
-
-translateY
-
-(
-
-50
-
-&percnt;
-
-)
-
-;
-
+```
+.translate {
+  **transform**: translateY ( 50&percnt; );
 }
+```
 
-## Section 28.6: Transform Origin
+<h3 id="ch28-6">Section 28.6: Transform Origin</h3>
 
 Transformations are done with respect to a point which is defined by
 the transform-origin property.
 
-  ------------------------------------------------------------------------
   **transform-origin**                                   :   X Y
-  ------------------------------------------------------ --- -------------
-
-  ------------------------------------------------------------------------
 
 The property takes 2 values : ;
 
-  -----------------------------------------------------------------------
   **transform-origin**
-  -----------------------------------------------------------------------
 
-  -----------------------------------------------------------------------
-
-  ------------------------------------------------------------------------
   **transform-origin**                              :   100%
-  ------------------------------------------------- --- ------------------
 
-  ------------------------------------------------------------------------
 
 In the following example the first div (.tl) is rotate around the top
 left corner with : 0 0; and the second (.tr)is transformed around
