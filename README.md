@@ -3,7 +3,7 @@ title: |
   CSS Notes for Professionals
   by web@petercv.com, PDF https://goalkicker.com/CSSBook
 author: "bbauska"
-date last editted: "7/2/2024 Tue 6+pm"
+date last editted: "7/4/2024 Thu 1+am"
 output: 
   markdown:
     with some style
@@ -3939,376 +3939,135 @@ div {
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch13-1">Section 13.1: Terminology and Structure</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<b>Media queries</b> allow one to apply CSS rules based on the type of
+<p><b>Media queries</b> allow one to apply CSS rules based on the type of
 device / media (e.g. screen, print or handheld) called <b>media type</b>,
 additional aspects of the device are described with <b>media features</b>
-such as the availability of color or viewport dimensions.
+such as the availability of color or viewport dimensions.</p>
 
-<b>General Structure of a Media Query</b>
+<h4>General Structure of a Media Query</h4>
 
-<b>&commat;media</b>
-
-&lbrack;
-
-&period;..
-
-&rbrack;
-
-{
-
-*/&ast; One or more CSS rules to apply when the query is satisfied &ast;/*
-
+<b>&commat;media</b>&lbrack;&period;..&rbrack; {
+  /* One or more CSS rules to apply when the query is satisfied */
 }
 
-> <b>A Media Query containing a Media Type</b>
+<h4>A Media Query containing a Media Type</h4>
 
-<b>&commat;media</b>
-
-print
-
-{
-
-*/&ast; One or more CSS rules to apply when the query is satisfied &ast;/*
-
+<b>&commat;media</b> print {
+  /* One or more CSS rules to apply when the query is satisfied */
 }
 
-<b>A Media Query containing a Media Type and a Media Feature</b>
-
-<b>&commat;media</b>
-
-screen and
-
-(
-
-<b>max-width</b>
-
-:
-
-600
-
-px
-
-)
-
-{
-
-*/&ast; One or more CSS rules to apply when the query is satisfied &ast;/*
-
+<h4>A Media Query containing a Media Type and a Media Feature</h4>
+<b>&commat;media</b> screen and (<b>max-width</b>: 600px) {
+  /*  One or more CSS rules to apply when the query is satisfied */
 }
 
-<b>A Media Query containing a Media Feature (and an implicit Media Type
-of &quot;all&quot;)</b>
-
-<b>&commat;media</b>
-
-(
-
-orientation
-
-:
-
-portrait
-
-)
-
-{
-
-*/&ast; One or more CSS rules to apply when the query is satisfied &ast;/*
-
+<h4>A Media Query containing a Media Feature (and an implicit Media Type of &quot;all&quot;)</h4>
+<b>&commat;media</b> (orientation: portrait) {
+  /* One or more CSS rules to apply when the query is satisfied */
 }
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch13-2">Section 13.2: Basic Example</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<pre><code><b>&commat;media</b> screen and (<b>min-width</b>: 720px) {
+  body {
+    <b>background-color</b>: skyblue;
+  }
+}</code></pre>
 
-<b>&commat;media</b>
-
-screen and
-
-(
-
-<b>min-width</b>
-
-:
-
-720
-
-px
-
-)
-
-{
-
-body
-
-{
-
-<b>background-color</b>
-
-:
-
-skyblue
-
-;
-
-}
-
-}
-
-The above media query specifies two conditions:
+<p>The above media query specifies two conditions:</p>
 
 1.  The page must be viewed on a normal screen (not a printed page,
     projector, etc).
 
 2.  The width of the user&apos;s view port must be at least 720 pixels.
 
-If these conditions are met, the styles inside the media query will be
-active, and the background color of the page will be sky blue.
->
-Media queries are applied dynamically. If on page load the conditions
+<p>If these conditions are met, the styles inside the media query will be
+active, and the background color of the page will be sky blue.</p>
+
+<p>Media queries are applied dynamically. If on page load the conditions
 specified in the media query are met, the CSS will be applied, but
 will be immediately disabled should the conditions cease to be met.
 Conversely, if the conditions are initially not met, the CSS will not
-be applied until the specified conditions are met.
->
-In our example, if the user&apos;s view port width is initially greater
+be applied until the specified conditions are met.</p>
+
+<p>In our example, if the user&apos;s view port width is initially greater
 than 720 pixels, but the user shrinks the browser&apos;s width, the
 background color will cease to be sky blue as soon as the user has
-resized the view port to less than 720 pixels in width.
-
+resized the view port to less than 720 pixels in width.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch13-3">Section 13.3: mediatype</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p>Media queries have an optional mediatype parameter. This parameter is
+placed directly after the &commat;media declaration(<b>&commat;media mediatype</b> mediatype), for example:</p>
 
-  <b>&commat;media</b> mediatype
+<pre><code>&commatmedia print {
+  html {
+    <b>background-color</b>: white;
+  }
+}</code></pre>
 
-Media queries have an optional mediatype parameter. This parameter is
-placed directly after the &commat;media declaration (), for example:
+<p>The above CSS code will give the DOM HTML element a white background
+color when being printed.</p>
 
-<b>&commat;media</b>
-
-print
-
-{
-
-html
-
-{
-
-<b>background-color</b>
-
-:
-
-white
-
-;
-
-}
-
-}
-
-The above CSS code will give the DOM HTML element a white background
-color when being printed.
->
-The mediatype parameter has an optional not or only prefix that will
+<p>The mediatype parameter has an optional not or only prefix that will
 apply the styles to everything except the specified mediatype *or*
 only the specified media type, respectively. For example, the
 following code example will apply the style to every media type except
-print.
+print.</p>
 
-<b>&commat;media</b>
+<pre><code><b>&commat;media</b> not print {
+  html {
+    <b>background-color</b>: green;
+  }
+}</code></pre>
 
-not
+<p>And the same way, for just showing it only on the screen, this can be used:</p>
 
-print
+<pre><code><b>&commat;media</b> only screen {
+  .fadeInEffects {
+    <b>display</b>: block;
+  }
+}</code></pre>
 
-{
+<p>The list of mediatype can be understood better with the following table:</p>
 
-html
-
-{
-
-<b>background-color</b>
-
-:
-
-green
-
-;
-
-}
-
-}
-
-And the same way, for just showing it only on the screen, this can be
-used:
-
-<b>&commat;media</b>
-
-only screen
-
-{
-
-.fadeInEffects
-
-{
-
-<b>display</b>
-
-:
-
-block
-
-;
-
-}
-
-}
-
-The list of mediatype can be understood better with the following
-table:
-
-<b>Media Type Description</b>
-
-all Apply to all devices screen Default computers
-
-print Printers in general. Used to style print-versions of websites
-handheld PDA&apos;s, cellphones and hand-held devices with a small screen
-projection For projected presentation, for example projectors
-
-aural Speech Systems
-
-braille Braille tactile devices embossed Paged braille printers tv
-Television-type devices tty Devices with a fixed-pitch character grid.
-Terminals, portables.
+| <b>Media Type</b> | <b>Description</b>
+|-------------------|---------------------------------------------------|
+| all               | Apply to all devices |
+| screen | Default computers |
+| print | Printers in general. Used to style print-versions of websites |
+| handheld | PDA&apos;s, cellphones and hand-held devices with a small screen |
+| projection | For projected presentation, for example projectors |
+| aural        | Speech Systems |
+| braille | Braille tactile devices |
+| embossed | Paged braille printers |
+| tv | Television-type devices |
+| tty | Devices with a fixed-pitch character grid. Terminals, portables. |
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch13-4">Section 13.4: Media Queries for Retina and Non Retina Screens</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-
-Although this works only for WebKit based browsers, this is helpful:
+<p>Although this works only for WebKit based browsers, this is helpful:</p>
 
 /* Non-Retina Screens */
-
-<b>&commat;media</b>
-
-screen
-
-and
-
-(
-
-<b>min-width</b>
-
-:
-
-1200
-
-px
-
-)
-
-and
-
-(
-
-<b>max-width</b>
-
-:
-
-1600
-
-px
-
-)
-
-and
-
-(
-
-&minus;
-
-webkit-min-device-pixel-ratio
-
-:
-
-1
-
-)
-
-{
-
+<b>&commat;media</b> screen
+  and (<b>min-width</b>: 1200px)
+  and (<b>max-width</b>: 1600px)
+  and (&minus;webkit-min-device-pixel-ratio: 1) {
 }
 
-*/&ast; &minus;&minus;&minus;&minus;&minus;&minus;&minus;&minus;&minus;&minus;- Retina Screens &minus;&minus;&minus;&minus;&minus;&minus;&minus;&minus;&minus;&minus;- &ast;/*
-
-<b>&commat;media</b>
-
-screen
-
-and
-
-(
-
-<b>min-width</b>
-
-:
-
-1200
-
-px
-
-)
-
-and
-
-(
-
-<b>max-width</b>
-
-:
-
-1600
-
-px
-
-)
-
-and
-
-(
-
-&minus;
-
-webkit-min-device-pixel-ratio
-
-:
-
-2
-
-)
-
-and
-
-(
-
-min-resolution
-
-:
-
-192
-
-dpi
-
-)
-
-{
-
+/* Retina Screens */
+<b>&commat;media</b> screen
+  and (<b>min-width</b>: 1200px)
+  and (<b>max-width</b>: 1600px)
+  and (&minus;webkit-min-device-pixel-ratio: 2)
+  and (min-resolution: 192dpi) {
 }
 
-<b>Background Information</b>
+<h4>Background Information</h4>
 
-There are two types of pixels in the display. One is the logical
+<p>There are two types of pixels in the display. One is the logical
 pixels and the other is the physical pixels. Mostly, the physical
 pixels always stay the same, because it is the same for all the
 display devices. The logical pixels change based on the resolution of
@@ -4316,50 +4075,46 @@ the devices to display higher quality pixels. The device pixel ratio
 is the ratio between physical pixels and logical pixels. For instance,
 the MacBook Pro Retina, iPhone 4 and above report a device pixel ratio
 of 2, because the physical linear resolution is double the logical
-resolution.
+resolution.</p>
 
-The reason why this works only with WebKit based browsers is because
-of:
+<p>The reason why this works only with WebKit based browsers is because of:</p>
 
-The vendor prefix -webkit- before the rule.
-
-This hasn&apos;t been implemented in engines other than WebKit and Blink.
-
+<ul>
+  <li>The vendor prefix -webkit- before the rule.</li>
+  <li>This hasn&apos;t been implemented in engines other than WebKit and Blink.</li>
+</ul>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch13-5">Section 13.5: Width vs Viewport</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p>When we are using &quot;width&quot; with media queries it is important to set
+the meta tag correctly. Basic meta tag looks like this and it needs to be put 
+inside the <b>&lt;head&gt;</b> tag.</p>
 
-  <b>&lt;head</b>
+<pre><code><b>&lt;meta</b> name=&quot;viewport&quot; content=&quot;width=device-width,initial-scale=1&quot;<b>&gt;</b></code></pre>
 
-When we are using &quot;width&quot; with media queries it is important to set
-the meta tag correctly. Basic meta tag looks like this and it needs to
-be put inside the <b>&gt;</b> tag.
-
-<b>&lt;meta</b> name=&quot;viewport&quot;
-content=&quot;width=device-width,initial-scale=1&quot;<b>&gt;</b>
-
-<b>Why this is important?</b>
+<h4>Why this is important?</h4>
 
 Based on MDN&apos;s definition &quot;width&quot; is
 
+<blockquote>
 The width media feature describes the width of the rendering surface
 of the output device (such as the width of the document window, or the
 width of the page box on a printer).
+</blockquote>
 
-What does that mean?
+<p>What does that mean?</p>
 
-View-port is the width of the device itself. If your screen resolution
-says the resolution is 1280 x 720, your view-port width is &quot;1280px&quot;.
+<p>View-port is the width of the device itself. If your screen resolution
+says the resolution is 1280 x 720, your view-port width is &quot;1280px&quot;.</p>
 
-More often many devices allocate different pixel amount to display one
+<p>More often many devices allocate different pixel amount to display one
 pixel. For an example iPhone 6 Plus has 1242 x 2208 resolution. But
 the actual viewport-width and viewport-height is 414 x 736. That means
-3 pixels are used to create 1 pixel.
+3 pixels are used to create 1 pixel.</p>
 
-But if you did not set the meta tag correctly it will try to show your
+<p>But if you did not set the meta tag correctly it will try to show your
 webpage with its native resolution which results in a zoomed out view
-(smaller texts and images).
-
+(smaller texts and images).</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch13-6">Section 13.6: Using Media Queries to Target Dierent Screen Sizes0</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -4410,8 +4165,7 @@ Media queries</a> are not supported at all in IE8 and below.</p>
 example, <a href="https://github.com/scottjehl/Respond">Respond</a> can be added to add media query support for IE8 only With
 the following code:</p>
 
-<pre><code>
-&lt;!&minus;-&lbrack;if lt IE 9&rbrack;<b>&gt;</b>
+<pre><code>&lt;!&minus;-&lbrack;if lt IE 9&rbrack;<b>&gt;</b>
 <b>&lt;script</b>
   src=&quot;respond.min.js&quot;<b>&gt;</b>
 <b>&lt;/script&gt;</b>
@@ -4439,18 +4193,16 @@ to IE&lt;9. For that, you should add the following HTML to your code:</p>
 
 <h4>Note:</h4>
 
-Technically it&apos;s one more alternative: using &lbrack;<b>&lbrack;CSS
-hacks&rbrack;</b>&rbrack;(http://browserhacks.com/) to target IE&lt;9. It
-has the same impact as an IE&lt;9 only stylesheet, but you don&apos;t need a
-separate stylesheet for that. I do not recommend this option, though,
-as they produce invalid CSS code (which is but one of several reasons
-why the use of CSS hacks is generally frowned upon today).
+<p>Technically it&apos;s one more alternative: using <a href="http://browserhacks.com/">
+CSS hacks</a> to target IE&lt;9. It has the same impact as an IE&lt;9 only stylesheet, 
+but you don&apos;t need a separate stylesheet for that. I do not recommend this option, 
+though, as they produce invalid CSS code (which is but one of several reasons why the 
+use of CSS hacks is generally frowned upon today).</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ch14">Chapter 14: Floats</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch14-1">Section 14.1: Float an Image Within Text</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-
 <p>The most basic use of a float is having text wrap around an image. The
 below code will produce two paragraphs and an image, with the second
 paragraph flowing around the image. Notice that it is always content
@@ -4462,8 +4214,9 @@ paragraph flowing around the image. Notice that it is always content
 Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed
 nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum.
 Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris
-massa. Vestibulum lacinia arcu eget nulla. <b>&lt;/p&gt; &lt;img</b>
-src=&quot;http://lorempixel.com/200/100/&quot; <b>/&gt;</b></p>
+massa. Vestibulum lacinia arcu eget nulla. <b>&lt;/p&gt;</p>
+
+<p><b>&lt;img</b> src=&quot;http://lorempixel.com/200/100/&quot; <b>/&gt;</b></p>
 
 <p><b>&lt;p&gt;</b>Class aptent taciti sociosqu ad litora torquent per conubia
 nostra, per inceptos himenaeos. Curabitur sodales ligula in libero. Sed
@@ -4475,17 +4228,15 @@ quis ligula lacinia aliquet. <b>&lt;/p&gt;</b></p>
 
 <h4>CSS:</h4>
 
-<pre><code>
-img {
+<pre><code>img {
   <b>float</b>: left;
   <b>margin-right</b>: 1rem;
-}
-</code></pre>
+}</code></pre>
 
-This will be the output
+<h4>This will be the output;<h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 36.  (xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p align="center" width="100%">
+<p align="left" width="100%">
 <img src="./images/image036.jpg"
   style="width:50%"
   title=""
@@ -4499,7 +4250,6 @@ This will be the output
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>The clear property is directly related to floats.</p>
 
-
 | Property | Values: |
 |----------|---------------------------------------------|
 | none | Default. Allows floating elements on both sides |
@@ -4509,76 +4259,36 @@ This will be the output
 | initial | Sets this property to its default value. Read about initial |
 | inherit | Inherits this property from its parent element. Read about inherit |
 
-<pre><code>
-<b>&lt;</b>
+<pre><code><b>&lt;</b>
 </code></pre>
 
 <h4>HTML:</h4>
 
-<pre><code>
-<b>&gt;</b>
-<b>&lt;</b>
-<b>head</b>
-<b>&gt;</b>
-<b>&lt;</b>
-<b>style</b>
-<b>&gt;</b>
+<pre><code><b>&lt;html&gt;</b>
+<b>&lt;head&gt;</b>
+<b>&lt;style&gt;</b>
 img {
-float: left;
+  float: left;
 }
 p.clear {
-clear: both;
+  clear: both;
 }
-<b>&lt;</b>
-<b>/style</b>
-<b>&gt;</b>
-<b>&lt;</b>
-<b>/head</b>
-<b>&gt;</b>
-<b>&lt;</b>
-<b>body</b>
-<b>&gt;</b>
-<b>&lt;</b>
-<b>img</b>
-src
-=
-&quot;https://static.pexels.com/photos/69372/pexels-photo-69372-medium.jpeg&quot;
-width
-=
-&quot;100&quot;
-<b>&gt;</b>
-<b>&lt;</b>
-<b>p</b>
-<b>&gt;</b>
-Lorem ipsoum Lorem ipsoum Lorem ipsoum Lorem ipsoum Lorem ipsoum Lorem
-ipsoum Lorem ipsoum Lorem
-ipsoum Lorem ipsoum Lorem ipsoum Lorem ipsoum Lorem ipsoum
-<b>&lt;</b>
-<b>/p</b>
-<b>&gt;</b>
-<b>&lt;</b>
-<b>p</b>
-class
-=
-&quot;clear&quot;
-<b>&gt;</b>
-Lorem ipsoum Lorem ipsoum Lorem ipsoum Lorem ipsoum Lorem ipsoum Lorem
-ipsoum
-Lorem ipsoum Lorem ipsoum Lorem ipsoum Lorem ipsoum Lorem ipsoum Lorem
-ipsoum
-<b>&lt;</b>
-<b>/p</b>
-<b>&gt;</b>
-<b>&lt;</b>
-<b>/body</b>
-<b>&gt;</b>
-<b>&lt;</b>
-<b>/html</b>
-<b>&gt;</b></code></pre>
+<b>&lt;/style&gt;</b>
+<b>&lt;/head&gt;</b>
+<b>&lt;body&gt;</b>
+
+<b>&lt;img</b> src=&quot;https://static.pexels.com/photos/69372/pexels-photo-69372-medium.jpeg&quot; width=&quot;100&quot;<b>&gt;</b>
+<b>&lt;p&gt;</b>Lorem ipsoum Lorem ipsoum Lorem ipsoum Lorem ipsoum Lorem ipsoum Lorem ipsoum Lorem ipsoum Lorem
+ipsoum Lorem ipsoum Lorem ipsoum Lorem ipsoum Lorem ipsoum <b>&lt;/p&gt;</b>
+<b>&lt;p</b>class=&quot;clear&quot;<b>&gt;</b>Lorem ipsoum Lorem ipsoum Lorem ipsoum Lorem ipsoum Lorem ipsoum Lorem ipsoum
+Lorem ipsoum Lorem ipsoum Lorem ipsoum Lorem ipsoum Lorem ipsoum Lorem ipsoum <b>&lt;/p&gt;</b>
+
+<b>&lt;/body&gt;</b>
+<b>&lt;/html&gt;</b></code></pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch14-3">Section 14.3: Clearfix</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>The clearfix hack is a popular way to contain floats (N. Gallagher aka &commat;necolas)</p>
+<blockquote>The clearfix hack is a popular way to contain floats (N. Gallagher aka &commat;necolas)</blockquote>
 
 <p>Not to be confused with the clear property, clearfix is a <i>concept</i>
 (that is also related to floats, thus the possible confusion). To <i>contain 
@@ -4591,8 +4301,7 @@ by N. Gallagher and &lbrack;&lbrack;clearfix
 reloaded&rbrack;&rbrack;(http://yuiblog.com/blog/2010/09/27/clearfix-reloaded-overflowhidden-demystified/)
 by T. J. Koblentz):
 
-<b>Clearfix (with top margin collapsing of contained floats still
-occurring)</b>
+<h4>Clearfix (with top margin collapsing of contained floats still occurring)</h4>
 
 ```
 .cf: after {
@@ -24276,3 +23985,4 @@ same animation, took <b>1.3ms</b> for rendering, <b>2.0ms</b> for painting.
 <!-- 6/28/2024 Fri 5:41pm -->
 <!-- 7/1/2024 Mon 2:24am -->
 <!-- 7/2/2024 Tue 6:39pm -->
+<!-- 7/4/2024 Thu 1:35am -->
