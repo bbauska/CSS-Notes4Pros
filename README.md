@@ -2137,7 +2137,7 @@ browsers. Prefixes are needed for Chrome&lt;=35, Safari&lt;=8, Opera&lt;=22,
 Android Browser&lt;=4.4.4, and IE9. CSS transforms are not supported by
 IE8 and older versions.</p>
 
-Here is a common transform declaration for the previous example:
+<p>Here is a common transform declaration for the previous example:</p>
 
 <pre><code>-webkit-transform: translate(-50%, -50%); /* Chrome, Safari, Opera, Android */
     -ms-transform: translate(-50%, -50%); /* IE 9 */
@@ -2862,7 +2862,6 @@ snippet:</p>
 
 <p>In this box-sizing: border-box; is not directly applied to &ast;, so you can easily
 overwrite this property on individual elements.</p>
-
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ch8">Chapter 8: Margins</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -2909,8 +2908,8 @@ other. (The spacing will not be the sum of two margins.)</p>
 
 <b>&lt;span&gt;</b>some<b>&lt;/span&gt;&lt;span&gt;</b>content<b>&lt;/span&gt;</b></code></pre>
 
-They will be 20px apart since horizontal margins don&apos;t collapse over
-one and other. (The spacing will be the sum of two margins.)
+<p>They will be 20px apart since horizontal margins don&apos;t collapse over
+one and other. (The spacing will be the sum of two margins.)</p>
 
 <h4>Overlapping with different sizes</h4>
 
@@ -2999,20 +2998,19 @@ borders&period;..)</p>
   <b>background</b>: #cf9;
 }</code></pre>
 
-> In the example above, only the largest margin applies. You may have
- expected that the paragraph would be located 60px from the h1 (since
-> the div element has a margin-top of 40px and the p has a 20px
-> margin-top). This does not happen because the margins collapse
-> together to form one margin.
-
+<p>In the example above, only the largest margin applies. You may have
+expected that the paragraph would be located 60px from the h1 (since
+the div element has a margin-top of 40px and the p has a 20px
+margin-top). This does not happen because the margins collapse
+together to form one margin.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch8-2">Section 8.2: Apply Margin on a Given Side</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 <h4>Direction-Specific Properties</h4>
 
-CSS allows you to specify a given side to apply margin to. The four
-properties provided for this purpose are:
+<p>CSS allows you to specify a given side to apply margin to. The four
+properties provided for this purpose are:</p>
 
 <ul>
   <li>margin-left</li>
@@ -3021,14 +3019,12 @@ properties provided for this purpose are:
   <li>margin-bottom</li>
 </ul>
 
-The following code would apply a margin of 30 pixels to the left side
-of the selected div. <a href="https://jsfiddle.net/wm0100x9/1/">View Result</a>.
+<p>The following code would apply a margin of 30 pixels to the left side
+of the selected div. <a href="https://jsfiddle.net/wm0100x9/1/">View Result</a>.</p>
 
 <h4>HTML:</h4>
 
-<pre><code>
-<b>&lt;div</b> id=&quot;myDiv&quot;<b>&gt;&lt;/div&gt;</b>
-</code></pre>
+<pre><code><b>&lt;div</b> id=&quot;myDiv&quot;<b>&gt;&lt;/div&gt;</b></code></pre>
 
 <h4>CSS:</h4>
 
@@ -3048,17 +3044,17 @@ of the selected div. <a href="https://jsfiddle.net/wm0100x9/1/">View Result</a>.
 
 <h4>Specifying Direction Using Shorthand Property</h4>
 
-The standard margin property can be expanded to specify differing
+<p>The standard margin property can be expanded to specify differing
 widths to each side of the selected elements. The syntax for doing
-this is as follows:
+this is as follows:</p>
 
 <pre><code><b>margin</b>: &lt;top&gt; &lt;right&gt; &lt;bottom&gt; &lt;left&gt;;</code></pre>
 
-> The following example applies a zero-width margin to the top of the
-> div, a 10px margin to the right side, a 50px margin to the left side,
-> and a 100px margin to the left side. <a href="https://jsfiddle.net/1979c947/">View
-> Result.
->
+<p>The following example applies a zero-width margin to the top of the
+div, a 10px margin to the right side, a 50px margin to the left side,
+and a 100px margin to the left side. <a href="https://jsfiddle.net/1979c947/">View
+Result.</p>
+
 <h4>HTML:</h4>
 
 <pre><code>
@@ -3067,19 +3063,15 @@ this is as follows:
 
 <h4>CSS:</h4>
 
-<pre><code>
-#myDiv {
+<pre><code>#myDiv {
   <b>margin</b>: 0 10px 50px 100px;
   <b>height</b>: 40px;
   <b>width</b>: 40px;
   <b>background-color</b>: red;
-}
-</code></pre>
-
+}</code></pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch8-3">Section 8.3: Margin property simplification</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-
 <pre><code>
 p {
   <b>margin</b>: 1px; /* 1px margin in all directions */
@@ -3095,7 +3087,7 @@ p {
 }
 </code></pre>
 
-> Another exapmle:
+<p>Another exapmle:</p>
 
 <pre><code>p {
   <b>margin</b>: 10px 15px; /* 10px margin-top & bottom And 15px margin-right & left */
@@ -3112,14 +3104,13 @@ p {
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch8-4">Section 8.4: Horizontally center elements on a page using margin</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p>As long as the element is a <b>block</b>, and it has an <b>explicitly set
+width value</b>, margins can be used to center block elements on a page
+horizontally.</p>
 
-> As long as the element is a <b>block</b>, and it has an <b>explicitly set
-> width value</b>, margins can be used to center block elements on a page
-> horizontally.
->
-> We add a width value that is lower than the width of the window and
-> the auto property of margin then distributes the remaining space to
-> the left and the right:
+<p>We add a width value that is lower than the width of the window and
+the auto property of margin then distributes the remaining space to
+the left and the right:</p>
 
 <pre><code>
 #myDiv {
@@ -3128,25 +3119,21 @@ p {
 }
 </code></pre>
 
-> In the example above we use the shorthand margin declaration to first
-> set 0 to the top and bottom margin values (although this could be any
-> value) and then we use auto to let the browser allocate the space
-> automatically to the left and right margin values.
->
-> In the example above, the #myDiv element is set to 80% width which
-> leaves use 20% leftover. The browser distributes this value to the
-> remaining sides so:
+<p>In the example above we use the shorthand margin declaration to first
+set 0 to the top and bottom margin values (although this could be any
+value) and then we use auto to let the browser allocate the space
+automatically to the left and right margin values.</p>
 
-<pre><code>
-(100% - 80%) / 2 = 10%
-</code></pre>
+<p>In the example above, the #myDiv element is set to 80% width which
+leaves use 20% leftover. The browser distributes this value to the
+remaining sides so:</p>
 
+<pre><code>(100% - 80%) / 2 = 10%</code></pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch8-5">Section 8.5: Example 1:</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-
-It is obvious to assume that the percentage value of margin to
-margin-left and margin-right would be relative to its parent element.
+<p>It is obvious to assume that the percentage value of margin to
+margin-left and margin-right would be relative to its parent element.</p>
 
 <pre><code>
 .parent {
@@ -3160,11 +3147,11 @@ margin-left and margin-right would be relative to its parent element.
 }
 </code></pre>
 
-> But that is not the case, when comes to margin-top and margin-bottom.
-> Both these properties, in percentages, aren&apos;t relative to the height
-> of the parent container but to the <b>width</b> of the parent container.
->
-> So,
+<p>But that is not the case, when comes to margin-top and margin-bottom.
+Both these properties, in percentages, aren&apos;t relative to the height
+of the parent container but to the <b>width</b> of the parent container.</p>
+
+<p>So,</p>
 
 <pre><code>.parent {
   <b>width</b>: 500px;
@@ -3191,7 +3178,6 @@ absolute positioning</b>.</p>
 }
 &lt;div&gt;Base div&lt;/div&gt;
 &lt;div id=&quot;over&quot;&gt;Overlapping div&lt;/div&gt;</code></pre>
-
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ch9">Chapter 9: Padding</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -3339,7 +3325,6 @@ avoid manually calculating the borderradius value:</p>
 
 <p>If the width and height properties are not equal, the resulting shape
 will be an oval rather than a circle.</p>
-
 
 <h4>Browser specific border-radius example:</h4>
 
@@ -3493,7 +3478,6 @@ to be transparent.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch10-7">Section 10.7: Creating a multi-colored border using borderimage</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-
 <h4>CSS:</h4>
 
 <pre><code>.bordered {
@@ -3531,16 +3515,16 @@ applied to the entire box and then the colors are masked from the
 padding and content areas, thus making it look as though only the
 border has the gradient.</p>
 
-  to right
+to right
 
-  to bottom
+to bottom
 
-> Which border(s) have a single color is dependant on the gradient
-> definition. If the gradient is a gradient, the left border would be
-> the start color of the gradient and right border would be the end
-> color. If it was a to bottom gradient the top border would be the
-> gradient&apos;s start color and bottom border would be end color. Below is
-> the output of a 5 colored gradient.
+<p>Which border(s) have a single color is dependant on the gradient
+definition. If the gradient is a gradient, the left border would be
+the start color of the gradient and right border would be the end
+color. If it was a to bottom gradient the top border would be the
+gradient&apos;s start color and bottom border would be end color. Below is
+the output of a 5 colored gradient.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 29.  (xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="center" width="100%">
@@ -3551,40 +3535,19 @@ border has the gradient.</p>
 </p>
 <!-- [image029.jpg 3.489 x 1.40](./images/image029.jpg) -->
 
-> If the border is required only on specific sides of the element then
-> the border-width property can be used just like with any other normal
-> border. For example, adding the below code would produce a border only
-> on the top of the element.
+<p>If the border is required only on specific sides of the element then
+the border-width property can be used just like with any other normal
+border. For example, adding the below code would produce a border only
+on the top of the element.</p>
 
-<b>border-width</b>
+<pre><code><b>border-width</b>: 5px 0px 0px 0px;</code></pre>
 
-:
+<p>Note that, any element that has border-image property <b>won&apos;t respect
+the</b> border-radius (that is the border won&apos;t curve). This is based
+on the below statement in the spec:</p>
 
-5
-
-px
-
-0
-
-px
-
-0
-
-px
-
-0
-
-px
-
-;
-
-> Note that, any element that has border-image property <b>won&apos;t respect
-> the</b> border-radius (that is the border won&apos;t curve). This is based
-> on the below statement in the spec:
->
-> A box&apos;s backgrounds, but not its border-image, are clipped to the
-> appropriate curve (as determined by 'background-clip').
-
+<p>A box&apos;s backgrounds, but not its border-image, are clipped to the
+appropriate curve (as determined by 'background-clip').</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch10-8">Section 10.8: border-&lbrack;left&vert;right&vert;top&vert;bottom&rbrack;</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -3592,34 +3555,18 @@ px
   border-           &lbrack;   left      &vert;   right        &vert;   top     &vert;   bottom
 
 
-> The &rbrack; property is used to add a border to a specific side of an
-> element.
->
-> For example if you wanted to add a border to the left side of an
-> element, you could do:
+<p>The &rbrack; property is used to add a border to a specific side of an
+element.</p>
 
+<p>For example if you wanted to add a border to the left side of an
+element, you could do:</p>
+
+```
 &num;
-
-element
-
-{
-
-<b>border-left</b>
-
-:
-
-1
-
-px
-
-solid
-
-black
-
-;
-
+element {
+  <b>border-left</b>: 1px solid black;
 }
-
+```
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ch11">Chapter 11: Outlines</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -3649,366 +3596,156 @@ black
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch11-1">Section 11.1: Overview</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+Outline is a line that goes around the element, outside of the border.
+In contrast to border, outlines do not take any space in the box
+model. So adding an outline to an element does not affect the position
+of the element or other elements.
 
-> Outline is a line that goes around the element, outside of the border.
-> In contrast to border, outlines do not take any space in the box
-> model. So adding an outline to an element does not affect the position
-> of the element or other elements.
->
-> In addition, outlines can be non-rectangular in some browsers. This
-> can happen if outline is applied on a span element that has text with
-> different font-size properties inside it. Unlike borders, outlines
-> *cannot* have rounded corners.
->
-> The essential parts of outline are outline-color, outline-style and
-> outline-width.
->
-> The definition of an outline is equivalent to the definition of a
-> border:
+In addition, outlines can be non-rectangular in some browsers. This
+can happen if outline is applied on a span element that has text with
+different font-size properties inside it. Unlike borders, outlines
+*cannot* have rounded corners.
+
+The essential parts of outline are outline-color, outline-style and
+outline-width.
+
+The definition of an outline is equivalent to the definition of a
+border:
 
 An outline is a line around an element. It is displayed around the
-margin of the element. However, it is
+margin of the element. However, it is different from the border property.
 
-different from the border property.
-
-<b>outline</b>
-
-:
-
-1
-
-px
-
-solid
-
-black
-
-;
-
+```
+<b>outline</b>: 1px solid black;
+```
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch11-2">Section 11.2: outline-style</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
-> The outline-style property is used to set the style of the outline of
-> an element.
+<p>The outline-style property is used to set the style of the outline of
+an element.</p>
 
-p
-
-{
-
-<b>border</b>
-
-:
-
-1
-
-px
-
-solid
-
-black
-
-;
-
-<b>outline-color</b>
-
-:
-
-blue
-
-;
-
-<b>line-height</b>
-
-:
-
-30
-
-px
-
-;
-
+```
+p {
+  <b>border</b>: 1px solid black;
+  <b>outline-color</b>: blue;
+  <b>line-height</b>: 30px;
 }
-
-.p1
-
-{
-
-<b>outline-style</b>
-
-:
-
-dotted
-
-;
-
+.p1 {
+  <b>outline-style</b>: dotted;
 }
-
-.p2
-
-{
-
-<b>outline-style</b>
-
-:
-
-dashed
-
-;
-
+.p2 {
+  <b>outline-style</b>: dashed;
 }
-
-.p3
-
-{
-
-<b>outline-style</b>
-
-:
-
-solid
-
-;
-
+.p3 {
+  <b>outline-style</b>: solid;
 }
-
-.p4
-
-{
-
-<b>outline-style</b>
-
-:
-
-double
-
-;
-
+.p4 {
+  <b>outline-style</b>: double;
 }
-
-.p5
-
-{
-
-<b>outline-style</b>
-
-:
-
-groove
-
-;
-
+.p5 {
+  <b>outline-style</b>: groove;
 }
-
-.p6
-
-{
-
-<b>outline-style</b>
-
-:
-
-ridge
-
-;
-
+.p6 {
+  <b>outline-style</b>: ridge;
 }
-
-.p7
-
-{
-
-<b>outline-style</b>
-
-:
-
-inset
-
-;
-
+.p7 {
+  <b>outline-style</b>: inset;
 }
-
-.p8
-
-{
-
-<b>outline-style</b>
-
-:
-
-outset
-
-;
-
+.p8 {
+  <b>outline-style</b>: outset;
 }
+```
 
-> <h4>HTML:</h4>
+<h4>HTML:</h4>
 
+```
 <b>&lt;</b>
-
 <b>p</b>
-
 class
-
 =
-
 &quot;p1&quot;
-
 <b>&gt;</b>
-
 A dotted outline
-
 <b>&lt;</b>
-
 <b>/p</b>
-
 <b>&gt;</b>
-
 <b>&lt;</b>
-
 <b>p</b>
-
 class
-
 =
-
 &quot;p2&quot;
-
 <b>&gt;</b>
-
 A dashed outline
-
 <b>/p</b>
-
 <b>&lt;</b>
-
 <b>&gt;</b>
-
 <b>&lt;</b>
-
 <b>p</b>
-
 class
-
 =
-
 &quot;p3&quot;
-
 <b>&gt;</b>
-
 A solid outline
-
 <b>&lt;</b>
-
 <b>/p</b>
-
 <b>&gt;</b>
-
 <b>&lt;</b>
-
 <b>p</b>
-
 class
-
 =
-
 &quot;p4&quot;
-
 <b>&gt;</b>
-
 A double outline
-
 <b>/p</b>
-
 <b>&lt;</b>
-
 <b>&gt;</b>
-
 <b>&lt;</b>
-
 <b>p</b>
-
 class
-
 =
-
 &quot;p5&quot;
-
 <b>&gt;</b>
-
 A groove outline
-
 <b>/p</b>
-
 <b>&lt;</b>
-
 <b>&gt;</b>
-
 <b>&lt;</b>
-
 <b>p</b>
-
 class
-
 =
-
 &quot;p6&quot;
-
 <b>&gt;</b>
-
 A ridge outline
-
 <b>/p</b>
-
 <b>&lt;</b>
-
 <b>&gt;</b>
-
 <b>&lt;</b>
-
 <b>p</b>
-
 class
-
 =
-
 &quot;p7&quot;
-
 <b>&gt;</b>
-
 An inset outline
-
 <b>&lt;</b>
-
 <b>/p</b>
-
 <b>&gt;</b>
-
 <b>&lt;</b>
-
 <b>p</b>
-
 class
-
 =
-
 &quot;p8&quot;
-
 <b>&gt;</b>
-
 An outset outline
-
 <b>&lt;</b>
-
 <b>/p</b>
-
 <b>&gt;</b>
+```
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ch12">Chapter 12: Overflow</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-
-<b>Overflow Value Details</b>
+<h4>Overflow Value Details</h4>
 
   visible     Shows all overflowing content outside the element
   scroll      Hides the overflowing content and adds a scroll bar
@@ -4024,11 +3761,10 @@ An outset outline
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch12-1">Section 12.1: overflow-wrap</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-
-overflow-wrap tells a browser that it can break a line of text inside
+<p>overflow-wrap tells a browser that it can break a line of text inside
 a targeted element onto multiple lines in an otherwise unbreakable
 place. Helpful in preventing an long string of text causing layout
-problems due to overflowing it&apos;s container.
+problems due to overflowing it&apos;s container.</p>
 
 <h4>CSS:</h4>
 
@@ -4045,125 +3781,41 @@ problems due to overflowing it&apos;s container.
 
 <h4>HTML:</h4>
 
-<b>&lt;</b>
-
-<b>div</b>
-
-id
-
-=
-
-&quot;div1&quot;
-
-<b>&gt;</b>
-
-<b>&lt;</b>
-
-<b>strong</b>
-
-<b>&gt;</b>
-
+<b>&lt;</b><b>div</b> id=&quot;div1&quot;<b>&gt;</b>
+<b>&lt;</b><b>strong</b><b>&gt;</b>
 #div1
-
-<b>&lt;</b>
-
-<b>/strong</b>
-
-<b>&gt;</b>
-
+<b>&lt;</b><b>/strong</b><b>&gt;</b>
 :
-
 Small words are displayed normally, but a long word like
-
-<b>&lt;</b>
-
-<b>span</b>
-
-style
-
-=
-
-&quot;red;&quot;
-
-<b>&gt;</b>
-
+<b>&lt;</b><b>span</b> style=&quot;red;&quot;<b>&gt;</b>
 supercalifragilisticexpialidocious
-
-<b>&lt;</b>
-
-<b>/span</b>
-
-<b>&gt;</b>
-
+<b>&lt;</b><b>/span</b><b>&gt;</b>
 is too long so it will overflow past the
-
 edge of the line-break
-
-<b>&lt;</b>
-
-<b>/div</b>
-
-<b>&gt;</b>
-
-<b>&lt;</b>
-
-<b>div</b>
-
-id
-
-=
-
-&quot;div2&quot;
-
-<b>&gt;</b>
-
-<b>&lt;</b>
-
-<b>strong</b>
-
-<b>&gt;</b>
-
+<b>&lt;</b><b>/div</b><b>&gt;</b>
+<b>&lt;</b><b>div</b> id=&quot;div2&quot;<b>&gt;</b>
+<b>&lt;</b> <b>strong</b><b>&gt;</b>
 #div2
-
 <b>&lt;</b>
-
 <b>/strong</b>
-
 <b>&gt;</b>
-
 :
-
 Small words are displayed normally, but a long word like
-
 <b>&lt;</b>
-
 <b>span</b>
-
 style
-
 =
-
 &quot;red;&quot;
-
 <b>&gt;</b>
-
 supercalifragilisticexpialidocious
-
 <b>&lt;</b>
-
 <b>/span</b>
-
 <b>&gt;</b>
-
 will be split at the line break and continue
-
 on the next line.
-
 <b>&lt;</b>
-
 <b>/div</b>
-
-<b>&gt;</b>
+<b>&gt;</b></code></pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 32.  (xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="center" width="100%">
@@ -4174,122 +3826,60 @@ on the next line.
 </p>
 <!--[image032.jpg 7.48 x 4.27](./images/image032.jpg) -->
 
-<b>overflow-wrap</b> -- <b>Value Details</b>
+<h4>overflow-wrap -- Value Details</h4>
 
-> normal Lets a word overflow if it is longer than the line break-word
-> Will split a word into multiple lines, if necessary inherit Inherits
-> the parent element&apos;s value for this property
+<p>normal Lets a word overflow if it is longer than the line break-word
+Will split a word into multiple lines, if necessary inherit Inherits
+the parent element&apos;s value for this property</p>
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch12-2">Section 12.2: overflow-x and overflow-y</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
-> These two properties work in a similar fashion as the overflow
-> property and accept the same values. The overflow-x parameter works
-> only on the x or left-to-right axis. The overflow-y works on the y or
-> top-to-bottom axis.
->
+These two properties work in a similar fashion as the overflow
+property and accept the same values. The overflow-x parameter works
+only on the x or left-to-right axis. The overflow-y works on the y or
+top-to-bottom axis.
+
 <h4>HTML:</h4>
 
+<pre><code>
 <b>&lt;</b>
-
 <b>div</b>
-
 id
-
 =
-
 &quot;div-x&quot;
-
 <b>&gt;</b>
-
 If this div is too small to display its contents,
-
 the content to the left and right will be clipped.
-
 <b>&lt;</b>
-
 <b>/div</b>
-
 <b>&gt;</b>
-
 <b>&lt;</b>
-
 <b>div</b>
-
 id
-
 =
-
 &quot;div-y&quot;
-
 <b>&gt;</b>
-
 If this div is too small to display its contents,
-
 the content to the top and bottom will be clipped.
-
 <b>&lt;</b>
-
 <b>/div</b>
-
 <b>&gt;</b>
+</code></pre>
 
 <h4>CSS</h4>
 
-div
-
-{
-
-<b>width</b>
-
-:
-
-200
-
-px
-
-;
-
-<b>height</b>
-
-:
-
-200
-
-px
-
-;
-
+<pre><code>div {
+  <b>width</b>: 200px;
+  <b>height</b>: 200px;
 }
-
-#div-x
-
-{
-
-<b>overflow-x</b>
-
-:
-
-hidden
-
-;
-
+#div-x {
+  <b>overflow-x</b>: hidden;
 }
-
-#div-y
-
-{
-
-<b>overflow-y</b>
-
-:
-
-hidden
-
-;
-
-}
+#div-y {
+  <b>overflow-y</b>: hidden;
+}</code></pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch12-3">Section 12.3: overflow: scroll</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
