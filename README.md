@@ -3496,7 +3496,7 @@ image to be used instead of normal border styles.</p>
 
 <p>Consider the following example wheras border.png is a image of 90x90 pixels:</p>
 
-<p><b>border-image</b>: url(&quot;border.png&quot;) 30 stretch;</p>
+<pre><code><b>border-image</b>: url(&quot;border.png&quot;) 30 stretch;</code></pre>
 
 <p>The image will be split into nine regions with 30x30 pixels. The edges
 will be used as the corners of the border while the side will be used
@@ -3525,7 +3525,7 @@ information about border-image-slice property in the border-image
 example in same page.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 28. border on all sides (xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p align="center" width="100%">
+<p align="left" width="100%">
 <img src="./images/image028.png"
   style="width:35%"
   title="Border on ALL sides"
@@ -3551,7 +3551,7 @@ gradient&apos;s start color and bottom border would be end color. Below is
 the output of a bottom 5 colored gradient.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 29.  (xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p align="center" width="100%">
+<p align="left" width="100%">
 <img src="./images/image029.png"
   style="width:35%"
   title="Bottom 5 colored gradient"
@@ -3567,7 +3567,7 @@ on the top of the element.</p>
 <pre><code><b>border-width</b>: 5px 0px 0px 0px;</code></pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 30.  (xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p align="center" width="100%">
+<p align="left" width="100%">
 <img src="./images/image030.png"
   style="width:35%"
   title=""
@@ -3577,78 +3577,66 @@ on the top of the element.</p>
 the</b> border-radius (that is the border won&apos;t curve). This is based
 on the below statement in the spec:</p>
 
-<p>A box&apos;s backgrounds, but not its border-image, are clipped to the
-appropriate curve (as determined by 'background-clip').</p>
+<blockquote>
+  A box&apos;s backgrounds, but not its border-image, are clipped to the
+  appropriate curve (as determined by 'background-clip').
+</blockquote>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch10-8">Section 10.8: border-&lbrack;left&vert;right&vert;top&vert;bottom&rbrack;</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
-  border-           &lbrack;   left      &vert;   right        &vert;   top     &vert;   bottom
+<p>The border-&lbrack;left&vert;right&vert;top&vert;bottom&rbrack; 
+property is used to add a border to a specific side of an element.</p>
 
+<p>For example if you wanted to add a border to the left side of an element, you could do:</p>
 
-<p>The &rbrack; property is used to add a border to a specific side of an
-element.</p>
-
-<p>For example if you wanted to add a border to the left side of an
-element, you could do:</p>
-
-```
-&num;
-element {
+<pre><code>
+&num;element {
   <b>border-left</b>: 1px solid black;
-}
-```
+}</code></pre>
+
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ch11">Chapter 11: Outlines</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
-<b>Parameter Details</b>
-
-  dotted       dotted outline
-
-  dashed       dashed outline
-
-  solid        solid outline
-
-  double       double outline
-
-  groove       3D grooved outline, depends on the outline-color value
-
-  ridge        3D ridged outline, depends on the outline-color value
-
-  inset        3D inset outline, depends on the outline-color value
-
-  outset       3D outset outline, depends on the outline-color value
-
-  none         no outline
-
-  hidden       hidden outline
+| <b>Parameter</b> | <b>Details</b> |
+|------------------|-----------------------------------------------|
+| dotted           | dotted outline |
+| dashed           | dashed outline |
+| solid |       solid outline |
+| double |      double outline |
+| groove |      3D grooved outline, depends on the outline-color value |
+| ridge  |      3D ridged outline, depends on the outline-color value |
+| inset |       3D inset outline, depends on the outline-color value |
+|  outset  |     3D outset outline, depends on the outline-color value |
+|  none    |     no outline |
+|  hidden  |     hidden outline |
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch11-1">Section 11.1: Overview</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-Outline is a line that goes around the element, outside of the border.
+<p>Outline is a line that goes around the element, outside of the border.
 In contrast to border, outlines do not take any space in the box
 model. So adding an outline to an element does not affect the position
-of the element or other elements.
+of the element or other elements.</p>
 
-In addition, outlines can be non-rectangular in some browsers. This
+<p>In addition, outlines can be non-rectangular in some browsers. This
 can happen if outline is applied on a span element that has text with
 different font-size properties inside it. Unlike borders, outlines
-*cannot* have rounded corners.
+<i>cannot</i> have rounded corners.</p>
 
-The essential parts of outline are outline-color, outline-style and
-outline-width.
+<p>The essential parts of outline are outline-color, outline-style and
+outline-width.</p>
 
-The definition of an outline is equivalent to the definition of a
-border:
+<p>The definition of an outline is equivalent to the definition of a
+border:</p>
 
-An outline is a line around an element. It is displayed around the
-margin of the element. However, it is different from the border property.
+<blockquote>
+  An outline is a line around an element. It is displayed around the
+  margin of the element. However, it is different from the border property.
+</blockquote>
 
-```
-<b>outline</b>: 1px solid black;
-```
+<pre><code><b>outline</b>: 1px solid black;</code></pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch11-2">Section 11.2: outline-style</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -3656,8 +3644,7 @@ margin of the element. However, it is different from the border property.
 <p>The outline-style property is used to set the style of the outline of
 an element.</p>
 
-```
-p {
+<pre><code>p {
   <b>border</b>: 1px solid black;
   <b>outline-color</b>: blue;
   <b>line-height</b>: 30px;
@@ -3685,109 +3672,35 @@ p {
 }
 .p8 {
   <b>outline-style</b>: outset;
-}
-```
+}</code></pre>
 
 <h4>HTML:</h4>
 
-```
-<b>&lt;</b>
-<b>p</b>
-class
-=
-&quot;p1&quot;
-<b>&gt;</b>
-A dotted outline
-<b>&lt;</b>
-<b>/p</b>
-<b>&gt;</b>
-<b>&lt;</b>
-<b>p</b>
-class
-=
-&quot;p2&quot;
-<b>&gt;</b>
-A dashed outline
-<b>/p</b>
-<b>&lt;</b>
-<b>&gt;</b>
-<b>&lt;</b>
-<b>p</b>
-class
-=
-&quot;p3&quot;
-<b>&gt;</b>
-A solid outline
-<b>&lt;</b>
-<b>/p</b>
-<b>&gt;</b>
-<b>&lt;</b>
-<b>p</b>
-class
-=
-&quot;p4&quot;
-<b>&gt;</b>
-A double outline
-<b>/p</b>
-<b>&lt;</b>
-<b>&gt;</b>
-<b>&lt;</b>
-<b>p</b>
-class
-=
-&quot;p5&quot;
-<b>&gt;</b>
-A groove outline
-<b>/p</b>
-<b>&lt;</b>
-<b>&gt;</b>
-<b>&lt;</b>
-<b>p</b>
-class
-=
-&quot;p6&quot;
-<b>&gt;</b>
-A ridge outline
-<b>/p</b>
-<b>&lt;</b>
-<b>&gt;</b>
-<b>&lt;</b>
-<b>p</b>
-class
-=
-&quot;p7&quot;
-<b>&gt;</b>
-An inset outline
-<b>&lt;</b>
-<b>/p</b>
-<b>&gt;</b>
-<b>&lt;</b>
-<b>p</b>
-class
-=
-&quot;p8&quot;
-<b>&gt;</b>
-An outset outline
-<b>&lt;</b>
-<b>/p</b>
-<b>&gt;</b>
-```
-
+<pre><code><b>&lt;p</b> class=&quot;p1&quot;<b>&gt;</b>A dotted outline<b>&lt;/p&gt;</b>
+<b>&lt;p</b> class=&quot;p2&quot;<b>&gt;</b>A dashed outline<b>&lt;/p&gt;</b>
+<b>&lt;p</b> class=&quot;p3&quot;<b>&gt;</b>A solid outline<b>&lt;/p&gt;</b>
+<b>&lt;p</b> class=&quot;p4&quot;<b>&gt;</b>A double outline<b>&lt;/p&gt;</b>
+<b>&lt;p</b> class=&quot;p5&quot;<b>&gt;</b>A groove outline<b>&lt;/p&gt;</b>
+<b>&lt;p</b> class=&quot;p6&quot;<b>&gt;</b>A ridge outline<b>&lt;/p&gt;</b>
+<b>&lt;p</b> class=&quot;p7&quot;<b>&gt;</b> An inset outline<b>&lt;/p&gt;</b>
+<b>&lt;p</b> class=&quot;p8&quot;<b>&gt;</b> An outset outline<b>&lt;/p&gt;</b></code></pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ch12">Chapter 12: Overflow</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h4>Overflow Value Details</h4>
-
-  visible     Shows all overflowing content outside the element
-  scroll      Hides the overflowing content and adds a scroll bar
-
-  hidden      Hides the overflowing content, both scroll bars disappear
-              and the page becomes fixed
-
-  auto        Same as scroll if content overflows, but doesn&apos;t add
-              scroll bar if content fits
-
-  inherit     Inherit&apos;s the parent element&apos;s value for this property
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 31.  (xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p align="left" width="100%">
+<img src="./images/image031.png"
+  style="width:50%"
+  title=""
+  alt="." />
+</p>
+|<b>Overflow Value</b> | <b>Details</b> |
+|----------------------|-------------------------------------------|
+| visible | Shows all overflowing content outside the element |
+| scroll  | Hides the overflowing content and adds a scroll bar |
+| hidden  | Hides the overflowing content, both scroll bars disappear and the page becomes fixed |
+| auto    | Same as scroll if content overflows, but doesn&apos;t add scroll bar if content fits
+| inherit | Inherit&apos;s the parent element&apos;s value for this property |
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch12-1">Section 12.1: overflow-wrap</h3>
@@ -3804,54 +3717,30 @@ problems due to overflowing it&apos;s container.</p>
   <b>outline</b>: 1px dashed #bbb;
 }
 #div1 {
-  <b>overflow-wrap</b>: normal;
+  <b>overflow-wrap</b>:normal;
 }
 #div2 {
-  <b>overflow-wrap</b>: break-word;
+  <b>overflow-wrap</b>:break-word;
 }</code></pre>
 
 <h4>HTML:</h4>
 
-<b>&lt;</b><b>div</b> id=&quot;div1&quot;<b>&gt;</b>
-<b>&lt;</b><b>strong</b><b>&gt;</b>
-#div1
-<b>&lt;</b><b>/strong</b><b>&gt;</b>
-:
-Small words are displayed normally, but a long word like
-<b>&lt;</b><b>span</b> style=&quot;red;&quot;<b>&gt;</b>
-supercalifragilisticexpialidocious
-<b>&lt;</b><b>/span</b><b>&gt;</b>
-is too long so it will overflow past the
-edge of the line-break
-<b>&lt;</b><b>/div</b><b>&gt;</b>
-<b>&lt;</b><b>div</b> id=&quot;div2&quot;<b>&gt;</b>
-<b>&lt;</b> <b>strong</b><b>&gt;</b>
-#div2
-<b>&lt;</b>
-<b>/strong</b>
-<b>&gt;</b>
-:
-Small words are displayed normally, but a long word like
-<b>&lt;</b>
-<b>span</b>
-style
-=
-&quot;red;&quot;
-<b>&gt;</b>
-supercalifragilisticexpialidocious
-<b>&lt;</b>
-<b>/span</b>
-<b>&gt;</b>
-will be split at the line break and continue
+<pre><code><b>&lt;div</b> id=&quot;div1&quot;<b>&gt;</b>
+  <b>&lt;strong&gt;</b>#div1<b>&lt;/strong&gt;</b>: Small words are displayed normally, but a long word like <b>&lt;span</b> 
+     style=&quot;red;&quot;<b>&gt;</b>supercalifragilisticexpialidocious<b>&lt;/span&gt;</b> is too long so it will overflow past the
+     edge of the line-break
+<b>&lt;/div&gt;</b>
+
+<b>&lt;div</b> id=&quot;div2&quot;<b>&gt;</b>
+  <b>&lt;</b> <b>strong&gt;</b>#div2<b>&lt;/strong</b>: Small words are displayed normally, but a long word like <b>&lt;span</b>
+style=&quot;red;&quot;<b>&gt;</b>supercalifragilisticexpialidocious<b>&lt;/span&gt;</b> will be split at the line break and continue
 on the next line.
-<b>&lt;</b>
-<b>/div</b>
-<b>&gt;</b></code></pre>
+<b>&lt;/div&gt;</b></code></pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 32.  (xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="center" width="100%">
 <img src="./images/image032.jpg"
-  style="width:50%"
+  style="width:100%"
   title=""
   alt="." />
 </p>
