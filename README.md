@@ -2860,7 +2860,7 @@ snippet:</p>
   <b>box-sizing</b>: inherit;
 }</code></pre>
 
-<p>In this box-sizing: border-box; is not directly applied to &ast;, so you can easily
+<p>In this coding <b>box-sizing</b>: border-box; is not directly applied to &ast;, so you can easily
 overwrite this property on individual elements.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ch8">Chapter 8: Margins</h2>
@@ -2957,8 +2957,10 @@ spacing between the elements.</p>
 
 <p>What will be the spacing between the two texts? (hover to see answer)</p>
 
-<p>The spacing will be 25px. Since all four margins are touching each
-other, they will collapse, thus using the largest margin of the four.</p>
+<blockquote>
+The spacing will be 25px. Since all four margins are touching each
+other, they will collapse, thus using the largest margin of the four.
+</blockquote>
 
 <p>Now, what about if we add some borders to the markup above.</p>
 
@@ -2968,13 +2970,15 @@ other, they will collapse, thus using the largest margin of the four.</p>
 
 <p>What will be the spacing between the two texts? (hover to see answer)</p>
 
-<p>The spacing will be 59px! Now only the margins of .outer-top and
+<blockquote>
+The spacing will be 59px! Now only the margins of .outer-top and
 .outer-bottom touch each other, and are the only collapsed margins.
 The remaining margins are separated by the borders. So we have 1px +
 10px + 1px + 15px + 20px + 1px + 25px + 1px. (The 1px&apos;s are the
-borders&period;..)</p>
+borders&period;..)
+</blockquote>
 
-<p><b>Collapsing Margins Between Parent and Child Elements:</b></p>
+<h4>Collapsing Margins Between Parent and Child Elements:</h4>
 
 <h4>HTML::</h4>
 
@@ -2989,11 +2993,11 @@ borders&period;..)</p>
   <b>margin</b>: 0;
   <b>background</b>: #cff;
 }
-  div {
+div {
   <b>margin</b>: 50px 0 0 0;
   <b>background</b>: #cfc;
 }
-  p {
+p {
   <b>margin</b>: 25px 0 0 0;
   <b>background</b>: #cf9;
 }</code></pre>
@@ -3006,7 +3010,6 @@ together to form one margin.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch8-2">Section 8.2: Apply Margin on a Given Side</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-
 <h4>Direction-Specific Properties</h4>
 
 <p>CSS allows you to specify a given side to apply margin to. The four
@@ -3028,14 +3031,12 @@ of the selected div. <a href="https://jsfiddle.net/wm0100x9/1/">View Result</a>.
 
 <h4>CSS:</h4>
 
-<pre><code>
-#myDiv {
+<pre><code>#myDiv {
   <b>margin-left</b>: 30px;
   <b>height</b>: 40px;
   <b>width</b>: 40px;
   <b>background-color</b>: red;
-}
-</code></pre>
+}</code></pre>
 
 | <b>Parameter</b> | <b>Details</b> |
 |------------------|-------------------------------------------------|
@@ -3057,9 +3058,7 @@ Result.</p>
 
 <h4>HTML:</h4>
 
-<pre><code>
-<b>&lt;div</b>id=&quot;myDiv&quot;<b>&gt;&lt;/div&gt;</b>
-</code></pre>
+<pre><code><b>&lt;div</b>id=&quot;myDiv&quot;<b>&gt;&lt;/div&gt;</b></code></pre>
 
 <h4>CSS:</h4>
 
@@ -3072,8 +3071,7 @@ Result.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch8-3">Section 8.3: Margin property simplification</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<pre><code>
-p {
+<pre><code>p {
   <b>margin</b>: 1px; /* 1px margin in all directions */
 
   /* equals to: */
@@ -3084,18 +3082,17 @@ p {
 
   /* equals to: */
   <b>margin</b>: 1px 1px 1px 1px;
-}
-</code></pre>
+}</code></pre>
 
 <p>Another exapmle:</p>
 
 <pre><code>p {
   <b>margin</b>: 10px 15px; /* 10px margin-top & bottom And 15px margin-right & left */
 
-  /* equals to: */
+  /* equal to: */
   <b>margin</b>: 10px 15px 10px 15px;
 
-  /* equals to: */
+  /* equal to: */
   <b>margin</b>: 10px 15px 10px;
 
   /* margin left will be calculated from the margin right value (=15px) */
@@ -3112,12 +3109,10 @@ horizontally.</p>
 the auto property of margin then distributes the remaining space to
 the left and the right:</p>
 
-<pre><code>
-#myDiv {
+<pre><code>#myDiv {
   <b>width</b>:80&percnt;;
   <b>margin</b>:0 auto;
-}
-</code></pre>
+}</code></pre>
 
 <p>In the example above we use the shorthand margin declaration to first
 set 0 to the top and bottom margin values (although this could be any
@@ -3198,7 +3193,14 @@ padding-left etc) can you write it as a shorthand, as below:</p>
   }
 <b>&lt;/style&gt;</b>
 <b>&lt;div</b> class=&quot;myDiv&quot;<b>&gt;&lt;/div&gt;</b></code></pre>
-<image 1 of 4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 21a.  (xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p align="left" width="100%">
+<img src="./images/image021a.png"
+  style="width:15%"
+  title="padding: 25, 50, 75, 100px"
+  alt="padding: 25, 50, 75, 100px." />
+</p>
 
 <h4>Three values:</h4>
 
@@ -3208,7 +3210,14 @@ padding-left etc) can you write it as a shorthand, as below:</p>
   }
   <b>&lt;/style&gt;</b>
 <b>&lt;div</b> class=&quot;myDiv&quot;<b>&gt;&lt;/div&gt;</b></code></pre>
-<image 2 of 4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 21b.  (xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p align="left" width="100%">
+<img src="./images/image021b.png"
+  style="width:15%"
+  title="padding: 25, 50, 75, 50px"
+  alt="padding: 25, 50, 75, 50px." />
+</p>
 
 </h4>Two values:</h4>
 
@@ -3218,7 +3227,14 @@ padding-left etc) can you write it as a shorthand, as below:</p>
   }
 <b>&lt;/style&gt;</b>
 <b>&lt;div</b> class=&quot;myDiv&quot;<b>&gt;&lt;/div&gt;</b>
-<image 3 of 4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 21c.  (xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p align="left" width="100%">
+<img src="./images/image021c.png"
+  style="width:15%"
+  title="padding: 25, 50, 25, 50px"
+  alt="padding: 25, 50, 25, 50px." />
+</p>
 
 <h4>One value:</h4>
 
@@ -3228,7 +3244,15 @@ padding-left etc) can you write it as a shorthand, as below:</p>
 }
 <b>&lt;/style&gt;</b>
 <b>&lt;div</b> class=&quot;myDiv&quot;<b>&gt;&lt;/div&gt;</b></code></pre>
-<image 4 of 4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 21d.  (xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p align="left" width="100%">
+<img src="./images/image021d.png"
+  style="width:15%"
+  title="padding: 25, 25, 25, 25px"
+  alt="padding: 25, 25, 25, 25px." />
+</p>
+
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch9-2">Section 9.2: Padding on a given side</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
