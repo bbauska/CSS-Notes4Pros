@@ -3226,7 +3226,7 @@ padding-left etc) can you write it as a shorthand, as below:</p>
     padding: 25px 50px; /* top/bottom left/right */
   }
 <b>&lt;/style&gt;</b>
-<b>&lt;div</b> class=&quot;myDiv&quot;<b>&gt;&lt;/div&gt;</b>
+<b>&lt;div</b> class=&quot;myDiv&quot;<b>&gt;&lt;/div&gt;</b></code></pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 21c.  (xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left" width="100%">
