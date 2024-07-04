@@ -1781,9 +1781,9 @@ property has no effect.</p>
 
 <h4>HTML:</h4>
 
-<pre><code><b>&lt;</b><b>p</b><b>&gt;</b>No background-origin (padding-box is default):<b>&lt;</b><b>/p</b><b>&gt;</b>
-<b>&lt;div</b> class=&quot;example example1&quot;<b>&gt;</b><b>&lt;h2&gt;</b>
-  <b>&lt;h2&gt;</b>Lorem Ipsum Dolor<b>&lt;/h2&gt;</b> <b>&lt;p&gt;</b>
+<pre><code><b>&lt;p&gt;</b>No background-origin (padding-box is default):<b>&lt;/p&gt;</b>
+<b>&lt;div</b> class=&quot;example example1&quot;<b>&gt;&lt;h2&gt;</b>
+  <b>&lt;h2&gt;</b>Lorem Ipsum Dolor<b>&lt;/h2&gt;&lt;p&gt;</b>
   <b>&lt;p&gt;</b>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod
   tincidunt ut laoreet dolore magna aliquam erat volutpat.<b>&lt;/p&gt;</b>
   <b>&lt;p&gt;</b>Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut
@@ -1948,27 +1948,27 @@ div is scrolled.</p>
 
 <h4>HTML:</h4>
 
-<pre><code><b>&lt;</b><b>p</b><b>&gt;</b>No background-origin (padding-box is default):<b>&lt;</b><b>/p</b><b>&gt;</b>
+<pre><code><b>&lt;p&gt;</b>No background-origin (padding-box is default):<b>&lt;/p&gt;</b>
 
-<b>&lt;</b><b>div</b> class=&quot;example example1&quot;<b>&gt;</b>
-  <b>&lt;</b><b>h</b><b>2</b><b>&gt;</b>Lorem Ipsum Dolor<b>&lt;</b><b>/h</b><b>2</b><b>&gt;</b>
-  <b>&lt;</b><b>p</b><b>&gt;</b>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod 
-    tincidunt ut laoreet dolore magna aliquam erat volutpat.<b>&lt;</b><b>/p</b><b>&gt;</b>
-  <b>&lt;</b><b>p</b><b>&gt;</b>Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut 
-    aliquip ex ea commodo consequat.<b>&lt;</b><b>/p</b><b>&gt;</b>
-<b>&lt;</b><b>/div</b><b>&gt;</b>
+<b>&lt;div</b> class=&quot;example example1&quot;<b>&gt;</b>
+  <b>&lt;h2&gt;</b>Lorem Ipsum Dolor<b>&lt;/h2&gt;</b>
+  <b>&lt;p&gt;</b>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod 
+    tincidunt ut laoreet dolore magna aliquam erat volutpat.<b>&lt;/p&gt;</b>
+  <b>&lt;p&gt;</b>Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut 
+    aliquip ex ea commodo consequat.<b>&lt;/p&gt;</b>
+<b>&lt;/div&gt;</b>
 
-<b>&lt;</b><b>p</b><b>&gt;</b>background-origin: border-box:<b>&lt;</b><b>/p</b><b>&gt;</b>
-<b>&lt;</b><b>div</b> class=&quot;example example2&quot;<b>&gt;</b>
-  <b>&lt;</b><b>h</b><b>2</b><b>&gt;</b>Lorem Ipsum Dolor<b>&lt;</b><b>/h</b><b>2</b><b>&gt;</b>
-  <b>&lt;</b><b>p</b><b>&gt;</b>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod
-    tincidunt ut laoreet dolore magna aliquam erat volutpat.<b>&lt;</b><b>/p</b><b>&gt;</b>
-  <b>&lt;</b><b>p</b><b>&gt;</b>Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut 
-    aliquip ex ea commodo consequat.<b>&lt;</b><b>/p</b><b>&gt;</b>
-<b>&lt;</b><b>/div</b><b>&gt;</b>  
-<b>&lt;</b><b>p</b><b>&gt;</b>background-origin: content-box:<b>&lt;</b><b>/p</b><b>&gt;</b>
-<b>&lt;</b><b>div</b> class=&quot;example example3&quot;<b>&gt;</b>
-  <b>&lt;</b><b>h</b><b>2</b><b>&gt;</b>Lorem Ipsum Dolor<b>&lt;</b><b>/h</b><b>2</b><b>&gt;</b>
+<b>&lt;p&gt;</b>background-origin: border-box:<b>&lt;/p&gt;</b>
+<b>&lt;div</b> class=&quot;example example2&quot;<b>&gt;</b>
+  <b>&lt;h2&gt;</b>Lorem Ipsum Dolor<b>&lt;/h2&gt;</b>
+  <b>&lt;p&gt;</b>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod
+    tincidunt ut laoreet dolore magna aliquam erat volutpat.<b>&lt;/p&gt;</b>
+  <b>&lt;p&gt;</b>Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut 
+    aliquip ex ea commodo consequat.<b>&lt;/p&gt;</b>
+<b>&lt;/div&gt;</b>  
+<b>&lt;p&gt;</b>background-origin: content-box:<b>&lt;/p&gt;</b>
+<b>&lt;div</b> class=&quot;example example3&quot;<b>&gt;</b>
+  <b>&lt;h2&gt;</b>Lorem Ipsum Dolor<b>&lt;/h2&gt;</b>
   <b>&lt;p&gt;</b>There once was a man fron Sash. His balls were made of glass
   When he rubbed them together, he made stormy weather.
   And lightning struck out of his ass.<b>&lt;/p&gt;</b> 
@@ -2009,7 +2009,7 @@ div is scrolled.</p>
 url(&apos;https://static.pexels.com/photos/54624/strawberry-fruit-red-sweet-54624-medium.jpeg&apos;);
   <b>background-blend-mode</b>:saturation;
 }
-<b>&lt;</b><b>div</b> class=&quot;my-div&quot;<b>&gt;</b>Lorem ipsum<b>&lt;</b><b>/div</b><b>&gt;</b></code></pre>
+<b>&lt;div</b> class=&quot;my-div&quot;<b>&gt;Lorem ipsum&lt;/div&gt;</b></code></pre>
 
 <p>See result here: <a href="https://jsfiddle.net/MadalinaTn/y69d28Lb/">Demo (jsFiddle)</a>.</p>
 
@@ -2042,9 +2042,9 @@ endColorstr=#99000000)&quot;;</code></pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>HTML:</h4>
 
-<pre><code><b>&lt;</b><b>div</b> class=&quot;container&quot;<b>&gt;</b>
-  <b>&lt;</b><b>img</b> src=&quot;http://lorempixel.com/400/200&quot; <b>/&gt;</b>
-<b>&lt;</b><b>/div</b><b>&gt;</b></code></pre>
+<pre><code><b>&lt;div</b> class=&quot;container&quot;<b>&gt;</b>
+  <b>&lt;img</b> src=&quot;http://lorempixel.com/400/200&quot; <b>/&gt;</b>
+<b>&lt;/div&gt;</b></code></pre>
 
 <h4>CSS:</h4>
 
@@ -2063,7 +2063,7 @@ img {
 
 <h4>HTML:</h4>
 
-<pre><code><b>&lt;</b><b>img</b> src = &quot;http://lorempixel.com/400/200&quot; <b>/&gt;</b></code></pre>
+<pre><code><b>&lt;img</b> src = &quot;http://lorempixel.com/400/200&quot; <b>/&gt;</b></code></pre>
 
 <h4>CSS:</h4>
 
@@ -2112,9 +2112,9 @@ this answer in Stack Overflow </a>for a workaround.</p>
 
 <h4>HTML:</h4>
 
-<pre><code><b>&lt;</b><b>div</b> class=&quot;container&quot;<b>&gt;</b>
-  <b>&lt;</b><b>div</b> class=&quot;element&quot;<b>&gt;</b><b>&lt;</b><b>/div</b><b>&gt;</b>
-<b>&lt;</b><b>/div</b><b>&gt;</b></code></pre>
+<pre><code><b>&lt;div</b> class=&quot;container&quot;<b>&gt;</b>
+  <b>&lt;div</b> class=&quot;element&quot;<b>&gt;&lt;/div&gt;</b>
+<b>&lt;/div&gt;</b></code></pre>
 
 <h4>CSS:</h4>
 
@@ -2166,18 +2166,18 @@ Here is a common transform declaration for the previous example:
 
 <h4>HTML:</h4>
 
-<pre><code><b>&lt;</b><b>div</b> class=&quot;containerDiv&quot;<b>&gt;</b>
-  <b>&lt;</b><b>div</b> id=&quot;centeredDiv&quot;<b>&gt;</b><b>&lt;</b><b>/div</b><b>&gt;</b>
-<b>&lt;</b><b>/div</b><b>&gt;</b>
+<pre><code><b>&lt;div</b> class=&quot;containerDiv&quot;<b>&gt;</b>
+  <b>&lt;div</b> id=&quot;centeredDiv&quot;<b>&gt;&lt;/div&gt;</b>
+<b>&lt;/div&gt;</b>
 
-<b>&lt;</b><b>div</b> class=&quot;containerDiv&quot;<b>&gt;</b>
-  <b>&lt;</b><b>p</b> id=&quot;centeredParagraph&quot;<b>&gt;</b>This is a centered paragraph.<b>&lt;</b><b>/p</b><b>&gt;</b>
-<b>&lt;</b><b>/div</b><b>&gt;</b>
+<b>&lt;div</b> class=&quot;containerDiv&quot;<b>&gt;</b>
+  <b>&lt;p</b> id=&quot;centeredParagraph&quot;<b>&gt;</b>This is a centered paragraph.<b>&lt;/p&gt;</b>
+<b>&lt;/div&gt;</b>
 
-<b>&lt;</b><b>div</b> class=&quot;containerDiv&quot;<b>&gt;</b>
-  <b>&lt;</b><b>img</b> id=&quot;centeredImage&quot;
+<b>&lt;div</b> class=&quot;containerDiv&quot;<b>&gt;</b>
+  <b>&lt;img</b> id=&quot;centeredImage&quot;
     src=&quot;https://i.kinja-img.com/gawker-media/image/upload/s--c7Q9b4Eh&minus;-/c_scale,fl_progressive,q_80,w_800/qqyvc3bkpyl3mfhr8all.jpg&quot; <b>/&gt;</b>
-<b>&lt;</b><b>/div</b><b>&gt;</b></code></pre>
+<b>&lt;/div&gt;</b></code></pre>
 
 <h4>CSS:</h4>
 
@@ -2222,7 +2222,7 @@ in an element. CSS has the rule <b>text-align</b>: center for this purpose:</p>
 
 <h4>HTML:</h4>
 
-<pre><code><b>&lt;</b><b>p</b><b>&gt;</b>Lorem ipsum<b>&lt;</b><b>/p</b><b>&gt;</b></code></pre>
+<pre><code><b>&lt;p&gt;</b>Lorem ipsum<b>&lt;/p&gt;</b></code></pre>
 
 <h4>CSS:</h4>
 
@@ -2247,9 +2247,9 @@ elements within its parent.</p>
 
 <h4>HTML:</h4>
 
-<pre><code><b>&lt;</b><b>div</b> class=&quot;parent&quot;<b>&gt;</b>
-  <b>&lt;</b><b>img</b> class=&quot;center&quot; src=&quot;http://lorempixel.com/400/200/&quot;<b>/&gt;</b>
-<b>&lt;</b><b>/div</b><b>&gt;</b></code></pre>
+<pre><code><b>&lt;div</b> class=&quot;parent&quot;<b>&gt;</b>
+  <b>&lt;img</b> class=&quot;center&quot; src=&quot;http://lorempixel.com/400/200/&quot;<b>/&gt;</b>
+<b>&lt;/div&gt;</b></code></pre>
 
 <h4>CSS:</h4>
 
@@ -2291,7 +2291,7 @@ function, always take care of the space between two values calc(100% - 80px).</p
 
 <h4>HTML:</h4>
 
-<pre><code><b>&lt;</b><b>div</b> class=&quot;center&quot;<b>&gt;</b><b>&lt;</b><b>/div</b><b>&gt;</b></code></pre>
+<pre><code><b>&lt;div</b> class=&quot;center&quot;<b>&gt;&lt;/div&gt;</b></code></pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch6-7">Section 6.7: Using line-height</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -2329,7 +2329,7 @@ sure the div/image you apply the code to has a parent with a height.</p>
 
 <h4>HTML:</h4>
 
-<pre><code><b>&lt;</b><b>div</b> class=&quot;vertical&quot;<b>&gt;</b>Vertical aligned text!<b>&lt;</b><b>/div</b><b>&gt;</b></code></pre>
+<pre><code><b>&lt;div</b> class=&quot;vertical&quot;<b>&gt;</b>Vertical aligned text!<b>&lt;/div&gt;</b></code></pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch6-9">Section 6.9: Centering in relation to another item</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -2339,19 +2339,19 @@ sure the div/image you apply the code to has a parent with a height.</p>
 
 <h4>HTML:</h4>
 
-<pre><code><b>&lt;</b><b>div</b> class=&quot;content&quot;<b>&gt;</b>
-  <b>&lt;</b><b>div</b> class=&quot;position-container&quot;<b>&gt;</b>
-    <b>&lt;</b><b>div</b> class=&quot;thumb&quot;<b>&gt;</b>
-      <b>&lt;</b><b>img</b> src=&quot;http://lorempixel.com/400/200/&quot;<b>&gt;</b>
-    <b>&lt;</b><b>/div</b><b>&gt;</b>
-    <b>&lt;</b><b>div</b> class=&quot;details&quot;<b>&gt;</b>
-      <b>&lt;</b><b>p</b> class=&quot;banner-title&quot;<b>&gt;</b>text 1<b>&lt;</b><b>/p</b><b>&gt;</b>
-      <b>&lt;</b><b>p</b> class=&quot;banner-text&quot;<b>&gt;</b>content content content content content content content content
-        content content content content content content<b>&lt;</b><b>/p</b><b>&gt;</b>
-      <b>&lt;</b><b>button</b> class=&quot;btn&quot;<b>&gt;</b>button<b>&lt;</b><b>/button</b><b>&gt;</b>
-    <b>&lt;</b><b>/div</b><b>&gt;</b>
-  <b>&lt;</b><b>/div</b><b>&gt;</b>
-<b>&lt;</b><b>/div</b><b>&gt;</b></code></pre>
+<pre><code><b>&lt;div</b> class=&quot;content&quot;<b>&gt;</b>
+  <b>&lt;div</b> class=&quot;position-container&quot;<b>&gt;</b>
+    <b>&lt;div</b> class=&quot;thumb&quot;<b>&gt;</b>
+      <b>&lt;img</b> src=&quot;http://lorempixel.com/400/200/&quot;<b>&gt;</b>
+    <b>&lt;/div&gt;</b>
+    <b>&lt;div</b> class=&quot;details&quot;<b>&gt;</b>
+      <b>&lt;p</b> class=&quot;banner-title&quot;<b>&gt;</b>text 1<b>&lt;/p&gt;</b>
+      <b>&lt;p</b> class=&quot;banner-text&quot;<b>&gt;</b>content content content content content content content content
+        content content content content content content<b>&lt;/p&gt;</b>
+      <b>&lt;button</b> class=&quot;btn&quot;<b>&gt;</b>button<b>&lt;/button&gt;</b>
+    <b>&lt;/div&gt;</b>
+  <b>&lt;/div&gt;</b>
+<b>&lt;/div&gt;</b></code></pre>
 
 <h4>CSS:</h4>
 
@@ -2430,9 +2430,9 @@ or by zeroing font-size in .parent and resetting it back
 
 <h4>HTML:</h4>
 
-<pre><code><b>&lt;</b><b>div</b> class=&quot;block&quot;<b>&gt;</b>
-  <b>div</b> class=&quot;centered&quot;<b>&gt;</b><b>&lt;</b><b>/div</b><b>&gt;</b>
-<b>&lt;</b><b>/div</b><b>&gt;</b></code></pre>
+<pre><code><b>&lt;div</b> class=&quot;block&quot;<b>&gt;</b>
+  <b>div</b> class=&quot;centered&quot;<b>&gt;&lt;/div&gt;</b>
+<b>&lt;/div&gt;</b></code></pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="6-11">Section 6.11: Centering vertically and horizontally without worrying about height or width</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -2464,13 +2464,13 @@ worrying about its height or width</b>.</p>
 
 <h4>HTML:</h4>
 
-<pre><code><b>&lt;</b><b>div</b> class=&quot;outer-container&quot;<b>&gt;</b>
-  <b>&lt;</b><b>div</b> class=&quot;inner-container&quot;<b>&gt;</b>
-    <b>&lt;</b><b>div</b> class=&quot;centered-content&quot;<b>&gt;</b>
+<pre><code><b>&lt;div</b> class=&quot;outer-container&quot;<b>&gt;</b>
+  <b>&lt;div</b> class=&quot;inner-container&quot;<b>&gt;</b>
+    <b>&lt;div</b> class=&quot;centered-content&quot;<b>&gt;</b>
       You can put anything here!
-    <b>&lt;</b><b>/div</b><b>&gt;</b>
-  <b>&lt;</b><b>/div</b><b>&gt;</b>
-<b>&lt;</b><b>/div</b><b>&gt;</b></code></pre>
+    <b>&lt;/div&gt;</b>
+  <b>&lt;/div&gt;</b>
+<b>&lt;/div&gt;</b></code></pre>
 
 <h4>CSS:</h4>
 
@@ -2503,9 +2503,9 @@ worrying about its height or width</b>.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>HTML:</h4>
 
-<pre><code><b>&lt;</b><b>div</b> class=&quot;wrap&quot;<b>&gt;</b>
-  <b>&lt;</b><b>img</b> src=&quot;http://lorempixel.com/400/200/&quot;<b>/&gt;</b>
-<b>&lt;</b><b>/div</b><b>&gt;</b></code></pre>
+<pre><code><b>&lt;div</b> class=&quot;wrap&quot;<b>&gt;</b>
+  <b>&lt;img</b> src=&quot;http://lorempixel.com/400/200/&quot;<b>/&gt;</b>
+<b>&lt;/div&gt;</b></code></pre>
 
 <h4>CSS</h4>
 
@@ -2534,9 +2534,9 @@ with margin that reduces half of your content&apos;s width and height:</p>
 
 <h4>HTML:</h4>
 
-<pre><code><b>&lt;</b><b>div</b> class=&quot;center&quot;<b>&gt;</b>
+<pre><code><b>&lt;div</b> class=&quot;center&quot;<b>&gt;</b>
   Center vertically and horizontally
-<b>&lt;</b><b>/div</b><b>&gt;</b></code></pre>
+<b>&lt;/div&gt;</b></code></pre>
 
 <h4>CSS:</h4>
 
@@ -2560,9 +2560,9 @@ of the content:</p>
 
 <h4>HTML:</h4>
 
-<pre><code><b>&lt;</b><b>div</b> class=&quot;center&quot;<b>&gt;</b>
+<pre><code><b>&lt;div</b> class=&quot;center&quot;<b>&gt;</b>
   Center only horizontally
-<b>&lt;</b><b>/div</b><b>&gt;</b></code></pre>
+<b>&lt;/div&gt;</b></code></pre>
 
 <h4>CSS:</h4>
 
@@ -2581,9 +2581,9 @@ of the content:</p>
 
 <h4>HTML:</h4>
 
-<pre><code><b>&lt;</b><b>div</b> class=&quot;center&quot;<b>&gt;</b>
+<pre><code><b>&lt;div</b> class=&quot;center&quot;<b>&gt;</b>
   Center only vertically
-<b>&lt;</b><b>/div</b><b>&gt;</b></code></pre>
+<b>&lt;/div&gt;</b></code></pre>
 
 <h4>CSS:</h4>
 
@@ -2613,9 +2613,9 @@ of the content:</p>
 
 <h4>HTML:</h4>
 
-<pre><code><b>&lt;</b><b>div</b> class=&quot;vcenter&minus;-container&quot;<b>&gt;</b>
-  <b>&lt;</b><b>div</b> class=&quot;vcenter&minus;-helper&quot;<b>&gt;</b>
-    <b>&lt;</b><b>div</b> class=&quot;vcenter&minus;-content&quot;<b>&gt;</b>
+<pre><code><b>&lt;div</b> class=&quot;vcenter&minus;-container&quot;<b>&gt;</b>
+  <b>&lt;div</b> class=&quot;vcenter&minus;-helper&quot;<b>&gt;</b>
+    <b>&lt;div</b> class=&quot;vcenter&minus;-content&quot;<b>&gt;</b>
       <!-- stuff -->
     <b>&lt;/div&gt;</b>
   <b>&lt;/div&gt;</b>
@@ -2719,21 +2719,21 @@ to the content to create this rectangle.</p>
 
 <p>The perimeter of each of the four areas is called an <i>edge</i>. Each edge defines a <i>box</i>.</p>
 
-The innermost rectangle is the <b>content box</b>. The width and height
+<p>The innermost rectangle is the <b>content box</b>. The width and height
 of this depends on the element&apos;s rendered content (text, images and
-any child elements it may have).
+any child elements it may have).</p>
 
-Next is the <b>padding box</b>, as defined by the padding property. If
+<p>Next is the <b>padding box</b>, as defined by the padding property. If
 there is no padding width defined, the padding edge is equal to the
-content edge.
+content edge.</p>
 
-Then we have the <b>border box</b>, as defined by the border property. If
+<p>Then we have the <b>border box</b>, as defined by the border property. If
 there is no border width defined, the border edge is equal to the
-padding edge.
+padding edge.</p>
 
-The outermost rectangle is the <b>margin box</b>, as defined by the
+<p>The outermost rectangle is the <b>margin box</b>, as defined by the
 margin property. If there is no margin width defined, the margin edge
-is equal to the border edge.
+is equal to the border edge.</p>
 
 <h4>Example</h4>
 
@@ -2789,25 +2789,23 @@ margin edge would be in the same position as the right border edge,
 and our two elements would now look like this:</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 19.  (xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p align="center" width="100%">
+<p align="left" width="100%">
 <img src="./images/image019.jpg"
   style="width:40%"
   title=""
   alt="Remove right margin from 1st image." />
 </p>
 <!-- [image019.jpg 3.45" x 1.54"](./images/image019.jpg) -->
-
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch7-2">Section 7.2: box-sizing</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p>The default box model (content-box) can be counter-intuitive, since
+the width / height for an element will not represent its actual width
+or height on screen as soon as you start adding padding and border
+styles to the element.</p>
 
-> The default box model (content-box) can be counter-intuitive, since
-> the width / height for an element will not represent its actual width
-> or height on screen as soon as you start adding padding and border
-> styles to the element.
->
-> The following example demonstrates this potential issue with
-> content-box:
+<p>The following example demonstrates this potential issue with
+content-box:</p>
 
 <pre><code>
 textarea {
@@ -2832,33 +2830,35 @@ property available:</p>
   <li>border-box: Width and height includes the content, the padding as well as 
     the border.</li>
 </ul>
-
-<image here>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 20.  (xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p align="center" width="100%">
+<img src="./images/image020.png"
+  style="width:100%"
+  title="content, padding, border, and margin"
+  alt="content, padding, border, and margin." />
+</p>
 
 <p>To solve the textarea problem above, you could just change the
 box-sizing property to padding-box or borderbox. border-box is most
 commonly used.</p>
 
-<pre><code>
-textarea {
+<pre><code>textarea {
   <b>width</b>: 100&percnt;;
   <b>padding</b>: 3px;
   <b>box-sizing</b>: border-box;
-}
-</code></pre>
+}</code></pre>
 
 <p>To apply a specific box model to every element on the page, use the following 
 snippet:</p>
 
-<pre><code>
-html {
+<pre><code>html {
   <b>box-sizing</b>: border-box;
 }
 
 &ast;, &ast;:before, &ast;:after {
   <b>box-sizing</b>: inherit;
-}
-</code></pre>
+}</code></pre>
 
 <p>In this box-sizing: border-box; is not directly applied to &ast;, so you can easily
 overwrite this property on individual elements.</p>
@@ -2885,8 +2885,7 @@ collapsed. When two margins touch horizontally, they do not collapse.</p>
 
 <p>Consider the following styles and markup:</p>
 
-<pre><code>
-div {
+<pre><code>div {
   <b>margin</b>: 10px;
 }
 
@@ -2895,8 +2894,7 @@ div {
 <b>&lt;/div&gt;</b>
 <b>&lt;div&gt;</b>
   some more content
-<b>&lt;/div&gt;</b>
-</code></pre>
+<b>&lt;/div&gt;</b></code></pre>
 
 <p>They will be 10px apart since vertical margins collapse over one and
 other. (The spacing will not be the sum of two margins.)</p>
@@ -2905,13 +2903,11 @@ other. (The spacing will not be the sum of two margins.)</p>
 
 <p>Consider the following styles and markup:</p>
 
-<pre><code>
-span {
+<pre><code>span {
   <b>margin</b>: 10px;
 }
 
-<b>&lt;span&gt;</b>some<b>&lt;/span&gt;&lt;span&gt;</b>content<b>&lt;/span&gt;</b>
-</code></pre>
+<b>&lt;span&gt;</b>some<b>&lt;/span&gt;&lt;span&gt;</b>content<b>&lt;/span&gt;</b></code></pre>
 
 They will be 20px apart since horizontal margins don&apos;t collapse over
 one and other. (The spacing will be the sum of two margins.)
@@ -2924,18 +2920,18 @@ one and other. (The spacing will be the sum of two margins.)
 .bottom {
  <b>margin</b>: 15px;
 }
-<b>&lt;</b><b>div</b> class = &quot;top&quot;<b>&gt;</b>
+<b>&lt;div</b> class = &quot;top&quot;<b>&gt;</b>
   some content
-<b>&lt;</b><b>/div</b><b>&gt;</b>
-<b>&lt;</b><b>div</b> class = &quot;bottom&quot;<b>&gt;</b>
+<b>&lt;/div&gt;</b>
+<b>&lt;div</b> class = &quot;bottom&quot;<b>&gt;</b>
   some more content
-<b>&lt;</b><b>/div</b><b>&gt;</b></code></pre>
+<b>&lt;/div&gt;</b></code></pre>
 
-> These elements will be spaced 15px apart vertically. The margins
-> overlap as much as they can, but the larger margin will determine the
-> spacing between the elements.
->
-> <b>Overlapping margin gotcha</b>
+<p>These elements will be spaced 15px apart vertically. The margins
+overlap as much as they can, but the larger margin will determine the
+spacing between the elements.</p>
+
+<h4>Overlapping margin gotcha</h4>
 
 <pre><code>.outer-top {
   <b>margin</b>: 10px;
@@ -2949,46 +2945,44 @@ one and other. (The spacing will be the sum of two margins.)
 .inner-bottom {
   <b>margin</b>: 25px;
 }
-<b>&lt;</b><b>div</b> class = &quot;outer-top&quot;<b>&gt;</b>
-    <b>&lt;</b><b>div</b> class=&quot;inner-top&quot;<b>&gt;</b>
+<b>&lt;div</b> class = &quot;outer-top&quot;<b>&gt;</b>
+    <b>&lt;div</b> class=&quot;inner-top&quot;<b>&gt;</b>
       some content
-    <b>&lt;</b><b>/div</b><b>&gt;</b>
-  <b>&lt;</b><b>/div</b><b>&gt;</b>
-  <b>&lt;</b><b>div</b> class=&quot;outer-bottom&quot;<b>&gt;</b>
-    <b>&lt;</b><b>div</b> class=&quot;inner-bottom&quot;<b>&gt;</b>
+    <b>&lt;/div&gt;</b>
+  <b>&lt;/div&gt;</b>
+  <b>&lt;div</b> class=&quot;outer-bottom&quot;<b>&gt;</b>
+    <b>&lt;div</b> class=&quot;inner-bottom&quot;<b>&gt;</b>
       some more content
-  <b>&lt;</b><b>/div</b><b>&gt;</b>
-<b>&lt;</b><b>/div</b><b>&gt;</b></code></pre>
+  <b>&lt;/div&gt;</b>
+<b>&lt;/div&gt;</b></code></pre>
 
-> What will be the spacing between the two texts? (hover to see answer)
->
-> The spacing will be 25px. Since all four margins are touching each
-> other, they will collapse, thus using the largest margin of the four.
->
-> Now, what about if we add some borders to the markup above.
+<p>What will be the spacing between the two texts? (hover to see answer)</p>
+
+<p>The spacing will be 25px. Since all four margins are touching each
+other, they will collapse, thus using the largest margin of the four.</p>
+
+<p>Now, what about if we add some borders to the markup above.</p>
 
 <pre><code>div {
   <b>border</b>: 1px solid red;
 }</code></pre>
 
-> What will be the spacing between the two texts? (hover to see answer)
->
-> The spacing will be 59px! Now only the margins of .outer-top and
-> .outer-bottom touch each other, and are the only collapsed margins.
-> The remaining margins are separated by the borders. So we have 1px +
->
-> 10px + 1px + 15px + 20px + 1px + 25px + 1px. (The 1px&apos;s are the
-> borders&period;..)
->
-> <b>Collapsing Margins Between Parent and Child Elements:</b>
->
+<p>What will be the spacing between the two texts? (hover to see answer)</p>
+
+<p>The spacing will be 59px! Now only the margins of .outer-top and
+.outer-bottom touch each other, and are the only collapsed margins.
+The remaining margins are separated by the borders. So we have 1px +
+10px + 1px + 15px + 20px + 1px + 25px + 1px. (The 1px&apos;s are the
+borders&period;..)</p>
+
+<p><b>Collapsing Margins Between Parent and Child Elements:</b></p>
+
 <h4>HTML::</h4>
 
-<pre><code><b>&lt;</b><b>h</b><b>1</b><b>&gt;</b>Title<b>&lt;</b><b>/h</b><b>1</b><b>&gt;</b>
-<b>&lt;</b><b>div</b><b>&gt;</b>
-  <b>&lt;</b><b>p</b><b>&gt;</b>Paragraph<b>&lt;</b><b>/p</b><b>&gt;</b>
-<b>&lt;</b><b>/div</b><b>&gt;</b></code></pre>
-
+<pre><code><b>&lt;h1&gt;</b>Title<b>&lt;/h1&gt;</b>
+<b>&lt;div&gt;</b>
+  <b>&lt;p&gt;</b>Paragraph<b>&lt;/p&gt;</b>
+<b>&lt;/div&gt;</b></code></pre>
 
 <h4>CSS:</h4>
 
@@ -3033,7 +3027,7 @@ of the selected div. <a href="https://jsfiddle.net/wm0100x9/1/">View Result</a>.
 <h4>HTML:</h4>
 
 <pre><code>
-<b>&lt;</b><b>div</b> id=&quot;myDiv&quot;<b>&gt;</b><b>&lt;</b><b>/div</b><b>&gt;</b>
+<b>&lt;div</b> id=&quot;myDiv&quot;<b>&gt;&lt;/div&gt;</b>
 </code></pre>
 
 <h4>CSS:</h4>
@@ -3058,9 +3052,7 @@ The standard margin property can be expanded to specify differing
 widths to each side of the selected elements. The syntax for doing
 this is as follows:
 
-<pre><code>
-<b>margin</b>: &lt;top&gt; &lt;right&gt; &lt;bottom&gt; &lt;left&gt;;
-</code></pre>
+<pre><code><b>margin</b>: &lt;top&gt; &lt;right&gt; &lt;bottom&gt; &lt;left&gt;;</code></pre>
 
 > The following example applies a zero-width margin to the top of the
 > div, a 10px margin to the right side, a 50px margin to the left side,
@@ -3070,7 +3062,7 @@ this is as follows:
 <h4>HTML:</h4>
 
 <pre><code>
-<b>&lt;</b><b>div</b>id=&quot;myDiv&quot;<b>&gt;</b><b>&lt;</b><b>/div</b><b>&gt;</b>
+<b>&lt;div</b>id=&quot;myDiv&quot;<b>&gt;&lt;/div&gt;</b>
 </code></pre>
 
 <h4>CSS:</h4>
@@ -3244,7 +3236,7 @@ padding-left etc) can you write it as a shorthand, as below:</p>
 
 <h4>One value:</h4>
 
-<pre><code><b>&lt;</b><b>style</b><b>&gt;</b>
+<pre><code><b>&lt;style&gt;</b>
   .myDiv {
     padding: 25px; /* top/right/bottom/left */
 }
@@ -5099,7 +5091,7 @@ is another library that does the same thing. The code for adding that
 library to your HTML would be identical:</p>
 
 <pre><code>&lt;!&minus;-&lbrack;if lt IE 9&rbrack;<b>&gt;</b>
-<b>&lt;</b><b>script</b>
+<b>&lt;script</b>
   src=&quot;css3-mediaqueries.js&quot;<b>&gt;</b>
 <b>&lt;/script&gt;</b>
 &lt;!&lbrack;endif&rbrack;&minus;-<b>&gt;</b></code></pre>
@@ -7007,7 +6999,7 @@ originally uppercase.
 <h4>HTML:</h4>
 
 <pre><code>
-<b>&lt;</b><b>p</b> class=&quot;smallcaps&quot;<b>&gt;</b>
+<b>&lt;p</b> class=&quot;smallcaps&quot;<b>&gt;</b>
 Documentation about CSS Fonts
 <b>&lt;</b>
 <b>br</b>
@@ -7389,10 +7381,10 @@ massa. Vestibulum lacinia
 arcu eget nulla. Class aptent taciti sociosqu ad litora torquent per
 conubia nostra, per inceptos
 himenaeos. Curabitur sodales ligula in libero.
-<b>&lt;</b><b>/p</b><b>&gt;</b>
-<b>&lt;</b><b>/div</b><b>&gt;</b>
-<b>&lt;</b><b>div</b> class=&quot;footer&quot;<b>&gt;</b>
-<b>&lt;</b><b>h</b><b>4</b><b>&gt;</b>Footer<b>&lt;</b><b>/h</b><b>4</b>
+<b>&lt;/p&gt;</b>
+<b>&lt;/div&gt;</b>
+<b>&lt;div</b> class=&quot;footer&quot;<b>&gt;</b>
+<b>&lt;h4&gt;</b>Footer<b>&lt;/h4</b>
 <b>&gt;</b>
 <b>&lt;</b>
 <b>/div</b>
@@ -23991,28 +23983,23 @@ middle
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch51-1">Section 51.1: object-fit</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p>The <b>object-fit</b> property will defines how an element will fit into
+a box with an established height and width. Usually applied to an
+image or video, Object-fit accepts the following five values:</p>
 
-> The <b>object-fit</b> property will defines how an element will fit into
-> a box with an established height and width. Usually applied to an
-> image or video, Object-fit accepts the following five values:
->
-> <b>FILL</b>
-<pre><code>
-<b>object-fit</b>: fill;
-</code></pre>
-> Fill stretches the image to fit the content box without regard to the
-> image&apos;s original aspect ratio.
->
-<pre><code>
-> <b>CONTAIN</b><b>object-fit</b>:contain;
-</code></pre>
-> Contain fits the image in the box&apos;s height or width while maintaining
-> the image&apos;s aspect ratio.
->
-<pre><code>
-> <b>COVER</b><b>object-fit</b>:cover;
-</code></pre>
+<b>FILL</b>
 
+<pre><code><b>object-fit</b>: fill;</code></pre>
+
+<p>Fill stretches the image to fit the content box without regard to the
+image&apos;s original aspect ratio.</p>
+
+<pre><code><b>CONTAIN object-fit</b>:contain;</code></pre>
+
+<p>Contain fits the image in the box&apos;s height or width while maintaining
+the image&apos;s aspect ratio.</p>
+
+<pre><code><b>COVER object-fit</b>:cover;</code></pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 264.  (xxx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="center" width="100%">
