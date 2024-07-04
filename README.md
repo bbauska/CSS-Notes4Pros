@@ -3475,109 +3475,50 @@ collapsed into a single border or detached as in standard HTML.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch10-6">Section 10.6: border-image</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-> With the border-image property you have the possibility to set an
-> image to be used instead of normal border styles.
->
-> A border-image essentially consist of a
->
-> border-image-source: The path to the image to be used
-> border-image-slice: Specifies the offset that is used to divide the
-> image into <b>nine regions</b> (four <b>corners</b>, four <b>edges</b> and a
-> <b>middle</b>)
->
-> border-image-repeat: Specifies how the images for the sides and the
-> middle of the border image are scaled
->
-> Consider the following example wheras border.png is a image of 90x90
-> pixels:
+<p>With the border-image property you have the possibility to set an
+image to be used instead of normal border styles.</p>
 
-  <b>border-image</b>     :   url    (   &quot;border.png&quot;       )   30 stretch
+<p>A border-image essentially consist of a</p>
 
-> ;
->
-> The image will be split into nine regions with 30x30 pixels. The edges
-> will be used as the corners of the border while the side will be used
-> in between. If the element is higher / wider than 30px this part of
-> the image will be <b>stretched</b>. The middle part of the image defaults
-> to be transparent.
+<ul>
+  <li>border-image-source: The path to the image to be used</li>
+  <li>border-image-slice: Specifies the offset that is used to divide the image 
+    into <b>nine regions</b> (four <b>corners</b>, four <b>edges</b> and a 
+	<b>middle</b>)</li>
+  <li>border-image-repeat: Specifies how the images for the sides and the middle 
+    of the border image are scaled</li>
+</ul>
 
+<p>Consider the following example wheras border.png is a image of 90x90 pixels:</p>
+
+<p><b>border-image</b>: url(&quot;border.png&quot;) 30 stretch;</p>
+
+<p>The image will be split into nine regions with 30x30 pixels. The edges
+will be used as the corners of the border while the side will be used
+in between. If the element is higher / wider than 30px this part of
+the image will be <b>stretched</b>. The middle part of the image defaults
+to be transparent.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch10-7">Section 10.7: Creating a multi-colored border using borderimage</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 <h4>CSS:</h4>
 
-<pre><code>
-.bordered
-{
-<b>border-image</b>
-:
-linear-gradient
-(
-to
-right
-,
-red
-20
-&percnt;
-,
-green
-20
-&percnt;
-,
-green
-40
-&percnt;
-,
-blue
-40
-&percnt;
-,
-blue
-60
-&percnt;
-,
-maroon
-60
-&percnt;
-,
-maroon
-80
-&percnt;
-,
-chocolate
-80
-&percnt;
-)
-;
-*/&ast; gradient with required colors &ast;/*
-<b>border-image-slice</b>
-:
-1
-;
-}
-</code></pre>
+<pre><code>.bordered {
+  <b>border-image</b>: linear-gradient(to right, red 20&percnt;, green 20&percnt;, green 40&percnt;, blue 40&percnt;, blue 60&percnt;,
+  maroon 60&percnt;, maroon 80&percnt;, chocolate 80&percnt;); /* gradient with required colors */
+  <b>border-image-slice</b>: 1;
+}</code></pre>
 
 <h4>HTML:</h4>
 
-<pre><code>
-<b>&lt;</b>
-<b>div</b>
-class
-=
-&apos;bordered&apos;
-<b>&gt;</b>
-Border on all sides
-<b>&lt;</b>
-<b>/div</b>
-<b>&gt;</b>
-</code></pre>
+<pre><code><b>&lt;div</b> class=&apos;bordered&apos;<b>&gt;</b>Border on all sides<b>&lt;/div&gt;</b></code></pre>
 
-> The above example would produce a border that comprises of 5 different
-> colors. The colors are defined through a linear-gradient (you can find
-> more information about gradients in the docs). You can find more
-> information about border-image-slice property in the border-image
-> example in same page.
+<p>The above example would produce a border that comprises of 5 different
+colors. The colors are defined through a linear-gradient (you can find
+more information about gradients in the docs). You can find more
+information about border-image-slice property in the border-image
+example in same page.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 28.  (xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="center" width="100%">
@@ -3588,16 +3529,15 @@ Border on all sides
 </p>
 <!-- [image028.jpg 3.5"x1.437"](./images/image028.jpg) -->
 
-> (*Note: Additional properties were added to the element for
-> presentational purpose.*)
->
-> You&apos;d have noticed that the left border has only a single color (the
-> start color of the gradient) while the right border also has only a
-> single color (the gradient&apos;s end color). This is because of the way
-> that border image property works. It is as though the gradient is
-> applied to the entire box and then the colors are masked from the
-> padding and content areas, thus making it look as though only the
-> border has the gradient.
+<h6>(Note: Additional properties were added to the element for presentational purpose.)</h6>
+
+<p>You&apos;d have noticed that the left border has only a single color (the
+start color of the gradient) while the right border also has only a
+single color (the gradient&apos;s end color). This is because of the way
+that border image property works. It is as though the gradient is
+applied to the entire box and then the colors are masked from the
+padding and content areas, thus making it look as though only the
+border has the gradient.</p>
 
   to right
 
