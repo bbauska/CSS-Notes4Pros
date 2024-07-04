@@ -3433,7 +3433,7 @@ highest priority (meaning in a conflict, the border would not show).</p>
 }</code></pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 27.  (xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p align="center" width="100%">
+<p align="left" width="100%">
 <img src="./images/image027.jpg"
   style="width:20%"
   title=""
@@ -3525,14 +3525,14 @@ more information about gradients in the docs). You can find more
 information about border-image-slice property in the border-image
 example in same page.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 28. Border on ALL sides (xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 28. border on all sides (xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="center" width="100%">
 <img src="./images/image028.png"
   style="width:35%"
   title="Border on ALL sides"
   alt="Border on ALL sides." />
 </p>
-<!-- [image028.jpg 3.5"x1.437"](./images/image028.jpg) -->
+<!-- [image028.jpg 3.5"x1.437"] -->
 
 <h6>(Note: Additional properties were added to the element for presentational purpose.)</h6>
 
@@ -3558,7 +3558,7 @@ the output of a bottom 5 colored gradient.</p>
   title="Bottom 5 colored gradient"
   alt="Bottom 5 colored gradient." />
 </p>
-<!-- [image029.jpg 3.489 x 1.40](./images/image029.jpg) -->
+<!-- [image029.jpg 3.489 x 1.40]-->
 
 <p>If the border is required only on specific sides of the element then
 the border-width property can be used just like with any other normal
