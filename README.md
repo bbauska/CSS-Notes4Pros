@@ -4097,9 +4097,9 @@ inside the <b>&lt;head&gt;</b> tag.</p>
 Based on MDN&apos;s definition &quot;width&quot; is
 
 <blockquote>
-The width media feature describes the width of the rendering surface
-of the output device (such as the width of the document window, or the
-width of the page box on a printer).
+  The width media feature describes the width of the rendering surface
+  of the output device (such as the width of the document window, or the
+  width of the page box on a printer).
 </blockquote>
 
 <p>What does that mean?</p>
@@ -4147,7 +4147,6 @@ but no more than 767px */
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch13-7">Section 13.7: Use on link tag</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-
 <pre><code><b>&lt;link</b> rel=&quot;stylesheet&quot; media=&quot;min-width: 600px&quot;
 href=&quot;example.css&quot; <b>/&gt;</b></code></pre>
 
@@ -4259,9 +4258,6 @@ quis ligula lacinia aliquet. <b>&lt;/p&gt;</b></p>
 | initial | Sets this property to its default value. Read about initial |
 | inherit | Inherits this property from its parent element. Read about inherit |
 
-<pre><code><b>&lt;</b>
-</code></pre>
-
 <h4>HTML:</h4>
 
 <pre><code><b>&lt;html&gt;</b>
@@ -4315,8 +4311,6 @@ by T. J. Koblentz):
 
 <p><b>Clearfix also preventing top margin collapsing of contained floats</b></p>
 
-/**/
-
 /* For modern browsers* */ 
 1. The space content is one way to avoid an Opera bug when the*
 
@@ -4330,220 +4324,62 @@ elements*
 
 *&ast; 2. The use of &apos;table&apos; rather than &apos;block&apos; is only necessary if
 using*
-
 *&ast; &apos;:before&apos; to contain the top-margins of child elements.*
-
 *&ast;/*
 
-.cf
-
-:
-
-before
-
-,
-
-.cf
-
-:
-
-after
-
-{
-
-<b>content</b>
-
-:
-
-&quot; &quot;
-
-;
-
-*/&ast; 1 &ast;/*
-
-<b>display</b>
-
-:
-
-table
-
-;
-
-*/&ast; 2 &ast;/*
-
+<pre><code>.cf:before,
+.cf:after {
+  <b>content</b>: &quot; &quot;; /* 1 */
+  <b>display</b>: table; /* 2 */
 }
+.cf:after {
+  <b>clear</b>: both;
+}</code></pre>
 
-.cf
+<h4>Clearfix with support of outdated browsers IE6 and IE7</h4>
 
-:
-
-after
-
-{
-
-<b>clear</b>
-
-:
-
-both
-
-;
-
+<pre><code>.cf:before,
+.cf:after {
+  <b>content</b>: &quot; &quot;;
+  <b>display</b>: table;
 }
-
-<b>Clearfix with support of outdated browsers IE6 and IE7</b>
-
-.cf
-
-:
-
-before
-
-,
-
-.cf
-
-:
-
-after
-
-{
-
-<b>content</b>
-
-:
-
-&quot; &quot;
-
-;
-
-<b>display</b>
-
-:
-
-table
-
-;
-
+.cf:after {
+  <b>clear</b>: both;
 }
+/**
+* For IE 6/7 only
+* Include this rule to trigger hasLayout and contain floats.
+**/
+.cf {
+  &ast;zoom: 1;
+}</code></pre>
 
-.cf
+<p><a href="http://codepen.io/PhilippeVay/pen/OXEqgW?editors=0100">Codepen showing ClearFix effect</a></p>
 
-:
-
-after
-
-{
-
-<b>clear</b>
-
-:
-
-both
-
-;
-
-}
-
-*/&ast;&ast;*
-
-*&ast; For IE 6/7 only*
-
-*&ast; Include this rule to trigger hasLayout and contain floats.*
-
-*&ast;/*
-
-.cf
-
-{
-
-&ast;
-
-zoom
-
-:
-
-1
-
-;
-
-}
-
-&lbrack;&lbrack;Codepen showing clearfix
-effect&rbrack;&rbrack;(http://codepen.io/PhilippeVay/pen/OXEqgW?editors=0100)
-
-Other resource: &lbrack;&lbrack;Everything you know about clearfix is
-wrong&rbrack;&rbrack;(http://www.cssmojo.com/clearfix_block-formatting-context_and_hasLayout/)
-(clearfix and BFC - Block Formatting Context while hasLayout relates
-to outdated browsers IE6 maybe 7)
-
+<p>Other resource: <a href="http://www.cssmojo.com/clearfix_block-formatting-context_and_hasLayout/">
+Everything you know about clearfix is wrong</a>(clearfix and BFC - Block Formatting Context while 
+has Layout relates to outdated browsers IE6 maybe 7)</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch14-4">Section 14.4: In-line DIV using float</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-
-The div is a block-level element, i.e it occupies the whole of the
+<p>The div is a block-level element, i.e it occupies the whole of the
 page width and the siblings are place one below the other irrespective
-of their width.
+of their width.</p>
 
-<b>&lt;</b>
+<pre><code><b>&lt;div&gt;</b>
+  <b>&lt;p&gt;</b>This is DIV 1<b>&lt;/p&gt;</b>
+<b>&lt;/div&gt;</b>
 
-<b>div</b>
+<b>&lt;div&gt;</b>
+  <b>&lt;p&gt;</b>This is DIV 2<b>&lt;/p&gt;</b>
+<b>&lt;/div&gt;</b></code></pre>
 
-<b>&gt;</b>
-
-<b>&lt;</b>
-
-<b>p</b>
-
-<b>&gt;</b>
-
-This is DIV 1
-
-<b>&lt;</b>
-
-<b>/p</b>
-
-<b>&gt;</b>
-
-<b>&lt;</b>
-
-<b>/div</b>
-
-<b>&gt;</b>
-
-<b>&lt;</b>
-
-<b>div</b>
-
-<b>&gt;</b>
-
-<b>&lt;</b>
-
-<b>p</b>
-
-<b>&gt;</b>
-
-This is DIV 2
-
-<b>&lt;</b>
-
-<b>/p</b>
-
-<b>&gt;</b>
-
-<b>&lt;</b>
-
-<b>/div</b>
-
-<b>&gt;</b>
-
-The output of the following code will be
-
+<p>The output of the following code will be;</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 37.  (xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="center" width="100%">
 <img src="./images/image037.jpg"
-  style="width:50%"
+  style="width:100%"
   title=""
   alt="." />
 </p>
@@ -4553,215 +4389,34 @@ The output of the following code will be
 
 <h4>HTML:</h4>
 
-<b>&lt;</b>
-
-<b>div</b>
-
-class
-
-=
-
-&quot;outer-div&quot;
-
-<b>&gt;</b>
-
-<b>&lt;</b>
-
-<b>div</b>
-
-class
-
-=
-
-&quot;inner-div1&quot;
-
-<b>&gt;</b>
-
-<b>&lt;</b>
-
-<b>p</b>
-
-<b>&gt;</b>
-
-This is DIV 1
-
-<b>&lt;</b>
-
-<b>/p</b>
-
-<b>&gt;</b>
-
-<b>&lt;</b>
-
-<b>/div</b>
-
-<b>&gt;</b>
-
-<b>&lt;</b>
-
-<b>div</b>
-
-class
-
-=
-
-&quot;inner-div2&quot;
-
-<b>&gt;</b>
-
-<b>&lt;</b>
-
-<b>p</b>
-
-<b>&gt;</b>
-
-This is DIV 2
-
-<b>&lt;</b>
-
-<b>/p</b>
-
-<b>&gt;</b>
-
-<b>&lt;</b>
-
-<b>/div</b>
-
-<b>&gt;</b>
-
-<b>&lt;</b>
-
-<b>/div</b>
-
-<b>&gt;</b>
-
-CSS
-
-.inner-div1
-
-{
-
-<b>width</b>
-
-:
-
-50
-
-&percnt;
-
-;
-
-<b>margin-right</b>
-
-:
-
-0
-
-px
-
-;
-
-<b>float</b>
-
-:
-
-left
-
-;
-
-<b>background</b>
-
-:
-
-#337ab7
-
-;
-
-<b>padding</b>
-
-:
-
-50
-
-px
-
-0
-
-px
-
-;
-
+<pre><code><b>&lt;div</b> class=&quot;outer-div&quot;<b>&gt;</b>
+  <b>&lt;div</b> class=&quot;inner-div1&quot;<b>&gt;</b>
+    <b>&lt;p&gt;</b>This is DIV 1<b>&lt;/p&gt;</b>
+  <b>&lt;/div&gt;</b>
+  <b>&lt;div</b> class=&quot;inner-div2&quot;<b>&gt;
+    <p>&lt;p&gt;</b>This is DIV 2<b>&lt;/p&gt;</b>
+  <b>&lt;/div&gt;</b>
+<b>&lt;/div&gt;</b></code></pre>
+
+<h4>CSS:</h4>
+
+<pre><code>.inner-div1 {
+  <b>width</b>: 50&percnt;;
+  <b>margin-right</b>: 0px;
+  <b>float</b>: left;
+  <b>background</b>: #337ab7;
+  <b>padding</b>: 50px 0px;
 }
-
-.inner-div2
-
-{
-
-<b>width</b>
-
-:
-
-50
-
-&percnt;
-
-;
-
-<b>margin-right</b>
-
-:
-
-0
-
-px
-
-;
-
-<b>float</b>
-
-:
-
-left
-
-;
-
-<b>background</b>
-
-:
-
-#dd2c00
-
-;
-
-<b>padding</b>
-
-:
-
-50
-
-px
-
-0
-
-px
-
-;
-
+.inner-div2 {
+  <b>width</b>: 50&percnt;;
+  <b>margin-right</b>: 0px;
+  <b>float</b>: left;
+  <b>background</b>: #dd2c00;
+  <b>padding</b>: 50px 0px;
 }
-
-p
-
-{
-
-<b>text-align</b>
-
-:
-
-center
-
-;
-
-}
+p {
+  <b>text-align</b>: center;
+}</code></pre>
 
 [image038.jpg 7.48 x .97](./images/image038.jpg)
 
@@ -4770,249 +4425,95 @@ center
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch14-5">Section 14.5: Use of overflow property to clear floats</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p>Setting overflow value to hidden,auto or scroll to an element, will
+clear all the floats within that element.</p>
 
-Setting overflow value to hidden,auto or scroll to an element, will
-clear all the floats within that element.
-
-  <b>overflow</b>:scroll
-
-<b>Note:</b> using will always show the scrollbox
-
+<p><b>Note:</b> using <b>overflow</b>:scroll will always show the scrollbox</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch14-6">Section 14.6: Simple Two Fixed-Width Column Layout</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-
-A simple two-column layout consists of two fixed-width, floated
+<p>A simple two-column layout consists of two fixed-width, floated
 elements. Note that the sidebar and content area are not the same
 height in this example. This is one of the tricky parts with
 multi-column layouts using floats, and requires workarounds to make
-multiple columns appear to be the same height.
->
+multiple columns appear to be the same height.</p>
+
 <h4>HTML:</h4>
 
-<pre><code>
-<b>&lt;</b>
-<b>div</b>
-class
-=
-&quot;wrapper&quot;
-<b>&gt;</b>
-<b>&lt;</b>
-<b>div</b>
-class
-=
-&quot;sidebar&quot;
-<b>&gt;</b>
-<b>&lt;</b>
-<b>h</b>
-<b>2</b>
-<b>&gt;</b>
-Sidebar
-<b>&lt;</b>
-<b>/h</b>
-<b>2</b>
-<b>&gt;</b>
-<b>&lt;</b>
-<b>p</b>
-<b>&gt;</b>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec
-odio.
-<b>&lt;</b>
-<b>/p</b>
-<b>&gt;</b>
-<b>&lt;</b>
-<b>/div</b>
-<b>&gt;</b>
-<b>&lt;</b>
-<b>div</b>
-class
-=
-&quot;content&quot;
-<b>&gt;</b>
-<b>&lt;</b>
-<b>h</b>
-<b>1</b>
-<b>&gt;</b>
-Content
-<b>&lt;</b>
-<b>/h</b>
-<b>1</b>
-<b>&gt;</b>
-<b>&lt;</b>
-<b>p</b>
-<b>&gt;</b>
-Class aptent taciti sociosqu ad litora torquent per conubia nostra, per
-inceptos himenaeos.
+<pre><code><b>&lt;div</b> class=&quot;wrapper&quot;<b>&gt;</b>
+  <b>&lt;div</b> class=&quot;sidebar&quot;<b>&gt;</b>
+    <b>&lt;h2&gt;</b>Sidebar<b>&lt;/h2&gt;</b>
+	
+    <b>&lt;p&gt;</b>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio.<b>&lt;/p&gt;</b>
+  <b>&lt;/div&gt;</b>
 
-Curabitur sodales ligula in libero. Sed dignissim lacinia nunc.
-Curabitur tortor. Pellentesque
-
-nibh. Aenean quam. In scelerisque sem at dolor. Maecenas mattis. Sed
-convallis tristique sem. Proin
-
-ut ligula vel nunc egestas porttitor. Morbi lectus risus, iaculis vel,
-suscipit quis, luctus non,
-
-massa. Fusce ac turpis quis ligula lacinia aliquet.
-
-<b>&lt;</b>
-<b>/p</b>
-<b>&gt;</b>
-<b>&lt;</b>
-<b>/div</b>
-<b>&gt;</b>
-<b>&lt;</b>
-<b>/div</b>
-<b>&gt;</b>
-</code></pre>
+<b>&lt;div</b> class=&quot;content&quot;<b>&gt;</b>
+<b>&lt;h1&gt;</b>Content<b>&lt;/h1&gt;</b>
+<b>&lt;p&gt;</b>Class aptent taciti sociosqu ad litora torquent per conubia nostra, per
+inceptos himenaeos. Curabitur sodales ligula in libero. Sed dignissim lacinia nunc.
+Curabitur tortor. Pellentesque nibh. Aenean quam. In scelerisque sem at dolor. Maecenas mattis. 
+Sed convallis tristique sem. Proin ut ligula vel nunc egestas porttitor. Morbi lectus risus, 
+iaculis vel, suscipit quis, luctus non, massa. Fusce ac turpis quis ligula lacinia aliquet.<b>&lt;/p&gt;</b>
+<b>&lt;/div&gt;</b>
+<b>&lt;/div&gt;</b></code></pre>
 
 <h4>CSS:</h4>
 
-<pre><code>
-.wrapper
-{
-<b>width</b>
-:
-600
-px
-;
-<b>padding</b>
-:
-20
-px
-;
-<b>background-color</b>
-:
-pink
-;
-*/&ast; Floated elements don&apos;t use any height. Adding &quot;overflow:hidden;&quot;
-forces the*
+<pre><code>.wrapper {
+  <b>width</b>: 600px;
+  <b>padding</b>: 20px;
+  <b>background-color</b>: pink;
+  /* Floated elements don&apos;t use any height. Adding &quot;overflow:hidden;&quot; 
+  forces the parent element to expand to contain its floated children. */
 
-*parent element to expand to contain its floated children. &ast;/*
-
-<b>overflow</b>
-:
-hidden
-;
+<b>overflow</b>: hidden;
 }
-.sidebar
-{
-<b>width</b>
-:
-150
-px
-;
-<b>float</b>
-:
-left
-;
-<b>background-color</b>
-:
-blue
-;
+.sidebar {
+  <b>width</b>: 150px;
+  <b>float</b>: left;
+  <b>background-color</b>: blue;
 }
-.content
-{
-<b>width</b>
-:
-450
-px
-;
-<b>float</b>
-:
-right
-;
-<b>background-color</b>
-:
-yellow
-;
-}
-</code></pre>
-
+.content {
+  <b>width</b>: 450px;
+  <b>float</b>: right;
+  <b>background-color</b>: yellow;
+}</code></pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch14-7">Section 14.7: Simple Three Fixed-Width Column Layout</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>HTML:</h4>
 
 <pre><code>
-<b>&lt;</b>
-<b>div</b>
-class
-=
-&quot;wrapper&quot;
-<b>&gt;</b>
-<b>&lt;</b>
-<b>div</b>
-class
-=
-&quot;left-sidebar&quot;
-<b>&gt;</b>
-<b>&lt;</b>
-<b>h</b>
-<b>1</b>
-<b>&gt;</b>
-Left Sidebar
-<b>&lt;</b>
-<b>/h</b>
-<b>1</b>
-<b>&gt;</b>
-<b>&lt;</b>
-<b>p</b>
-<b>&gt;</b>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-<b>&lt;</b>
-<b>/p</b>
-<b>&gt;</b>
-<b>&lt;</b>
-<b>/div</b>
-<b>&gt;</b>
-<b>&lt;</b>
-<b>div</b>
-class
-=
-&quot;content&quot;
-<b>&gt;</b>
-<b>&lt;</b>
-<b>h</b>
-<b>1</b>
-<b>&gt;</b>
-Content
-<b>&lt;</b>
-<b>/h</b>
-<b>1</b>
-<b>&gt;</b>
-<b>&lt;</b>
-<b>p</b>
-<b>&gt;</b>
-</code></pre>
-
+<b>&lt;div</b> class=&quot;wrapper&quot;<b>&gt;</b>
+<b>&lt;div</b> class=&quot;left-sidebar&quot;<b>&gt;</b>
+<b>&lt;h1&gt;</b>Left Sidebar<b>&lt;/h1&gt;</b>
+<b>&lt;p&gt;</b>Lorem ipsum dolor sit amet, consectetur adipiscing elit.<b>&lt;</b><b>/p</b><b>&gt;</b>
+<b>&lt;</b><b>/div</b><b>&gt;</b>
+<b>&lt;</b><b>div</b> class=&quot;content&quot;<b>&gt;</b>
+<b>&lt;h1&gt;</b>Content<b>&lt;</b>
+<b>/h</b><b>1</b><b>&gt;</b>
+<b>&lt;</b><b>p</b><b>&gt;</b>
 Class aptent taciti sociosqu ad litora torquent per conubia nostra, per
-inceptos himenaeos.
-
-Curabitur sodales ligula in libero. Sed dignissim lacinia nunc.
-Curabitur tortor. Pellentesque
-
-nibh. Aenean quam. In scelerisque sem at dolor. Maecenas mattis. Sed
-convallis tristique sem. Proin
-
-ut ligula vel nunc egestas porttitor. Morbi lectus risus, iaculis vel,
+inceptos himenaeos. Curabitur sodales ligula in libero. Sed dignissim lacinia nunc.
+Curabitur tortor. Pellentesque nibh. Aenean quam. In scelerisque sem at dolor. Maecenas mattis. Sed
+convallis tristique sem. Proin ut ligula vel nunc egestas porttitor. Morbi lectus risus, iaculis vel,
 suscipit quis, luctus non, massa.
 
-**&lt;**
+<b>&lt;</b>
 
-**/p**
+<b>/p</b>
 
-**&gt;**
+<b>&gt;</b>
 
-**&lt;**
+<b>&lt;</b>
 
-**/div**
+<b>/div</b>
 
-**&gt;**
+<b>&gt;</b>
 
-**&lt;**
+<b>&lt;</b>
 
-**div**
+<b>div</b>
 
 class
 
@@ -5020,51 +4521,51 @@ class
 
 &quot;right-sidebar&quot;
 
-**&gt;**
+<b>&gt;</b>
 
-**&lt;**
+<b>&lt;</b>
 
-**h**
+<b>h</b>
 
-**1**
+<b>1</b>
 
-**&gt;**
+<b>&gt;</b>
 
 Right Sidebar
 
-**&lt;**
+<b>&lt;</b>
 
-**/h**
+<b>/h</b>
 
-**1**
+<b>1</b>
 
-**&gt;**
+<b>&gt;</b>
 
-**&lt;**
+<b>&lt;</b>
 
-**p**
+<b>p</b>
 
-**&gt;**
+<b>&gt;</b>
 
 Fusce ac turpis quis ligula lacinia aliquet.
 
-**&lt;**
+<b>&lt;</b>
 
-**/p**
+<b>/p</b>
 
-**&gt;**
+<b>&gt;</b>
 
-**&lt;**
+<b>&lt;</b>
 
-**/div**
+<b>/div</b>
 
-**&gt;**
+<b>&gt;</b>
 
-**&lt;**
+<b>&lt;</b>
 
-**/div**
+<b>/div</b>
 
-**&gt;**
+<b>&gt;</b>
 
 CSS:
 
@@ -5072,7 +4573,7 @@ CSS:
 
 {
 
-**width**
+<b>width</b>
 
 :
 
@@ -5082,7 +4583,7 @@ px
 
 ;
 
-**background-color**
+<b>background-color</b>
 
 :
 
@@ -5090,7 +4591,7 @@ pink
 
 ;
 
-**padding**
+<b>padding</b>
 
 :
 
@@ -5105,7 +4606,7 @@ forces the*
 
 *parent element to expand to contain its floated children. &ast;/*
 
-**overflow**
+<b>overflow</b>
 
 :
 
@@ -5119,7 +4620,7 @@ hidden
 
 {
 
-**width**
+<b>width</b>
 
 :
 
@@ -5129,7 +4630,7 @@ px
 
 ;
 
-**background-color**
+<b>background-color</b>
 
 :
 
@@ -5137,7 +4638,7 @@ blue
 
 ;
 
-**float**
+<b>float</b>
 
 :
 
@@ -5151,7 +4652,7 @@ left
 
 {
 
-**width**
+<b>width</b>
 
 :
 
@@ -5161,7 +4662,7 @@ px
 
 ;
 
-**background-color**
+<b>background-color</b>
 
 :
 
@@ -5169,7 +4670,7 @@ yellow
 
 ;
 
-**float**
+<b>float</b>
 
 :
 
@@ -5183,7 +4684,7 @@ left
 
 {
 
-**width**
+<b>width</b>
 
 :
 
@@ -5193,7 +4694,7 @@ px
 
 ;
 
-**background-color**
+<b>background-color</b>
 
 :
 
@@ -5201,7 +4702,7 @@ green
 
 ;
 
-**float**
+<b>float</b>
 
 :
 
@@ -5222,29 +4723,29 @@ this is that the left sidebar is &quot;shrink-wrapped.&quot; The right content
 column is &quot;greedy,&quot; in that it takes up all the remaining space.
 
 <h4>HTML:</h4>
-**&lt;div** class=&quot;sidebar&quot;**&gt;**
+<b>&lt;div</b> class=&quot;sidebar&quot;<b>&gt;</b>
 
-**&lt;h1&gt;**Sidebar**&lt;/h1&gt;**
+<b>&lt;h1&gt;</b>Sidebar<b>&lt;/h1&gt;</b>
 
-**&lt;img** src=&quot;http://lorempixel.com/150/200/&quot; **/&gt;**
+<b>&lt;img</b> src=&quot;http://lorempixel.com/150/200/&quot; <b>/&gt;</b>
 
-**&lt;/div&gt;**
+<b>&lt;/div&gt;</b>
 
-**&lt;div** class=&quot;content&quot;**&gt;**
+<b>&lt;div</b> class=&quot;content&quot;<b>&gt;</b>
 
-**&lt;h1&gt;**Content**&lt;/h1&gt; &lt;p&gt;**Lorem ipsum dolor sit amet,
+<b>&lt;h1&gt;</b>Content<b>&lt;/h1&gt; &lt;p&gt;</b>Lorem ipsum dolor sit amet,
 consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed
 cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum
 imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed
 augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla.
-**&lt;/p&gt; &lt;p&gt;**Class aptent taciti sociosqu ad litora torquent per
+<b>&lt;/p&gt; &lt;p&gt;</b>Class aptent taciti sociosqu ad litora torquent per
 conubia nostra, per inceptos himenaeos. Curabitur sodales ligula in
 libero. Sed dignissim lacinia nunc. Curabitur tortor. Pellentesque nibh.
 Aenean quam. In scelerisque sem at dolor. Maecenas mattis. Sed convallis
 tristique sem. Proin ut ligula vel nunc egestas porttitor. Morbi lectus
 risus, iaculis vel, suscipit quis, luctus non, massa. Fusce ac turpis
 quis ligula lacinia aliquet. Mauris ipsum. Nulla metus metus,
-ullamcorper vel, tincidunt sed, euismod in, nibh. **&lt;/p&gt; &lt;/div&gt;**
+ullamcorper vel, tincidunt sed, euismod in, nibh. <b>&lt;/p&gt; &lt;/div&gt;</b>
 CSS:
 
 .sidebar
@@ -5253,7 +4754,7 @@ CSS:
 
 */&ast; &apos;display:table;&apos; shrink-wraps the column &ast;/*
 
-**display**
+<b>display</b>
 
 :
 
@@ -5261,7 +4762,7 @@ table
 
 ;
 
-**float**
+<b>float</b>
 
 :
 
@@ -5269,7 +4770,7 @@ left
 
 ;
 
-**background-color**
+<b>background-color</b>
 
 :
 
@@ -5286,7 +4787,7 @@ blue
 */&ast; &apos;overflow:hidden;&apos; prevents &apos;.content&apos; from flowing under
 &apos;.sidebar&apos; &ast;/*
 
-**overflow**
+<b>overflow</b>
 
 :
 
@@ -5294,7 +4795,7 @@ hidden
 
 ;
 
-**background-color**
+<b>background-color</b>
 
 :
 
@@ -5310,7 +4811,7 @@ yellow
 <h2 id="ch15">Chapter 15: Typography</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
-**Parameter Details**
+<b>Parameter Details</b>
 
   *font-style*     italics or oblique
   *font-variant*   normal or small-caps
@@ -5348,7 +4849,7 @@ element
 
 {
 
-**font**
+<b>font</b>
 
 :
 
@@ -5397,7 +4898,7 @@ p
 
 {
 
-**font-weight**
+<b>font-weight</b>
 
 :
 
@@ -5405,7 +4906,7 @@ bold
 
 ;
 
-**font-size**
+<b>font-size</b>
 
 :
 
@@ -5415,7 +4916,7 @@ px
 
 ;
 
-**font-family**
+<b>font-family</b>
 
 :
 
@@ -5435,7 +4936,7 @@ p
 
 {
 
-**font**
+<b>font</b>
 
 :
 
@@ -5455,19 +4956,19 @@ sans-serif
 
 }
 
-**Note**: that since font-style, font-variant, font-weight and
+<b>Note</b>: that since font-style, font-variant, font-weight and
 line-height are optional, the three of them are skipped in this
-example. It is important to note that using the shortcut **resets**
+example. It is important to note that using the shortcut <b>resets</b>
 the other attributes not given. Another important point is that the
 two necessary attributes for the font shortcut to work are font-size
 and fontfamily. If they are not both included the shortcut is ignored.
 >
 Initial value for each of the properties:
 
-  **font-style**                          :   normal
+  <b>font-style</b>                          :   normal
 
-  **font-variant**                           :   normal
-  **font-weight**                           :   normal
+  <b>font-variant</b>                           :   normal
+  <b>font-weight</b>                           :   normal
 
 ;
 >
@@ -5477,12 +4978,12 @@ Initial value for each of the properties:
 >
 ;
 
-  **font-stretch**                           :   normal
+  <b>font-stretch</b>                           :   normal
 
 
-  **font-size**                         :    medium
+  <b>font-size</b>                         :    medium
 
-  **line-height**                           :   normal
+  <b>line-height</b>                           :   normal
 
 ;
 >
@@ -5494,16 +4995,16 @@ font-family -- depends on user agent
 <h3 id="ch15-2>Section 15.2: Quotes</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
-  **&lt;q**
+  <b>&lt;q</b>
 
 The quotes property is used to customize the opening and closing
-quotation marks of the **&gt;** tag.
+quotation marks of the <b>&gt;</b> tag.
 
 q
 
 {
 
-**quotes**
+<b>quotes</b>
 
 :
 
@@ -5528,92 +5029,64 @@ q
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>HTML:</h4>
 
-```
-**&lt;**
-**div**
-id
-=
-&quot;element-one&quot;
-**&gt;**
-Hello I am some text.
-**&lt;**
-**/div**
-**&gt;**
-**&lt;**
-**div**
-id
-=
-&quot;element-two&quot;
-**&gt;**
-Hello I am some smaller text.
-**&lt;**
-**/div**
-**&gt;**
-> **CSS:**
-#element-one
-{
-**font-size**
-:
-30
-px
-;
+<pre><code>
+<b>&lt;div</b> id=&quot;element-one&quot;<b>&gt;</b>Hello I am some text.<b>&lt;/div&gt;</b>
+<b>&lt;div</b> id=&quot;element-two&quot;<b>&gt;</b>Hello I am some smaller text.<b>&lt;/div&gt;</b></code></pre>
+
+<h4>CSS:</h4>
+
+<pre><code>#element-one {
+  <b>font-size</b>: 30px;
 }
-#element-two
-{
-**font-size**
-:
-10
-px
-;
-}
-```
+#element-two {
+  <b>font-size</b>: 10px;
+}</code></pre>
+
 
 <p>The text inside #element-one will be 30px in size, while the text in #element-two will be 10px in size.</p>
 a<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch15-4">Section 15.4: Text Direction</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
-```
+<pre><code>
 div {
-  **direction**: ltr; /* Default, text read read from left-to-right */
+  <b>direction</b>: ltr; /* Default, text read read from left-to-right */
 }
 .ex {
-  **direction**: rtl; /* text read from right-to-left */
+  <b>direction</b>: rtl; /* text read from right-to-left */
 }
 .horizontal-tb {
-  **writing-mode**: horizontal-tb;  /* Default, text read from left-to-right and top-to-bottom. */
+  <b>writing-mode</b>: horizontal-tb;  /* Default, text read from left-to-right and top-to-bottom. */
 }
 .vertical-rtl {
-  **writing-mode**: vertical-rl;  /* text read from right-to-left and top-to-bottom */
+  <b>writing-mode</b>: vertical-rl;  /* text read from right-to-left and top-to-bottom */
 }
 .vertical-ltr {
-  **writing-mode**: vertical-rl;  /* text read from left-to-right and top to bottom */
-}
-```
+  <b>writing-mode</b>: vertical-rl;  /* text read from left-to-right and top to bottom */
+}</code></pre>
 
 <p>The direction property is used to change the horizontal text direction
 of an element.</p>
 
-**direction**   :   ltr &vert; rtl &vert; initial &vert; inherit
+<b>direction</b>   :   ltr &vert; rtl &vert; initial &vert; inherit
 
 
-Syntax: ;
+<h4>Syntax;</h4>
 
-The writing-mode property changes the alignment of text so it can be
+<p>The writing-mode property changes the alignment of text so it can be
 read from top-to-bottom or from left-to-right, depending on the
-language.
+language.</p>
 
-**direction**   :   horizontal-tb &vert; vertical-rl &vert; vertical-lr
+<b>direction</b>   :   horizontal-tb &vert; vertical-rl &vert; vertical-lr
 
-Syntax: ;
-
+<h4>Syntax;</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch15-5">Section 15.5: Font Stacks</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
-```
-**font-family**: &apos;Segoe UI&apos;, Tahoma, sans-serif;
-```
+<pre><code>
+<b>font-family</b>: &apos;Segoe UI&apos;, Tahoma, sans-serif;
+</code></pre>
 
 The browser will attempt to apply the font face &quot;Segoe UI&quot; to the
 characters within the elements targeted by the above property. If this
@@ -5624,7 +5097,7 @@ font names with more than one word such as &quot;Segoe UI&quot; need to have
 single or double quotes around them.
 
 ```
-**font-family**: Consolas, &apos;Courier New&apos;, monospace;
+<b>font-family</b>: Consolas, &apos;Courier New&apos;, monospace;
 ```
 
 <p>The browser will attempt to apply the font face &quot;Consolas&quot; to the
@@ -5640,53 +5113,30 @@ to users. In this example, the ellipsis represents clipped text.</p>
 
 ```
 .text {
-  **overflow**: hidden;
-  **text-overflow**: ellipsis;
+  <b>overflow</b>: hidden;
+  <b>text-overflow</b>: ellipsis;
 }
 ```
 
-  **text-overflow**                        :   ellipsis
+  <b>text-overflow</b>                        :   ellipsis
 
 Unfortunately, only works on a single line of text. There is no way to
 support ellipsis on the last line in standard CSS, but it can be
 achieved with non-standard webkit-only implementation of flexboxes.
 
 ```
-.giveMeEllipsis
-{
-**overflow**
-:
-hidden
-;
-**text-overflow**
-:
-ellipsis
-;
-**display**
-:
--webkit-box
-;
--webkit-box-orient
-:
-vertical
-;
--webkit-line-clamp
-:
-N
-;
+.giveMeEllipsis {
+  <b>overflow</b>: hidden;
+  <b>text-overflow</b>: ellipsis;
+  <b>display</b>: -webkit-box;
+  -webkit-box-orient:
+  vertical;
+  -webkit-line-clamp: N;
 /* number of lines to show */
-**line-height**: X;
-```
-
-```
+  <b>line-height</b>: X;
 /* fallback */
-**max-height**
-:
-X
-&ast;
-N
-;
-/* fallback */
+  <b>max-height</b>: X &ast; N;
+  /* fallback */
 }
 ```
 
@@ -5701,52 +5151,41 @@ Resources:
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch15-7">Section 15.7: Text Shadow</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-
-To add shadows to text, use the text-shadow property. The syntax is as
-follows:
+<p>To add shadows to text, use the text-shadow property. The syntax is as follows:</p>
 
 ```
-**text-shadow**:
+<b>text-shadow</b>:
 horizontal-offset vertical-offset blur color;
 ```
 
-**Shadow without blur radius**
+<h4>Shadow without blur radius</h4>
 
-```
-h1 {
-  **text-shadow**: 2px 2px #0000FF;
-}
-```
+<pre><code>h1 {
+  <b>text-shadow</b>: 2px 2px #0000FF;
+}</code></pre>
 
-This creates a blue shadow effect around a heading
+<p>This creates a blue shadow effect around a heading</p>
 
-**Shadow with blur radius**
+<h4>Shadow with blur radius</h4>
 
 To add a blur effect, add an option blur radius argument
 
-```
-h1 {
-  **text-shadow**: 2px 2px 10px #0000FF;
-}
-```
+<pre><code>h1 {
+  <b>text-shadow</b>: 2px 2px 10px #0000FF;
+}</code></pre>
 
-**Multiple Shadows**
+<h4>Multiple Shadows</h4>
 
-To give an element multiple shadows, separate them with commas
+<p>To give an element multiple shadows, separate them with commas</p>
 
-```
-h1 {
-  **text-shadow**: 0 0 3px #FF0000, 0 0 5px #0000FF;
-}
-```
-
+<pre><code>h1 {
+  <b>text-shadow</b>: 0 0 3px #FF0000, 0 0 5px #0000FF;
+}</code></pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch15-8">Section 15.8: Text Transform</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-
-The text-transform property allows you to change the capitalization of
-text. Valid values are: uppercase, capitalize, lowercase, initial,
-inherit, and none
+<p>The text-transform property allows you to change the capitalization of text. 
+Valid values are: uppercase, capitalize, lowercase, initial, inherit, and none.</p>
 
 <h4>CSS:</h4>
 
@@ -5762,111 +5201,52 @@ inherit, and none
 
 <h4>HTML:</h4>
 
-<pre><code>
-<b>&lt;</b>
-<b>p</b>
-class
-=
-&quot;example1&quot;
-<b>&gt;</b>
-all letters in uppercase
-*&lt;!&minus;-*
-*&quot;ALL LETTERS IN UPPERCASE&quot;*
-*&minus;-&gt;*
-<b>&lt;</b>
-<b>/p</b>
-<b>&gt;</b>
-<b>&lt;</b>
-<b>p</b>
-class
-=
-&quot;example2&quot;
-<b>&gt;</b>
-all letters in capitalize
-*&lt;!&minus;-*
-*&quot;All Letters In Capitalize (Sentence Case)&quot;*
-*&minus;-&gt;*
-<b>&lt;</b>
-<b>/p</b>
-<b>&gt;</b>
-<b>&lt;</b>
-<b>p</b>
-class
-=
-&quot;example3&quot;
-<b>&gt;</b>
-all letters in lowercase
-*&lt;!&minus;-*
-*&quot;all letters in lowercase&quot;*
-*&minus;-&gt;*
-<b>&lt;</b>
-<b>/p</b>
-<b>&gt;</b>
-</code></pre>
+<pre><code><b>&lt;</b><b>p</b> class=&quot;example1&quot;<b>&gt;</b>
+  all letters in uppercase&lt;!&minus;-&quot;ALL LETTERS IN UPPERCASE&quot;&minus;-&gt;
+<b>&lt;</b><b>/p</b><b>&gt;</b>
+<b>&lt;</b><b>p</b>class =&quot;example2&quot;<b>&gt;</b>
+  all letters in capitalize&lt;!&minus;-&quot;All Letters In Capitalize (Sentence Case)&quot;&minus;-&gt;
+<b>&lt;</b><b>/p</b><b>&gt;</b>
+<b>&lt;</b><b>p</b> class=&quot;example3&quot;<b>&gt;</b>
+  all letters in lowercase*&lt;!&minus;-&quot;all letters in lowercase&quot;**&minus;-&gt;
+<b>&lt;</b><b>/p</b><b>&gt;</b></code></pre>
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch15-9">Section 15.9: Letter Spacing</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<pre><code>h2 {
+  /* adds a 1px space horizontally between each letter;
+  also known as tracking */
+  <b>letter-spacing</b>:1px;
+}</code></pre>
 
-<pre><code>
-h2
-{
-</code></pre>
+<p>The letter-spacing property is used to specify the space between the
+characters in a text.</p>
 
-*/&ast; adds a 1px space horizontally between each letter;*
+<p>! letter-spacing also supports negative values:</p>
 
-*also known as tracking &ast;/*
-
-<b>letter-spacing</b>
-
-<pre><code>
-:
-1
-px
-;
+<pre><code>p {
+  <b>letter-spacing</b>: -1px;
 }
 </code></pre>
 
-The letter-spacing property is used to specify the space between the
-characters in a text.
->
-! letter-spacing also supports negative values:
+<h4>Resources:</h4>
 
-<pre><code>
-p
-{
-<b>letter-spacing</b>
-:
--1
-px
-;
-}
-</code></pre>
-
-Resources:
 &lbrack;&lbrack;https://developer.mozilla.org/en-US/docs/Web/CSS/letter-spacing&rbrack;&rbrack;(https://developer.mozilla.org/en-US/docs/Web/CSS/letter-spacing)
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch15-10">Section 15.10: Text Indent</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<pre><code>p {
+  <b>text-indent</b>: 50px;
+}</code></pre>
 
-<pre><code>
-p
-{
-<b>text-indent</b>
-:
-50
-px
-;
-}
-</code></pre>
-
-The text-indent property specifies how much horizontal space text
+<p>The text-indent property specifies how much horizontal space text
 should be moved before the beginning of the first line of the text
-content of an element.
->
-Resources:
->
+content of an element.</p>
+
+<h4>Resources:</h4>
+
 &lbrack;&lbrack;Indenting only the first line of text in a
 paragraph?&rbrack;&rbrack;(http://stackoverflow.com/questions/5856952/indenting-only-the-first-line-of-text-in-a-paragraph)
 
@@ -5876,80 +5256,40 @@ paragraph?&rbrack;&rbrack;(http://stackoverflow.com/questions/5856952/indenting-
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch15-11">Section 15.11: Text Decoration</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p>The text-decoration property is used to set or remove decorations from text.</p>
 
-The text-decoration property is used to set or remove decorations from
-text.
-
-<pre><code>
-h1
-{
-<b>text-decoration</b>
-:
-none
-;
+<pre><code>h1 {
+  <b>text-decoration</b>: none;
 }
-h2
-{
-<b>text-decoration</b>
-:
-overline
-;
+h2 {
+  <b>text-decoration</b>: overline;
 }
-h3
-{
-<b>text-decoration</b>
-:
-line-through
-;
+h3 {
+  <b>text-decoration</b>: line-through;
 }
-h4
+h4 {
+  <b>text-decoration</b>: underline;
+}</code></pre>
+
+<p>text-decoration can be used in combination with text-decoration-style
+and text-decoration-color as a shorthand property:</p>
+
+<pre><code>.title {
+  <b>text-decoration</b>: underline dotted blue;
+}</code></pre>
+
+<p>This is a shorthand version of</p>
+
+<pre><code>.title
 {
-<b>text-decoration</b>
-:
-underline
-;
-}
-</code></pre>
+  <b>text-decoration-style</b>: dotted;
+  <b>text-decoration-line</b>: underline;
+  <b>text-decoration-color</b>: blue;
+}</code></pre>
 
-text-decoration can be used in combination with text-decoration-style
-and text-decoration-color as a shorthand property:
+<p>It should be noted that the following properties are only supported in Firefox</p>
 
-<pre><code>
-.title
-{
-<b>text-decoration</b>
-:
-underline
-dotted
-blue
-;
-}
-</code></pre>
-
-This is a shorthand version of
-
-<pre><code>
-.title
-{
-<b>text-decoration-style</b>
-:
-dotted;
-<b>text-decoration-line</b>
-:
-underline;
-<b>text-decoration-color</b>
-:
-blue
-;
-}
-</code></pre>
-
-It should be noted that the following properties are only supported in
-Firefox
-
-text-decoration-color text-decoration-line text-decoration-style
-text-decoration-skip
-
+<p>text-decoration-color text-decoration-line text-decoration-style text-decoration-skip</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch15-12">Section 15.12: Word Spacing</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -6085,18 +5425,18 @@ class
 &quot;aligner&quot;
 <b>&gt;</b>
 <b>&lt;</b>
-**div**
+<b>div</b>
 class
 =
 &quot;aligner-item&quot;
-**&gt;**
+<b>&gt;</b>
 ...
-**&lt;**
-**/div**
-**&gt;**
-**&lt;**
-**/div**
-**&gt;**
+<b>&lt;</b>
+<b>/div</b>
+<b>&gt;</b>
+<b>&lt;</b>
+<b>/div</b>
+<b>&gt;</b>
 </code></pre>
 
 <h4>CSS</h4>
@@ -6104,22 +5444,22 @@ class
 <pre><code>
 .aligner
 {
-**display**
+<b>display</b>
 :
 flex
 ;
-**align-items**
+<b>align-items</b>
 :
 center
 ;
-**justify-content**
+<b>justify-content</b>
 :
 center
 ;
 }
 .aligner-item
 {
-**max-width**
+<b>max-width</b>
 :
 50
 &percnt;
@@ -6131,9 +5471,9 @@ center
 Here is a
 &lbrack;&lbrack;demo&rbrack;&rbrack;(http://codepen.io/asim-coder/pen/ZOobqz).
 >
-**Reasoning**
+<b>Reasoning</b>
 
-**Property Value Description**
+<b>Property Value Description</b>
 
 This centers the elements along the axis other than the one specified
 by flex-direction,
@@ -6145,135 +5485,135 @@ This centers the elements along the axis specified by flex-direction.
 I.e., for a
 
 <pre><code>
-  **flex-direction**                                   :   row
-  **flex-direction**                            :   column
+  <b>flex-direction</b>                                   :   row
+  <b>flex-direction</b>                            :   column
 </code></pre>
 
 justify-contentcenter horizontal () flexbox, this centers
 horizontally, and for a vertical flexbox () flexbox, this centers
 vertically)
 >
-**Individual Property Examples**
+<b>Individual Property Examples</b>
 >
 All of the below styles are applied onto this simple layout:
 
 <pre><code>
-**&lt;**
-**div**
+<b>&lt;</b>
+<b>div</b>
 id
 =
 &quot;container&quot;
-**&gt;**
-**&lt;**
-**div**
-**&gt;**
-**&lt;**
-**/div**
-**&gt;**
-**&lt;**
-**div**
-**&gt;**
-**&lt;**
-**/div**
-**&gt;**
-**&lt;**
-**div**
-**&gt;**
-**&lt;**
-**/div**
-**&gt;**
-**&lt;**
-**/div**
-**&gt;**
+<b>&gt;</b>
+<b>&lt;</b>
+<b>div</b>
+<b>&gt;</b>
+<b>&lt;</b>
+<b>/div</b>
+<b>&gt;</b>
+<b>&lt;</b>
+<b>div</b>
+<b>&gt;</b>
+<b>&lt;</b>
+<b>/div</b>
+<b>&gt;</b>
+<b>&lt;</b>
+<b>div</b>
+<b>&gt;</b>
+<b>&lt;</b>
+<b>/div</b>
+<b>&gt;</b>
+<b>&lt;</b>
+<b>/div</b>
+<b>&gt;</b>
 
 where #container is the flex-box
-.  **justify-content**                            **:**   **center**
+.  <b>justify-content</b>                            <b>:</b>   <b>center</b>
 </code></pre>
 
 
-**Example: on a horizontal flexbox**
+<b>Example: on a horizontal flexbox</b>
 >
-**CSS:**
+<b>CSS:</b>
 
 <pre><code>
 div
 #container
 {
-**display**
+<b>display</b>
 :
 flex
 ;
-**flex-direction**
+<b>flex-direction</b>
 :
 row
 ;
-**justify-content**
+<b>justify-content</b>
 :
 center
 ;
 }
 </code></pre>
 
-**Outcome:**
+<b>Outcome:</b>
 
 [image040.jpg ](./images/image040.jpg)
 
 Here is the <a href="https://jsfiddle.net/d6pc5bmd/">demo jsFiddle</a>.
 
-  **justify-content**                            **:**   **center**
+  <b>justify-content</b>                            <b>:</b>   <b>center</b>
 
-**Example: on a vertical flexbox**
+<b>Example: on a vertical flexbox</b>
 
-**CSS:**
+<b>CSS:</b>
 
 <pre><code>
 div
 #container {
-**display**
+<b>display</b>
 :
 flex
 ;
-**flex-direction**
+<b>flex-direction</b>
 :
 column
 ;
-**justify-content**
+<b>justify-content</b>
 :
 center
 ;
 }
 </code></pre>
 
-**Outcome:**
+<b>Outcome:</b>
 
 [image041.jpg](./images/image041.jpg)
 
 Here is a <a href="https://jsfiddle.net/d6pc5bmd/1/">demo jsFiddle</a>.
 
-**align-content** 
-**:**
-**center**
+<b>align-content</b> 
+<b>:</b>
+<b>center</b>
 
-**Example: on a horizontal flexbox**
+<b>Example: on a horizontal flexbox</b>
 
 <h4>CSS:</h4>
 
 <pre><code>div
 #container {
-  **display**: flex;
-  **flex-direction**: row;
-  **align-items**: center;
+  <b>display</b>: flex;
+  <b>flex-direction</b>: row;
+  <b>align-items</b>: center;
 }</code></pre>
 
-**Outcome:**
+<b>Outcome:</b>
 
 [image042.jpg](./images/image042.jpg)
 
 Here is the <a href="https://jsfiddle.net/d6pc5bmd/2/">demo jsFiddle</a>.
 
-  **align-content**                           **:**   **center**
+  <b>align-content</b>                           <b>:</b>   <b>center</b>
 
-**Example: on a vertical flexbox**
+<b>Example: on a vertical flexbox</b>
 
 <h4>CSS:</h4>
 
@@ -6281,28 +5621,28 @@ Here is the <a href="https://jsfiddle.net/d6pc5bmd/2/">demo jsFiddle</a>.
 div
 #container
 {
-**display**
+<b>display</b>
 :
 flex
 ;
-**flex-direction**
+<b>flex-direction</b>
 :
 column
 ;
-**align-items**
+<b>align-items</b>
 :
 center
 ;
 }
 </code></pre>
 
-**Outcome:**
+<b>Outcome:</b>
 
 [image043.jpg 6.97 x 6.15](./images/image043.jpg)
 
 Here is a &lbrack;&lbrack;demo&rbrack;&rbrack;(https://jsfiddle.net/d6pc5bmd/3/).
 
-**Example: Combination for centering both on horizontal flexbox</b>
+<b>Example: Combination for centering both on horizontal flexbox</b>
 
 <pre><code>
 div
@@ -6684,14 +6024,14 @@ button {
   <b>border</b>: 1px solid #000;
 }
 p: last-child {
-  **text-align**: center;
+  <b>text-align</b>: center;
 }</code></pre>
 
 <p>The layout will change and become like this:</p>
 
 [image048.jpg 7.48 x 3"](./images/image048.jpg)
 
-**display**: flex
+<b>display</b>: flex
 
 <p>In order to move the buttons to the bottom of the block, we need to
 apply ; to the card itself with the direction set to column. After
@@ -6703,23 +6043,23 @@ the card and achieve the required result.</p>
 <h4>Final CSS:</h4>
 
 <pre><code>.cards {
-  **display**: flex;
+  <b>display</b>: flex;
 }
 .card {
-  **border**: 1px solid #ccc;
-  **margin**: 10px 10px;
-  **padding**: 0 20px;
-  **display**: flex;
-  **flex-direction**: column; }
+  <b>border</b>: 1px solid #ccc;
+  <b>margin</b>: 10px 10px;
+  <b>padding</b>: 0 20px;
+  <b>display</b>: flex;
+  <b>flex-direction</b>: column; }
 button {
-  **height**: 40px;
-  **background**: #fff;
-  **padding**: 0 40px;
-  **border**: 1px solid #000; 
+  <b>height</b>: 40px;
+  <b>background</b>: #fff;
+  <b>padding</b>: 0 40px;
+  <b>border</b>: 1px solid #000; 
 }
 p: last-child {
-  **text-align**: center;
-  **margin-top**: auto;
+  <b>text-align</b>: center;
+  <b>margin-top</b>: auto;
 }</code></pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch16-6">Section 16.6: Same height on nested containers</h3>
@@ -6731,30 +6071,30 @@ This effect is achieved due to the property align-items being set to stretch by 
 
 <h4>HTML:</h4>
 
-<pre><code>**&lt;****div** class=&quot;container&quot;**&gt;**
-**&lt;****div** style=&quot;background-color: red&quot;**&gt;**
+<pre><code><b>&lt;</b><b>div</b> class=&quot;container&quot;<b>&gt;</b>
+<b>&lt;</b><b>div</b> style=&quot;background-color: red&quot;<b>&gt;</b>
 Some
-**&lt;****br****/&gt;**
+<b>&lt;</b><b>br</b><b>/&gt;</b>
 data
-**&lt;****br****/&gt;**
+<b>&lt;</b><b>br</b><b>/&gt;</b>
 to make
-**&lt;****br****/&gt;**
+<b>&lt;</b><b>br</b><b>/&gt;</b>
 a height
-**&lt;****br****/&gt;**
-**&lt;****/div****&gt;**
-**&lt;****div** style=&quot;background-color: blue&quot;**&gt;**
+<b>&lt;</b><b>br</b><b>/&gt;</b>
+<b>&lt;</b><b>/div</b><b>&gt;</b>
+<b>&lt;</b><b>div</b> style=&quot;background-color: blue&quot;<b>&gt;</b>
 Fewer
-**&lt;****br****/&gt;**
+<b>&lt;</b><b>br</b><b>/&gt;</b>
 lines
-**&lt;****br****/&gt;**
-**&lt;****/div****&gt;**
-**&lt;****/div****&gt;**</code></pre>
+<b>&lt;</b><b>br</b><b>/&gt;</b>
+<b>&lt;</b><b>/div</b><b>&gt;</b>
+<b>&lt;</b><b>/div</b><b>&gt;</b></code></pre>
 
 <h4>CSS</h4>
 
 <pre><code>.container {
-  **display**: flex;
-  **align-items**: stretch;
+  <b>display</b>: flex;
+  <b>align-items</b>: stretch;
   // Default value
 }
 </code></pre>
@@ -6774,7 +6114,7 @@ Selectors fall into one of three different specificity groups: *A*,
 the browser uses the styles applied by the sequence with the highest
 overall specificity.
 
-**Group Comprised of Examples**
+<b>Group Comprised of Examples</b>
 
 A.  id selectors #foo class selectors .bar
 
@@ -6798,7 +6138,7 @@ Group *c*.
 The universal selector (&ast;) and combinators (like &gt; and &#126;) have no
 specificity.
 
-**Example 1: Specificity of various selector sequences**
+<b>Example 1: Specificity of various selector sequences</b>
 
 ```
 #foo
@@ -6874,25 +6214,25 @@ div
 
 /* a=0, b=0, c=0 */
 
-**Example 2: How specificity is used by the browser**
+<b>Example 2: How specificity is used by the browser</b>
 
 Imagine the following CSS implementation:
 
 ```
 #foo
 {
-**color**
+<b>color</b>
 :
 blue
 ;
 }
 .bar
 {
-**color**
+<b>color</b>
 :
 red
 ;
-**background**
+<b>background</b>
 :
 black
 ;
@@ -6908,7 +6248,7 @@ both declarations. ID selectors have a Group *A* specificity and class
 selectors have a Group *B* specificity. An ID selector outweighs any
 number of class selectors.
 
-**color</b>   :   blue   ; from the #foo selector and the      **background</b>   :   black
+<b>color</b>   :   blue   ; from the #foo selector and the      <b>background</b>   :   black
 
 Because of this, ; from the .bar selector will be
 
@@ -6920,18 +6260,18 @@ Now imagine a different CSS implementation:
 ```
 .bar
 {
-**color</b>
+<b>color</b>
 :
 red
 ;
-**background</b>
+<b>background</b>
 :
 black
 ;
 }
 .baz
 {
-**background</b>
+<b>background</b>
 :
 white
 ;
@@ -6949,7 +6289,7 @@ cascading nature of CSS resolves this for us: as .baz is defined
 *after* .bar, our element ends up with the *red* color from .bar but
 the *white* background from .baz.
 
-**Example 3: How to manipulate specificity</b>
+<b>Example 3: How to manipulate specificity</b>
 
 The last snippet from Example 2 above can be manipulated to ensure our
 .bar class selector&apos;s color declaration is used instead of that of
@@ -7009,7 +6349,7 @@ double the Group *B* specificity:
 /* a=0, b=1, c=0 */
 ```
 
-**!important and inline style declarations</b>
+<b>!important and inline style declarations</b>
 >
 The !important flag on a style declaration and styles declared by the
 HTML style attribute are considered to have a greater specificity than
@@ -7033,14 +6373,14 @@ more properties wherever they are encountered. And even then, you need
 > to know what you&apos;re doing. The last thing you want, when writing
 maintainable CSS, is to have !important flags throughout your CSS.
 >
-**A final note</b>
+<b>A final note</b>
 
   b                    =5,                            c
 
 
 A common misconception about CSS specificity is that the Group *A*,
 *B* and *c* values should be combined with each other (a=1,=1 =&gt;
-151). This is **not</b> the case. If this were the case, having 20 of a
+151). This is <b>not</b> the case. If this were the case, having 20 of a
 Group *B* or *c* selector would be enough to override a single Group
 *A* or *B* selector respectively. The three groups should be regarded
 as individual levels of specificity. Specificity cannot be represented
@@ -7080,7 +6420,7 @@ rule. Its usage is: ;
 ```
 #mydiv
 {
-**font-weight</b>
+<b>font-weight</b>
 :
 bold
 !important
@@ -7091,7 +6431,7 @@ bold
 #outerdiv
 #mydiv
 {
-**font-weight</b>
+<b>font-weight</b>
 :
 normal
 ;
@@ -7133,7 +6473,7 @@ Cascading and specificity are used together to determine the final
 value of a CSS styling property. They also define the mechanisms for
 resolving conflicts in CSS rule sets.
 
-**CSS Loading order</b>
+<b>CSS Loading order</b>
 
 Styles are read from the following sources, in this order:
 
@@ -7145,19 +6485,19 @@ Styles are read from the following sources, in this order:
 3.  Author stylesheet (Author here means the creator of the
     webpage/website)
 
-**&lt;style</b>
+<b>&lt;style</b>
  
  
 Maybe one or more .css files
 
-In the **&gt;</b> element of the HTML document
+In the <b>&gt;</b> element of the HTML document
 
 4.  Inline styles (In the style attribute on an HTML element)
 
 The browser will lookup the corresponding style(s) when rendering an
 element.
 
-**How are conflicts resolved?</b>
+<b>How are conflicts resolved?</b>
 
 When only one CSS rule set is trying to set a style for an element,
 then there is no conflict, and that rule set is used.
@@ -7166,12 +6506,12 @@ When multiple rule sets are found with conflicting settings, first the
 Specificty rules, and then the Cascading rules are used to determine
 what style to use.
 
-**Example 1 - Specificity rules</b>
+<b>Example 1 - Specificity rules</b>
 
 ```
 .mystyle
 {
-**color</b>
+<b>color</b>
 :
 blue
 ;
@@ -7179,14 +6519,14 @@ blue
 /* specificity: 0, 0, 1, 0 */
 div
 {
-**color</b>
+<b>color</b>
 :
 red
 ;
 }
 /* specificity: 0, 0, 0, 1 */
-**&lt;</b>
-**div</b>
+<b>&lt;</b>
+<b>div</b>
 class
 =
 &quot;mystyle&quot;
@@ -8734,13 +8074,13 @@ value
 
 > <b>Relevant CSS:</b>
 html {
-  **font-size</b>: 16px;
+  <b>font-size</b>: 16px;
 }
 input
 &lbrack;type=&quot;button&quot;&rbrack;
 {
-  **font-size</b>: 1rem;
-  **padding</b>: 0.5em 2em;
+  <b>font-size</b>: 1rem;
+  <b>padding</b>: 0.5em 2em;
 }
 
 input
@@ -9067,7 +8407,7 @@ width: 50%;
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ch21">Chapter 21: Pseudo-Elements</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-  **pseudo-element**   **Description**
+  **pseudo-element</b>   **Description</b>
 
 ::after Insert content after the content of an element
 
@@ -9123,11 +8463,8 @@ width: 50%;
 > The content attribute is required for pseudo-elements to render;
 > however, the attribute can have an empty value
 
-  ------------------------------------------------------------------------
   **content**                                   :      &quot;&quot;
-  --------------------------------------------- ------ -------------------
 
-  ------------------------------------------------------------------------
 
 > (e.g. ).
 
@@ -9142,256 +8479,141 @@ after
 **content**
 
 :
-
 &apos;after&apos;
-
 ;
-
 **color**
-
 :
-
 red
-
 ;
-
 **border**
-
 :
-
 1
-
 px
-
 solid
-
 red
-
 ;
-
 }
-
 div
-
 {
-
 **color**
-
 :
-
 black
-
 ;
-
 **border**
-
 :
-
 px
-
 1
-
 solid
-
 black
-
 ;
-
 **padding**
-
 :
-
 1
-
 px
-
 ;
-
 }
-
 div
-
 ::
-
 before
-
 {
-
 **content**
-
 :
-
 &apos;before&apos;
-
 ;
-
 **color**
-
 :
-
 green
-
 ;
-
 **border**
-
 :
-
 1
-
 px
-
 solid
-
 green
-
 ;
-
 }
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch21-2">Section 21.2: Pseudo-Elements in Lists</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+Pseudo-elements are often used to change the look of lists (mostly for
+unordered lists, ul).
 
-> Pseudo-elements are often used to change the look of lists (mostly for
-> unordered lists, ul).
->
-> The first step is to remove the default list bullets:
+The first step is to remove the default list bullets:
 
 ul
-
 {
-
 **list-style-type**
-
 :
-
 none
-
 ;
-
 }
 
-> Then you add the custom styling. In this example, we will create
-> gradient boxes for bullets.
+Then you add the custom styling. In this example, we will create
+gradient boxes for bullets.
 
 li
-
 :
-
 before
-
 {
-
 **content**
-
 :
-
 &quot;&quot;
-
 ;
-
 **display**
-
 :
-
 inline-block
-
 ;
-
 **margin-right**
-
 :
-
 10
-
 px
-
 ;
-
 **height**
-
 :
-
 10
-
 px
-
 ;
-
 **width**
-
 :
-
 10
-
 px
-
 ;
-
 **background**
-
 :
-
 linear-gradient
-
 (
-
 red
-
 ,
-
 blue
-
 )
-
 ;
-
 }
 
 <h4>HTML:</h4>
 
 **&lt;**
-
 **ul**
-
 **&gt;**
-
 **&lt;**
-
 **li**
-
 **&gt;**
-
 Test I
-
 **&lt;**
-
 **/li**
-
 **&gt;**
-
 **&lt;**
-
 **li**
-
 **&gt;**
-
 Test II
-
 **&lt;**
-
 **/li**
-
 **&gt;**
-
 **&lt;**
-
 **/ul**
-
 **&gt;**
 
-> **Result**
+<h4>Result</h4>
 
 !&lbrack;&rbrack;(./images/image193.jpg){width="2.4479166666666665in"
 height="1.3125in"}
@@ -9455,283 +8677,169 @@ under that.
 <h4>HTML:</h4>
 
 **&lt;**
-
 **div**
-
 id
-
 =
-
 &quot;div1&quot;
-
 **&gt;**
-
 **&lt;**
-
 **/div**
-
 **&gt;**
-
 **&lt;**
-
 **div**
-
 id
-
 =
-
 &quot;div2&quot;
-
 **&gt;**
-
 **&lt;**
-
 **/div**
-
 **&gt;**
-
 **&lt;**
-
 **div**
-
 id
-
 =
-
 &quot;div3&quot;
-
 **&gt;**
-
 **&lt;**
-
 **/div**
-
 **&gt;**
 
 > <h4>CSS</h4>
 
 div
-
 {
-
 **position**
-
 :
-
 absolute
-
 ;
-
 **height**
-
 :
-
 200
-
 px
-
 ;
-
 **width**
-
 :
-
 200
-
 px
-
 ;
-
 }
-
 div
-
 #div1
-
 {
-
 **z-index**
-
 :
-
 1
-
 ;
-
 **left**
-
 :
-
 0
-
 px
-
 ;
-
 **top**
-
 :
-
 0
-
 px
-
 ;
-
 **background-color**
-
 :
-
 blue
-
 ;
-
 }
-
 div
-
 #div2
-
 {
-
 **z-index**
-
 :
-
 3
-
 ;
-
 **left**
-
 :
-
 100
-
 px
-
 ;
-
 **top**
-
 :
-
 100
-
 px
-
 ;
-
 **background-color**
-
 :
-
 green
-
 ;
-
 }
-
 div
-
 #div3
-
 {
-
 **z-index**
-
 :
-
 2
-
 ;
-
 **left**
-
 :
-
 50
-
 px
-
 ;
-
 **top**
-
 :
-
 150
-
 px
-
 ;
-
 **background-color**
-
 :
-
 red
-
 ;
-
 }
 
-> This creates the following effect:
+
+This creates the following effect:
 
 !&lbrack;&rbrack;(./images/image194.jpg){width="3.6458333333333335in"
 height="3.8645833333333335in"}
 
-> See a working example at
-> &lbrack;&lbrack;JSFiddle&rbrack;&rbrack;(https://jsfiddle.net/esnc10tq/).
->
-> **Syntax**
+See a working example at
+&lbrack;&lbrack;JSFiddle&rbrack;&rbrack;(https://jsfiddle.net/esnc10tq/).
+
+**Syntax**
 
 **z-index**
-
 :
-
 &lbrack;
-
 number
-
 &rbrack;
-
 &vert;
-
 auto
-
 ;
 
 **Parameter Details**
 
-> An integer value. A higher number is higher on the z-index stack. 0 is
-> the default value. Negative
->
-> number values are allowed.
+An integer value. A higher number is higher on the z-index stack. 0 is
+the default value. Negative
+
+number values are allowed.
 
 auto Gives the element the same stacking context as its parent.
 (**Default**)
 
-> **Remarks**
->
-> All elements are laid out in a 3D axis in CSS, including a depth axis,
-> measured by the z-index property. z-index only works on positioned
-> elements: (see: &lbrack;&lbrack;Why does z-index need a defined position to
-> work?&rbrack;&rbrack;(https://www.sitepoint.com/community/t/why-does-z-index-need-a-defined-position-to-work/46115)).
-> The only value where it is ignored is the default value, static.
->
-> Read about the z-index property and Stacking Contexts in the &lbrack;&lbrack;CSS
-> Specification&rbrack;&rbrack;(https://drafts.csswg.org/css-position/#layered-presentation)
-> on layered presentation and at the &lbrack;&lbrack;Mozilla Developer
-> Network&rbrack;&rbrack;(https://developer.mozilla.org/en-US/docs/Web/CSS/z-index).
+**Remarks**
+
+All elements are laid out in a 3D axis in CSS, including a depth axis,
+measured by the z-index property. z-index only works on positioned
+elements: (see: &lbrack;&lbrack;Why does z-index need a defined position to
+work?&rbrack;&rbrack;(https://www.sitepoint.com/community/t/why-does-z-index-need-a-defined-position-to-work/46115)).
+The only value where it is ignored is the default value, static.
+
+Read about the z-index property and Stacking Contexts in the &lbrack;&lbrack;CSS
+Specification&rbrack;&rbrack;(https://drafts.csswg.org/css-position/#layered-presentation)
+on layered presentation and at the &lbrack;&lbrack;Mozilla Developer
+Network&rbrack;&rbrack;(https://developer.mozilla.org/en-US/docs/Web/CSS/z-index).
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch22-2">Section 22.2: Absolute Position</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
-> When absolute positioning is used the box of the desired element is
-> taken out of the *Normal Flow* and it no longer affects the position
-> of the other elements on the page. Offset properties:
+When absolute positioning is used the box of the desired element is
+taken out of the *Normal Flow* and it no longer affects the position
+of the other elements on the page. Offset properties:
 
 1.  top
 
@@ -9741,48 +8849,29 @@ auto Gives the element the same stacking context as its parent.
 
 4.  bottom
 
-> specify the element should appear in relation to its next non-static
-> containing element.
+specify the element should appear in relation to its next non-static
+containing element.
 
 .abspos
-
 {
-
 **position**
-
 :
-
 absolute
-
 ;
-
 **top**
-
 :
-
 0
-
 px
-
 ;
-
 **left**
-
 :
-
 500
-
 px
-
 ;
-
 }
 
-  ------------------------------------------------------------------------
   class                     =     &quot;abspos&quot;
-  ------------------------- ----- ----------------------------------------
 
-  ------------------------------------------------------------------------
 
 > This code will move the box containing element with attribute down 0px
 > and right 500px relative to its containing element.
@@ -9797,37 +8886,21 @@ px
 > the bottom of a long page.
 
 #stickyDiv
-
 {
-
 **position**
-
 :
-
 fixed
-
 ;
-
 **top**
-
 :
-
 10
-
 px
-
 ;
-
 **left**
-
 :
-
 10
-
 px
-
 ;
-
 }
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -9855,43 +8928,30 @@ px
 **position**
 
 :
-
 relative
-
 ;
-
 **top**
-
 :
-
 20
-
 px
-
 ;
-
 **left**
-
 :
-
 30
-
 px
-
 ;
-
 }
 
-> This code will move the box containing element with attribute
-> class=&quot;relpos&quot; 20px down and 30px to the right from where it would
-> have been in normal flow.
+This code will move the box containing element with attribute
+class=&quot;relpos&quot; 20px down and 30px to the right from where it would
+have been in normal flow.
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch22-5">Section 22.5: Static positioning</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
-> The default position of an element is static. To quote
-> &lbrack;&lbrack;MDN&rbrack;&rbrack;(https://developer.mozilla.org/en-US/docs/Web/CSS/position#values):
+The default position of an element is static. To quote
+&lbrack;&lbrack;MDN&rbrack;&rbrack;(https://developer.mozilla.org/en-US/docs/Web/CSS/position#values):
 
 This keyword lets the element use the normal behavior, that is it is
 laid out in its current position in the
@@ -9899,54 +8959,47 @@ laid out in its current position in the
 flow. The top, right, bottom, left and z-index properties do not apply.
 
 .element
-
 {
-
 **position**
-
 :
-
 static
-
 ;
-
 }
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ch23">Chapter 23: Layout Control</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-
 **Value Effect**
 
-> none Hide the element and prevent it from occupying space.
->
-> block Block element, occupy 100% of the available width, break after
-> element.
->
-> inline Inline element, occupy no width, no break after element.
->
-> inline-block Taking special properties from both inline and block
-> elements, no break, but can have width. inline-flex Displays an
-> element as an inline-level flex container.
->
-> inline-table The element is displayed as an inline-level table. grid
-> Behaves like a block element and lays out its content according to the
-> grid model.
->
-> flex Behaves like a block element and lays out its content according
-> to the flexbox model.
->
-> inherit Inherit the value from the parent element.
->
-> Reset the value to the default value taken from behaviors described in
-> the HTML specifications or initial from the browser/user default
-> stylesheet.
->
-> table Behaves like the HTML table element.
+none Hide the element and prevent it from occupying space.
+
+block Block element, occupy 100% of the available width, break after
+element.
+
+inline Inline element, occupy no width, no break after element.
+
+inline-block Taking special properties from both inline and block
+elements, no break, but can have width. inline-flex Displays an
+element as an inline-level flex container.
+
+inline-table The element is displayed as an inline-level table. grid
+Behaves like a block element and lays out its content according to the
+grid model.
+
+flex Behaves like a block element and lays out its content according
+to the flexbox model.
+
+inherit Inherit the value from the parent element.
+
+Reset the value to the default value taken from behaviors described in
+the HTML specifications or initial from the browser/user default
+stylesheet.
+
+table Behaves like the HTML table element.
 
   **&lt;td**
 
-> table-cell Let the element behave like a **&gt;** element
+table-cell Let the element behave like a **&gt;** element
 
   **&lt;col**
 
@@ -9955,432 +9008,262 @@ static
   **&lt;li**
 
 
-> table-column Let the element behave like a **&gt;** element table-row
-> Let the element behave like a **&gt;** element list-item Let the element
-> behave like a **&gt;** element.
-
+table-column Let the element behave like a **&gt;** element table-row
+Let the element behave like a **&gt;** element list-item Let the element
+behave like a **&gt;** element.
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 ## Section 23.1: The display property
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+The display CSS property is fundamental for controlling the layout and
+flow of an HTML document. Most elements have a default display value
+of either block or inline (though some elements have other default
+values).
 
-> The display CSS property is fundamental for controlling the layout and
-> flow of an HTML document. Most elements have a default display value
-> of either block or inline (though some elements have other default
-> values).
->
-> **Inline**
->
-> An inline element occupies only as much width as necessary. It stacks
-> horizontally with other elements of the same type and may not contain
-> other non-inline elements.
+**Inline**
+
+An inline element occupies only as much width as necessary. It stacks
+horizontally with other elements of the same type and may not contain
+other non-inline elements.
 
 **&lt;**
-
 **span**
-
 **&gt;**
-
 This is some
-
 **&lt;**
-
 **b**
-
 **&gt;**
-
 bolded
-
 **&lt;**
-
 **/b**
-
 **&gt;**
-
 text!
-
 **&lt;**
-
 **/span**
-
 **&gt;**
 
   **&lt;span**                   **&gt;** and                     **&lt;b**
 
 
-> As demonstrated above, two inline elements, **&gt;**, are in-line (hence
-> the name) and do not break the flow of the text.
->
-> **Block**
->
-> A block element occupies the maximum available width of its&apos; parent
-> element. It starts with a new line and, in contrast to inline
-> elements, it does not restrict the type of elements it may contain.
+As demonstrated above, two inline elements, **&gt;**, are in-line (hence
+the name) and do not break the flow of the text.
+
+**Block**
+
+A block element occupies the maximum available width of its&apos; parent
+element. It starts with a new line and, in contrast to inline
+elements, it does not restrict the type of elements it may contain.
 
 **&lt;**
-
 **div**
-
 **&gt;**
-
 Hello world!
-
 **&lt;**
-
 **/div**
-
 **&gt;**
-
 **&lt;**
-
 **div**
-
 **&gt;**
-
 This is an example!
-
 **&lt;**
-
 **/div**
-
 **&gt;**
 
-> The div element is block-level by default, and as shown above, the two
-> block elements are vertically stacked and, unlike the inline elements,
-> the flow of the text breaks.
->
-> **Inline Block**
->
-> The inline-block value gives us the best of both worlds: it blends the
-> element in with the flow of the text while allowing us to use padding,
-> margin, height and similar properties which have no visible effect on
-> inline elements.
->
-> Elements with this display value act as if they were regular text and
-> as a result are affected by rules controlling the flow of text such as
-> text-align. By default they are also shrunk to the the smallest size
-> possible to accommodate their content.
+The div element is block-level by default, and as shown above, the two
+block elements are vertically stacked and, unlike the inline elements,
+the flow of the text breaks.
+
+**Inline Block**
+
+The inline-block value gives us the best of both worlds: it blends the
+element in with the flow of the text while allowing us to use padding,
+margin, height and similar properties which have no visible effect on
+inline elements.
+
+Elements with this display value act as if they were regular text and
+as a result are affected by rules controlling the flow of text such as
+text-align. By default they are also shrunk to the the smallest size
+possible to accommodate their content.
 
 *&lt;!&minus;-*
-
 *Inline: unordered list*
-
 *&minus;-&gt;*
-
 **&lt;**
-
 **style**
-
 **&gt;**
-
 li {
-
 display : inline;
-
 background : lightblue;
-
 padding:10px;
-
 border-width:2px;
-
 border-color:black;
-
 border-style:solid;
-
 }
-
 **&lt;**
-
 **/style**
-
 **&gt;**
-
 **&lt;**
-
 **ul**
-
 **&gt;**
-
 **&lt;**
-
 **li**
-
 **&gt;**
 
 First Element
 
 **&lt;**
-
 **/li**
-
 **&gt;**
-
 **&lt;**
-
 **li**
-
 **&gt;**
 
 Second Element
 
 **&lt;**
-
 **/li**
-
 **&gt;**
-
 **&lt;**
-
 **li**
-
 **&gt;**
 
 Third Element
 
 **&lt;**
-
 **/li**
-
 **&gt;**
-
 **&lt;**
-
 **/ul**
-
 **&gt;**
 
 &lt;!&minus;-
-
 block: unordered list
-
 &minus;-
-
 **&gt;**
-
 **&lt;**
-
 **style**
-
 **&gt;**
-
 li
-
 {
-
 display : block;
-
 background : lightblue;
-
 padding:10px;
-
 border-width:2px;
-
 border-color:black;
-
 border-style:solid;
-
 }
-
 **&lt;**
-
 **/style**
-
 **&gt;**
-
 **ul**
-
 **&lt;**
-
 **&gt;**
-
 **&lt;**
-
 **li**
-
 **&gt;**
-
 First Element
-
 **&lt;**
-
 **/li**
-
 **&gt;**
-
 **&lt;**
-
 **li**
-
 **&gt;**
-
 Second Element
-
 **&lt;**
-
 **/li**
-
 **&gt;**
-
 **&lt;**
-
 **li**
-
 **&gt;**
-
 Third Element
-
 **&lt;**
-
 **/li**
-
 **&gt;**
-
 **&lt;**
-
 **/ul**
-
 **&gt;**
-
 &lt;!&minus;-
-
 Inline-block: unordered list
-
 &minus;-
-
 **&gt;**
-
 **&lt;**
-
 **style**
-
 **&gt;**
-
 li
-
 {
-
 display : inline-block;
-
 background : lightblue;
-
 padding:10px;
-
 border-width:2px;
-
 border-color:black;
-
 border-style:solid;
-
 }
-
 **&lt;**
-
 **/style**
-
 **&gt;**
-
 **ul**
-
 **&lt;**
-
 **&gt;**
-
 **&lt;**
-
 **li**
-
 **&gt;**
-
 First Element
-
 **&lt;**
-
 **/li**
-
 **&gt;**
-
 **&lt;**
-
 **li**
-
 **&gt;**
-
 Second Element
-
 **&lt;**
-
 **/li**
-
 **&gt;**
-
 **&lt;**
-
 **li**
-
 **&gt;**
-
 Third Element
-
 **&lt;**
-
 **/li**
-
 **&gt;**
-
 **&lt;**
-
 **/ul**
-
 **&gt;**
 
-> **none**
->
-> An element that is given the none value to its display property will
-> not be displayed at all.
->
-> For example let&apos;s create a div-element that has an id of myDiv:
+**none**
+
+An element that is given the none value to its display property will
+not be displayed at all.
+
+For example let&apos;s create a div-element that has an id of myDiv:
 
 **&lt;**
-
 **div**
-
 id
-
 =
-
 &quot;myDiv&quot;
-
 **&gt;**
-
 **&lt;**
-
 **/div**
-
 **&gt;**
 
-> This can now be marked as not being displayed by the following CSS
-> rule:
+This can now be marked as not being displayed by the following CSS
+rule:
 
 #myDiv
 
 {
-
 **display**
-
 :
-
 none
-
 ;
-
 }
 
   **display**                               :     none
 
 
-> When an element has been set to be ; the browser ignores every other
-> layout property for that specific element (both position and float).
-> No box will be rendered for that element and its existence in html
-> does not affect the position of following elements.
+When an element has been set to be ; the browser ignores every other
+layout property for that specific element (both position and float).
+No box will be rendered for that element and its existence in html
+does not affect the position of following elements.
 
   **visibility**                          :   hidden
 
@@ -10402,499 +9285,300 @@ none
 > This is the normal HTML table structure
 
 **&lt;**
-
 **style**
-
 **&gt;**
-
 table {
-
 width: 100%;
-
 }
-
 **&lt;**
-
 **/style**
-
 **&gt;**
-
 **&lt;**
-
 **table**
-
 **&gt;**
-
 **&lt;**
-
 **tr**
-
 **&gt;**
-
 **&lt;**
-
 **td**
-
 **&gt;**
-
 I&apos;m a table
-
 **&lt;**
-
 **/td**
-
 **&gt;**
-
 **&lt;**
-
 **/tr**
-
 **&gt;**
-
 **&lt;**
-
 **/table**
-
 **&gt;**
 
-> You can do same implementation like this
+You can do same implementation like this
 
 **&lt;**
-
 **style**
-
 **&gt;**
-
 .table-div
-
 {
-
 display: table;
-
 }
-
 .table-row-div
-
 {
-
 display: table-row;
-
 }
-
 .table-cell-div
-
 {
-
 display: table-cell;
-
 }
-
 **&lt;**
-
 **/style**
-
 **&gt;**
-
 **&lt;**
-
 **div**
-
 class
-
 =
-
 &quot;table-div&quot;
-
 **&gt;**
-
 **&lt;**
-
 **div**
-
 class
-
 =
-
 &quot;table-row-div&quot;
-
 **&gt;**
-
 **&lt;**
-
 **div**
-
 class
-
 =
-
 &quot;table-cell-div&quot;
-
 **&gt;**
-
 I behave like a table now
-
 **&lt;**
-
 **/div**
-
 **&gt;**
-
 **&lt;**
-
 **/div**
-
 **&gt;**
-
 **&lt;**
-
 **/div**
-
 **&gt;**
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ch24">Chapter 24: Grid</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
-> Grid layout is a new and powerful CSS layout system that allows to
-> divide a web page content into rows and columns in an easy way.
+Grid layout is a new and powerful CSS layout system that allows to
+divide a web page content into rows and columns in an easy way.
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 ## Section 24.1: Basic Example
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+**Property Possible Values** display grid / inline-grid
 
-> **Property Possible Values** display grid / inline-grid
->
-> The CSS Grid is defined as a display property. It applies to a parent
-> element and its immediate children only.
->
-> Consider the following markup:
+The CSS Grid is defined as a display property. It applies to a parent
+element and its immediate children only.
+
+Consider the following markup:
 
 **&lt;**
-
 **section**
-
 class
-
 =
-
 &quot;container&quot;
-
 **&gt;**
-
 **&lt;**
-
 **div**
-
 class
-
 =
-
 &quot;item1&quot;
-
 **&gt;**
-
 item1
-
 **&lt;**
-
 **/div**
 
 **&gt;**
-
 **&lt;**
-
 **div**
-
 class
-
 =
-
 &quot;item2&quot;
-
 **&gt;**
-
 item2
-
 **&lt;**
-
 **/div**
-
 **&gt;**
-
 **&lt;**
-
 **div**
-
 class
-
 =
-
 &quot;item3&quot;
-
 **&gt;**
-
 item3
-
 **&lt;**
-
 **/div**
-
 **&gt;**
-
 **&lt;**
-
 **div**
-
 class
-
 =
-
 &quot;item4&quot;
-
 **&gt;**
-
 item4
-
 **&lt;**
-
 **/div**
-
 **&gt;**
-
 **&lt;**
-
 **/section**
-
 **&gt;**
 
-> The easiest way to define the markup structure above as a grid is to
-> simply set its display property to grid:
+The easiest way to define the markup structure above as a grid is to
+simply set its display property to grid:
 
 .container
-
 {
-
 **display**
-
 :
-
 grid
-
 ;
-
 }
 
-> However, doing this will invariably cause all the child elements to
-> collapse on top of one another. This is because the children do not
-> currently know how to position themselves within the grid. But we can
-> explicitly tell them.
->
-> First we need to tell the grid element .container how many rows and
-> columns will make up its structure and we can do this using the
-> grid-columns and grid-rows properties (note the pluralisation):
+However, doing this will invariably cause all the child elements to
+collapse on top of one another. This is because the children do not
+currently know how to position themselves within the grid. But we can
+explicitly tell them.
 
+First we need to tell the grid element .container how many rows and
+columns will make up its structure and we can do this using the
+grid-columns and grid-rows properties (note the pluralisation):
 .container
-
 {
-
 **display**
-
 :
-
 grid
-
 ;
-
 **grid-columns**
-
 :
-
 50
-
 px
-
 50
-
 px
-
 50
-
 px
-
 ;
-
 **grid-rows**
-
 :
-
 50
-
 px
-
 50
-
 px
-
 ;
-
 }
 
-> However, that still doesn&apos;t help us much because we need to give an
-> order to each child element. We can do this by specifying the grid-row
-> and grid-column values which will tell it where it sits in the grid:
-
+However, that still doesn&apos;t help us much because we need to give an
+order to each child element. We can do this by specifying the grid-row
+and grid-column values which will tell it where it sits in the grid:
 .container
-
 .item1
-
 {
-
 **grid-column**
-
 :
-
 1
-
 ;
-
 **grid-row**
-
 :
-
 1
-
 ;
-
 }
-
 .container
-
 .item2
-
 {
-
 **grid-column**
-
 :
-
 2
-
 ;
-
 **grid-row**
-
 :
-
 1
-
 ;
-
 }
-
 .container
-
 .item3
-
 {
-
 **grid-column**
-
 :
-
 1
-
 ;
-
 **grid-row**
-
 :
-
 2
-
 ;
-
 }
-
 .container
-
 .item4
-
 {
-
 **grid-column**
-
 :
-
 2
-
 ;
-
 **grid-row**
-
 :
-
 2
-
 ;
-
 }
 
-> By giving each item a column and row value it identifies the items
-> order within the container.
->
-> View a working example on
-> &lbrack;&lbrack;JSFiddle&rbrack;&rbrack;(https://jsfiddle.net/fexfwkkv/3/). You&apos;ll
-> need to view this in IE10, IE11 or Edge for it to work as these are
-> currently the only browsers supporting Grid Layout (with vendor prefix
-> -ms-) or enable a flag in Chrome, Opera and Firefox according to
-> &lbrack;&lbrack;caniuse&rbrack;&rbrack;(http://caniuse.com/#feat=css-grid) in order to
-> test with them.
+By giving each item a column and row value it identifies the items
+order within the container.
+
+View a working example on
+&lbrack;&lbrack;JSFiddle&rbrack;&rbrack;(https://jsfiddle.net/fexfwkkv/3/). You&apos;ll
+need to view this in IE10, IE11 or Edge for it to work as these are
+currently the only browsers supporting Grid Layout (with vendor prefix
+-ms-) or enable a flag in Chrome, Opera and Firefox according to
+&lbrack;&lbrack;caniuse&rbrack;&rbrack;(http://caniuse.com/#feat=css-grid) in order to
+test with them.
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ch25">Chapter 25: Tables</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch25-1">Section 25.1: table-layout</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-
-> The table-layout property changes the algorithm that is used for the
-> layout of a table.
+The table-layout property changes the algorithm that is used for the
+layout of a table.
 
   **width**                     :     150px
 
-> Below an example of two tables both set to :
+Below an example of two tables both set to :
 
 !&lbrack;&rbrack;(./images/image200.jpg){width="4.625in" height="1.125in"}
 
   **table-layout**   :   auto   while the one on the right    **table-layout**   :   fixed
                                 has                                                  
 
-> The table on the left has . The former is
->
-> wider than the specified width (210px instead of 150px) but the
-> contents fit. The latter takes the defined width of 150px, regardless
-> if the contents overflow or not.
+The table on the left has . The former is
+
+wider than the specified width (210px instead of 150px) but the
+contents fit. The latter takes the defined width of 150px, regardless
+if the contents overflow or not.
 
 **Value Description**
 
 *auto* This is the default value. It defines the layout of the table to
 be determined by the contents of its&apos; cells.
 
-> This value sets the table layout to be determined by the width
-> property provided to the table. If the content
->
-> fixed of a cell exceeds this width, the cell will not resize but
-> instead, let the content overflow.
+This value sets the table layout to be determined by the width
+property provided to the table. If the content
+
+fixed of a cell exceeds this width, the cell will not resize but
+instead, let the content overflow.
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch25-2">Section 25.2: empty-cells</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+The empty-cells property determines if cells with no content should be
+displayed or not. This has no effect unless border-collapse is set to
+separate.
 
-> The empty-cells property determines if cells with no content should be
-> displayed or not. This has no effect unless border-collapse is set to
-> separate.
->
-> Below an example with two tables with different values set to the
-> empty-cells property:
+Below an example with two tables with different values set to the
+empty-cells property:
 
 [imag201.jpg](./images/image201.jpg){width="5.708333333333333in"
 height="0.8854166666666666in"}
@@ -10902,20 +9586,20 @@ height="0.8854166666666666in"}
   **empty-cells**   :   show   while the one on the right has  **empty-cells**   :   hide
 
 
-> The table on the left has . The former does display the empty cells
-> whereas the latter does not.
+The table on the left has . The former does display the empty cells
+whereas the latter does not.
 
 **Value Description**
 
-> *show* This is the default value. It shows cells even if they are
-> empty. hide This value hides a cell altogether if there are no
-> contents in the cell.
->
-> More Information:
->
-> &lbrack;&lbrack;https://www.w3.org/TR/CSS21/tables.html#empty-cells&rbrack;&rbrack;(https://www.w3.org/TR/CSS21/tables.html#empty-cells)
-> &lbrack;&lbrack;https://developer.mozilla.org/en-US/docs/Web/CSS/empty-cells&rbrack;&rbrack;(https://developer.mozilla.org/en-US/docs/Web/CSS/empty-cells)
-> &lbrack;&lbrack;http://codepen.io/SitePoint/pen/yfhtq&rbrack;&rbrack;(http://codepen.io/SitePoint/pen/yfhtq)
+*show* This is the default value. It shows cells even if they are
+empty. hide This value hides a cell altogether if there are no
+contents in the cell.
+
+More Information:
+
+&lbrack;&lbrack;https://www.w3.org/TR/CSS21/tables.html#empty-cells&rbrack;&rbrack;(https://www.w3.org/TR/CSS21/tables.html#empty-cells)
+&lbrack;&lbrack;https://developer.mozilla.org/en-US/docs/Web/CSS/empty-cells&rbrack;&rbrack;(https://developer.mozilla.org/en-US/docs/Web/CSS/empty-cells)
+&lbrack;&lbrack;http://codepen.io/SitePoint/pen/yfhtq&rbrack;&rbrack;(http://codepen.io/SitePoint/pen/yfhtq)
 
 &lbrack;&lbrack;https://css-tricks.com/almanac/properties/e/empty-cells/&rbrack;&rbrack;(https://css-tricks.com/almanac/properties/e/empty-cells/)
 
@@ -10923,11 +9607,11 @@ height="0.8854166666666666in"}
 ## Section 25.3: border-collapse
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
-> The border-collapse property determines if a tables&apos; borders should
-> be separated or merged.
->
-> Below an example of two tables with different values to the
-> border-collapse property:
+The border-collapse property determines if a tables&apos; borders should
+be separated or merged.
+
+Below an example of two tables with different values to the
+border-collapse property:
 
 !&lbrack;&rbrack;(./images/image202.jpg){width="5.666666666666667in"
 height="0.9270833333333334in"}
@@ -10936,23 +9620,23 @@ height="0.9270833333333334in"}
                                        right has                                          
 
 
-> The table on the left has .
+The table on the left has .
 
 **Value Description**
 
-> separate This is the default value. It makes the borders of the table
-> separate from each other. collapse This value sets the borders of the
-> table to merge together, rather than being distinct.
+separate This is the default value. It makes the borders of the table
+separate from each other. collapse This value sets the borders of the
+table to merge together, rather than being distinct.
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 ## Section 25.4: border-spacing
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
-> The border-spacing property determines the spacing between cells. This
-> has no effect unless border-collapse is set to separate.
->
-> Below an example of two tables with different values to the
-> border-spacing property:
+The border-spacing property determines the spacing between cells. This
+has no effect unless border-collapse is set to separate.
+
+Below an example of two tables with different values to the
+border-spacing property:
 
 !&lbrack;&rbrack;(./images/image203.jpg){width="6.03125in" height="1.15625in"}
 
@@ -10960,15 +9644,15 @@ height="0.9270833333333334in"}
                                  right has                                                  
 
 
-> The table on the left has .
+The table on the left has .
 
 **Value Description**
 
 *&lt;length&gt;* This is the default behavior, though the exact value can
 vary between browsers.
 
-> &lt;length&gt; &lt;length&gt; This syntax allows specifying separate
-> horizontal and vertical values respectively.
+&lt;length&gt; &lt;length&gt; This syntax allows specifying separate
+horizontal and vertical values respectively.
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 ## Section 25.5: caption-side
@@ -22135,35 +20819,35 @@ class
 
 &quot;inner&quot;
 
-**&gt;**
+<b>&gt;</b>
 
 centered
 
-**&lt;**
+<b>&lt;</b>
 
-**/div**
+<b>/div</b>
 
-**&gt;**
+<b>&gt;</b>
 
-**&lt;**
+<b>&lt;</b>
 
-**/div**
+<b>/div</b>
 
-**&gt;**
+<b>&gt;</b>
 
-**&lt;**
+<b>&lt;</b>
 
-**/div**
+<b>/div</b>
 
-**&gt;**
+<b>&gt;</b>
 
-> **CSS:**
+> <b>CSS:</b>
 
 .wrapper
 
 {
 
-**height**
+<b>height</b>
 
 :
 
@@ -22173,7 +20857,7 @@ px
 
 ;
 
-**text-align**
+<b>text-align</b>
 
 :
 
@@ -22187,7 +20871,7 @@ center
 
 {
 
-**display**
+<b>display</b>
 
 :
 
@@ -22195,7 +20879,7 @@ table
 
 ;
 
-**height**
+<b>height</b>
 
 :
 
@@ -22205,7 +20889,7 @@ table
 
 ;
 
-**width**
+<b>width</b>
 
 :
 
@@ -22223,7 +20907,7 @@ table
 
 {
 
-**display**
+<b>display</b>
 
 :
 
@@ -22231,7 +20915,7 @@ table-cell
 
 ;
 
-**text-align**
+<b>text-align</b>
 
 :
 
@@ -22239,7 +20923,7 @@ center
 
 ;
 
-**vertical-align**
+<b>vertical-align</b>
 
 :
 
@@ -22251,11 +20935,11 @@ middle
 
 ## Section 50.2: Centering with Flexbox
 
-> **HTML:**
+> <b>HTML:</b>
 
-**&lt;**
+<b>&lt;</b>
 
-**div**
+<b>div</b>
 
 class
 
@@ -22263,11 +20947,11 @@ class
 
 &quot;container&quot;
 
-**&gt;**
+<b>&gt;</b>
 
-**&lt;**
+<b>&lt;</b>
 
-**div**
+<b>div</b>
 
 class
 
@@ -22275,27 +20959,27 @@ class
 
 &quot;child&quot;
 
-**&gt;**
+<b>&gt;</b>
 
-**&lt;**
+<b>&lt;</b>
 
-**/div**
+<b>/div</b>
 
-**&gt;**
+<b>&gt;</b>
 
-**&lt;**
+<b>&lt;</b>
 
-**/div**
+<b>/div</b>
 
-**&gt;**
+<b>&gt;</b>
 
-> **CSS:**
+> <b>CSS:</b>
 
 .container
 
 {
 
-**height**
+<b>height</b>
 
 :
 
@@ -22305,7 +20989,7 @@ px
 
 ;
 
-**width**
+<b>width</b>
 
 :
 
@@ -22315,7 +20999,7 @@ px
 
 ;
 
-**display**
+<b>display</b>
 
 :
 
@@ -22325,7 +21009,7 @@ flex
 
 // Use Flexbox
 
-**align-items**
+<b>align-items</b>
 
 :
 
@@ -22335,7 +21019,7 @@ center
 
 // This centers children vertically in the parent.
 
-**justify-content**
+<b>justify-content</b>
 
 :
 
@@ -22345,7 +21029,7 @@ center
 
 // This centers children horizontally.
 
-**background**
+<b>background</b>
 
 :
 
@@ -22359,7 +21043,7 @@ white
 
 {
 
-**width**
+<b>width</b>
 
 :
 
@@ -22369,7 +21053,7 @@ px
 
 ;
 
-**height**
+<b>height</b>
 
 :
 
@@ -22379,7 +21063,7 @@ px
 
 ;
 
-**background**
+<b>background</b>
 
 :
 
@@ -22391,11 +21075,11 @@ blue
 
 ## Section 50.3: Centering with Transform
 
-> **HTML:**
+> <b>HTML:</b>
 
-**&lt;**
+<b>&lt;</b>
 
-**div**
+<b>div</b>
 
 class
 
@@ -22403,11 +21087,11 @@ class
 
 &quot;wrapper&quot;
 
-**&gt;**
+<b>&gt;</b>
 
-**&lt;**
+<b>&lt;</b>
 
-**div**
+<b>div</b>
 
 class
 
@@ -22415,15 +21099,15 @@ class
 
 &quot;centered&quot;
 
-**&gt;**
+<b>&gt;</b>
 
 centered
 
-**&lt;**
+<b>&lt;</b>
 
-**/div**
+<b>/div</b>
 
-**&gt;**
+<b>&gt;</b>
 
 <b>&lt;</b>
 
