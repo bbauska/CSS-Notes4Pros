@@ -3289,7 +3289,7 @@ box model.</p>
 and horizontal radius of that corner (for a maximum of 8 values).</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 25.  (xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p align="center" width="100%">
+<p align="left" width="100%">
 <img src="./images/image025.jpg"
   style="width:60%"
   title=""
@@ -3302,7 +3302,7 @@ second set of values, preceded by a '/' , defines the vertical radius.
 If only one set of values is supplied, it is used for both the
 vertical and horizontal radius.</p>
 
-<pre><code><b>border-radius<b>: 10px 5&percnt; / 20px 25em 30px 35em;</code></pre>
+<pre><code><b>border-radius</b>: 10px 5&percnt; / 20px 25em 30px 35em;</code></pre>
 
 <p>The 10px is the horizontal radius of the top-left-and-bottom-right.
 And the 5% is the horizontal radius of the topright-and-bottom-left.
@@ -3350,7 +3350,7 @@ avoid manually calculating the borderradius value:</p>
 <p>If the width and height properties are not equal, the resulting shape
 will be an oval rather than a circle.</p>
 
-<h4>Browser specific border-radius example:</h4>
+<p>Browser specific border-radius example:</p>
 
 <pre><code>-webkit-border-top-right-radius: 4px;
 -webkit-border-bottom-right-radius: 4px;
@@ -3360,11 +3360,10 @@ will be an oval rather than a circle.</p>
 -moz-border-radius-bottomright: 4px;
 -moz-border-radius-bottomleft: 0;
 -moz-border-radius-topleft: 0;
-
-  <b>border-top-right-radius</b>: 4px;
-  <b>border-bottom-right-radius</b>: 4px;
-  <b>border-bottom-left-radius</b>: 0;
-  <b>border-top-left-radius</b>: 0;</code></pre>
+<b>border-top-right-radius</b>: 4px;
+<b>border-bottom-right-radius</b>: 4px;
+<b>border-bottom-left-radius</b>: 0;
+<b>border-top-left-radius</b>: 0;</code></pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch10-2">Section 10.2: border-style</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -3376,7 +3375,14 @@ element one value.)</p>
 
 <pre><code><b>border-style</b>: dotted;
 <b>border-style</b>: dotted solid double dashed;</code></pre>
-<image here>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~ 26. border-style property sets the style of an element's border (xx) ~~~~~~~~~~~~-->
+<p align="left" width="100%">
+<img src="./images/image026.png"
+  style="width:60%"
+  title="border-style property sets the style of an element's border"
+  alt="border-style property sets the style of an element's border." />
+</p>
 
 <p>border-style can also have the values none and hidden. They have the
 same effect, except hidden works for <b>&lt;table&gt;</b> elements. In a
@@ -3466,7 +3472,6 @@ do:</p>
 displayed as or inlinetable) and sets whether the table borders are
 collapsed into a single border or detached as in standard HTML.</p>
 
-
 <pre><code>table {
   <b>border-collapse</b>: separate; /* default */
   <b>border-spacing</b>: 2px; /* Only works if border-collapse is separate */
@@ -3520,12 +3525,12 @@ more information about gradients in the docs). You can find more
 information about border-image-slice property in the border-image
 example in same page.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 28.  (xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 28. Border on ALL sides (xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="center" width="100%">
-<img src="./images/image028.jpg"
+<img src="./images/image028.png"
   style="width:35%"
-  title=""
-  alt="." />
+  title="Border on ALL sides"
+  alt="Border on ALL sides." />
 </p>
 <!-- [image028.jpg 3.5"x1.437"](./images/image028.jpg) -->
 
@@ -3539,23 +3544,19 @@ applied to the entire box and then the colors are masked from the
 padding and content areas, thus making it look as though only the
 border has the gradient.</p>
 
-to right
-
-to bottom
-
 <p>Which border(s) have a single color is dependant on the gradient
 definition. If the gradient is a gradient, the left border would be
 the start color of the gradient and right border would be the end
 color. If it was a to bottom gradient the top border would be the
 gradient&apos;s start color and bottom border would be end color. Below is
-the output of a 5 colored gradient.</p>
+the output of a bottom 5 colored gradient.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 29.  (xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="center" width="100%">
-<img src="./images/image029.jpg"
+<img src="./images/image029.png"
   style="width:35%"
-  title=""
-  alt="." />
+  title="Bottom 5 colored gradient"
+  alt="Bottom 5 colored gradient." />
 </p>
 <!-- [image029.jpg 3.489 x 1.40](./images/image029.jpg) -->
 
@@ -3565,7 +3566,14 @@ border. For example, adding the below code would produce a border only
 on the top of the element.</p>
 
 <pre><code><b>border-width</b>: 5px 0px 0px 0px;</code></pre>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 30.  (xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p align="center" width="100%">
+<img src="./images/image030.png"
+  style="width:35%"
+  title=""
+  alt="." />
+</p>
 <p>Note that, any element that has border-image property <b>won&apos;t respect
 the</b> border-radius (that is the border won&apos;t curve). This is based
 on the below statement in the spec:</p>
