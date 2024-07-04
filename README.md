@@ -1809,7 +1809,7 @@ property has no effect.</p>
   ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.<b>&lt;/p&gt;</b>
 <b>&lt;/div&gt;</b></code></pre>
 
-<p>Result:</p>
+<h5>Result:</h5>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 13.  (xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left" width="100%">
@@ -2202,7 +2202,7 @@ IE8 and older versions.</p>
   <b>margin</b>: 0 auto;
 }</code></pre>
 
-<p>Result:</p>
+<h5>Result:</h5>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~ 15. this is a centered paragraph (xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="center" width="100%">
@@ -3694,6 +3694,7 @@ an element.</p>
   title=""
   alt="." />
 </p>
+
 |<b>Overflow Value</b> | <b>Details</b> |
 |----------------------|-------------------------------------------|
 | visible | Shows all overflowing content outside the element |
@@ -3763,32 +3764,17 @@ top-to-bottom axis.
 
 <h4>HTML:</h4>
 
-<pre><code>
-<b>&lt;</b>
-<b>div</b>
-id
-=
-&quot;div-x&quot;
-<b>&gt;</b>
-If this div is too small to display its contents,
-the content to the left and right will be clipped.
-<b>&lt;</b>
-<b>/div</b>
-<b>&gt;</b>
-<b>&lt;</b>
-<b>div</b>
-id
-=
-&quot;div-y&quot;
-<b>&gt;</b>
-If this div is too small to display its contents,
-the content to the top and bottom will be clipped.
-<b>&lt;</b>
-<b>/div</b>
-<b>&gt;</b>
-</code></pre>
+<pre><code><b>&lt;div</b> id=&quot;div-x&quot;<b>&gt;</b>
+  If this div is too small to display its contents,
+  the content to the left and right will be clipped.
+<b>&lt;/div&gt;</b>
 
-<h4>CSS</h4>
+<b>&lt;div</b> id=&quot;div-y&quot;<b>&gt;</b>
+  If this div is too small to display its contents,
+  the content to the top and bottom will be clipped.
+<b>&lt;/div&gt;</b></code></pre>
+
+<h4>CSS:</h4>
 
 <pre><code>div {
   <b>width</b>: 200px;
@@ -3803,80 +3789,45 @@ the content to the top and bottom will be clipped.
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch12-3">Section 12.3: overflow: scroll</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-
 <h4>HTML:</h4>
 
-<b>&lt;</b>
+<pre><code><b>&lt;div&gt;</b>
+  This div is too small to display its contents to display the effects of the overflow property.
+<b>&lt;/div&gt;</b></code></pre>
 
-<b>div</b>
+<h4>CSS:</h4>
 
-<b>&gt;</b>
+<pre><code>div {
+  <b>width</b>: 100px;
+  <b>height</b>: 100px;
+  <b>overflow</b>: scroll;
+}</code></pre>
 
-This div is too small to display its contents to display the effects of
-the overflow property.
+<h5>Result:</h5>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 33.  (xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p align="left" width="100%">
+<img src="./images/image033.jpg"
+  style="width:10%"
+  title=""
+  alt="." />
+</p>
+<!-- [image033.jpg 1.16 x 1.18](./images/image033.jpg) -->
 
-<b>&lt;</b>
+<p>The content above is clipped in a 100px by 100px box, with scrolling
+available to view overflowing content.</p>
 
-<b>/div</b>
-
-<b>&gt;</b>
-
-> <h4>CSS:</h4>
-
-div
-
-{
-
-<b>width</b>
-
-:
-
-100
-
-px
-
-;
-
-<b>height</b>
-
-:
-
-100
-
-px
-
-;
-
-<b>overflow</b>
-
-:
-
-scroll
-
-;
-
-}
-
-> <b>Result</b>
-
-[image033.jpg 1.16 x 1.18](./images/image033.jpg)
-
-> The content above is clipped in a 100px by 100px box, with scrolling
-> available to view overflowing content.
->
-> Most desktop browsers will display both horizontal and vertical
-> scrollbars, whether or not any content is clipped. This can avoid
-> problems with scrollbars appearing and disappearing in a dynamic
-> environment. Printers may print overflowing content.
-
+<p>Most desktop browsers will display both horizontal and vertical
+scrollbars, whether or not any content is clipped. This can avoid
+problems with scrollbars appearing and disappearing in a dynamic
+environment. Printers may print overflowing content.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch12-4">Section 12.4: overflow: visible</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>HTML:</h4>
 
 <pre><code><b>&lt;div&gt;</b>
-Even if this div is too small to display its contents, the content is
-not clipped.
+  Even if this div is too small to display its contents, the content is not clipped.
 <b>&lt;/div&gt;</b></code></pre>
 
 <h4>CSS</h4>
@@ -3887,10 +3838,10 @@ not clipped.
   <b>overflow</b>: visible;
 }</code></pre>
 
-<h4>Result</h4>
+<h5>Result</h5>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 34.  (xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p align="center" width="100%">
+<p align="left" width="100%">
 <img src="./images/image034.jpg"
   style="width:10%"
   title=""
@@ -3903,109 +3854,29 @@ it exceeds its container size.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch12-5">Section 12.5: Block Formatting Context Created with Overflow</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-
-Using the overflow property with a value different to visible will
+<p>Using the overflow property with a value different to visible will
 create a new <b>block formatting context</b>. This is useful for aligning
-a block element next to a floated element.
+a block element next to a floated element.</p>
 
 <h4>CSS:</h4>
 
-img
-
-{
-
-<b>float</b>
-
-:
-
-left
-
-;
-
-<b>margin-right</b>
-
-:
-
-10
-
-px
-
-;
-
+<pre><code>img {
+  <b>float</b>: left;
+  <b>margin-right</b>: 10px;
 }
+div {
+  <b>overflow</b>: hidden; /* creates block formatting context */
+}</code></pre>
 
-div
+<h4>HTML:</h4>
 
-{
+<pre><code><b>&lt;img</b> src=&quot;http://placehold.it/100x100&quot;<b>&gt;</b>
+<b>&lt;div&gt;</b>
+  <b>&lt;p&gt;</b>Lorem ipsum dolor sit amet, cum no paulo mollis pertinacia.<b>&lt;/p&gt;</b>
+  <b>&lt;p&gt;</b>Ad case omnis nam, mutat deseruisse persequeris eos ad, in tollit debitis sea.<b>&lt;/p&gt;</b>
+<b>&lt;/div&gt;</b></code></pre>
 
-<b>overflow</b>
-
-:
-
-hidden
-
-;
-
-*/&ast; creates block formatting context &ast;/*
-
-}
-
-> <h4>HTML:</h4>
-
-<b>&lt;</b>
-
-<b>img</b>
-
-src
-
-=
-
-&quot;http://placehold.it/100x100&quot;
-
-<b>&gt;</b>
-
-<b>&lt;</b>
-
-<b>div</b>
-
-<b>&gt;</b>
-
-<b>&lt;</b>
-
-<b>p</b>
-
-<b>&gt;</b>
-
-Lorem ipsum dolor sit amet, cum no paulo mollis pertinacia.
-
-<b>&lt;</b>
-
-<b>/p</b>
-
-<b>&gt;</b>
-
-<b>&lt;</b>
-
-<b>p</b>
-
-<b>&gt;</b>
-
-Ad case omnis nam, mutat deseruisse persequeris eos ad, in tollit
-debitis sea.
-
-<b>&lt;</b>
-
-<b>/p</b>
-
-<b>&gt;</b>
-
-<b>&lt;</b>
-
-<b>/div</b>
-
-<b>&gt;</b>
-
-> <b>Result</b>
+<h5>Result:</h5>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 35.  (xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="center" width="100%">
@@ -4023,107 +3894,57 @@ debitis sea.
 <h2 id="ch13">Chapter 13: Media Queries</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
-|             | <b>Details</b>                                          |
+| <b>Parameter</b>   | <b>Details</b>                                          |
 |-------------|--------------------------------------------------------|
-| Parameter |                                                        |
 | mediatype   | (Optional) This is the type of media. Could be         |
 |             | anything in the range of all to screen.                |
-|-------------|--------------------------------------------------------|
 | not         | (Optional) Doesn&apos;t apply the CSS for this particular  |
 |             | media type and applies for everything else.            |
-|-------------|--------------------------------------------------------|
 | media       | Logic to identify use case for CSS. Options outlined   |
 | feature     | below.                                                 |
-|-------------|--------------------------------------------------------|
-| <b>Media</b>     | <b>Details</b>                                            |
-| <b>Feature</b>   |                                                        |
-|-------------|--------------------------------------------------------|
-| a           | Describes the aspect ratio of the targeted display     |
-| spect-ratio | area of the output device.                             |
-|-------------|--------------------------------------------------------|
-| color       | Indicates the number of bits per color component of    |
-|             | the output device. If the device is not a color        |
-|             | device, this value is zero.                            |
-|-------------|--------------------------------------------------------|
-| color-index | Indicates the number of entries in the color look-up   |
-|             | table for the output device.                           |
-|-------------|--------------------------------------------------------|
-| grid        | Determines whether the output device is a grid device  |
-|             | or a bitmap device.                                    |
-|-------------|--------------------------------------------------------|
-| height      | The height media feature describes the height of the   |
-|             | output device&apos;s rendering surface.                    |
-|-------------|--------------------------------------------------------|
-| max-width   | CSS will not apply on a screen width wider than        |
-|             | specified.                                             |
-|-------------|--------------------------------------------------------|
-| min-width   | CSS will not apply on a screen width narrower than     |
-|             | specified.                                             |
-|-------------|--------------------------------------------------------|
-| max-height  | CSS will not apply on a screen height taller than      |
-|             | specified.                                             |
-|-------------|--------------------------------------------------------|
-| min-height  | CSS will not apply on a screen height shorter than     |
-|             | specified.                                             |
-|-------------|--------------------------------------------------------|
-| monochrome  | Indicates the number of bits per pixel on a monochrome |
-|             | (greyscale) device.                                    |
-|-------------|--------------------------------------------------------|
-| orientation | CSS will only display if device is using specified     |
-|             | orientation. See remarks for more details.             |
-|-------------|--------------------------------------------------------|
-| resolution  | Indicates the resolution (pixel density) of the output |
-|             | device.                                                |
-|-------------|--------------------------------------------------------|
-| scan        | Describes the scanning process of television output    |
-|             | devices.                                               |
-|-------------|--------------------------------------------------------|
-| width       | The width media feature describes the width of the     |
-|             | rendering surface of the output device (such as the    |
-|             | width of the document window, or the width of the page |
-|             | box on a printer).                                     |
-|-------------|--------------------------------------------------------|
 
-> <b>Deprecated Features Details</b>
->
-> <b>Deprecated</b> CSS will only display on devices whose height/width
-> ratio matches the specified
->
-> device-aspect-ratio ratio. This is adeprecatedfeature and is not
-> guaranteed to work.
->
-> <b>Deprecated</b> Same as max-width but measures the physical screen
-> width, rather than the
->
-> max-device-width display width of the browser.
->
-> <b>Deprecated</b> Same as min-width but measures the physical screen
-> width, rather than the
->
-> min-device-width display width of the browser.
->
-> <b>Deprecated</b> Same as max-height but measures the physical screen
-> width, rather than the
->
-> max-device-height display width of the browser.
->
-> <b>Deprecated</b> Same as min-height but measures the physical screen
-> width, rather than the
->
-> min-device-height
->
-> display width of the browser.
+
+| <b>Media Feature</b> | <b>Details</b>                                          |
+|----------------------|--------------------------------------------------------|
+| aspect-ratio | Describes the aspect ratio of the targeted display area of the output device. |
+| color       | Indicates the number of bits per color component of the output device. If the  |
+|             | device is not a color device, this value is zero. |
+| color-index | Indicates the number of entries in the color look-up table for the output device.  |
+| grid        | Determines whether the output device is a grid device or a bitmap device. |
+| height      | The height media feature describes the height of the output device&apos;s rendering surface. |
+| max-width   | CSS will not apply on a screen width wider than specified. |
+| min-width   | CSS will not apply on a screen width narrower than specified.  |
+| max-height  | CSS will not apply on a screen height taller than specified.   |
+| min-height  | CSS will not apply on a screen height shorter than specified.  |
+| monochrome  | Indicates the number of bits per pixel on a monochrome (greyscale) device. |
+| orientation | CSS will only display if device is using specified orientation. See remarks for more details. |
+| resolution  | Indicates the resolution (pixel density) of the output device. |
+| scan        | Describes the scanning process of television output devices. |
+| width       | The width media feature describes the width of the rendering surface of the output device (such as the |
+|             | width of the document window, or the width of the page box on a printer). |
+
+| <b>Deprecated Features</b> | <b>Details</b> |
+|----------------------------|---------------------------------------|
+| device-aspect-ratio | <b>Deprecated</b> CSS will only display on devices whose height/width |
+|                     | ratio matches the specified ratio. This is an adeprecated feature and is not guaranteed to work. |
+| max-device-width | <b>Deprecated</b> Same as max-width but measures the physical screen width, rather than the |
+|                  | display width of the browser. |
+| min-device-width | <b>Deprecated</b> Same as min-width but measures the physical screen width, rather than the |
+|                  | display width of the browser. |
+| max-device-height | <b>Deprecated</b> Same as max-height but measures the physical screen width, rather than the |
+|                  | display width of the browser. |
+| min-device-height | <b>Deprecated</b> Same as min-height but measures the physical screen width, rather than the |
+|                  | display width of the browser. |
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch13-1">Section 13.1: Terminology and Structure</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<b>Media queries</b> allow one to apply CSS rules based on the type of
+device / media (e.g. screen, print or handheld) called <b>media type</b>,
+additional aspects of the device are described with <b>media features</b>
+such as the availability of color or viewport dimensions.
 
-> <b>Media queries</b> allow one to apply CSS rules based on the type of
-> device / media (e.g. screen, print or handheld) called <b>media type</b>,
-> additional aspects of the device are described with <b>media features</b>
-> such as the availability of color or viewport dimensions.
->
-> <b>General Structure of a Media Query</b>
+<b>General Structure of a Media Query</b>
 
 <b>&commat;media</b>
 
@@ -8162,8 +7983,7 @@ currentColor
 
 }
 
-<b>Possible Result:</b>
-
+<h5>Possible Result:</h5>
 [image049.png 5.2 x 3.09](./images/image049.png)
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
