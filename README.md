@@ -8247,53 +8247,16 @@ supported&rbrack;&rbrack;(http://caniuse.com/#feat=viewport-units) in:
 
 CSS3 introduced two units for representing size.
 
-vh
+vh, which stands for viewport height is relative to 1% of the viewport height
+vw, which stands for viewport width is relative to 1% of the viewport width
 
-, which stands for
-
-viewport height
-
-is relative to 1% of the viewport height
-
-vw
-
-, which stands for
-
-viewport width
-
-is relative to 1% of the viewport width
-
-Version
-
-≥
-
-3
-
-div
-
-{
-
-<b>width</b>
-
-:
-
-20
-
-vw
-
-;
-
-<b>height</b>
-
-:
-
-20
-
-vh
-
-;
-
+```
+Version ≥ 3
+div {
+  <b>width</b>: 20vw;
+  <b>height</b>: 20vh;
 }
+```
 
 Above, the size for the div takes up 20% of the width and height of
 the viewport
@@ -8312,94 +8275,36 @@ Its size depends on its parent container.
 
 <b>For Example:</b>
 
-*Parent* has <b>100px</b> width while the *Child* has <b>50%</b>.
+<i>Parent</i> has <b>100px</b> width while the <i>Child</i> has <b>50%</b>.
 
 <b>On the output</b>, the *Child*&apos;s width will be half(50%) of the
 *Parent*&apos;s, which is <b>50px</b>.
 
 <h4>HTML:</h4>
 
-<b>&lt;</b>
+```
+<b>&lt;div</b> class=&quot;parent&quot;<b>&gt;</b>PARENT
+<b>&lt;div</b> class=&quot;child&quot;<b>&gt;</b>CHILD
+<b>&lt;/div</b><b>&gt;</b>
+<b>&lt;/div</b><b>&gt;</b>
+```
 
-<b>div</b>
+<h4>CSS</h4>
 
-class
-
-=
-
-&quot;parent&quot;
-
-<b>&gt;</b>
-
-PARENT
-
-<b>&lt;</b>
-
-<b>div</b>
-
-class
-
-=
-
-&quot;child&quot;
-
-<b>&gt;</b>
-
-CHILD
-
-<b>&lt;</b>
-
-<b>/div</b>
-
-<b>&gt;</b>
-
-<b>&lt;</b>
-
-<b>/div</b>
-
-<b>&gt;</b>
-
-> <h4>CSS</h4>
-
-<b>&lt;</b>
-
-<b>style</b>
-
-<b>&gt;</b>
-
+```
+<b>&lt;style&gt;</b>
 &ast;
-
 {
-
 color: #CCC;
-
 }
-
-.parent
-
-{
-
-background-color: blue;
-
-width: 100px;
-
+.parent {background-color: blue;
+  width: 100px;
 }
-
-.child
-
-{
-
-background-color: green;
-
-width: 50%;
-
+.child {background-color: green;
+  width: 50%;
 }
-
-<b>&lt;</b>
-
-<b>/style</b>
-
-<b>&gt;</b>
+<b>&lt;/style&gt;</b>
+```
 
 <b>OUTPUT</b>
 
@@ -8428,20 +8333,14 @@ width: 50%;
 ::marker For applying list-style attributes on a given element
 (Experimental)
 
-  -----------------------------------------------------------------------
   ::spelling-error
-  -----------------------------------------------------------------------
 
-  -----------------------------------------------------------------------
 
 > Represents a text segment which the browser has flagged as incorrectly
 > spelled (Experimental)
 
-  -----------------------------------------------------------------------
   ::grammar-error
-  -----------------------------------------------------------------------
 
-  -----------------------------------------------------------------------
 
 > Represents a text segment which the browser has flagged as
 > grammatically incorrect (Experimental)
@@ -17146,88 +17045,63 @@ rgb
 >
 > An **ellipse** is similar to a circle, but with different values for
 > width and height.
-
-!&lbrack;&rbrack;(./images/image240.jpg){width="0.9375in" height="0.9375in"}
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 240.  (xxx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p align="center" width="100%">
+<img src="./images/image240.jpg"
+  style="width:10%"
+  title=""
+  alt="." />
+</p>
+<!-- {width="0.9375in" height="0.9375in"} -->
 
 <h4>HTML:</h4>
 
+```
 **&lt;**
-
 **div**
-
 class
-
 =
-
 &quot;oval&quot;
-
 **&gt;**
-
 **&lt;**
-
 **/div**
-
 **&gt;**
+```
 
 > <h4>CSS</h4>
 
+```
 .oval
-
 {
-
 **width**
-
 :
-
 50
-
 px
-
 ;
-
 **height**
-
 :
-
 80
-
 px
-
 ;
-
 **background**
-
 :
-
 rgb
-
 (
-
 246
-
 ,
-
 156
-
 ,
-
 85
-
 )
-
 ;
-
 **border-radius**
-
 :
-
 50
-
 &percnt;
-
 ;
-
 }
+```
 
 ## Section 38.4: Bursts
 
@@ -17235,163 +17109,99 @@ rgb
 > distance from the body. Think of a burst shape as a square with
 > additional, slightly rotated, squares layered on top.
 
-  -----------------------------------------------------------------------
   ::before                      and             ::after
-  ----------------------------- --------------- -------------------------
 
-  -----------------------------------------------------------------------
 
 > The additional squares are created using the psuedo-elements.
 >
 > **8 Point Burst**
 
-  -----------------------------------------------------------------------
   before
-  -----------------------------------------------------------------------
 
-  -----------------------------------------------------------------------
 
 > An 8 point burst are 2 layered squares. The bottom square is the
 > element itself, the additional square is created using the :
 > pseudo-element. The bottom is rotated 20°, the top square is rotated
 > 135°.
 
+```
 **&lt;**
-
 **div**
-
 class
-
 =
-
 &quot;burst-8&quot;
-
 **&gt;**
-
 **&lt;**
-
 **/div**
-
 **&gt;**
-
 .burst-8 {
-
 background: rgb(246, 156, 85);
-
 width: 40px;
-
 height: 40px;
-
 position: relative;
-
 text-align: center;
-
 -ms-transform: rotate(20deg);
-
 transform: rotate(20eg);
-
 }
-
 .burst-8::before {
-
 content: &quot;&quot;;
-
 position: absolute;
-
 top: 0;
-
 left: 0;
-
 height: 40px;
-
 width: 40px;
-
 background: rgb(246, 156, 85);
-
 -ms-transform: rotate(135deg);
-
 transform: rotate(135deg);
-
 }
+```
 
 > **12 Point Burst**
 
-  -----------------------------------------------------------------------
-  before                     and :                  after
-  -------------------------- ---------------------- ---------------------
-
-  -----------------------------------------------------------------------
+before
+and:
+after
 
 > An 12 point burst are 3 layered squares. The bottom square is the
 > element itself, the additional squares are created using the :
 > pseudo-elements. The bottom is rotated 0°, the next square is rotated
 > 30°, and the top is rotated 60°.
 
+```
 **&lt;**
-
 **div**
-
 class
-
 =
-
 &quot;burst-12&quot;
-
 **&gt;**
-
 **&lt;**
-
 **/div**
-
 **&gt;**
-
 .burst-12 {
-
 width: 40px;
-
 height: 40px;
-
 position: relative;
-
 text-align: center;
-
 background: rgb(246, 156, 85);
-
 }
-
 .burst-12::before, .burst-12::after {
-
 content: &quot;&quot;;
-
 position: absolute;
-
 top: 0;
-
 left: 0;
-
 height: 40px;
-
 width: 40px;
-
 background: rgb(246, 156, 85);
-
 }
-
 .burst-12::before {
-
 -ms-transform: rotate(30deg);
-
 transform: rotate(30deg);
-
 }
-
 .burst-12::after {
-
 -ms-transform: rotate(60deg);
-
 transform: rotate(60deg);
-
 }
+```
 
 ## Section 38.5: Square
 
@@ -17399,670 +17209,400 @@ transform: rotate(60deg);
 > the example below, we have an element with a width and height of 100
 > pixels each.
 
+```
 **&lt;**
-
 **div**
-
 class
-
 =
-
 &quot;square&quot;
-
 **&gt;**
-
 **&lt;**
-
 **/div**
-
 **&gt;**
-
 .square
-
 {
-
 **width**
-
 :
-
 100
-
 px
-
 ;
-
 **height**
-
 :
-
 100
-
 px
-
 ;
-
 **background**
-
 :
-
 rgb
-
 (
-
 246
-
 ,
-
 156
-
 ,
-
 85
-
 )
-
 ;
-
 }
+```
 
 ## Section 38.6: Cube
 
-  -----------------------------------------------------------------------
-  skewX                 () and                      skewY
-  --------------------- --------------------------- ---------------------
-
-  -----------------------------------------------------------------------
+skewX () 
+and skewY
 
 > This example shows how to create a cube using 2D transformation
 > methods () on pseudo elements.
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 244.  (xxx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p align="center" width="100%">
+<img src="./images/image244.jpg"
+  style="width:25%"
+  title=""
+  alt="." />
+</p>
+<!-- {width="2.40625in" height="1.9479166666666667in"} -->
 
-!&lbrack;&rbrack;(./images/image244.jpg){width="2.40625in"
-height="1.9479166666666667in"}
+<h4>HTML:</h4>
 
-> **HTML:**
-
+```
 **&lt;**
-
 **div**
-
 class
-
 =
-
 &quot;cube&quot;
-
 **&gt;**
-
 **&lt;**
-
 **/div**
-
 **&gt;**
-
 > **CSS:**
-
 .cube
-
 {
-
 **background**
-
 :
-
 #dc2e2e
-
 ;
-
 **width**
-
 :
-
 100
-
 px
-
 ;
-
 **height**
-
 :
-
 100
-
 px
-
 ;
-
 **position**
-
 :
-
 relative
-
 ;
-
 **margin**
-
 :
-
 50
-
 px
-
 ;
-
 }
-
 .cube
-
 ::
-
 before
-
 {
-
 **content**
-
 :
-
 &apos;&apos;
-
 ;
-
 **display**
-
 :
-
 inline-block
-
 ;
-
 **background**
-
 :
-
 #f15757
-
 ;
-
 **width**
-
 :
-
 100
-
 px
-
 ;
-
 **height**
-
 :
-
 20
-
 px
-
 ;
-
 **transform**
-
 :
-
 skewX
-
 (
-
 -40
-
 deg
-
 )
-
 ;
-
 **position**
-
 :
-
 absolute
-
 ;
-
 **top**
-
 :
-
 -20
-
 px
-
 ;
-
 **left**
-
 :
-
 8
-
 px
-
 ;
-
 }
-
 .cube
-
 ::
-
 after
-
 {
-
 **content**
-
 :
-
 &apos;&apos;
-
 ;
-
 **display**
-
 :
-
 inline-block
-
 ;
-
 **background**
-
 :
-
 #9e1515
-
 ;
-
 **width**
-
 :
-
 16
-
 px
-
 ;
-
 **height**
-
 :
-
 100
-
 px
-
 ;
-
 **transform**
-
 :
-
 skewY
-
 (
-
 -50
-
 deg
-
 )
-
 ;
-
 **position**
-
 :
-
 absolute
-
 ;
-
 **top**
-
 :
-
 -10
-
 px
-
 ;
-
 **left**
-
 :
-
 100
-
 &percnt;
-
 ;
-
 }
-
 &lbrack;**&lbrack;See demo&rbrack;**&rbrack;(https://jsfiddle.net/codename0/9po0r1L1/)
+```
 
 ## Section 38.7: Pyramid
 
-  -----------------------------------------------------------------------
   skewY()
-  -----------------------------------------------------------------------
 
-  -----------------------------------------------------------------------
+This example shows how to create a **pyramid** using borders and 2D
+transformation methods and rotate() on pseudo elements.
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 245.  (xxx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p align="center" width="100%">
+<img src="./images/image245.jpg"
+  style="width:20%"
+  title=""
+  alt="." />
+</p>
+<!-- {width="2.1041666666666665in" height="1.8541666666666667in"} -->
 
-> This example shows how to create a **pyramid** using borders and 2D
-> transformation methods and rotate() on pseudo elements.
+<h4>HTML:</h4>
 
-!&lbrack;&rbrack;(./images/image245.jpg){width="2.1041666666666665in"
-height="1.8541666666666667in"}
-
-> **HTML:**
-
+```
 **&lt;**
-
 **div**
-
 class
-
 =
-
 &quot;pyramid&quot;
-
 **&gt;**
-
 **&lt;**
-
 **/div**
-
 **&gt;**
+```
 
-> **CSS:**
+<h4>CSS:</h4>
 
+```
 .pyramid
-
 {
-
 **width**
-
 :
-
 100
-
 px
-
 ;
-
 **height**
-
 :
-
 200
-
 px
-
 ;
-
 **position**
-
 :
-
 relative
-
 ;
-
 **margin**
-
 :
-
 50
-
 px
-
 ;
-
 }
-
 .pyramid
-
 ::
-
 before
-
 ,
-
 .pyramid
-
 ::
-
 after
-
 {
-
 **content**
-
 :
-
 &apos;&apos;
-
 ;
-
 **display**
-
 :
-
 inline-block
-
 ;
-
 **width**
-
 :
-
 0
-
 ;
-
 **height**
-
 :
-
 0
-
 ;
-
 **border**
-
 :
-
 50
-
 px
-
 solid
-
 ;
-
 **position**
-
 :
-
 absolute
-
 ;
-
 }
-
 .pyramid
-
 ::
-
 before
-
 {
-
 **border-color**
-
 :
-
 transparent
-
 transparent
-
 #ff5656
-
 transparent
-
 ;
-
 **transform**
-
 :
-
 scaleY
-
 (
-
 2
-
 )
-
 skewY
-
 (
-
 -40
-
 deg
-
 )
-
 rotate
-
 (
-
 45
-
 deg
-
 )
-
 ;
-
 }
-
 .pyramid
-
 ::
-
 after
-
 {
-
 **border-color**
-
 :
-
 transparent
-
 transparent
-
 #d64444
-
 transparent
-
 ;
-
 **transform**
-
 :
-
 scaleY
-
 (
-
 2
-
 )
-
 skewY
-
 (
-
 40
-
 deg
-
 )
-
 rotate
-
 (
-
 -45
-
 deg
-
 )
-
 ;
-
 }
+```
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ch39">Chapter 39: Columns</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch39-1">Section 39.1: Simple Example (column-count)</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+The CSS multi-column layout makes it easy to create multiple columns
+of text.
 
-> The CSS multi-column layout makes it easy to create multiple columns
-> of text.
->
-> **Code**
->
-> **&lt;div** id=&quot;multi-columns&quot;**&gt;**Lorem ipsum dolor sit amet,
-> consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
-> labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-> exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
-> dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-> proident, sunt in culpa qui officia deserunt mollit anim id est
-> laborum**&lt;/div&gt;**
->
-> .multi-columns {
->
-> -moz-column-count: 2; -webkit-column-count: 2; **column-count**: 2; }
->
-> **Result**
+**Code**
 
-!&lbrack;&rbrack;(./images/image246.jpg){width="7.48037510936133in"
-height="3.572153324584427in"}
+**&lt;div** id=&quot;multi-columns&quot;**&gt;**Lorem ipsum dolor sit amet,
+consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+proident, sunt in culpa qui officia deserunt mollit anim id est
+laborum**&lt;/div&gt;**
+
+.multi-columns {
+
+-moz-column-count: 2; -webkit-column-count: 2; **column-count**: 2; }
+
+**Result**
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 246.  (xxx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p align="center" width="100%">
+<img src="./images/image246.jpg"
+  style="width:70%"
+  title=""
+  alt="." />
+</p>
+<!-- {width="7.48037510936133in" height="3.572153324584427in"} -->
 
 ## Section 39.2: Column Width
 
-> The column-width property sets the minimum column width. If
-> column-count is not defined the browser will make as many columns as
-> fit in the available width.
->
-> **Code:**
->
-> **&lt;div** id=&quot;multi-columns&quot;**&gt;**
->
-> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-> eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-> minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-> aliquip ex ea commodo consequat. Duis aute irure dolor in
-> reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-> pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-> culpa qui officia deserunt mollit anim id est laborum
+The column-width property sets the minimum column width. If
+column-count is not defined the browser will make as many columns as
+fit in the available width.
+
+**Code:**
+
+**&lt;div** id=&quot;multi-columns&quot;**&gt;**
+
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+aliquip ex ea commodo consequat. Duis aute irure dolor in
+reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+culpa qui officia deserunt mollit anim id est laborum
 
 **&lt;**
 
@@ -18106,11 +17646,16 @@ px
 
 }
 
-> **Result**
-
-!&lbrack;&rbrack;(./images/image247.jpg){width="6.125in"
-height="3.7083333333333335in"}
-
+<h4>Result</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 247.  (xxx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p align="center" width="100%">
+<img src="./images/image247.jpg"
+  style="width:60%"
+  title=""
+  alt="." />
+</p>
+<!-- {width="6.125in" height="3.7083333333333335in"} -->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ch40">Chapter 40: Multiple columns</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -18461,24 +18006,21 @@ inline-block
 
 > **Notes**
 
-  -----------------------------------------------------------------------
   after
-  -----------------------------------------------------------------------
 
-  -----------------------------------------------------------------------
 
-> The nav, ul and li tags were chosen for their semantic meaning of &apos;a
-> list of navigation (menu) items&apos;. Other tags may also be used of
-> course.
->
-> The : pseudo-element causes an extra &apos;line&apos; in the ul and thus an
-> extra, empty height of this block, pushing other content down. This is
-> solved by the negative margin-bottom, which has to have the same
-> magnitude as the line-height (but negative).
->
-> If the page becomes too narrow for all the items to fit, the items
-> will break to a new line (starting from the right) and be justified on
-> this line. The total height of the menu will grow as needed.
+The nav, ul and li tags were chosen for their semantic meaning of &apos;a
+list of navigation (menu) items&apos;. Other tags may also be used of
+course.
+
+The : pseudo-element causes an extra &apos;line&apos; in the ul and thus an
+extra, empty height of this block, pushing other content down. This is
+solved by the negative margin-bottom, which has to have the same
+magnitude as the line-height (but negative).
+
+If the page becomes too narrow for all the items to fit, the items
+will break to a new line (starting from the right) and be justified on
+this line. The total height of the menu will grow as needed.
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ch42">Chapter 42: Inheritance</h2>
@@ -18521,12 +18063,7 @@ px
 
 }
 
-  -----------------------------------------------------------------------------------------------------------
   **color**   :   red   not only to the  **&lt;div**   **&gt;** element but also to **&lt;h3**   **&gt;**   **&lt;p**
-                                                     the                                   and      
-  ----------- --- ----- ---------------- ----------- -------------------------- ---------- -------- ---------
-
-  -----------------------------------------------------------------------------------------------------------
 
 > This will apply **&gt;** elements. However, due to the nature of padding
 > its value will ***not*** be inherited to those elements.
@@ -18636,20 +18173,14 @@ inherit
 
 }
 
-  ------------------------------------------------------------------------------------
   **color**   :   red       to both the              **&lt;h3**   **&gt;** and   **&lt;p**
-  ----------- --- --------- ------------------------ ---------- ------------ ---------
 
-  ------------------------------------------------------------------------------------
 
 > This will apply **&gt;** elements due to the inheritance nature of the
 > color property.
 
-  -----------------------------------------------------------------------
   **&lt;p**
-  -----------------------------------------------------------------------
 
-  -----------------------------------------------------------------------
 
 > However, the **&gt;** element will also inherit the padding value from
 > its&apos; parent because this was specified.
@@ -19762,11 +19293,8 @@ stylesheet
 > true. not Negates the next condition or Returns true if either the
 > previous or next condition is true.
 
-  -----------------------------------------------------------------------
   &period;..
-  -----------------------------------------------------------------------
 
-  -----------------------------------------------------------------------
 
 () Groups conditions
 
@@ -19808,12 +19336,9 @@ flex
 > of detecting screen size and orientation, &commat;supports will detect
 > whether the browser can handle a given CSS rule.
 
-  --------------------------------------------------------------------------------------------------
   **&commat;supports**   (   flex   ), notice that the rule  **&commat;supports**   (   **display**   :   flex
                               is                                                              
-  ---------------- --- ------ ------------------------ ---------------- --- ------------- --- ------
 
-  --------------------------------------------------------------------------------------------------
 
 Rather than doing something like ).
 
@@ -20044,27 +19569,18 @@ px
 
 > This will work if the browser
 
-  -------------------------------------------------------------------------
   **display**           :   block              AND             zoom
-  --------------------- --- ------------------ --------------- ------------
 
-  -------------------------------------------------------------------------
 
 1.  Supports : 1, or
 
-  -------------------------------------------------------------------------------
   **display**   :   flex     AND NOT         **display**   :   table-cell
-  ------------- --- -------- --------------- ------------- --- ------------------
 
-  -------------------------------------------------------------------------------
 
 2.  Supports , or
 
-  --------------------------------------------------------------------------
-  **transform**             :   translateX                      (   1px
-  ------------------------- --- ------------------------------- --- --------
+  <b>transform**             :   translateX                      (   1px
 
-  --------------------------------------------------------------------------
 
 3.  Supports ).
 
@@ -20098,11 +19614,11 @@ DIV #6
 > whole DIV #3 element is passed for stacking in the root element with
 > respect to its sibling&apos;s DIV.
 >
-> **HTML:**
+> <b>HTML:**
 
-**&lt;**
+<b>&lt;**
 
-**div**
+<b>div**
 
 id
 
@@ -20110,57 +19626,57 @@ id
 
 &quot;div1&quot;
 
-**&gt;**
+<b>&gt;**
 
-**&lt;**
+<b>&lt;**
 
-**h**
+<b>h**
 
-**1**
+<b>1**
 
-**&gt;**
+<b>&gt;**
 
 Division Element #1
 
-**&lt;**
+<b>&lt;**
 
-**/h**
+<b>/h**
 
-**1**
+<b>1**
 
-**&gt;**
+<b>&gt;**
 
-**&lt;**
+<b>&lt;**
 
-**code**
+<b>code**
 
-**&gt;**
+<b>&gt;**
 
 position: relative;
 
-**&lt;**
+<b>&lt;**
 
-**br**
+<b>br**
 
-**/&gt;**
+<b>/&gt;**
 
 z-index: 5;
 
-**&lt;**
+<b>&lt;**
 
-**/code**
+<b>/code**
 
-**&gt;**
+<b>&gt;**
 
-**&lt;**
+<b>&lt;**
 
-**/div**
+<b>/div**
 
-**&gt;**
+<b>&gt;**
 
-**&lt;**
+<b>&lt;**
 
-**div**
+<b>div**
 
 id
 
@@ -20168,57 +19684,57 @@ id
 
 &quot;div2&quot;
 
-**&gt;**
+<b>&gt;**
 
-**&lt;**
+<b>&lt;**
 
-**h**
+<b>h**
 
-**1**
+<b>1**
 
-**&gt;**
+<b>&gt;**
 
 Division Element #2
 
-**&lt;**
+<b>&lt;**
 
-**/h**
+<b>/h**
 
-**1**
+<b>1**
 
-**&gt;**
+<b>&gt;**
 
-**&lt;**
+<b>&lt;**
 
-**code**
+<b>code**
 
-**&gt;**
+<b>&gt;**
 
 position: relative;
 
-**&lt;**
+<b>&lt;**
 
-**br**
+<b>br**
 
-**/&gt;**
+<b>/&gt;**
 
 z-index: 2;
 
-**&lt;**
+<b>&lt;**
 
-**/code**
+<b>/code**
 
-**&gt;**
+<b>&gt;**
 
-**&lt;**
+<b>&lt;**
 
-**/div**
+<b>/div**
 
-**&gt;**
+<b>&gt;**
 
-**&lt;**
+<b>&lt;**
 
-**div**
+<b>div**
 
 id
 
@@ -20226,11 +19742,11 @@ id
 
 &quot;div3&quot;
 
-**&gt;**
+<b>&gt;**
 
-**&lt;**
+<b>&lt;**
 
-**div**
+<b>div**
 
 id
 
@@ -20238,97 +19754,97 @@ id
 
 &quot;div4&quot;
 
-**&gt;**
+<b>&gt;**
 
-**&lt;**
+<b>&lt;**
 
-**h**
+<b>h**
 
-**1**
+<b>1**
 
-**&gt;**
+<b>&gt;**
 
 Division Element #4
 
-**&lt;**
+<b>&lt;**
 
-**/h**
+<b>/h**
 
-**1**
+<b>1</b>
 
-**&gt;**
+<b>&gt;**
 
-**&lt;**
+<b>&lt;**
 
-**code**
+<b>code**
 
-**&gt;**
+<b>&gt;**
 
 position: relative;
 
-**&lt;**
+<b>&lt;**
 
-**br**
+<b>br**
 
-**/&gt;**
+<b>/&gt;**
 
 z-index: 6;
 
-**&lt;**
+<b>&lt;**
 
-**/code**
+<b>/code**
 
-**&gt;**
+<b>&gt;**
 
-**&lt;**
+<b>&lt;**
 
-**/div**
+<b>/div**
 
-**&gt;**
+<b>&gt;**
 
-**&lt;**
+<b>&lt;**
 
-**h**
+<b>h**
 
-**1**
+<b>1**
 
-**&gt;**
+<b>&gt;**
 
 Division Element #3
 
-**&lt;**
+<b>&lt;**
 
-**/h**
+<b>/h**
 
-**1**
+<b>1**
 
-**&gt;**
+<b>&gt;**
 
-**&lt;**
+<b>&lt;**
 
-**code**
+<b>code**
 
-**&gt;**
+<b>&gt;**
 
 position: absolute;
 
-**&lt;**
+<b>&lt;**
 
-**br**
+<b>br**
 
-**/&gt;**
+<b>/&gt;**
 
 z-index: 4;
 
-**&lt;**
+<b>&lt;**
 
-**/code**
+<b>/code**
 
-**&gt;**
+<b>&gt;**
 
-**&lt;**
+<b>&lt;**
 
-**div**
+<b>div**
 
 id
 
@@ -20336,57 +19852,57 @@ id
 
 &quot;div5&quot;
 
-**&gt;**
+<b>&gt;**
 
-**&lt;**
+<b>&lt;**
 
-**h**
+<b>h**
 
-**1**
+<b>1**
 
-**&gt;**
+<b>&gt;**
 
 Division Element #5
 
-**&lt;**
+<b>&lt;**
 
-**/h**
+<b>/h**
 
-**1**
+<b>1**
 
-**&gt;**
+<b>&gt;**
 
-**&lt;**
+<b>&lt;**
 
-**code**
+<b>code**
 
-**&gt;**
+<b>&gt;**
 
 position: relative;
 
-**&lt;**
+<b>&lt;**
 
-**br**
+<b>br**
 
-**/&gt;**
+<b>/&gt;**
 
 z-index: 1;
 
-**&lt;**
+<b>&lt;**
 
-**/code**
+<b>/code**
 
-**&gt;**
+<b>&gt;**
 
-**&lt;**
+<b>&lt;**
 
-**/div**
+<b>/div**
 
-**&gt;**
+<b>&gt;**
 
-**&lt;**
+<b>&lt;**
 
-**div**
+<b>div**
 
 id
 
@@ -20394,67 +19910,67 @@ id
 
 &quot;div6&quot;
 
-**&gt;**
+<b>&gt;**
 
-**&lt;**
+<b>&lt;**
 
-**h**
+<b>h**
 
-**1**
+<b>1**
 
-**&gt;**
+<b>&gt;**
 
 Division Element #6
 
-**&lt;**
+<b>&lt;**
 
-**/h**
+<b>/h**
 
-**1**
+<b>1**
 
-**&gt;**
+<b>&gt;**
 
-**&lt;**
+<b>&lt;**
 
-**code**
+<b>code**
 
-**&gt;**
+<b>&gt;**
 
 position: absolute;
 
-**&lt;**
+<b>&lt;**
 
-**br**
+<b>br**
 
-**/&gt;**
+<b>/&gt;**
 
 z-index: 3;
 
-**&lt;**
+<b>&lt;**
 
-**/code**
+<b>/code**
 
-**&gt;**
+<b>&gt;**
 
-**&lt;**
+<b>&lt;**
 
-**/div**
+<b>/div**
 
-**&gt;**
+<b>&gt;**
 
-**&lt;**
+<b>&lt;**
 
-**/div**
+<b>/div**
 
-**&gt;**
+<b>&gt;**
 
-> **CSS:**
+> <b>CSS:**
 
 #div5
 
 {
 
-**border**
+<b>border**
 
 :
 
@@ -20468,7 +19984,7 @@ dashed
 
 ;
 
-**background-color**
+<b>background-color**
 
 :
 
@@ -20482,7 +19998,7 @@ dashed
 
 {
 
-**z-index**
+<b>z-index**
 
 :
 
@@ -20490,7 +20006,7 @@ dashed
 
 ;
 
-**margin-bottom**
+<b>margin-bottom**
 
 :
 
@@ -20500,7 +20016,7 @@ px
 
 ;
 
-**padding**
+<b>padding**
 
 :
 
@@ -20524,7 +20040,7 @@ px
 
 {
 
-**z-index**
+<b>z-index**
 
 :
 
@@ -20532,7 +20048,7 @@ px
 
 ;
 
-**margin-top**
+<b>margin-top**
 
 :
 
@@ -20542,7 +20058,7 @@ px
 
 ;
 
-**padding**
+<b>padding**
 
 :
 
@@ -20562,7 +20078,7 @@ px
 
 {
 
-**z-index**
+<b>z-index**
 
 :
 
@@ -20570,7 +20086,7 @@ px
 
 ;
 
-**position**
+<b>position**
 
 :
 
@@ -20578,7 +20094,7 @@ absolute
 
 ;
 
-**top**
+<b>top**
 
 :
 
@@ -20588,7 +20104,7 @@ px
 
 ;
 
-**left**
+<b>left**
 
 :
 
@@ -20598,7 +20114,7 @@ px
 
 ;
 
-**width**
+<b>width**
 
 :
 
@@ -20608,7 +20124,7 @@ px
 
 ;
 
-**height**
+<b>height**
 
 :
 
@@ -20618,7 +20134,7 @@ px
 
 ;
 
-**border**
+<b>border**
 
 :
 
@@ -20632,7 +20148,7 @@ dashed
 
 ;
 
-**padding-top**
+<b>padding-top**
 
 :
 
@@ -20642,7 +20158,7 @@ px
 
 ;
 
-**background-color**
+<b>background-color**
 
 :
 
@@ -20650,7 +20166,7 @@ px
 
 ;
 
-**text-align**
+<b>text-align**
 
 :
 
@@ -20660,7 +20176,7 @@ center
 
 }
 
-> **Result:**
+> <b>Result:**
 
 [image260.jpg 6x3 inc](./images/image260.jpg)
 
@@ -20678,7 +20194,7 @@ img
 
 {
 
-**float**
+<b>float**
 
 :
 
@@ -20686,7 +20202,7 @@ left
 
 ;
 
-**width**
+<b>width**
 
 :
 
@@ -20696,7 +20212,7 @@ px
 
 ;
 
-**margin**
+<b>margin**
 
 :
 
@@ -20714,7 +20230,7 @@ px
 
 {
 
-**background**
+<b>background**
 
 :
 
@@ -20730,7 +20246,7 @@ px
 
 {
 
-**background**
+<b>background**
 
 :
 
@@ -20738,7 +20254,7 @@ px
 
 ;
 
-**overflow**
+<b>overflow**
 
 :
 
@@ -20785,9 +20301,9 @@ MDN
 
 <h4>HTML:</h4>
 
-**&lt;**
+<b>&lt;**
 
-**div**
+<b>div**
 
 class
 
@@ -20795,11 +20311,11 @@ class
 
 &quot;wrapper&quot;
 
-**&gt;**
+<b>&gt;**
 
-**&lt;**
+<b>&lt;**
 
-**div**
+<b>div**
 
 class
 
@@ -20807,11 +20323,11 @@ class
 
 &quot;outer&quot;
 
-**&gt;**
+<b>&gt;**
 
-**&lt;**
+<b>&lt;**
 
-**div**
+<b>div**
 
 class
 
