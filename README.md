@@ -4234,7 +4234,7 @@ quis ligula lacinia aliquet. <b>&lt;/p&gt;</b></p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 36.  (xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left" width="100%">
 <img src="./images/image036.jpg"
-  style="width:50%"
+  style="width:75%"
   title=""
   alt="." />
 </p>
@@ -4376,7 +4376,7 @@ of their width.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 37.  (xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="center" width="100%">
 <img src="./images/image037.jpg"
-  style="width:100%"
+  style="width:75%"
   title=""
   alt="." />
 </p>
@@ -4414,8 +4414,15 @@ of their width.</p>
 p {
   <b>text-align</b>: center;
 }</code></pre>
-
-[image038.jpg 7.48 x .97](./images/image038.jpg)
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 38.  (xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p align="center" width="100%">
+<img src="./images/image038.jpg"
+  style="width:75%"
+  title=""
+  alt="." />
+</p>
+<!-- [image038.jpg 7.48 x .97](./images/image038.jpg) -->
 
 <a href="http://codepen.io/vishak-kavalur/pen/bZxbBy">Codepen</a>
 
@@ -5248,8 +5255,15 @@ aNd ExAmpLe
 </code></pre>
 
 <b>Output:</b>
-
-[image039.jpg 2.34 x .375](./images/image039.jpg)
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 39.  (xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p align="center" width="100%">
+<img src="./images/image039.jpg"
+  style="width:25%"
+  title=""
+  alt="." />
+</p>
+<!-- [image039.jpg 2.34 x .375](./images/image039.jpg) -->
 
 Note: The font-variant property is a shorthand for the properties:
 font-variant-caps, font-variant-numeric, fontvariant-alternates,
@@ -5258,7 +5272,6 @@ font-variant-ligatures, and font-variant-east-asian.
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ch16">Chapter 16: Flexible Box Layout (Flexbox)</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-
 The Flexible Box module, or just &apos;flexbox&apos; for short, is a box model
 designed for user interfaces, and it allows users to align and
 distribute space among items in a container such that elements behave
@@ -6905,46 +6918,27 @@ example, to set the color of an element to blue, use the blue keyword:
 }
 </code></pre>
 
-CSS keywords are not case sensitive---blue, Blue and BLUE will all
-result in #0000FF.
->
-<b>Color Keywords</b>
+<p>CSS keywords are not case sensitive---blue, Blue and BLUE will all
+result in #0000FF.</p>
 
-<b>Color name Hex value RGB values Color</b>
-
-AliceBlue #F0F8FF rgb(240,248,255)
-
-AntiqueWhite #FAEBD7 rgb(250,235,215)
-
-Aqua #00FFFF rgb(0,255,255)
-
-Aquamarine #7FFFD4 rgb(127,255,212)
-
-Azure #F0FFFF rgb(240,255,255)
-
-Beige #F5F5DC rgb(245,245,220)
-
-Bisque #FFE4C4 rgb(255,228,196)
-
-Black #000000 rgb(0,0,0)
-
-BlanchedAlmond #FFEBCD rgb(255,235,205)
-
-Blue #0000FF rgb(0,0,255)
-
-BlueViolet #8A2BE2 rgb(138,43,226)
-
-Brown #A52A2A rgb(165,42,42)
-
-|   ---                                                          |     |
-|   BurlyWood                  #DEB887                           |     |
-|                              rgb(222,184,135)                  |     |
-|   ---                                                          |     |
-|   CadetBlue                  #5F9EA0                           |     |
-|                              rgb(95,158,160)                   |     |
-|                                                                |     |
-|   Chartreuse                 #7FFF00                           |     |
-|                              rgb(127,255,0)                    |     |
+| <b>Color Keywords</b> | <b>Color name | Hex value RGB values Color</b> |
+|-----------------------|---------------|-------------------------|
+| AliceBlue | #F0F8FF | rgb(240,248,255) |
+| AntiqueWhite #FAEBD7 | rgb(250,235,215) |
+| Aqua | #00FFFF  | rgb(0,255,255) |
+| Aquamarine  | #7FFFD4 | rgb(127,255,212) |
+| Azure | #F0FFFF  | rgb(240,255,255) |
+| Beige  | #F5F5DC | rgb(245,245,220) |
+| Bisque | #FFE4C4 | rgb(255,228,196) |
+| Black | #000000 | rgb(0,0,0) |
+| BlanchedAlmond | #FFEBCD  | rgb(255,235,205) |
+| Blue | #0000FF | rgb(0,0,255) |
+| BlueViolet | #8A2BE2 | rgb(138,43,226) |
+| Brown | #A52A2A | rgb(165,42,42) |
+|   ---  
+|   BurlyWood | #DEB887 | rgb(222,184,135)                  |
+|   CadetBlue | #5F9EA0 | rgb(95,158,160)                   |
+|   Chartreuse | #7FFF00 | rgb(127,255,0)                    |
 |                                                                |     |
 |   Chocolate                  #D2691E                           |     |
 |                              rgb(210,105,30)                   |     |
@@ -7257,74 +7251,40 @@ is 256 &Hat; 3 or 16,777,216.
 
 :
 
-#rrggbb
+#rrggbb;
 
-;
-
-<b>color</b>
-
-:
-
-&num;
-
+<b>color</b>: &num;
 rgb
 
 <b>Value Description</b>
 
+```
 rr 00 - FF for the amount of red
-
 gg
-
 00
-
 &minus;
-
 FF
-
 for the amount of green
-
 bb
-
 00
-
 &minus;
-
 FF
-
 for the amount of blue
-
 .some-class
-
 {
-
-*/&ast; This is equivalent to using the color keyword &apos;blue&apos; &ast;/*
-
-<b>color</b>
-
-:
-
-#0000FF
-
-;
-
+/* This is equivalent to using the color keyword &apos;blue&apos; */
+<b>color</b>: #0000FF;
 }
-
 .also-blue
-
 {
-
 /* If you want to specify each range value with a single number, you can!
 This is equivalent to &apos;#0000FF&apos; (and &apos;blue&apos;) */
-
 <b>color</b>
-
 :
-
 #00F
-
 ;
-
 }
+```
 
 &lbrack;&lbrack;Hexadecimal
 notation&rbrack;&rbrack;(https://en.wikipedia.org/wiki/Hexadecimal) is
@@ -7351,23 +7311,10 @@ decimal equivalent of the Hexadecimal Notation. In Hexadecimal each
 number ranges from 00-FF which is equivalent to 0-255 in decimal and
 0%-100% in percentages.
 
-.some-class
-
-{
-
+```
+.some-class {
 /* Scalar RGB, equivalent to &apos;blue&apos; */
-
-<b>color</b>
-:
-rgb
-(
-0
-,
-0
-,
-255
-)
-;
+<b>color</b>: rgb (0,0,255);
 }
 .also-blue
 {
@@ -7387,32 +7334,20 @@ rgb
 )
 ;
 }
-
 <b>Syntax</b>
-
 rgb
-
 (
-
 &lt;
-
 red
-
 &gt;
-
 ,
-
 &lt;green
-
 &gt;
-
 ,
-
 &lt;blue
-
 &gt;
-
 )
+```
 
 <b>Value Description</b>
 
@@ -7763,17 +7698,9 @@ This is a partially transparent element
 
 > 50% transparent (50% Opaque)
 
-  -----------------------------------------------------------------------
   <b>opacity</b>: 0.25;
-  -----------------------------------------------------------------------
 
-  -----------------------------------------------------------------------
-
-  -----------------------------------------------------------------------
   <b>opacity</b>: 0.0;
-  -----------------------------------------------------------------------
-
-  -----------------------------------------------------------------------
 
 > 75% transparent (25% Opaque) Transparent
 
@@ -13453,12 +13380,9 @@ height="1.3958333333333333in"}
 
 ## Section 34.1: Bullet Position
 
-  ---------------------------------------------------------------------------------------------
   **&lt;li**   **&gt;** elements inside a containing element (       **&lt;ul**   **&gt;**   **&lt;ol**
                                                                             or       
-  ---------- --------------------------------------------------- ---------- -------- ----------
 
-  ---------------------------------------------------------------------------------------------
 
 > A list consists of **&gt;**). Both the list items and the container can
 >
@@ -13479,11 +13403,8 @@ inside
 
 ;
 
-  -----------------------------------------------------------------------
   **&lt;li**
-  -----------------------------------------------------------------------
 
-  -----------------------------------------------------------------------
 
 > places the bullet within the **&gt;** element, pushing the content to
 > the right as needed.
@@ -13496,11 +13417,8 @@ outside
 
 ;
 
-  -----------------------------------------------------------------------
   **&lt;li**
-  -----------------------------------------------------------------------
 
-  -----------------------------------------------------------------------
 
 > places the bullet left of the **&gt;** element. If there is not enough
 > space in the padding of the containing element, the marker box will
@@ -13594,11 +13512,8 @@ li
 
 ## Section 34.3: Type of Bullet or Numbering
 
-  --------------------------------------------------------------------------------
   **&lt;li**   **&gt;** tags within an unordered list (                     **&lt;ul**
-  ---------- ---------------------------------------------------------- ----------
 
-  --------------------------------------------------------------------------------
 
 > Specific for **&gt;**):
 >
@@ -13607,11 +13522,8 @@ li
 > square; */&ast; A filled square &ast;/* **list-style**: &apos;-&apos;; */&ast; any
 > string &ast;/*
 
-  -------------------------------------------------------------------------------
   **&lt;li**   **&gt;** tags within an ordered list (                      **&lt;ol**
-  ---------- --------------------------------------------------------- ----------
 
-  -------------------------------------------------------------------------------
 
 > Specific for **&gt;**):
 
@@ -14174,12 +14086,9 @@ Level 3
 
 **&gt;**
 
-  ------------------------------------------------------------------------------
   list-item-number   &lbrack;1&rbrack; (counter for second level) and     list-item-number
                      nests it under                           
-  ------------------ ---------------------------------------- ------------------
 
-  ------------------------------------------------------------------------------
 
 > The above is an example of multi-level numbering using CSS counters.
 > It makes use of the ***self-nesting*** concept of counters. Self
@@ -14191,12 +14100,8 @@ Level 3
 > &lbrack;0&rbrack; (counter for first level). Thus it achieves the multi-level
 > numbering.
 
-  ------------------------------------------------------------------------------
   counters   () function instead of  counter   () function because    counters
              the                               the                    
-  ---------- ----------------------- --------- ---------------------- ----------
-
-  ------------------------------------------------------------------------------
 
 > The output is printed using the () function is designed to prefix the
 > value of all higher level counters (parent) when printing the output.
@@ -14312,11 +14217,7 @@ center
 
 }
 
-  -----------------------------------------------------------------------
   calc
-  -----------------------------------------------------------------------
-
-  -----------------------------------------------------------------------
 
 > Use () to determine the position of a background-image:
 
@@ -14368,11 +14269,7 @@ px
 
 ;
 
-  -----------------------------------------------------------------------
   calc
-  -----------------------------------------------------------------------
-
-  -----------------------------------------------------------------------
 
 > Use () to determine the height of an element:
 
@@ -14402,17 +14299,9 @@ px
 
 > Returns the value of an attribute of the selected element.
 
-  -----------------------------------------------------------------------
   data-
-  -----------------------------------------------------------------------
 
-  -----------------------------------------------------------------------
-
-  -----------------------------------------------------------------------
   ::before                      and             ::after
-  ----------------------------- --------------- -------------------------
-
-  -----------------------------------------------------------------------
 
 > Below is a blockquote element which contains a character inside a &ast;
 > attribute which CSS can use (e.g. inside the pseudo-element) using
@@ -20916,11 +20805,7 @@ scale-down
 
 <h3 id="ch52-1">Section 52.1: BEM</h3>
 
-  -------------------------------------------------------------------------
   Blocks         ,   Elements and Modifiers
-  -------------- --- ------------------------------------------------------
-
-  -------------------------------------------------------------------------
 
 > &lbrack;&lbrack;BEM&rbrack;&rbrack;(http://getbem.com/introduction/) stands for .
 > It&apos;s a methodology initially conceived by Russian tech company
