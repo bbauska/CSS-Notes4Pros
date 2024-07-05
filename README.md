@@ -1791,7 +1791,6 @@ property has no effect.</p>
 &lt;/div&gt;</b>
 
 <b>&lt;p&gt;</b>background-origin: border-box:<b>&lt;/p&gt;</b>
-
 <b>&lt;div</b> class=&quot;example example2&quot;<b>&gt;</b>
   <b>&lt;h2&gt;</b>Lorem Ipsum Dolor<b>&lt;/h2&gt;</b>
   <b>&lt;p&gt;</b>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod
@@ -1831,7 +1830,7 @@ property has no effect.</p>
 <p> In CSS3, we can stack multiple background in the same element.</p>
 
 <pre><code>#mydiv {
-  <b>background-image</b>: url(img_1.png),     /* top image */
+  <b>background-image</b>: url(img_1.png),   /* top image */
                      url (img_2.png), /* middle image */
                      url (img_3.png); /* bottom image */
   <b>background-position</b>: right bottom, 
@@ -1850,15 +1849,15 @@ img_2 and img_3 is on bottom.</p>
 
 <pre><code>#mydiv {
   <b>background</b>: url(img_1.png) right bottom no-repeat,
-               url(img_2.png) left top repeat,
-               url(img_3.png) right top no-repeat;
+              url(img_2.png) left top repeat,
+              url(img_3.png) right top no-repeat;
 }</code></pre>
 
 <p>We can also stack images and gradients:</p>
 
 <pre><code>#mydiv {
   <b>background</b>: url(image.png) right bottom no-repeat,
-               linear-gradient (to bottom, #fff 0&percnt;, #000 100&percnt;);
+              linear-gradient (to bottom, #fff 0&percnt;, #000 100&percnt;);
 }</code></pre>
 
 
@@ -1899,12 +1898,10 @@ fixed or scrolls with the rest of the page.</p>
 
 <p>The background image will be fixed and will not move when the body is scrolled:</p>
 
-<pre><code>
-body {
+<pre><code>body {
   <b>background-image</b>: url(&apos;image.jpg&apos;);
   <b>background-attachment</b>: fixed;
-}
-</code></pre>
+}</code></pre>
 
 <h4><i>background-attachment: local</i></h4>
 
@@ -1965,7 +1962,8 @@ div is scrolled.</p>
     tincidunt ut laoreet dolore magna aliquam erat volutpat.<b>&lt;/p&gt;</b>
   <b>&lt;p&gt;</b>Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut 
     aliquip ex ea commodo consequat.<b>&lt;/p&gt;</b>
-<b>&lt;/div&gt;</b>  
+<b>&lt;/div&gt;</b>
+
 <b>&lt;p&gt;</b>background-origin: content-box:<b>&lt;/p&gt;</b>
 <b>&lt;div</b> class=&quot;example example3&quot;<b>&gt;</b>
   <b>&lt;h2&gt;</b>Lorem Ipsum Dolor<b>&lt;/h2&gt;</b>
@@ -1989,18 +1987,17 @@ div is scrolled.</p>
 
 <p>Here's how a <b>background-repeat</b>: repeat-y looks like:</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~ 14. cat repeat 7x first y column (37) ~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~ 14. cat repeat 7x repeat-y column (37) ~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left" width="100%">
 <img src="./images/image014.jpg"
   style="width:75%"
-  title="Cat repeat 7x furthest left column"
-  alt="Cat repeat 7x furthest left column." />
+  title="Cat repeat 7x repeat-y furthest left column"
+  alt="Cat repeat 7x repeat-y furthest left column." />
 </p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch5-12">Section 5.12: background-blend-mode Property</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<pre><code>.my-div
-{
+<pre><code>.my-div {
   <b>width</b>:300px;
   <b>height</b>:200px;
   <b>background-size</b>:100&percnt;;
@@ -2406,6 +2403,7 @@ sure the div/image you apply the code to has a parent with a height.</p>
   narrower than the element inside */
   <b>white-space</b>: nowrap;
 }
+
 /* The ghost element */
 .block: before {
   <b>content</b>: &apos;&apos;;
@@ -2553,7 +2551,7 @@ with margin that reduces half of your content&apos;s width and height:</p>
   <b>margin-top</b>: -100px;  /* height &ast; -0.5 */
 }</code></pre>
 
-<h5>Horizontal centering with only fixed width</h5>
+<h4>Horizontal centering with only fixed width</h4>
 
 <p>You can center the element horizontally even if you don&apos;t know the height 
 of the content:</p>
@@ -2575,7 +2573,7 @@ of the content:</p>
   <b>margin-left</b>: -75px;  /* width &ast; -0.5 */
 }</code></pre>
 
-<h5>Vertical centering with fixed height</h5>
+<h4>Vertical centering with fixed height</h4>
 
 <p>You can center the element vertically if you know the element&apos;s height:</p>
 
@@ -2616,7 +2614,7 @@ of the content:</p>
 <pre><code><b>&lt;div</b> class=&quot;vcenter&minus;-container&quot;<b>&gt;</b>
   <b>&lt;div</b> class=&quot;vcenter&minus;-helper&quot;<b>&gt;</b>
     <b>&lt;div</b> class=&quot;vcenter&minus;-content&quot;<b>&gt;</b>
-      <!-- stuff -->
+      &lt;!-- stuff --&gt;
     <b>&lt;/div&gt;</b>
   <b>&lt;/div&gt;</b>
 <b>&lt;/div&gt;</b></code></pre>
@@ -2719,21 +2717,18 @@ to the content to create this rectangle.</p>
 
 <p>The perimeter of each of the four areas is called an <i>edge</i>. Each edge defines a <i>box</i>.</p>
 
-<p>The innermost rectangle is the <b>content box</b>. The width and height
-of this depends on the element&apos;s rendered content (text, images and
-any child elements it may have).</p>
-
-<p>Next is the <b>padding box</b>, as defined by the padding property. If
-there is no padding width defined, the padding edge is equal to the
-content edge.</p>
-
-<p>Then we have the <b>border box</b>, as defined by the border property. If
-there is no border width defined, the border edge is equal to the
-padding edge.</p>
-
-<p>The outermost rectangle is the <b>margin box</b>, as defined by the
-margin property. If there is no margin width defined, the margin edge
-is equal to the border edge.</p>
+<ul>
+  <li>The innermost rectangle is the <b>content box</b>. The width and height of 
+    this depends on the element&apos;s rendered content (text, images and any 
+	child elements it may have).</li>
+  <li>Next is the <b>padding box</b>, as defined by the padding property. If there 
+    is no padding width defined, the padding edge is equal to the content edge.</li>
+  <li>Then we have the <b>border box</b>, as defined by the border property. If there 
+    is no border width defined, the border edge is equal to the padding edge.</li>
+  <li>The outermost rectangle is the <b>margin box</b>, as defined by the margin 
+    property. If there is no margin width defined, the margin edge is equal to the 
+	border edge.</li>
+</ul>
 
 <h4>Example</h4>
 
@@ -2755,7 +2750,7 @@ our generated box will look like this:</p>
   title="Generated box from border 5px, margin 50px, and padding 20px"
   alt="Generated box from border 5px, margin 50px, and padding 20px." />
 </p>
-<h6>Screenshot of Google Chrome&apos;s Element Styles panel</h6>
+<h6><i>Screenshot of Google Chrome&apos;s Element Styles panel</i></h6>
 
 <ul>
   <li>As there is no content, the content region (the blue box in the middle) has no height or width (0px by 0px).</li>
@@ -2832,9 +2827,9 @@ property available:</p>
 </ul>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~ 20. content, padding, border, and margin (53) ~~~~~~~~~~~~~~~~~~~~~~~-->
-<p align="center" width="100%">
+<p align="left" width="100%">
 <img src="./images/image020.png"
-  style="width:100%"
+  style="width:60%"
   title="content, padding, border, and margin"
   alt="content, padding, border, and margin." />
 </p>
@@ -2870,7 +2865,7 @@ overwrite this property on individual elements.</p>
 |-------------------|------------------------------------------------------------------|
 | 0                 | set margin to none. |
 | auto              | used for centering, by evenly setting values on each side units. |
-| (e.g. px)         | see parameter section in Units for a list of valid units.
+| units (e.g. px)   | see parameter section in Units for a list of valid units.
 | inherit           | inherit margin value from parent element. 
 | initial           | restore to initial value. |
 
@@ -2887,7 +2882,6 @@ collapsed. When two margins touch horizontally, they do not collapse.</p>
 <pre><code>div {
   <b>margin</b>: 10px;
 }
-
 <b>&lt;div&gt;</b>
   some content
 <b>&lt;/div&gt;</b>
@@ -2905,7 +2899,6 @@ other. (The spacing will not be the sum of two margins.)</p>
 <pre><code>span {
   <b>margin</b>: 10px;
 }
-
 <b>&lt;span&gt;</b>some<b>&lt;/span&gt;&lt;span&gt;</b>content<b>&lt;/span&gt;</b></code></pre>
 
 <p>They will be 20px apart since horizontal margins don&apos;t collapse over
@@ -2958,8 +2951,8 @@ spacing between the elements.</p>
 <p>What will be the spacing between the two texts? (hover to see answer)</p>
 
 <blockquote>
-The spacing will be 25px. Since all four margins are touching each
-other, they will collapse, thus using the largest margin of the four.
+  The spacing will be 25px. Since all four margins are touching each
+  other, they will collapse, thus using the largest margin of the four.
 </blockquote>
 
 <p>Now, what about if we add some borders to the markup above.</p>
@@ -2971,11 +2964,11 @@ other, they will collapse, thus using the largest margin of the four.
 <p>What will be the spacing between the two texts? (hover to see answer)</p>
 
 <blockquote>
-The spacing will be 59px! Now only the margins of .outer-top and
-.outer-bottom touch each other, and are the only collapsed margins.
-The remaining margins are separated by the borders. So we have 1px +
-10px + 1px + 15px + 20px + 1px + 25px + 1px. (The 1px&apos;s are the
-borders&period;..)
+  The spacing will be 59px! Now only the margins of .outer-top and
+  .outer-bottom touch each other, and are the only collapsed margins.
+  The remaining margins are separated by the borders. So we have 1px +
+  10px + 1px + 15px + 20px + 1px + 25px + 1px. (The 1px&apos;s are the
+  borders&period;..)
 </blockquote>
 
 <h4>Collapsing Margins Between Parent and Child Elements:</h4>
@@ -3053,8 +3046,8 @@ this is as follows:</p>
 
 <p>The following example applies a zero-width margin to the top of the
 div, a 10px margin to the right side, a 50px margin to the left side,
-and a 100px margin to the left side. <a href="https://jsfiddle.net/1979c947/">View
-Result.</p>
+and a 100px margin to the left side. <a href="https://jsfiddle.net/1979c947/"><i>View
+Result</i>.</p>
 
 <h4>HTML:</h4>
 
@@ -3074,13 +3067,13 @@ Result.</p>
 <pre><code>p {
   <b>margin</b>: 1px; /* 1px margin in all directions */
 
-  /* equals to: */
+  /* equal to: */
   <b>margin</b>: 1px 1px;
 
-  /* equals to: */
+  /* equal to: */
   <b>margin</b>: 1px 1px 1px;
 
-  /* equals to: */
+  /* equal to: */
   <b>margin</b>: 1px 1px 1px 1px;
 }</code></pre>
 
@@ -3094,10 +3087,8 @@ Result.</p>
 
   /* equal to: */
   <b>margin</b>: 10px 15px 10px;
-
   /* margin left will be calculated from the margin right value (=15px) */
 }</code></pre>
-
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch8-4">Section 8.4: Horizontally center elements on a page using margin</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -3132,11 +3123,11 @@ margin-left and margin-right would be relative to its parent element.</p>
 
 <pre><code>
 .parent {
-  <b>width</b>: 500px;
+  <b>width</b> : 500px;
   <b>height</b>: 300px;
 }
 .child {
-  <b>width</b>: 100px;
+  <b>width</b> : 100px;
   <b>height</b>: 100px;
   <b>margin-left</b>: 10&percnt;; /* (parentWidth &ast; 10/100) =&gt; 50px */
 }
@@ -3149,11 +3140,11 @@ of the parent container but to the <b>width</b> of the parent container.</p>
 <p>So,</p>
 
 <pre><code>.parent {
-  <b>width</b>: 500px;
+  <b>width</b> : 500px;
   <b>height</b>: 300px;
 }
 .child {
-  <b>width</b>: 100px;
+  <b>width</b> : 100px;
   <b>height</b>: 100px;
   <b>margin-left</b>: 10&percnt;;  /* (parentWidth &ast; 10/100) =&gt; 50px */
   <b>margin-top</b>: 20&percnt;;  /* (parentWidth &ast; 20/100) =&gt; 100px */
@@ -10873,7 +10864,9 @@ On the X axis:
   <b>transform</b>: translateY ( 50&percnt; );
 }</code></pre>
 
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch28-6">Section 28.6: Transform Origin</h3>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 Transformations are done with respect to a point which is defined by
 the transform-origin property.
@@ -11107,10 +11100,11 @@ height="2.3645833333333335in"}
 
 **Screenshot of element with 3D transform:**
 
-!&lbrack;&rbrack;(./images/image211.jpg){width="0.7395833333333334in"
-height="2.4791666666666665in"}
+[image211.jpg .739 x 2.47](./images/image211.jpg)
 
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch29-2">Section 29.2: 3D text eect with shadow</h3>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 <h4>HTML:</h4>
 
@@ -11804,7 +11798,9 @@ Should be noted that:
   | sepia(x)      | Converts the image to sepia with a maximum value of |
   |               |  1.0 or 100%. |
 
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch30-1">Section 30.1: Blur</h3>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 <h4>HTML:</h4>
 
@@ -11938,10 +11934,11 @@ green
 
 > **Result**
 
-!&lbrack;&rbrack;(./images/image215.jpg){width="2.40625in"
-height="0.5729166666666666in"}
+[image215 2.406 x .572](./images/image215.jpg)
 
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch30-3">Section 30.3: Hue Rotate</h3>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 <h4>HTML:</h4>
 >
@@ -11993,9 +11990,10 @@ deg
 !&lbrack;&rbrack;(./images/image216.jpg){width="2.2604166666666665in"
 height="2.8125in"}
 
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch30-4">Section 30.4: Multiple Filter Values</h3>
-
-> To use multiple filters, separate each value with a space.
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p>To use multiple filters, separate each value with a space.</p>
 
 <h4>HTML:</h4>
 
@@ -12102,13 +12100,13 @@ invert
 
 }
 
-> **Result**
+<h4>Result</h4>
 
-!&lbrack;&rbrack;(./images/image217.jpg){width="2.1145833333333335in"
-height="2.7083333333333335in"}
+[image217 2.114 x 2.708](./images/image217.jpg)
 
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch30-5">Section 30.5: Invert Color</h3>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>HTML:</h4>
 
 **&lt;**
@@ -12258,45 +12256,30 @@ HTML element &lbrack;&lbrack;1&rbrack;&rbrack;
 > &lbrack;&lbrack;https://developer.mozilla.org/en-US/docs/Web/CSS/pointer-events&rbrack;&rbrack;(https://developer.mozilla.org/en-US/docs/Web/CSS/pointer-events)
 > &lbrack;&lbrack;https://davidwalsh.name/pointer-events&rbrack;&rbrack;(https://davidwalsh.name/pointer-events)
 
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch31-3">Section 31.3: caret-color</h3>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p>The caret-color CSS property specifies the color of the caret, the
+visible indicator of the insertion point in an element where text and
+other content is inserted by the user&apos;s typing or editing.</p>
 
-> The caret-color CSS property specifies the color of the caret, the
-> visible indicator of the insertion point in an element where text and
-> other content is inserted by the user&apos;s typing or editing.
->
 <h4>HTML:</h4>
 
-**&lt;**
+```
+**&lt;****input** id=&quot;example&quot;**/&gt;**
+```
 
-**input**
+<h4>CSS</h4>
 
-id
-
-=
-
-&quot;example&quot;
-
-**/&gt;**
-
-> <h4>CSS</h4>
-
-#example
-
-{
-
-**caret-color**
-
-:
-
-red
-
-;
-
+```
+#example {
+  **caret-color**: red;
 }
+```
 
-> Resources:
->
-> &lbrack;&lbrack;https://developer.mozilla.org/en-US/docs/Web/CSS/caret-color&rbrack;&rbrack;(https://developer.mozilla.org/en-US/docs/Web/CSS/caret-color)
+<h4>Resources:</h4>
+
+[!https://developer.mozilla.org/en-US/docs/Web/CSS/caret-color](https://developer.mozilla.org/en-US/docs/Web/CSS/caret-color)
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ch32">Chapter 32: box-shadow</h2>
@@ -12319,12 +12302,14 @@ red
 
 color can be of various notations: a color keyword, hexadecimal,
 
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch32-1">Section 32.1: bottom-only drop shadow using a pseudoelement</h3>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 JSFiddle:
 &lbrack;&lbrack;https://jsfiddle.net/UnsungHero97/80qod7aL/2/&rbrack;&rbrack;(https://jsfiddle.net/UnsungHero97/80qod7aL/2/)
 
-> <h4>HTML:</h4>
+<h4>HTML:</h4>
 
 **&lt;**
 
@@ -12546,12 +12531,13 @@ px
 
 }
 
-!&lbrack;&rbrack;(./images/image220.jpg){width="6.25in" height="3.75in"}
+[image220.jpg 6.25 x 3.75](./images/image220.jpg)
 
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch32-2">Section 32.2: drop shadow</h3>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
-JSFiddle:
-&lbrack;&lbrack;https://jsfiddle.net/UnsungHero97/80qod7aL/&rbrack;&rbrack;(https://jsfiddle.net/UnsungHero97/80qod7aL/)
+<a href="https://jsfiddle.net/UnsungHero97/80qod7aL/&rbrack;&rbrack;(https://jsfiddle.net/UnsungHero97/80qod7aL/">Demo (JSFiddle):</a>
 
 <h4>HTML:</h4>
 
@@ -12573,395 +12559,112 @@ class
 
 **&gt;**
 
-> <h4>CSS</h4>
+<h4>CSS</h4>
 
+```
 .box_shadow
-
 {
-
 -webkit-box-shadow
-
 :
-
 0
-
 px
-
 0
-
 px
-
 10
-
 px
-
 -1
-
 px
-
 #444444
-
 ;
-
 -moz-box-shadow
-
 :
-
 0
-
 px
-
 0
-
 px
-
 10
-
 px
-
 -1
-
 px
-
 #444444
-
 ;
-
 **box-shadow**
-
 :
-
 0
-
 px
-
 0
-
 px
-
 10
-
 px
-
 -1
-
 px
-
 #444444
-
 ;
-
 }
+```
 
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch32-3">Section 32.3: inner drop shadow</h3>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 <h4>HTML:</h4>
 
-**&lt;**
-
-**div**
-
-class
-
-=
-
-&quot;box_shadow&quot;
-
-**&gt;**
-
-**&lt;**
-
-**/div**
-
-**&gt;**
-
-> <h4>CSS</h4>
-
-.box_shadow
-
-{
-
-**background-color**
-
-:
-
-#1C90F3
-
-;
-
-**width**
-
-:
-
-200
-
-px
-
-;
-
-**height**
-
-:
-
-100
-
-px
-
-;
-
-**margin**
-
-:
-
-50
-
-px
-
-;
-
--webkit-box-shadow
-
-:
-
-inset
-
-0
-
-px
-
-0
-
-px
-
-10
-
-px
-
-0
-
-px
-
-#444444
-
-;
-
--moz-box-shadow
-
-:
-
-inset
-
-0
-
-px
-
-0
-
-px
-
-10
-
-px
-
-0
-
-px
-
-#444444
-
-;
-
-**box-shadow**
-
-:
-
-inset
-
-0
-
-px
-
-0
-
-px
-
-10
-
-px
-
-0
-
-px
-
-#444444
-
-;
-
+```
+**&lt;****div** class=&quot;box_shadow&quot;**&gt;****&lt;****/div****&gt;**
+```
+
+<h4>CSS</h4>
+
+```
+.box_shadow {
+  **background-color**: #1C90F3;
+  **width**: 200px;
+  **height**: 100px;
+  **margin**: 50px;
+  -webkit-box-shadow: inset 0px 0px 10px 0px #444444;
+  -moz-box-shadow: inset 0px 0px 10px 0px #444444;
+  **box-shadow**: inset 0px 0px 10px 0px #444444;
 }
+```
 
-> **Result:**
+<h4>Result:</h4>
 
-!&lbrack;&rbrack;(./images/image221.jpg){width="2.6458333333333335in"
-height="1.5416666666666667in"}
+[image221.jpg 2.645 x 1.541](./images/image221.jpg)
 
-JSFiddle:
-&lbrack;&lbrack;https://jsfiddle.net/UnsungHero97/80qod7aL/1/&rbrack;&rbrack;(https://jsfiddle.net/UnsungHero97/80qod7aL/1/)
+<a href="https://jsfiddle.net/UnsungHero97/80qod7aL/1/&rbrack;&rbrack;(https://jsfiddle.net/UnsungHero97/80qod7aL/1/">Demo (JSFiddle):</a>
 
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch32-4">Section 32.4: multiple shadows</h3>
-
-JSFiddle:
-&lbrack;&lbrack;https://jsfiddle.net/UnsungHero97/80qod7aL/5/&rbrack;&rbrack;(https://jsfiddle.net/UnsungHero97/80qod7aL/5/)
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<a href="https://jsfiddle.net/UnsungHero97/80qod7aL/5/&rbrack;&rbrack;(https://jsfiddle.net/UnsungHero97/80qod7aL/5/">Demo (JSFiddle):</a>
 
 <h4>HTML:</h4>
 
-**&lt;**
-
-**div**
-
-class
-
-=
-
-&quot;box_shadow&quot;
-
-**&gt;**
-
-**&lt;**
-
-**/div**
-
-**&gt;**
+```
+<b>&lt;</b><b>div</b> class=&quot;box_shadow&quot;<b>&gt;</b><b>&lt;</b><b>/div</b><b>&gt;</b>
+```
 
 > <h4>CSS</h4>
 
-.box_shadow
-
-{
-
-**width**
-
-:
-
-100
-
-px
-
-;
-
-**height**
-
-:
-
-100
-
-px
-
-;
-
-**margin**
-
-:
-
-100
-
-px
-
-;
-
-**box-shadow**
-
-:
-
--52
-
-px
-
--52
-
-px
-
-0
-
-px
-
-0
-
-px
-
-#f65314
-
-,
-
-52
-
-px
-
--52
-
-px
-
-0
-
-px
-
-0
-
-px
-
-#7cbb00
-
-,
-
--52
-
-px
-
-52
-
-px
-
-0
-
-px
-
-0
-
-px
-
-#00a1f1
-
-,
-
-52
-
-px
-
-52
-
-px
-
-0
-
-px
-
-0
-
-px
-
-#ffbb00
-
-;
-
+```
+.box_shadow {
+  <b>width</b>: 100px;
+  <b>height</b>: 100px;
+  <b>margin</b>: 100px;
+  <b>box-shadow</b>: -52px -52px 0px 0px #f65314, 
+                   52px -52px 0px 0px #7cbb00,
+                  -52px 52px 0px 0px #00a1f1,
+                   52px 52px 0px 0px #ffbb00;
 }
+```
 
-!&lbrack;&rbrack;(./images/image222.jpg){width="6.125in"
-height="5.833333333333333in"}
+[image222 6.125 x 5.833](./images/image222.jpg)
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ch33">Chapter 33: Shapes for Floats</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
-**Parameter Details**
+<b>Parameter Details</b>
 
 > A value of none means that the float area (the area that is used for
 > wrapping content around a float none element) is unaffected. This is
@@ -13004,7 +12707,7 @@ nth-of-type
 
 {
 
-**shape-outside**
+<b>shape-outside</b>
 
 :
 
@@ -13030,7 +12733,7 @@ at
 
 ;
 
-**float**
+<b>float</b>
 
 :
 
@@ -13038,7 +12741,7 @@ left
 
 ;
 
-**width**
+<b>width</b>
 
 :
 
@@ -13064,7 +12767,7 @@ nth-of-type
 
 {
 
-**shape-outside**
+<b>shape-outside</b>
 
 :
 
@@ -13090,7 +12793,7 @@ at
 
 ;
 
-**float**
+<b>float</b>
 
 :
 
@@ -13098,7 +12801,7 @@ right
 
 ;
 
-**width**
+<b>width</b>
 
 :
 
@@ -13114,7 +12817,7 @@ p
 
 {
 
-**text-align**
+<b>text-align</b>
 
 :
 
@@ -13122,7 +12825,7 @@ center
 
 ;
 
-**line-height**
+<b>line-height</b>
 
 :
 
@@ -13138,16 +12841,16 @@ px
 
 <h4>HTML:</h4>
 >
-> **&lt;img**
-> src=&quot;http://images.clipartpanda.com/circle-clip-art-circlergb.jpg&quot;**&gt;**
+> <b>&lt;img</b>
+> src=&quot;http://images.clipartpanda.com/circle-clip-art-circlergb.jpg&quot;<b>&gt;</b>
 >
-> **&lt;img**
-> src=&quot;http://images.clipartpanda.com/circle-clip-art-circlergb.jpg&quot;**&gt;**
+> <b>&lt;img</b>
+> src=&quot;http://images.clipartpanda.com/circle-clip-art-circlergb.jpg&quot;<b>&gt;</b>
 >
-> **&lt;p&gt;**Some paragraph whose text content is required to be wrapped
+> <b>&lt;p&gt;</b>Some paragraph whose text content is required to be wrapped
 > such that it follows the curve of the circle on either side. And then
 > there is some filler text just to make the text long enough. Lorem
-> Ipsum Dolor Sit Amet&period;...**&lt;/p&gt;**
+> Ipsum Dolor Sit Amet&period;...<b>&lt;/p&gt;</b>
 >
 > In the above example, both the images are actually square images and
 > when the text is placed without the shapeoutside property, it will not
@@ -13162,12 +12865,12 @@ px
 >
 > Below are a couple of screenshots to illustrate how the content would
 > be wrapped around when shape-outside is used and when it is not used.
-> **Output with shape-outside**
+> <b>Output with shape-outside</b>
 
 !&lbrack;&rbrack;(./images/image223.jpg){width="3.3333333333333335in"
 height="1.3229166666666667in"}
 
-> **Output without shape-outside**
+> <b>Output without shape-outside</b>
 
 !&lbrack;&rbrack;(./images/image224.jpg){width="3.3333333333333335in"
 height="1.4895833333333333in"}
@@ -13192,7 +12895,7 @@ nth-of-type
 
 {
 
-**shape-outside**
+<b>shape-outside</b>
 
 :
 
@@ -13218,7 +12921,7 @@ at
 
 ;
 
-**shape-margin**
+<b>shape-margin</b>
 
 :
 
@@ -13228,7 +12931,7 @@ px
 
 ;
 
-**float**
+<b>float</b>
 
 :
 
@@ -13236,7 +12939,7 @@ left
 
 ;
 
-**width**
+<b>width</b>
 
 :
 
@@ -13262,7 +12965,7 @@ nth-of-type
 
 {
 
-**shape-outside**
+<b>shape-outside</b>
 
 :
 
@@ -13288,7 +12991,7 @@ at
 
 ;
 
-**shape-margin**
+<b>shape-margin</b>
 
 :
 
@@ -13298,7 +13001,7 @@ px
 
 ;
 
-**float**
+<b>float</b>
 
 :
 
@@ -13306,7 +13009,7 @@ right
 
 ;
 
-**width**
+<b>width</b>
 
 :
 
@@ -13322,7 +13025,7 @@ p
 
 {
 
-**text-align**
+<b>text-align</b>
 
 :
 
@@ -13330,7 +13033,7 @@ center
 
 ;
 
-**line-height**
+<b>line-height</b>
 
 :
 
@@ -13346,23 +13049,23 @@ px
 
 <h4>HTML:</h4>
 >
-> **&lt;img**
-> src=&quot;http://images.clipartpanda.com/circle-clip-art-circlergb.jpg&quot;**&gt;**
+> <b>&lt;img</b>
+> src=&quot;http://images.clipartpanda.com/circle-clip-art-circlergb.jpg&quot;<b>&gt;</b>
 >
-> **&lt;img**
-> src=&quot;http://images.clipartpanda.com/circle-clip-art-circlergb.jpg&quot;**&gt;**
+> <b>&lt;img</b>
+> src=&quot;http://images.clipartpanda.com/circle-clip-art-circlergb.jpg&quot;<b>&gt;</b>
 >
-> **&lt;p&gt;**Some paragraph whose text content is required to be wrapped
+> <b>&lt;p&gt;</b>Some paragraph whose text content is required to be wrapped
 > such that it follows the curve of the circle on either side. And then
 > there is some filler text just to make the text long enough. Lorem
-> Ipsum Dolor Sit Amet&period;...**&lt;/p&gt;**
+> Ipsum Dolor Sit Amet&period;...<b>&lt;/p&gt;</b>
 >
-> In this example, a 10px margin is added around the **shape** using
+> In this example, a 10px margin is added around the <b>shape</b> using
 > shape-margin. This creates a bit more space between the *imaginary
 > circle* that defines the float area and the actual content that is
 > flowing around.
 >
-> **Output:**
+> <b>Output:</b>
 
 !&lbrack;&rbrack;(./images/image225.jpg){width="3.3333333333333335in"
 height="1.3958333333333333in"}
@@ -13371,7 +13074,7 @@ height="1.3958333333333333in"}
 <h2 id="ch34">Chapter 34: List Styles</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
-> **Value Description** list-style-type the type of list-item marker.
+> <b>Value Description</b> list-style-type the type of list-item marker.
 >
 > list-style-position specifies where to place the marker
 > list-style-image specifies the type of list-item marker initial sets
@@ -13380,11 +13083,11 @@ height="1.3958333333333333in"}
 
 ## Section 34.1: Bullet Position
 
-  **&lt;li**   **&gt;** elements inside a containing element (       **&lt;ul**   **&gt;**   **&lt;ol**
+  <b>&lt;li</b>   <b>&gt;</b> elements inside a containing element (       <b>&lt;ul</b>   <b>&gt;</b>   <b>&lt;ol</b>
                                                                             or       
 
 
-> A list consists of **&gt;**). Both the list items and the container can
+> A list consists of <b>&gt;</b>). Both the list items and the container can
 >
 > have margins and paddings which influence the exact position of the
 > list item content in the document. The default values for the margin
@@ -13395,7 +13098,7 @@ height="1.3958333333333333in"}
 > marker. This box can either be placed inside or outside of the list
 > item box.
 
-**list-style-position**
+<b>list-style-position</b>
 
 :
 
@@ -13403,13 +13106,13 @@ inside
 
 ;
 
-  **&lt;li**
+  <b>&lt;li</b>
 
 
-> places the bullet within the **&gt;** element, pushing the content to
+> places the bullet within the <b>&gt;</b> element, pushing the content to
 > the right as needed.
 
-**list-style-position**
+<b>list-style-position</b>
 
 :
 
@@ -13417,10 +13120,10 @@ outside
 
 ;
 
-  **&lt;li**
+  <b>&lt;li</b>
 
 
-> places the bullet left of the **&gt;** element. If there is not enough
+> places the bullet left of the <b>&gt;</b> element. If there is not enough
 > space in the padding of the containing element, the marker box will
 > extend to the left even if it would fall off the page.
 >
@@ -13432,45 +13135,45 @@ outside
 > Sometimes, a list should just not display any bullet points or
 > numbers. In that case, remember to specify margin and padding.
 
-**&lt;**
+<b>&lt;</b>
 
-**ul**
+<b>ul</b>
 
-**&gt;**
+<b>&gt;</b>
 
-**&lt;**
+<b>&lt;</b>
 
-**li**
+<b>li</b>
 
-**&gt;**
+<b>&gt;</b>
 
 first item
 
-**&lt;**
+<b>&lt;</b>
 
-**/li**
+<b>/li</b>
 
-**&gt;**
+<b>&gt;</b>
 
-**&lt;**
+<b>&lt;</b>
 
-**li**
+<b>li</b>
 
-**&gt;**
+<b>&gt;</b>
 
 second item
 
-**&lt;**
+<b>&lt;</b>
 
-**/li**
+<b>/li</b>
 
-**&gt;**
+<b>&gt;</b>
 
-**&lt;**
+<b>&lt;</b>
 
-**/ul**
+<b>/ul</b>
 
-**&gt;**
+<b>&gt;</b>
 
 > CSS
 
@@ -13478,7 +13181,7 @@ ul
 
 {
 
-**list-style-type**
+<b>list-style-type</b>
 
 :
 
@@ -13492,7 +13195,7 @@ li
 
 {
 
-**margin**
+<b>margin</b>
 
 :
 
@@ -13500,7 +13203,7 @@ li
 
 ;
 
-**padding**
+<b>padding</b>
 
 :
 
@@ -13512,92 +13215,78 @@ li
 
 ## Section 34.3: Type of Bullet or Numbering
 
-  **&lt;li**   **&gt;** tags within an unordered list (                     **&lt;ul**
+  <b>&lt;li</b>   <b>&gt;</b> tags within an unordered list (                     <b>&lt;ul</b>
 
 
-> Specific for **&gt;**):
+> Specific for <b>&gt;</b>):
 >
-> **list-style**: disc; */&ast; A filled circle (default) &ast;/*
-> **list-style**: circle; */&ast; A hollow circle &ast;/* **list-style**:
-> square; */&ast; A filled square &ast;/* **list-style**: &apos;-&apos;; */&ast; any
+> <b>list-style</b>: disc; */&ast; A filled circle (default) &ast;/*
+> <b>list-style</b>: circle; */&ast; A hollow circle &ast;/* <b>list-style</b>:
+> square; */&ast; A filled square &ast;/* <b>list-style</b>: &apos;-&apos;; */&ast; any
 > string &ast;/*
 
-  **&lt;li**   **&gt;** tags within an ordered list (                      **&lt;ol**
+  <b>&lt;li</b>   <b>&gt;</b> tags within an ordered list (                      <b>&lt;ol</b>
 
 
-> Specific for **&gt;**):
+> Specific for <b>&gt;</b>):
 
-**list-style**: decimal; */&ast; Decimal numbers beginning with 1 (default)
-&ast;/* **list-style**: decimal-leading-zero;*/&ast; Decimal numbers padded by
-initial zeros (01, 02, 03,* ... *10) &ast;/* **list-style**: lower-roman;
+<b>list-style</b>: decimal; */&ast; Decimal numbers beginning with 1 (default)
+&ast;/* <b>list-style</b>: decimal-leading-zero;*/&ast; Decimal numbers padded by
+initial zeros (01, 02, 03,* ... *10) &ast;/* <b>list-style</b>: lower-roman;
 */&ast; Lowercase roman numerals (i., ii., iii., iv., &period;..) &ast;/*
-**list-style**: upper-roman; */&ast; Uppercase roman numerals (I., II.,
-III., IV., &period;..) &ast;/* **list-style-type**: lower-greek; */&ast; Lowercase
-roman letters (*α*.,* β*.,* γ*.,* δ*., &period;..) &ast;/* **list-style-type**:
+<b>list-style</b>: upper-roman; */&ast; Uppercase roman numerals (I., II.,
+III., IV., &period;..) &ast;/* <b>list-style-type</b>: lower-greek; */&ast; Lowercase
+roman letters (*α*.,* β*.,* γ*.,* δ*., &period;..) &ast;/* <b>list-style-type</b>:
 lower-alpha; */&ast; Lowercase letters (a., b., c., d., &period;..) &ast;/*
-**list-style-type**: lower-latin; */&ast; Lowercase letters (a., b., c.,
-d., &period;..) &ast;/* **list-style-type**: upper-alpha; */&ast; Uppercase letters
-(A., B., C., D., &period;..) &ast;/* **list-style-type**: upper-latin; */&ast;
+<b>list-style-type</b>: lower-latin; */&ast; Lowercase letters (a., b., c.,
+d., &period;..) &ast;/* <b>list-style-type</b>: upper-alpha; */&ast; Uppercase letters
+(A., B., C., D., &period;..) &ast;/* <b>list-style-type</b>: upper-latin; */&ast;
 Uppercase letters (A., B., C., D., &period;..) &ast;/* Non-specific:
 
-> **list-style**: none; */&ast; No visible list marker &ast;/* **list-style**:
+> <b>list-style</b>: none; */&ast; No visible list marker &ast;/* <b>list-style</b>:
 > inherit; */&ast; Inherits from parent &ast;/*
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ch35">Chapter 35: Counters</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
-| Para  | &gt; Details                                              |
-| meter |                                                            |
+| Parameter  | &gt; Details                                              |
 |---------|------------------------------------------------------------|
 | count   | This is the name of the counter that needs to be created   |
 | er-name | or incremented or printed. It can be any custom name as    |
 |         | the developer wishes.                                      |
-|---------|------------------------------------------------------------|
 | integer | This integer is an optional value that when provided next  |
 |         | to the counter name will represent the initial value of    |
 |         | the counter (in counter-set, counter-reset properties) or  |
 |         | the value by which the counter should be incremented (in   |
 |         | counter-increment).                                        |
 
-  counter-
+<p>This is the initial value for all 3 &ast; properties. When this value is
+used for counter-none increment, the value of none of the counters are affected. When
+this is used for the other two, no counter is created.
+This specifies the style in which the counter value needs to be
+displayed. It supports all values counter-style supported by the list-style-type property. If none is used
+then the counter value is not printed at all.</p>
 
-
-> This is the initial value for all 3 &ast; properties. When this value is
-> used for counter-
-
-none increment, the value of none of the counters are affected. When
-this is used for the other two, no
-
-> counter is created.
->
-> This specifies the style in which the counter value needs to be
-> displayed. It supports all values
-
-counter-style supported by the list-style-type property. If none is used
-then the counter value is not printed
-
-> at all.
->
-> This represents the string that must be placed between the values of
-> two different counter levels
->
-> connector-string (like the &quot;.&quot; in &quot;2.1.1&quot;).
-
+<p>This represents the string that must be placed between the values of
+two different counter levels connector-string (like the &quot;.&quot; in &quot;2.1.1&quot;).
+</p>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch35-1">Section 35.1: Applying roman numerals styling to the counter output</h3>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 <h4>CSS</h4>
 
 ```
 body 
 {
-  **counter-reset**: item-counter;
+  <b>counter-reset</b>: item-counter;
 }
 .item {
-  **counter-increment**: item-counter;
+  <b>counter-increment</b>: item-counter;
 }
 .item: before {
-  **content**: counter (
+  <b>content</b>: counter (
 item-counter, upper-roman 
 )
 &quot;. &quot;;
@@ -13609,36 +13298,36 @@ item-counter, upper-roman
 <h4>HTML:</h4>
 
 ```
-**&lt;**
-**div**
+<b>&lt;</b>
+<b>div</b>
 class
 =
 &apos;item&apos;
-**&gt;**
+<b>&gt;</b>
 Item No: 1
-**&lt;**
-**/div**
-**&gt;**
-**&lt;**
-**div**
+<b>&lt;</b>
+<b>/div</b>
+<b>&gt;</b>
+<b>&lt;</b>
+<b>div</b>
 class
 =
 &apos;item&apos;
-**&gt;**
+<b>&gt;</b>
 Item No: 2
-**&lt;**
-**/div**
-**&gt;**
-**&lt;**
-**div**
+<b>&lt;</b>
+<b>/div</b>
+<b>&gt;</b>
+<b>&lt;</b>
+<b>div</b>
 class
 =
 &apos;item&apos;
-**&gt;**
+<b>&gt;</b>
 Item No: 3
-**&lt;**
-**/div**
-**&gt;**
+<b>&lt;</b>
+<b>/div</b>
+<b>&gt;</b>
 ```
 
 <p>In the above example, the counter&apos;s output would be displayed as I,
@@ -14424,7 +14113,9 @@ primary-color
 > &lbrack;&lbrack;caniuse.com&rbrack;&rbrack;(http://caniuse.com/#feat=css-variables)
 > for the latest browser support.
 
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch36-4">Section 36.4: radial-gradient() function</h3>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 > Creates an image representing a gradient of colors radiating from the
 > center of the gradient
@@ -14433,7 +14124,9 @@ primary-color
 > the middle of the gradient, red at the center, then orange, until it
 > is finally yellow at the edges&ast;/*
 
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch36-5">Section 36.5: linear-gradient() function</h3>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 > Creates a image representing a linear gradient of colors.
 
@@ -14482,193 +14175,114 @@ blue
 > places. This makes changing values easier and is more semantic than
 > using traditional CSS values.
 
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch37-1">Section 37.1: Variable Color</h3>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
+```
 :
-
 root
-
 {
-
 &minus;-
-
 red
-
 :
-
 #b00
-
 ;
-
 &minus;-
-
 blue
-
 :
-
 #4679bd
-
 ;
-
 &minus;-
-
 grey
-
 :
-
 #ddd
-
 ;
-
 }
-
 .Bx1
-
 {
-
 **color**
-
 :
-
 var
-
 (
-
 &minus;-
-
 red
-
 )
-
 ;
-
 **background**
-
 :
-
 var
-
 (
-
 &minus;-
-
 grey
-
 )
-
 ;
-
 **border**
-
 :
-
 1
-
 px
-
 solid
-
 var
-
 (
-
 &minus;-
-
 red
-
 )
-
 ;
-
 }
+```
 
-## Section 37.2: Variable Dimensions
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h3 id="ch37-2">Section 37.2: Variable Dimensions</h3>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
+```
 :
-
 root
-
 {
-
 &minus;-W200
-
 :
-
 200
-
 px
-
 ;
-
 &minus;-
-
 W
-
 10
-
 :
-
 10
-
 px
-
 ;
-
 }
-
 .Bx2
-
 {
-
 **width**
-
 :
-
 var
-
 (
-
 &minus;-W200
-
 )
-
 ;
-
 **height**
-
 :
-
 var
-
 (
-
 &minus;-W200
-
 )
-
 ;
-
 **margin**
-
 :
-
 var
-
 (
-
 &minus;-
-
 W
-
 10
-
 )
-
 ;
-
 }
+```
 
-## Section 37.3: Variable Cascading
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h3 id="ch37-3">Section 37.3: Variable Cascading</h3>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 > CSS variables cascade in much the same way as other properties, and
 > can be restated safely.
@@ -14845,7 +14459,9 @@ red
 !&lbrack;&rbrack;(./images/image226.jpg){width="3.71875in"
 height="0.6041666666666666in"}
 
-## Section 37.4: Valid/Invalids
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h3 id="ch37-4">Section 37.4: Valid/Invalids</h3>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 > **Naming** When naming CSS variables, it contains only letters and
 > dashes just like other CSS properties (eg: lineheight,
@@ -14901,348 +14517,209 @@ px
 
 //Valid variable names
 
+```
 &minus;-
-
 color
-
 :
-
 red
-
 ;
-
 &minus;-
-
 bg-color
-
 :
-
 yellow
-
 &minus;-
-
 width
-
 :
-
 100
-
 px
-
 ;
+```
 
 > **CSS Variables are case sensitive.**
 
-*/&ast; The variable names below are all different variables &ast;/*
+/* The variable names below are all different variables */
 
+```
 &minus;-
-
 pcolor
-
 :
-
 ;
-
 &minus;-
-
 Pcolor
-
 :
-
 ;
-
 &minus;-
-
 pColor
-
 :
-
 ;
+```
 
 > **Empty Vs Space**
 
-*/&ast; Invalid &ast;/*
-
+/* Invalid */
+```
 &minus;-
-
 color
-
 :
-
 ;
+```
 
-*/&ast; Valid &ast;/*
-
+/* Valid */
+```
 &minus;-
-
 color
-
 :
-
 ;
-
-*/&ast; space is assigned &ast;/*
+```
+/* space is assigned */
 
 > **Concatenations**
 
-*/&ast; Invalid - CSS doesn&apos;t support concatenation&ast;/*
-
+/* Invalid - CSS doesn&apos;t support concatenation */
+```
 .logo
-
 {
-
 &minus;-
-
 logo-url
-
 :
-
 &apos;logo&apos;
-
 ;
-
 **background**
-
 :
-
 url
-
 (
-
 &apos;assets/img/&apos;
-
 var
-
 (
-
 &minus;-
-
 logo-url
-
 )
-
 &apos;.png&apos;
-
 )
-
 ;
-
 }
+```
 
-*/&ast; Invalid - CSS bug &ast;/*
+/* Invalid - CSS bug */
 
+```
 .logo
-
 {
-
 &minus;-
-
 logo-url
-
 :
-
 &apos;assets/img/logo.png&apos;
-
 ;
-
 **background**
-
 :
-
 url
-
 (
-
 var
-
 (
-
 &minus;-
-
 logo-url
-
 )
-
 )
-
 ;
-
 }
+```
 
-*/&ast; Valid &ast;/*
-
+/* Valid */
+```
 .logo
-
 {
-
 &minus;-
-
 logo-url
-
 :
-
 url
-
 (
-
 &apos;assets/img/logo.png&apos;
-
 )
-
 ;
-
 **background**
-
 :
-
 var
-
 (
-
 &minus;-
-
 logo-url
-
 )
-
 ;
-
 }
+```
 
 > **Careful when using Units**
 
-*/&ast; Invalid &ast;/*
-
+/* Invalid */
+```
 &minus;-
-
 width
-
 :
-
 10
-
 ;
-
 **width**
-
 :
-
 var
-
 (
-
 &minus;-
-
 width
-
 )
-
 px
-
 ;
-
-*/&ast; Valid &ast;/*
-
+/* Valid */
 &minus;-
-
 width
-
 :
-
 10
-
 px
-
 ;
-
 **width**
-
 :
-
 var
-
 (
-
 &minus;-
-
 width
-
 )
-
 ;
-
-*/&ast; Valid &ast;/*
-
+/* Valid */
 &minus;-
-
 width
-
 :
-
 10
-
 ;
-
 **width**
-
 :
-
 calc
-
 (
-
 1
-
 px
-
 &ast;
-
 var
-
 (
-
 &minus;-
-
 width
-
 )
-
 )
-
 ;
-
-*/&ast; multiply by 1 unit to convert &ast;/*
-
+/* multiply by 1 unit to convert */
 **width**
-
 :
-
 calc
-
 (
-
 1
-
 em
-
 &ast;
-
 var
-
 (
-
 &minus;-
-
 width
-
 )
-
 )
-
 ;
+```
 
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch37-5">Section 37.5: With media queries</h3>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 > You can re-set variables within media queries and have those new
 > values cascade wherever they are used, something that isn&apos;t possible
 > with pre-processor variables.
