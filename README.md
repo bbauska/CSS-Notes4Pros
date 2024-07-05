@@ -985,7 +985,7 @@ Selectors Level 4:</p>
 
 <h4>CSS:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~ 02. input focused, background blue (0x) ~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~ 02. input focused, background blue (19) ~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <div style="load: right">
   <img src="./images/image002.png"
     align="right"
@@ -1005,7 +1005,7 @@ Selectors Level 4:</p>
   }</code></pre>
 </p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~ 03. :focus-within css pseudo-class (0x) ~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~ 03. :focus-within css pseudo-class (19) ~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="center" width="100%">
 <img src="./images/image003.png"
   style="width:100%"
@@ -1522,7 +1522,7 @@ an image with height and width of 50 px:</p>
 <p>So if we started with the following picture (which has the mentioned
 size of 256 px × 256 px),</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<!--~~~~~~~~~~~~~~~~ 04. 256 x 256 image, circle, triangle and square (xx) ~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~ 04. 256 x 256 image, circle, triangle and square (28) ~~~~~~~~~~~~~~~~~~-->
 <p align="left" width="100%">
 <img src="./images/image004.png"
   style="width:256px height:256px;"
@@ -1532,7 +1532,7 @@ size of 256 px × 256 px),</p>
 <p>we&apos;ll end up with a 50 px × 50 px on the user&apos;s screen, contained in
 the background of our element:</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<!--~~~~~~~~~~~~~~~~~~~~ 05. 50px x 50px; circle, triangle, and square (xx) ~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~ 05. 50px x 50px; circle, triangle, and square (28) ~~~~~~~~~~~~~~~~~~~~-->
 <p align="left" width="100%">
 <img src="./images/image005.png"
   style="width:50px height:50px;"
@@ -1555,7 +1555,7 @@ image:</p>
   <b>margin</b>: 0; 
 }</code></pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<!--~~~~~~~~~~~~~~~~~~~~~~ 06. 200x200, circle, triangle and square (xx) ~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~ 06. 200x200, circle, triangle and square (28) ~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left" width="100%">
 <img src="./images/image006.png"
   style="width:200px height:200px;"
@@ -1587,7 +1587,7 @@ picture of the day by Biswarup Ganguly</a> for demonstration. Lets say that
 this is your screen, and the gray area is outside of your visible screen. For 
 demonstration, we're going to assume a 16 x 9 ratio.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 07. rectangle 16x9 (xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 07. rectangle 16x9 (29) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left" width="100%">
 <img src="./images/image007.png"
   style="width:50%"
@@ -1614,7 +1614,7 @@ size such that both its width and its height can fit inside the background posit
 contained in the background positioning area, however, there could be
 some empty space filled with your background-color in this case:</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 09. egg in a frame (xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 09. egg in a frame (29) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left" width="100%">
 <img src="./images/image009.png"
   style="width:50%"
@@ -1634,12 +1634,12 @@ that both its width and height can completely cover the background positioning a
 There will be no visible background-color, however depending on the
 screen&apos;s ratio a great part of your image could be cut off:</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 11. egg in a frame, #2 (xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 11. egg in a frame, #2 (30) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left" width="100%">
 <img src="./images/image011.png"
   style="width:50%"
-  title=""
-  alt="." />
+  title="Egg in a frame, #2"
+  alt="Egg in a frame, #2." />
 </p>
 
 <h4>Demonstration with actual code</h4>
@@ -1697,7 +1697,7 @@ div &gt; div::after {
     the image<b>&lt;em&gt;</b>covers<b>&lt;/em&gt;</b> all of the <b>&lt;code&gt;</b>&lt;div&gt;<b>&lt;/code&gt;</b>.<b>&lt;/p&gt;</b>
 <b>&lt;/div&gt;</b></code></pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~ 12. example, contain & cover images (xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~ 12. example, contain & cover images (31) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left" width="100%">
 <img src="./images/image012.png"
   style="width:50%"
@@ -1811,7 +1811,7 @@ property has no effect.</p>
 
 <h5>Result:</h5>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 13.  (xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~ 13. background-origin - 3 images (34) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left" width="100%">
 <img src="./images/image013.jpg"
   style="width:100%"
@@ -1989,12 +1989,12 @@ div is scrolled.</p>
 
 <p>Here's how a <b>background-repeat</b>: repeat-y looks like:</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~ 14. cat repeat first y column (xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~ 14. cat repeat 7x first y column (37) ~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left" width="100%">
 <img src="./images/image014.jpg"
   style="width:75%"
-  title="Cat repeat furthest left column"
-  alt="Cat repeat furthest left column." />
+  title="Cat repeat 7x furthest left column"
+  alt="Cat repeat 7x furthest left column." />
 </p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch5-12">Section 5.12: background-blend-mode Property</h3>
@@ -2204,12 +2204,12 @@ IE8 and older versions.</p>
 
 <h5>Result:</h5>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~ 15. this is a centered paragraph (xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~ 15. this is a centered paragraph with jet on landing strip (42) ~~~~~~~~~~~~~~-->
 <p align="center" width="100%">
 <img src="./images/image015.jpg"
   style="width:100%"
-  title="This is a centered paragraph"
-  alt="This is a centered paragraph." />
+  title="This is a centered paragraph with jet on landing strip"
+  alt="This is a centered paragraph with jet on landing strip." />
 </p>
 
 <p>JSFiddle example: Centering objects with margin: 0
@@ -2706,12 +2706,12 @@ of the content:</p>
 The Box Model describes how the padding, border, and margin are added
 to the content to create this rectangle.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 16.  (xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~ 16. box-model: margin, border, padding & content (51) ~~~~~~~~~~~~~~~~~~~~-->
 <p align="left" width="100%">
 <img src="./images/image016.png"
   style="width:50%"
-  title=""
-  alt="." />
+  title="Box-model: margin, border, padding &amp; content"
+  alt="Box-model: margin, border, padding &amp; content." />
 </p>
 <!-- [image016.png](./images/image016.png)  <!-- 4.7" -->
 
@@ -2748,7 +2748,7 @@ border of 5px in width; a top, right, bottom and left margin of 50px;
 and a top, right, bottom, and left padding of 20px. Ignoring content,
 our generated box will look like this:</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<!--~~~~~~~~~~ 17. generated box from border 5px, margin 50px, and padding 20px (xx) ~~~~~~~~~~~-->
+<!--~~~~~~~~~~ 17. generated box from border 5px, margin 50px, and padding 20px (52) ~~~~~~~~~~~-->
 <p align="left" width="100%">
 <img src="./images/image017.jpg"
   style="width:20%"
@@ -2772,11 +2772,11 @@ looks at the Box Model of both elements to work out where in relation
 to the previous element&apos;s content the new element should be
 positioned:</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 18.  (xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~ 18. separate images with 150px gap (52) ~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left" width="100%">
 <img src="./images/image018.jpg"
   style="width:40%"
-  title=""
+  title="Separate images with 150px gap of padding+border+margin"
   alt="Separate images with 150px gap of padding+border+margin." />
 </p>
 <!-- [image018.jpg 3.6" width, 1.5" height](./images/image018.jpg) -->
@@ -2788,11 +2788,11 @@ two elements&apos; boxes touch each other.</p>
 margin edge would be in the same position as the right border edge,
 and our two elements would now look like this:</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 19.  (xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~ 19. Remove right margin from 1st image (52) ~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left" width="100%">
 <img src="./images/image019.jpg"
   style="width:40%"
-  title=""
+  title="Remove right margin from 1st image"
   alt="Remove right margin from 1st image." />
 </p>
 <!-- [image019.jpg 3.45" x 1.54"](./images/image019.jpg) -->
@@ -2831,7 +2831,7 @@ property available:</p>
     the border.</li>
 </ul>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 20.  (xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~ 20. content, padding, border, and margin (53) ~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="center" width="100%">
 <img src="./images/image020.png"
   style="width:100%"
@@ -3194,7 +3194,7 @@ padding-left etc) can you write it as a shorthand, as below:</p>
 <b>&lt;/style&gt;</b>
 <b>&lt;div</b> class=&quot;myDiv&quot;<b>&gt;&lt;/div&gt;</b></code></pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 21a.  (xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~ 21a. padding: 25, 50, 75 100px (61) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left" width="100%">
 <img src="./images/image021a.png"
   style="width:15%"
@@ -3211,7 +3211,7 @@ padding-left etc) can you write it as a shorthand, as below:</p>
   <b>&lt;/style&gt;</b>
 <b>&lt;div</b> class=&quot;myDiv&quot;<b>&gt;&lt;/div&gt;</b></code></pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 21b.  (xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~ 21b. padding: 25, 50, 75, 50px (61) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left" width="100%">
 <img src="./images/image021b.png"
   style="width:15%"
@@ -3228,7 +3228,7 @@ padding-left etc) can you write it as a shorthand, as below:</p>
 <b>&lt;/style&gt;</b>
 <b>&lt;div</b> class=&quot;myDiv&quot;<b>&gt;&lt;/div&gt;</b></code></pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 21c.  (xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~ 21c. padding: 25, 50, 25, 50px (61) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left" width="100%">
 <img src="./images/image021c.png"
   style="width:15%"
@@ -3245,7 +3245,7 @@ padding-left etc) can you write it as a shorthand, as below:</p>
 <b>&lt;/style&gt;</b>
 <b>&lt;div</b> class=&quot;myDiv&quot;<b>&gt;&lt;/div&gt;</b></code></pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 21d.  (xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~ 21d. padding: 25, 25, 25, 25px (62) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left" width="100%">
 <img src="./images/image021d.png"
   style="width:15%"
@@ -3288,12 +3288,12 @@ box model.</p>
 <p>Every corner of an element can have up to two values, for the vertical
 and horizontal radius of that corner (for a maximum of 8 values).</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 25.  (xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 25. border top left radius (64) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left" width="100%">
 <img src="./images/image025.jpg"
   style="width:60%"
-  title=""
-  alt="." />
+  title="Border top left radius"
+  alt="Border top left radius." />
 </p>
 <!-- [image025.jpg 6.14 x 1.93](./images/image025.jpg) -->
 
@@ -3376,7 +3376,7 @@ element one value.)</p>
 <pre><code><b>border-style</b>: dotted;
 <b>border-style</b>: dotted solid double dashed;</code></pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<!--~~~~~~~~~~ 26. border-style property sets the style of an element's border (xx) ~~~~~~~~~~~~-->
+<!--~~~~~~~~~~ 26. border-style property sets the style of an element's border (64) ~~~~~~~~~~~~-->
 <p align="left" width="100%">
 <img src="./images/image026.png"
   style="width:60%"
@@ -3432,12 +3432,12 @@ highest priority (meaning in a conflict, the border would not show).</p>
   <b>bottom</b>: 5px;
 }</code></pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 27.  (xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 27. 3 div border examples (66) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left" width="100%">
 <img src="./images/image027.jpg"
   style="width:15%"
-  title=""
-  alt="." />
+  title="3 div border examples"
+  alt="3 div border examples." />
 </p>
 <!-- [image027.jpg 1.458 x 4.021](./images/image027.jpg) -->
 
@@ -3524,7 +3524,7 @@ more information about gradients in the docs). You can find more
 information about border-image-slice property in the border-image
 example in same page.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 28. border on all sides (xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 28. border on all sides (67) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left" width="100%">
 <img src="./images/image028.png"
   style="width:35%"
@@ -3550,7 +3550,7 @@ color. If it was a to bottom gradient the top border would be the
 gradient&apos;s start color and bottom border would be end color. Below is
 the output of a bottom 5 colored gradient.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 29.  (xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~ 29. bottom 5 colored gradient (68) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left" width="100%">
 <img src="./images/image029.png"
   style="width:35%"
@@ -3566,12 +3566,12 @@ on the top of the element.</p>
 
 <pre><code><b>border-width</b>: 5px 0px 0px 0px;</code></pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 30.  (xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~ 30. border-width: 5px 0px 0px 0px (68) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left" width="100%">
 <img src="./images/image030.png"
   style="width:35%"
-  title=""
-  alt="." />
+  title="border-width: 5px 0px 0px 0px"
+  alt="border-width: 5px 0px 0px 0px." />
 </p>
 <p>Note that, any element that has border-image property <b>won&apos;t respect
 the</b> border-radius (that is the border won&apos;t curve). This is based
@@ -3687,7 +3687,7 @@ an element.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ch12">Chapter 12: Overflow</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 31.  (xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 31.  (70) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left" width="100%">
 <img src="./images/image031.png"
   style="width:50%"
@@ -3738,12 +3738,12 @@ style=&quot;red;&quot;<b>&gt;</b>supercalifragilisticexpialidocious<b>&lt;/span&
 on the next line.
 <b>&lt;/div&gt;</b></code></pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 32.  (xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 32. div, overflow-wrap (72) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="center" width="100%">
 <img src="./images/image032.jpg"
   style="width:100%"
-  title=""
-  alt="." />
+  title="div, overflow-wrap"
+  alt="div, overflow-wrap." />
 </p>
 <!--[image032.jpg 7.48 x 4.27](./images/image032.jpg) -->
 
@@ -3752,15 +3752,13 @@ on the next line.
 <p>normal Lets a word overflow if it is longer than the line break-word
 Will split a word into multiple lines, if necessary inherit Inherits
 the parent element&apos;s value for this property</p>
-
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch12-2">Section 12.2: overflow-x and overflow-y</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-
-These two properties work in a similar fashion as the overflow
+<p>These two properties work in a similar fashion as the overflow
 property and accept the same values. The overflow-x parameter works
 only on the x or left-to-right axis. The overflow-y works on the y or
-top-to-bottom axis.
+top-to-bottom axis.</p>
 
 <h4>HTML:</h4>
 
@@ -3805,12 +3803,12 @@ top-to-bottom axis.
 
 <h5>Result:</h5>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 33.  (xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~ 33. width 100, height 100 with overflow: scroll (73) ~~~~~~~~~~~~~~~~~~~~-->
 <p align="left" width="100%">
 <img src="./images/image033.jpg"
   style="width:10%"
-  title=""
-  alt="." />
+  title="width: 100, height: 100 with overflow: scroll"
+  alt="width: 100, height: 100 with overflow: scroll." />
 </p>
 <!-- [image033.jpg 1.16 x 1.18](./images/image033.jpg) -->
 
@@ -3840,12 +3838,12 @@ environment. Printers may print overflowing content.</p>
 
 <h5>Result</h5>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 34.  (xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~ 34. width 50, height 50 with overflow: visible (74) ~~~~~~~~~~~~~~~~~~~~-->
 <p align="left" width="100%">
 <img src="./images/image034.jpg"
   style="width:10%"
-  title=""
-  alt="." />
+  title="width 50, height 50 with overflow: visible"
+  alt="width 50, height 50 with overflow: visible." />
 </p>
 <!-- [image034.jpg .67 x 2.427](./images/image034.jpg) -->
 
@@ -3878,18 +3876,17 @@ div {
 
 <h5>Result:</h5>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 35.  (xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~ 35. 2 images; without overflow & with overflow: hidden (75) ~~~~~~~~~~~~~~~~~-->
 <p align="center" width="100%">
 <img src="./images/image035.jpg"
   style="width:50%"
-  title=""
-  alt="." />
+  title="2 images; 1 without overflow & 1 with overflow: hidden"
+  alt="2 images; 1 without overflow & 1 with overflow: hidden." />
 </p>
 <!-- [imge035.jpg 6.375 x 3.76](./images/image035.jpg) -->
 
-> This example shows how paragraphs within a div with the overflow
-> property set will interact with a floated image.
-
+<p>This example shows how paragraphs within a div with the overflow
+property set will interact with a floated image.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ch13">Chapter 13: Media Queries</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -4487,231 +4484,112 @@ iaculis vel, suscipit quis, luctus non, massa. Fusce ac turpis quis ligula lacin
 <b>&lt;div</b> class=&quot;wrapper&quot;<b>&gt;</b>
 <b>&lt;div</b> class=&quot;left-sidebar&quot;<b>&gt;</b>
 <b>&lt;h1&gt;</b>Left Sidebar<b>&lt;/h1&gt;</b>
-<b>&lt;p&gt;</b>Lorem ipsum dolor sit amet, consectetur adipiscing elit.<b>&lt;</b><b>/p</b><b>&gt;</b>
-<b>&lt;</b><b>/div</b><b>&gt;</b>
-<b>&lt;</b><b>div</b> class=&quot;content&quot;<b>&gt;</b>
+<b>&lt;p&gt;</b>Lorem ipsum dolor sit amet, consectetur adipiscing elit.<b>&lt;/p&gt;</b>
+<b>&lt;/div&gt;</b>
+<b>&lt;div</b> class=&quot;content&quot;<b>&gt;</b>
 <b>&lt;h1&gt;</b>Content<b>&lt;</b>
-<b>/h</b><b>1</b><b>&gt;</b>
-<b>&lt;</b><b>p</b><b>&gt;</b>
+<b>/h1&gt;</b>
+<b>&lt;p&gt;</b>
 Class aptent taciti sociosqu ad litora torquent per conubia nostra, per
 inceptos himenaeos. Curabitur sodales ligula in libero. Sed dignissim lacinia nunc.
 Curabitur tortor. Pellentesque nibh. Aenean quam. In scelerisque sem at dolor. Maecenas mattis. Sed
 convallis tristique sem. Proin ut ligula vel nunc egestas porttitor. Morbi lectus risus, iaculis vel,
 suscipit quis, luctus non, massa.
-
-<b>&lt;</b>
-
-<b>/p</b>
-
-<b>&gt;</b>
-
-<b>&lt;</b>
-
-<b>/div</b>
-
-<b>&gt;</b>
-
-<b>&lt;</b>
-
-<b>div</b>
-
-class
-
-=
-
-&quot;right-sidebar&quot;
-
-<b>&gt;</b>
-
-<b>&lt;</b>
-
-<b>h</b>
-
-<b>1</b>
-
-<b>&gt;</b>
-
+<b>&lt;/p&gt;</b>
+<b>&lt;/div&gt;</b>
+<b>&lt;div</b> class=&quot;right-sidebar&quot;<b>&gt;</b>
+<b>&lt;h1&gt;</b>
 Right Sidebar
-
 <b>&lt;</b>
-
 <b>/h</b>
-
 <b>1</b>
-
 <b>&gt;</b>
-
 <b>&lt;</b>
-
 <b>p</b>
-
 <b>&gt;</b>
-
 Fusce ac turpis quis ligula lacinia aliquet.
-
 <b>&lt;</b>
-
 <b>/p</b>
-
 <b>&gt;</b>
-
 <b>&lt;</b>
-
 <b>/div</b>
-
 <b>&gt;</b>
-
 <b>&lt;</b>
-
 <b>/div</b>
-
 <b>&gt;</b>
+</code</pre>
 
-CSS:
+<h4>CSS:</h4>
 
+```
 .wrapper
-
 {
-
 <b>width</b>
-
 :
-
 600
-
 px
-
 ;
-
 <b>background-color</b>
-
 :
-
 pink
-
 ;
-
-<b>padding</b>
-
-:
-
-20
-
-px
-
-;
-
-*/&ast; Floated elements don&apos;t use any height. Adding &quot;overflow:hidden;&quot;
-forces the*
-
-*parent element to expand to contain its floated children. &ast;/*
-
+<b>padding</b>: 20px;
+/* Floated elements don&apos;t use any height. Adding &quot;overflow:hidden;&quot;
+  forces the parent element to expand to contain its floated children. */
 <b>overflow</b>
-
 :
-
 hidden
-
 ;
-
 }
-
 .left-sidebar
-
 {
-
 <b>width</b>
-
 :
-
 150
-
 px
-
 ;
-
 <b>background-color</b>
-
 :
-
 blue
-
 ;
-
 <b>float</b>
-
 :
-
 left
-
 ;
-
 }
-
 .content
-
 {
-
 <b>width</b>
-
 :
-
 300
-
 px
-
 ;
-
 <b>background-color</b>
-
 :
-
 yellow
-
 ;
-
 <b>float</b>
-
 :
-
 left
-
 ;
-
 }
-
 .right-sidebar
-
 {
-
 <b>width</b>
-
 :
-
 150
-
 px
-
 ;
-
 <b>background-color</b>
-
 :
-
 green
-
 ;
-
 <b>float</b>
-
 :
-
 right
-
 ;
-
 }
-
+```
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch14-8">Section 14.8: Two-Column Lazy/Greedy Layout</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -5305,56 +5183,35 @@ element
 
 <h4>CSS</h4>
 
-<pre><code>
-.normal
-{
-<b>word-spacing</b>
-:
-normal
-;
+<pre><code>.normal {
+  <b>word-spacing</b>: normal;
 }
-.narrow
-{
-<b>word-spacing</b>
-:
--3
-px
-;
+.narrow {
+  <b>word-spacing</b>: -3px;
 }
-.extensive
-{
-<b>word-spacing</b>
-:
-10
-px
-;
-}
-</code></pre>
+.extensive {
+  <b>word-spacing</b>: 10px;
+}</code></pre>
 
 <h4>HTML:</h4>
 
+```
 <b>&lt;p&gt;</b>
-
 <b>&lt;span</b> class=&quot;normal&quot;<b>&gt;</b>This is an example, showing the
 effect of &quot;word-spacing&quot;.<b>&lt;/span&gt;&lt;br&gt;</b>
-
 <b>&lt;span</b> class=&quot;narrow&quot;<b>&gt;</b>This is an example, showing the
 effect of &quot;word-spacing&quot;.<b>&lt;/span&gt;&lt;br&gt;</b> <b>&lt;span</b>
 class=&quot;extensive&quot;<b>&gt;</b>This is an example, showing the effect of
 &quot;word-spacing&quot;.<b>&lt;/span&gt;&lt;br&gt;</b>
-
 <b>&lt;/p&gt;</b>
-
 <b>Online-Demo</b>
-
 &lbrack;&lbrack;Try it yourself&rbrack;&rbrack;(https://jsfiddle.net/91742Lxt/)
-
 <b>Further reading:</b>
-
 &lbrack;&lbrack;word-spacing&rbrack; &lbrack;--&rbrack;
 &lbrack;MDN&rbrack;&rbrack;(https://developer.mozilla.org/de/docs/Web/CSS/word-spacing)
 &lbrack;&lbrack;word-spacing&rbrack; &lbrack;--&rbrack;
 &lbrack;w3.org&rbrack;&rbrack;(https://www.w3.org/wiki/CSS/Properties/word-spacing)
+```
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch15-13">Section 15.13: Font Variant</h3>
@@ -13791,11 +13648,8 @@ Uppercase letters (A., B., C., D., &period;..) &ast;/* Non-specific:
 |         | the value by which the counter should be incremented (in   |
 |         | counter-increment).                                        |
 
-  -----------------------------------------------------------------------
   counter-
-  -----------------------------------------------------------------------
 
-  -----------------------------------------------------------------------
 
 > This is the initial value for all 3 &ast; properties. When this value is
 > used for counter-
@@ -13818,496 +13672,257 @@ then the counter value is not printed
 >
 > connector-string (like the &quot;.&quot; in &quot;2.1.1&quot;).
 
-## Section 35.1: Applying roman numerals styling to the counter output
+<h3 id="ch35-1">Section 35.1: Applying roman numerals styling to the counter output</h3>
 
-> <h4>CSS</h4>
+<h4>CSS</h4>
 
-body
-
+```
+body 
 {
-
-**counter-reset**
-
-:
-
-item-counter
-
-;
-
+  **counter-reset**: item-counter;
 }
-
-.item
-
-{
-
-**counter-increment**
-
-:
-
-item-counter
-
-;
-
+.item {
+  **counter-increment**: item-counter;
 }
-
-.item
-
-:
-
-before
-
-{
-
-**content**
-
-:
-
-counter
-
-(
-
-item-counter
-
-,
-
-upper-roman
-
+.item: before {
+  **content**: counter (
+item-counter, upper-roman 
 )
-
-&quot;. &quot;
-
-;
-
-*/&ast; by specifying the upper-roman as style the*
-
-*output would be in roman numbers &ast;/*
-
+&quot;. &quot;;
+/* by specifying the upper-roman as style the
+   output would be in roman numbers */
 }
+```
 
 <h4>HTML:</h4>
 
+```
 **&lt;**
-
 **div**
-
 class
-
 =
-
 &apos;item&apos;
-
 **&gt;**
-
 Item No: 1
-
 **&lt;**
-
 **/div**
-
 **&gt;**
-
 **&lt;**
-
 **div**
-
 class
-
 =
-
 &apos;item&apos;
-
 **&gt;**
-
 Item No: 2
-
 **&lt;**
-
 **/div**
-
 **&gt;**
-
 **&lt;**
-
 **div**
-
 class
-
 =
-
 &apos;item&apos;
-
 **&gt;**
-
 Item No: 3
-
 **&lt;**
-
 **/div**
-
 **&gt;**
+```
 
-> In the above example, the counter&apos;s output would be displayed as I,
-> II, III (roman numbers) instead of the usual 1, 2, 3 as the developer
-> has explicitly specified the counter&apos;s style.
+<p>In the above example, the counter&apos;s output would be displayed as I,
+II, III (roman numbers) instead of the usual 1, 2, 3 as the developer
+has explicitly specified the counter&apos;s style.</p>
 
 ## Section 35.2: Number each item using CSS Counter
 
-> <h4>CSS</h4>
+<h4>CSS</h4>
 
+```
 body
-
 {
-
 **counter-reset**
-
 :
-
 item-counter
-
 ;
-
 */&ast; create the counter &ast;/*
-
 }
-
 .item
-
 {
-
 **counter-increment**
-
 :
-
 item-counter
-
 ;
-
-*/&ast; increment the counter every time an element with class &quot;item&quot;*
-
-*is encountered &ast;/*
-
+/* increment the counter every time an element with class &quot;item&quot;*
+  is encountered */
 }
-
 .item-header
-
 :
-
 before
-
 {
-
 **content**
-
 :
-
 counter
-
 (
-
 item-counter
-
 )
-
 &quot;. &quot;
-
 ;
-
 */&ast; print the value of the counter before the header and*
-
 *append a &quot;.&quot; to it &ast;/*
-
 }
-
 */&ast; just for demo &ast;/*
-
 .item
-
 {
-
 **border**
-
 :
-
 1
-
 px
-
 solid
-
 ;
-
 **height**
-
 :
-
 100
-
 px
-
 ;
-
 **margin-bottom**
-
 :
-
 10
-
 px
-
 ;
-
 }
-
 .item-header
-
 {
-
 **border-bottom**
-
 :
-
 1
-
 px
-
 solid
-
 ;
-
 **height**
-
 :
-
 40
-
 px
-
 ;
-
 **line-height**
-
 :
-
 40
-
 px
-
 ;
-
 **padding**
-
 :
-
 5
-
 px
-
 ;
-
 }
-
 .item-content
-
 {
-
 **padding**
-
 :
-
 8
-
 px
-
 ;
-
 }
+```
 
 <h4>HTML:</h4>
 
+```
 **&lt;**
-
 **div**
-
 class
-
 =
-
 &apos;item&apos;
-
 **&gt;**
-
 **&lt;**
-
 **div**
-
 class
-
 =
-
 &apos;item-header&apos;
-
 **&gt;**
-
 Item 1 Header
-
 **&lt;**
-
 **/div**
-
 **&gt;**
-
 **&lt;**
-
 **div**
-
 class
-
 =
-
 &apos;item-content&apos;
-
 **&gt;**
-
 Lorem Ipsum Dolor Sit Amet&period;...
-
 **&lt;**
-
 **/div**
-
 **&gt;**
-
 **&lt;**
-
 **/div**
-
 **&gt;**
-
 **&lt;**
-
 **div**
-
 class
-
 =
-
 &apos;item&apos;
-
 **&gt;**
-
 **&lt;**
-
 **div**
-
 class
-
 =
-
 &apos;item-header&apos;
-
 **&gt;**
-
 Item 2 Header
-
 **&lt;**
-
 **/div**
-
 **&gt;**
-
 **&lt;**
-
 **div**
-
 class
-
 =
-
 &apos;item-content&apos;
-
 **&gt;**
-
 Lorem Ipsum Dolor Sit Amet&period;...
-
 **&lt;**
-
 **/div**
-
 **&gt;**
-
 **&lt;**
-
 **/div**
-
 **&gt;**
-
 **&lt;**
-
 **div**
-
 class
-
 =
-
 &apos;item&apos;
-
 **&gt;**
-
 **&lt;**
-
 **div**
-
 class
-
 =
-
 &apos;item-header&apos;
-
 **&gt;**
-
 Item 3 Header
-
 **&lt;**
-
 **/div**
-
 **&gt;**
-
 **&lt;**
-
 **div**
-
 class
-
 =
-
 &apos;item-content&apos;
-
 **&gt;**
-
 Lorem Ipsum Dolor Sit Amet&period;...
-
 **&lt;**
-
 **/div**
-
 **&gt;**
-
 **&lt;**
-
 **/div**
-
 **&gt;**
+```
 
-  -----------------------------------------------------------------------
   :before
-  -----------------------------------------------------------------------
 
-  -----------------------------------------------------------------------
 
-> The above example numbers every &quot;item&quot; in the page and adds the
-> item&apos;s number before its header (using content property of
-> .item-header element&apos;s pseudo). A live demo of this code is available
-> &lbrack;&lbrack;here&rbrack;&rbrack;(https://jsfiddle.net/a7rmje3r/).
+<p>The above example numbers every &quot;item&quot; in the page and adds the
+item&apos;s number before its header (using content property of
+.item-header element&apos;s pseudo). A live demo of this code is available
+&lbrack;&lbrack;here&rbrack;&rbrack;(https://jsfiddle.net/a7rmje3r/).</p>
 
 ## Section 35.3: Implementing multi-level numbering using CSS counters
 
