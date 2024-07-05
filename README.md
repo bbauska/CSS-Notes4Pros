@@ -4517,6 +4517,7 @@ Fusce ac turpis quis ligula lacinia aliquet.
 <b>&gt;</b>
 </code</pre>
 
+
 <h4>CSS:</h4>
 
 ```
@@ -4624,65 +4625,39 @@ quis ligula lacinia aliquet. Mauris ipsum. Nulla metus metus,
 ullamcorper vel, tincidunt sed, euismod in, nibh. <b>&lt;/p&gt; &lt;/div&gt;</b>
 CSS:
 
+```
 .sidebar
-
 {
-
-*/&ast; &apos;display:table;&apos; shrink-wraps the column &ast;/*
-
+/* &apos;display:table;&apos; shrink-wraps the column */
 <b>display</b>
-
 :
-
 table
-
 ;
-
 <b>float</b>
-
 :
-
 left
-
 ;
-
 <b>background-color</b>
-
 :
-
 blue
-
 ;
-
 }
-
 .content
-
 {
-
-*/&ast; &apos;overflow:hidden;&apos; prevents &apos;.content&apos; from flowing under
-&apos;.sidebar&apos; &ast;/*
-
+/* &apos;overflow:hidden;&apos; prevents &apos;.content&apos; from flowing under
+  &apos;.sidebar&apos; */
 <b>overflow</b>
-
 :
-
 hidden
-
 ;
-
 <b>background-color</b>
-
 :
-
 yellow
-
 ;
-
 }
+```
 
 &lbrack;&lbrack;Fiddle&rbrack;&rbrack;(https://jsfiddle.net/ooprqsL0/)
-
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ch15">Chapter 15: Typography</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -4721,116 +4696,70 @@ inherit;
 
 With the syntax:
 
+```
 element
-
 {
-
 <b>font</b>
-
 :
-
 &lbrack;
-
 font-style
-
 &rbrack;
-
 &lbrack;
-
 font-variant
-
 &rbrack;
-
 &lbrack;
-
 font-weight
-
 &rbrack;
-
 &lbrack;
-
 font-size/line-height
-
 &rbrack;
-
 &lbrack;
-
 font-family
-
 &rbrack;
-
 ;
-
 }
+```
 
 You can have all your font-related styles in one declaration with the
 font shorthand. Simply use the font property, and put your values in
 the correct order.
->
+
 For example, to make all p elements bold with a font size of 20px and
 using Arial as the font family typically you would code it as follows:
 
+```
 p
-
 {
-
 <b>font-weight</b>
-
 :
-
 bold
-
 ;
-
 <b>font-size</b>
-
 :
-
 20
-
 px
-
 ;
-
 <b>font-family</b>
-
 :
-
 Arial
-
 ,
-
 sans-serif
-
 ;
-
 }
-
 However with the font shorthand it can be condensed as follows:
-
 p
-
 {
-
 <b>font</b>
-
 :
-
 bold
-
 20
-
 px
-
 Arial
-
 ,
-
 sans-serif
-
 ;
-
 }
+```
 
 <b>Note</b>: that since font-style, font-variant, font-weight and
 line-height are optional, the three of them are skipped in this
@@ -8686,7 +8615,7 @@ table-column Let the element behave like a **&gt;** element table-row
 Let the element behave like a **&gt;** element list-item Let the element
 behave like a **&gt;** element.
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-## Section 23.1: The display property
+<h3 id="ch23-1">Section 23.1: The display property</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 The display CSS property is fundamental for controlling the layout and
 flow of an HTML document. Most elements have a default display value
@@ -8953,7 +8882,7 @@ does not affect the position of following elements.
 > actually delete and re-create them.
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-## Section 23.2: To get old table structure using div
+<h3 id="ch23-2">Section 23.2: To get old table structure using div</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 > This is the normal HTML table structure
@@ -9044,7 +8973,7 @@ Grid layout is a new and powerful CSS layout system that allows to
 divide a web page content into rows and columns in an easy way.
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-## Section 24.1: Basic Example
+<h3 id="ch24-1">Section 24.1: Basic Example</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 **Property Possible Values** display grid / inline-grid
 
@@ -9278,7 +9207,7 @@ More Information:
 &lbrack;&lbrack;https://css-tricks.com/almanac/properties/e/empty-cells/&rbrack;&rbrack;(https://css-tricks.com/almanac/properties/e/empty-cells/)
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-## Section 25.3: border-collapse
+<h3 id="ch25-3">Section 25.3: border-collapse</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 The border-collapse property determines if a tables&apos; borders should
@@ -9303,7 +9232,7 @@ separate from each other. collapse This value sets the borders of the
 table to merge together, rather than being distinct.
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-## Section 25.4: border-spacing
+<h3 id="ch25-4">Section 25.4: border-spacing</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 The border-spacing property determines the spacing between cells. This
@@ -9329,7 +9258,7 @@ vary between browsers.
 horizontal and vertical values respectively.
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-## Section 25.5: caption-side
+<h3 id="ch25-5">Section 25.5: caption-side</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
   **&lt;caption**
@@ -9386,7 +9315,7 @@ start. Can be transition-delay
 specified in seconds (s) or milliseconds (ms)
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-## Section 26.1: Transition shorthand
+<h3 id="ch26-1">Section 26.1: Transition shorthand</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 <h4>CSS</h4>
@@ -9473,7 +9402,7 @@ This example will change the background color when the div is hovered
 the background-color change will last 1 second.
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-## Section 26.2: cubic-bezier
+<h3 id="ch26-2">Section 26.2: cubic-bezier</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 The cubic-bezier function is a transition timing function which is
@@ -9520,7 +9449,7 @@ linear: (0,0,1,1)
 ease-in: ) ease-out: ) ease-in-out: )
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-## Section 26.3: Transition (longhand)
+<h3 id="ch26-3">Section 26.3: Transition (longhand)</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 <h4>CSS</h4>
@@ -10085,7 +10014,7 @@ webkit-animation
 &period;..
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-## Section 27.2: Animations with the transition property
+<h3 id="ch27-2">Section 27.2: Animations with the transition property</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 Useful for simple animations, the CSS transition property allows
@@ -10352,7 +10281,7 @@ paused
 
 ;
 
-**animation-name**
+<b>animation-name</b>
 
 :
 
@@ -10361,7 +10290,7 @@ slidein
 ;
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-## Section 27.4: Increasing Animation Performance Using the &apos;will-change&apos; Attribute
+<h3 id="ch27-4">Section 27.4: Increasing Animation Performance Using the &apos;will-change&apos; Attribute</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 When creating animations and other GPU-heavy actions, it&apos;s important
@@ -10385,7 +10314,7 @@ changing its opacity, you would specify:
 
 &period;..
 
-**will-change**
+<b>will-change<b>
 
 :
 
@@ -10399,7 +10328,7 @@ opacity
 
 }
 
-**Note:** Use will-change sparingly. Setting will-change for every
+<b>Note:<b> Use will-change sparingly. Setting will-change for every
 element on a page can cause performance problems, as the browser may
 attempt to create paint layers for every element, significantly
 increasing the amount of processing done by the GPU.
@@ -10408,7 +10337,7 @@ increasing the amount of processing done by the GPU.
 <h2 id="ch28">Chapter 28: 2D Transforms</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
-**Function/Parameter Details**
+<b>Function/Parameter Details<b>
 
   rotate
 
@@ -10494,23 +10423,7 @@ not provided, the first scale-factor will be applied for Y-axis also.
 
 <h4>HTML:</h4>
 
-**&lt;**
-
-**div**
-
-class
-
-=
-
-&quot;rotate&quot;
-
-**&gt;**
-
-**&lt;**
-
-**/div**
-
-**&gt;**
+<b>&lt;</b><b>div</b> class=&quot;rotate&quot;<b>&gt;</b><b>&lt;</b><b>/div</b><b>&gt;</b>
 
 <h4>CSS</h4>
 
@@ -10518,7 +10431,7 @@ class
 
 {
 
-**width**
+<b>width</b>
 
 :
 
@@ -10528,7 +10441,7 @@ px
 
 ;
 
-**height**
+<b>height</b>
 
 :
 
@@ -10538,7 +10451,7 @@ px
 
 ;
 
-**background**
+<b>background</b>
 
 :
 
@@ -10546,7 +10459,7 @@ teal
 
 ;
 
-**transform**
+<b>transform</b>
 
 :
 
@@ -10569,7 +10482,7 @@ of rotation is in the center of the div, 50% from left and 50% from
 top. You can change the center of rotation by setting the
 transform-origin property.
 
-**transform-origin**
+<b>transform-origin</b>
 
 :
 
@@ -10592,9 +10505,9 @@ right side end.
 
 <h4>HTML:</h4>
 
-**&lt;**
+<b>&lt;</b>
 
-**div**
+<b>div</b>
 
 class
 
@@ -10602,13 +10515,13 @@ class
 
 &quot;scale&quot;
 
-**&gt;**
+<b>&gt;</b>
 
-**&lt;**
+<b>&lt;</b>
 
-**/div**
+<b>/div</b>
 
-**&gt;**
+<b>&gt;</b>
 
 <h4>CSS</h4>
 
@@ -10616,7 +10529,7 @@ class
 
 {
 
-**width**
+<b>width</b>
 
 :
 
@@ -10626,7 +10539,7 @@ px
 
 ;
 
-**height**
+<b>height</b>
 
 :
 
@@ -10636,7 +10549,7 @@ px
 
 ;
 
-**background**
+<b>background</b>
 
 :
 
@@ -10644,7 +10557,7 @@ teal
 
 ;
 
-**transform**
+<b>transform</b>
 
 :
 
@@ -10678,18 +10591,18 @@ and 50% from top.
 <h4>HTML:</h4>
 
 ```
-**&lt;****div** class=&quot;skew&quot;**&gt;**
-**&lt;****/div****&gt;**
+<b>&lt;</b><b>div</b> class=&quot;skew&quot;<b>&gt;</b>
+<b>&lt;</b><b>/div</b><b>&gt;</b>
 ```
 
 <h4>CSS:</h4>
 
 ```
 .skew {
-  **width**: 100px;
-  **height**: 100px;
-  **background**: teal;
-  **transform**: skew (20deg, -30deg);
+  <b>width</b>: 100px;
+  <b>height</b>: 100px;
+  <b>background</b>: teal;
+  <b>transform</b>: skew (20deg, -30deg);
 }
 ```
 
@@ -10708,7 +10621,7 @@ See the result
 
 Multiple transforms can be applied to an element in one property like this:
 
-**transform**
+<b>transform</b>
 
 :
 
@@ -10737,8 +10650,8 @@ px
 This will rotate the element 15 degrees clockwise and then translate
 it 200px to the right.
 
-In chained transforms, **the coordinate system moves with the
-element**. This means that the translation won&apos;t be horizontal but on
+In chained transforms, <b>the coordinate system moves with the
+element</b>. This means that the translation won&apos;t be horizontal but on
 an axis rotate 15 degrees clockwise as shown in the following image:
 
 !&lbrack;&rbrack;(./images/image207.jpg){width="7.48037510936133in"
@@ -10747,7 +10660,7 @@ height="2.7919728783902014in"}
 Changing the order of the transforms will change the output. The first
 example will be different to
 
-**transform**
+<b>transform</b>
 
 :
 
@@ -10773,9 +10686,9 @@ deg
 
 ;
 
-**&lt;**
+<b>&lt;</b>
 
-**div**
+<b>div</b>
 
 class
 
@@ -10783,19 +10696,19 @@ class
 
 &quot;transform&quot;
 
-**&gt;**
+<b>&gt;</b>
 
-**&lt;**
+<b>&lt;</b>
 
-**/div**
+<b>/div</b>
 
-**&gt;**
+<b>&gt;</b>
 
 .transform
 
 {
 
-**transform**
+<b>transform</b>
 
 :
 
@@ -10832,16 +10745,16 @@ height="2.7919728783902014in"}
 
 <h4>HTML:</h4>
 
-**&lt;****div** class=&quot;translate&quot;**&gt;****&lt;****/div****&gt;**
+<b>&lt;</b><b>div</b> class=&quot;translate&quot;<b>&gt;</b><b>&lt;</b><b>/div</b><b>&gt;</b>
 
 <h4>CSS</h4>
 
 ```
 .translate {
-  **width**: 100px;
-  **height**: 100px;
-  **background**: teal;
-  **transform**: translate ( 200px, 50&percnt;);
+  <b>width</b>: 100px;
+  <b>height</b>: 100px;
+  <b>background</b>: teal;
+  <b>transform</b>: translate ( 200px, 50&percnt;);
 }
 ```
 
@@ -10854,7 +10767,7 @@ On the X axis:
 
 ```
 .translate {
-  **transform**: translateX ( 200px );
+  <b>transform</b>: translateX ( 200px );
 }
 ```
 
@@ -10871,40 +10784,40 @@ On the X axis:
 Transformations are done with respect to a point which is defined by
 the transform-origin property.
 
-  **transform-origin**                                   :   X Y
+  <b>transform-origin</b>                                   :   X Y
 
 The property takes 2 values : ;
 
-  **transform-origin**
+  <b>transform-origin</b>
 
-  **transform-origin**                              :   100%
+  <b>transform-origin</b>                              :   100%
 
 
 In the following example the first div (.tl) is rotate around the top
 left corner with : 0 0; and the second (.tr)is transformed around
-it&apos;s top right corner with 0. The rotation is applied **on hover** :
+it&apos;s top right corner with 0. The rotation is applied <b>on hover</b> :
 
 <h4>HTML:</h4>
 
 <pre><code>
-**&lt;**
-**div**
+<b>&lt;</b>
+<b>div</b>
 class
 =
 &quot;transform originl&quot;
-**&gt;**
-**&lt;**
-**/div**
-**&gt;**
-**&lt;**
-**div**
+<b>&gt;</b>
+<b>&lt;</b>
+<b>/div</b>
+<b>&gt;</b>
+<b>&lt;</b>
+<b>div</b>
 class
 =
 &quot;transform origin2&quot;
-**&gt;**
-**&lt;**
-**/div**
-**&gt;**
+<b>&gt;</b>
+<b>&lt;</b>
+<b>/div</b>
+<b>&gt;</b>
 </code></pre>
 
 <h4>CSS:</h4>
@@ -10912,25 +10825,25 @@ class
 <pre><code>
 .transform
 {
-**display**
+<b>display</b>
 :
 inline-block
 ;
-**width**
+<b>width</b>
 :
 200
 px
 ;
-**height**
+<b>height</b>
 :
 100
 px
 ;
-**background**
+<b>background</b>
 :
 teal
 ;
-**transition**
+<b>transition</b>
 :
 transform
 1
@@ -10939,7 +10852,7 @@ s
 }
 .origin1
 {
-**transform-origin**
+<b>transform-origin</b>
 :
 0
 0
@@ -10947,7 +10860,7 @@ s
 }
 .origin2
 {
-**transform-origin**
+<b>transform-origin</b>
 :
 100
 &percnt;
@@ -10958,7 +10871,7 @@ s
 :
 hover
 {
-**transform**
+<b>transform</b>
 :
 rotate
 (
@@ -10984,22 +10897,22 @@ center of the element.
 div
 .needle
 {
-**margin**
+<b>margin</b>
 :
 100
 px
 ;
-**height**
+<b>height</b>
 :
 150
 px
 ;
-**width**
+<b>width</b>
 :
 150
 px
 ;
-**transform**
+<b>transform</b>
 :
 rotateY
 (
@@ -11013,7 +10926,7 @@ deg
 )
 ;
 */&ast; presentational &ast;/*
-**background-image**
+<b>background-image</b>
 :
 linear-gradient
 (
@@ -11038,7 +10951,7 @@ left
 &percnt;
 )
 ;
-**box-shadow**
+<b>box-shadow</b>
 :
 inset
 6
@@ -11057,15 +10970,15 @@ px
 <h4>HTML:</h4>
 
 <pre><code>
-**&lt;**
-**div**
+<b>&lt;</b>
+<b>div</b>
 class
 =
 &apos;needle&apos;
-**&gt;**
-**&lt;**
-**/div**
-**&gt;**
+<b>&gt;</b>
+<b>&lt;</b>
+<b>/div</b>
+<b>&gt;</b>
 </code></pre>
 
 In the above example, a needle or compass pointer shape is created
@@ -11088,17 +11001,17 @@ property&apos;s value would have to be something like );.
 a similar approach to create something that resembles the Safari logo
 or a compass dial.
 
-**Screenshot of element with no transform:**
+<b>Screenshot of element with no transform:</b>
 
 !&lbrack;&rbrack;(./images/image209.jpg){width="1.6979166666666667in"
 height="1.6979166666666667in"}
 
-**Screenshot of element with only 2D transform:**
+<b>Screenshot of element with only 2D transform:</b>
 
 !&lbrack;&rbrack;(./images/image210.jpg){width="2.3541666666666665in"
 height="2.3645833333333335in"}
 
-**Screenshot of element with 3D transform:**
+<b>Screenshot of element with 3D transform:</b>
 
 [image211.jpg .739 x 2.47](./images/image211.jpg)
 
@@ -11109,27 +11022,27 @@ height="2.3645833333333335in"}
 <h4>HTML:</h4>
 
 <pre><code>
-**&lt;**
-**div**
+<b>&lt;</b>
+<b>div</b>
 id
 =
 &quot;title&quot;
-**&gt;**
-**&lt;**
-**h**
-**1**
+<b>&gt;</b>
+<b>&lt;</b>
+<b>h</b>
+<b>1</b>
 data-content
 =
 &quot;HOVER&quot;
-**&gt;**
+<b>&gt;</b>
 HOVER
-**&lt;**
-**/h**
-**1**
-**&gt;**
-**&lt;**
-**/div**
-**&gt;**
+<b>&lt;</b>
+<b>/h</b>
+<b>1</b>
+<b>&gt;</b>
+<b>&lt;</b>
+<b>/div</b>
+<b>&gt;</b>
 </code></pre>
 
 <h4>CSS:</h4>
@@ -11137,11 +11050,11 @@ HOVER
 <pre><code>
 &ast;
 {
-**margin**
+<b>margin</b>
 :
 0
 ;
-**padding**
+<b>padding</b>
 :
 0
 ;
@@ -11150,42 +11063,42 @@ html
 ,
 body
 {
-**height**
+<b>height</b>
 :
 100
 &percnt;
 ;
-**width**
+<b>width</b>
 :
 100
 &percnt;
 ;
-**overflow**
+<b>overflow</b>
 :
 hidden
 ;
-**background**
+<b>background</b>
 :
 #0099CC
 ;
 }
 #title
 {
-**position**
+<b>position</b>
 :
 absolute
 ;
-**top**
+<b>top</b>
 :
 50
 &percnt;
 ;
-**left**
+<b>left</b>
 :
 50
 &percnt;
 ;
-**transform**
+<b>transform</b>
 :
 translate
 (
@@ -11196,14 +11109,14 @@ translate
 &percnt;
 )
 ;
-**perspective-origin**
+<b>perspective-origin</b>
 :
 50
 &percnt;
 50
 &percnt;
 ;
-**perspective**
+<b>perspective</b>
 :
 300
 px
@@ -11211,22 +11124,22 @@ px
 }
 h1
 {
-**text-align**
+<b>text-align</b>
 :
 center
 ;
-**font-size**
+<b>font-size</b>
 :
 12
 vmin
 ;
-**font-family**
+<b>font-family</b>
 :
 &apos;Open Sans&apos;
 ,
 sans-serif
 ;
-**color**
+<b>color</b>
 :
 rgba
 (
@@ -11239,12 +11152,12 @@ rgba
 0.8
 )
 ;
-**line-height**
+<b>line-height</b>
 :
 1
 em
 ;
-**transform**
+<b>transform</b>
 :
 rotateY
 (
@@ -11252,12 +11165,12 @@ rotateY
 deg
 )
 ;
-**perspective**
+<b>perspective</b>
 :
 150
 px
 ;
-**perspective-origin**
+<b>perspective-origin</b>
 :
 0
 &percnt;
@@ -11269,33 +11182,33 @@ h1
 :
 after
 {
-**content**
+<b>content</b>
 :
 attr
 (
 data-content
 )
 ;
-**position**
+<b>position</b>
 :
 absolute
 ;
-**left**
+<b>left</b>
 :
 0
 ;
-**top**
+<b>top</b>
 :
 0
 ;
-**transform-origin**
+<b>transform-origin</b>
 :
 50
 &percnt;
 100
 &percnt;
 ;
-**transform**
+<b>transform</b>
 :
 rotateX
 (
@@ -11303,7 +11216,7 @@ rotateX
 deg
 )
 ;
-**color**
+<b>color</b>
 :
 #0099CC
 ;
@@ -11312,35 +11225,35 @@ deg
 :
 before
 {
-**content**
+<b>content</b>
 :
 &apos;&apos;
 ;
-**position**
+<b>position</b>
 :
 absolute
 ;
-**top**
+<b>top</b>
 :
 -150
 &percnt;
 ;
-**left**
+<b>left</b>
 :
 -25
 &percnt;
 ;
-**width**
+<b>width</b>
 :
 180
 &percnt;
 ;
-**height**
+<b>height</b>
 :
 328
 &percnt;
 ;
-**background**
+<b>background</b>
 :
 rgba
 (
@@ -11353,13 +11266,13 @@ rgba
 0.7
 )
 ;
-**transform-origin**
+<b>transform-origin</b>
 :
 0
 100
 &percnt;
 ;
-**transform**
+<b>transform</b>
 :
 translatez
 (
@@ -11377,7 +11290,7 @@ skewX
 deg
 )
 ;
-**border-radius**
+<b>border-radius</b>
 :
 0
 0
@@ -11416,9 +11329,9 @@ For example, this would flip an element away from the screen:
 
 &lbrack;&lbrack;JSFIDDLE&rbrack;&rbrack;(https://jsfiddle.net/3z3z843c/)
 
-**&lt;**
+<b>&lt;</b>
 
-**div**
+<b>div</b>
 
 class
 
@@ -11426,19 +11339,19 @@ class
 
 &quot;flip&quot;
 
-**&gt;**
+<b>&gt;</b>
 
 Loren ipsum
 
-**&lt;**
+<b>&lt;</b>
 
-**/div**
+<b>/div</b>
 
-**&gt;**
+<b>&gt;</b>
 
-**&lt;**
+<b>&lt;</b>
 
-**div**
+<b>div</b>
 
 class
 
@@ -11446,15 +11359,15 @@ class
 
 &quot;flip back&quot;
 
-**&gt;**
+<b>&gt;</b>
 
 Lorem ipsum
 
-**&lt;**
+<b>&lt;</b>
 
-**/div**
+<b>/div</b>
 
-**&gt;**
+<b>&gt;</b>
 
 .flip
 
@@ -11572,15 +11485,15 @@ Opera, Chrome, Safari, iOS, and Android all need
 
 It has 4 values:
 
-1.  **visible** (default) - the element will always be visible even when
+1.  <b>visible</b> (default) - the element will always be visible even when
     not facing the screen.
 
-2.  **hidden** - the element is not visible when not facing the screen.
+2.  <b>hidden</b> - the element is not visible when not facing the screen.
 
-3.  **inherit** - the property will gets its value from the its parent
+3.  <b>inherit</b> - the property will gets its value from the its parent
     element
 
-4.  **initial** - sets the property to its default, which is visible
+4.  <b>initial</b> - sets the property to its default, which is visible
 
 ## Section 29.4: 3D cube
 
@@ -11589,9 +11502,9 @@ CSS cube example:
 
 <h4>HTML:</h4>
 
-**&lt;**
+<b>&lt;</b>
 
-**div**
+<b>div</b>
 
 class
 
@@ -11599,11 +11512,11 @@ class
 
 &quot;cube&quot;
 
-**&gt;**
+<b>&gt;</b>
 
-**&lt;**
+<b>&lt;</b>
 
-**div**
+<b>div</b>
 
 class
 
@@ -11611,17 +11524,17 @@ class
 
 &quot;cubeFace&quot;
 
-**&gt;**
+<b>&gt;</b>
 
-**&lt;**
+<b>&lt;</b>
 
-**/div**
+<b>/div</b>
 
-**&gt;**
+<b>&gt;</b>
 
-**&lt;**
+<b>&lt;</b>
 
-**div**
+<b>div</b>
 
 class
 
@@ -11629,19 +11542,19 @@ class
 
 &quot;cubeFace face2&quot;
 
-**&gt;**
+<b>&gt;</b>
 
-**&lt;**
+<b>&lt;</b>
 
-**/div**
+<b>/div</b>
 
-**&gt;**
+<b>&gt;</b>
 
-**&lt;**
+<b>&lt;</b>
 
-**/div**
+<b>/div</b>
 
-**&gt;**
+<b>&gt;</b>
 
 *CSS:*
 
@@ -11649,7 +11562,7 @@ body
 
 {
 
-**perspective-origin**
+<b>perspective-origin</b>
 
 :
 
@@ -11663,7 +11576,7 @@ body
 
 ;
 
-**perspective**
+<b>perspective</b>
 
 :
 
@@ -11673,7 +11586,7 @@ px
 
 ;
 
-**overflow**
+<b>overflow</b>
 
 :
 
@@ -11687,7 +11600,7 @@ hidden
 
 {
 
-**position**
+<b>position</b>
 
 :
 
@@ -11695,7 +11608,7 @@ relative
 
 ;
 
-**padding-bottom**
+<b>padding-bottom</b>
 
 :
 
@@ -11705,7 +11618,7 @@ relative
 
 ;
 
-**transform-style**
+<b>transform-style</b>
 
 :
 
@@ -11713,7 +11626,7 @@ preserve-3d
 
 ;
 
-**transform-origin**
+<b>transform-origin</b>
 
 :
 
@@ -11727,7 +11640,7 @@ preserve-3d
 
 ;
 
-**transform**
+<b>transform</b>
 
 :
 
@@ -11774,7 +11687,7 @@ Should be noted that:
 <h2 id="ch30">Chapter 30: Filter Property</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
-> **Value Description** blur(x) Blurs the image by x pixels.
+> <b>Value Description</b> blur(x) Blurs the image by x pixels.
 >
 > Brightens the image at any value above 1.0 or 100%. Below that, the
 > image will be brightness(x) darkened.
@@ -11804,8 +11717,8 @@ Should be noted that:
 
 <h4>HTML:</h4>
 
-> **&lt;img** src=&apos;donald-duck.png&apos; alt=&apos;Donald Duck&apos; title=&apos;Donald
-> Duck&apos; **/&gt;**
+> <b>&lt;img</b> src=&apos;donald-duck.png&apos; alt=&apos;Donald Duck&apos; title=&apos;Donald
+> Duck&apos; <b>/&gt;</b>
 >
 > <h4>CSS</h4>
 
@@ -11829,7 +11742,7 @@ px
 
 ;
 
-**filter**
+<b>filter</b>
 
 :
 
@@ -11847,7 +11760,7 @@ px
 
 }
 
-> **Result**
+> <b>Result</b>
 
 !&lbrack;&rbrack;(./images/image214.jpg){width="2.2395833333333335in"
 height="2.8125in"}
@@ -11858,19 +11771,19 @@ height="2.8125in"}
 
 <h4>HTML:</h4>
 
-**&lt;**
+<b>&lt;</b>
 
-**p**
+<b>p</b>
 
-**&gt;**
+<b>&gt;</b>
 
 My shadow always follows me.
 
-**&lt;**
+<b>&lt;</b>
 
-**/p**
+<b>/p</b>
 
-**&gt;**
+<b>&gt;</b>
 
 > <h4>CSS</h4>
 
@@ -11904,7 +11817,7 @@ green
 
 ;
 
-**filter**
+<b>filter</b>
 
 :
 
@@ -11932,7 +11845,7 @@ green
 
 }
 
-> **Result**
+> <b>Result</b>
 
 [image215 2.406 x .572](./images/image215.jpg)
 
@@ -11942,8 +11855,8 @@ green
 
 <h4>HTML:</h4>
 >
-> **&lt;img** src=&apos;donald-duck.png&apos; alt=&apos;Donald Duck&apos; title=&apos;Donald
-> Duck&apos; **/&gt;**
+> <b>&lt;img</b> src=&apos;donald-duck.png&apos; alt=&apos;Donald Duck&apos; title=&apos;Donald
+> Duck&apos; <b>/&gt;</b>
 >
 > <h4>CSS</h4>
 
@@ -11967,7 +11880,7 @@ deg
 
 ;
 
-**filter**
+<b>filter</b>
 
 :
 
@@ -11985,7 +11898,7 @@ deg
 
 }
 
-> **Result**
+> <b>Result</b>
 
 !&lbrack;&rbrack;(./images/image216.jpg){width="2.2604166666666665in"
 height="2.8125in"}
@@ -11997,8 +11910,8 @@ height="2.8125in"}
 
 <h4>HTML:</h4>
 
-> **&lt;img** src=&apos;donald-duck.png&apos; alt=&apos;Donald Duck&apos; title=&apos;Donald
-> Duck&apos; **/&gt;**
+> <b>&lt;img</b> src=&apos;donald-duck.png&apos; alt=&apos;Donald Duck&apos; title=&apos;Donald
+> Duck&apos; <b>/&gt;</b>
 
 <h4>CSS</h4>
 
@@ -12052,7 +11965,7 @@ invert
 
 ;
 
-**filter**
+<b>filter</b>
 
 :
 
@@ -12109,17 +12022,17 @@ invert
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>HTML:</h4>
 
-**&lt;**
+<b>&lt;</b>
 
-**div**
+<b>div</b>
 
-**&gt;**
+<b>&gt;</b>
 
-**&lt;**
+<b>&lt;</b>
 
-**/div**
+<b>/div</b>
 
-**&gt;**
+<b>&gt;</b>
 
 > <h4>CSS</h4>
 
@@ -12127,7 +12040,7 @@ div
 
 {
 
-**width**
+<b>width</b>
 
 :
 
@@ -12137,7 +12050,7 @@ px
 
 ;
 
-**height**
+<b>height</b>
 
 :
 
@@ -12147,7 +12060,7 @@ px
 
 ;
 
-**background-color**
+<b>background-color</b>
 
 :
 
@@ -12171,7 +12084,7 @@ invert
 
 ;
 
-**filter**
+<b>filter</b>
 
 :
 
@@ -12189,7 +12102,7 @@ invert
 
 }
 
-> **Result**
+> <b>Result</b>
 
 !&lbrack;&rbrack;(./images/image218.jpg){width="1.1979166666666667in"
 height="1.1979166666666667in"}
@@ -12202,7 +12115,7 @@ height="1.1979166666666667in"}
 <h3 id="ch31-1">Section 31.1: Changing cursor type</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
-**cursor**
+<b>cursor</b>
 
 :
 
@@ -12210,9 +12123,9 @@ value
 
 ;
 
-> **Examples:**
+> <b>Examples:</b>
 
-**Value Description**
+<b>Value Description</b>
 
 > none No cursor is rendered for the element auto Default. The browser
 > sets a cursor help The cursor indicates that help is available wait
@@ -12229,7 +12142,7 @@ value
 
 {
 
-**pointer-events**
+<b>pointer-events</b>
 
 :
 
@@ -12266,14 +12179,14 @@ other content is inserted by the user&apos;s typing or editing.</p>
 <h4>HTML:</h4>
 
 ```
-**&lt;****input** id=&quot;example&quot;**/&gt;**
+<b>&lt;</b><b>input</b> id=&quot;example&quot;<b>/&gt;</b>
 ```
 
 <h4>CSS</h4>
 
 ```
 #example {
-  **caret-color**: red;
+  <b>caret-color</b>: red;
 }
 ```
 
@@ -12285,7 +12198,7 @@ other content is inserted by the user&apos;s typing or editing.</p>
 <h2 id="ch32">Chapter 32: box-shadow</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
-**Parameters Details**
+<b>Parameters Details</b>
 
 > by default, the shadow is treated as a drop shadow. the inset keyword
 > draws the shadow inside the inset frame/border.
@@ -12311,9 +12224,9 @@ JSFiddle:
 
 <h4>HTML:</h4>
 
-**&lt;**
+<b>&lt;</b>
 
-**div**
+<b>div</b>
 
 class
 
@@ -12321,13 +12234,13 @@ class
 
 &quot;box_shadow&quot;
 
-**&gt;**
+<b>&gt;</b>
 
-**&lt;**
+<b>&lt;</b>
 
-**/div**
+<b>/div</b>
 
-**&gt;**
+<b>&gt;</b>
 
 > <h4>CSS</h4>
 
@@ -12335,7 +12248,7 @@ class
 
 {
 
-**background-color**
+<b>background-color</b>
 
 :
 
@@ -12343,7 +12256,7 @@ class
 
 ;
 
-**width**
+<b>width</b>
 
 :
 
@@ -12353,7 +12266,7 @@ px
 
 ;
 
-**height**
+<b>height</b>
 
 :
 
@@ -12363,7 +12276,7 @@ px
 
 ;
 
-**margin**
+<b>margin</b>
 
 :
 
@@ -12383,7 +12296,7 @@ after
 
 {
 
-**content**
+<b>content</b>
 
 :
 
@@ -12391,7 +12304,7 @@ after
 
 ;
 
-**width**
+<b>width</b>
 
 :
 
@@ -12401,7 +12314,7 @@ px
 
 ;
 
-**height**
+<b>height</b>
 
 :
 
@@ -12411,7 +12324,7 @@ px
 
 ;
 
-**margin-top**
+<b>margin-top</b>
 
 :
 
@@ -12421,7 +12334,7 @@ px
 
 ;
 
-**margin-left**
+<b>margin-left</b>
 
 :
 
@@ -12431,7 +12344,7 @@ px
 
 ;
 
-**display**
+<b>display</b>
 
 :
 
@@ -12439,7 +12352,7 @@ block
 
 ;
 
-**position**
+<b>position</b>
 
 :
 
@@ -12447,7 +12360,7 @@ absolute
 
 ;
 
-**z-index**
+<b>z-index</b>
 
 :
 
@@ -12505,7 +12418,7 @@ px
 
 ;
 
-**box-shadow**
+<b>box-shadow</b>
 
 :
 
@@ -12541,9 +12454,9 @@ px
 
 <h4>HTML:</h4>
 
-**&lt;**
+<b>&lt;</b>
 
-**div**
+<b>div</b>
 
 class
 
@@ -12551,13 +12464,13 @@ class
 
 &quot;box_shadow&quot;
 
-**&gt;**
+<b>&gt;</b>
 
-**&lt;**
+<b>&lt;</b>
 
-**/div**
+<b>/div</b>
 
-**&gt;**
+<b>&gt;</b>
 
 <h4>CSS</h4>
 
@@ -12588,7 +12501,7 @@ px
 px
 #444444
 ;
-**box-shadow**
+<b>box-shadow</b>
 :
 0
 px
@@ -12610,20 +12523,20 @@ px
 <h4>HTML:</h4>
 
 ```
-**&lt;****div** class=&quot;box_shadow&quot;**&gt;****&lt;****/div****&gt;**
+<b>&lt;</b><b>div</b> class=&quot;box_shadow&quot;<b>&gt;</b><b>&lt;</b><b>/div</b><b>&gt;</b>
 ```
 
 <h4>CSS</h4>
 
 ```
 .box_shadow {
-  **background-color**: #1C90F3;
-  **width**: 200px;
-  **height**: 100px;
-  **margin**: 50px;
+  <b>background-color</b>: #1C90F3;
+  <b>width</b>: 200px;
+  <b>height</b>: 100px;
+  <b>margin</b>: 50px;
   -webkit-box-shadow: inset 0px 0px 10px 0px #444444;
   -moz-box-shadow: inset 0px 0px 10px 0px #444444;
-  **box-shadow**: inset 0px 0px 10px 0px #444444;
+  <b>box-shadow</b>: inset 0px 0px 10px 0px #444444;
 }
 ```
 
@@ -13064,8 +12977,9 @@ px
 > shape-margin. This creates a bit more space between the *imaginary
 > circle* that defines the float area and the actual content that is
 > flowing around.
->
-> <b>Output:</b>
+
+
+<h4>Output:</h4>
 
 !&lbrack;&rbrack;(./images/image225.jpg){width="3.3333333333333335in"
 height="1.3958333333333333in"}
@@ -13073,7 +12987,6 @@ height="1.3958333333333333in"}
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ch34">Chapter 34: List Styles</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-
 > <b>Value Description</b> list-style-type the type of list-item marker.
 >
 > list-style-position specifies where to place the marker
@@ -13081,11 +12994,12 @@ height="1.3958333333333333in"}
 > this property to its default value inherit inherits this property from
 > its parent element
 
-## Section 34.1: Bullet Position
+<h3 id="ch34-1">Section 34.1: Bullet Position</h3>
 
-  <b>&lt;li</b>   <b>&gt;</b> elements inside a containing element (       <b>&lt;ul</b>   <b>&gt;</b>   <b>&lt;ol</b>
-                                                                            or       
-
+```
+<b>&lt;li</b>   <b>&gt;</b> elements inside a containing element (       <b>&lt;ul</b>   <b>&gt;</b>   <b>&lt;ol</b>
+or       
+```
 
 > A list consists of <b>&gt;</b>). Both the list items and the container can
 >
@@ -13098,30 +13012,21 @@ height="1.3958333333333333in"}
 > marker. This box can either be placed inside or outside of the list
 > item box.
 
+```
 <b>list-style-position</b>
-
 :
-
 inside
-
 ;
-
-  <b>&lt;li</b>
-
+<b>&lt;li</b>
+```
 
 > places the bullet within the <b>&gt;</b> element, pushing the content to
 > the right as needed.
 
-<b>list-style-position</b>
-
-:
-
-outside
-
-;
-
-  <b>&lt;li</b>
-
+```
+<b>list-style-position</b>: outside;
+<b>&lt;li</b>
+```
 
 > places the bullet left of the <b>&gt;</b> element. If there is not enough
 > space in the padding of the containing element, the marker box will
@@ -13135,83 +13040,52 @@ outside
 > Sometimes, a list should just not display any bullet points or
 > numbers. In that case, remember to specify margin and padding.
 
+```
 <b>&lt;</b>
-
 <b>ul</b>
-
 <b>&gt;</b>
-
 <b>&lt;</b>
-
 <b>li</b>
-
 <b>&gt;</b>
-
 first item
-
 <b>&lt;</b>
-
 <b>/li</b>
-
 <b>&gt;</b>
-
 <b>&lt;</b>
-
 <b>li</b>
-
 <b>&gt;</b>
-
 second item
-
 <b>&lt;</b>
-
 <b>/li</b>
-
 <b>&gt;</b>
-
 <b>&lt;</b>
-
 <b>/ul</b>
-
 <b>&gt;</b>
+```
 
 > CSS
 
+```
 ul
-
 {
-
 <b>list-style-type</b>
-
 :
-
 none
-
 ;
-
 }
-
 li
-
 {
-
 <b>margin</b>
-
 :
-
 0
-
 ;
-
 <b>padding</b>
-
 :
-
 0
-
 ;
-
 }
+```
+
 
 ## Section 34.3: Type of Bullet or Numbering
 
@@ -13298,226 +13172,80 @@ item-counter, upper-roman
 <h4>HTML:</h4>
 
 ```
-<b>&lt;</b>
-<b>div</b>
-class
-=
-&apos;item&apos;
-<b>&gt;</b>
-Item No: 1
-<b>&lt;</b>
-<b>/div</b>
-<b>&gt;</b>
-<b>&lt;</b>
-<b>div</b>
-class
-=
-&apos;item&apos;
-<b>&gt;</b>
-Item No: 2
-<b>&lt;</b>
-<b>/div</b>
-<b>&gt;</b>
-<b>&lt;</b>
-<b>div</b>
-class
-=
-&apos;item&apos;
-<b>&gt;</b>
-Item No: 3
-<b>&lt;</b>
-<b>/div</b>
-<b>&gt;</b>
+<b>&lt;</b><b>div</b> class=&apos;item&apos;<b>&gt;</b>Item No: 1<b>&lt;</b><b>/div</b><b>&gt;</b>
+<b>&lt;</b><b>div</b> class=&apos;item&apos;<b>&gt;</b>Item No: 2<b>&lt;</b><b>/div</b><b>&gt;</b>
+<b>&lt;</b><b>div</b> class=&apos;item&apos;<b>&gt;</b>Item No: 3<b>&lt;</b><b>/div</b><b>&gt;</b>
 ```
 
 <p>In the above example, the counter&apos;s output would be displayed as I,
 II, III (roman numbers) instead of the usual 1, 2, 3 as the developer
 has explicitly specified the counter&apos;s style.</p>
-
-## Section 35.2: Number each item using CSS Counter
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h3 id="ch35-2">Section 35.2: Number each item using CSS Counter</h3>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 <h4>CSS</h4>
 
 ```
-body
-{
-**counter-reset**
-:
-item-counter
-;
-*/&ast; create the counter &ast;/*
+body {
+  <b>counter-reset</b>: item-counter;
+/* create the counter */
 }
-.item
-{
-**counter-increment**
-:
-item-counter
-;
-/* increment the counter every time an element with class &quot;item&quot;*
-  is encountered */
+.item {
+  <b>counter-increment</b>: item-counter;
+/* increment the counter every time an element with class &quot;item&quot; is encountered */
 }
-.item-header
-:
-before
-{
-**content**
-:
-counter
-(
-item-counter
-)
-&quot;. &quot;
-;
-*/&ast; print the value of the counter before the header and*
-*append a &quot;.&quot; to it &ast;/*
+.item-header: before {
+  <b>content</b>: counter (item-counter)&quot;. &quot;;
+/* print the value of the counter before the header and
+  append a &quot;.&quot; to it */
 }
-*/&ast; just for demo &ast;/*
-.item
-{
-**border**
-:
-1
-px
-solid
-;
-**height**
-:
-100
-px
-;
-**margin-bottom**
-:
-10
-px
-;
+/* just for demo */
+.item {
+  <b>border</b>: 1px solid;
+  <b>height</b>: 100px;
+  <b>margin-bottom</b>: 10px;
 }
-.item-header
-{
-**border-bottom**
-:
-1
-px
-solid
-;
-**height**
-:
-40
-px
-;
-**line-height**
-:
-40
-px
-;
-**padding**
-:
-5
-px
-;
+.item-header {
+  <b>border-bottom</b>: 1px solid;
+  <b>height</b>: 40px;
+  <b>line-height</b>: 40px;
+  <b>padding</b>: 5px;
 }
-.item-content
-{
-**padding**
-:
-8
-px
-;
+.item-content {
+  <b>padding</b>: 8px;
 }
 ```
 
 <h4>HTML:</h4>
 
 ```
-**&lt;**
-**div**
-class
-=
-&apos;item&apos;
-**&gt;**
-**&lt;**
-**div**
-class
-=
-&apos;item-header&apos;
-**&gt;**
-Item 1 Header
-**&lt;**
-**/div**
-**&gt;**
-**&lt;**
-**div**
-class
-=
-&apos;item-content&apos;
-**&gt;**
+<b>&lt;**<b>div** class=&apos;item&apos;<b>&gt;**
+<b>&lt;**<b>div** class=&apos;item-header&apos;<b>&gt;**
+Item 1 Header**&lt;****/div****&gt;**
+**&lt;****div** class=&apos;item-content&apos;**&gt;**
 Lorem Ipsum Dolor Sit Amet&period;...
-**&lt;**
-**/div**
-**&gt;**
-**&lt;**
-**/div**
-**&gt;**
-**&lt;**
-**div**
-class
-=
-&apos;item&apos;
-**&gt;**
-**&lt;**
-**div**
-class
-=
-&apos;item-header&apos;
-**&gt;**
+**&lt;****/div****&gt;**
+**&lt;****/div****&gt;**
+**&lt;****div** class=&apos;item&apos;**&gt;**
+**&lt;****div** class=&apos;item-header&apos;**&gt;**
 Item 2 Header
-**&lt;**
-**/div**
-**&gt;**
-**&lt;**
-**div**
-class
-=
-&apos;item-content&apos;
-**&gt;**
+**&lt;****/div****&gt;**
+**&lt;****div** class=&apos;item-content&apos;**&gt;**
 Lorem Ipsum Dolor Sit Amet&period;...
-**&lt;**
-**/div**
-**&gt;**
-**&lt;**
-**/div**
-**&gt;**
-**&lt;**
-**div**
-class
-=
-&apos;item&apos;
-**&gt;**
-**&lt;**
-**div**
-class
-=
-&apos;item-header&apos;
-**&gt;**
+**&lt;****/div****&gt;**
+**&lt;****/div****&gt;**
+**&lt;****div** class=&apos;item&apos;**&gt;**
+**&lt;****div** class=&apos;item-header&apos;**&gt;**
 Item 3 Header
-**&lt;**
-**/div**
-**&gt;**
-**&lt;**
-**div**
-class
-=
-&apos;item-content&apos;
-**&gt;**
+**&lt;****/div****&gt;**
+**&lt;****div** class=&apos;item-content&apos;**&gt;**
 Lorem Ipsum Dolor Sit Amet&period;...
-**&lt;**
-**/div**
-**&gt;**
-**&lt;**
-**/div**
-**&gt;**
+**&lt;****/div****&gt;**
+**&lt;****/div****&gt;**
 ```
 
-  :before
+:before
 
 
 <p>The above example numbers every &quot;item&quot; in the page and adds the
@@ -13529,255 +13257,77 @@ item&apos;s number before its header (using content property of
 
 <h4>CSS</h4>
 
-ul
-
-{
-
-**list-style**
-
-:
-
-none
-
-;
-
-**counter-reset**
-
-:
-
-list-item-number
-
-;
-
-*/&ast; self nesting counter as name is same for all levels &ast;/*
-
+```
+ul {
+  **list-style**: none;
+  **counter-reset**: list-item-number;
+/* self nesting counter as name is same for all levels */
 }
-
-li
-
-{
-
-**counter-increment**
-
-:
-
-list-item-number
-
-;
-
+li {
+**counter-increment**: list-item-number;
 }
-
-li
-
-:
-
-before
-
-{
-
-**content**
-
-:
-
-counters
-
-(
-
-list-item-number
-
-,
-
-&quot;.&quot;
-
-)
-
-&quot; &quot;
-
-;
-
-*/&ast; usage of counters() function means value of*
-
-*counters at all higher levels are combined before printing &ast;/*
-
+li: before {
+  **content**: counters (list-item-number, &quot;.&quot;)&quot; &quot;;
+/* usage of counters() function means value of
+  counters at all higher levels are combined before printing */
 }
+```
 
 <h4>HTML:</h4>
 
-**&lt;**
-
-**ul**
-
-**&gt;**
-
-**&lt;**
-
-**li**
-
-**&gt;**
+**&lt;****ul****&gt;**
+**&lt;****li****&gt;**
 
 Level 1
 
-**&lt;**
-
-**ul**
-
-**&gt;**
-
-**&lt;**
-
-**li**
-
-**&gt;**
+**&lt;****ul****&gt;**
+**&lt;****li****&gt;**
 
 Level 1.1
 
-**&lt;**
-
-**ul**
-
-**&gt;**
-
-**&lt;**
-
-**li**
-
-**&gt;**
+**&lt;****ul****&gt;**
+**&lt;****li****&gt;**
 
 Level 1.1.1
 
-**&lt;**
-
-**/li**
-
-**&gt;**
-
-**&lt;**
-
-**/ul**
-
-**&gt;**
-
-**&lt;**
-
-**/li**
-
-**&gt;**
-
-**&lt;**
-
-**/ul**
-
-**&gt;**
-
-**&lt;**
-
-**/li**
-
-**&gt;**
-
-**&lt;**
-
-**li**
-
-**&gt;**
+**&lt;****/li****&gt;**
+**&lt;****/ul****&gt;**
+**&lt;****/li****&gt;**
+**&lt;****/ul****&gt;**
+**&lt;****/li****&gt;**
+**&lt;****li****&gt;**
 
 Level 2
 
-**&lt;**
-
-**ul**
-
-**&gt;**
-
-**&lt;**
-
-**li**
-
-**&gt;**
+**&lt;****ul****&gt;**
+**&lt;****li****&gt;**
 
 Level 2.1
 
-**&lt;**
-
-**ul**
-
-**&gt;**
-
-**&lt;**
-
-**li**
-
-**&gt;**
+**&lt;****ul****&gt;**
+**&lt;****li****&gt;**
 
 Level 2.1.1
 
-**&lt;**
-
-**/li**
-
-**&gt;**
-
-**&lt;**
-
-**li**
-
-**&gt;**
+**&lt;****/li****&gt;**
+**&lt;****li****&gt;**
 
 Level 2.1.2
 
-**&lt;**
-
-**/li**
-
-**&gt;**
-
-**&lt;**
-
-**/ul**
-
-**&gt;**
-
-**&lt;**
-
-**/li**
-
-**&gt;**
-
-**&lt;**
-
-**/ul**
-
-**&gt;**
-
-**&lt;**
-
-**/li**
-
-**&gt;**
-
-**&lt;**
-
-**li**
-
-**&gt;**
+**&lt;****/li****&gt;**
+**&lt;****/ul****&gt;**
+**&lt;****/li****&gt;**
+**&lt;****/ul****&gt;**
+**&lt;****/li****&gt;**
+**&lt;****li****&gt;**
 
 Level 3
 
-**&lt;**
+**&lt;****/li****&gt;**
+**&lt;****/ul****&gt;**
 
-**/li**
-
-**&gt;**
-
-**&lt;**
-
-**/ul**
-
-**&gt;**
-
-  list-item-number   &lbrack;1&rbrack; (counter for second level) and     list-item-number
-                     nests it under                           
-
+list-item-number   &lbrack;1&rbrack; (counter for second level) and     list-item-number
+nests it under                           
 
 > The above is an example of multi-level numbering using CSS counters.
 > It makes use of the ***self-nesting*** concept of counters. Self
@@ -13789,176 +13339,55 @@ Level 3
 > &lbrack;0&rbrack; (counter for first level). Thus it achieves the multi-level
 > numbering.
 
-  counters   () function instead of  counter   () function because    counters
-             the                               the                    
+counters   () function instead of  counter   () function because    counters
 
-> The output is printed using the () function is designed to prefix the
-> value of all higher level counters (parent) when printing the output.
-
+The output is printed using the () function is designed to prefix the
+value of all higher level counters (parent) when printing the output.
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ch36">Chapter 36: Functions</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch36-1">Section 36.1: calc() function</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+Accepts a mathematical expression and returns a numerical value.
 
-> Accepts a mathematical expression and returns a numerical value.
->
-> It is especially useful when working with different types of units
-> (e.g. subtracting a px value from a percentage) to calculate the value
-> of an attribute.
->
-> +, -, /, and &ast; operators can all be used, and parentheses can be
-> added to specify the order of operations if necessary.
+It is especially useful when working with different types of units
+(e.g. subtracting a px value from a percentage) to calculate the value
+of an attribute.
+
++, -, /, and &ast; operators can all be used, and parentheses can be
+added to specify the order of operations if necessary.
 
 Use
 
-calc
-
-(
-
+```
+calc (
 )
-
 to calculate the width of a div element:
-
-#div1
-
-{
-
-**position**
-
-:
-
-absolute
-
-;
-
-**left**
-
-:
-
-50
-
-px
-
-;
-
-**width**
-
-:
-
-calc
-
-(
-
-100
-
-&percnt;
-
-&minus;
-
-100
-
-px
-
-)
-
-;
-
-**border**
-
-:
-
-1
-
-px
-
-solid
-
-black
-
-;
-
-**background-color**
-
-:
-
-yellow
-
-;
-
-**padding**
-
-:
-
-5
-
-px
-
-;
-
-**text-align**
-
-:
-
-center
-
-;
-
+#div1 {
+  **position**: absolute;
+  **left**: 50px;
+  **width**: calc (100&percnt;
+  &minus;
+100px
+);
+  **border**: 1px solid black;
+  **background-color**: yellow;
+  **padding**: 5px;
+  **text-align**: center;
 }
+```
 
   calc
 
 > Use () to determine the position of a background-image:
 
-**background-position**
-
-:
-
-calc
-
-(
-
-50
-
-&percnt;
-
-&plus;
-
-17
-
-px
-
-)
+```
+**background-position**: calc (50&percnt;&plus; 17px)
+calc (
+50&percnt;&plus; 10px), 50&percnt; 50&percnt;;
+```
 
 calc
-
-(
-
-50
-
-&percnt;
-
-&plus;
-
-10
-
-px
-
-)
-
-,
-
-50
-
-&percnt;
-
-50
-
-&percnt;
-
-;
-
-  calc
 
 > Use () to determine the height of an element:
 
@@ -13970,22 +13399,13 @@ calc
 
 (
 
-100
-
-&percnt;
-
+100&percnt;
 &minus;
+20px);
 
-20
-
-px
-
-)
-
-;
-
-## Section 36.2: attr() function
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h3 id="ch36-2">Section 36.2: attr() function</h3>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 > Returns the value of an attribute of the selected element.
 
   data-
@@ -13996,122 +13416,68 @@ px
 > attribute which CSS can use (e.g. inside the pseudo-element) using
 > this function.
 
+```
 **&lt;**
-
 **blockquote**
-
 data-mark
-
 =
-
 &apos;&quot;&apos;
-
 **&gt;**
-
 **&lt;**
-
 **/blockquote**
-
 **&gt;**
+```
 
 > In the following CSS block, the character is appended before and after
 > the text inside the element:
 
+```
 blockquote
-
 &lbrack;
-
 data-mark
-
 &rbrack;
-
 ::
-
 before
-
 ,
-
 blockquote
-
 &lbrack;
-
 data-mark
-
 &rbrack;
-
 ::
-
 after
-
 {
-
 **content**
-
 :
-
 attr
-
 (
-
 data-mark
-
 )
-
 ;
-
 }
+```
 
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 ## Section 36.3: var() function
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
-> The var() function allows CSS variables to be accessed.
+<p> The var() function allows CSS variables to be accessed.</p>
 
-*/&ast; set a variable &ast;/*
+/* set a variable */
 
-:
-
-root
-
-{
-
-&minus;-
-
-primary-color
-
-:
-
-blue
-
-;
-
+```
+:root{&minus;- primary-color: blue;}
+/* access variable */
+selector{
+  **color**: var (
+  &minus;-
+  primary-color
+  );
 }
+```
 
-*/&ast; access variable &ast;/*
-
-selector
-
-{
-
-**color**
-
-:
-
-var
-
-(
-
-&minus;-
-
-primary-color
-
-)
-
-;
-
-}
-
-> This feature is currently under development. Check
-> &lbrack;&lbrack;caniuse.com&rbrack;&rbrack;(http://caniuse.com/#feat=css-variables)
-> for the latest browser support.
+<p> This feature is currently under development. Check 
+<a href="http://caniuse.com/#feat=css-variables">CanIuse.com</a> 
+for the latest browser support.</p>
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch36-4">Section 36.4: radial-gradient() function</h3>
@@ -14130,104 +13496,40 @@ primary-color
 
 > Creates a image representing a linear gradient of colors.
 
-linear-gradient
+```
+linear-gradient (
+  0 deg, red, yellow 50&percnt;, blue
+);
+```
 
-(
-
-0
-
-deg
-
-,
-
-red
-
-,
-
-yellow
-
-50
-
-&percnt;
-
-,
-
-blue
-
-)
-
-;
-
-> This creates a gradient going from bottom to top, with colors starting
-> at red, then yellow at 50%, and finishing in blue.
-
+<p>This creates a gradient going from bottom to top, with colors starting
+at red, then yellow at 50%, and finishing in blue.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ch37">Chapter 37: Custom Properties (Variables)</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p>CSS Variables allow authors to create reusable values which can be
+used throughout a CSS document.</p>
 
-> CSS Variables allow authors to create reusable values which can be
-> used throughout a CSS document.
->
-> For example, it&apos;s common in CSS to reuse a single color throughout a
-> document. Prior to CSS Variables this would mean reusing the same
-> color value many times throughout a document. With CSS Variables the
-> color value can be assigned to a variable and referenced in multiple
-> places. This makes changing values easier and is more semantic than
-> using traditional CSS values.
-
+<p>For example, it&apos;s common in CSS to reuse a single color throughout a
+document. Prior to CSS Variables this would mean reusing the same
+color value many times throughout a document. With CSS Variables the
+color value can be assigned to a variable and referenced in multiple
+places. This makes changing values easier and is more semantic than
+using traditional CSS values.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch37-1">Section 37.1: Variable Color</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 ```
-:
-root
-{
-&minus;-
-red
-:
-#b00
-;
-&minus;-
-blue
-:
-#4679bd
-;
-&minus;-
-grey
-:
-#ddd
-;
+:root {&minus;- red: #b00; &minus;-
+blue: #4679bd; &minus;- grey: #ddd;
 }
 .Bx1
 {
-**color**
-:
-var
-(
-&minus;-
-red
-)
-;
-**background**
-:
-var
-(
-&minus;-
-grey
-)
-;
-**border**
-:
-1
-px
-solid
-var
-(
-&minus;-
-red
-)
-;
+  **color**: var (&minus;- red);
+  **background**: var(&minus;- grey);
+  **border**: 1px solid var (
+  &minus;- red);
 }
 ```
 
@@ -14236,47 +13538,14 @@ red
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 ```
-:
-root
-{
-&minus;-W200
-:
-200
-px
-;
-&minus;-
-W
-10
-:
-10
-px
-;
+:root {&minus;-W200: 200px;
+&minus;- W 10: 10px;
 }
-.Bx2
-{
-**width**
-:
-var
-(
-&minus;-W200
-)
-;
-**height**
-:
-var
-(
-&minus;-W200
-)
-;
-**margin**
-:
-var
-(
-&minus;-
-W
-10
-)
-;
+.Bx2 {**width**: var (
+  &minus;-W200
+);
+**height**: var (&minus;-W200);
+**margin**: var (&minus;- W 10);
 }
 ```
 
@@ -14292,172 +13561,98 @@ W
 >
 > Assuming this HTML:
 
+```
 **&lt;**
-
 **a**
-
 class
-
 =
-
 &quot;button&quot;
-
 **&gt;**
-
 Button Green
-
 **&lt;**
-
 **/a**
-
 **&gt;**
-
 **&lt;**
-
 **a**
-
 class
-
 =
-
 &quot;button button_red&quot;
-
 **&gt;**
-
 Button Red
-
 **&lt;**
-
 **/a**
-
 **&gt;**
-
 **&lt;**
-
 **a**
-
 class
-
 =
-
 &quot;button&quot;
-
 **&gt;**
-
 Button Hovered On
-
 **&lt;**
-
 **/a**
-
 **&gt;**
+```
 
 > We can write this CSS:
 
+```
 .button
-
 {
-
 &minus;-
-
 color
-
 :
-
 green
-
 ;
-
 **padding**
-
 :
-
 .5
-
 rem
-
 ;
-
 **border**
-
 :
-
 1
-
 px
-
 solid
-
 var
-
 (
-
 &minus;-
-
 color
-
 )
-
 ;
-
 **color**
-
 :
-
 var
-
 (
-
 &minus;-
-
 color
-
 )
-
 ;
-
 }
-
 .button
-
 :
-
 hover
-
 {
-
 &minus;-
-
 color
-
 :
-
 blue
-
 ;
-
 }
-
 .button_red
-
 {
-
 &minus;-
-
 color
-
 :
-
 red
-
 ;
-
 }
+```
 
 > And get this result:
 
-!&lbrack;&rbrack;(./images/image226.jpg){width="3.71875in"
-height="0.6041666666666666in"}
+[image226.jpg](./images/image226.jpg)
+<!-- {width="3.71875in" height="0.6041666666666666in"} -->
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch37-4">Section 37.4: Valid/Invalids</h3>
@@ -14469,51 +13664,31 @@ height="0.6041666666666666in"}
 
 //These are Invalids variable names
 
+```
 &minus;-123
-
 color
-
 :
-
 blue
-
 ;
-
 &minus;-
-
 &num;
-
 **color**
-
 :
-
 red
-
 ;
-
 &minus;-
-
 bg
-
 &lowbar;color
-
 :
-
 yellow
-
 &minus;-
-
 &dollar;
-
 **width**
-
 :
-
 100
-
 px
-
 ;
+```
 
 //Valid variable names
 
