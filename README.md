@@ -5192,17 +5192,16 @@ font-variant-ligatures, and font-variant-east-asian.
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ch16">Chapter 16: Flexible Box Layout (Flexbox)</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-The Flexible Box module, or just &apos;flexbox&apos; for short, is a box model
+<p>The Flexible Box module, or just &apos;flexbox&apos; for short, is a box model
 designed for user interfaces, and it allows users to align and
 distribute space among items in a container such that elements behave
 predictably when the page layout must accommodate different, unknown
 screen sizes. A flex container expands items to fill available space
-and shrinks them to prevent overflow.
+and shrinks them to prevent overflow.</p>
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch16-1">Section 16.1: Dynamic Vertical and Horizontal Centering (alignitems, justify-content)</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-
 <b>Simple Example (centering a single element)</b>
 
 <h4>HTML:</h4>
@@ -5232,59 +5231,43 @@ class
 <h4>CSS</h4>
 
 <pre><code>
-.aligner
-{
-<b>display</b>
-:
-flex
-;
-<b>align-items</b>
-:
-center
-;
-<b>justify-content</b>
-:
-center
-;
+.aligner {
+  <b>display</b>: flex;
+  <b>align-items</b>: center;
+  <b>justify-content</b>: center;
 }
-.aligner-item
-{
-<b>max-width</b>
-:
-50
-&percnt;
-;
-*/&ast;for demo. Use actual width instead.&ast;/*
+.aligner-item {
+  <b>max-width</b>: 50&percnt;;
+/* for demo. Use actual width instead. */
 }
 </code></pre>
 
-Here is a
-&lbrack;&lbrack;demo&rbrack;&rbrack;(http://codepen.io/asim-coder/pen/ZOobqz).
->
+<p>Here is a <a href="http://codepen.io/asim-coder/pen/ZOobqz">demo (CodePen)</a>.</p>
+
 <b>Reasoning</b>
 
 <b>Property Value Description</b>
 
 This centers the elements along the axis other than the one specified
 by flex-direction,
->
+
 align-items center i.e., vertical centering for a horizontal flexbox
 and horizontal centering for a vertical flexbox.
->
+
 This centers the elements along the axis specified by flex-direction.
 I.e., for a
 
 <pre><code>
-  <b>flex-direction</b>                                   :   row
-  <b>flex-direction</b>                            :   column
+  <b>flex-direction</b>: row
+  <b>flex-direction</b>: column
 </code></pre>
 
 justify-contentcenter horizontal () flexbox, this centers
 horizontally, and for a vertical flexbox () flexbox, this centers
 vertically)
->
+
 <b>Individual Property Examples</b>
->
+
 All of the below styles are applied onto this simple layout:
 
 <pre><code>
@@ -5430,69 +5413,37 @@ center
 
 [image043.jpg 6.97 x 6.15](./images/image043.jpg)
 
-Here is a &lbrack;&lbrack;demo&rbrack;&rbrack;(https://jsfiddle.net/d6pc5bmd/3/).
+<p>Here is a <a href="https://jsfiddle.net/d6pc5bmd/3/">demo (jsFiddle)</a>.</p>
 
-<b>Example: Combination for centering both on horizontal flexbox</b>
+<h4>Example: Combination for centering both on horizontal flexbox</h4>
 
-<pre><code>
-div
-#container {
-  <b>display</b>
-:
-flex
-;
-<b>flex-direction</b>
-:
-row
-;
-<b>justify-content</b>
-:
-center
-;
-<b>align-items</b>
-:
-center
-;
-}
-</code></pre>
+<pre><code>div #container {
+  <b>display</b>: flex;
+  <b>flex-direction</b>: row;
+  <b>justify-content</b>: center;
+  <b>align-items</b>: center;
+}</code></pre>
 
-<b>Outcome:</b>
+<h4>Outcome:</h4>
 
 [image044.jpog 6.93 x 6.13](./images/image044.jpg)
 
-Here is a &lbrack;&lbrack;demo&rbrack;&rbrack;(https://jsfiddle.net/d6pc5bmd/4/).
+<p>Here is a <a href="https://jsfiddle.net/d6pc5bmd/4/">Demo (jsFiddle)</a>.</p>
 
-<b>Example: Combination for centering both on vertical flexbox</b>
+<h4>Example: Combination for centering both on vertical flexbox</h4>
 
-<pre><code>
-div
-#container
-{
-<b>display</b>
-:
-flex
-;
-<b>flex-direction</b>
-:
-column
-;
-<b>justify-content</b>
-:
-center
-;
-<b>align-items</b>
-:
-center
-;
-}
-</code></pre>
+<pre><code>div #container {
+  <b>display</b>: flex;
+  <b>flex-direction</b>: column;
+  <b>justify-content</b>: center;
+  <b>align-items</b>: center;
+}</code></pre>
 
-<b>Outcome:</b>
+<h4>Outcome:</h4>
 
 [image045.jpg 6.93 x 6.11](./images/image045.jpg)
 
-Here is a <a href="https://jsfiddle.net/d6pc5bmd/5/">demo</a>.
-
+Here is a <a href="https://jsfiddle.net/d6pc5bmd/5/">demo (jsFiddle)</a>.
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch16-2">Section 16.2: Sticky Variable-Height Footer</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -5501,47 +5452,21 @@ end of the viewport, the footer sticks to the bottom of the viewport.
 When the content extends past the bottom of the viewport, the footer
 is also pushed out of the viewport. 
 
-<p><a href="https://jsfiddle.net/0t1f84tL/">View Result (jsFiddle)</a>.</p>
+<h4><a href="https://jsfiddle.net/0t1f84tL/">View Result (jsFiddle)</a>.</h4>
 
 <h4>HTML:</h4>
 
 <pre><code>
-<b>&lt;</b>
-<b>div</b>
-class
-=
-&quot;header&quot;
-<b>&gt;</b>
-<b>&lt;</b>
-<b>h</b>
-<b>2</b>
-<b>&gt;</b>
+<b>&lt;</b><b>div</b> class=&quot;header&quot;<b>&gt;</b>
+<b>&lt;</b><b>h</b><b>2</b><b>&gt;</b>
 Header
-<b>&lt;</b>
-<b>/h</b>
-<b>2</b>
-<b>&gt;</b>
-<b>&lt;</b>
-<b>/div</b>
-<b>&gt;</b>
-<b>&lt;</b>
-<b>div</b>
-class
-=
-&quot;content&quot;
-<b>&gt;</b>
-<b>&lt;</b>
-<b>h</b>
-<b>1</b>
-<b>&gt;</b>
+<b>&lt;</b><b>/h</b><b>2</b><b>&gt;</b>
+<b>&lt;</b><b>/div</b><b>&gt;</b>
+<b>&lt;</b><b>div</b> class=&quot;content&quot;<b>&gt;</b>
+<b>&lt;</b><b>h</b><b>1</b><b>&gt;</b>
 Content
-<b>&lt;</b>
-<b>/h</b>
-<b>1</b>
-<b>&gt;</b>
-<b>&lt;</b>
-<b>p</b>
-<b>&gt;</b>
+<b>&lt;</b><b>/h</b><b>1</b><b>&gt;</b>
+<b>&lt;</b><b>p</b><b>&gt;</b>
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec
 odio. Praesent libero.
 Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum
@@ -5554,17 +5479,13 @@ himenaeos. Curabitur sodales ligula in libero.
 <b>&lt;/p&gt;</b>
 <b>&lt;/div&gt;</b>
 <b>&lt;div</b> class=&quot;footer&quot;<b>&gt;</b>
-<b>&lt;h4&gt;</b>Footer<b>&lt;/h4</b>
-<b>&gt;</b>
-<b>&lt;</b>
-<b>/div</b>
-<b>&gt;</b>
+<b>&lt;h4&gt;</b>Footer<b>&lt;/h4</b><b>&gt;</b>
+<b>&lt;</b><b>/div</b><b>&gt;</b>
 </code></pre>
 
 </h4>CSS:</h4>
 
-<pre><code>
-html, body {
+<pre><code>html, body {
   <b>height</b>: 100&percnt;;
 }
 body {
@@ -5579,9 +5500,7 @@ body {
   <b>background-color</b>: grey;
   <b>color</b>: white;
   <b>flex</b>: none;
-}
-</code></pre>
-
+}</code></pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch16-3">Section 16.3: Optimally fit elements to their container</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -5589,7 +5508,6 @@ body {
 containers to their parent element.</p>
 
 <p><a href="https://jsfiddle.net/6gfogoqk/">Live Demo (jsFiddle)</a>.</p>
-
 
 <h4>HTML:</h4>
 
@@ -7452,7 +7370,8 @@ hsl
 */&ast; Blue &ast;/*
 
 }
-[]<img src="./images/image189.jpg">{width="7.48037510936133in" height="5.610277777777778in"}
+[image189.jpg 7.48 x 5.61](img src="./images/image189.jpg")
+<!-- {width="7.48037510936133in" height="5.610277777777778in"} -->
 
 <b>Syntax</b>
 <b>color</b>
@@ -7628,67 +7547,37 @@ This is a partially transparent element
 <h3 id="ch19-2">Section 19.2: IE Compatibility for &apos;opacity&apos;</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
-To use
+To use opacity in all versions of IE, the order is:
 
-opacity
-
-in all versions of IE, the order is:
-
-.transparent-element
-
-{
-
-*/&ast; for IE 8 & 9 &ast;/*
-
+```
+.transparent-element {
+/* for IE 8 & 9 */
 -ms-filter
-
 :
-
 &quot;progid:DXImageTransform.Microsoft.Alpha(Opacity=60)&quot;
-
 ;
-
 // IE8
-
-*/&ast; works in IE 8 & 9 too, but also 5, 6, 7 &ast;/*
-
+/ works in IE 8 & 9 too, but also 5, 6, 7 */
 <b>filter</b>
-
 :
-
 alpha
-
 (
-
 opacity
-
 =
-
 60
-
 )
-
 ;
-
 // IE
-
 5
-
 &minus;
-
 7
-
-*/&ast; Modern Browsers &ast;/*
-
+/* Modern Browsers */
 <b>opacity</b>
-
 :
-
 0.6
-
 ;
-
 }
+```
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ch20">Chapter 20: Length Units</h2>
@@ -7696,178 +7585,72 @@ opacity
 
 <b>Unit Description</b>
 
-> &percnt; Define sizes in terms of parent objects or current object dependent
-> on property em Relative to the font-size of the element (2em means 2
-> times the size of the current font) rem Relative to font-size of the
-> root element vw Relative to 1% of the width of the viewport&ast; vh
-> Relative to 1% of the height of the viewport&ast; vmin Relative to 1% of
-> viewport&apos;s&ast; smaller dimension vmax Relative to 1% of viewport&apos;s&ast;
-> larger dimension cm centimeters mm millimeters in inches (1in = 96px =
-> 2.54cm) px pixels (1px = 1/96th of 1in) pt points (1pt = 1/72 of 1in)
-> pc picas (1pc = 12 pt) s seconds (used for animations and transitions)
-> ms milliseconds (used for animations and transitions) ex Relative to
-> the x-height of the current font ch Based on the width of the zero (0)
-> character fr fractional unit (used for CSS Grid Layout)
->
-> A CSS distance measurement is a number immediately followed by a
-> length unit (px, em, pc, in, ...)
->
-> CSS supports a number of length measurements units. They are absolute
-> or relative.
+| &percnt; | Define sizes in terms of parent objects or current object dependent on property |
+| em | Relative to the font-size of the element (2em means 2 times the size of the current font) |
+| rem | Relative to font-size of the root element |
+| vw | Relative to 1% of the width of the viewport&ast; |
+| vh | Relative to 1% of the height of the viewport&ast; |
+| vmin | Relative to 1% of > viewport&apos;s&ast; smaller dimension |
+| vmax | Relative to 1% of viewport&apos;s&ast; larger dimension |
+| cm | centimeters | 
+| mm | millimeters |
+| in | inches (1in = 96px = 2.54cm) |
+| px | pixels (1px = 1/96th of 1in) | 
+| pt | points (1pt = 1/72 of 1in) |
+| pc | picas (1pc = 12 pt) |
+| s | seconds (used for animations and transitions) |
+| ms | milliseconds (used for animations and transitions) |
+| ex | Relative to the x-height of the current font |
+| ch | Based on the width of the zero (0) character |
+| fr | fractional unit (used for CSS Grid Layout) |
 
+<p>A CSS distance measurement is a number immediately followed by a
+length unit (px, em, pc, in, ...)</p>
+
+<p>CSS supports a number of length measurements units. They are absolute
+or relative.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch20-1">Section 20.1: Creating scalable elements using rems and ems</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h6>Version ≥ 3</h6>
 
-Version ≥ 3
-
-You can use rem defined by the font-size of your html tag to style
+<p>You can use rem defined by the font-size of your html tag to style
 elements by setting their font-size to a value of rem and use em
 inside the element to create elements that scale with your global
-font-size.
+font-size.</p>
 
 <b>HTML:</b>
 
-<b>&lt;</b>
+<pre><code><b>&lt;input</b> type=&quot;button&quot; value=&quot;Button&quot;<b>&gt;</b>
+<b>&lt;input</b> type=&quot;range&quot;<b>&gt;</b>
+<b>&lt;input</b> type=&quot;text&quot; value=&quot;Text&quot;<b>&gt;</b></code></pre>
 
-<b>input</b>
+<h4>Relevant CSS:</h4>
 
-type
-
-=
-
-&quot;button&quot;
-
-value
-
-=
-
-&quot;Button&quot;
-
-<b>&gt;</b>
-
-<b>&lt;</b>
-
-<b>input</b>
-
-type
-
-=
-
-&quot;range&quot;
-
-<b>&gt;</b>
-
-<b>&lt;</b>
-
-<b>input</b>
-
-type
-
-=
-
-&quot;text&quot;
-
-value
-
-=
-
-&quot;Text&quot;
-
-<b>&gt;</b>
-
-> <b>Relevant CSS:</b>
-html {
+<pre><code>html {
   <b>font-size</b>: 16px;
 }
-input
-&lbrack;type=&quot;button&quot;&rbrack;
-{
+input&lbrack;type=&quot;button&quot;&rbrack; {
   <b>font-size</b>: 1rem;
   <b>padding</b>: 0.5em 2em;
 }
 
-input
-
-&lbrack;
-
-type
-
-=
-
-&quot;range&quot;
-
-&rbrack;
-
-{
-
-<b>font-size</b>
-
-:
-
-1
-
-rem
-
-;
-
-<b>width</b>
-
-:
-
-10
-
-em
-
-;
-
+input&lbrack;type=&quot;range&quot;&rbrack; {
+  <b>font-size</b>: 1rem;
+  <b>width</b>: 10em;
 }
+input&lbrack;type=text&rbrack; {
+  <b>font-size</b>: 1rem;
+  <b>padding</b>: 0.5em;
+}</code></pre>
 
-input
+<h4>Possible Result:</h4>
 
-&lbrack;
-
-type
-
-=
-
-text
-
-&rbrack;
-
-{
-
-<b>font-size</b>
-
-:
-
-1
-
-rem
-
-;
-
-<b>padding</b>
-
-:
-
-0.5
-
-em
-
-;
-
-}
-
-> <b>Possible Result:</b>
-
-!&lbrack;&rbrack;(./images/image190.jpg){width="6.34375in"
-height="2.9583333333333335in"}
-
+[image190.jpg 6.34 x 2.95](./images/image190.jpg)
+<!-- {width="6.34375in" height="2.9583333333333335in"} -->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch20-2">Section 20.2: Font size with rem</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-
 CSS3 introduces a few new units, including the
 &lbrack;&lbrack;rem&rbrack;&rbrack;(https://www.w3.org/TR/css-values/#font-relative-lengths)
 unit, which stands for &quot;root em&quot;. Let&apos;s look at how rem works.
