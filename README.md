@@ -3,7 +3,7 @@ title: |
   CSS Notes for Professionals
   by web@petercv.com, PDF https://goalkicker.com/CSSBook
 author: "bbauska"
-date last editted: "7/5/2024 Fri 8+pm"
+date last editted: "7/6/2024 Sat 3+am"
 output: 
   markdown:
     with some style
@@ -4189,7 +4189,7 @@ paragraph flowing around the image. Notice that it is always content
 Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed
 nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum.
 Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris
-massa. Vestibulum lacinia arcu eget nulla. <b>&lt;/p&gt;
+massa. Vestibulum lacinia arcu eget nulla. <b>&lt;/p&gt;</b>
 <b>&lt;img</b> src=<span style="color:blue">&quot;http://lorempixel.com/200/100/&quot;</span> <b>/&gt;</b>
 
 <b>&lt;p&gt;</b>Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. 
@@ -4995,8 +4995,15 @@ and shrinks them to prevent overflow.</p>
 }</code></pre>
 
 <b>Outcome:</b>
-
-[image040.jpg ](./images/image040.jpg)
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 40.  (xxx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p align="center" width="100%">
+<img src="./images/image040.jpg"
+  style="width:50%"
+  title=""
+  alt="." />
+</p>
+<!-- [image040.jpg ](./images/image040.jpg) -->
 
 Here is the <a href="https://jsfiddle.net/d6pc5bmd/">demo jsFiddle</a>.
 
@@ -5011,8 +5018,15 @@ Here is the <a href="https://jsfiddle.net/d6pc5bmd/">demo jsFiddle</a>.
 }</code></pre>
 
 <h4>Outcome:</h4>
-
-[image041.jpg](./images/image041.jpg)
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 41.  (xxx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p align="center" width="100%">
+<img src="./images/image041.jpg"
+  style="width:50%"
+  title=""
+  alt="." />
+</p>
+<!-- [image041.jpg](./images/image041.jpg) -->
 
 <p>Here is a <a href="https://jsfiddle.net/d6pc5bmd/1/">demo (jsFiddle)</a>.</p>
 
@@ -5027,8 +5041,15 @@ Here is the <a href="https://jsfiddle.net/d6pc5bmd/">demo jsFiddle</a>.
 }</code></pre>
 
 <h4>Outcome:</h4>
-
-[image042.jpg](./images/image042.jpg)
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 42.  (xxx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p align="center" width="100%">
+<img src="./images/image042.jpg"
+  style="width:50%"
+  title=""
+  alt="." />
+</p>
+<!-- [image042.jpg](./images/image042.jpg) -->
 
 <p>Here is a <a href="https://jsfiddle.net/d6pc5bmd/2/">demo jsFiddle</a>.</p>
 
@@ -5045,8 +5066,15 @@ Here is the <a href="https://jsfiddle.net/d6pc5bmd/">demo jsFiddle</a>.
 }</code></pre>
 
 <h4>Outcome:</h4>
-
-[image043.jpg 6.97 x 6.15](./images/image043.jpg)
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 43.  (xxx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p align="center" width="100%">
+<img src="./images/image043.jpg"
+  style="width:70%"
+  title=""
+  alt="." />
+</p>
+<!-- [image043.jpg 6.97 x 6.15](./images/image043.jpg) -->
 
 <p>Here is a <a href="https://jsfiddle.net/d6pc5bmd/3/">demo (jsFiddle)</a>.</p>
 
@@ -5060,8 +5088,15 @@ Here is the <a href="https://jsfiddle.net/d6pc5bmd/">demo jsFiddle</a>.
 }</code></pre>
 
 <h4>Outcome:</h4>
-
-[image044.jpog 6.93 x 6.13](./images/image044.jpg)
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 44.  (xxx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p align="center" width="100%">
+<img src="./images/image044.jpg"
+  style="width:70%"
+  title=""
+  alt="." />
+</p>
+<!-- [image044.jpog 6.93 x 6.13](./images/image044.jpg) -->
 
 <p>Here is a <a href="https://jsfiddle.net/d6pc5bmd/4/">Demo (jsFiddle)</a>.</p>
 
@@ -5075,8 +5110,15 @@ Here is the <a href="https://jsfiddle.net/d6pc5bmd/">demo jsFiddle</a>.
 }</code></pre>
 
 <h4>Outcome:</h4>
-
-[image045.jpg 6.93 x 6.11](./images/image045.jpg)
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 45.  (xxx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p align="center" width="100%">
+<img src="./images/image045.jpg"
+  style="width:70%"
+  title=""
+  alt="." />
+</p>
+<!-- [image045.jpg 6.93 x 6.11](./images/image045.jpg) -->
 
 Here is a <a href="https://jsfiddle.net/d6pc5bmd/5/">demo (jsFiddle)</a>.
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -5176,9 +5218,15 @@ containers to their parent element.</p>
 <b>Outcome:</b>
 
 <p>Columns adapt as screen is resized.</p>
-
-[image046.png 7.48 x 3.18](./images/image046.png)
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 46.  (xxx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p align="center" width="100%">
+<img src="./images/image046.png"
+  style="width:75%"
+  title=""
+  alt="." />
+</p>
+<!-- [image046.png 7.48 x 3.18](./images/image046.png) -->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch16-4">Section 16.4: Holy Grail Layout using Flexbox</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -5310,8 +5358,15 @@ body {
 
 It&apos;s a regular pattern in design these days to vertically align
 <b>call to actions</b> inside its containing cards like this:
-
-[image047.jpg 7.49 x 3.38](./images/image047.jpg)
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 47.  (xxx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p align="center" width="100%">
+<img src="./images/image047.jpg"
+  style="width:75%"
+  title=""
+  alt="." />
+</p>
+<!-- [image047.jpg 7.49 x 3.38](./images/image047.jpg) -->
 
 This can be achieved using a special trick with flexbox
 
@@ -5371,8 +5426,15 @@ p: last-child {
 }</code></pre>
 
 <p>The layout will change and become like this:</p>
-
-[image048.jpg 7.48 x 3"](./images/image048.jpg)
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 48.  (xxx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p align="center" width="100%">
+<img src="./images/image048.jpg"
+  style="width:75%"
+  title=""
+  alt="." />
+</p>
+<!-- [image048.jpg 7.48 x 3"](./images/image048.jpg) -->
 
 <b>display</b>: flex
 
@@ -6112,8 +6174,15 @@ currentColor
 }
 
 <h4>Possible Result:</h4>
-[image049.png 5.2 x 3.09](./images/image049.png)
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 49.  (xxx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p align="center" width="100%">
+<img src="./images/image049.png"
+  style="width:50%"
+  title=""
+  alt="." />
+</p>
+<!-- [image049.png 5.2 x 3.09](./images/image049.png) -->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch18-2">Section 18.2: Color Keywords</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -6741,7 +6810,15 @@ hsl
 */&ast; Blue &ast;/*
 
 }
-[image189.jpg 7.48 x 5.61](img src="./images/image189.jpg")
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 189.  (xxx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p align="center" width="100%">
+<img src="./images/image189.jpg"
+  style="width:75%"
+  title=""
+  alt="." />
+</p>
+<!-- [image189.jpg 7.48 x 5.61](img src="./images/image189.jpg") -->
 <!-- {width="7.48037510936133in" height="5.610277777777778in"} -->
 
 <b>Syntax</b>
@@ -7016,8 +7093,15 @@ input&lbrack;type=text&rbrack; {
 }</code></pre>
 
 <h4>Possible Result:</h4>
-
-[image190.jpg 6.34 x 2.95](./images/image190.jpg)
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 190.  (xxx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p align="center" width="100%">
+<img src="./images/image190.jpg"
+  style="width:65%"
+  title=""
+  alt="." />
+</p>
+<!-- [image190.jpg 6.34 x 2.95](./images/image190.jpg) -->
 <!-- {width="6.34375in" height="2.9583333333333335in"} -->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch20-2">Section 20.2: Font size with rem</h3>
@@ -7165,8 +7249,15 @@ color: #CCC;
 ```
 
 <b>OUTPUT</b>
-
-[image191.jpg 1.4 x .875](./images/image191.jpg)
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 191.  (xxx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p align="center" width="100%">
+<img src="./images/image191.jpg"
+  style="width:15%"
+  title=""
+  alt="." />
+</p>
+<!-- [image191.jpg 1.4 x .875](./images/image191.jpg) -->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ch21">Chapter 21: Pseudo-Elements</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -7371,10 +7462,15 @@ Test II
 <b>&gt;</b>
 
 <h4>Result</h4>
-
-!&lbrack;&rbrack;(./images/image193.jpg){width="2.4479166666666665in"
-height="1.3125in"}
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 193.  (xxx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p align="center" width="100%">
+<img src="./images/image193.jpg"
+  style="width:65%"
+  title=""
+  alt="." />
+</p>
+<!-- (./images/image193.jpg){width="2.4479166666666665in" height="1.3125in"} -->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ch22">Chapter 22: Positioning</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -7549,12 +7645,17 @@ red
 
 
 This creates the following effect:
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 194.  (xxx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p align="center" width="100%">
+<img src="./images/image194.jpg"
+  style="width:35%"
+  title=""
+  alt="." />
+</p>
+<!-- (./images/image194.jpg){width="3.6458333333333335in" height="3.8645833333333335in"} -->
 
-!&lbrack;&rbrack;(./images/image194.jpg){width="3.6458333333333335in"
-height="3.8645833333333335in"}
-
-See a working example at
-&lbrack;&lbrack;JSFiddle&rbrack;&rbrack;(https://jsfiddle.net/esnc10tq/).
+<p>See a working example at <a href="https://jsfiddle.net/esnc10tq/">Demo (jsFiddle)</a>.</p>
 
 <b>Syntax</b>
 
@@ -8304,11 +8405,17 @@ layout of a table.
   <b>width</b>                     :     150px
 
 Below an example of two tables both set to :
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 200.  (xxx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p align="center" width="100%">
+<img src="./images/image200.jpg"
+  style="width:45%"
+  title=""
+  alt="." />
+</p>
+<!-- (./images/image200.jpg){width="4.625in" height="1.125in"} -->
 
-!&lbrack;&rbrack;(./images/image200.jpg){width="4.625in" height="1.125in"}
-
-  <b>table-layout</b>   :   auto   while the one on the right    <b>table-layout</b>   :   fixed
-                                has                                                  
+<b>table-layout</b>   :   auto   while the one on the right    <b>table-layout</b>   :   fixed
 
 The table on the left has . The former is
 
@@ -8336,11 +8443,17 @@ separate.
 
 Below an example with two tables with different values set to the
 empty-cells property:
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 201.  (xxx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p align="center" width="100%">
+<img src="./images/image201.jpg"
+  style="width:57%"
+  title=""
+  alt="." />
+</p>
+<!-- [imag201.jpg](./images/image201.jpg){width="5.708333333333333in" height="0.8854166666666666in"} -->
 
-[imag201.jpg](./images/image201.jpg){width="5.708333333333333in"
-height="0.8854166666666666in"}
-
-  <b>empty-cells</b>   :   show   while the one on the right has  <b>empty-cells</b>   :   hide
+<b>empty-cells</b>   :   show   while the one on the right has  <b>empty-cells</b>   :   hide
 
 
 The table on the left has . The former does display the empty cells
@@ -8369,9 +8482,15 @@ be separated or merged.
 
 Below an example of two tables with different values to the
 border-collapse property:
-
-!&lbrack;&rbrack;(./images/image202.jpg){width="5.666666666666667in"
-height="0.9270833333333334in"}
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 202.  (xxx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p align="center" width="100%">
+<img src="./images/image202.jpg"
+  style="width:57%"
+  title=""
+  alt="." />
+</p>
+<!-- (./images/image202.jpg){width="5.666666666666667in" height="0.9270833333333334in"} -->
 
   <b>border-collapse</b>   :   separate   while the one on the     <b>border-collapse</b>   :   collapse
                                        right has                                          
@@ -8424,9 +8543,15 @@ not exist.
 
 Below an example with two tables with different values set to the
 caption-side property:
-
-!&lbrack;&rbrack;(./images/image204.jpg){width="5.729166666666667in"
-height="1.1458333333333333in"}
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 204.  (xxx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p align="center" width="100%">
+<img src="./images/image204.jpg"
+  style="width:57%"
+  title=""
+  alt="." />
+</p>
+<!-- (./images/image204.jpg){width="5.729166666666667in" height="1.1458333333333333in"} -->
 
   <b>caption-side</b>   :   top   while the one on the right    <b>caption-side</b>   :   bottom
                                has                                                  
@@ -8572,14 +8697,28 @@ The function takes four parameters:
 
 )
 
-!&lbrack;&rbrack;(./images/image205.jpg){width="4.395833333333333in"
-height="2.2083333333333335in"}
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 205.  (xxx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p align="center" width="100%">
+<img src="./images/image205.jpg"
+  style="width:44%"
+  title=""
+  alt="." />
+</p>
+<!-- (./images/image205.jpg){width="4.395833333333333in" height="2.2083333333333335in"} -->
 
 These parameters will be mapped to points which are part of a &lbrack;&lbrack;Bézier
 curve&rbrack;&rbrack;(https://en.wikipedia.org/wiki/B%C3%A9zier_curve#Cubic_B.C3.A9zier_curves):
 
-!&lbrack;&rbrack;(./images/image206.jpg){width="4.96875in"
-height="4.958333333333333in"}
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 206.  (xxx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p align="center" width="100%">
+<img src="./images/image206.jpg"
+  style="width:50%"
+  title=""
+  alt="." />
+</p>
+<!-- (./images/image206.jpg){width="4.96875in" height="4.958333333333333in"} -->
 
 For CSS Bézier Curves, P0 and P3 are always in the same spot. P0 is at
 (0,0) and P3 is at (1,1), which menas that the parameters passed to
@@ -9746,9 +9885,15 @@ it 200px to the right.
 In chained transforms, <b>the coordinate system moves with the
 element</b>. This means that the translation won&apos;t be horizontal but on
 an axis rotate 15 degrees clockwise as shown in the following image:
-
-!&lbrack;&rbrack;(./images/image207.jpg){width="7.48037510936133in"
-height="2.7919728783902014in"}
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 207.  (xxx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p align="center" width="100%">
+<img src="./images/image207.jpg"
+  style="width:75%"
+  title=""
+  alt="." />
+</p>
+<!-- (./images/image207.jpg){width="7.48037510936133in" height="2.7919728783902014in"} -->
 
 Changing the order of the transforms will change the output. The first
 example will be different to
@@ -9830,11 +9975,17 @@ px
 }
 
 As shown in this image:
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 208.  (xxx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p align="center" width="100%">
+<img src="./images/image208.jpg"
+  style="width:75%"
+  title=""
+  alt="." />
+</p>
+<!-- (./images/image208.jpg){width="7.48037510936133in" height="2.7919728783902014in"} -->
 
-!&lbrack;&rbrack;(./images/image208.jpg){width="7.48037510936133in"
-height="2.7919728783902014in"}
-
-## Section 28.5: Translate
+<h3 id="ch28-5">Section 28.5: Translate</h3>
 
 <h4>HTML:</h4>
 
@@ -10095,19 +10246,37 @@ a similar approach to create something that resembles the Safari logo
 or a compass dial.
 
 <b>Screenshot of element with no transform:</b>
-
-!&lbrack;&rbrack;(./images/image209.jpg){width="1.6979166666666667in"
-height="1.6979166666666667in"}
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 209.  (xxx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p align="center" width="100%">
+<img src="./images/image209.jpg"
+  style="width:17%"
+  title=""
+  alt="." />
+</p>
+<!-- (./images/image209.jpg){width="1.6979166666666667in" height="1.6979166666666667in"} -->
 
 <b>Screenshot of element with only 2D transform:</b>
-
-!&lbrack;&rbrack;(./images/image210.jpg){width="2.3541666666666665in"
-height="2.3645833333333335in"}
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 210.  (xxx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p align="center" width="100%">
+<img src="./images/image210.jpg"
+  style="width:25%"
+  title=""
+  alt="." />
+</p>
+<!-- (./images/image210.jpg){width="2.3541666666666665in" height="2.3645833333333335in"} -->
 
 <b>Screenshot of element with 3D transform:</b>
-
-[image211.jpg .739 x 2.47](./images/image211.jpg)
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 211.  (xxx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p align="center" width="100%">
+<img src="./images/image211.jpg"
+  style="width:7%"
+  title=""
+  alt="." />
+</p>
+<!-- [image211.jpg .739 x 2.47](./images/image211.jpg) -->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch29-2">Section 29.2: 3D text eect with shadow</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -10397,8 +10566,15 @@ deg
 &lbrack;&lbrack;View example with additional hover
 effect&rbrack;&rbrack;(http://codepen.io/web-tiki/pen/azeKNy)
 
-!&lbrack;&rbrack;(./images/image212.jpg){width="7.48037510936133in"
-height="3.642194881889764in"}
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 212.  (xxx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p align="center" width="100%">
+<img src="./images/image212.jpg"
+  style="width:75%"
+  title=""
+  alt="." />
+</p>
+<!-- (./images/image212.jpg){width="7.48037510936133in" height="3.642194881889764in"} -->
 
 In this example, the text is transformed to make it look like it is
 going into the screen away from the user.
@@ -10410,7 +10586,9 @@ transforms form it&apos;s parent (the H1 tag).
 The white &quot;light&quot; is made with a pseudo element on the #title
 element. It is skewed and uses border-radius for the rounded corner.
 
-## Section 29.3: backface-visibility
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h3 id="ch29-3">Section 29.3: backface-visibility</h3>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 The backface-visibility property relates to 3D transforms.
 
@@ -10762,10 +10940,15 @@ rotateX
 .cubeFace
 
 {
-
-
-!&lbrack;&rbrack;(./images/image213.png){width="7.486667760279965in"
-height="6.386666666666667in"}
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 213.  (xxx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p align="center" width="100%">
+<img src="./images/image213.jpg"
+  style="width:75%"
+  title=""
+  alt="." />
+</p>
+<!-- (./images/image213.png){width="7.486667760279965in" height="6.386666666666667in"} -->
 
 <a href="http://codepen.io/web-tiki/pen/NNwqBa">View this example</a>
 
@@ -10854,13 +11037,21 @@ px
 }
 
 > <b>Result</b>
-
-!&lbrack;&rbrack;(./images/image214.jpg){width="2.2395833333333335in"
-height="2.8125in"}
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 214.  (xxx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p align="center" width="100%">
+<img src="./images/image214.jpg"
+  style="width:22%"
+  title=""
+  alt="." />
+</p>
+<!-- (./images/image214.jpg){width="2.2395833333333335in" height="2.8125in"} -->
 
 > Makes you wanna rub your glasses.
 
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch30-2">Section 30.2: Drop Shadow (use box-shadow instead if possible)</h3>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 <h4>HTML:</h4>
 
@@ -10939,19 +11130,24 @@ green
 }
 
 > <b>Result</b>
-
-[image215 2.406 x .572](./images/image215.jpg)
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 215.  (xxx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p align="center" width="100%">
+<img src="./images/image215.jpg"
+  style="width:24%"
+  title=""
+  alt="." />
+</p>
+<!-- [image215 2.406 x .572](./images/image215.jpg) -->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch30-3">Section 30.3: Hue Rotate</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-
 <h4>HTML:</h4>
->
-> <b>&lt;img</b> src=&apos;donald-duck.png&apos; alt=&apos;Donald Duck&apos; title=&apos;Donald
-> Duck&apos; <b>/&gt;</b>
->
-> <h4>CSS</h4>
+
+<p><b>&lt;img</b> src=&apos;donald-duck.png&apos; alt=&apos;Donald Duck&apos; title=&apos;Donald
+Duck&apos; <b>/&gt;</b></p>
+
+<h4>CSS</h4>
 
 img
 
@@ -10992,10 +11188,15 @@ deg
 }
 
 > <b>Result</b>
-
-!&lbrack;&rbrack;(./images/image216.jpg){width="2.2604166666666665in"
-height="2.8125in"}
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 216.  (xxx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p align="center" width="100%">
+<img src="./images/image216.jpg"
+  style="width:22%"
+  title=""
+  alt="." />
+</p>
+<!-- (./images/image216.jpg){width="2.2604166666666665in" height="2.8125in"} -->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch30-4">Section 30.4: Multiple Filter Values</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -11108,8 +11309,15 @@ invert
 
 <h4>Result</h4>
 
-[image217 2.114 x 2.708](./images/image217.jpg)
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 217.  (xxx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p align="center" width="100%">
+<img src="./images/image217.jpg"
+  style="width:22%"
+  title=""
+  alt="." />
+</p>
+<!-- [image217 2.114 x 2.708](./images/image217.jpg) -->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch30-5">Section 30.5: Invert Color</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -11196,9 +11404,15 @@ invert
 }
 
 > <b>Result</b>
-
-!&lbrack;&rbrack;(./images/image218.jpg){width="1.1979166666666667in"
-height="1.1979166666666667in"}
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 218.  (xxx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p align="center" width="100%">
+<img src="./images/image218.jpg"
+  style="width:11%"
+  title=""
+  alt="." />
+</p>
+<!-- (./images/image218.jpg){width="1.1979166666666667in" height="1.1979166666666667in"} -->
 
 > Turns from white to black.
 
@@ -11537,8 +11751,15 @@ px
 
 }
 
-[image220.jpg 6.25 x 3.75](./images/image220.jpg)
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 220.  (xxx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p align="center" width="100%">
+<img src="./images/image220.jpg"
+  style="width:62%"
+  title=""
+  alt="." />
+</p>
+<!-- [image220.jpg 6.25 x 3.75](./images/image220.jpg) -->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch32-2">Section 32.2: drop shadow</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -11634,8 +11855,15 @@ px
 ```
 
 <h4>Result:</h4>
-
-[image221.jpg 2.645 x 1.541](./images/image221.jpg)
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 221.  (xxx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p align="center" width="100%">
+<img src="./images/image221.jpg"
+  style="width:26%"
+  title=""
+  alt="." />
+</p>
+<!-- [image221.jpg 2.645 x 1.541](./images/image221.jpg) -->
 
 <a href="https://jsfiddle.net/UnsungHero97/80qod7aL/1/&rbrack;&rbrack;(https://jsfiddle.net/UnsungHero97/80qod7aL/1/">Demo (JSFiddle):</a>
 
@@ -11664,12 +11892,18 @@ px
 }
 ```
 
-[image222 6.125 x 5.833](./images/image222.jpg)
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 222.  (xxx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p align="center" width="100%">
+<img src="./images/image222.jpg"
+  style="width:61%"
+  title=""
+  alt="." />
+</p>
+<!-- [image222 6.125 x 5.833](./images/image222.jpg) -->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ch33">Chapter 33: Shapes for Floats</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-
 <b>Parameter Details</b>
 
 > A value of none means that the float area (the area that is used for
@@ -11691,7 +11925,9 @@ px
 > When an image is provided as value, the shape is computed based on the
 > alpha channel of the image image specified.
 
-## Section 33.1: Shape Outside with Basic Shape -- circle()
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h3 id="ch33-1">Section 33.1: Shape Outside with Basic Shape -- circle()</h3>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 > With the shape-outside CSS property one can define shape values for
 > the float area so that the inline content wraps around the shape
@@ -11699,189 +11935,64 @@ px
 >
 > <h4>CSS</h4>
 
-img
-
-:
-
-nth-of-type
-
-(
-
-1
-
-)
-
-{
-
-<b>shape-outside</b>
-
-:
-
-circle
-
-(
-
-80
-
-px
-
-at
-
-50
-
-&percnt;
-
-50
-
-&percnt;
-
-)
-
-;
-
-<b>float</b>
-
-:
-
-left
-
-;
-
-<b>width</b>
-
-:
-
-200
-
-px
-
-;
-
+img: nth-of-type (1) {
+<b>shape-outside</b>: circle (
+80px at 50&percnt; 50&percnt;
+);
+  <b>float</b>: left;
+  <b>width</b>: 200px;
 }
-
-img
-
-:
-
-nth-of-type
-
-(
-
-2
-
-)
-
-{
-
-<b>shape-outside</b>
-
-:
-
-circle
-
-(
-
-80
-
-px
-
-at
-
-50
-
-&percnt;
-
-50
-
-&percnt;
-
-)
-
-;
-
-<b>float</b>
-
-:
-
-right
-
-;
-
-<b>width</b>
-
-:
-
-200
-
-px
-
-;
-
+img: nth-of-type (2) {
+  <b>shape-outside</b>: circle (
+80px at 50&percnt;
+50&percnt;
+);
+<b>float</b>: right;
+<b>width</b>: 200px;
 }
-
-p
-
-{
-
-<b>text-align</b>
-
-:
-
-center
-
-;
-
-<b>line-height</b>
-
-:
-
-30
-
-px
-
-;
-
-*/&ast; purely for demo &ast;/*
-
+p {
+<b>text-align</b>: center;
+<b>line-height</b>: 30px;
+/* purely for demo */
 }
 
 <h4>HTML:</h4>
->
-> <b>&lt;img</b>
-> src=&quot;http://images.clipartpanda.com/circle-clip-art-circlergb.jpg&quot;<b>&gt;</b>
->
-> <b>&lt;img</b>
-> src=&quot;http://images.clipartpanda.com/circle-clip-art-circlergb.jpg&quot;<b>&gt;</b>
->
-> <b>&lt;p&gt;</b>Some paragraph whose text content is required to be wrapped
-> such that it follows the curve of the circle on either side. And then
-> there is some filler text just to make the text long enough. Lorem
-> Ipsum Dolor Sit Amet&period;...<b>&lt;/p&gt;</b>
->
-> In the above example, both the images are actually square images and
-> when the text is placed without the shapeoutside property, it will not
-> flow around the circle on either side. It will flow around the
-> containing box of the image only. With shape-outside the float area is
-> re-defined as a *circle* and the content is made to flow around this
-> *imaginary circle* that is created using shape-outside.
->
-> The *imaginary circle* that is used to re-define the float area is a
-> circle with radius of 80px drawn from the center-mid point of the
-> image&apos;s reference box.
->
-> Below are a couple of screenshots to illustrate how the content would
-> be wrapped around when shape-outside is used and when it is not used.
-> <b>Output with shape-outside</b>
 
-!&lbrack;&rbrack;(./images/image223.jpg){width="3.3333333333333335in"
-height="1.3229166666666667in"}
+<b>&lt;img</b>
+src=&quot;http://images.clipartpanda.com/circle-clip-art-circlergb.jpg&quot;<b>&gt;</b>
+
+<b>&lt;img</b>
+ src=&quot;http://images.clipartpanda.com/circle-clip-art-circlergb.jpg&quot;<b>&gt;</b>
+
+<b>&lt;p&gt;</b>Some paragraph whose text content is required to be wrapped
+such that it follows the curve of the circle on either side. And then
+there is some filler text just to make the text long enough. Lorem
+Ipsum Dolor Sit Amet&period;...<b>&lt;/p&gt;</b>
+
+In the above example, both the images are actually square images and
+when the text is placed without the shapeoutside property, it will not
+flow around the circle on either side. It will flow around the
+containing box of the image only. With shape-outside the float area is
+re-defined as a *circle* and the content is made to flow around this
+*imaginary circle* that is created using shape-outside.
+
+The *imaginary circle* that is used to re-define the float area is a
+circle with radius of 80px drawn from the center-mid point of the
+image&apos;s reference box.
+
+Below are a couple of screenshots to illustrate how the content would
+be wrapped around when shape-outside is used and when it is not used.
+<b>Output with shape-outside</b>
+
+<!-- (./images/image223.jpg){width="3.3333333333333335in" height="1.3229166666666667in"} -->
 
 > <b>Output without shape-outside</b>
 
-!&lbrack;&rbrack;(./images/image224.jpg){width="3.3333333333333335in"
-height="1.4895833333333333in"}
+<!-- (./images/image224.jpg){width="3.3333333333333335in" height="1.4895833333333333in"} -->
 
-## Section 33.2: Shape margin
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h3 id="ch33-2">Section 33.2: Shape margin</h3>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 > The shape-margin CSS property adds a *margin* to shape-outside.
 >
@@ -12074,9 +12185,7 @@ px
 
 <h4>Output:</h4>
 
-!&lbrack;&rbrack;(./images/image225.jpg){width="3.3333333333333335in"
-height="1.3958333333333333in"}
-
+<!-- (./images/image225.jpg){width="3.3333333333333335in" height="1.3958333333333333in"} -->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ch34">Chapter 34: List Styles</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -12180,10 +12289,9 @@ li
 ```
 
 
-## Section 34.3: Type of Bullet or Numbering
+<h3 id="ch34-3">Section 34.3: Type of Bullet or Numbering</h3>
 
-  <b>&lt;li</b>   <b>&gt;</b> tags within an unordered list (                     <b>&lt;ul</b>
-
+<b>&lt;li</b>   <b>&gt;</b> tags within an unordered list (                     <b>&lt;ul</b>
 
 > Specific for <b>&gt;</b>):
 >
@@ -12192,8 +12300,7 @@ li
 > square; */&ast; A filled square &ast;/* <b>list-style</b>: &apos;-&apos;; */&ast; any
 > string &ast;/*
 
-  <b>&lt;li</b>   <b>&gt;</b> tags within an ordered list (                      <b>&lt;ol</b>
-
+<b>&lt;li</b>   <b>&gt;</b> tags within an ordered list (                      <b>&lt;ol</b>
 
 > Specific for <b>&gt;</b>):
 
@@ -12346,8 +12453,9 @@ item&apos;s number before its header (using content property of
 .item-header element&apos;s pseudo). A live demo of this code is available
 &lbrack;&lbrack;here&rbrack;&rbrack;(https://jsfiddle.net/a7rmje3r/).</p>
 
-## Section 35.3: Implementing multi-level numbering using CSS counters
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h3 id="ch35-3">Section 35.3: Implementing multi-level numbering using CSS counters</h3>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>CSS</h4>
 
 ```
@@ -12550,7 +12658,7 @@ data-mark
 ```
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-## Section 36.3: var() function
+<h3 id="ch36-3">Section 36.3: var() function</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 <p> The var() function allows CSS variables to be accessed.</p>
@@ -15497,8 +15605,15 @@ Some paragraph
 > one asset that can be extracted from it.
 >
 > For example:
-
-!&lbrack;&rbrack;(./images/image248.jpg){width="1.75in" height="1.875in"}
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 248.  (xxx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p align="center" width="100%">
+<img src="./images/image248.jpg"
+  style="width:17%"
+  title=""
+  alt="." />
+</p>
+<!-- (./images/image248.jpg){width="1.75in" height="1.875in"} -->
 
 > The image above is an image sprite sheet, and each one of those stars
 > is a sprite within the sprite sheet. These sprite sheets are useful
@@ -15735,9 +15850,15 @@ Clips are vector paths. Outside of this path the element will be
 transparent, inside it&apos;s opaque. Therefore you can define a clip-path
 property on elements. Every graphical element that also exists in SVG
 you can use here as a function to define the path. Examples are ().
-
-!&lbrack;&rbrack;(./images/image249.jpg){width="3.3333333333333335in"
-height="2.71875in"}
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 249.  (xxx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p align="center" width="100%">
+<img src="./images/image249.jpg"
+  style="width:33%"
+  title=""
+  alt="." />
+</p>
+<!-- (./images/image249.jpg){width="3.3333333333333335in" height="2.71875in"} -->
 
 Example
 
@@ -15776,9 +15897,15 @@ semi-transparent, so you are able to make smooth transitions.
 
 <b>Alpha Mask</b>: Only on the transparent areas of the mask the element
 will be opaque.
-
-!&lbrack;&rbrack;(./images/image250.jpg){width="3.3333333333333335in"
-height="2.0625in"}
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 250.  (xxx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p align="center" width="100%">
+<img src="./images/image250.jpg"
+  style="width:33%"
+  title=""
+  alt="." />
+</p>
+<!-- (./images/image250.jpg){width="3.3333333333333335in" height="2.0625in"} -->
 
 This image for example can be used as a luminance mask to make for an
 element a very smooth transition from right to left and from opaque to
@@ -15917,17 +16044,31 @@ transparent
 > transparent.
 >
 > <b>Output without the mask:</b>
-
-[image251.jpg 2.18 x 2.18](./images/image251.jpg)
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 251.  (xxx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p align="center" width="100%">
+<img src="./images/image251.jpg"
+  style="width:20%"
+  title=""
+  alt="." />
+</p>
+<!-- [image251.jpg 2.18 x 2.18](./images/image251.jpg) -->
 
 > <b>Output with the mask:</b>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 252.  (xxx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p align="center" width="100%">
+<img src="./images/image252.jpg"
+  style="width:20%"
+  title=""
+  alt="." />
+</p>
+<!-- [image252.jpg 2.18 x 2.18](./images/image252.jpg) -->
 
-[image252.jpg 2.18 x 2.18](./images/image252.jpg)
-
-> <b>Note:</b> As mentioned in remarks, the above example would work in
-> Chrome, Safari and Opera only when used with the -webkit prefix. This
-> example (with a linear-gradient as mask image) is not yet supported in
-> Firefox.
+<p><b>Note:</b> As mentioned in remarks, the above example would work in
+Chrome, Safari and Opera only when used with the -webkit prefix. This
+example (with a linear-gradient as mask image) is not yet supported in
+Firefox.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch44-3">Section 44.3: Clipping (Circle)</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -15999,9 +16140,15 @@ radius at x y
 
 &lbrack;<b>&lbrack;View Example&rbrack;</b>&rbrack;(https://jsfiddle.net/webtiki/qp69n494/)
 <b>Output:</b>
-
-[image253.jpg 2.468 x 2.229](./images/image253.jpg)
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 253.  (xxx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p align="center" width="100%">
+<img src="./images/image253.jpg"
+  style="width:25%"
+  title=""
+  alt="." />
+</p>
+<!-- [image253.jpg 2.468 x 2.229](./images/image253.jpg) -->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch44-4">Section 44.4: Clipping (Polygon)</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -16078,8 +16225,15 @@ background.
 &lbrack;<b>&lbrack;View Example&rbrack;</b>&rbrack;(https://jsfiddle.net/eoa4a94k/)
 
 <b>Output:</b>
-
-[image254.jpg 2.16 x 2.16](./images/image254.jpg)
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 254.  (xxx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p align="center" width="100%">
+<img src="./images/image254.jpg"
+  style="width:20%"
+  title=""
+  alt="." />
+</p>
+<!-- [image254.jpg 2.16 x 2.16](./images/image254.jpg) -->
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch44-5">Section 44.5: Using masks to cut a hole in the middle of an image</h3>
@@ -16111,12 +16265,26 @@ using radial-gradient and this is then used as a mask to produce the
 effect of a circle being cut out from the center of an image.
 
 <b>Image without mask:</b>
-
-[image255.jpg 2.16 x 2.16](./images/image255.jpg)
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 255.  (xxx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p align="center" width="100%">
+<img src="./images/image255.jpg"
+  style="width:20%"
+  title=""
+  alt="." />
+</p>
+<!-- [image255.jpg 2.16 x 2.16](./images/image255.jpg) -->
 
 <b>Image with mask:</b>
-
-[image256.jpg 2.16 x 2.16](./images/image256.jpg)
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 256.  (xxx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p align="center" width="100%">
+<img src="./images/image256.jpg"
+  style="width:20%"
+  title=""
+  alt="." />
+</p>
+<!-- [image256.jpg 2.16 x 2.16](./images/image256.jpg) -->
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch44-6">Section 44.6: Using masks to create images with irregular shapes</h3>
@@ -16339,13 +16507,26 @@ container&apos;s size) are used as masks to produce a transparent
 triangular shaped cut at the bottom of the image.</p>
 
 <h4>Image without the mask:</h4>
-
-[image257.jpg 4.25 x 2.167](./images/image257.jpg)
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 257.  (xxx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p align="center" width="100%">
+<img src="./images/image257.jpg"
+  style="width:40%"
+  title=""
+  alt="." />
+</p>
+<!-- [image257.jpg 4.25 x 2.167](./images/image257.jpg) -->
 
 <h4>Image with the mask:</h4>
-
-[image258.jpg 4.26 x 2.21](./images/image258.jpg)
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 258.  (xxx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p align="center" width="100%">
+<img src="./images/image258.jpg"
+  style="width:40%"
+  title=""
+  alt="." />
+</p>
+<!-- [image258.jpg 4.26 x 2.21](./images/image258.jpg) -->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ch45">Chapter 45: Fragmentation</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -19065,3 +19246,4 @@ same animation, took <b>1.3ms</b> for rendering, <b>2.0ms</b> for painting.
 <!-- 7/2/2024 Tue 6:39pm -->
 <!-- 7/4/2024 Thu 1:35am -->
 <!-- 7/5/2024 Fri 8:48pm -->
+<!-- 7/6/2024 Sat 3:21am -->
