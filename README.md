@@ -280,7 +280,7 @@ rule name.</p>
   fontSize: "10px" 
 });</code></pre>
 
-<h4>See also</h4>
+<h4>See also;</h4>
 
 <ul>
   <li>JavaScript documentation - Reading and Changing CSS Style.</li>
@@ -444,7 +444,7 @@ pseudo-classes, and patterns.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch4-2">Section 4.2: Attribute Selectors</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h4>Overview</h4>
+<h4>Overview:</h4>
 
 <p>Attribute selectors can be used with various types of operators that
 change the selection criteria accordingly. They select an element
@@ -650,7 +650,9 @@ elements on down).</p>
 
 <p>In the above example, the first two <b>&lt;p&gt;</b> elements are selected since they are
 both descendants of the <b>&lt;div&gt;</b>.</p>
+
 <h4>Child Combinator: selector &gt; selector</h4>
+
 <p>The child (&gt;) combinator is used to select elements that are
 <b>children</b>, or <b>direct descendants</b>, of the specified element.</p>
 <!-- page 13 -->
@@ -668,11 +670,13 @@ both descendants of the <b>&lt;div&gt;</b>.</p>
 
 <p>The above CSS selects only the first <b>&lt;p&gt;</b> element, as it is the only paragraph directly descended from a <b>&lt;div&gt;</b>.</p>
 <p>The second <b>&lt;p&gt;</b> element is not selected because it is not a direct child of the <b>&lt;div&gt;</b>.</p>
+
 <h4>Adjacent Sibling Combinator: selector &plus; selector</h4>
+
 <p>The adjacent sibling (+) combinator selects a sibling element that immediate follows a specified element.</p>
 
 <pre><code>p &plus; p {
-  <b>color: red;</b>
+  <b>color: #ff0000; /* red */</b>
 }
 
 <b>&lt;p&gt;</b>My text is not red<b>&lt;/p&gt;</b>
@@ -690,14 +694,14 @@ both descendants of the <b>&lt;div&gt;</b>.</p>
 <p>The general sibling (&#126;) combinator selects <i>all</i> siblings that follow the specified element.</p>
 
 <pre><code>p &#126; p
-  <b>color</b>: <span style='color: red;'>red</span>;
+  <b>color</b>: <span style='color: #ff0000;'>red</span>;
 }
 
 <b>&lt;p&gt;</b>My text is not red<b>&lt;/p&gt;</b>
-<b>&lt;p&gt;</b>My text is <span style='color: red;'>red</span>&lt;/p&gt;
+<b>&lt;p&gt;</b>My text is <span style='color: #ff0000;'>red</span>&lt;/p&gt;
 <b>&lt;hr&gt;</b>
 <b>&lt;h1&gt;</b>And now a title&lt;/h1&gt;
-<b>&lt;p&gt;</b><span style='color: red;'>My text is red</span><b>&lt;/p&gt;</b></code></pre>
+<b>&lt;p&gt;</b><span style='color: #ff0000;'>My text is red</span><b>&lt;/p&gt;</b></code></pre>
 
 <a href="http://jsbin.com/xonafuz/5/edit?html,css,output">Live Demo on JSBin</a>
 
@@ -720,7 +724,7 @@ pseudo-class) or the languages (<a href="https://www.w3.org/TR/selectors/#lang-p
 pseudo-class). Examples include whether or not a link has been followed (:visited), 
 the mouse is over an element (:hover), a checkbox is checked (:checked), etc.</p>
 
-<h4>Syntax</h4>
+<h4>Syntax:</h4>
 
 <pre><code>selector:pseudo-class {
   property: <b>VALUE</b>;
@@ -852,10 +856,10 @@ selection.</p>
   color: orange;
 }
 .warning {
-  color: blue;
+  color: #0000ff; /* blue */
 }
 .warning .important {
-  color: red;
+  color: #de1205; /* red */
 }</code></pre>
 
 <h4>HTML:</h4>
@@ -942,7 +946,7 @@ element is inside the range limits.&lbrack;<a href=https://developer.mozilla.org
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch4-10">Section 4.10: A. The :not pseudo-class example & B. :focuswithin CSS pseudo-class</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h5>A. The syntax is presented above.</h5>
+<h4>A. The syntax is presented above.</h4>
 
 <p>The following selector matches all <b>&lt;input&gt;</b> elements in an HTML document
 that are not disabled and don&apos;t have the class .example:</p>
@@ -974,7 +978,7 @@ Selectors Level 4:</p>
 
 <p>See background syntax here.</p>
 
-<h5>B. The :focus-within CSS pseudo-classHTML:</h5>
+<h4>B. The :focus-within CSS pseudo-classHTML:</h4>
 
 <h4>HTML:</h4>
 
@@ -1045,7 +1049,7 @@ want with a unique id and the hidden attribute set:</p>
 
 <pre><code><b>&lt;label</b> for=&quot;sidebarShown&quot;&gt;Show/Hide the sidebar!<b>&lt;/label&gt;</b></code></pre>
 
-<h4>Accessing boolean value with CSS</h4>
+<h4>Accessing boolean value with CSS;</h4>
 
 <p>The normal selector (like .color-red) specifies the default
 properties. They can be overridden by following true / false
@@ -1071,7 +1075,7 @@ Examples for the above HTML structure would be:
   background: #333;
 }</code></pre>
 
-<h4>In action</h4>
+<h4>In action:</h4>
 
 <p>See <a href="https://jsfiddle.net/yokosbm0/1/">this Fiddle for
 an implementation of these global booleans</a>.</p>
@@ -1173,12 +1177,12 @@ or initial.</p>
 
 <p>Colors in CSS can be specified by different methods.</p>
 
-<h4>Color names</h4>
+<h4>Color names:</h4>
 
 <h4>CSS:</h4>
 
 <pre><code>div {
-  <b>background-color</b>: red; /* red */
+  <b>background-color</b>: #de1205; /* red */
 }</code></pre>
 
 <h4>HTML:</h4>
@@ -1190,7 +1194,7 @@ or initial.</p>
     a single color.</li>
 </ul>
 
-<h4>Hex color codes</h4>
+<h4>Hex color codes:</h4>
 
 <p>Hex code is used to denote RGB components of a color in base-16
 hexadecimal notation. &num;ff0000, for example, is bright red, where the
@@ -1210,7 +1214,7 @@ first digit of each pairing). &num;ff0000 can be shortened to &num;f00, and
   background-color: #00f; /* blue */
 }</code></pre>
 
-<h4>RGB / RGBa</h4>
+<h4>RGB / RGBa:</h4>
 
 <p>Another way to declare a color is to use RGB or RGBa.
 
@@ -1228,7 +1232,7 @@ footer {
   <b>background-color</b>: rgba(0, 0, 0, 0.5); /* black with 50% opacity */
 }</code></pre>
 
-<h4>HSL / HSLa</h4>
+<h4>HSL / HSLa:</h4>
 
 <p>Another way to declare a color is to use HSL or HSLa and is similar to
 RGB and RGBa.</p>
@@ -1281,7 +1285,7 @@ showing (perhaps as a result of background-repeat).</p>
 
 <pre><code>body {
   <b>background-image</b>: url(partiallytransparentimage.png);
-  <b>background</b>: red;
+  <b>background</b>: #ff0000;  /* red */
 }</code></pre>
 
 <p>Here, the value of background overrides your background-image.</p>
@@ -1418,15 +1422,15 @@ image on top of the others and so on.</p>
 | initial   | Default value. |
 | inherit | Inherit parent's value. |
 
-<h4>More CSS for Background Image</h4>
+<h4>More CSS for Background Image:</h4>
 
 <p>The following attributes are very useful and almost essential;</p>
 
-<h5><b>background-size</b>:&nbsp;&nbsp;&nbsp;&nbsp; xpx ypx &vert; x% y%;</h5>
+<h4><b>background-size</b>:&nbsp;&nbsp;&nbsp;&nbsp; xpx ypx &vert; x% y%;</h4>
 
-<h5><b>background-repeat</b>:&nbsp; no-repeat &vert; repeat &vert; repeat-x &vert; repeat-y;</h5>
+<h4><b>background-repeat</b>:&nbsp; no-repeat &vert; repeat &vert; repeat-x &vert; repeat-y;</h4>
  
-<h5><b>background-position</b>: left offset (px/%) right offset (px/%) &vert; center center &vert; left top &vert; right bottom</h5>
+<h4><b>background-position</b>: left offset (px/%) right offset (px/%) &vert; center center &vert; left top &vert; right bottom</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch5-4">Section 5.4: Background Shorthand</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -1451,7 +1455,7 @@ image on top of the others and so on.</p>
 
 <p>The order of the values does not matter and every value is optional.</p>
 
-<h4>Syntax</h4>
+<h4>Syntax:</h4>
 
 <p>The syntax of the background shorthand declaration is:</p>
 
@@ -1463,7 +1467,7 @@ image on top of the others and so on.</p>
 
 <p>Examples</p>
 
-<pre><code><b>background</b>: red;</code></pre>
+<pre><code><b>background</b>: #ff0000;</code></pre>
 
 <p>Simply setting a background-color with the red value.</p>
 
@@ -1502,7 +1506,7 @@ well with a feature image that can fade into a solid colour;</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch5-5">Section 5.5: Background Size</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h4>General overview</h4>
+<h4>General overview:</h4>
 
 <p>The <a href="https://www.w3.org/TR/2014/CR-css3-background-20140909/#the-background-size">Demo (background-size)</a>
 property enables one to control the scaling of the background-image.
@@ -1808,7 +1812,7 @@ property has no effect.</p>
   ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.<b>&lt;/p&gt;</b>
 <b>&lt;/div&gt;</b></code></pre>
 
-<h5>Result:</h5>
+<h4>Result:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~ 13. background-origin - 3 images (34) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left" width="100%">
@@ -1883,7 +1887,7 @@ fixed or scrolls with the rest of the page.</p>
 | initial | Sets this property to its default value. |
 | inherit | Inherits this property from its parent element. |
 
-<h4>Examples</h4>
+<h4>Examples:</h4>
 
 <h4><i>background-attachment: scroll</i></h4>
 
@@ -2199,7 +2203,7 @@ IE8 and older versions.</p>
   <b>margin</b>: 0 auto;
 }</code></pre>
 
-<h5>Result:</h5>
+<h4>Result:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~ 15. this is a centered paragraph with jet on landing strip (42) ~~~~~~~~~~~~~~-->
 <p align="center" width="100%">
@@ -2281,7 +2285,7 @@ function, always take care of the space between two values calc(100% - 80px).</p
   <b>position</b>: absolute;
   <b>height</b>: 50px;
   <b>width</b>: 50px;
-  <b>background</b>: red;
+  <b>background</b>: #ff0000; /* red */
   <b>top</b>: calc (50&percnt; &minus; 50px/2); /* height divided by 2 */
   <b>left</b>: calc (50&percnt; &minus; 50px / 2); /* width divided by 2 */
 }</code></pre>
@@ -2450,14 +2454,14 @@ worrying about its height or width</b>.</p>
   <li>should have <b>text-align</b>: center;</li>
 </ul>
 
-<h4>The content box</h4>
+<h4>The content box:</h4>
 <ul>
   <li>should have <b>display</b>: inline-block;</li>
   <li>should re-adjust the horizontal text-alignment to eg. <b>text-align</b>:
   left; or <b>text-align</b>: right;, unless you want text to be centered</li>
 </ul>
 
-<h4>Demo</h4>
+<h4>Demo:</h4>
 
 <h4>HTML:</h4>
 
@@ -2610,15 +2614,15 @@ of the content:</p>
 
 <h4>HTML:</h4>
 
-<pre><code><b>&lt;div</b> class=&quot;vcenter&minus;-container&quot;<b>&gt;</b>
-  <b>&lt;div</b> class=&quot;vcenter&minus;-helper&quot;<b>&gt;</b>
-    <b>&lt;div</b> class=&quot;vcenter&minus;-content&quot;<b>&gt;</b>
+<pre><code><b>&lt;div</b> class=<span style="color:red;">&quot;vcenter&minus;-container&quot;</span><b>&gt;</b>
+  <b>&lt;div</b> class=<span style="color:red;">&quot;vcenter&minus;-helper&quot;</span><b>&gt;</b>
+    <b>&lt;div</b> class=<span style="color:red;">&quot;vcenter&minus;-content&quot;</span><b>&gt;</b>
       &lt;!-- stuff --&gt;
     <b>&lt;/div&gt;</b>
   <b>&lt;/div&gt;</b>
 <b>&lt;/div&gt;</b></code></pre>
 
-<h4>CSS</h4>
+<h4>CSS:</h4>
 
 <pre><center>.vcenter &minus;- container {
   <b>display</b>: table;
@@ -2729,10 +2733,10 @@ to the content to create this rectangle.</p>
 	border edge.</li>
 </ul>
 
-<h4>Example</h4>
+<h4>Example:</h4>
 
 <pre><code>div {
-  <b>border</b>: 5px solid red;
+  <b>border</b>: 5px solid #ff0000;
   <b>margin</b>: 50px;
   <b>padding</b>: 20px;
 }</code></pre>
@@ -2957,7 +2961,7 @@ spacing between the elements.</p>
 <p>Now, what about if we add some borders to the markup above.</p>
 
 <pre><code>div {
-  <b>border</b>: 1px solid red;
+  <b>border</b>: 1px solid #ff0000;
 }</code></pre>
 
 <p>What will be the spacing between the two texts? (hover to see answer)</p>
@@ -3027,7 +3031,7 @@ of the selected div. <a href="https://jsfiddle.net/wm0100x9/1/">View Result</a>.
   <b>margin-left</b>: 30px;
   <b>height</b>: 40px;
   <b>width</b>: 40px;
-  <b>background-color</b>: red;
+  <b>background-color</b>: #ff0000;
 }</code></pre>
 
 | <b>Parameter</b> | <b>Details</b> |
@@ -3058,7 +3062,7 @@ Result</i>.</p>
   <b>margin</b>: 0 10px 50px 100px;
   <b>height</b>: 40px;
   <b>width</b>: 40px;
-  <b>background-color</b>: red;
+  <b>background-color</b>: #ff0000;
 }</code></pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch8-3">Section 8.3: Margin property simplification</h3>
@@ -3271,7 +3275,7 @@ box model.</p>
 <p>Every corner of an element can have up to two values, for the vertical
 and horizontal radius of that corner (for a maximum of 8 values).</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 25. border top left radius (64) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 25. border top left radius (63) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left" width="100%">
 <img src="./images/image025.jpg"
   style="width:60%"
@@ -3299,8 +3303,7 @@ vertical radius of every corner to the same value:</p>
 
 <h4>HTML:</h4>
 
-<pre><code><b>&lt;div</b> class=&apos;box&apos;<b>&gt;</b>
-<b>&lt;/div&gt;</b></code></pre>
+<pre><code><b>&lt;div</b> class=<span style="color:red;">&apos;box&apos;</span><b>&gt;&lt;/div&gt;</b></code></pre>
 
 <h4>CSS:</h4>
 
@@ -3499,7 +3502,7 @@ to be transparent.</p>
 
 <h4>HTML:</h4>
 
-<pre><code><b>&lt;div</b> class=&apos;bordered&apos;<b>&gt;</b>Border on all sides<b>&lt;/div&gt;</b></code></pre>
+<pre><code><b>&lt;div</b> class=<span style="color:red;">&apos;bordered&apos;</span><b>&gt;</b>Border on all sides<b>&lt;/div&gt;</b></code></pre>
 
 <p>The above example would produce a border that comprises of 5 different
 colors. The colors are defined through a linear-gradient (you can find
@@ -3516,7 +3519,7 @@ example in same page.</p>
 </p>
 <!-- [image028.jpg 3.5"x1.437"] -->
 
-<h6>(Note: Additional properties were added to the element for presentational purpose.)</h6>
+<h6><i>(Note: Additional properties were added to the element for presentational purpose.)</i></h6>
 
 <p>You&apos;d have noticed that the left border has only a single color (the
 start color of the gradient) while the right border also has only a
@@ -3567,14 +3570,12 @@ on the below statement in the spec:</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch10-8">Section 10.8: border-&lbrack;left&vert;right&vert;top&vert;bottom&rbrack;</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-
 <p>The border-&lbrack;left&vert;right&vert;top&vert;bottom&rbrack; 
 property is used to add a border to a specific side of an element.</p>
 
 <p>For example if you wanted to add a border to the left side of an element, you could do:</p>
 
-<pre><code>
-&num;element {
+<pre><code>&num;element {
   <b>border-left</b>: 1px solid black;
 }</code></pre>
 
@@ -3623,7 +3624,6 @@ border:</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch11-2">Section 11.2: outline-style</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-
 <p>The outline-style property is used to set the style of the outline of
 an element.</p>
 
@@ -3677,7 +3677,7 @@ an element.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ch12">Chapter 12: Overflow</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-|<b>Overflow Value</b> | <b>Details</b> |
+| <b>Overflow Value</b> | <b>Details</b> |
 |----------------------|-------------------------------------------|
 | visible | Shows all overflowing content outside the element |
 | scroll  | Hides the overflowing content and adds a scroll bar |
@@ -3729,11 +3729,11 @@ problems due to overflowing it&apos;s container.</p>
 </p>
 <!--[image032.jpg 7.48 x 4.27](./images/image032.jpg) -->
 
-<b>overflow-wrap -- Value</b> | <b>Details</b> |
-
-| normal | Lets a word overflow if it is longer than the line |
-| break-word | Will split a word into multiple lines, if necessary |
-| inherit | Inherits the parent element&apos;s value for this property |
+| <b>overflow-wrap -- Value</b> | <b>Details</b> |
+|------------|-----------------|
+| normal     | Lets a word overflow if it is longer than the line. |
+| break-word | Will split a word into multiple lines, if necessary. |
+| inherit    | Inherits the parent element&apos;s value for this property. |
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch12-2">Section 12.2: overflow-x and overflow-y</h3>
@@ -3784,7 +3784,7 @@ top-to-bottom axis.</p>
   <b>overflow</b>: scroll;
 }</code></pre>
 
-<h5>Result:</h5>
+<h4>Result:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~ 33. width 100, height 100 with overflow: scroll (73) ~~~~~~~~~~~~~~~~~~~~-->
 <p align="left" width="100%">
@@ -3811,7 +3811,7 @@ environment. Printers may print overflowing content.</p>
   Even if this div is too small to display its contents, the content is not clipped.
 <b>&lt;/div&gt;</b></code></pre>
 
-<h4>CSS</h4>
+<h4>CSS:</h4>
 
 <pre><code>div {
   <b>width</b>: 50px;
@@ -3819,7 +3819,7 @@ environment. Printers may print overflowing content.</p>
   <b>overflow</b>: visible;
 }</code></pre>
 
-<h5>Result</h5>
+<h4>Result:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~ 34. width 50, height 50 with overflow: visible (74) ~~~~~~~~~~~~~~~~~~~~-->
 <p align="left" width="100%">
@@ -3851,13 +3851,13 @@ div {
 
 <h4>HTML:</h4>
 
-<pre><code><b>&lt;img</b> src=&quot;http://placehold.it/100x100&quot;<b>&gt;</b>
+<pre><code><b>&lt;img</b> src=<span style="color:red">&quot;http://placehold.it/100x100&quot;</span><b>&gt;</b>
 <b>&lt;div&gt;</b>
   <b>&lt;p&gt;</b>Lorem ipsum dolor sit amet, cum no paulo mollis pertinacia.<b>&lt;/p&gt;</b>
   <b>&lt;p&gt;</b>Ad case omnis nam, mutat deseruisse persequeris eos ad, in tollit debitis sea.<b>&lt;/p&gt;</b>
 <b>&lt;/div&gt;</b></code></pre>
 
-<h5>Result:</h5>
+<h4>Result:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~ 35. 2 images; without overflow & with overflow: hidden (75) ~~~~~~~~~~~~~~~~~-->
 <p align="left" width="100%">
@@ -3922,28 +3922,28 @@ additional aspects of the device are described with <b>media features</b>
 such as the availability of color or viewport dimensions.</p>
 
 <h4>General Structure of a Media Query</h4>
-<pre><code><b>&commat;media</b>&lbrack;&period;..&rbrack; {
+<pre><code><b><span style="color: blue;">&commat;media</span></b> &lbrack;&period;..&rbrack; {
   /* One or more CSS rules to apply when the query is satisfied */
 }</code></pre>
 
 <h4>A Media Query containing a Media Type</h4>
-<pre><code><b>&commat;media</b> print {
+<pre><code><b><span style="color: blue;">&commat;media</span></b> print {
   /* One or more CSS rules to apply when the query is satisfied */
 }</code></pre>
 
 <h4>A Media Query containing a Media Type and a Media Feature</h4>
-<pre><code><b>&commat;media</b> screen and (<b>max-width</b>: 600px) {
+<pre><code><b><span style="color: blue;">&commat;media</span></b> screen and (<b>max-width</b>: 600px) {
   /*  One or more CSS rules to apply when the query is satisfied */
 }</code></pre>
 
 <h4>A Media Query containing a Media Feature (and an implicit Media Type of &quot;all&quot;)</h4>
-<pre><code><b>&commat;media</b> (orientation: portrait) {
+<pre><code><b><span style="color: blue;">&commat;media</span></b> (orientation: portrait) {
   /* One or more CSS rules to apply when the query is satisfied */
 }</code></pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch13-2">Section 13.2: Basic Example</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<pre><code><b>&commat;media</b> screen and (<b>min-width</b>: 720px) {
+<pre><code><b><span style="color: blue;">&commat;media</span></b> screen and (<b>min-width</b>: 720px) {
   body {
     <b>background-color</b>: skyblue;
   }
@@ -3974,9 +3974,10 @@ resized the view port to less than 720 pixels in width.</p>
 <h3 id="ch13-3">Section 13.3: mediatype</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Media queries have an optional mediatype parameter. This parameter is
-placed directly after the &commat;media declaration(&commat;media mediatype mediatype), for example:</p>
+placed directly after the &commat;media declaration(<span style="color: blue;">
+&commat;media</span> mediatype mediatype), for example:</p>
 
-<pre><code>&commat;media print {
+<pre><code><span style="color: blue;">&commat;media</span> print {
   html {
     <b>background-color</b>: white;
   }
@@ -3991,7 +3992,7 @@ only the specified media type, respectively. For example, the
 following code example will apply the style to every media type except
 print.</p>
 
-<pre><code>&commat;media not print {
+<pre><code><span style="color: blue;">&commat;media</span> not print {
   html {
     <b>background-color</b>: green;
   }
@@ -3999,7 +4000,7 @@ print.</p>
 
 <p>And the same way, for just showing it only on the screen, this can be used:</p>
 
-<pre><code>&commat;media only screen {
+<pre><code><span style="color: blue;">&commat;media</span> only screen {
   .fadeInEffects {
     <b>display</b>: block;
   }
@@ -4007,7 +4008,7 @@ print.</p>
 
 <p>The list of mediatype can be understood better with the following table:</p>
 
-| <h5>Media Type</h5> | <h5>Description</h5>
+| <b>Media Type</b> | <b>Description</b>
 |-------------------|---------------------------------------------------|
 | all               | Apply to all devices |
 | screen | Default computers |
@@ -4026,13 +4027,13 @@ print.</p>
 <p>Although this works only for WebKit based browsers, this is helpful:</p>
 
 <pre><code>/*----------- Non-Retina Screens -----------*/
-&commat;media screen
+<span style="color: blue;">&commat;media</span> screen
   and (<b>min-width</b>: 1200px)
   and (<b>max-width</b>: 1600px)
   and (&minus;webkit-min-device-pixel-ratio: 1) {
 }
 /*----------- Retina Screens -----------*/
-&commat;media screen
+<span style="color: blue;">&commat;media</span> screen
   and (<b>min-width</b>: 1200px)
   and (<b>max-width</b>: 1600px)
   and (&minus;webkit-min-device-pixel-ratio: 2)
@@ -4121,8 +4122,7 @@ than 1023px */
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch13-7">Section 13.7: Use on link tag</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<pre><code><b>&lt;link</b> rel=&quot;stylesheet&quot; media=&quot;min-width: 600px&quot;
-href=&quot;example.css&quot; <b>/&gt;</b></code></pre>
+<pre><code><b>&lt;link</b> rel=&quot;stylesheet&quot; media=&quot;min-width: 600px&quot; href=&quot;example.css&quot; <b>/&gt;</b></code></pre>
 
 <p>This stylesheet is still downloaded but is applied only on devices
 with screen width larger than 600px.</p>
@@ -4189,7 +4189,7 @@ nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum.
 Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris
 massa. Vestibulum lacinia arcu eget nulla. <b>&lt;/p&gt;</p>
 
-<h5><b>&lt;img</b> src=&quot;http://lorempixel.com/200/100/&quot; <b>/&gt;</b></h5>
+<h4><b>&lt;img</b> src=<span style="color:blue">&quot;http://lorempixel.com/200/100/&quot;</span> <b>/&gt;</b></h4>
 
 <p><b>&lt;p&gt;</b>Class aptent taciti sociosqu ad litora torquent per conubia
 nostra, per inceptos himenaeos. Curabitur sodales ligula in libero. Sed
@@ -4351,7 +4351,7 @@ of their width.</p>
 <p>The output of the following code will be;</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 37.  (xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p align="center" width="100%">
+<p align="left" width="100%">
 <img src="./images/image037.jpg"
   style="width:75%"
   title=""
@@ -4393,7 +4393,7 @@ p {
 }</code></pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 38.  (xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p align="center" width="100%">
+<p align="left" width="100%">
 <img src="./images/image038.jpg"
   style="width:75%"
   title=""
@@ -4401,8 +4401,7 @@ p {
 </p>
 <!-- [image038.jpg 7.48 x .97](./images/image038.jpg) -->
 
-<a href="http://codepen.io/vishak-kavalur/pen/bZxbBy">Codepen</a>
-
+<p><a href="http://codepen.io/vishak-kavalur/pen/bZxbBy">Codepen Link</a>.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch14-5">Section 14.5: Use of overflow property to clear floats</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -4430,11 +4429,12 @@ multiple columns appear to be the same height.</p>
 
 <b>&lt;div</b> class=&quot;content&quot;<b>&gt;</b>
 <b>&lt;h1&gt;</b>Content<b>&lt;/h1&gt;</b>
-<b>&lt;p&gt;</b>Class aptent taciti sociosqu ad litora torquent per conubia nostra, per
-inceptos himenaeos. Curabitur sodales ligula in libero. Sed dignissim lacinia nunc.
-Curabitur tortor. Pellentesque nibh. Aenean quam. In scelerisque sem at dolor. Maecenas mattis. 
-Sed convallis tristique sem. Proin ut ligula vel nunc egestas porttitor. Morbi lectus risus, 
-iaculis vel, suscipit quis, luctus non, massa. Fusce ac turpis quis ligula lacinia aliquet.<b>&lt;/p&gt;</b>
+
+<b>&lt;p&gt;</b>Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
+Curabitur sodales ligula in libero. Sed dignissim lacinia nunc. Curabitur tortor. Pellentesque 
+nibh. Aenean quam. In scelerisque sem at dolor. Maecenas mattis. Sed convallis tristique sem. Proin 
+ut ligula vel nunc egestas porttitor. Morbi lectus risus, iaculis vel, suscipit quis, luctus non, 
+massa. Fusce ac turpis quis ligula lacinia aliquet. <b>&lt;/p&gt;</b>
 <b>&lt;/div&gt;</b>
 <b>&lt;/div&gt;</b></code></pre>
 
@@ -4444,9 +4444,9 @@ iaculis vel, suscipit quis, luctus non, massa. Fusce ac turpis quis ligula lacin
   <b>width</b>: 600px;
   <b>padding</b>: 20px;
   <b>background-color</b>: pink;
+  
   /* Floated elements don&apos;t use any height. Adding &quot;overflow:hidden;&quot; 
   forces the parent element to expand to contain its floated children. */
-
 <b>overflow</b>: hidden;
 }
 .sidebar {
@@ -4464,364 +4464,177 @@ iaculis vel, suscipit quis, luctus non, massa. Fusce ac turpis quis ligula lacin
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>HTML:</h4>
 
-<pre><code>
-<b>&lt;div</b> class=&quot;wrapper&quot;<b>&gt;</b>
-<b>&lt;div</b> class=&quot;left-sidebar&quot;<b>&gt;</b>
-<b>&lt;h1&gt;</b>Left Sidebar<b>&lt;/h1&gt;</b>
-<b>&lt;p&gt;</b>Lorem ipsum dolor sit amet, consectetur adipiscing elit.<b>&lt;/p&gt;</b>
-<b>&lt;/div&gt;</b>
-<b>&lt;div</b> class=&quot;content&quot;<b>&gt;</b>
-<b>&lt;h1&gt;</b>Content<b>&lt;</b>
-<b>/h1&gt;</b>
-<b>&lt;p&gt;</b>
-Class aptent taciti sociosqu ad litora torquent per conubia nostra, per
-inceptos himenaeos. Curabitur sodales ligula in libero. Sed dignissim lacinia nunc.
-Curabitur tortor. Pellentesque nibh. Aenean quam. In scelerisque sem at dolor. Maecenas mattis. Sed
-convallis tristique sem. Proin ut ligula vel nunc egestas porttitor. Morbi lectus risus, iaculis vel,
-suscipit quis, luctus non, massa.
-<b>&lt;/p&gt;</b>
-<b>&lt;/div&gt;</b>
-<b>&lt;div</b> class=&quot;right-sidebar&quot;<b>&gt;</b>
-<b>&lt;h1&gt;</b>
-Right Sidebar
-<b>&lt;</b>
-<b>/h</b>
-<b>1</b>
-<b>&gt;</b>
-<b>&lt;</b>
-<b>p</b>
-<b>&gt;</b>
-Fusce ac turpis quis ligula lacinia aliquet.
-<b>&lt;</b>
-<b>/p</b>
-<b>&gt;</b>
-<b>&lt;</b>
-<b>/div</b>
-<b>&gt;</b>
-<b>&lt;</b>
-<b>/div</b>
-<b>&gt;</b>
-</code</pre>
-
+<pre><code><b>&lt;div</b> class=&quot;wrapper&quot;<b>&gt;</b>
+  <b>&lt;div</b> class=&quot;left-sidebar&quot;<b>&gt;</b>
+    <b>&lt;h1&gt;</b>Left Sidebar<b>&lt;/h1&gt;</b>
+    <b>&lt;p&gt;</b>Lorem ipsum dolor sit amet, consectetur adipiscing elit. <b>&lt;/p&gt;</b>
+  <b>&lt;/div&gt;</b>
+  <b>&lt;div</b> class=&quot;content&quot;<b>&gt;</b>
+    <b>&lt;h1&gt;</b>Content<b>&lt;/h1&gt;</b>
+    <b>&lt;p&gt;</b>Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. 
+	Curabitur sodales ligula in libero. Sed dignissim lacinia nunc. Curabitur tortor. Pellentesque 
+	nibh. Aenean quam. In scelerisque sem at dolor. Maecenas mattis. Sed convallis tristique sem. Proin 
+	ut ligula vel nunc egestas porttitor. Morbi lectus risus, iaculis vel, suscipit quis, luctus non, 
+	massa. <b>&lt;/p&gt;</b>
+  <b>&lt;/div&gt;</b>
+  <b>&lt;div</b> class=&quot;right-sidebar&quot;<b>&gt;</b>
+    <b>&lt;h1&gt;</b>Right Sidebar<b>&lt;/h1</b>
+    <b>&gt;&lt;p&gt;</b>Fusce ac turpis quis ligula lacinia aliquet.<b>&lt;/p&gt;</b>
+  <b>&lt;/div&gt;</b>
+<b>&lt;/div&gt;</b></code</pre>
 
 <h4>CSS:</h4>
 
-```
-.wrapper
+<pre><code>.wrapper
 {
-<b>width</b>
-:
-600
-px
-;
-<b>background-color</b>
-:
-pink
-;
-<b>padding</b>: 20px;
-/* Floated elements don&apos;t use any height. Adding &quot;overflow:hidden;&quot;
-  forces the parent element to expand to contain its floated children. */
-<b>overflow</b>
-:
-hidden
-;
+  <b>width</b>: 600px;
+  <b>background-color</b>: pink;
+  <b>padding</b>: 20px;
+  /* Floated elements don&apos;t use any height. Adding &quot;overflow:hidden;&quot;
+     forces the parent element to expand to contain its floated children. */
+  <b>overflow</b>: hidden;
 }
-.left-sidebar
-{
-<b>width</b>
-:
-150
-px
-;
-<b>background-color</b>
-:
-blue
-;
-<b>float</b>
-:
-left
-;
+.left-sidebar {
+  <b>width</b>: 150px;
+  <b>background-color</b>: blue;
+  <b>float</b>: left;
 }
-.content
-{
-<b>width</b>
-:
-300
-px
-;
-<b>background-color</b>
-:
-yellow
-;
-<b>float</b>
-:
-left
-;
+.content {
+  <b>width</b>: 300px;
+  <b>background-color</b>: yellow;
+  <b>float</b>: left;
 }
 .right-sidebar
 {
-<b>width</b>
-:
-150
-px
-;
-<b>background-color</b>
-:
-green
-;
-<b>float</b>
-:
-right
-;
-}
-```
+  <b>width</b>: 150px;
+  <b>background-color</b>: green;
+  <b>float</b>: right;
+}</code></pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch14-8">Section 14.8: Two-Column Lazy/Greedy Layout</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-
-This layout uses one floated column to create a two-column layout with
+<p>This layout uses one floated column to create a two-column layout with
 no defined widths. In this example the left sidebar is &quot;lazy,&quot; in
 that it only takes up as much space as it needs. Another way to say
 this is that the left sidebar is &quot;shrink-wrapped.&quot; The right content
-column is &quot;greedy,&quot; in that it takes up all the remaining space.
+column is &quot;greedy,&quot; in that it takes up all the remaining space.</p>
 
 <h4>HTML:</h4>
-<b>&lt;div</b> class=&quot;sidebar&quot;<b>&gt;</b>
 
+<pre><code>b>&lt;div</b> class=&quot;sidebar&quot;<b>&gt;</b>
 <b>&lt;h1&gt;</b>Sidebar<b>&lt;/h1&gt;</b>
-
 <b>&lt;img</b> src=&quot;http://lorempixel.com/150/200/&quot; <b>/&gt;</b>
-
 <b>&lt;/div&gt;</b>
 
 <b>&lt;div</b> class=&quot;content&quot;<b>&gt;</b>
+<b>&lt;h1&gt;</b>Content<b>&lt;/h1&gt;</b>
+<b>&lt;p&gt;</b>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed
+cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis 
+ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia 
+arcu eget nulla. <b>&lt;/p&gt;</b>
+<b>&lt;p&gt;</b>Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. 
+Curabitur sodales ligula in libero. Sed dignissim lacinia nunc. Curabitur tortor. Pellentesque 
+nibh. Aenean quam. In scelerisque sem at dolor. Maecenas mattis. Sed convallis tristique sem. Proin 
+ut ligula vel nunc egestas porttitor. Morbi lectus risus, iaculis vel, suscipit quis, luctus non, 
+massa. Fusce ac turpis quis ligula lacinia aliquet. Mauris ipsum. Nulla metus metus, ullamcorper 
+vel, tincidunt sed, euismod in, nibh. <b>&lt;/p&gt;</b>
+<b>&lt;/div&gt;</b></code></pre>
 
-<b>&lt;h1&gt;</b>Content<b>&lt;/h1&gt; &lt;p&gt;</b>Lorem ipsum dolor sit amet,
-consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed
-cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum
-imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed
-augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla.
-<b>&lt;/p&gt; &lt;p&gt;</b>Class aptent taciti sociosqu ad litora torquent per
-conubia nostra, per inceptos himenaeos. Curabitur sodales ligula in
-libero. Sed dignissim lacinia nunc. Curabitur tortor. Pellentesque nibh.
-Aenean quam. In scelerisque sem at dolor. Maecenas mattis. Sed convallis
-tristique sem. Proin ut ligula vel nunc egestas porttitor. Morbi lectus
-risus, iaculis vel, suscipit quis, luctus non, massa. Fusce ac turpis
-quis ligula lacinia aliquet. Mauris ipsum. Nulla metus metus,
-ullamcorper vel, tincidunt sed, euismod in, nibh. <b>&lt;/p&gt; &lt;/div&gt;</b>
-CSS:
 
-```
-.sidebar
-{
-/* &apos;display:table;&apos; shrink-wraps the column */
-<b>display</b>
-:
-table
-;
-<b>float</b>
-:
-left
-;
-<b>background-color</b>
-:
-blue
-;
+<h4>CSS:</h4>
+.sidebar {
+  /* &apos;display:table;&apos; shrink-wraps the column */
+  <b>display</b>: table;
+  <b>float</b>: left;
+  <b>background-color</b>: blue;
 }
-.content
-{
-/* &apos;overflow:hidden;&apos; prevents &apos;.content&apos; from flowing under
-  &apos;.sidebar&apos; */
-<b>overflow</b>
-:
-hidden
-;
-<b>background-color</b>
-:
-yellow
-;
-}
-```
+.content {
+  /* &apos;overflow:hidden;&apos; prevents &apos;.content&apos; from flowing under &apos;.sidebar&apos; */
+  <b>overflow</b>: hidden;
+  <b>background-color</b>: yellow;
+}</code></pre>
 
-&lbrack;&lbrack;Fiddle&rbrack;&rbrack;(https://jsfiddle.net/ooprqsL0/)
+<p><a href="https://jsfiddle.net/ooprqsL0/">Demo Fiddle</a>.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ch15">Chapter 15: Typography</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
-<b>Parameter Details</b>
-
-  <i>font-style</i>     italics or oblique
-  <i>font-variant</i>   normal or small-caps
-
-  <i>font-weight</i>    normal, bold or numeric from 100 to 900.
-
-  <i>font-size</i>      The font size given in %, px, em, or any other valid CSS
-                   measurement
-
-  <i>line-height</i>    The line height given in %, px, em, or any other valid CSS
-                   measurement
-
-  <i>font-family</i>    This is for defining the family&apos;s name.
-  hsl         (   240         ,   100%                ,   50%
-
-<i>color</i> Any valid CSS color representation, like red, #00FF00, ) etc.
-
-  <i>font-stretch</i>   Whether or not to use a confenced or expanded face from font.
-                   Valid values are normal, ultracondensed, extra-condensed,
-                   condensed, semi-condensed, semi-expanded, expanded,
-                   extraexpanded or ultra-expanded
-  <i>text-align</i>     start, end, left, right, center, justify, match-parent
-
-
-<i>text-decoration</i> none, underline, overline, line-through, initial,
-inherit;
+| <b>Parameter</b> | <b>Details</b> |
+|------------------|----------------------------------------|
+| <i>font-style</i>   | italics or oblique |
+| <i>font-variant</i> | normal or small-caps |
+| <i>font-weight</i>  | normal, bold or numeric from 100 to 900. |
+| <i>font-size</i>    | The font size given in %, px, em, or any other valid CSS measurement. |
+| <i>line-height</i>  | The line height given in %, px, em, or any other valid CSS measurement. |
+| <i>font-family</i>  | This is for defining the family&apos;s name. |
+| <i>color</i>        | Any valid CSS color representation, like red, #00FF00,hsl(240, 100%, 50%) etc. |
+| <i>font-stretch</i> | Whether or not to use a confenced or expanded face from font. Valid values are normal, ultra- |
+|                     | condensed, extra-condensed, condensed, semi-condensed, semi-expanded, expanded, extra- |
+|                     | expanded or ultra-expanded. |
+| <i>text-align</i>   | start, end, left, right, center, justify, match-parent |
+| <i>text-decoration</i> | none, underline, overline, line-through, initial, inherit; |
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch15-1">Section 15.1: The Font Shorthand</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p>With the syntax:</p>
 
-With the syntax:
+<pre><code>element {
+  <b>font</b>: &lbrack;font-style&rbrack; &lbrack;font-variant&rbrack; &lbrack;font-weight&rbrack; &lbrack;font-size/line-height&rbrack; &lbrack;font-family&rbrack;;
+}</code></pre>
 
-```
-element
-{
-<b>font</b>
-:
-&lbrack;
-font-style
-&rbrack;
-&lbrack;
-font-variant
-&rbrack;
-&lbrack;
-font-weight
-&rbrack;
-&lbrack;
-font-size/line-height
-&rbrack;
-&lbrack;
-font-family
-&rbrack;
-;
-}
-```
-
-You can have all your font-related styles in one declaration with the
+<p>You can have all your font-related styles in one declaration with the
 font shorthand. Simply use the font property, and put your values in
-the correct order.
+the correct order.</p>
 
-For example, to make all p elements bold with a font size of 20px and
-using Arial as the font family typically you would code it as follows:
+<p>For example, to make all p elements bold with a font size of 20px and
+using Arial as the font family typically you would code it as follows:</p>
 
-```
-p
-{
-<b>font-weight</b>
-:
-bold
-;
-<b>font-size</b>
-:
-20
-px
-;
-<b>font-family</b>
-:
-Arial
-,
-sans-serif
-;
-}
-However with the font shorthand it can be condensed as follows:
-p
-{
-<b>font</b>
-:
-bold
-20
-px
-Arial
-,
-sans-serif
-;
-}
-```
+<pre><code>p {
+  <b>font-weight</b>: bold;
+  <b>font-size</b>: 20px;
+  <b>font-family</b>: Arial, sans-serif;
+}</code></pre>
 
-<b>Note</b>: that since font-style, font-variant, font-weight and
+<p>However with the font shorthand it can be condensed as follows:</p>
+
+<pre><code>p {
+  <b>font</b>: bold 20px Arial, sans-serif;
+}</code></pre>
+
+<p><b>Note</b>: that since font-style, font-variant, font-weight and
 line-height are optional, the three of them are skipped in this
 example. It is important to note that using the shortcut <b>resets</b>
 the other attributes not given. Another important point is that the
 two necessary attributes for the font shortcut to work are font-size
-and fontfamily. If they are not both included the shortcut is ignored.
->
-Initial value for each of the properties:
+and fontfamily. If they are not both included the shortcut is ignored.</p>
 
-  <b>font-style</b>                          :   normal
+<p>Initial value for each of the properties:</p>
 
-  <b>font-variant</b>                           :   normal
-  <b>font-weight</b>                           :   normal
-
-;
->
-;
->
-;
->
-;
-
-  <b>font-stretch</b>                           :   normal
-
-
-  <b>font-size</b>                         :    medium
-
-  <b>line-height</b>                           :   normal
-
-;
->
-;
->
-font-family -- depends on user agent
-
+<ul>
+  <li><b>font-style</b>: normal;</li>
+  <li><b>font-variant</b>: normal;</li>
+  <li><b>font-weight</b>: normal;</li>
+  <li><b>font-stretch</b>: normal;</li>
+  <li><b>font-size</b>: medium;</li>
+  <li><b>line-height</b>: normal;</li>
+  <li>font-famly - depends on user agent</li>
+</ul>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch15-2>Section 15.2: Quotes</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p>The quotes property is used to customize the opening and closing quotation 
+marks of the <b>&gt;</b> tag.</p>
 
-  <b>&lt;q</b>
-
-The quotes property is used to customize the opening and closing
-quotation marks of the <b>&gt;</b> tag.
-
-q
-
-{
-
-<b>quotes</b>
-
-:
-
-&quot;
-
-«
-
-&quot;
-
-&quot;
-
-»
-
-&quot;
-
-;
-
-}
-
+<pre><code>q {
+  <b>quotes</b>: &quot;«&quot; &quot;»&quot;;
+}</code></pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch15-3">Section 15.3: Font Size</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>HTML:</h4>
 
-<pre><code>
-<b>&lt;div</b> id=&quot;element-one&quot;<b>&gt;</b>Hello I am some text.<b>&lt;/div&gt;</b>
+<pre><code><b>&lt;div</b> id=&quot;element-one&quot;<b>&gt;</b>Hello I am some text.<b>&lt;/div&gt;</b>
 <b>&lt;div</b> id=&quot;element-two&quot;<b>&gt;</b>Hello I am some smaller text.<b>&lt;/div&gt;</b></code></pre>
 
 <h4>CSS:</h4>
@@ -4833,12 +4646,10 @@ q
   <b>font-size</b>: 10px;
 }</code></pre>
 
-
 <p>The text inside #element-one will be 30px in size, while the text in #element-two will be 10px in size.</p>
 a<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch15-4">Section 15.4: Text Direction</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-
 <pre><code>
 div {
   <b>direction</b>: ltr; /* Default, text read read from left-to-right */
@@ -4856,40 +4667,30 @@ div {
   <b>writing-mode</b>: vertical-rl;  /* text read from left-to-right and top to bottom */
 }</code></pre>
 
-<p>The direction property is used to change the horizontal text direction
-of an element.</p>
+<p>The direction property is used to change the horizontal text direction of an 
+element.</p>
 
-<b>direction</b>   :   ltr &vert; rtl &vert; initial &vert; inherit
-
-
-<h4>Syntax;</h4>
+<b>Syntax;direction</b>: ltr &vert; rtl &vert; initial &vert; inherit;
 
 <p>The writing-mode property changes the alignment of text so it can be
 read from top-to-bottom or from left-to-right, depending on the
 language.</p>
 
-<b>direction</b>   :   horizontal-tb &vert; vertical-rl &vert; vertical-lr
-
-<h4>Syntax;</h4>
+<b>Syntax:direction</b>: horizontal-tb &vert; vertical-rl &vert; vertical-lr;
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch15-5">Section 15.5: Font Stacks</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<pre><code><b>font-family</b>: &apos;Segoe UI&apos;, Tahoma, sans-serif;</code></pre>
 
-<pre><code>
-<b>font-family</b>: &apos;Segoe UI&apos;, Tahoma, sans-serif;
-</code></pre>
-
-The browser will attempt to apply the font face &quot;Segoe UI&quot; to the
+<p>The browser will attempt to apply the font face &quot;Segoe UI&quot; to the
 characters within the elements targeted by the above property. If this
 font is not available, or the font does not contain a glyph for the
 required character, the browser will fall back to Tahoma, and, if
 necessary, any sans-serif font on the user&apos;s computer. Note that any
 font names with more than one word such as &quot;Segoe UI&quot; need to have
-single or double quotes around them.
+single or double quotes around them.</p>
 
-```
-<b>font-family</b>: Consolas, &apos;Courier New&apos;, monospace;
-```
+<pre><code><b>font-family</b>: Consolas, &apos;Courier New&apos;, monospace;</code></pre>
 
 <p>The browser will attempt to apply the font face &quot;Consolas&quot; to the
 characters within the elements targeted by the above property. If this
@@ -4902,63 +4703,47 @@ and, if necessary, any monospace font on the user&apos;s computer.</p>
 <p>The text-overflow property deals with how overflowed content should be signaled 
 to users. In this example, the ellipsis represents clipped text.</p>
 
-```
-.text {
+<pre><code>.text {
   <b>overflow</b>: hidden;
   <b>text-overflow</b>: ellipsis;
-}
-```
+}</code></pre>
 
-  <b>text-overflow</b>                        :   ellipsis
-
-Unfortunately, only works on a single line of text. There is no way to
+<p>Unfortunately, only works on a single line of text. There is no way to
 support ellipsis on the last line in standard CSS, but it can be
-achieved with non-standard webkit-only implementation of flexboxes.
+achieved with non-standard webkit-only implementation of flexboxes.</p>
 
-```
+<pre><code>
 .giveMeEllipsis {
   <b>overflow</b>: hidden;
   <b>text-overflow</b>: ellipsis;
   <b>display</b>: -webkit-box;
-  -webkit-box-orient:
-  vertical;
-  -webkit-line-clamp: N;
-/* number of lines to show */
-  <b>line-height</b>: X;
-/* fallback */
-  <b>max-height</b>: X &ast; N;
-  /* fallback */
-}
-```
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: N;  /* number of lines to show */
+  <b>line-height</b>: X;  /* fallback */
+  <b>max-height</b>: X&ast;N; /* fallback */
+}</code><pre>
 
-Example (open in Chrome or Safari):
+<p>Example (open in Chrome or Safari):</p>
 
-&lbrack;&lbrack;http://jsfiddle.net/csYjC/1131/&rbrack;&rbrack;(http://jsfiddle.net/csYjC/1131/)
+<p><a href="http://jsfiddle.net/csYjC/1131/&rbrack;&rbrack;(http://jsfiddle.net/csYjC/1131/">jsFiddle</a>.</p>
 
-Resources:
+<h4>Resources:</h4>
 
-&lbrack;&lbrack;https://www.w3.org/TR/2012/WD-css3-ui-20120117/#text-overflow0&rbrack;&rbrack;(https://www.w3.org/TR/2012/WD-css3-ui-20120117/#text-overflow0)
-
+<p><a href="https://www.w3.org/TR/2012/WD-css3-ui-20120117/#text-overflow0">Text Overflow (jsFiddle)</a>.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch15-7">Section 15.7: Text Shadow</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>To add shadows to text, use the text-shadow property. The syntax is as follows:</p>
 
-```
-<b>text-shadow</b>:
-horizontal-offset vertical-offset blur color;
-```
+<pre><code><b>text-shadow</b>: horizontal-offset vertical-offset blur color;</code></pre>
 
 <h4>Shadow without blur radius</h4>
-
-<pre><code>h1 {
-  <b>text-shadow</b>: 2px 2px #0000FF;
-}</code></pre>
 
 <p>This creates a blue shadow effect around a heading</p>
 
 <h4>Shadow with blur radius</h4>
 
+<p>This creates a blue shadow effect around a heading</p>
 To add a blur effect, add an option blur radius argument
 
 <pre><code>h1 {
@@ -4992,27 +4777,26 @@ Valid values are: uppercase, capitalize, lowercase, initial, inherit, and none.<
 
 <h4>HTML:</h4>
 
-<pre><code><b>&lt;</b><b>p</b> class=&quot;example1&quot;<b>&gt;</b>
+<pre><code><b>&lt;p</b> class=&quot;example1&quot;<b>&gt;</b>
   all letters in uppercase&lt;!&minus;-&quot;ALL LETTERS IN UPPERCASE&quot;&minus;-&gt;
-<b>&lt;</b><b>/p</b><b>&gt;</b>
-<b>&lt;</b><b>p</b>class =&quot;example2&quot;<b>&gt;</b>
+<b>&lt;/p&gt;</b>
+<b>&lt;p</b>class =&quot;example2&quot;<b>&gt;</b>
   all letters in capitalize&lt;!&minus;-&quot;All Letters In Capitalize (Sentence Case)&quot;&minus;-&gt;
-<b>&lt;</b><b>/p</b><b>&gt;</b>
-<b>&lt;</b><b>p</b> class=&quot;example3&quot;<b>&gt;</b>
+<b>&lt;/p&gt;</b>
+<b>&lt;p</b> class=&quot;example3&quot;<b>&gt;</b>
   all letters in lowercase&lt;!&minus;-&quot;all letters in lowercase&quot;&minus;-&gt;
-<b>&lt;</b><b>/p</b><b>&gt;</b></code></pre>
-
+<b>&lt;/p&gt;</b></code></pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch15-9">Section 15.9: Letter Spacing</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre><code>h2 {
   /* adds a 1px space horizontally between each letter;
   also known as tracking */
-  <b>letter-spacing</b>:1px;
+  <b>letter-spacing</b>: 1px;
 }</code></pre>
 
-<p>The letter-spacing property is used to specify the space between the
-characters in a text.</p>
+<p>The letter-spacing property is used to specify the space between the characters 
+in a text.</p>
 
 <p>! letter-spacing also supports negative values:</p>
 
@@ -5021,10 +4805,7 @@ characters in a text.</p>
 }
 </code></pre>
 
-<h4>Resources:</h4>
-
-&lbrack;&lbrack;https://developer.mozilla.org/en-US/docs/Web/CSS/letter-spacing&rbrack;&rbrack;(https://developer.mozilla.org/en-US/docs/Web/CSS/letter-spacing)
-
+<p>Resources: <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/letter-spacing">Letter Spacing</a></p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch15-10">Section 15.10: Text Indent</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -5037,30 +4818,21 @@ should be moved before the beginning of the first line of the text
 content of an element.</p>
 
 <h4>Resources:</h4>
-
-&lbrack;&lbrack;Indenting only the first line of text in a
-paragraph?&rbrack;&rbrack;(http://stackoverflow.com/questions/5856952/indenting-only-the-first-line-of-text-in-a-paragraph)
-
-&lbrack;&lbrack;https://www.w3.org/TR/CSS21/text.html#propdef-text-indent&rbrack;&rbrack;(https://www.w3.org/TR/CSS21/text.html#propdef-text-indent)
-&lbrack;&lbrack;https://developer.mozilla.org/en-US/docs/Web/CSS/text-indent&rbrack;&rbrack;(https://developer.mozilla.org/en-US/docs/Web/CSS/text-indent)
-
+<ul>
+  <li><a href="http://stackoverflow.com/questions/5856952/indenting-only-the-first-line-of-text-in-a-paragraph">
+    Indenting only the first line of text in a paragraph?</a></li>
+  <li><a href="https://www.w3.org/TR/CSS21/text.html#propdef-text-indent">Text Indent</a></li>
+  <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/text-indent">Mozilla Text Indent</a></li>
+</ul>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch15-11">Section 15.11: Text Decoration</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>The text-decoration property is used to set or remove decorations from text.</p>
 
-<pre><code>h1 {
-  <b>text-decoration</b>: none;
-}
-h2 {
-  <b>text-decoration</b>: overline;
-}
-h3 {
-  <b>text-decoration</b>: line-through;
-}
-h4 {
-  <b>text-decoration</b>: underline;
-}</code></pre>
+<pre><code>h1 { <b>text-decoration</b>: none; }
+h2 { <b>text-decoration</b>: overline; }
+h3 { <b>text-decoration</b>: line-through; }
+h4 { <b>text-decoration</b>: underline; }</code></pre>
 
 <p>text-decoration can be used in combination with text-decoration-style
 and text-decoration-color as a shorthand property:</p>
@@ -5080,7 +4852,12 @@ and text-decoration-color as a shorthand property:</p>
 
 <p>It should be noted that the following properties are only supported in Firefox</p>
 
-<p>text-decoration-color text-decoration-line text-decoration-style text-decoration-skip</p>
+<ul>
+  <li>text-decoration-color</li>
+  <li>text-decoration-line</li>
+  <li>text-decoration-style</li>
+  <li>text-decoration-skip</li>
+</ul>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch15-12">Section 15.12: Word Spacing</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -6462,7 +6239,7 @@ currentColor
 
 }
 
-<h5>Possible Result:</h5>
+<h4>Possible Result:</h4>
 [image049.png 5.2 x 3.09](./images/image049.png)
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -16673,30 +16450,27 @@ no-repeat
 
 }
 
-> <h4>HTML:</h4>
+<h4>HTML:</h4>
 
+<pre><code>
 <b>&lt;</b>
-
 <b>div</b>
-
 <b>&gt;</b>
-
 <b>&lt;</b>
-
 <b>/div</b>
-
 <b>&gt;</b>
+</code></pre>
 
-> In the above example, three linear-gradient images (which when placed
-> in their appropriate positions would cover 100% x 100% of the
-> container&apos;s size) are used as masks to produce a transparent
-> triangular shaped cut at the bottom of the image.
->
-> <b>Image without the mask:</b>
+<p>In the above example, three linear-gradient images (which when placed
+in their appropriate positions would cover 100% x 100% of the
+container&apos;s size) are used as masks to produce a transparent
+triangular shaped cut at the bottom of the image.</p>
+
+<h4>Image without the mask:</h4>
 
 [image257.jpg 4.25 x 2.167](./images/image257.jpg)
 
-> <b>Image with the mask:</b>
+<h4>Image with the mask:</h4>
 
 [image258.jpg 4.26 x 2.21](./images/image258.jpg)
 
@@ -16704,131 +16478,58 @@ no-repeat
 <h2 id="ch45">Chapter 45: Fragmentation</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
-<b>Value Description</b>
-
-> auto Default. Automatic page breaks always Always insert a page break
-> avoid Avoid page break (if possible) left Insert page breaks so that
-> the next page is formatted as a left page right Insert page breaks so
-> that the next page is formatted as a right page initial Sets this
-> property to its default value. inherit Inherits this property from its
-> parent element.
-
+| <b>Value</b> | <b>Description</b> |
+|---------|-----------------------------------------------------|
+| auto    | Default. Automatic page breaks. |
+| always  | Always insert a page break. |
+| avoid   | Avoid page break (if possible). |
+| left    | Insert page breaks so that the next page is formatted as a left page. |
+| right   | Insert page breaks so that the next page is formatted as a right page. |
+| initial | Sets this property to its default value. |
+| inherit | Inherits this property from its parent element. |
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch45-1">Section 45.1: Media print page-break</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<pre><code><b>&commat;media</b> print {
+  p {
+    <b>page-break-inside</b>: avoid;
+  }
+  h1 {
+    <b>page-break-before</b>: always;
+  }
+  h2 {
+    <b>page-break-after</b>: avoid;
+  }
+}</code></pre>
 
-<b>&commat;media</b>
+<p>This code does 3 things:</p>
 
-print
-
-{
-
-p
-
-{
-
-<b>page-break-inside</b>
-
-:
-
-avoid
-
-;
-
-}
-
-h1
-
-{
-
-<b>page-break-before</b>
-
-:
-
-always
-
-;
-
-}
-
-h2
-
-{
-
-<b>page-break-after</b>
-
-:
-
-avoid
-
-;
-
-}
-
-}
-
-> This code does 3 things:
->
-> it prevents a page break inside any p tags, meaning a paragraph will
-> never be broken in two pages, if possible.
->
-> it forces a page-break-before in all h1 headings, meaning that before
-> every h1 occurrence, there will be a page break.
->
-> it prevents page-breaks right after any h2
-
+<ul>
+  <li>it prevents a page break inside any p tags, meaning a paragraph will never 
+    be broken in two pages, if possible.</li>
+  <li>it forces a page-break-before in all h1 headings, meaning that before every 
+    h1 occurrence, there will be a page break.</li>
+  <li>it prevents page-breaks right after any h2.</li>
+</ul>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ch46">Chapter 46: CSS Object Model (CSSOM)</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch46-1">Section 46.1: Adding a background-image rule via the CSSOM</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p>To add a background-image rule via the CSSOM, first get a reference to the 
+rules of the first stylesheet:</p>
 
-> To add a background-image rule via the CSSOM, first get a reference to
-> the rules of the first stylesheet:
+<pre><code>var stylesheet = document.styleSheets&lbrack;0&rbrack;.cssRules;</code></pre>
 
-var
+<p>Then, get a reference to the end of the stylesheet:</p>
 
-stylesheet
+<pre><code>var end = stylesheet.length &minus; 1;</code></pre>
 
-=
+<p>Finally, insert a background-image rule for the body element at the end of 
+the stylesheet:</p>
 
-document.styleSheets
-
-&lbrack;
-
-0
-
-&rbrack;
-
-.cssRules
-
-;
-
-> Then, get a reference to the end of the stylesheet:
-
-var
-
-end
-
-=
-
-stylesheet
-
-.length
-
-&minus;
-
-1
-
-;
-
-> Finally, insert a background-image rule for the body element at the
-> end of the stylesheet:
->
-> stylesheet.insertRule(&quot;body { background-image:
-> url(&apos;http://cdn.sstatic.net/Sites/stackoverflow/img/favicon.ico&apos;);
-> }&quot;, end);
-
+<pre><code>stylesheet.insertRule(&quot;body { background-image:
+url(&apos;http://cdn.sstatic.net/Sites/stackoverflow/img/favicon.ico&apos;);}&quot;, end);</code></pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch46-2">Section 46.2: Introduction</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -17189,575 +16890,283 @@ DIV #5
 
 DIV #6
 
-> It is important to note that DIV #4, DIV #5 and DIV #6 are children of
-> DIV #3, so stacking of those elements is completely resolved within
-> DIV#3. Once stacking and rendering within DIV #3 is completed, the
-> whole DIV #3 element is passed for stacking in the root element with
-> respect to its sibling&apos;s DIV.
->
-> <b>HTML:</b>
+<p>It is important to note that DIV #4, DIV #5 and DIV #6 are children of
+DIV #3, so stacking of those elements is completely resolved within
+DIV#3. Once stacking and rendering within DIV #3 is completed, the
+whole DIV #3 element is passed for stacking in the root element with
+respect to its sibling&apos;s DIV.</p>
 
-<b>&lt;</b>
+<h4>HTML:</h4>
 
-<b>div</b>
-
-id
-
-=
-
-&quot;div1&quot;
-
-<b>&gt;</b>
-
-<b>&lt;</b>
-
-<b>h</b>
-
-<b>1</b>
-
-<b>&gt;</b>
-
+<pre><code>
+<b>&lt;div</b> id=&quot;div1&quot;<b>&gt;</b>
+<b>&lt;h1&gt;</b>
 Division Element #1
-
-<b>&lt;</b>
-
-<b>/h</b>
-
-<b>1</b>
-
-<b>&gt;</b>
-
-<b>&lt;</b>
-
-<b>code</b>
-
-<b>&gt;</b>
-
+<b>&lt;/h1&gt;</b>
+<b>&lt;code&gt;</b>
 position: relative;
-
-<b>&lt;</b>
-
-<b>br</b>
-
-<b>/&gt;</b>
-
+<b>&lt;</b><b>br</b><b>/&gt;</b>
 z-index: 5;
-
 <b>&lt;</b>
-
 <b>/code</b>
-
 <b>&gt;</b>
-
 <b>&lt;</b>
-
 <b>/div</b>
-
 <b>&gt;</b>
-
 <b>&lt;</b>
-
 <b>div</b>
-
 id
-
 =
-
 &quot;div2&quot;
-
 <b>&gt;</b>
-
 <b>&lt;</b>
-
 <b>h</b>
-
 <b>1</b>
-
 <b>&gt;</b>
-
 Division Element #2
-
 <b>&lt;</b>
-
 <b>/h</b>
-
 <b>1</b>
-
 <b>&gt;</b>
-
 <b>&lt;</b>
-
 <b>code</b>
-
 <b>&gt;</b>
-
 position: relative;
-
 <b>&lt;</b>
-
 <b>br</b>
-
 <b>/&gt;</b>
-
 z-index: 2;
-
 <b>&lt;</b>
-
 <b>/code</b>
-
 <b>&gt;</b>
-
 <b>&lt;</b>
-
 <b>/div</b>
-
 <b>&gt;</b>
-
 <b>&lt;</b>
-
 <b>div</b>
-
 id
-
 =
-
 &quot;div3&quot;
-
 <b>&gt;</b>
-
 <b>&lt;</b>
-
 <b>div</b>
-
 id
-
 =
-
 &quot;div4&quot;
-
 <b>&gt;</b>
-
 <b>&lt;</b>
-
 <b>h</b>
-
 <b>1</b>
-
 <b>&gt;</b>
-
 Division Element #4
-
 <b>&lt;</b>
-
 <b>/h</b>
-
 <b>1</b>
-
 <b>&gt;</b>
-
 <b>&lt;</b>
-
 <b>code</b>
-
 <b>&gt;</b>
-
 position: relative;
-
 <b>&lt;</b>
-
 <b>br</b>
-
 <b>/&gt;</b>
-
 z-index: 6;
-
 <b>&lt;</b>
-
 <b>/code</b>
-
 <b>&gt;</b>
-
 <b>&lt;</b>
-
 <b>/div</b>
-
 <b>&gt;</b>
-
 <b>&lt;</b>
-
 <b>h</b>
-
 <b>1</b>
-
 <b>&gt;</b>
-
 Division Element #3
-
 <b>&lt;</b>
-
 <b>/h</b>
-
 <b>1</b>
-
 <b>&gt;</b>
-
 <b>&lt;</b>
-
 <b>code</b>
-
 <b>&gt;</b>
-
 position: absolute;
-
 <b>&lt;</b>
-
 <b>br</b>
-
 <b>/&gt;</b>
-
 z-index: 4;
-
 <b>&lt;</b>
-
 <b>/code</b>
-
 <b>&gt;</b>
-
 <b>&lt;</b>
-
 <b>div</b>
-
 id
-
 =
-
 &quot;div5&quot;
-
 <b>&gt;</b>
-
 <b>&lt;</b>
-
 <b>h</b>
-
 <b>1</b>
-
 <b>&gt;</b>
-
 Division Element #5
-
 <b>&lt;</b>
-
 <b>/h</b>
-
 <b>1</b>
-
 <b>&gt;</b>
-
 <b>&lt;</b>
-
 <b>code</b>
-
 <b>&gt;</b>
-
 position: relative;
-
 <b>&lt;</b>
-
 <b>br</b>
-
 <b>/&gt;</b>
-
 z-index: 1;
-
 <b>&lt;</b>
-
 <b>/code</b>
-
 <b>&gt;</b>
-
 <b>&lt;</b>
-
 <b>/div</b>
-
 <b>&gt;</b>
-
 <b>&lt;</b>
-
 <b>div</b>
-
 id
-
 =
-
 &quot;div6&quot;
-
 <b>&gt;</b>
-
 <b>&lt;</b>
-
 <b>h</b>
-
 <b>1</b>
-
 <b>&gt;</b>
-
 Division Element #6
-
 <b>&lt;</b>
-
 <b>/h</b>
-
 <b>1</b>
-
 <b>&gt;</b>
-
 <b>&lt;</b>
-
 <b>code</b>
-
 <b>&gt;</b>
-
 position: absolute;
-
 <b>&lt;</b>
-
 <b>br</b>
-
 <b>/&gt;</b>
-
 z-index: 3;
-
 <b>&lt;</b>
-
 <b>/code</b>
-
 <b>&gt;</b>
-
 <b>&lt;</b>
-
 <b>/div</b>
-
 <b>&gt;</b>
-
 <b>&lt;</b>
-
 <b>/div</b>
-
 <b>&gt;</b>
-
 > <b>CSS:</b>
-
 #div5
-
 {
-
 <b>border</b>
-
 :
-
 1
-
 px
-
 dashed
-
 #996
-
 ;
-
 <b>background-color</b>
-
 :
-
 #ffc
-
 ;
-
 }
-
 #div4
-
 {
-
 <b>z-index</b>
-
 :
-
 6
-
 ;
-
 <b>margin-bottom</b>
-
 :
-
 15
-
 px
-
 ;
-
 <b>padding</b>
-
 :
-
 25
-
 px
-
 10
-
 px
-
 5
-
 px
-
 ;
-
 }
-
 #div5
-
 {
-
 <b>z-index</b>
-
 :
-
 1
-
 ;
-
 <b>margin-top</b>
-
 :
-
 15
-
 px
-
 ;
-
 <b>padding</b>
-
 :
-
 5
-
 px
-
 10
-
 px
-
 ;
-
 }
-
 #div6
-
 {
-
 <b>z-index</b>
-
 :
-
 3
-
 ;
-
 <b>position</b>
-
 :
-
 absolute
-
 ;
-
 <b>top</b>
-
 :
-
 20
-
 px
-
 ;
-
 <b>left</b>
-
 :
-
 180
-
 px
-
 ;
-
 <b>width</b>
-
 :
-
 150
-
 px
-
 ;
-
 <b>height</b>
-
 :
-
 125
-
 px
-
 ;
-
 <b>border</b>
-
 :
-
 1
-
 px
-
 dashed
-
 #009
-
 ;
-
 <b>padding-top</b>
-
 :
-
 125
-
 px
-
 ;
-
 <b>background-color</b>
-
 :
-
 #ddf
-
 ;
-
 <b>text-align</b>
-
 :
-
 center
-
 ;
-
 }
+</code></pre>
 
-> <b>Result:</b>
+<h4>Result:</h4>
 
 [image260.jpg 6x3 inc](./images/image260.jpg)
 
