@@ -4889,9 +4889,8 @@ words.</p>
 
 <b><i>small-caps</i></b>
 
-<p>Sets every letter to uppercase, <b>but</b> makes the lowercase
-letters(from original text) smaller in size than the letters that
-originally uppercase.</p>
+<p>Sets every letter to uppercase, <b>but</b> makes the lowercase letters(from 
+original text) smaller in size than the letters that originally uppercase.</p>
 
 <h4>CSS:</h4>
 
@@ -4911,7 +4910,7 @@ originally uppercase.</p>
 <h4>Output:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 39.  (xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p align="center" width="100%">
+<p align="left" width="100%">
 <img src="./images/image039.jpg"
   style="width:25%"
   title=""
@@ -4955,16 +4954,16 @@ and shrinks them to prevent overflow.</p>
 
 <p>Here is a <a href="http://codepen.io/asim-coder/pen/ZOobqz">demo (CodePen)</a>.</p>
 
-<b>Reasoning</b>
+<h4>Reasoning</h4>
 
-| <b>Property</b> | <b>Value</b> | <b>Description</b> |
+| <b>Property</b> | <b>Value</b> | <b>Description</b>                                           |
+|-----------------|--------------|--------------------------------------------------------------|
 | align-items | center | This centers the elements along the axis other than the one specified by flex-direction, |
 |             |        | i.e., vertical centering for a horizontal flexbox and horizontal centering for a vertical |
 |             |        | flexbox. |
 | justify-content | center | This centers the elements along the axis specified by flex-direction. I.e., for a |
 |                 |        | horizontal (flex-direction: row) flexbox, this centers horizontally, and for a vertical |
 |                 |        | flexbox (flex-direction: column) flexbox, this centers vertically. |
-
 
 <h4>Individual Property Examples</h4>
 
@@ -4974,7 +4973,7 @@ and shrinks them to prevent overflow.</p>
   <b>&lt;div&gt;&lt;/div&gt;</b>
   <b>&lt;div&gt;&lt;/div&gt;</b>
   <b>&lt;div&gt;&lt;/div&gt;</b>
-<b>&lt;/div&gt;</b>
+<b>&lt;/div&gt;</b></code></pre>
 
 <p>where #container is the flex-box.</p>
 
@@ -4991,7 +4990,7 @@ and shrinks them to prevent overflow.</p>
 <b>Outcome:</b>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 40.  (xxx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p align="center" width="100%">
+<p align="left" width="100%">
 <img src="./images/image040.jpg"
   style="width:50%"
   title=""
