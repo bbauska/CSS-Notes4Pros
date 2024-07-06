@@ -3,7 +3,7 @@ title: |
   CSS Notes for Professionals
   by web@petercv.com, PDF https://goalkicker.com/CSSBook
 author: "bbauska"
-date last editted: "7/4/2024 Thu 1+am"
+date last editted: "7/5/2024 Fri 8+pm"
 output: 
   markdown:
     with some style
@@ -2410,7 +2410,6 @@ sure the div/image you apply the code to has a parent with a height.</p>
   <b>display</b>: inline-block;
   <b>height</b>: 100&percnt;;
   <b>vertical-align</b>: middle;
-  
 /* There is a gap between ghost element and .centered,
 caused by space character rendered. Could be eliminated by
 nudging .centered (nudge distance depends on font family),
@@ -2654,9 +2653,9 @@ of the content:</p>
 
 <h4>HTML:</h4>
 
-<pre><code><b>&lt;div</b> class=&quot;wrapper&quot;<b>&gt;</b>
-  <b>&lt;div</b> class=&quot;parent&quot;<b>&gt;</b>
-    <b>&lt;div</b> class=&quot;child&quot;<b>&gt;&lt;/div&gt;</b>
+<pre><code><b>&lt;div</b> class=<span style="color:red;">&quot;wrapper&quot;</span><b>&gt;</b>
+  <b>&lt;div</b> class=<span style="color:red;">&quot;parent&quot;</span><b>&gt;</b>
+    <b>&lt;div</b> class=<span style="color:red;">&quot;child&quot;</span><b>&gt;&lt;/div&gt;</b>
   <b>&lt;/div&gt;</b>
 <b>&lt;/div&gt;</b></code></pre>
 
@@ -2937,13 +2936,13 @@ spacing between the elements.</p>
 .inner-bottom {
   <b>margin</b>: 25px;
 }
-<b>&lt;div</b> class = &quot;outer-top&quot;<b>&gt;</b>
-    <b>&lt;div</b> class=&quot;inner-top&quot;<b>&gt;</b>
+<b>&lt;div</b> class =<span style="color:red;">&quot;outer-top&quot;</span><b>&gt;</b>
+    <b>&lt;div</b> class=<span style="color:red;">&quot;inner-top&quot;</span><b>&gt;</b>
       some content
     <b>&lt;/div&gt;</b>
   <b>&lt;/div&gt;</b>
-  <b>&lt;div</b> class=&quot;outer-bottom&quot;<b>&gt;</b>
-    <b>&lt;div</b> class=&quot;inner-bottom&quot;<b>&gt;</b>
+  <b>&lt;div</b> class=<span style="color:red;">&quot;outer-bottom&quot;</span><b>&gt;</b>
+    <b>&lt;div</b> class=<span style="color:red;">&quot;inner-bottom&quot;</span><b>&gt;</b>
       some more content
   <b>&lt;/div&gt;</b>
 <b>&lt;/div&gt;</b></code></pre>
@@ -3066,13 +3065,10 @@ Result</i>.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre><code>p {
   <b>margin</b>: 1px; /* 1px margin in all directions */
-
   /* equal to: */
   <b>margin</b>: 1px 1px;
-
   /* equal to: */
   <b>margin</b>: 1px 1px 1px;
-
   /* equal to: */
   <b>margin</b>: 1px 1px 1px 1px;
 }</code></pre>
@@ -3081,10 +3077,8 @@ Result</i>.</p>
 
 <pre><code>p {
   <b>margin</b>: 10px 15px; /* 10px margin-top & bottom And 15px margin-right & left */
-
   /* equal to: */
   <b>margin</b>: 10px 15px 10px 15px;
-
   /* equal to: */
   <b>margin</b>: 10px 15px 10px;
   /* margin left will be calculated from the margin right value (=15px) */
@@ -3121,8 +3115,7 @@ remaining sides so:</p>
 <p>It is obvious to assume that the percentage value of margin to
 margin-left and margin-right would be relative to its parent element.</p>
 
-<pre><code>
-.parent {
+<pre><code>.parent {
   <b>width</b> : 500px;
   <b>height</b>: 300px;
 }
@@ -3130,8 +3123,7 @@ margin-left and margin-right would be relative to its parent element.</p>
   <b>width</b> : 100px;
   <b>height</b>: 100px;
   <b>margin-left</b>: 10&percnt;; /* (parentWidth &ast; 10/100) =&gt; 50px */
-}
-</code></pre>
+}</code></pre>
 
 <p>But that is not the case, when comes to margin-top and margin-bottom.
 Both these properties, in percentages, aren&apos;t relative to the height
@@ -3147,7 +3139,7 @@ of the parent container but to the <b>width</b> of the parent container.</p>
   <b>width</b> : 100px;
   <b>height</b>: 100px;
   <b>margin-left</b>: 10&percnt;;  /* (parentWidth &ast; 10/100) =&gt; 50px */
-  <b>margin-top</b>: 20&percnt;;  /* (parentWidth &ast; 20/100) =&gt; 100px */
+  <b>margin-top</b>: 20&percnt;;   /* (parentWidth &ast; 20/100) =&gt; 100px */
 }</code></pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch8-6">Section 8.6: Negative margins</h3>
@@ -3176,14 +3168,14 @@ element and its border. Negative values are not allowed.</p>
 <p>To save adding padding to each side individually (using padding-top,
 padding-left etc) can you write it as a shorthand, as below:</p>
 
-<h4>Four values:</h4>
+<h4><b>Four values:</b></h4>
 
 <pre><code><b>&lt;style&gt;</b>
   .myDiv {
     padding: 25px 50px 75px 100px; /* top right bottom left; */
   }
 <b>&lt;/style&gt;</b>
-<b>&lt;div</b> class=&quot;myDiv&quot;<b>&gt;&lt;/div&gt;</b></code></pre>
+<b>&lt;div</b> class=<span style="color:red;">&quot;myDiv&quot;</span><b>&gt;&lt;/div&gt;</b></code></pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~ 21a. padding: 25, 50, 75 100px (61) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left" width="100%">
@@ -3193,14 +3185,14 @@ padding-left etc) can you write it as a shorthand, as below:</p>
   alt="padding: 25, 50, 75, 100px." />
 </p>
 
-<h4>Three values:</h4>
+<h4><b>Three values:</b></h4>
 
 <pre><code><b>&lt;style&gt;</b>
   .myDiv {
     padding: 25px 50px 75px; /* top left/right bottom */
   }
   <b>&lt;/style&gt;</b>
-<b>&lt;div</b> class=&quot;myDiv&quot;<b>&gt;&lt;/div&gt;</b></code></pre>
+<b>&lt;div</b> class=<span style="color:red;">&quot;myDiv&quot;</span><b>&gt;&lt;/div&gt;</b></code></pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~ 21b. padding: 25, 50, 75, 50px (61) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left" width="100%">
@@ -3210,14 +3202,14 @@ padding-left etc) can you write it as a shorthand, as below:</p>
   alt="padding: 25, 50, 75, 50px." />
 </p>
 
-</h4>Two values:</h4>
+</h4><b>Two values:</b></h4>
 
 <pre><code><b>&lt;style&gt;</b>
   .myDiv {
     padding: 25px 50px; /* top/bottom left/right */
   }
 <b>&lt;/style&gt;</b>
-<b>&lt;div</b> class=&quot;myDiv&quot;<b>&gt;&lt;/div&gt;</b></code></pre>
+<b>&lt;div</b> class=<span style="color:red;">&quot;myDiv&quot;</span><b>&gt;&lt;/div&gt;</b></code></pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~ 21c. padding: 25, 50, 25, 50px (61) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left" width="100%">
@@ -3227,14 +3219,14 @@ padding-left etc) can you write it as a shorthand, as below:</p>
   alt="padding: 25, 50, 25, 50px." />
 </p>
 
-<h4>One value:</h4>
+<h4><b>One value:</b></h4>
 
 <pre><code><b>&lt;style&gt;</b>
   .myDiv {
     padding: 25px; /* top/right/bottom/left */
 }
 <b>&lt;/style&gt;</b>
-<b>&lt;div</b> class=&quot;myDiv&quot;<b>&gt;&lt;/div&gt;</b></code></pre>
+<b>&lt;div</b> class=<span style="color:red;">&quot;myDiv&quot;</span><b>&gt;&lt;/div&gt;</b></code></pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~ 21d. padding: 25, 25, 25, 25px (62) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left" width="100%">
@@ -3267,7 +3259,7 @@ element and its border. Negative values are not allowed.</p>
     padding-top: 5px;
 }
 <b>&lt;/style&gt;</b>
-<b>&lt;div</b> class=&quot;myClass&quot;<b>&gt;&lt;/div&gt;</b></code></pre>
+<b>&lt;div</b> class=<span style="color:red;">&quot;myClass&quot;</span><b>&gt;&lt;/div&gt;</b></code></pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ch10">Chapter 10: Border</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -19791,3 +19783,4 @@ same animation, took <b>1.3ms</b> for rendering, <b>2.0ms</b> for painting.
 <!-- 7/1/2024 Mon 2:24am -->
 <!-- 7/2/2024 Tue 6:39pm -->
 <!-- 7/4/2024 Thu 1:35am -->
+<!-- 7/5/2024 Fri 8:48pm -->
