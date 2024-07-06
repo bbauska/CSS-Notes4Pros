@@ -4650,8 +4650,7 @@ marks of the <b>&gt;</b> tag.</p>
 a<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch15-4">Section 15.4: Text Direction</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<pre><code>
-div {
+<pre><code>div {
   <b>direction</b>: ltr; /* Default, text read read from left-to-right */
 }
 .ex {
@@ -4676,7 +4675,7 @@ element.</p>
 read from top-to-bottom or from left-to-right, depending on the
 language.</p>
 
-<b>Syntax:direction</b>: horizontal-tb &vert; vertical-rl &vert; vertical-lr;
+<b>Syntax: direction</b>: horizontal-tb &vert; vertical-rl &vert; vertical-lr;
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch15-5">Section 15.5: Font Stacks</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -4712,8 +4711,7 @@ to users. In this example, the ellipsis represents clipped text.</p>
 support ellipsis on the last line in standard CSS, but it can be
 achieved with non-standard webkit-only implementation of flexboxes.</p>
 
-<pre><code>
-.giveMeEllipsis {
+<pre><code>.giveMeEllipsis {
   <b>overflow</b>: hidden;
   <b>text-overflow</b>: ellipsis;
   <b>display</b>: -webkit-box;
@@ -4724,8 +4722,7 @@ achieved with non-standard webkit-only implementation of flexboxes.</p>
 }</code><pre>
 
 <p>Example (open in Chrome or Safari):</p>
-
-<p><a href="http://jsfiddle.net/csYjC/1131/&rbrack;&rbrack;(http://jsfiddle.net/csYjC/1131/">jsFiddle</a>.</p>
+<p><a href="http://jsfiddle.net/csYjC/1131/">jsFiddle</a>.</p>
 
 <h4>Resources:</h4>
 
@@ -4798,12 +4795,11 @@ Valid values are: uppercase, capitalize, lowercase, initial, inherit, and none.<
 <p>The letter-spacing property is used to specify the space between the characters 
 in a text.</p>
 
-<p>! letter-spacing also supports negative values:</p>
+<p>!letter-spacing also supports negative values:</p>
 
 <pre><code>p {
   <b>letter-spacing</b>: -1px;
-}
-</code></pre>
+}</code></pre>
 
 <p>Resources: <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/letter-spacing">Letter Spacing</a></p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -4861,61 +4857,60 @@ and text-decoration-color as a shorthand property:</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch15-12">Section 15.12: Word Spacing</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p>The word-spacing property specifies the spacing behavior between tags and 
+words.</p>
 
-The word-spacing property specifies the spacing behavior between tags and words.
+<h4>Possible values</h4>
 
-<b>Possible values</b>
-
-a positive or negative <i>length</i> (using em px vh cm etc.) or
-<i>percentage</i> (using %) the keyword normal uses the font&apos;s default
-word spacing the keyword inherit takes the value from the parent
-element
+<ul>
+  <li>a positive or negative <i>length</i> (using em px vh cm etc.) or <i>percentage</i> (using %)</li>
+  <li>the keyword normal uses the font&apos;s default word spacing</li>
+  <li>the keyword inherit takes the value from the parent element</li>
+</ul>
 
 <h4>CSS</h4>
 
-<pre><code>.normal {
-  <b>word-spacing</b>: normal;
-}
-.narrow {
-  <b>word-spacing</b>: -3px;
-}
-.extensive {
-  <b>word-spacing</b>: 10px;
-}</code></pre>
+<pre><code>.normal    { <b>word-spacing</b>: normal; }
+.narrow    { <b>word-spacing</b>: -3px; }
+.extensive {<b>word-spacing</b>: 10px; }</code></pre>
 
 <h4>HTML:</h4>
 
-```
+<pre><code>
 <b>&lt;p&gt;</b>
-<b>&lt;span</b> class=&quot;normal&quot;<b>&gt;</b>This is an example, showing the
-effect of &quot;word-spacing&quot;.<b>&lt;/span&gt;&lt;br&gt;</b>
-<b>&lt;span</b> class=&quot;narrow&quot;<b>&gt;</b>This is an example, showing the
-effect of &quot;word-spacing&quot;.<b>&lt;/span&gt;&lt;br&gt;</b> <b>&lt;span</b>
-class=&quot;extensive&quot;<b>&gt;</b>This is an example, showing the effect of
-&quot;word-spacing&quot;.<b>&lt;/span&gt;&lt;br&gt;</b>
+  <b>&lt;span</b> class=&quot;normal&quot;<b>&gt;</b>
+    This is an example, showing the effect of &quot;word-spacing&quot;.<b>&lt;/span&gt;&lt;br&gt;</b>
+  <b>&lt;span</b> class=&quot;narrow&quot;<b>&gt;</b>This is an example, showing the 
+    effect of &quot;word-spacing&quot;.<b>&lt;/span&gt;&lt;br&gt;</b> 
+  <b>&lt;span</b> class=&quot;extensive&quot;<b>&gt;</b>This is an example, showing the effect of
+    &quot;word-spacing&quot;.<b>&lt;/span&gt;&lt;br&gt;</b>
 <b>&lt;/p&gt;</b>
-<b>Online-Demo</b>
-&lbrack;&lbrack;Try it yourself&rbrack;&rbrack;(https://jsfiddle.net/91742Lxt/)
-<b>Further reading:</b>
-&lbrack;&lbrack;word-spacing&rbrack; &lbrack;--&rbrack;
-&lbrack;MDN&rbrack;&rbrack;(https://developer.mozilla.org/de/docs/Web/CSS/word-spacing)
-&lbrack;&lbrack;word-spacing&rbrack; &lbrack;--&rbrack;
-&lbrack;w3.org&rbrack;&rbrack;(https://www.w3.org/wiki/CSS/Properties/word-spacing)
-```
 
+<h4>Online-Demo</h4>
+
+<a href="https://jsfiddle.net/91742Lxt/">Try it yourself</a>
+
+<h4>Further reading:</h4>
+<ul>
+  <li><a href="https://developer.mozilla.org/de/docs/Web/CSS/word-spacing">
+    word-spacing--&rbrack;MDN</a></li>
+  <li><a href="https://www.w3.org/wiki/CSS/Properties/word-spacing">
+    word-spacing-w3.org</a></li>
+</ul>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch15-13">Section 15.13: Font Variant</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-
 <h4>Attributes:</h4>
 
 <b><i>normal</i></b>
 
-Default attribute of fonts. <b><i>small-caps</i></b>
+<p>Default attribute of fonts.</p>
 
-Sets every letter to uppercase, <b>but</b> makes the lowercase
+<b><i>small-caps</i></b>
+
+<p>Sets every letter to uppercase, <b>but</b> makes the lowercase
 letters(from original text) smaller in size than the letters that
-originally uppercase.
+originally uppercase.</p>
 
 <h4>CSS:</h4>
 
@@ -4927,17 +4922,12 @@ originally uppercase.
 
 <pre><code>
 <b>&lt;p</b> class=&quot;smallcaps&quot;<b>&gt;</b>
-Documentation about CSS Fonts
-<b>&lt;</b>
-<b>br</b>
-<b>&gt;</b>
-aNd ExAmpLe
-<b>&lt;</b>
-<b>/p</b>
-<b>&gt;</b>
-</code></pre>
+  Documentation about CSS Fonts
+  <b>&lt;br&gt;</b>
+  aNd ExAmpLe
+<b>&lt;/p&gt;</b></code></pre>
 
-<b>Output:</b>
+<h4>Output:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 39.  (xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="center" width="100%">
@@ -4948,10 +4938,9 @@ aNd ExAmpLe
 </p>
 <!-- [image039.jpg 2.34 x .375](./images/image039.jpg) -->
 
-Note: The font-variant property is a shorthand for the properties:
+<p>Note: The font-variant property is a shorthand for the properties:
 font-variant-caps, font-variant-numeric, fontvariant-alternates,
-font-variant-ligatures, and font-variant-east-asian.
-
+font-variant-ligatures, and font-variant-east-asian.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ch16">Chapter 16: Flexible Box Layout (Flexbox)</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -4961,7 +4950,6 @@ distribute space among items in a container such that elements behave
 predictably when the page layout must accommodate different, unknown
 screen sizes. A flex container expands items to fill available space
 and shrinks them to prevent overflow.</p>
-
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch16-1">Section 16.1: Dynamic Vertical and Horizontal Centering (alignitems, justify-content)</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -4969,126 +4957,55 @@ and shrinks them to prevent overflow.</p>
 
 <h4>HTML:</h4>
 
-<pre><code>
-<b>&lt;</b>
-<b>div</b>
-class
-=
-&quot;aligner&quot;
-<b>&gt;</b>
-<b>&lt;</b>
-<b>div</b>
-class
-=
-&quot;aligner-item&quot;
-<b>&gt;</b>
-...
-<b>&lt;</b>
-<b>/div</b>
-<b>&gt;</b>
-<b>&lt;</b>
-<b>/div</b>
-<b>&gt;</b>
-</code></pre>
+<pre><code><b>&lt;div</b> class=&quot;aligner&quot;<b>&gt;</b>
+  <b>&lt;div</b> class=&quot;aligner-item&quot;<b>&gt;</b>...<b>&lt;/div&gt;</b>
+<b>&lt;/div&gt;</b></code></pre>
 
 <h4>CSS</h4>
 
-<pre><code>
-.aligner {
+<pre><code>.aligner {
   <b>display</b>: flex;
   <b>align-items</b>: center;
   <b>justify-content</b>: center;
 }
 .aligner-item {
-  <b>max-width</b>: 50&percnt;;
-/* for demo. Use actual width instead. */
-}
-</code></pre>
+  <b>max-width</b>: 50&percnt;; /* for demo. Use actual width instead. */
+}</code></pre>
 
 <p>Here is a <a href="http://codepen.io/asim-coder/pen/ZOobqz">demo (CodePen)</a>.</p>
 
 <b>Reasoning</b>
 
-<b>Property Value Description</b>
-
-This centers the elements along the axis other than the one specified
-by flex-direction,
-
-align-items center i.e., vertical centering for a horizontal flexbox
-and horizontal centering for a vertical flexbox.
-
-This centers the elements along the axis specified by flex-direction.
-I.e., for a
-
-<pre><code>
-  <b>flex-direction</b>: row
-  <b>flex-direction</b>: column
-</code></pre>
-
-justify-contentcenter horizontal () flexbox, this centers
-horizontally, and for a vertical flexbox () flexbox, this centers
-vertically)
-
-<b>Individual Property Examples</b>
-
-All of the below styles are applied onto this simple layout:
-
-<pre><code>
-<b>&lt;</b>
-<b>div</b>
-id
-=
-&quot;container&quot;
-<b>&gt;</b>
-<b>&lt;</b>
-<b>div</b>
-<b>&gt;</b>
-<b>&lt;</b>
-<b>/div</b>
-<b>&gt;</b>
-<b>&lt;</b>
-<b>div</b>
-<b>&gt;</b>
-<b>&lt;</b>
-<b>/div</b>
-<b>&gt;</b>
-<b>&lt;</b>
-<b>div</b>
-<b>&gt;</b>
-<b>&lt;</b>
-<b>/div</b>
-<b>&gt;</b>
-<b>&lt;</b>
-<b>/div</b>
-<b>&gt;</b>
-
-where #container is the flex-box
-.  <b>justify-content</b>                            <b>:</b>   <b>center</b>
-</code></pre>
+| <b>Property</b> | <b>Value</b> | <b>Description</b> |
+| align-items | center | This centers the elements along the axis other than the one specified by flex-direction, |
+|             |        | i.e., vertical centering for a horizontal flexbox and horizontal centering for a vertical |
+|             |        | flexbox. |
+| justify-content | center | This centers the elements along the axis specified by flex-direction. I.e., for a |
+|                 |        | horizontal (flex-direction: row) flexbox, this centers horizontally, and for a vertical |
+|                 |        | flexbox (flex-direction: column) flexbox, this centers vertically. |
 
 
-<b>Example: on a horizontal flexbox</b>
->
+<h4>Individual Property Examples</h4>
+
+<p>All of the below styles are applied onto this simple layout:</p>
+
+<pre><code><b>&lt;div</b> id=&quot;container&quot;<b>&gt;</b>
+  <b>&lt;div&gt;&lt;/div&gt;</b>
+  <b>&lt;div&gt;&lt;/div&gt;</b>
+  <b>&lt;div&gt;&lt;/div&gt;</b>
+<b>&lt;/div&gt;</b>
+
+<p>where #container is the flex-box.</p>
+
+<h4>Example: justify-content: center on a horizontal flexbox</h4>
+
 <b>CSS:</b>
 
-<pre><code>
-div
-#container
-{
-<b>display</b>
-:
-flex
-;
-<b>flex-direction</b>
-:
-row
-;
-<b>justify-content</b>
-:
-center
-;
-}
-</code></pre>
+<pre><code>div#container {
+  <b>display</b>: flex;
+  <b>flex-direction</b>: row;
+  <b>justify-content</b>: center;
+}</code></pre>
 
 <b>Outcome:</b>
 
@@ -5096,83 +5013,51 @@ center
 
 Here is the <a href="https://jsfiddle.net/d6pc5bmd/">demo jsFiddle</a>.
 
-  <b>justify-content</b>                            <b>:</b>   <b>center</b>
-
-<b>Example: on a vertical flexbox</b>
+<h4>Example: justify-content: center on a vertical flexbox</h4>
 
 <b>CSS:</b>
 
-<pre><code>
-div
-#container {
-<b>display</b>
-:
-flex
-;
-<b>flex-direction</b>
-:
-column
-;
-<b>justify-content</b>
-:
-center
-;
-}
-</code></pre>
+<pre><code>div#container {
+  <b>display</b>: flex;
+  <b>flex-direction</b>: column;
+  <b>justify-content</b>: center;
+}</code></pre>
 
-<b>Outcome:</b>
+<h4>Outcome:</h4>
 
 [image041.jpg](./images/image041.jpg)
 
-Here is a <a href="https://jsfiddle.net/d6pc5bmd/1/">demo jsFiddle</a>.
+<p>Here is a <a href="https://jsfiddle.net/d6pc5bmd/1/">demo (jsFiddle)</a>.</p>
 
-<b>align-content</b> 
-<b>:</b>
-<b>center</b>
-
-<b>Example: on a horizontal flexbox</b>
+<h4>Example: align-content: center on a horizontal flexbox</h4>
 
 <h4>CSS:</h4>
 
-<pre><code>div
-#container {
+<pre><code>div#container {
   <b>display</b>: flex;
   <b>flex-direction</b>: row;
   <b>align-items</b>: center;
 }</code></pre>
 
-<b>Outcome:</b>
+<h4>Outcome:</h4>
 
 [image042.jpg](./images/image042.jpg)
 
-Here is the <a href="https://jsfiddle.net/d6pc5bmd/2/">demo jsFiddle</a>.
+<p>Here is a <a href="https://jsfiddle.net/d6pc5bmd/2/">demo jsFiddle</a>.</p>
 
-  <b>align-content</b>                           <b>:</b>   <b>center</b>
+<b>align-content</b>                           <b>:</b>   <b>center</b>
 
-<b>Example: on a vertical flexbox</b>
+<p><b>Example: align-content: cener on a vertical flexbox</b></p>
 
 <h4>CSS:</h4>
 
-<pre><code>
-div
-#container
-{
-<b>display</b>
-:
-flex
-;
-<b>flex-direction</b>
-:
-column
-;
-<b>align-items</b>
-:
-center
-;
-}
-</code></pre>
+<pre><code>div#container {
+  <b>display</b>: flex;
+  <b>flex-direction</b>: column;
+  <b>align-items</b>: center;
+}</code></pre>
 
-<b>Outcome:</b>
+<h4>Outcome:</h4>
 
 [image043.jpg 6.97 x 6.15](./images/image043.jpg)
 
