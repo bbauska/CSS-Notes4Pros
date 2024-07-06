@@ -4706,7 +4706,7 @@ achieved with non-standard webkit-only implementation of flexboxes.</p>
   -webkit-line-clamp: N;  /* number of lines to show */
   <b>line-height</b>: X;  /* fallback */
   <b>max-height</b>: X&ast;N; /* fallback */
-}</code><pre>
+}</code></pre>
 
 <p>Example (open in Chrome or Safari):</p>
 <p><a href="http://jsfiddle.net/csYjC/1131/">jsFiddle</a>.</p>
