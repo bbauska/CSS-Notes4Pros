@@ -4267,11 +4267,11 @@ Lorem ipsoum Lorem ipsoum Lorem ipsoum Lorem ipsoum Lorem ipsoum Lorem ipsoum <b
 floats</i>, you&apos;ve to add .cf or .clearfix class on the container (<b>the 
 parent</b>) and style this class with a few rules described below.</p>
 
-<p>3 versions with slightly different effects (sources clearfix)
-<a href="http://nicolasgallagher.com/micro-clearfix-hack/">clearFix</a>
-by N. Gallagher and &lbrack;&lbrack;clearfix
-reloaded&rbrack;&rbrack;(http://yuiblog.com/blog/2010/09/27/clearfix-reloaded-overflowhidden-demystified/)
-by T. J. Koblentz):
+<p>3 versions with slightly different effects (sources: 
+<a href="http://nicolasgallagher.com/micro-clearfix-hack/">A new micro clearfix hack</a> 
+by N. Gallagher and <a href="http://yuiblog.com/blog/2010/09/27/clearfix-reloaded-overflowhidden-demystified/">
+clearfix reloaded</a> by T.J. Koblentx);</p>
+
 
 <h4>Clearfix (with top margin collapsing of contained floats still occurring)</h4>
 
@@ -4285,8 +4285,8 @@ by T. J. Koblentz):
 
 <h4>Clearfix also preventing top margin collapsing of contained floats</h4>
 
-/**
- &ast;* For modern browsers
+<pre><code>/**
+ &ast; For modern browsers
  &ast; 1. The space content is one way to avoid an Opera bug when the
  &ast; contenteditable attribute is included anywhere else in the document.
  &ast; Otherwise it causes space to appear at the top and bottom of elements
