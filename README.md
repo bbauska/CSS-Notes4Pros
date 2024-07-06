@@ -3667,22 +3667,24 @@ an element.</p>
 <b>&lt;p</b> class=&quot;p6&quot;<b>&gt;</b>A ridge outline<b>&lt;/p&gt;</b>
 <b>&lt;p</b> class=&quot;p7&quot;<b>&gt;</b> An inset outline<b>&lt;/p&gt;</b>
 <b>&lt;p</b> class=&quot;p8&quot;<b>&gt;</b> An outset outline<b>&lt;/p&gt;</b></code></pre>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 31.  (70) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~ 31. outline-style's 8 options (70) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left" width="100%">
 <img src="./images/image031.png"
   style="width:50%"
-  title=""
-  alt="." />
+  title="outline-style's 8 options"
+  alt="outline-style's; 8 options." />
 </p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ch12">Chapter 12: Overflow</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-| <b>Overflow Value</b> | <b>Details</b> |
+
+| <b>Overflow Value</b> | <b>Details</b>                           |
 |----------------------|-------------------------------------------|
 | visible | Shows all overflowing content outside the element |
 | scroll  | Hides the overflowing content and adds a scroll bar |
 | hidden  | Hides the overflowing content, both scroll bars disappear and the page becomes fixed |
-| auto    | Same as scroll if content overflows, but doesn&apos;t add scroll bar if content fits
+| auto    | Same as scroll if content overflows, but doesn&apos;t add scroll bar if content fits |
 | inherit | Inherit&apos;s the parent element&apos;s value for this property |
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -4273,40 +4275,31 @@ by T. J. Koblentz):
 
 <h4>Clearfix (with top margin collapsing of contained floats still occurring)</h4>
 
-```
-.cf: after {
+<pre><code>.cf: after {
   <b>content</b>: &quot;&quot;;
   <b>display</b>: table;
 }
 .cf: after {
   <b>clear</b>: both;
-}
-```
+}</code></pre>
 
-<p><b>Clearfix also preventing top margin collapsing of contained floats</b></p>
+<h4>Clearfix also preventing top margin collapsing of contained floats</h4>
 
-/* For modern browsers* */ 
-1. The space content is one way to avoid an Opera bug when the*
-
-*&ast; contenteditable attribute is included anywhere else in the
-document.*
-
-*&ast; Otherwise it causes space to appear at the top and bottom of
-elements*
-
-*&ast; that are clearfixed.*
-
-*&ast; 2. The use of &apos;table&apos; rather than &apos;block&apos; is only necessary if
-using*
-*&ast; &apos;:before&apos; to contain the top-margins of child elements.*
-*&ast;/*
-
-<pre><code>.cf:before,
+/**
+ &ast;* For modern browsers
+ &ast; 1. The space content is one way to avoid an Opera bug when the
+ &ast; contenteditable attribute is included anywhere else in the document.
+ &ast; Otherwise it causes space to appear at the top and bottom of elements
+ &ast; that are clearfixed.
+ &ast; 2. The use of &apos;table&apos; rather than &apos;block&apos; is only necessary if using
+ &ast; &apos;:before&apos; to contain the top-margins of child elements.
+ &ast;/
+.cf:before,
 .cf:after {
   <b>content</b>: &quot; &quot;; /* 1 */
   <b>display</b>: table; /* 2 */
 }
-.cf:after {
+# .cf:after {
   <b>clear</b>: both;
 }</code></pre>
 
