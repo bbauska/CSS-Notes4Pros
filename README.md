@@ -4272,7 +4272,6 @@ parent</b>) and style this class with a few rules described below.</p>
 by N. Gallagher and <a href="http://yuiblog.com/blog/2010/09/27/clearfix-reloaded-overflowhidden-demystified/">
 clearfix reloaded</a> by T.J. Koblentx);</p>
 
-
 <h4>Clearfix (with top margin collapsing of contained floats still occurring)</h4>
 
 <pre><code>.cf: after {
@@ -4513,7 +4512,7 @@ column is &quot;greedy,&quot; in that it takes up all the remaining space.</p>
 
 <h4>HTML:</h4>
 
-<pre><code>b>&lt;div</b> class=&quot;sidebar&quot;<b>&gt;</b>
+<pre><code><b>&lt;div</b> class=&quot;sidebar&quot;<b>&gt;</b>
 <b>&lt;h1&gt;</b>Sidebar<b>&lt;/h1&gt;</b>
 <b>&lt;img</b> src=&quot;http://lorempixel.com/150/200/&quot; <b>/&gt;</b>
 <b>&lt;/div&gt;</b>
