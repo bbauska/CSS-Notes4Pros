@@ -4285,7 +4285,7 @@ clearfix reloaded</a> by T.J. Koblentx);</p>
 
 <h4>Clearfix also preventing top margin collapsing of contained floats</h4>
 
-<pre><code>/**
+<pre><code>/&ast;*
  &ast; For modern browsers
  &ast; 1. The space content is one way to avoid an Opera bug when the
  &ast; contenteditable attribute is included anywhere else in the document.
@@ -4313,10 +4313,10 @@ clearfix reloaded</a> by T.J. Koblentx);</p>
 .cf:after {
   <b>clear</b>: both;
 }
-/**
+/*&ast;
 * For IE 6/7 only
 * Include this rule to trigger hasLayout and contain floats.
-**/
+&ast;*/
 .cf {
   &ast;zoom: 1;
 }</code></pre>
@@ -4343,12 +4343,12 @@ of their width.</p>
 
 <p>The output of the following code will be;</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 37.  (xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~ 37. this is div 1 in blue and div 2 in red (85) ~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left" width="100%">
 <img src="./images/image037.jpg"
   style="width:75%"
-  title=""
-  alt="." />
+  title="This is DIV 1 (in blue) and DIV 2 (in red)"
+  alt="This is DIV 1 (in blue) and DIV 2 (in red)." />
 </p>
 <!--[image037.jpg 7.48 x 3.61](./images/image037.jpg) -->
 
@@ -4385,12 +4385,12 @@ p {
   <b>text-align</b>: center;
 }</code></pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 38.  (xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~ 38. this is div 1 left blue and div 2 right red (86) ~~~~~~~~~~~~~~~~~~~~-->
 <p align="left" width="100%">
 <img src="./images/image038.jpg"
   style="width:75%"
-  title=""
-  alt="." />
+  title="This is DIV 1 (left blue) and DIV 2 (right red)"
+  alt="This is DIV 1 (left blue) and DIV 2 (right red)." />
 </p>
 <!-- [image038.jpg 7.48 x .97](./images/image038.jpg) -->
 
@@ -4472,14 +4472,13 @@ massa. Fusce ac turpis quis ligula lacinia aliquet. <b>&lt;/p&gt;</b>
   <b>&lt;/div&gt;</b>
   <b>&lt;div</b> class=&quot;right-sidebar&quot;<b>&gt;</b>
     <b>&lt;h1&gt;</b>Right Sidebar<b>&lt;/h1</b>
-    <b>&gt;&lt;p&gt;</b>Fusce ac turpis quis ligula lacinia aliquet.<b>&lt;/p&gt;</b>
+    <b>&lt;p&gt;</b>Fusce ac turpis quis ligula lacinia aliquet.<b>&lt;/p&gt;</b>
   <b>&lt;/div&gt;</b>
 <b>&lt;/div&gt;</b></code</pre>
 
 <h4>CSS:</h4>
 
-<pre><code>.wrapper
-{
+<pre><code>.wrapper {
   <b>width</b>: 600px;
   <b>background-color</b>: pink;
   <b>padding</b>: 20px;
@@ -4532,7 +4531,6 @@ ut ligula vel nunc egestas porttitor. Morbi lectus risus, iaculis vel, suscipit 
 massa. Fusce ac turpis quis ligula lacinia aliquet. Mauris ipsum. Nulla metus metus, ullamcorper 
 vel, tincidunt sed, euismod in, nibh. <b>&lt;/p&gt;</b>
 <b>&lt;/div&gt;</b></code></pre>
-
 
 <h4>CSS:</h4>
 .sidebar {
