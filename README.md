@@ -4185,21 +4185,18 @@ paragraph flowing around the image. Notice that it is always content
 
 <h4>HTML:</h4>
 
-<p><b>&lt;p&gt;</b>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+<pre><code><b>&lt;p&gt;</b>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed
 nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum.
 Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris
-massa. Vestibulum lacinia arcu eget nulla. <b>&lt;/p&gt;</p>
+massa. Vestibulum lacinia arcu eget nulla. <b>&lt;/p&gt;
+<b>&lt;img</b> src=<span style="color:blue">&quot;http://lorempixel.com/200/100/&quot;</span> <b>/&gt;</b>
 
-<h4><b>&lt;img</b> src=<span style="color:blue">&quot;http://lorempixel.com/200/100/&quot;</span> <b>/&gt;</b></h4>
-
-<p><b>&lt;p&gt;</b>Class aptent taciti sociosqu ad litora torquent per conubia
-nostra, per inceptos himenaeos. Curabitur sodales ligula in libero. Sed
-dignissim lacinia nunc. Curabitur tortor. Pellentesque nibh. Aenean
-quam. In scelerisque sem at dolor. Maecenas mattis. Sed convallis
-tristique sem. Proin ut ligula vel nunc egestas porttitor. Morbi lectus
-risus, iaculis vel, suscipit quis, luctus non, massa. Fusce ac turpis
-quis ligula lacinia aliquet. <b>&lt;/p&gt;</b></p>
+<b>&lt;p&gt;</b>Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. 
+Curabitur sodales ligula in libero. Sed dignissim lacinia nunc. Curabitur tortor. Pellentesque 
+nibh. Aenean quam. In scelerisque sem at dolor. Maecenas mattis. Sed convallis tristique sem. Proin 
+ut ligula vel nunc egestas porttitor. Morbi lectus risus, iaculis vel, suscipit quis, luctus non, 
+massa. Fusce ac turpis quis ligula lacinia aliquet. <b>&lt;/p&gt;</b></code></pre>
 
 <h4>CSS:</h4>
 
