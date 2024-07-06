@@ -4470,7 +4470,7 @@ massa. Fusce ac turpis quis ligula lacinia aliquet. <b>&lt;/p&gt;</b>
     <b>&lt;h1&gt;</b>Right Sidebar<b>&lt;/h1</b>
     <b>&lt;p&gt;</b>Fusce ac turpis quis ligula lacinia aliquet.<b>&lt;/p&gt;</b>
   <b>&lt;/div&gt;</b>
-<b>&lt;/div&gt;</b></code</pre>
+<b>&lt;/div&gt;</b></code></pre>
 
 <h4>CSS:</h4>
 
@@ -4634,7 +4634,7 @@ marks of the <b>&gt;</b> tag.</p>
 }</code></pre>
 
 <p>The text inside #element-one will be 30px in size, while the text in #element-two will be 10px in size.</p>
-a<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch15-4">Section 15.4: Text Direction</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre><code>div {
@@ -12798,59 +12798,20 @@ Button Hovered On
 > We can write this CSS:
 
 ```
-.button
-{
-&minus;-
-color
-:
-green
-;
-<b>padding</b>
-:
-.5
-rem
-;
-<b>border</b>
-:
-1
-px
-solid
-var
-(
-&minus;-
-color
-)
-;
-<b>color</b>
-:
-var
-(
-&minus;-
-color
-)
-;
+.button {&minus;- color: green;
+  <b>padding</b>: .5rem;
+  <b>border</b>: 1px solid var (&minus;- color);
+  <b>color</b>: var (&minus;- color);
 }
-.button
-:
-hover
-{
-&minus;-
-color
-:
-blue
-;
+.button: hover {
+  &minus;- color: blue;
 }
-.button_red
-{
-&minus;-
-color
-:
-red
-;
+.button_red {
+  &minus;- color: red;
 }
 ```
 
-> And get this result:
+<h4>And get this result:</h4>
 
 [image226.jpg](./images/image226.jpg)
 <!-- {width="3.71875in" height="0.6041666666666666in"} -->
@@ -12858,10 +12819,9 @@ red
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch37-4">Section 37.4: Valid/Invalids</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-
-> <b>Naming</b> When naming CSS variables, it contains only letters and
-> dashes just like other CSS properties (eg: lineheight,
-> -moz-box-sizing) but it should start with double dashes (&minus;-)
+<p><b>Naming</b> When naming CSS variables, it contains only letters and
+dashes just like other CSS properties (eg: lineheight,
+-moz-box-sizing) but it should start with double dashes (&minus;-)</p>
 
 //These are Invalids variable names
 
