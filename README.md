@@ -4820,9 +4820,7 @@ h4 { <b>text-decoration</b>: underline; }</code></pre>
 <p>text-decoration can be used in combination with text-decoration-style
 and text-decoration-color as a shorthand property:</p>
 
-<pre><code>.title {
-  <b>text-decoration</b>: underline dotted blue;
-}</code></pre>
+<pre><code>.title { <b>text-decoration</b>: underline dotted blue; }</code></pre>
 
 <p>This is a shorthand version of</p>
 
@@ -4863,15 +4861,11 @@ words.</p>
 
 <h4>HTML:</h4>
 
-<pre><code>
-<b>&lt;p&gt;</b>
-  <b>&lt;span</b> class=&quot;normal&quot;<b>&gt;</b>
-    This is an example, showing the effect of &quot;word-spacing&quot;.<b>&lt;/span&gt;&lt;br&gt;</b>
-  <b>&lt;span</b> class=&quot;narrow&quot;<b>&gt;</b>This is an example, showing the 
-    effect of &quot;word-spacing&quot;.<b>&lt;/span&gt;&lt;br&gt;</b> 
-  <b>&lt;span</b> class=&quot;extensive&quot;<b>&gt;</b>This is an example, showing the effect of
-    &quot;word-spacing&quot;.<b>&lt;/span&gt;&lt;br&gt;</b>
-<b>&lt;/p&gt;</b>
+<pre><code><b>&lt;p&gt;</b>
+  <b>&lt;span</b> class=&quot;normal&quot;<b>&gt;</b>This is an example, showing the effect of &quot;word-spacing&quot;.<b>&lt;/span&gt;&lt;br&gt;</b>
+  <b>&lt;span</b> class=&quot;narrow&quot;<b>&gt;</b>This is an example, showing the effect of &quot;word-spacing&quot;.<b>&lt;/span&gt;&lt;br&gt;</b> 
+  <b>&lt;span</b> class=&quot;extensive&quot;<b>&gt;</b>This is an example, showing the effect of &quot;word-spacing&quot;.<b>&lt;/span&gt;&lt;br&gt;</b>
+<b>&lt;/p&gt;</b></code></pre>
 
 <h4>Online-Demo</h4>
 
