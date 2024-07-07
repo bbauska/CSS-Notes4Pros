@@ -1750,7 +1750,7 @@ separately.
   properties. Until then, 
   <a href="http://stackoverflow.com/questions/14844407/background-position-y-doesnt-work-in-firefox-via-css/29282573#29282573">
   there is a Firefox hack within this Stack Overflow answer</a>.
-</bockquote>
+</blockquote>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch5-7">Section 5.7: The background-origin property</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -7283,9 +7283,8 @@ between all colors.</p>
 
 <pre><code><span style="color:blue">&commat;keyframes</span> rainbow-background {</code></pre>
 
-|--------:|------------------------------|
-| 0&percnt; | { <b>background-color</b>: #ff0000; } |
-| 8.333&percnt; | { <b>background-color</b>: #ff8000; } |
+| 0&percnt;      | { <b>background-color</b>: #ff0000; } |
+| 8.333&percnt;  | { <b>background-color</b>: #ff8000; } |
 | 16.667&percnt; | { <b>background-color</b>: #ffff00; } |
 | 25.000&percnt; | { <b>background-color</b>: #80ff00; } |
 | 33.333&percnt; | { <b>background-color</b>: #00ff00; } |
