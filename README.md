@@ -5291,7 +5291,7 @@ achieve this with a very simple markup:</p>
 	  mollit labore dolore voluptate ullamco et ut sed qui minim.<b>&lt;/p&gt;</b>
     <b>&lt;p&gt;&lt;button&gt;</b>Action<b>&lt;/button&gt;&lt;/p&gt;</b>
   <b>&lt;/div&gt;</b>
-  <b>&class=&quot;card&quot;<b>&gt;</b>
+  <b>&lt;div</b> class=&quot;card&quot;<b>&gt;</b>
     <b>&lt;p&gt;</b>Lorem ipsum Magna proident ex anim dolor ullamco pariatur reprehenderit culpa esse enim 
 	  mollit labore dolore voluptate ullamco et ut sed qui minim.<b>&lt;/p&gt;</b>
     <b>&lt;p&gt;</b>Lorem ipsum Magna proident ex anim dolor ullamco pariatur reprehenderit culpa esse enim 
@@ -5384,11 +5384,11 @@ See working example:</a></p>
     to make <b>&lt;br /&gt;</b>
     a height <b>&lt;br /&gt;</b>
   <b>&lt;/div&gt;</b>
-    <b>&lt;div</b> style=&quot;background-color: blue&quot;<b>&gt;</b>
-      Fewer <b>&lt;br /&gt;</b>
-      lines <b>&lt;br /&gt;</b>
-    <b>&lt;/div&gt;</b>
-  <b>&lt;/div&gt;</b></code></pre>
+  <b>&lt;div</b> style=&quot;background-color: blue&quot;<b>&gt;</b>
+    Fewer <b>&lt;br /&gt;</b>
+    lines <b>&lt;br /&gt;</b>
+  <b>&lt;/div&gt;</b>
+<b>&lt;/div&gt;</b></code></pre>
 
 <h4>CSS</h4>
 
@@ -5426,19 +5426,19 @@ styles applied by the sequence with the highest overall specificity.</p>
 
 <h4>Example 1: Specificity of various selector sequences</h4>
 
-<pre><code>#foo #baz {}    /* a=2, b=0, c=0 */
-#foo .bar {}    /* a=1, b=1, c=0 */
-#foo {}         /* a=1, b=0, c=0 */
-.bar: hover {}  /* a=0, b=2, c=0 */
-div.bar {}      /* a=0, b=1, c=1 */
-:hover {}       /* a=0, b=1, c=0 */
-&lbrack;title&rbrack; {} /* a=0, b=1, c=0 */
-.bar {}                  /* a=0, b=1, c=0 */
-div ul &plus; li {}      /* a=0, b=0, c=3 */
-p::after {}              /* a=0, b=0, c=2 */
-&ast;::before {}         /* a=0, b=0, c=1 */
-::before {}              /* a=0, b=0, c=1 */
-div {}                   /* a=0, b=0, c=1 */
+<pre><code>#foo #baz {}             /* a=2, b=0, c=0 */<br/>
+#foo .bar {}             /* a=1, b=1, c=0 */<br/>
+#foo {}                  /* a=1, b=0, c=0 */<br/>
+.bar: hover {}           /* a=0, b=2, c=0 */<br/>
+div.bar {}               /* a=0, b=1, c=1 */<br/>
+:hover {}                /* a=0, b=1, c=0 */<br/>
+&lbrack;title&rbrack; {} /* a=0, b=1, c=0 */<br/>
+.bar {}                  /* a=0, b=1, c=0 */<br/>
+div ul &plus; li {}      /* a=0, b=0, c=3 */<br/>
+p::after {}              /* a=0, b=0, c=2 */<br/>
+&ast;::before {}         /* a=0, b=0, c=1 */<br/>
+::before {}              /* a=0, b=0, c=1 */<br/>
+div {}                   /* a=0, b=0, c=1 */<br/>
 &ast; {}                 /* a=0, b=0, c=0 */</code></pre>
 
 <h4>Example 2: How specificity is used by the browser</h4>
@@ -5461,12 +5461,8 @@ class selector which declares color as <i>red</i> and background as
 both declarations. ID selectors have a Group <i>A</i> specificity and class
 selectors have a Group <i>B</i> specificity. An ID selector outweighs any
 number of class selectors. Because of this, color: blue; from the #foo selector 
-will be
-
-applied to the element. The higher specificity of the ID selector will
-cause the browser to ignore the .bar selector&apos;s color declaration.
-
-<b>color</b>   :   blue   ; from the #foo selector and the      <b>background</b>   :   black
+will be applied to the element. The higher specificity of the ID selector will
+cause the browser to ignore the .bar selector&apos;s color declaration.</p>
 
 <h4>Now imagine a different CSS implementation:</h4>
 
@@ -5511,7 +5507,7 @@ which is shared between any element which uses the .bar class. Because
 of this, CSS allows us to duplicate selectors to increase specificity.
 Instead of just .bar, we can use instead (See 
 <a href="https://www.w3.org/TR/css3-selectors/#grammar">The grammar of
-Selectors, W3C Recommendation). This still selects any element with a 
+Selectors, W3C Recommendation</a>). This still selects any element with a 
 class of .bar, but now has double the Group <i>B</i> specificity:</p>
 
 <pre><code>.bar.bar {}  /* a=0, b=2, c=0 */
@@ -5649,13 +5645,13 @@ specificity &quot;wins&quot;.</p>
 
 <h4>Example 2 - Cascade rules with identical selectors</h4>
 
-<i>External css file</i>
+<h4><i>External css file</i></h4>
 
 <pre><code>.class {
   <b>background</b>: #FFF;
 }</code></pre>
 
-<i>Internal css (in HTML file)</i>
+<h4><i>Internal css (in HTML file)</i></h4>
 
 <pre><code><b>&lt;style&gt;</b>
 .class {
@@ -5726,9 +5722,9 @@ body.mystyle &gt; div.myotherstyle {
 
 <p>What borders, colors, and font-sizes will the text be? font-size:</p>
 
-<h4>font-size>
+<h4>font-size</h4>
 <blockquote>
-  <b>font-size</b>: 24;, since #elmnt1 rule set has the highest specificity <b>&lt;div</b>
+  <b>font-size</b>: 24; Since #elmnt1 rule set has the highest specificity <b>&lt;div</b>
     in question, every property here is set.
 </blockquote>
 
@@ -5780,7 +5776,7 @@ following example due to the second rule overriding the first:</p>
   <b>color</b>: blue;
   <b>border</b>: 3px solid currentColor;
   <b>color</b>: green;
-</code></pre>
+}</code></pre>
 
 <h4>Inherited from parent element</h4>
 
@@ -5794,10 +5790,9 @@ following example due to the second rule overriding the first:</p>
   <b>border-color</b>: currentColor;
 }</code></pre>
 
-<p>currentColor can also be used by other rules which normally would not
-inherit from the color property, such as background-color. The example
-below shows the children using the color set in the parent as its
-background:</p>
+<p>currentColor can also be used by other rules which normally would not inherit 
+from the color property, such as background-color. The example below shows the 
+children using the color set in the parent as its background:</p>
 
 <pre><code>.parent-class {
   <b>color</b>: blue;
@@ -5809,7 +5804,7 @@ background:</p>
 <h4>Possible Result:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~ 49. parent element, child element * 2 (116) ~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p align="center" width="100%">
+<p align="left" width="100%">
 <img src="./images/image049.png"
   style="width:50%"
   title="parent element, child element rectangle * 2"
