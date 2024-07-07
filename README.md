@@ -6143,7 +6143,7 @@ hsla(240, 100%, 50%, 1) /* fully opaque blue */</code></pre>
 |                | green, 180° is cyan, 240° is blue, 300° is magenta, and 360° is red. |
 | <b>&lt;saturation&gt;</b> | percentage where 0% is fully desaturated (grayscale) and 100% is fully saturated (vividly colored) |
 | <b>&lt;lightness&gt;</b> | percentage where 0% is fully black and 100% is fully white. |
-} <b>&lt;alpha&gt;</b> | a number from 0 - 1 where 0 is fully transparent and 1 is fully opaque. |
+| <b>&lt;alpha&gt;</b> | a number from 0 - 1 where 0 is fully transparent and 1 is fully opaque. |
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ch19">Chapter 19: Opacity</h2>
@@ -6263,11 +6263,9 @@ input&lbrack;type=text&rbrack; {
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>CSS3 introduces a few new units, including the 
 <a href="https://www.w3.org/TR/css-values/#font-relative-lengths">rem</a> unit, 
-which stands for &quot;root em&quot;. Let&apos;s look at how rem works.
+which stands for &quot;root em&quot;. Let&apos;s look at how rem works.</p>
 
 <p>First, let&apos;s look at the differences between em and rem.</p>
-
-<b>&lt;html</b>
 
 <ul>
   <li><b>em</b>: Relative to the font size of the parent. This causes the 
@@ -6404,6 +6402,7 @@ the viewport.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ch21">Chapter 21: Pseudo-Elements</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+
 | <b>pseudo-element</b> |  <b>Description</b> |
 |-----------------------|---------------------|
 | ::after | Insert content after the content of an element. |
@@ -6451,6 +6450,15 @@ div::before {
   <b>color</b>: green;
   <b>border</b>: 1px solid green;
 }</code></pre>
+
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~ section 21-1. before, div element, after (131) ~~~~~~~~~~~~~~~~~~~~~~~-->
+<p align="left" width="100%">
+<img src="./images/section21-1.png"
+  style="width:15%"
+  title="Section 21-1. Before div element, after"
+  alt="Section 21-1. Before div element, after." />
+</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch21-2">Section 21.2: Pseudo-Elements in Lists</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -6484,12 +6492,12 @@ gradient boxes for bullets.</p>
 
 <h4>Result</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 193.  (xxx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~ 193. red/blue linear-gradient background (132) ~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left" width="100%">
 <img src="./images/image193.jpg"
   style="width:25%"
-  title="Test I, Test II"
-  alt="Test I, Test II." />
+  title="Example; linear-gradient; Test I, Test II"
+  alt="Example; linear-gradient; Test I, Test II." />
 </p>
 <!-- (./images/image193.jpg){width="2.4479166666666665in" height="1.3125in"} -->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -6526,13 +6534,9 @@ under that.
 
 <h4>HTML:</h4>
 
-<pre><code><b>&lt;div</b> id=&quot;div1&quot;<b>&gt;</b>
-<b>&lt;/div&gt;</b>
-<b>&lt;div</b> id=&quot;div2&quot;<b>&gt;</b>
-<b>&lt;/div&gt;</b>
-<b>&lt;div</b> id=&quot;div3&quot;<b>&gt;</b>
-<b>&lt;/div&gt;</b>
-</code></pre>
+<pre><code><b>&lt;div</b> id=&quot;div1&quot;<b>&gt;</b><b>&lt;/div&gt;</b>
+<b>&lt;div</b> id=&quot;div2&quot;<b>&gt;</b><b>&lt;/div&gt;</b>
+<b>&lt;div</b> id=&quot;div3&quot;<b>&gt;</b><b>&lt;/div&gt;</b></code></pre>
 
 <h4>CSS</h4>
 
@@ -6575,46 +6579,39 @@ div #div3 {
 
 <b>Syntax</b>
 
-<pre><code><b>z-index</b>: &lbrack;number&rbrack;&vert;auto;</code></pre>
+<pre><code><b>z-index</b>: &lbrack; number &rbrack; &vert; auto;</code></pre>
 
-<b>Parameter Details</b>
+| <b>Parameter</b> | <b>Details</b> |
+|--------------|---------------------------------------------|
+| number       | An integer value. A higher number is higher on the z-index stack. 0 is the default value. Negative |
+|              | values are allowed. |
+} auto         | Gives the element the same stacking context as its parent. (<b>Default</b>) |
 
-<p>An integer value. A higher number is higher on the z-index stack. 0 is
-the default value. Negative number values are allowed.
-auto Gives the element the same stacking context as its parent.
-(<b>Default</b>)
+<h4><b>Remarks</b></h4>
 
-<b>Remarks</b>
-
-All elements are laid out in a 3D axis in CSS, including a depth axis,
+<p>All elements are laid out in a 3D axis in CSS, including a depth axis,
 measured by the z-index property. z-index only works on positioned
-elements: (see: &lbrack;&lbrack;Why does z-index need a defined position to
-work?&rbrack;&rbrack;(https://www.sitepoint.com/community/t/why-does-z-index-need-a-defined-position-to-work/46115)).
-The only value where it is ignored is the default value, static.
+elements: (see: <a href="https://www.sitepoint.com/community/t/why-does-z-index-need-a-defined-position-to-work/46115">
+Why does z-index need a defined position to work?</a>). The only value where it is 
+ignored is the default value, static.</p>
 
-Read about the z-index property and Stacking Contexts in the &lbrack;&lbrack;CSS
-Specification&rbrack;&rbrack;(https://drafts.csswg.org/css-position/#layered-presentation)
-on layered presentation and at the &lbrack;&lbrack;Mozilla Developer
-Network&rbrack;&rbrack;(https://developer.mozilla.org/en-US/docs/Web/CSS/z-index).
-
+<p>Read about the z-index property and Stacking Contexts in the 
+<a href="https://drafts.csswg.org/css-position/#layered-presentation">CSS Specification</a> 
+on layered presentation and at the <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/z-index">
+Mozilla Developer Network</a>.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch22-2">Section 22.2: Absolute Position</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-
-When absolute positioning is used the box of the desired element is
-taken out of the *Normal Flow* and it no longer affects the position
-of the other elements on the page. Offset properties:
+<p>When absolute positioning is used the box of the desired element is taken out 
+of the <i>Normal Flow<i> and it no longer affects the position of the other elements 
+on the page. Offset properties:</p>
 
 1.  top
-
 2.  left
-
 3.  right
-
 4.  bottom
 
-specify the element should appear in relation to its next non-static
-containing element.
+<p>specify the element should appear in relation to its next non-static containing element.</p>
 
 <pre><code>.abspos {
   <b>position</b>: absolute;
@@ -6622,19 +6619,15 @@ containing element.
   <b>left</b>: 500px;
 }</code></pre>
 
-class=&quot;abspos&quot;
-
-> This code will move the box containing element with attribute down 0px
-> and right 500px relative to its containing element.
-
+<p>This code will move the box containing element with attribute down 0px
+and right 500px relative to its containing element.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch22-3">Section 22.3: Fixed position</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-
-> Defining position as fixed we can remove an element from the document
-> flow and set its position relatively to the browser window. One
-> obvious use is when we want something to be visible when we scroll to
-> the bottom of a long page.
+<p>Defining position as fixed we can remove an element from the document
+flow and set its position relatively to the browser window. One
+obvious use is when we want something to be visible when we scroll to
+the bottom of a long page.</p>
 
 <pre><code>
 #stickyDiv {
@@ -6645,20 +6638,15 @@ class=&quot;abspos&quot;
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch22-4">Section 22.4: Relative Position</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-
-> Relative positioning moves the element in relation to where it would
-> have been in *normal flow* .Offset properties:
+<p>Relative positioning moves the element in relation to where it would have been 
+in <i>normal flow</i> .Offset properties:</p>
 
 1.  top
-
 2.  left
-
 3.  right
-
 4.  bottom
 
-> are used to indicate how far to move the element from where it would
-> have been in normal flow.
+<p>are used to indicate how far to move the element from where it would have been in normal flow.</p>
 
 <pre><code>.relpos {
   <b>position</b>: relative;
@@ -6666,20 +6654,19 @@ class=&quot;abspos&quot;
   <b>left</b>: 30px;
 }</code></pre>
 
-<p>This code will move the box containing element with attribute
-class=&quot;relpos&quot; 20px down and 30px to the right from where it would
-have been in normal flow.</p>
+<p>This code will move the box containing element with attribute class=&quot;relpos&quot; 
+20px down and 30px to the right from where it would have been in normal flow.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch22-5">Section 22.5: Static positioning</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p>The default position of an element is static. To quote 
+<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/position#values">
+MDN</a>:</p>
 
-The default position of an element is static. To quote
-&lbrack;&lbrack;MDN&rbrack;&rbrack;(https://developer.mozilla.org/en-US/docs/Web/CSS/position#values):
-
-This keyword lets the element use the normal behavior, that is it is
-laid out in its current position in the
-
-flow. The top, right, bottom, left and z-index properties do not apply.
+<blockquote>
+  This keyword lets the element use the normal behavior, that is it is laid out in its current position in the 
+  flow. The top, right, bottom, left and z-index properties do not apply.
+<blockquote>
 
 <pre><code>.element {
   <b>position</b>: static;
@@ -6687,89 +6674,55 @@ flow. The top, right, bottom, left and z-index properties do not apply.
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ch23">Chapter 23: Layout Control</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<b>Value Effect</b>
 
-none Hide the element and prevent it from occupying space.
+|<b>Value</b> | <b>Effect</b> |
+|------------:|------------------------------------------|
+| none | Hide the element and prevent it from occupying space. |
+| block | Block element, occupy 100% of the available width, break after element. |
+| inline | Inline element, occupy no width, no break after element. |
+| inline-block | Taking special properties from both inline and block elements, no break, but can have width. |
+| inline-flex | Displays an element as an inline-level flex container. |
+| inline-table | The element is displayed as an inline-level table. |
+| grid | Behaves like a block element and lays out its content according to the grid model. |
+| flex | Behaves like a block element and lays out its content according to the flexbox model. |
+| inherit | Inherit the value from the parent element. |
+| initial | Reset the value to the default value taken from behaviors described in the HTML specifications or |
+|         | from the browser/user default stylesheet. |
+| table | Behaves like the HTML table element. |
+| table-cell | Let the element behave like a <b>&lt;td&gt;</b> element. |
+| table-column | Let the element behave like a <b>&lt;col&gt;</b> element. |
+| table-row | Let the element behave like a <b>&lt;tr&gt;</b> element. |
+| list-item | Let the element behave like a <b>&lt;li&gt;</b> element. |
 
-block Block element, occupy 100% of the available width, break after
-element.
-
-inline Inline element, occupy no width, no break after element.
-
-inline-block Taking special properties from both inline and block
-elements, no break, but can have width. inline-flex Displays an
-element as an inline-level flex container.
-
-inline-table The element is displayed as an inline-level table. grid
-Behaves like a block element and lays out its content according to the
-grid model.
-
-flex Behaves like a block element and lays out its content according
-to the flexbox model.
-
-inherit Inherit the value from the parent element.
-
-Reset the value to the default value taken from behaviors described in
-the HTML specifications or initial from the browser/user default
-stylesheet.
-
-table Behaves like the HTML table element.
-
-  <b>&lt;td</b>
-
-table-cell Let the element behave like a <b>&gt;</b> element
-
-  <b>&lt;col</b>
-
-  <b>&lt;tr</b>
-
-  <b>&lt;li</b>
-
-
-table-column Let the element behave like a <b>&gt;</b> element table-row
-Let the element behave like a <b>&gt;</b> element list-item Let the element
-behave like a <b>&gt;</b> element.
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch23-1">Section 23.1: The display property</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-The display CSS property is fundamental for controlling the layout and
-flow of an HTML document. Most elements have a default display value
-of either block or inline (though some elements have other default
-values).
+<p>The display CSS property is fundamental for controlling the layout and flow of 
+an HTML document. Most elements have a default display value of either block or 
+inline (though some elements have other default values).</p>
 
-<b>Inline</b>
+<h4>Inline</h4>
 
-An inline element occupies only as much width as necessary. It stacks
+<p>An inline element occupies only as much width as necessary. It stacks
 horizontally with other elements of the same type and may not contain
-other non-inline elements.
+other non-inline elements.</p>
 
-<b>&lt;</b><b>span</b><b>&gt;</b>
-This is some
-<b>&lt;</b><b>b</b><b>&gt;</b>
-bolded
-<b>&lt;</b><b>/b</b><b>&gt;</b>
-text!
-<b>&lt;</b><b>/span</b><b>&gt;</b>
+<b>&lt;</b><b>span</b><b>&gt;</b>This is some <b>&lt;</b><b>b</b><b>&gt;</b>bolded<b>&lt;</b><b>/b</b><b>&gt;</b> text!<b>&lt;</b><b>/span</b><b>&gt;</b>
 
-<b>&lt;span</b>                   <b>&gt;</b> and                     <b>&lt;b</b>
+<Image 298? This is some bolded text!>
 
-As demonstrated above, two inline elements, <b>&gt;</b>, are in-line (hence
-the name) and do not break the flow of the text.
+<p>As demonstrated above, two inline elements, <b>&gt;</b>, are in-line (hence
+the name) and do not break the flow of the text.</p>
 
-<b>Block</b>
+<h4>Block</h4>
 
-A block element occupies the maximum available width of its&apos; parent
+<p>A block element occupies the maximum available width of its&apos; parent
 element. It starts with a new line and, in contrast to inline
-elements, it does not restrict the type of elements it may contain.
+elements, it does not restrict the type of elements it may contain.</p>
 
-<pre><code>
-<b>&lt;</b><b>div</b><b>&gt;</b>
-Hello world!
-<b>&lt;</b><b>/div</b><b>&gt;</b>
-<b>&lt;</b><b>div</b><b>&gt;</b>
-This is an example!
-<b>&lt;</b><b>/div</b><b>&gt;</b>
-</code></pre>
+<pre><code><b>&lt;</b><b>div</b><b>&gt;</b>Hello world!<b>&lt;</b><b>/div</b><b>&gt;</b><b>&lt;</b><b>div</b><b>&gt;</b>This is an example!<b>&lt;</b><b>/div</b><b>&gt;</b></code></pre>
+<image Hello world!
+This is an example>
 
 <p>The div element is block-level by default, and as shown above, the two
 block elements are vertically stacked and, unlike the inline elements,
