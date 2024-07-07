@@ -7281,8 +7281,8 @@ keyframe, to define more complex animations.
 <p>In this example, we&apos;ll make a basic background animation that cycles
 between all colors.</p>
 
-<pre><code>
-<span style="color:blue">&commat;keyframes</span> rainbow-background {
+<pre><code><span style="color:blue">&commat;keyframes</span> rainbow-background {</code></pre>
+
 |--------:|------------------------------|
 | 0&percnt; | { <b>background-color</b>: #ff0000; } |
 | 8.333&percnt; | { <b>background-color</b>: #ff8000; } |
@@ -7298,7 +7298,8 @@ between all colors.</p>
 | 91.667&percnt; | { <b>background-color</b>: #ff0080; } |
 | 100.00&percnt; | { <b>background-color</b>: #ff0000; } |
 }
-.RainbowBackground {
+
+<pre><code>.RainbowBackground {
   <b>animation</b>: rainbow-background 5s infinite;
 }</code></pre>
 
