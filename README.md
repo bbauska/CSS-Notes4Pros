@@ -5820,7 +5820,7 @@ example, to set the color of an element to blue, use the blue keyword:</p>
 <p>CSS keywords are not case sensitive---blue, Blue and BLUE will all
 result in #0000FF.</p>
 
-| <b>Color Keywords</b> | <b>Color name | Hex value RGB values Color</b> |
+<h4><b>Color Keywords</b></h4>
 
 | <b>Color name</b>|<b>Hex value</b> | <b>RGB values</b>
 |------------------|---------------|-------------------------|
@@ -5847,51 +5847,51 @@ result in #0000FF.</p>
 | Cyan             | #00FFFF | rgb(0,255,255) |
 | DarkBlue         | #00008B | rgb(0,0,139) |
 | DarkCyan         | #008B8B | rgb(0,139,139)  |
-| DarkGoldenRod    | #B8860B | rgb(184,134,11)                   |
-| DarkGray         | #A9A9A9 | rgb(169,169,169)                  |
-| DarkGrey         | #A9A9A9 | rgb(169,169,169)                  |
-| DarkGreen        | #006400 | rgb(0,100,0)                      |
-| DarkKhaki        | #BDB76B | rgb(189,183,107)                  |
-| DarkMagenta       | #8B008B |           rgb(139,0,139) |
-| DarkOliveGreen |                  | #556B2F |           rgb(85,107,47) |
-| DarkOrange  |                     | #FF8C00 |           rgb(255,140,0) |
-| DarkOrchid   |                    | #9932CC |           rgb(153,50,204) |
-| DarkRed     |                     | #8B0000 |           rgb(139,0,0)   |
-| DarkSalmon                        | #E9967A  |          rgb(233,150,122) |
-| DarkSeaGreen                      | #8FBC8F  |          rgb(143,188,143) |
-| DarkSlateBlue                     | #483D8B  |          rgb(72,61,139) |
-| DarkSlateGray                     | #2F4F4F  |          rgb(47,79,79)  |
-| DarkSlateGrey                     | #2F4F4F  |          rgb(47,79,79)  |
-| DarkTurquoise                     | #00CED1  |          rgb(0,206,209) |
-| DarkViolet                        | #9400D3  |          rgb(148,0,211) |
-| DeepPink                          | #FF1493 | rgb(255,20,147)           |
-| DeepSkyBlue                       | #00BFFF | rgb(0,191,255)            |
-| DimGray                           | #696969 | rgb(105,105,105)          |
-| DimGrey                           | #696969 | rgb(105,105,105)          |
-| DodgerBlue                        | #1E90FF | rgb(30,144,255)           |
-| FireBrick                         | #B22222 | rgb(178,34,34)            |
-| FloralWhite                       | #FFFAF0 | rgb(255,250,240)          |
-| ForestGreen  |              #228B22 | rgb(34,139,34)            |
-| Fuchsia     |  #FF00FF | rgb(255,0,255)            |
+| DarkGoldenRod    | #B8860B | rgb(184,134,11)   |
+| DarkGray         | #A9A9A9 | rgb(169,169,169)  |
+| DarkGrey         | #A9A9A9 | rgb(169,169,169)  |
+| DarkGreen        | #006400 | rgb(0,100,0)      |
+| DarkKhaki        | #BDB76B | rgb(189,183,107)  |
+| DarkMagenta      | #8B008B |   rgb(139,0,139) |
+| DarkOliveGreen   | #556B2F |   rgb(85,107,47) |
+| DarkOrange       | #FF8C00 |   rgb(255,140,0) |
+| DarkOrchid       | #9932CC |   rgb(153,50,204) |
+| DarkRed          | #8B0000 |   rgb(139,0,0)   |
+| DarkSalmon        | #E9967A  |  rgb(233,150,122) |
+| DarkSeaGreen      | #8FBC8F  |  rgb(143,188,143) |
+| DarkSlateBlue     | #483D8B  |  rgb(72,61,139) |
+| DarkSlateGray     | #2F4F4F  |  rgb(47,79,79)  |
+| DarkSlateGrey     | #2F4F4F  |  rgb(47,79,79)  |
+| DarkTurquoise     | #00CED1  |  rgb(0,206,209) |
+| DarkViolet        | #9400D3  |  rgb(148,0,211) |
+| DeepPink          | #FF1493 | rgb(255,20,147)   |
+| DeepSkyBlue       | #00BFFF | rgb(0,191,255)    |
+| DimGray           | #696969 | rgb(105,105,105)  |
+| DimGrey           | #696969 | rgb(105,105,105)  |
+| DodgerBlue        | #1E90FF | rgb(30,144,255)   |
+| FireBrick         | #B22222 | rgb(178,34,34)    |
+| FloralWhite       | #FFFAF0 | rgb(255,250,240)  |
+| ForestGreen  |      #228B22 | rgb(34,139,34)            |
+| Fuchsia     | #FF00FF | rgb(255,0,255)            |
 | Gainsboro    | #DCDCDC | rgb(220,220,220) |
-| GhostWhite |             #F8F8FF | rgb(248,248,255)          |
-| Gold       |            #FFD700 | rgb(255,215,0)            |
-| GoldenRod  |           #DAA520 | rgb(218,165,32)           |
-| Gray           |          #808080 | rgb(128,128,128)          |
-| Grey                   |    #808080 | rgb(128,128,128)          |
-| Green                  |    #008000 | rgb(0,128,0)              |
-| GreenYellow            |    #ADFF2F  | rgb(173,255,47)           |
-| HoneyDew              |    #F0FFF0  | rgb(240,255,240)          |
-| HotPink               |    #FF69B4  | rgb(255,105,180)          |
-| IndianRed             |    #CD5C5C  | rgb(205,92,92)            |
-| Indigo                |    #4B0082  | rgb(75,0,130)             |
-| Ivory                 |    #FFFFF0  | rgb(255,255,240)          |
-| Khaki                 |    #F0E68C  | rgb(240,230,140)          |
-| Lavender              |    #E6E6FA  | rgb(230,230,250)          |
-| LavenderBlush         |    #FFF0F5  | rgb(255,240,245)          |
-| LawnGreen             |    #7CFC00  | rgb(124,252,0)            |
-| LemonChiffon          |    #FFFACD | rgb(255,250,205)       |
-| LightBlue             |    #ADD8E6 | rgb(173,216,230)       |
+| GhostWhite | #F8F8FF | rgb(248,248,255)          |
+| Gold       | #FFD700 | rgb(255,215,0)            |
+| GoldenRod  | #DAA520 | rgb(218,165,32)           |
+| Gray           | #808080 | rgb(128,128,128)          |
+| Grey                   | #808080 | rgb(128,128,128)          |
+| Green                  | #008000 | rgb(0,128,0)              |
+| GreenYellow            | #ADFF2F  | rgb(173,255,47)           |
+| HoneyDew              | #F0FFF0  | rgb(240,255,240)          |
+| HotPink               | #FF69B4  | rgb(255,105,180)          |
+| IndianRed             | #CD5C5C  | rgb(205,92,92)            |
+| Indigo                | #4B0082  | rgb(75,0,130)             |
+| Ivory                 | #FFFFF0  | rgb(255,255,240)          |
+| Khaki                 | #F0E68C  | rgb(240,230,140)          |
+| Lavender              | #E6E6FA  | rgb(230,230,250)          |
+| LavenderBlush         | #FFF0F5  | rgb(255,240,245)          |
+| LawnGreen             | #7CFC00  | rgb(124,252,0)            |
+| LemonChiffon          | #FFFACD | rgb(255,250,205)       |
+| LightBlue             | #ADD8E6 | rgb(173,216,230)       |
 | LightCoral            | #F08080 | rgb(240,128,128)         |
 | LightCyan             | #E0FFFF | rgb(224,255,255)         |
 | LightGoldenRodYellow  | #FAFAD2 | rgb(250,250,210) |
@@ -5920,58 +5920,58 @@ result in #0000FF.</p>
 | MediumSpringGreen        | #00FA9A  | rgb(0,250,154)        |
 | MediumTurquoise          | #48D1CC  | rgb(72,209,204)       |
 | MediumVioletRed          | #C71585  | rgb(199,21,133)       |
-| MidnightBlue             | #191970             | rgb(25,25,112) |
-| MintCream                | #F5FFFA             | rgb(245,255,250) |
-| MistyRose                         | #FFE4E1             | rgb(255,228,225) |
-| Moccasin                          | #FFE4B5             | rgb(255,228,181) |
-| NavajoWhite                       | #FFDEAD             | rgb(255,222,173) |
-|   Navy                              | #000080             | rgb(0,0,128)   |
-| OldLace                           | #FDF5E6             | rgb(253,245,230) |
-|   Olive                             | #808000             | rgb(128,128,0) |
-|  OliveDrab      | #6B8E23           | rgb(107,142,35) |
-|   Orange        | #FFA500             | rgb(255,165,0) |
-|   OrangeRed     | #FF4500             | rgb(255,69,0)  |
-|   Orchid        |  #DA70D6   | rgb(218,112,214)  |
-|   PaleGoldenRod |  #EEE8AA  | rgb(238,232,170)                  |
-|   PaleGreen     |  #98FB98  | rgb(152,251,152)                  |
-|   PaleTurquoise | #AFEEEE   | rgb(175,238,238)                  |
-|   PaleVioletRed | #DB7093   | rgb(219,112,147)                  |
-|   PapayaWhip    | #FFEFD5   | rgb(255,239,213)                  |
-|   PeachPuff     | #FFDAB9   | rgb(255,218,185)                  |
-|   Peru          | #CD853F   | rgb(205,133,63)                   |
-|   Pink          | #FFC0CB   | rgb(255,192,203)                  |
-|   Plum          | #DDA0DD   | rgb(221,160,221)                  |
-|   PowderBlue    | #B0E0E6 | rgb(176,224,230) |
-|   Purple        | #800080 | rgb(128,0,128)   |
-|   RebeccaPurple | #663399 | rgb(102,51,153)  |
-|   Red           | #FF0000 | rgb(255,0,0)     |
-|   RosyBrown     | #BC8F8F | rgb(188,143,143) |
-|   RoyalBlue     | #4169E1 | rgb(65,105,225)  |
-|   SaddleBrown   | #8B4513 | rgb(139,69,19)   |
-Salmon        | #FA8072  | rgb(250,128,114) |
-SandyBrown | #F4A460 | rgb(244,164,96) |
-SeaGreen        | #2E8B57  | rgb(46,139,87) |
-SeaShell        | #FFF5EE  | rgb(255,245,238) |
-Sienna        | #A0522D  | rgb(160,82,45) |
-Silver        | #C0C0C0  | rgb(192,192,192) |
-SkyBlue        | #87CEEB  | rgb(135,206,235) |
-SlateBlue        | #6A5ACD  | rgb(106,90,205) |
-SlateGray        | #708090  | rgb(112,128,144) |
-SlateGrey        | #708090  | rgb(112,128,144) |
-Snow        | #FFFAFA  | rgb(255,250,250) |
-SpringGreen        | #00FF7F  | rgb(0,255,127) |
-SteelBlue        | #4682B4  | rgb(70,130,180) |
-Tan        | #D2B48C  | rgb(210,180,140) |
-Teal        | #008080  | rgb(0,128,128) |
-Thistle        | #D8BFD8  | rgb(216,191,216) |
-Tomato        | #FF6347  | rgb(255,99,71) |
-Turquoise        | #40E0D0  | rgb(64,224,208) |
-Violet        | #EE82EE  | rgb(238,130,238) |
-Wheat        | #F5DEB3  | rgb(245,222,179) |
-White       | #FFFFFF  | rgb(255,255,255) |
-WhiteSmoke  | #F5F5F5  | rgb(245,245,245) |
-Yellow      | #FFFF00 | rgb(255,255,0) |
-YellowGreen | #9ACD32 | rgb(154,205,50) |
+| MidnightBlue             | #191970  | rgb(25,25,112) |
+| MintCream                | #F5FFFA  | rgb(245,255,250) |
+| MistyRose         | #FFE4E1     | rgb(255,228,225) |
+| Moccasin          | #FFE4B5     | rgb(255,228,181) |
+| NavajoWhite       | #FFDEAD     | rgb(255,222,173) |
+| Navy            | #000080     | rgb(0,0,128)   |
+| OldLace           | #FDF5E6     | rgb(253,245,230) |
+| Olive           | #808000     | rgb(128,128,0) |
+| OliveDrab      | #6B8E23   | rgb(107,142,35) |
+| Orange        | #FFA500     | rgb(255,165,0) |
+| OrangeRed     | #FF4500     | rgb(255,69,0)  |
+| Orchid        |  #DA70D6   | rgb(218,112,214)  |
+| PaleGoldenRod |  #EEE8AA  | rgb(238,232,170)  |
+| PaleGreen     |  #98FB98  | rgb(152,251,152)  |
+| PaleTurquoise | #AFEEEE   | rgb(175,238,238)  |
+| PaleVioletRed | #DB7093   | rgb(219,112,147)  |
+| PapayaWhip    | #FFEFD5   | rgb(255,239,213)  |
+| PeachPuff     | #FFDAB9   | rgb(255,218,185) |
+| Peru          | #CD853F   | rgb(205,133,63)   |
+| Pink          | #FFC0CB   | rgb(255,192,203)  |
+| Plum          | #DDA0DD   | rgb(221,160,221)  |
+| PowderBlue    | #B0E0E6 | rgb(176,224,230) |
+| Purple        | #800080 | rgb(128,0,128)   |
+| RebeccaPurple | #663399 | rgb(102,51,153)  |
+| Red           | #FF0000 | rgb(255,0,0)     |
+| RosyBrown     | #BC8F8F | rgb(188,143,143) |
+| RoyalBlue     | #4169E1 | rgb(65,105,225)  |
+| SaddleBrown   | #8B4513 | rgb(139,69,19)   |
+| Salmon        | #FA8072  | rgb(250,128,114) |
+| SandyBrown | #F4A460 | rgb(244,164,96) |
+| SeaGreen        | #2E8B57  | rgb(46,139,87) |
+| SeaShell        | #FFF5EE  | rgb(255,245,238) |
+| Sienna        | #A0522D  | rgb(160,82,45) |
+| Silver        | #C0C0C0  | rgb(192,192,192) |
+| SkyBlue        | #87CEEB  | rgb(135,206,235) |
+| SlateBlue        | #6A5ACD  | rgb(106,90,205) |
+| SlateGray        | #708090  | rgb(112,128,144) |
+| SlateGrey        | #708090  | rgb(112,128,144) |
+| Snow        | #FFFAFA  | rgb(255,250,250) |
+| SpringGreen        | #00FF7F  | rgb(0,255,127) |
+| SteelBlue        | #4682B4  | rgb(70,130,180) |
+| Tan        | #D2B48C  | rgb(210,180,140) |
+| Teal        | #008080  | rgb(0,128,128) |
+| Thistle        | #D8BFD8  | rgb(216,191,216) |
+| Tomato        | #FF6347  | rgb(255,99,71) |
+| Turquoise        | #40E0D0  | rgb(64,224,208) |
+| Violet        | #EE82EE  | rgb(238,130,238) |
+| Wheat        | #F5DEB3  | rgb(245,222,179) |
+| White       | #FFFFFF  | rgb(255,255,255) |
+| WhiteSmoke  | #F5F5F5  | rgb(245,245,245) |
+| Yellow      | #FFFF00 | rgb(255,255,0) |
+| YellowGreen | #9ACD32 | rgb(154,205,50) |
 
 <p>In addition to the named colors, there is also the keyword
 transparent, which represents a fully-transparent black: rgba(0,0,0,0).</p>
@@ -6004,13 +6004,11 @@ is 256 &Hat; 3 or 16,777,216.</p>
 | gg           | 00-FF for the amount of green. |
 | bb           | 00-FF for the amount of blue. |
 
-
 <pre><code>.some-class {
   /* This is equivalent to using the color keyword &apos;blue&apos; */
   <b>color</b>: #0000FF;
 }
-.also-blue
-{
+.also-blue {
   /* If you want to specify each range value with a single number, you can!
      This is equivalent to &apos;#0000FF&apos; (and &apos;blue&apos;) */
   <b>color</b>: #00F;
@@ -6055,8 +6053,8 @@ number ranges from 00-FF which is equivalent to 0-255 in decimal and
 |<b>Value</b> | <b>Description</b> |
 |-------------|--------------------|
 | <b>&lt;red&gt;</b> | an integer from 0 - 255 or percentage from 0 - 100%. |
-| <b>&lt;green</b>   | an integer from 0 - 255 or percentage from 0 - 100%. |
-| <b>&lt;blue</b>    | an integer from 0 - 255 or percentage from 0 - 100%. |
+| <b>&lt;green&gt;</b>   | an integer from 0 - 255 or percentage from 0 - 100%. |
+| <b>&lt;blue&gt;</b>    | an integer from 0 - 255 or percentage from 0 - 100%. |
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch18-5">Section 18.5: rgba() Notation</h3>
@@ -6412,7 +6410,7 @@ This is a partially transparent element
 
 To use opacity in all versions of IE, the order is:
 
-```
+<pre><code>
 .transparent-element {
 /* for IE 8 & 9 */
 -ms-filter
@@ -6440,7 +6438,7 @@ opacity
 0.6
 ;
 }
-```
+</code></pre>
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ch20">Chapter 20: Length Units</h2>
@@ -6475,14 +6473,14 @@ or relative.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch20-1">Section 20.1: Creating scalable elements using rems and ems</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h6>Version ≥ 3</h6>
+<h4>Version ≥ 3</h4>
 
 <p>You can use rem defined by the font-size of your html tag to style
 elements by setting their font-size to a value of rem and use em
 inside the element to create elements that scale with your global
 font-size.</p>
 
-<b>HTML:</b>
+<h4>HTML:</h4>
 
 <pre><code><b>&lt;input</b> type=&quot;button&quot; value=&quot;Button&quot;<b>&gt;</b>
 <b>&lt;input</b> type=&quot;range&quot;<b>&gt;</b>
@@ -6521,147 +6519,135 @@ input&lbrack;type=text&rbrack; {
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch20-2">Section 20.2: Font size with rem</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-CSS3 introduces a few new units, including the
-&lbrack;&lbrack;rem&rbrack;&rbrack;(https://www.w3.org/TR/css-values/#font-relative-lengths)
-unit, which stands for &quot;root em&quot;. Let&apos;s look at how rem works.
+<p>CSS3 introduces a few new units, including the 
+<a href="https://www.w3.org/TR/css-values/#font-relative-lengths">rem</a> unit, 
+which stands for &quot;root em&quot;. Let&apos;s look at how rem works.
 
-First, let&apos;s look at the differences between em and rem.
+<p>First, let&apos;s look at the differences between em and rem.</p>
 
 <b>&lt;html</b>
 
-<b>em</b>: Relative to the font size of the parent. This causes the
-compounding issue <b>rem</b>: Relative to the font size of the root or
-<b>&gt;</b> element. This means it&apos;s possible to declare a single font
-size for the html element and define all rem units to be a percentage
-of that.
+<ul>
+  <li><b>em</b>: Relative to the font size of the parent. This causes the 
+    compounding issue.</li>
+  <li><b>rem</b>: Relative to the font size of the root or <b>&gt;</b> element. 
+    This means it&apos;s possible to declare a single font size for the html 
+	element and define all rem units to be a percentage of that.</li>
+</ul>
 
-The main issue with using rem for font sizing is that the values are
+<p>The main issue with using rem for font sizing is that the values are
 somewhat difficult to use. Here is an example of some common font
-sizes expressed in rem units, assuming that the base size is 16px :
+sizes expressed in rem units, assuming that the base size is 16px:</p>
 
-10px = 0.625rem 12px = 0.75rem
-14px = 0.875rem
-16px = 1rem (base)
-18px = 1.125rem
-20px = 1.25rem
-24px = 1.5rem
-30px = 1.875rem
-32px = 2rem
+<ul>
+  <li>10px = 0.625rem</li>
+  <li>12px = 0.75rem</li>
+  <li>14px = 0.875rem</li>
+  <li>16px = 1rem (base)</li>
+  <li>18px = 1.125rem</li>
+  <li>20px = 1.25rem</li>
+  <li>24px = 1.5rem</li>
+  <li>30px = 1.875rem</li>
+  <li>32px = 2rem</li>
+</ul>
 
-<b>CODE:</b>
-Version ≥ 3 html {
-<b>font-size</b>
-:
-16
-px
-;
-}
-h1
-{
-<b>font-size</b>
-:
-2
-rem
-;
-*/&ast; 32px &ast;/*
-}
-p
-{
-<b>font-size</b>
-:
-1
-rem
-;
-/* 16px */
-}
-li
-{
-<b>font-size</b>
-:
-1.5em;
-/* 24px */
-}
+<h4>CODE:</h4>
 
+<p>Version ≥ 3</p>
+
+<pre><code>html {
+  <b>font-size</b>: 16px;
+}
+h1 {
+  <b>font-size</b>: 2rem;  /* 32px */
+}
+p {
+  <b>font-size</b>: 1rem;  /* 16px */
+}
+li {
+  <b>font-size</b>: 1.5em; /* 24px */
+}</code></pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch20-3">Section 20.3: vmin and vmax</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<ul>
+  <li><b>vmin</b>: Relative to 1 percent of the viewport&apos;s smaller dimension.</li>
+  <li><b>vmax</b>: Relative to 1 percent of the viewport&apos;s larger dimension.</li>
+</ul>
 
-> <b>vmin</b>: Relative to 1 percent of the viewport&apos;s smaller dimension
-> <b>vmax</b>: Relative to 1 percent of the viewport&apos;s larger dimension
->
-> In other words, 1 vmin is equal to the smaller of *1 vh* and *1 vw*
->
-> 1 vmax is equal to the larger of *1 vh* and *1 vw*
+<p>In other words, 1 vmin is equal to the smaller of <i>1 vh</i> and <i>1 vw</i></p>
 
-<b>Note</b>: vmax is &lbrack;&lbrack;not
-supported&rbrack;&rbrack;(http://caniuse.com/#feat=viewport-units) in:
+<p>1 vmax is equal to the larger of <i>1 vh</i> and <i>1 vw</i></p>
 
-> any version of Internet Explorer Safari before version 6.1
+<p><b>Note</b>: vmax is <a href="http://caniuse.com/#feat=viewport-units">not supported in:</p>
 
+<ul>
+  <li>any version of Internet Explorer</li>
+  <li>Safari before version 6.1</li>
+</ul>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch20-4">Section 20.4: vh and vw</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p>CSS3 introduced two units for representing size.</p>
 
-CSS3 introduced two units for representing size.
+<ul>
+  <li>vh, which stands for viewport height is relative to 1% of the viewport height.</li>
+  <li>vw, which stands for viewport width is relative to 1% of the viewport width.</li>
+</ul>
 
-vh, which stands for viewport height is relative to 1% of the viewport height
-vw, which stands for viewport width is relative to 1% of the viewport width
+<h4>Version ≥ 3</h4>
 
-```
-Version ≥ 3
-div {
+<pre><code>div {
   <b>width</b>: 20vw;
   <b>height</b>: 20vh;
-}
-```
+}</code></pre>
 
-Above, the size for the div takes up 20% of the width and height of
-the viewport
-
+<p>Above, the size for the div takes up 20% of the width and height of
+the viewport.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch20-5">Section 20.5: using percent %</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p>One of the useful unit when creating a responsive application.</p>
 
-One of the useful unit when creating a responsive application.
-
-Its size depends on its parent container.
+<p>Its size depends on its parent container.</p>
 
 <b>Equation:</b>
 
-( Parent Container&apos;s width ) &ast; ( Percentage(%) ) = Output
+<blockquote>
+  ( Parent Container&apos;s width ) &ast; ( Percentage(%) ) = Output
+</blockquote>
 
-<b>For Example:</b>
+<h4>For Example:</h4>
 
-<i>Parent</i> has <b>100px</b> width while the <i>Child</i> has <b>50%</b>.
+<p><i>Parent</i> has <b>100px</b> width while the <i>Child</i> has <b>50%</b>.</p>
 
-<b>On the output</b>, the *Child*&apos;s width will be half(50%) of the
-*Parent*&apos;s, which is <b>50px</b>.
+<p><b>On the output</b>, the *Child*&apos;s width will be half(50%) of the
+<i>Parent</i>&apos;s, which is <b>50px</b>.</p>
 
 <h4>HTML:</h4>
 
-```
-<b>&lt;div</b> class=&quot;parent&quot;<b>&gt;</b>PARENT
-<b>&lt;div</b> class=&quot;child&quot;<b>&gt;</b>CHILD
-<b>&lt;/div</b><b>&gt;</b>
-<b>&lt;/div</b><b>&gt;</b>
-```
+<pre><code><b>&lt;div</b> class=&quot;parent&quot;<b>&gt;</b>
+  PARENT
+  <b>&lt;div</b> class=&quot;child&quot;<b>&gt;</b>
+    CHILD
+  <b>&lt;/div</b><b>&gt;</b>
+<b>&lt;/div</b><b>&gt;</b></code></pre>
 
 <h4>CSS</h4>
 
-```
-<b>&lt;style&gt;</b>
-&ast;
-{
-color: #CCC;
+<pre><code><b>&lt;style&gt;</b>
+&ast;{
+  color: #CCC;
 }
-.parent {background-color: blue;
+.parent {
+  background-color: blue;
   width: 100px;
 }
-.child {background-color: green;
+.child {
+  background-color: green;
   width: 50%;
 }
-<b>&lt;/style&gt;</b>
-```
+<b>&lt;/style&gt;</b></code></pre>
 
 <b>OUTPUT</b>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -6676,265 +6662,119 @@ color: #CCC;
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ch21">Chapter 21: Pseudo-Elements</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-  <b>pseudo-element</b>   <b>Description</b>
+| <b>pseudo-element</b> |  <b>Description</b> |
+|-----------------------|---------------------|
+| ::after | Insert content after the content of an element. |
+| ::before | Insert content before the content of an element. |
+| ::first-letter | Selects the first letter of each element. |
+| ::first-line | Selects the first line of each element. |
+| ::selection | Matches the portion of an element that is selected by a user. |
+| ::backdrop | Used to create a backdrop that hides the underlying document for an |
+|            | element in the top layer&apos;s |
+| ::placeholder | Allows you to style the placeholder text of a form element |
+|               | (Experimental)
+| ::marker | For applying list-style attributes on a given element (Experimental) |
+| ::spelling-error | Represents a text segment which the browser has flagged as incorrectly |
+|                  | spelled (Experimental) |
+| ::grammar-error | Represents a text segment which the browser has flagged as |
+|                 | grammatically incorrect (Experimental) |
 
-::after Insert content after the content of an element
+<p>Pseudo-elements, just like pseudo-classes, are added to a CSS
+selectors but instead of describing a special state, they allow you to
+scope and style certain parts of an html element.</p>
 
-::before Insert content before the content of an element
-
-> ::first-letter Selects the first letter of each element
-
-::first-line Selects the first line of each element
-
-::selection Matches the portion of an element that is selected by a user
-
-> Used to create a backdrop that hides the underlying document for an
-> element in the top layer&apos;s ::backdrop stack
-
-::placeholder Allows you to style the placeholder text of a form element
-(Experimental)
-
-::marker For applying list-style attributes on a given element
-(Experimental)
-
-  ::spelling-error
-
-
-> Represents a text segment which the browser has flagged as incorrectly
-> spelled (Experimental)
-
-  ::grammar-error
-
-
-> Represents a text segment which the browser has flagged as
-> grammatically incorrect (Experimental)
->
-> Pseudo-elements, just like pseudo-classes, are added to a CSS
-> selectors but instead of describing a special state, they allow you to
-> scope and style certain parts of an html element.
->
-> For example, the ::first-letter pseudo-element targets only the first
-> letter of a block element specified by the selector.
-
+<p>For example, the ::first-letter pseudo-element targets only the first
+letter of a block element specified by the selector.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch21-1">Section 21.1: Pseudo-Elements</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p>Pseudo-elements are added to selectors but instead of describing a
+special state, they allow you to style certain parts of a document.</p>
 
-> Pseudo-elements are added to selectors but instead of describing a
-> special state, they allow you to style certain parts of a document.
->
-> The content attribute is required for pseudo-elements to render;
-> however, the attribute can have an empty value
+<p>The content attribute is required for pseudo-elements to render;
+however, the attribute can have an empty value (e.g.content: &quot;&quot;).</p>
 
-  <b>content</b>                                   :      &quot;&quot;
-
-
-> (e.g. ).
-
-div
-
-::
-
-after
-
-{
-
-<b>content</b>
-
-:
-&apos;after&apos;
-;
-<b>color</b>
-:
-red
-;
-<b>border</b>
-:
-1
-px
-solid
-red
-;
+<pre><code>div::after {
+  <b>content</b>: &apos;after&apos;;
+  <b>color</b>: red;
+  <b>border</b>: 1px solid red;
 }
-div
-{
-<b>color</b>
-:
-black
-;
-<b>border</b>
-:
-px
-1
-solid
-black
-;
-<b>padding</b>
-:
-1
-px
-;
+div  {
+  <b>color</b>: black;
+  <b>border</b>: 1px solid black;
+  <b>padding</b>: 1px;
 }
-div
-::
-before
-{
-<b>content</b>
-:
-&apos;before&apos;
-;
-<b>color</b>
-:
-green
-;
-<b>border</b>
-:
-1
-px
-solid
-green
-;
-}
-
+div::before {
+  <b>content</b>: &apos;before&apos;;
+  <b>color</b>: green;
+  <b>border</b>: 1px solid green;
+}</code></pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch21-2">Section 21.2: Pseudo-Elements in Lists</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-Pseudo-elements are often used to change the look of lists (mostly for
-unordered lists, ul).
+<p>Pseudo-elements are often used to change the look of lists (mostly for
+unordered lists, ul).</p>
 
-The first step is to remove the default list bullets:
+<p>The first step is to remove the default list bullets:</p>
 
-ul
-{
-<b>list-style-type</b>
-:
-none
-;
-}
+<pre><code>ul {
+  <b>list-style-type</b>: none;
+}</code></pre>
 
-Then you add the custom styling. In this example, we will create
-gradient boxes for bullets.
+<p>Then you add the custom styling. In this example, we will create
+gradient boxes for bullets.</p>
 
-li
-:
-before
-{
-<b>content</b>
-:
-&quot;&quot;
-;
-<b>display</b>
-:
-inline-block
-;
-<b>margin-right</b>
-:
-10
-px
-;
-<b>height</b>
-:
-10
-px
-;
-<b>width</b>
-:
-10
-px
-;
-<b>background</b>
-:
-linear-gradient
-(
-red
-,
-blue
-)
-;
-}
+<pre><code>li:before {
+  <b>content</b>: &quot;&quot;;
+  <b>display</b>: inline-block;
+  <b>margin-right</b>: 10px;
+  <b>height</b>: 10px;
+  <b>width</b>: 10px;
+  <b>background</b>: linear-gradient (red, blue);
+}</code></pre>
 
 <h4>HTML:</h4>
 
-<b>&lt;</b>
-<b>ul</b>
-<b>&gt;</b>
-<b>&lt;</b>
-<b>li</b>
-<b>&gt;</b>
-Test I
-<b>&lt;</b>
-<b>/li</b>
-<b>&gt;</b>
-<b>&lt;</b>
-<b>li</b>
-<b>&gt;</b>
-Test II
-<b>&lt;</b>
-<b>/li</b>
-<b>&gt;</b>
-<b>&lt;</b>
-<b>/ul</b>
-<b>&gt;</b>
+<pre><code><b>&lt;ul&gt;</b>
+  <b>&lt;li&gt;</b>Test I<b>&lt;/li&gt;</b>
+  <b>&lt;li&gt;</b>Test II<b>&lt;/li&gt;</b>
+<b>&lt;/ul&gt;</b></code></pre>
 
 <h4>Result</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 193.  (xxx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p align="center" width="100%">
+<p align="left" width="100%">
 <img src="./images/image193.jpg"
-  style="width:65%"
-  title=""
-  alt="." />
+  style="width:25%"
+  title="Test I, Test II"
+  alt="Test I, Test II." />
 </p>
 <!-- (./images/image193.jpg){width="2.4479166666666665in" height="1.3125in"} -->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ch22">Chapter 22: Positioning</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
-<b>Parameter Details</b>
-
-Default value. Elements render in order, as they appear in the
-document flow. The top, right, bottom, static left and z-index
-properties do not apply.
-
-  <b>left</b>                        :       20px
-
-  relative   LEFT position
-
-  fixed      The element is positioned relative to the browser window
-
-  absolute   The element is positioned relative to its first positioned
-             (not static) ancestor element
-
-  initial    Sets this property to its default value.
-
-  inherit    Inherits this property from its parent element.
-
-The element is positioned relative to its normal position, so adds 20
-pixels to the element&apos;s
-
-  <b>position</b>                        :    static
-
-Experimental feature. It behaves like within its parent until a given
-offset threshold sticky
-
-  <b>position</b>                          :    fixed
-
-is reached, then it acts as .
-
-unset Combination of initial and inherit. More info
-&lbrack;&lbrack;here&rbrack;&rbrack;(https://developer.mozilla.org/en-US/docs/Web/CSS/unset).
+| <b>Parameter</b> | <b>Details</b> |
+|------------------|-------------------|
+| static | Default value. Elements render in order, as they appear in the document flow. |
+|        | The top, right, bottom, left and z-index properties do not apply. |
+| relative | The element is positioned relative to its normal position, so <b>left</b>:20px adds |
+|          | 20 pixels to the element&aposs LEFT position. |
+| fixed    | The element is positioned relative to the browser window. |
+| absolute | The element is positioned relative to its first positioned (not static) ancestor element. |
+| initial  | Sets this property to its default value. |
+| inherit  | Inherits this property from its parent element. |
+| sticky   | Experimental feature. It behaves like <b>position</b>: static within its parent until a given offset threshold }
+|          | is reached, then it acts as <b>position</b>: fixed. |
+| unset    | Combination of initial and inherit. More info <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/unset">here</a>. |
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch22-1">Section 22.1: Overlapping Elements with z-index</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p>To change the default <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context">stack order</a>
+positioned elements (position property set to relative, absolute or fixed), use the z-index property.</p>
 
-To change the default &lbrack;&lbrack;stack
-order&rbrack;&rbrack;(https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context)
-positioned elements (position property set to relative, absolute or
-fixed), use the z-index property.
-
-The higher the z-index, the higher up in the stacking context (on the
-z-axis) it is placed.
+<p>The higher the z-index, the higher up in the stacking context (on the z-axis) it is placed.</p>
 
 <b>Example</b>
 
@@ -9237,21 +9077,21 @@ and 50% from top.
 
 <h4>HTML:</h4>
 
-```
+<pre><code>
 <b>&lt;</b><b>div</b> class=&quot;skew&quot;<b>&gt;</b>
 <b>&lt;</b><b>/div</b><b>&gt;</b>
-```
+</code></pre>
 
 <h4>CSS:</h4>
 
-```
+<pre><code>
 .skew {
   <b>width</b>: 100px;
   <b>height</b>: 100px;
   <b>background</b>: teal;
   <b>transform</b>: skew (20deg, -30deg);
 }
-```
+</code></pre>
 
 This example will skew the div by 20 degrees on the X axis and by - 30
 degrees on the Y axis.
@@ -9408,14 +9248,14 @@ As shown in this image:
 
 <h4>CSS</h4>
 
-```
+<pre><code>
 .translate {
   <b>width</b>: 100px;
   <b>height</b>: 100px;
   <b>background</b>: teal;
   <b>transform</b>: translate ( 200px, 50&percnt;);
 }
-```
+</code></pre>
 
 This example will move the div by 200px on the X axis and by on the Y
 axis.
@@ -9424,11 +9264,11 @@ You can also specify translations on a single axis.
 
 On the X axis:
 
-```
+<pre><code>
 .translate {
   <b>transform</b>: translateX ( 200px );
 }
-```
+</code></pre>
 
 <p>On the Y axis:</p>
 
@@ -10900,17 +10740,17 @@ other content is inserted by the user&apos;s typing or editing.</p>
 
 <h4>HTML:</h4>
 
-```
+<pre><code>
 <b>&lt;</b><b>input</b> id=&quot;example&quot;<b>/&gt;</b>
-```
+</code></pre>
 
 <h4>CSS</h4>
 
-```
+<pre><code>
 #example {
   <b>caret-color</b>: red;
 }
-```
+</code></pre>
 
 <h4>Resources:</h4>
 
@@ -11203,7 +11043,7 @@ class
 
 <h4>CSS</h4>
 
-```
+<pre><code>
 .box_shadow
 {
 -webkit-box-shadow
@@ -11243,7 +11083,7 @@ px
 #444444
 ;
 }
-```
+</code></pre>
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch32-3">Section 32.3: inner drop shadow</h3>
@@ -11251,13 +11091,13 @@ px
 
 <h4>HTML:</h4>
 
-```
+<pre><code>
 <b>&lt;</b><b>div</b> class=&quot;box_shadow&quot;<b>&gt;</b><b>&lt;</b><b>/div</b><b>&gt;</b>
-```
+</code></pre>
 
 <h4>CSS</h4>
 
-```
+<pre><code>
 .box_shadow {
   <b>background-color</b>: #1C90F3;
   <b>width</b>: 200px;
@@ -11267,7 +11107,7 @@ px
   -moz-box-shadow: inset 0px 0px 10px 0px #444444;
   <b>box-shadow</b>: inset 0px 0px 10px 0px #444444;
 }
-```
+</code></pre>
 
 <h4>Result:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -11289,13 +11129,13 @@ px
 
 <h4>HTML:</h4>
 
-```
+<pre><code>
 <b>&lt;</b><b>div</b> class=&quot;box_shadow&quot;<b>&gt;</b><b>&lt;</b><b>/div</b><b>&gt;</b>
-```
+</code></pre>
 
 > <h4>CSS</h4>
 
-```
+<pre><code>
 .box_shadow {
   <b>width</b>: 100px;
   <b>height</b>: 100px;
@@ -11305,7 +11145,7 @@ px
                   -52px 52px 0px 0px #00a1f1,
                    52px 52px 0px 0px #ffbb00;
 }
-```
+</code></pre>
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 222.  (xxx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -11613,10 +11453,10 @@ px
 
 <h3 id="ch34-1">Section 34.1: Bullet Position</h3>
 
-```
+<pre><code>
 <b>&lt;li</b>   <b>&gt;</b> elements inside a containing element (       <b>&lt;ul</b>   <b>&gt;</b>   <b>&lt;ol</b>
 or       
-```
+</code></pre>
 
 > A list consists of <b>&gt;</b>). Both the list items and the container can
 >
@@ -11629,21 +11469,21 @@ or
 > marker. This box can either be placed inside or outside of the list
 > item box.
 
-```
+<pre><code>
 <b>list-style-position</b>
 :
 inside
 ;
 <b>&lt;li</b>
-```
+</code></pre>
 
 > places the bullet within the <b>&gt;</b> element, pushing the content to
 > the right as needed.
 
-```
+<pre><code>
 <b>list-style-position</b>: outside;
 <b>&lt;li</b>
-```
+</code></pre>
 
 > places the bullet left of the <b>&gt;</b> element. If there is not enough
 > space in the padding of the containing element, the marker box will
@@ -11657,7 +11497,7 @@ inside
 > Sometimes, a list should just not display any bullet points or
 > numbers. In that case, remember to specify margin and padding.
 
-```
+<pre><code>
 <b>&lt;</b>
 <b>ul</b>
 <b>&gt;</b>
@@ -11678,11 +11518,11 @@ second item
 <b>&lt;</b>
 <b>/ul</b>
 <b>&gt;</b>
-```
+</code></pre>
 
 > CSS
 
-```
+<pre><code>
 ul
 {
 <b>list-style-type</b>
@@ -11701,7 +11541,7 @@ li
 0
 ;
 }
-```
+</code></pre>
 
 
 <h3 id="ch34-3">Section 34.3: Type of Bullet or Numbering</h3>
@@ -11766,7 +11606,7 @@ two different counter levels connector-string (like the &quot;.&quot; in &quot;2
 
 <h4>CSS</h4>
 
-```
+<pre><code>
 body 
 {
   <b>counter-reset</b>: item-counter;
@@ -11782,15 +11622,15 @@ item-counter, upper-roman
 /* by specifying the upper-roman as style the
    output would be in roman numbers */
 }
-```
+</code></pre>
 
 <h4>HTML:</h4>
 
-```
+<pre><code>
 <b>&lt;</b><b>div</b> class=&apos;item&apos;<b>&gt;</b>Item No: 1<b>&lt;</b><b>/div</b><b>&gt;</b>
 <b>&lt;</b><b>div</b> class=&apos;item&apos;<b>&gt;</b>Item No: 2<b>&lt;</b><b>/div</b><b>&gt;</b>
 <b>&lt;</b><b>div</b> class=&apos;item&apos;<b>&gt;</b>Item No: 3<b>&lt;</b><b>/div</b><b>&gt;</b>
-```
+</code></pre>
 
 <p>In the above example, the counter&apos;s output would be displayed as I,
 II, III (roman numbers) instead of the usual 1, 2, 3 as the developer
@@ -11801,7 +11641,7 @@ has explicitly specified the counter&apos;s style.</p>
 
 <h4>CSS</h4>
 
-```
+<pre><code>
 body {
   <b>counter-reset</b>: item-counter;
 /* create the counter */
@@ -11830,11 +11670,11 @@ body {
 .item-content {
   <b>padding</b>: 8px;
 }
-```
+</code></pre>
 
 <h4>HTML:</h4>
 
-```
+<pre><code>
 <b>&lt;div</b> class=&apos;item&apos;<b>&gt;</b>
 <b>&lt;div</b> class=&apos;item-header&apos;<b>&gt;</b>
 Item 1 Header<b>&lt;/div&gt;</b>
@@ -11858,7 +11698,7 @@ Item 3 Header
 Lorem Ipsum Dolor Sit Amet&period;...
 <b>&lt;/div&gt;</b>
 <b>&lt;/div&gt;</b>
-```
+</code></pre>
 
 :before
 
@@ -11873,7 +11713,7 @@ item&apos;s number before its header (using content property of
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>CSS</h4>
 
-```
+<pre><code>
 ul {
   <b>list-style</b>: none;
   <b>counter-reset</b>: list-item-number;
@@ -11887,7 +11727,7 @@ li: before {
 /* usage of counters() function means value of
   counters at all higher levels are combined before printing */
 }
-```
+</code></pre>
 
 <h4>HTML:</h4>
 
@@ -11975,7 +11815,7 @@ added to specify the order of operations if necessary.
 
 Use
 
-```
+<pre><code>
 calc (
 )
 to calculate the width of a div element:
@@ -11991,17 +11831,17 @@ to calculate the width of a div element:
   <b>padding</b>: 5px;
   <b>text-align</b>: center;
 }
-```
+</code></pre>
 
   calc
 
 > Use () to determine the position of a background-image:
 
-```
+<pre><code>
 <b>background-position</b>: calc (50&percnt;&plus; 17px)
 calc (
 50&percnt;&plus; 10px), 50&percnt; 50&percnt;;
-```
+</code></pre>
 
 calc
 
@@ -12032,7 +11872,7 @@ calc
 > attribute which CSS can use (e.g. inside the pseudo-element) using
 > this function.
 
-```
+<pre><code>
 <b>&lt;</b>
 <b>blockquote</b>
 data-mark
@@ -12042,12 +11882,12 @@ data-mark
 <b>&lt;</b>
 <b>/blockquote</b>
 <b>&gt;</b>
-```
+</code></pre>
 
 > In the following CSS block, the character is appended before and after
 > the text inside the element:
 
-```
+<pre><code>
 blockquote
 &lbrack;
 data-mark
@@ -12070,7 +11910,7 @@ data-mark
 )
 ;
 }
-```
+</code></pre>
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch36-3">Section 36.3: var() function</h3>
@@ -12080,7 +11920,7 @@ data-mark
 
 /* set a variable */
 
-```
+<pre><code>
 :root{&minus;- primary-color: blue;}
 /* access variable */
 selector{
@@ -12089,7 +11929,7 @@ selector{
   primary-color
   );
 }
-```
+</code></pre>
 
 <p> This feature is currently under development. Check 
 <a href="http://caniuse.com/#feat=css-variables">CanIuse.com</a> 
@@ -12112,11 +11952,11 @@ for the latest browser support.</p>
 
 > Creates a image representing a linear gradient of colors.
 
-```
+<pre><code>
 linear-gradient (
   0 deg, red, yellow 50&percnt;, blue
 );
-```
+</code></pre>
 
 <p>This creates a gradient going from bottom to top, with colors starting
 at red, then yellow at 50%, and finishing in blue.</p>
@@ -12136,7 +11976,7 @@ using traditional CSS values.</p>
 <h3 id="ch37-1">Section 37.1: Variable Color</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
-```
+<pre><code>
 :root {&minus;- red: #b00; &minus;-
 blue: #4679bd; &minus;- grey: #ddd;
 }
@@ -12147,13 +11987,13 @@ blue: #4679bd; &minus;- grey: #ddd;
   <b>border</b>: 1px solid var (
   &minus;- red);
 }
-```
+</code></pre>
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch37-2">Section 37.2: Variable Dimensions</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
-```
+<pre><code>
 :root {&minus;-W200: 200px;
 &minus;- W 10: 10px;
 }
@@ -12163,7 +12003,7 @@ blue: #4679bd; &minus;- grey: #ddd;
 <b>height</b>: var (&minus;-W200);
 <b>margin</b>: var (&minus;- W 10);
 }
-```
+</code></pre>
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch37-3">Section 37.3: Variable Cascading</h3>
@@ -12177,7 +12017,7 @@ blue: #4679bd; &minus;- grey: #ddd;
 >
 > Assuming this HTML:
 
-```
+<pre><code>
 <b>&lt;</b>
 <b>a</b>
 class
@@ -12208,11 +12048,11 @@ Button Hovered On
 <b>&lt;</b>
 <b>/a</b>
 <b>&gt;</b>
-```
+</code></pre>
 
 > We can write this CSS:
 
-```
+<pre><code>
 .button {&minus;- color: green;
   <b>padding</b>: .5rem;
   <b>border</b>: 1px solid var (&minus;- color);
@@ -12224,7 +12064,7 @@ Button Hovered On
 .button_red {
   &minus;- color: red;
 }
-```
+</code></pre>
 
 <h4>And get this result:</h4>
 
@@ -12240,7 +12080,7 @@ dashes just like other CSS properties (eg: lineheight,
 
 //These are Invalids variable names
 
-```
+<pre><code>
 &minus;-123
 color
 :
@@ -12264,11 +12104,11 @@ yellow
 100
 px
 ;
-```
+</code></pre>
 
 //Valid variable names
 
-```
+<pre><code>
 &minus;-
 color
 :
@@ -12284,13 +12124,13 @@ width
 100
 px
 ;
-```
+</code></pre>
 
 > <b>CSS Variables are case sensitive.</b>
 
 /* The variable names below are all different variables */
 
-```
+<pre><code>
 &minus;-
 pcolor
 :
@@ -12303,31 +12143,31 @@ Pcolor
 pColor
 :
 ;
-```
+</code></pre>
 
 > <b>Empty Vs Space</b>
 
 /* Invalid */
-```
+<pre><code>
 &minus;-
 color
 :
 ;
-```
+</code></pre>
 
 /* Valid */
-```
+<pre><code>
 &minus;-
 color
 :
 ;
-```
+</code></pre>
 /* space is assigned */
 
 > <b>Concatenations</b>
 
 /* Invalid - CSS doesn&apos;t support concatenation */
-```
+<pre><code>
 .logo
 {
 &minus;-
@@ -12349,11 +12189,11 @@ logo-url
 )
 ;
 }
-```
+</code></pre>
 
 /* Invalid - CSS bug */
 
-```
+<pre><code>
 .logo
 {
 &minus;-
@@ -12373,10 +12213,10 @@ logo-url
 )
 ;
 }
-```
+</code></pre>
 
 /* Valid */
-```
+<pre><code>
 .logo
 {
 &minus;-
@@ -12396,12 +12236,12 @@ logo-url
 )
 ;
 }
-```
+</code></pre>
 
 > <b>Careful when using Units</b>
 
 /* Invalid */
-```
+<pre><code>
 &minus;-
 width
 :
@@ -12466,7 +12306,7 @@ width
 )
 )
 ;
-```
+</code></pre>
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch37-5">Section 37.5: With media queries</h3>
@@ -13789,7 +13629,7 @@ rgb
 
 <h4>HTML:</h4>
 
-```
+<pre><code>
 **&lt;**
 **div**
 class
@@ -13799,11 +13639,11 @@ class
 **&lt;**
 **/div**
 **&gt;**
-```
+</code></pre>
 
 > <h4>CSS</h4>
 
-```
+<pre><code>
 .oval
 {
 **width**
@@ -13833,7 +13673,7 @@ rgb
 &percnt;
 ;
 }
-```
+</code></pre>
 
 ## Section 38.4: Bursts
 
@@ -13856,7 +13696,7 @@ rgb
 > pseudo-element. The bottom is rotated 20°, the top square is rotated
 > 135°.
 
-```
+<pre><code>
 **&lt;**
 **div**
 class
@@ -13886,7 +13726,7 @@ background: rgb(246, 156, 85);
 -ms-transform: rotate(135deg);
 transform: rotate(135deg);
 }
-```
+</code></pre>
 
 > **12 Point Burst**
 
@@ -13899,7 +13739,7 @@ after
 > pseudo-elements. The bottom is rotated 0°, the next square is rotated
 > 30°, and the top is rotated 60°.
 
-```
+<pre><code>
 **&lt;**
 **div**
 class
@@ -13933,7 +13773,7 @@ transform: rotate(30deg);
 -ms-transform: rotate(60deg);
 transform: rotate(60deg);
 }
-```
+</code></pre>
 
 ## Section 38.5: Square
 
@@ -13941,7 +13781,7 @@ transform: rotate(60deg);
 > the example below, we have an element with a width and height of 100
 > pixels each.
 
-```
+<pre><code>
 **&lt;**
 **div**
 class
@@ -13975,7 +13815,7 @@ rgb
 )
 ;
 }
-```
+</code></pre>
 
 ## Section 38.6: Cube
 
@@ -13996,7 +13836,7 @@ and skewY
 
 <h4>HTML:</h4>
 
-```
+<pre><code>
 **&lt;**
 **div**
 class
@@ -14132,7 +13972,7 @@ px
 ;
 }
 &lbrack;**&lbrack;See demo&rbrack;**&rbrack;(https://jsfiddle.net/codename0/9po0r1L1/)
-```
+</code></pre>
 
 ## Section 38.7: Pyramid
 
@@ -14152,7 +13992,7 @@ transformation methods and rotate() on pseudo elements.
 
 <h4>HTML:</h4>
 
-```
+<pre><code>
 **&lt;**
 **div**
 class
@@ -14162,11 +14002,11 @@ class
 **&lt;**
 **/div**
 **&gt;**
-```
+</code></pre>
 
 <h4>CSS:</h4>
 
-```
+<pre><code>
 .pyramid
 {
 **width**
@@ -14282,7 +14122,7 @@ deg
 )
 ;
 }
-```
+</code></pre>
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ch39">Chapter 39: Columns</h2>
