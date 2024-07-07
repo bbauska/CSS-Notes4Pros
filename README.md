@@ -6666,7 +6666,7 @@ MDN</a>:</p>
 <blockquote>
   This keyword lets the element use the normal behavior, that is it is laid out in its current position in the 
   flow. The top, right, bottom, left and z-index properties do not apply.
-<blockquote>
+</blockquote>
 
 <pre><code>.element {
   <b>position</b>: static;
@@ -6709,9 +6709,9 @@ other non-inline elements.</p>
 
 <b>&lt;</b><b>span</b><b>&gt;</b>This is some <b>&lt;</b><b>b</b><b>&gt;</b>bolded<b>&lt;</b><b>/b</b><b>&gt;</b> text!<b>&lt;</b><b>/span</b><b>&gt;</b>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ section 23-1-a.  (xxx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ section 23-1.  (xxx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left" width="100%">
-<img src="./images/section-23-1-a.png"
+<img src="./images/section-23-1.png"
   style="width:25%"
   title="This is some bolded text"
   alt="This is some bolded text." />
@@ -7163,7 +7163,6 @@ start. Can be transition-delay specified in seconds (s) or milliseconds (ms)
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch26-1">Section 26.1: Transition shorthand</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-
 <h4>CSS</h4>
 
 <pre><code>
@@ -7253,11 +7252,9 @@ ease-in: ) ease-out: ) ease-in-out: )
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch26-3">Section 26.3: Transition (longhand)</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-
 <h4>CSS</h4>
 
-<pre><code>
-div {
+<pre><code>div {
   <b>height</b>: 100px;
   <b>width</b>: 100px;
   <b>border</b>: 1px solid;
