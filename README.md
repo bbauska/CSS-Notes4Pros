@@ -6526,122 +6526,41 @@ under that.
 
 <h4>HTML:</h4>
 
-<b>&lt;</b>
-<b>div</b>
-id
-=
-&quot;div1&quot;
-<b>&gt;</b>
-<b>&lt;</b>
-<b>/div</b>
-<b>&gt;</b>
-<b>&lt;</b>
-<b>div</b>
-id
-=
-&quot;div2&quot;
-<b>&gt;</b>
-<b>&lt;</b>
-<b>/div</b>
-<b>&gt;</b>
-<b>&lt;</b>
-<b>div</b>
-id
-=
-&quot;div3&quot;
-<b>&gt;</b>
-<b>&lt;</b>
-<b>/div</b>
-<b>&gt;</b>
+<pre><code><b>&lt;div</b> id=&quot;div1&quot;<b>&gt;</b>
+<b>&lt;/div&gt;</b>
+<b>&lt;div</b> id=&quot;div2&quot;<b>&gt;</b>
+<b>&lt;/div&gt;</b>
+<b>&lt;div</b> id=&quot;div3&quot;<b>&gt;</b>
+<b>&lt;/div&gt;</b>
+</code></pre>
 
-> <h4>CSS</h4>
+<h4>CSS</h4>
 
-div
-{
-<b>position</b>
-:
-absolute
-;
-<b>height</b>
-:
-200
-px
-;
-<b>width</b>
-:
-200
-px
-;
+<pre><code>div {
+  <b>position</b>: absolute;
+  <b>height</b>: 200px;
+  <b>width</b>: 200px;
 }
-div
-#div1
-{
-<b>z-index</b>
-:
-1
-;
-<b>left</b>
-:
-0
-px
-;
-<b>top</b>
-:
-0
-px
-;
-<b>background-color</b>
-:
-blue
-;
+div #div1 {
+  <b>z-index</b>: 1;
+  <b>left</b>: 0px;
+  <b>top</b>: 0px;
+  <b>background-color</b>: blue;
 }
-div
-#div2
-{
-<b>z-index</b>
-:
-3
-;
-<b>left</b>
-:
-100
-px
-;
-<b>top</b>
-:
-100
-px
-;
-<b>background-color</b>
-:
-green
-;
+div #div2 {
+  <b>z-index</b>: 3;
+  <b>left</b>: 100px;
+  <b>top</b>: 100px;
+  <b>background-color</b>: green;
 }
-div
-#div3
-{
-<b>z-index</b>
-:
-2
-;
-<b>left</b>
-:
-50
-px
-;
-<b>top</b>
-:
-150
-px
-;
-<b>background-color</b>
-:
-red
-;
-}
+div #div3 {
+  <b>z-index</b>: 2;
+  <b>left</b>: 50px;
+  <b>top</b>: 150px;
+  <b>background-color</b>: red;
+}</code></pre>
 
-
-This creates the following effect:
+<h4>This creates the following effect:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 194.  (xxx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left" width="100%">
@@ -6656,22 +6575,12 @@ This creates the following effect:
 
 <b>Syntax</b>
 
-<b>z-index</b>
-:
-&lbrack;
-number
-&rbrack;
-&vert;
-auto
-;
+<pre><code><b>z-index</b>: &lbrack;number&rbrack;&vert;auto;</code></pre>
 
 <b>Parameter Details</b>
 
-An integer value. A higher number is higher on the z-index stack. 0 is
-the default value. Negative
-
-number values are allowed.
-
+<p>An integer value. A higher number is higher on the z-index stack. 0 is
+the default value. Negative number values are allowed.
 auto Gives the element the same stacking context as its parent.
 (<b>Default</b>)
 
@@ -6707,26 +6616,13 @@ of the other elements on the page. Offset properties:
 specify the element should appear in relation to its next non-static
 containing element.
 
-.abspos
-{
-<b>position</b>
-:
-absolute
-;
-<b>top</b>
-:
-0
-px
-;
-<b>left</b>
-:
-500
-px
-;
-}
+<pre><code>.abspos {
+  <b>position</b>: absolute;
+  <b>top</b>: 0px;
+  <b>left</b>: 500px;
+}</code></pre>
 
-  class                     =     &quot;abspos&quot;
-
+class=&quot;abspos&quot;
 
 > This code will move the box containing element with attribute down 0px
 > and right 500px relative to its containing element.
@@ -6740,24 +6636,12 @@ px
 > obvious use is when we want something to be visible when we scroll to
 > the bottom of a long page.
 
-#stickyDiv
-{
-<b>position</b>
-:
-fixed
-;
-<b>top</b>
-:
-10
-px
-;
-<b>left</b>
-:
-10
-px
-;
-}
-
+<pre><code>
+#stickyDiv {
+  <b>position</b>: fixed;
+  <b>top</b>: 10px;
+  <b>left</b>: 10px;
+}</code></pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch22-4">Section 22.4: Relative Position</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -6776,31 +6660,15 @@ px
 > are used to indicate how far to move the element from where it would
 > have been in normal flow.
 
-.relpos
+<pre><code>.relpos {
+  <b>position</b>: relative;
+  <b>top</b>: 20px;
+  <b>left</b>: 30px;
+}</code></pre>
 
-{
-
-<b>position</b>
-
-:
-relative
-;
-<b>top</b>
-:
-20
-px
-;
-<b>left</b>
-:
-30
-px
-;
-}
-
-This code will move the box containing element with attribute
+<p>This code will move the box containing element with attribute
 class=&quot;relpos&quot; 20px down and 30px to the right from where it would
-have been in normal flow.
-
+have been in normal flow.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch22-5">Section 22.5: Static positioning</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -6813,14 +6681,9 @@ laid out in its current position in the
 
 flow. The top, right, bottom, left and z-index properties do not apply.
 
-.element
-{
-<b>position</b>
-:
-static
-;
-}
-
+<pre><code>.element {
+  <b>position</b>: static;
+}</code></pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ch23">Chapter 23: Layout Control</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -6880,24 +6743,15 @@ An inline element occupies only as much width as necessary. It stacks
 horizontally with other elements of the same type and may not contain
 other non-inline elements.
 
-<b>&lt;</b>
-<b>span</b>
-<b>&gt;</b>
+<b>&lt;</b><b>span</b><b>&gt;</b>
 This is some
-<b>&lt;</b>
-<b>b</b>
-<b>&gt;</b>
+<b>&lt;</b><b>b</b><b>&gt;</b>
 bolded
-<b>&lt;</b>
-<b>/b</b>
-<b>&gt;</b>
+<b>&lt;</b><b>/b</b><b>&gt;</b>
 text!
-<b>&lt;</b>
-<b>/span</b>
-<b>&gt;</b>
+<b>&lt;</b><b>/span</b><b>&gt;</b>
 
-  <b>&lt;span</b>                   <b>&gt;</b> and                     <b>&lt;b</b>
-
+<b>&lt;span</b>                   <b>&gt;</b> and                     <b>&lt;b</b>
 
 As demonstrated above, two inline elements, <b>&gt;</b>, are in-line (hence
 the name) and do not break the flow of the text.
@@ -6908,43 +6762,35 @@ A block element occupies the maximum available width of its&apos; parent
 element. It starts with a new line and, in contrast to inline
 elements, it does not restrict the type of elements it may contain.
 
-<b>&lt;</b>
-<b>div</b>
-<b>&gt;</b>
+<pre><code>
+<b>&lt;</b><b>div</b><b>&gt;</b>
 Hello world!
-<b>&lt;</b>
-<b>/div</b>
-<b>&gt;</b>
-<b>&lt;</b>
-<b>div</b>
-<b>&gt;</b>
+<b>&lt;</b><b>/div</b><b>&gt;</b>
+<b>&lt;</b><b>div</b><b>&gt;</b>
 This is an example!
-<b>&lt;</b>
-<b>/div</b>
-<b>&gt;</b>
+<b>&lt;</b><b>/div</b><b>&gt;</b>
+</code></pre>
 
-The div element is block-level by default, and as shown above, the two
+<p>The div element is block-level by default, and as shown above, the two
 block elements are vertically stacked and, unlike the inline elements,
-the flow of the text breaks.
+the flow of the text breaks.</p>
 
 <b>Inline Block</b>
 
-The inline-block value gives us the best of both worlds: it blends the
+<p>The inline-block value gives us the best of both worlds: it blends the
 element in with the flow of the text while allowing us to use padding,
 margin, height and similar properties which have no visible effect on
-inline elements.
+inline elements.</p>
 
-Elements with this display value act as if they were regular text and
+<p>Elements with this display value act as if they were regular text and
 as a result are affected by rules controlling the flow of text such as
 text-align. By default they are also shrunk to the the smallest size
-possible to accommodate their content.
+possible to accommodate their content.</p>
 
 *&lt;!&minus;-*
 *Inline: unordered list*
 *&minus;-&gt;*
-<b>&lt;</b>
-<b>style</b>
-<b>&gt;</b>
+<b>&lt;</b><b>style</b><b>&gt;</b>
 li {
 display : inline;
 background : lightblue;
@@ -6953,111 +6799,57 @@ border-width:2px;
 border-color:black;
 border-style:solid;
 }
-<b>&lt;</b>
-<b>/style</b>
-<b>&gt;</b>
-<b>&lt;</b>
-<b>ul</b>
-<b>&gt;</b>
-<b>&lt;</b>
-<b>li</b>
-<b>&gt;</b>
-
+<b>&lt;</b><b>/style</b><b>&gt;</b>
+<b>&lt;</b><b>ul</b><b>&gt;</b>
+<b>&lt;</b><b>li</b><b>&gt;</b>
 First Element
-
-<b>&lt;</b>
-<b>/li</b>
-<b>&gt;</b>
-<b>&lt;</b>
-<b>li</b>
-<b>&gt;</b>
-
+<b>&lt;</b><b>/li</b><b>&gt;</b>
+<b>&lt;</b><b>li</b><b>&gt;</b>
 Second Element
-
-<b>&lt;</b>
-<b>/li</b>
-<b>&gt;</b>
-<b>&lt;</b>
-<b>li</b>
-<b>&gt;</b>
-
+<b>&lt;</b><b>/li</b><b>&gt;</b>
+<b>&lt;</b><b>li</b><b>&gt;</b>
 Third Element
-
-<b>&lt;</b>
-<b>/li</b>
-<b>&gt;</b>
-<b>&lt;</b>
-<b>/ul</b>
-<b>&gt;</b>
+<b>&lt;</b><b>/li</b><b>&gt;</b>
+<b>&lt;</b><b>/ul</b><b>&gt;</b>
 
 &lt;!&minus;-
 block: unordered list
 &minus;-
-<b>&gt;</b>
-<b>&lt;</b>
-<b>style</b>
-<b>&gt;</b>
-li
-{
-display : block;
-background : lightblue;
-padding:10px;
-border-width:2px;
-border-color:black;
-border-style:solid;
+<b>&gt;</b><b>&lt;</b><b>style</b><b>&gt;</b>
+li {
+  display : block;
+  background : lightblue;
+  padding:10px;
+  border-width:2px;
+  border-color:black;
+  border-style:solid;
 }
-<b>&lt;</b>
-<b>/style</b>
-<b>&gt;</b>
-<b>ul</b>
-<b>&lt;</b>
-<b>&gt;</b>
-<b>&lt;</b>
-<b>li</b>
-<b>&gt;</b>
+<b>&lt;</b><b>/style</b><b>&gt;</b>
+<b>ul</b><b>&lt;</b><b>&gt;</b>
+<b>&lt;</b><b>li</b><b>&gt;</b>
 First Element
-<b>&lt;</b>
-<b>/li</b>
-<b>&gt;</b>
-<b>&lt;</b>
-<b>li</b>
-<b>&gt;</b>
+<b>&lt;</b><b>/li</b><b>&gt;</b>
+<b>&lt;</b><b>li</b><b>&gt;</b>
 Second Element
-<b>&lt;</b>
-<b>/li</b>
-<b>&gt;</b>
-<b>&lt;</b>
-<b>li</b>
-<b>&gt;</b>
+<b>&lt;</b><b>/li</b><b>&gt;</b>
+<b>&lt;</b><b>li</b><b>&gt;</b>
 Third Element
-<b>&lt;</b>
-<b>/li</b>
-<b>&gt;</b>
-<b>&lt;</b>
-<b>/ul</b>
-<b>&gt;</b>
+<b>&lt;</b><b>/li</b><b>&gt;</b>
+<b>&lt;</b><b>/ul</b><b>&gt;</b>
 &lt;!&minus;-
 Inline-block: unordered list
 &minus;-
-<b>&gt;</b>
-<b>&lt;</b>
-<b>style</b>
-<b>&gt;</b>
-li
-{
-display : inline-block;
-background : lightblue;
-padding:10px;
-border-width:2px;
-border-color:black;
-border-style:solid;
+<b>&gt;</b><b>&lt;</b><b>style</b><b>&gt;</b>
+li {
+  display : inline-block;
+  background : lightblue;
+  padding:10px;
+  border-width:2px;
+  border-color:black;
+  border-style:solid;
 }
-<b>&lt;</b>
-<b>/style</b>
-<b>&gt;</b>
-<b>ul</b>
-<b>&lt;</b>
-<b>&gt;</b>
+<b>&lt;</b><b>/style</b><b>&gt;</b>
+<b>ul</b><b>&lt;</b><b>&gt;</b>
 <b>&lt;</b>
 <b>li</b>
 <b>&gt;</b>
@@ -7090,29 +6882,17 @@ not be displayed at all.
 
 For example let&apos;s create a div-element that has an id of myDiv:
 
-<b>&lt;</b>
-<b>div</b>
-id
-=
-&quot;myDiv&quot;
-<b>&gt;</b>
-<b>&lt;</b>
-<b>/div</b>
-<b>&gt;</b>
+<b>&lt;</b><b>div</b> id=&quot;myDiv&quot;<b>&gt;</b>
+<b>&lt;</b><b>/div</b><b>&gt;</b>
 
 This can now be marked as not being displayed by the following CSS
 rule:
 
-#myDiv
-
-{
-<b>display</b>
-:
-none
-;
+#myDiv {
+  <b>display</b>: none;
 }
 
-  <b>display</b>                               :     none
+<b>display</b>                               :     none
 
 
 When an element has been set to be ; the browser ignores every other
@@ -7132,18 +6912,16 @@ does not affect the position of following elements.
 > The none value for the display property is commonly used along with
 > JavaScript to show or hide elements at will, eliminating the need to
 > actually delete and re-create them.
-
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch23-2">Section 23.2: To get old table structure using div</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
-> This is the normal HTML table structure
+<h4>This is the normal HTML table structure</h4>
 
-<b>&lt;</b>
-<b>style</b>
-<b>&gt;</b>
+<pre><code>
+<b>&lt;</b><b>style</b><b>&gt;</b>
 table {
-width: 100%;
+  width: 100%;
 }
 <b>&lt;</b>
 <b>/style</b>
@@ -7167,56 +6945,30 @@ I&apos;m a table
 <b>&lt;</b>
 <b>/table</b>
 <b>&gt;</b>
+</code></pre>
 
 You can do same implementation like this
 
-<b>&lt;</b>
-<b>style</b>
-<b>&gt;</b>
-.table-div
-{
-display: table;
+<pre><code>
+<b>&lt;</b><b>style</b><b>&gt;</b>
+.table-div {
+  display: table;
 }
-.table-row-div
-{
-display: table-row;
+.table-row-div {
+  display: table-row;
 }
-.table-cell-div
-{
-display: table-cell;
+.table-cell-div {
+  display: table-cell; 
 }
-<b>&lt;</b>
-<b>/style</b>
-<b>&gt;</b>
-<b>&lt;</b>
-<b>div</b>
-class
-=
-&quot;table-div&quot;
-<b>&gt;</b>
-<b>&lt;</b>
-<b>div</b>
-class
-=
-&quot;table-row-div&quot;
-<b>&gt;</b>
-<b>&lt;</b>
-<b>div</b>
-class
-=
-&quot;table-cell-div&quot;
-<b>&gt;</b>
+<b>&lt;</b><b>/style</b><b>&gt;</b>
+<b>&lt;</b><b>div</b> class=&quot;table-div&quot;<b>&gt;</b>
+<b>&lt;</b><b>div</b> class=&quot;table-row-div&quot;<b>&gt;</b>
+<b>&lt;</b><b>div</b> class=&quot;table-cell-div&quot;<b>&gt;</b>
 I behave like a table now
-<b>&lt;</b>
-<b>/div</b>
-<b>&gt;</b>
-<b>&lt;</b>
-<b>/div</b>
-<b>&gt;</b>
-<b>&lt;</b>
-<b>/div</b>
-<b>&gt;</b>
-
+<b>&lt;</b><b>/div</b><b>&gt;</b>
+<b>&lt;</b><b>/div</b><b>&gt;</b>
+<b>&lt;</b><b>/div</b><b>&gt;</b>
+</code></pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ch24">Chapter 24: Grid</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -7234,163 +6986,82 @@ element and its immediate children only.
 
 Consider the following markup:
 
+<pre><code>
 <b>&lt;</b>
-<b>section</b>
-class
-=
-&quot;container&quot;
-<b>&gt;</b>
-<b>&lt;</b>
-<b>div</b>
-class
-=
-&quot;item1&quot;
-<b>&gt;</b>
+<b>section</b> class=&quot;container&quot;<b>&gt;</b>
+<b>&lt;</b><b>div</b> class=&quot;item1&quot;<b>&gt;</b>
 item1
-<b>&lt;</b>
-<b>/div</b>
-
-<b>&gt;</b>
-<b>&lt;</b>
-<b>div</b>
-class
-=
-&quot;item2&quot;
-<b>&gt;</b>
+<b>&lt;</b><b>/div</b><b>&gt;</b>
+<b>&lt;</b><b>div</b> class=&quot;item2&quot;<b>&gt;</b>
 item2
-<b>&lt;</b>
-<b>/div</b>
-<b>&gt;</b>
-<b>&lt;</b>
-<b>div</b>
-class
-=
-&quot;item3&quot;
-<b>&gt;</b>
+<b>&lt;</b><b>/div</b><b>&gt;</b>
+<b>&lt;</b><b>div</b> class=&quot;item3&quot;<b>&gt;</b>
 item3
-<b>&lt;</b>
-<b>/div</b>
-<b>&gt;</b>
-<b>&lt;</b>
-<b>div</b>
-class
-=
-&quot;item4&quot;
-<b>&gt;</b>
+<b>&lt;</b><b>/div</b><b>&gt;</b>
+<b>&lt;</b><b>div</b> class=&quot;item4&quot;<b>&gt;</b>
 item4
-<b>&lt;</b>
-<b>/div</b>
-<b>&gt;</b>
-<b>&lt;</b>
-<b>/section</b>
-<b>&gt;</b>
+<b>&lt;</b><b>/div</b><b>&gt;</b>
+<b>&lt;</b><b>/section</b><b>&gt;</b>
+</code></pre>
 
 The easiest way to define the markup structure above as a grid is to
 simply set its display property to grid:
 
-.container
-{
-<b>display</b>
-:
-grid
-;
-}
+<pre><code>.container {
+  <b>display</b>: grid;
+}</code></pre>
 
-However, doing this will invariably cause all the child elements to
+<p>However, doing this will invariably cause all the child elements to
 collapse on top of one another. This is because the children do not
 currently know how to position themselves within the grid. But we can
-explicitly tell them.
+explicitly tell them.</p>
 
-First we need to tell the grid element .container how many rows and
+<p>First we need to tell the grid element .container how many rows and
 columns will make up its structure and we can do this using the
-grid-columns and grid-rows properties (note the pluralisation):
-.container
-{
-<b>display</b>
-:
-grid
-;
-<b>grid-columns</b>
-:
-50
-px
-50
-px
-50
-px
-;
-<b>grid-rows</b>
-:
-50
-px
-50
-px
-;
-}
+grid-columns and grid-rows properties (note the pluralisation):</p>
 
-However, that still doesn&apos;t help us much because we need to give an
+<pre><code>
+.container {
+  <b>display</b>: grid;
+  <b>grid-columns</b>: 50px 50px 50px;
+  <b>grid-rows</b>: 50px 50px;
+}
+</code></pre>
+
+<p>However, that still doesn&apos;t help us much because we need to give an
 order to each child element. We can do this by specifying the grid-row
-and grid-column values which will tell it where it sits in the grid:
+and grid-column values which will tell it where it sits in the grid:</p>
+
+<pre><code>
 .container
-.item1
-{
-<b>grid-column</b>
-:
-1
-;
-<b>grid-row</b>
-:
-1
-;
+.item1 {
+  <b>grid-column</b>: 1;
+  <b>grid-row</b>: 1;
 }
 .container
-.item2
-{
-<b>grid-column</b>
-:
-2
-;
-<b>grid-row</b>
-:
-1
-;
+.item2 {
+  <b>grid-column</b>: 2;
+<b>grid-row</b>: 1;
 }
 .container
-.item3
-{
-<b>grid-column</b>
-:
-1
-;
-<b>grid-row</b>
-:
-2
-;
+.item3 {
+  <b>grid-column</b>: 1;
+  <b>grid-row</b>: 2;
 }
 .container
-.item4
-{
-<b>grid-column</b>
-:
-2
-;
-<b>grid-row</b>
-:
-2
-;
-}
+.item4 {
+  <b>grid-column</b>: 2;
+  <b>grid-row</b>: 2;
+}</code></pre>
 
 By giving each item a column and row value it identifies the items
 order within the container.
 
-View a working example on
-&lbrack;&lbrack;JSFiddle&rbrack;&rbrack;(https://jsfiddle.net/fexfwkkv/3/). You&apos;ll
-need to view this in IE10, IE11 or Edge for it to work as these are
+View a working example on <a href="https://jsfiddle.net/fexfwkkv/3/">Demo (JS Fiddle)</a>.
+You&apos;ll need to view this in IE10, IE11 or Edge for it to work as these are
 currently the only browsers supporting Grid Layout (with vendor prefix
 -ms-) or enable a flag in Chrome, Opera and Firefox according to
-&lbrack;&lbrack;caniuse&rbrack;&rbrack;(http://caniuse.com/#feat=css-grid) in order to
-test with them.
-
+<a href="http://caniuse.com/#feat=css-grid">canIuse</a> in order to test with them.
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ch25">Chapter 25: Tables</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -7422,15 +7093,12 @@ if the contents overflow or not.
 
 <b>Value Description</b>
 
-*auto* This is the default value. It defines the layout of the table to
+<i>auto</i> This is the default value. It defines the layout of the table to
 be determined by the contents of its&apos; cells.
 
-This value sets the table layout to be determined by the width
-property provided to the table. If the content
-
-fixed of a cell exceeds this width, the cell will not resize but
-instead, let the content overflow.
-
+This value sets the table layout to be determined by the width property provided 
+to the table. If the content fixed of a cell exceeds this width, the cell will 
+not resize but instead, let the content overflow.
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch25-2">Section 25.2: empty-cells</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -7458,22 +7126,20 @@ whereas the latter does not.
 
 <b>Value Description</b>
 
-*show* This is the default value. It shows cells even if they are
+<i>show</i> This is the default value. It shows cells even if they are
 empty. hide This value hides a cell altogether if there are no
 contents in the cell.
 
 More Information:
 
-&lbrack;&lbrack;https://www.w3.org/TR/CSS21/tables.html#empty-cells&rbrack;&rbrack;(https://www.w3.org/TR/CSS21/tables.html#empty-cells)
-&lbrack;&lbrack;https://developer.mozilla.org/en-US/docs/Web/CSS/empty-cells&rbrack;&rbrack;(https://developer.mozilla.org/en-US/docs/Web/CSS/empty-cells)
-&lbrack;&lbrack;http://codepen.io/SitePoint/pen/yfhtq&rbrack;&rbrack;(http://codepen.io/SitePoint/pen/yfhtq)
+https://www.w3.org/TR/CSS21/tables.html#empty-cells&rbrack;&rbrack;(https://www.w3.org/TR/CSS21/tables.html#empty-cells)
+https://developer.mozilla.org/en-US/docs/Web/CSS/empty-cells&rbrack;&rbrack;(https://developer.mozilla.org/en-US/docs/Web/CSS/empty-cells)
+http://codepen.io/SitePoint/pen/yfhtq&rbrack;&rbrack;(http://codepen.io/SitePoint/pen/yfhtq)
 
-&lbrack;&lbrack;https://css-tricks.com/almanac/properties/e/empty-cells/&rbrack;&rbrack;(https://css-tricks.com/almanac/properties/e/empty-cells/)
-
+https://css-tricks.com/almanac/properties/e/empty-cells/&rbrack;&rbrack;(https://css-tricks.com/almanac/properties/e/empty-cells/)
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch25-3">Section 25.3: border-collapse</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-
 The border-collapse property determines if a tables&apos; borders should
 be separated or merged.
 
@@ -7511,9 +7177,9 @@ has no effect unless border-collapse is set to separate.
 Below an example of two tables with different values to the
 border-spacing property:
 
-!&lbrack;&rbrack;(./images/image203.jpg){width="6.03125in" height="1.15625in"}
+(./images/image203.jpg){width="6.03125in" height="1.15625in"}
 
-  <b>border-spacing</b>   :   2px   (default) while the one on the    <b>border-spacing</b>   :   8px
+<b>border-spacing</b>   :   2px   (default) while the one on the    <b>border-spacing</b>   :   8px
                                  right has                                                  
 
 
@@ -7521,18 +7187,16 @@ The table on the left has .
 
 <b>Value Description</b>
 
-*&lt;length&gt;* This is the default behavior, though the exact value can
+<i>&lt;length&gt;</i>This is the default behavior, though the exact value can
 vary between browsers.
 
 &lt;length&gt; &lt;length&gt; This syntax allows specifying separate
 horizontal and vertical values respectively.
-
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch25-5">Section 25.5: caption-side</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
-  <b>&lt;caption</b>
-
+<b>&lt;caption</b>
 
 The caption-side property determines the vertical positioning of the
 <b>&gt;</b> element within a table. This has no effect if such element does
@@ -7557,13 +7221,12 @@ The table on the left has .
 
 <b>Value Description</b>
 
-*top* This is the default value. It places the caption above the
+<i>top</i> This is the default value. It places the caption above the
 table. bottom This value places the caption below the table.
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ch26">Chapter 26: Transitions</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-
 <b>Parameter Details</b>
 
 The specific CSS property whose value change needs to be transitioned
@@ -7582,97 +7245,35 @@ ease-out, ease-in-out, linear, transition-timing-function
 
 (). More information about the various timing functions can be
 
-found in the &lbrack;&lbrack;W3C
-specs&rbrack;&rbrack;(https://www.w3.org/TR/css3-transitions/#transition-timing-function).
+found in the <a href="https://www.w3.org/TR/css3-transitions/#transition-timing-function">W3C specs</a>.
 
 The amount of time that must have elapsed before the transition can
-start. Can be transition-delay
-
-specified in seconds (s) or milliseconds (ms)
-
+start. Can be transition-delay specified in seconds (s) or milliseconds (ms)
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch26-1">Section 26.1: Transition shorthand</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 <h4>CSS</h4>
 
-div
-
-{
-
-<b>width</b>
-
-:
-
-150
-
-px
-
-;
-
-<b>height</b>
-
-:
-
-150
-
-px
-
-;
-
-<b>background-color</b>
-
-:
-
-red
-
-;
-
-<b>transition</b>
-
-:
-
-background-color
-
-1
-
-s
-
-;
-
+<pre><code>
+div {
+  <b>width</b>: 150px;
+  <b>height</b>: 150px;
+  <b>background-color</b>: red;
+  <b>transition</b>: background-color 1s;
 }
-
-div
-
-:
-
-hover
-
-{
-
-<b>background-color</b>
-
-:
-
-green
-
-;
-
+div:
+hover {
+  <b>background-color</b>: green;
 }
+</code></pre>
 
 <h4>HTML:</h4>
 
-<b>&lt;</b>
-
-<b>div</b>
-
-<b>&gt;</b>
-
-<b>&lt;</b>
-
-<b>/div</b>
-
-<b>&gt;</b>
+<pre><code>
+<b>&lt;</b><b>div</b><b>&gt;</b>
+<b>&lt;</b><b>/div</b><b>&gt;</b>
+</code></pre>
 
 This example will change the background color when the div is hovered
 the background-color change will last 1 second.
@@ -7744,125 +7345,20 @@ ease-in: ) ease-out: ) ease-in-out: )
 
 <h4>CSS</h4>
 
-div
-
-{
-
-<b>height</b>
-
-:
-
-100
-
-px
-
-;
-
-<b>width</b>
-
-:
-
-100
-
-px
-
-;
-
-<b>border</b>
-
-:
-
-1
-
-px
-
-solid
-
-;
-
-<b>transition-property</b>
-
-:
-
-height
-
-,
-
-width
-
-;
-
-<b>transition-duration</b>
-
-:
-
-1
-
-s
-
-,
-
-500
-
-ms
-
-;
-
-<b>transition-timing-function</b>
-
-:
-
-linear
-
-;
-
-<b>transition-delay</b>
-
-:
-
-0
-
-s
-
-,
-
-1
-
-s
-
-;
-
+<pre><code>
+div {
+  <b>height</b>: 100px;
+  <b>width</b>: 100px;
+  <b>border</b>: 1px solid;
+  <b>transition-property</b>: height, width;
+  <b>transition-duration</b>: 1s, 500ms;
+  <b>transition-timing-function</b>: linear;
+  <b>transition-delay</b>: 0s, 1s;
 }
-
-div
-
-:
-
-hover
-
-{
-
-<b>height</b>
-
-:
-
-200
-
-px
-
-;
-
-<b>width</b>
-
-:
-
-200
-
-px
-
-;
-
-}
+div: hover {
+  <b>height</b>: 200px;
+  <b>width</b>: 200px;
+}</code></pre>
 
 <h4>HTML:</h4>
 
@@ -7883,7 +7379,6 @@ the same speed from start to finish.
 <b>transition-delay</b>: Specifies the amount of time needed to wait
 before the transition effect starts. In this case, the height will
 start transitioning immediately, whereas the width will wait 1 second.
-
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ch27">Chapter 27: Animations</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -7938,213 +7433,49 @@ between all colors.</p>
 <span style="color:blue">&commat;keyframes</span> rainbow-background {
 |--------:|------------------------------|
 | 0&percnt; | {<b>background-color</b>: #ff0000; } |
-| 8.333&percnt; | {<span style="color:blue"><b>background-color</b>
+| 8.333&percnt; | {<span style="color:blue">
 
-:
-
-#ff8000
-
-;
-
+  <b>background-color</b>: #ff8000;
 }
-
-16.667
-
-&percnt;
-
-{
-
-<b>background-color</b>
-
-:
-
-#ffff00
-
-;
-
+16.667&percnt; {
+  <b>background-color</b>: #ffff00;
 }
-
-25.000
-
-&percnt;
-
-{
-
-<b>background-color</b>
-
-:
-
-#80ff00
-
-;
-
+25.000&percnt; {
+  <b>background-color</b>: #80ff00;
 }
-
-33.333
-
-&percnt;
-
-{
-
-<b>background-color</b>
-
-:
-
-#00ff00
-
-;
-
+33.333&percnt; {
+  <b>background-color</b>: #00ff00;
 }
-
-41.667
-
-&percnt;
-
-{
-
-<b>background-color</b>
-
-:
-
-#00ff80
-
-;
-
+41.667&percnt; {
+  <b>background-color</b>: #00ff80;
 }
-
-50.000
-
-&percnt;
-
-{
-
-<b>background-color</b>
-
-:
-
-#00ffff
-
-;
-
+50.000&percnt; {
+  <b>background-color</b>: #00ffff;
 }
-
-58.333
-
-&percnt;
-
-{
-
-<b>background-color</b>
-
-:
-
-#0080ff
-
-;
-
+58.333&percnt; {
+  <b>background-color</b>: #0080ff;
 }
-
-66.667
-
-&percnt;
-
-{
-
-<b>background-color</b>
-
-:
-
-#0000ff
-
-;
-
+66.667&percnt; {
+  <b>background-color</b>: #0000ff;
 }
-
-75.000
-
-&percnt;
-
-{
-
-<b>background-color</b>
-
-:
-
-#8000ff
-
-;
-
+75.000&percnt; {
+  <b>background-color</b>: #8000ff;
 }
-
-83.333
-
-&percnt;
-
-{
-
-<b>background-color</b>
-
-:
-
-#ff00ff
-
-;
-
+83.333&percnt; {
+  <b>background-color</b>: #ff00ff;
 }
-
-91.667
-
-&percnt;
-
-{
-
-<b>background-color</b>
-
-:
-
-#ff0080
-
-;
-
+91.667&percnt; {
+  <b>background-color</b>: #ff0080;
 }
-
-100.00
-
-&percnt;
-
-{
-
-<b>background-color</b>
-
-:
-
-#ff0000
-
-;
-
+100.00&percnt; {
+  <b>background-color</b>: #ff0000;
 }
 
 }
-
-.RainbowBackground
-
-{
-
-<b>animation</b>
-
-:
-
-rainbow-background
-
-5
-
-s
-
-infinite
-
-;
-
+.RainbowBackground {
+  <b>animation</b>: rainbow-background 5s infinite;
 }
+</code></pre>
 
 <p><a href="https://jsfiddle.net/s9m3od3p/6/">View Result</a>.</p>
 
@@ -8185,24 +7516,8 @@ setting the next background color at 8.333%, the animation will
 smoothly take 8.333% of the time to transition between those
 keyframes.
 
-.RainbowBackground
-
-{
-
-<b>animation</b>
-
-:
-
-rainbow-background
-
-5
-
-s
-
-infinite
-
-;
-
+.RainbowBackground {
+  <b>animation</b>: rainbow-background 5s infinite;
 }
 
 This code attaches our animation to all elements which have the
@@ -8251,56 +7566,13 @@ number-based CSS properties to animate between states.
 
 <b>Example</b>
 
-.Example
-
-{
-
-<b>height</b>
-
-:
-
-100
-
-px
-
-;
-
-<b>background</b>
-
-:
-
-#fff
-
-;
-
+.Example {
+  <b>height</b>: 100px;
+  <b>background</b>: #fff;
 }
-
-.Example
-
-:
-
-hover
-
-{
-
-<b>height</b>
-
-:
-
-120
-
-px
-
-;
-
-<b>background</b>
-
-:
-
-#ff0000
-
-;
-
+.Example: hover {
+  <b>height</b>: 120px;
+  <b>background</b>: #ff0000;
 }
 
 &lbrack;*&lbrack;View Result&rbrack;*&rbrack;(https://jsfiddle.net/0kcm6rwo/)
@@ -8312,26 +7584,11 @@ background color to red (#ff0000).
 By adding the transition property, we can cause these changes to occur
 over time:
 
-.Example
 
-{
-
+.Example {
 &period;..
 
-<b>transition</b>
-
-:
-
-all
-
-400
-
-ms
-
-ease
-
-;
-
+<b>transition</b>: all 400ms ease;
 }
 
 &lbrack;*&lbrack;View Result&rbrack;*&rbrack;(https://jsfiddle.net/v2j4ggue/1/)
@@ -8354,52 +7611,10 @@ The transition property is generally well-supported across all major
 browsers, excepting IE 9. For earlier versions of Firefox and
 Webkit-based browsers, use vendor prefixes like so:
 
-.Example
-
-{
-
-<b>transition</b>
-
-:
-
-all
-
-400
-
-ms
-
-ease
-
-;
-
--moz-transition
-
-:
-
-all
-
-400
-
-ms
-
-ease
-
-;
-
--webkit-transition
-
-:
-
-all
-
-400
-
-ms
-
-ease
-
-;
-
+.Example {
+  <b>transition</b>: all 400ms ease;
+-moz-transition: all 400ms ease;
+-webkit-transition: all 400ms ease;
 }
 
 *Note:* The transition property can animate changes between any two
@@ -8429,17 +7644,7 @@ properties can be omitted:
 Our third example shows the most minimal declaration. Note that the
 animation-name and animation-duration must be declared:
 
-<b>animation</b>
-
-:
-
-3
-
-s
-
-slidein
-
-;
+<b>animation</b>: 3s slidein;
 
 /* duration &vert; name */
 
@@ -8450,73 +7655,14 @@ may confuse your duration with your delay.
 If brevity isn&apos;t your thing, you can also skip the shorthand property
 and write out each property individually:
 
-<b>animation-duration</b>
-
-:
-
-3
-
-s
-
-;
-
-<b>animation-timing-function</b>
-
-:
-
-ease-in
-
-;
-
-<b>animation-delay</b>
-
-:
-
-1
-
-s
-
-;
-
-<b>animation-iteration-count</b>
-
-:
-
-2
-
-;
-
-<b>animation-direction</b>
-
-:
-
-reverse
-
-;
-
-<b>animation-fill-mode</b>
-
-:
-
-both
-
-;
-
-<b>animation-play-state</b>
-
-:
-
-paused
-
-;
-
-<b>animation-name</b>
-
-:
-
-slidein
-
-;
+  <b>animation-duration</b>: 3s;
+  <b>animation-timing-function</b>: ease-in;
+  <b>animation-delay</b>: 1s;
+  <b>animation-iteration-count</b>: 2;
+  <b>animation-direction</b>: reverse;
+  <b>animation-fill-mode</b>: both;
+  <b>animation-play-state</b>: paused;
+  <b>animation-name</b>: slidein;
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch27-4">Section 27.4: Increasing Animation Performance Using the &apos;will-change&apos; Attribute</h3>
@@ -8537,31 +7683,16 @@ The will-change property accepts a comma-separated list of properties
 to be animated. For example, if you plan on transforming an object and
 changing its opacity, you would specify:
 
-.Example
-
-{
-
+.Example {
 &period;..
 
-<b>will-change<b>
-
-:
-
-transform
-
-,
-
-opacity
-
-;
-
+<b>will-change<b>: transform, opacity;
 }
 
 <b>Note:<b> Use will-change sparingly. Setting will-change for every
 element on a page can cause performance problems, as the browser may
 attempt to create paint layers for every element, significantly
 increasing the amount of processing done by the GPU.
-
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ch28">Chapter 28: 2D Transforms</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -8656,54 +7787,11 @@ not provided, the first scale-factor will be applied for Y-axis also.
 
 <h4>CSS</h4>
 
-.rotate
-
-{
-
-<b>width</b>
-
-:
-
-100
-
-px
-
-;
-
-<b>height</b>
-
-:
-
-100
-
-px
-
-;
-
-<b>background</b>
-
-:
-
-teal
-
-;
-
-<b>transform</b>
-
-:
-
-rotate
-
-(
-
-45
-
-deg
-
-)
-
-;
-
+.rotate {
+  <b>width</b>: 100px;
+  <b>height</b>: 100px;
+  <b>background</b>: teal;
+  <b>transform</b>: rotate (45deg);
 }
 
 This example will rotate the div by 45 degrees clockwise. The center
@@ -8711,19 +7799,7 @@ of rotation is in the center of the div, 50% from left and 50% from
 top. You can change the center of rotation by setting the
 transform-origin property.
 
-<b>transform-origin</b>
-
-:
-
-100
-
-&percnt;
-
-50
-
-&percnt;
-
-;
+<b>transform-origin</b>: 100&percnt; 50&percnt;;
 
 The above example will set the center of rotation to the middle of the
 right side end.
@@ -8734,76 +7810,16 @@ right side end.
 
 <h4>HTML:</h4>
 
-<b>&lt;</b>
-
-<b>div</b>
-
-class
-
-=
-
-&quot;scale&quot;
-
-<b>&gt;</b>
-
-<b>&lt;</b>
-
-<b>/div</b>
-
-<b>&gt;</b>
+<b>&lt;</b><b>div</b> class=&quot;scale&quot;<b>&gt;</b>
+<b>&lt;</b><b>/div</b><b>&gt;</b>
 
 <h4>CSS</h4>
 
-.scale
-
-{
-
-<b>width</b>
-
-:
-
-100
-
-px
-
-;
-
-<b>height</b>
-
-:
-
-100
-
-px
-
-;
-
-<b>background</b>
-
-:
-
-teal
-
-;
-
-<b>transform</b>
-
-:
-
-scale
-
-(
-
-0.5
-
-,
-
-1.3
-
-)
-
-;
-
+.scale {
+  <b>width</b>: 100px;
+  <b>height</b>: 100px;
+  <b>background</b>: teal;
+  <b>transform</b>: scale (0.5, 1.3);
 }
 
   100px   &ast;   0.5    =   50px   on the X axis and to    100px   &ast;   1.3    =   130px
