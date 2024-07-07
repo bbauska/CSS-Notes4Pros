@@ -5431,14 +5431,14 @@ styles applied by the sequence with the highest overall specificity.</p>
 .bar: hover {}           /* a=0, b=2, c=0 */<br/>
 div.bar {}               /* a=0, b=1, c=1 */<br/>
 :hover {}                /* a=0, b=1, c=0 */<br/>
-&lbrack;title&rbrack; {}                /* a=0, b=1, c=0 */<br/>
-.bar {}                  /* a=0, b=1, c=0 */<br/>
-div ul &plus; li {}          /* a=0, b=0, c=3 */<br/>
+&lbrack;title&rbrack; {}              /* a=0, b=1, c=0 */<br/>
+.bar {}                 /* a=0, b=1, c=0 */<br/>
+div ul &plus; li {}           /* a=0, b=0, c=3 */<br/>
 p::after {}              /* a=0, b=0, c=2 */<br/>
 &ast;::before {}             /* a=0, b=0, c=1 */<br/>
 ::before {}              /* a=0, b=0, c=1 */<br/>
 div {}                   /* a=0, b=0, c=1 */<br/>
-&ast; {}                    /* a=0, b=0, c=0 */</code></pre>
+&ast; {}                     /* a=0, b=0, c=0 */</code></pre>
 
 <h4>Example 2: How specificity is used by the browser</h4>
 
@@ -7830,9 +7830,8 @@ The center of the transform is in the center of the div, 50% from left
 and 50% from top.
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-## Section 28.3: Skew
+<h3 id="ch28-3">Section 28.3: Skew</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-
 <h4>HTML:</h4>
 
 <pre><code>
@@ -7998,7 +7997,9 @@ As shown in this image:
 </p>
 <!-- (./images/image208.jpg){width="7.48037510936133in" height="2.7919728783902014in"} -->
 
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch28-5">Section 28.5: Translate</h3>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 <h4>HTML:</h4>
 
@@ -8779,7 +8780,9 @@ It has 4 values:
 
 4.  <b>initial</b> - sets the property to its default, which is visible
 
-## Section 29.4: 3D cube
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h3 id="ch29-4">Section 29.4: 3D cube</h3>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 3D transforms can be use to create many 3D shapes. Here is a simple 3D
 CSS cube example:
@@ -9003,7 +9006,6 @@ Should be noted that:
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch30-1">Section 30.1: Blur</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-
 <h4>HTML:</h4>
 
 > <b>&lt;img</b> src=&apos;donald-duck.png&apos; alt=&apos;Donald Duck&apos; title=&apos;Donald
@@ -9453,7 +9455,9 @@ value
 > indicates something is to be moved pointer The cursor is a pointer and
 > indicates a link
 
-## Section 31.2: pointer-events
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h3 id="ch31-2">Section 31.2: pointer-events</h3>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 > The pointer-events property allows for control over how HTML elements
 > respond to mouse/touch events.
@@ -10209,7 +10213,9 @@ px
 > this property to its default value inherit inherits this property from
 > its parent element
 
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch34-1">Section 34.1: Bullet Position</h3>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 <pre><code>
 <b>&lt;li</b>   <b>&gt;</b> elements inside a containing element (       <b>&lt;ul</b>   <b>&gt;</b>   <b>&lt;ol</b>
@@ -10250,7 +10256,9 @@ inside
 > Showing the result of inside and outside positioning:
 > &lbrack;&lbrack;jsfiddle&rbrack;&rbrack;(https://jsfiddle.net/pqh3cxdp/)
 
-## Section 34.2: Removing Bullets / Numbers
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h3 id="ch34-2">Section 34.2: Removing Bullets / Numbers</h3>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 > Sometimes, a list should just not display any bullet points or
 > numbers. In that case, remember to specify margin and padding.
@@ -10302,7 +10310,9 @@ li
 </code></pre>
 
 
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch34-3">Section 34.3: Type of Bullet or Numbering</h3>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 <b>&lt;li</b>   <b>&gt;</b> tags within an unordered list (                     <b>&lt;ul</b>
 
@@ -11525,7 +11535,9 @@ black
 > With changing the border sides, the orientation of the trapezoid can
 > be adjusted.
 
-## Section 38.2: Triangles
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h3 id="ch38-2">Section 38.2: Triangles</h3>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 > To create a CSS triangle define an element with a width and height of
 > 0 pixels. The triangle shape will be formed using border properties.
@@ -12280,7 +12292,9 @@ transparent
 
 }
 
-## Section 38.3: Circles and Ellipses
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h3 id="ch38-3">Section 38.3: Circles and Ellipses</h3>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 > **Circle**
 >
@@ -12433,7 +12447,9 @@ rgb
 }
 </code></pre>
 
-## Section 38.4: Bursts
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h3 id="ch38-4">Section 38.4: Bursts</h3>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 > A burst is similar to a star but with the points extending less
 > distance from the body. Think of a burst shape as a square with
@@ -12533,7 +12549,9 @@ transform: rotate(60deg);
 }
 </code></pre>
 
-## Section 38.5: Square
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h3 id="ch38-5">Section 38.5: Square</h3>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 > To create a square, define an element with both a width and height. In
 > the example below, we have an element with a width and height of 100
@@ -12575,7 +12593,9 @@ rgb
 }
 </code></pre>
 
-## Section 38.6: Cube
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h3 id="ch38-6">Section 38.6: Cube</h3>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 skewX () 
 and skewY
@@ -12732,7 +12752,9 @@ px
 &lbrack;**&lbrack;See demo&rbrack;**&rbrack;(https://jsfiddle.net/codename0/9po0r1L1/)
 </code></pre>
 
-## Section 38.7: Pyramid
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h3 id="ch38-7">Section 38.7: Pyramid</h3>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
   skewY()
 
@@ -12916,7 +12938,9 @@ laborum**&lt;/div&gt;**
 </p>
 <!-- {width="7.48037510936133in" height="3.572153324584427in"} -->
 
-## Section 39.2: Column Width
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h3 id="ch39-2">Section 39.2: Column Width</h3>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 The column-width property sets the minimum column width. If
 column-count is not defined the browser will make as many columns as
@@ -12992,7 +13016,9 @@ px
 > CSS allows to define that element contents wrap into multiple columns
 > with gaps and rules between them.
 
-## Section 40.1: Create Multiple Columns
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h3 id="ch40-1">Section 40.1: Create Multiple Columns</h3>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 > <b>&lt;div</b> class=&quot;content&quot;<b>&gt;</b> Lorem ipsum dolor sit amet,
 > consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt
@@ -13046,7 +13072,9 @@ moz-column-count
 
 }
 
-## Section 40.2: Basic example
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h3 id="ch40-2">Section 40.2: Basic example</h3>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 > Consider the following HTML markup:
 >
@@ -13448,7 +13476,9 @@ Some paragraph
 
 <b>&gt;</b>
 
-## Section 42.2: Enforced inheritance
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h3 id="ch42-2">Section 42.2: Enforced inheritance</h3>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 > Some properties are not automatically inherited from an element down
 > to its&apos; children. This is because those properties are typically
