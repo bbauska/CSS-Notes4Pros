@@ -7281,24 +7281,22 @@ keyframe, to define more complex animations.
 <p>In this example, we&apos;ll make a basic background animation that cycles
 between all colors.</p>
 
-<pre><code><span style="color:blue">&commat;keyframes</span> rainbow-background {</code></pre>
-
-| 0&percnt;      | { <b>background-color</b>: #ff0000; } |
-| 8.333&percnt;  | { <b>background-color</b>: #ff8000; } |
-| 16.667&percnt; | { <b>background-color</b>: #ffff00; } |
-| 25.000&percnt; | { <b>background-color</b>: #80ff00; } |
-| 33.333&percnt; | { <b>background-color</b>: #00ff00; } |
-| 41.667&percnt; | { <b>background-color</b>: #00ff80; } |
-| 50.000&percnt; | { <b>background-color</b>: #00ffff; } |
-| 58.333&percnt; | { <b>background-color</b>: #0080ff; } |
-| 66.667&percnt; | { <b>background-color</b>: #0000ff; } |
-| 75.000&percnt; | { <b>background-color</b>: #8000ff; } |
-| 83.333&percnt; | { <b>background-color</b>: #ff00ff; } |
-| 91.667&percnt; | { <b>background-color</b>: #ff0080; } |
-| 100.00&percnt; | { <b>background-color</b>: #ff0000; } |
+<pre><code><span style="color:blue">&commat;keyframes</span> rainbow-background {
+ 0&percnt;       { <b>background-color</b>: #ff0000; } 
+ 8.333&percnt;   { <b>background-color</b>: #ff8000; } 
+ 16.667&percnt;  { <b>background-color</b>: #ffff00; } 
+ 25.000&percnt;  { <b>background-color</b>: #80ff00; } 
+ 33.333&percnt;  { <b>background-color</b>: #00ff00; } 
+ 41.667&percnt;  { <b>background-color</b>: #00ff80; } 
+ 50.000&percnt;  { <b>background-color</b>: #00ffff; } 
+ 58.333&percnt;  { <b>background-color</b>: #0080ff; } 
+ 66.667&percnt;  { <b>background-color</b>: #0000ff; } 
+ 75.000&percnt;  { <b>background-color</b>: #8000ff; } 
+ 83.333&percnt;  { <b>background-color</b>: #ff00ff; } 
+ 91.667&percnt;  { <b>background-color</b>: #ff0080; } 
+ 100.00&percnt;  { <b>background-color</b>: #ff0000; } 
 }
-
-<pre><code>.RainbowBackground {
+.RainbowBackground {
   <b>animation</b>: rainbow-background 5s infinite;
 }</code></pre>
 
