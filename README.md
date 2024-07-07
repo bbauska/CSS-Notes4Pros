@@ -5289,9 +5289,9 @@ achieve this with a very simple markup:</p>
   <b>&lt;div</b> class=&quot;card&quot;<b>&gt;</b>
     <b>&lt;p&gt;</b>Lorem ipsum Magna proident ex anim dolor ullamco pariatur reprehenderit culpa esse enim 
 	  mollit labore dolore voluptate ullamco et ut sed qui minim.<b>&lt;/p&gt;</b>
-    <b>&lt;p&gt;&lt;button&gt;</b>Action<b>&lt;/button&gt;&lt;/p&gt;</b><b>&lt;/div&gt;</b>
-  <b>&lt;div</b>
-  <b>&lt;div class=&quot;card&quot;<b>&gt;</b>
+    <b>&lt;p&gt;&lt;button&gt;</b>Action<b>&lt;/button&gt;&lt;/p&gt;</b>
+  <b>&lt;/div&gt;</b>
+  <b>&class=&quot;card&quot;<b>&gt;</b>
     <b>&lt;p&gt;</b>Lorem ipsum Magna proident ex anim dolor ullamco pariatur reprehenderit culpa esse enim 
 	  mollit labore dolore voluptate ullamco et ut sed qui minim.<b>&lt;/p&gt;</b>
     <b>&lt;p&gt;</b>Lorem ipsum Magna proident ex anim dolor ullamco pariatur reprehenderit culpa esse enim 
@@ -5337,8 +5337,6 @@ p: last-child {
   alt="display: flex; to container." />
 </p>
 <!-- [image048.jpg 7.48 x 3"](./images/image048.jpg) -->
-
-<h4><b>display</b>: flex</h4>
 
 <p>In order to move the buttons to the bottom of the block, we need to apply 
 <b>display</b>: flex; to the card itself with the direction set to column. After
@@ -5387,10 +5385,10 @@ See working example:</a></p>
     a height <b>&lt;br /&gt;</b>
   <b>&lt;/div&gt;</b>
     <b>&lt;div</b> style=&quot;background-color: blue&quot;<b>&gt;</b>
-    Fewer <b>&lt;br /&gt;</b>
-    lines <b>&lt;br /&gt;</b>
-  <b>&lt;/div&gt;</b>
-<b>&lt;/div&gt;</b></code></pre>
+      Fewer <b>&lt;br /&gt;</b>
+      lines <b>&lt;br /&gt;</b>
+    <b>&lt;/div&gt;</b>
+  <b>&lt;/div&gt;</b></code></pre>
 
 <h4>CSS</h4>
 
@@ -5407,277 +5405,143 @@ See working example:</a></p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch17-1">Section 17.1: Calculating Selector Specificity</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p>Each individual CSS Selector has its own specificity value. Every selector 
+in a sequence increases the sequence&apos;s overall specificity. Selectors fall 
+into one of three different specificity groups: <i>A</i>, <i>B</i> and <i>c</i>. 
+When multiple selector sequences select a given element, the browser uses the 
+styles applied by the sequence with the highest overall specificity.</p>
 
-Each individual CSS Selector has its own specificity value. Every
-selector in a sequence increases the sequence&apos;s overall specificity.
-Selectors fall into one of three different specificity groups: <i>A</i>,
-<i>B</i> and <i>c</i>. When multiple selector sequences select a given element,
-the browser uses the styles applied by the sequence with the highest
-overall specificity.
+| <b>Group</b> | <b>Comprised of</b> | <b>Examples</b> |
+|--------------|---------------------|----------------------|
+| <i>A</i>            | id selectors        |  #foo |
+| <i>B</i>            | class selectors     | .bar |
+|              | attribute selectors | &lbrack;title&rbrack;, &lbrack;colspan=&quot;2&quot;&rbrack; |
+|              | pseudo-classes      | :hover, :nth-child(2) |
+| <i>C</i>     | type selectors      | div, li |
+|              | pseudo-elements     | ::before, ::first-letter |
 
-<b>Group Comprised of Examples</b>
+<p>Group <i>A</i> is the most specific, followed by Group <i>B</i>, then finally Group <i>C</i>.</p>
 
-A.  id selectors #foo class selectors .bar
+<p>The universal selector (&ast;) and combinators (like &gt; and &#126;) have no specificity.</p>
 
-title
-hover
-colspan                                       =      &quot;2&quot;
-nth-child
+<h4>Example 1: Specificity of various selector sequences</h4>
 
-B.  attribute selectors &lbrack;&rbrack;, &lbrack;&rbrack; pseudo-classes :, :(2)
+<pre><code>#foo #baz {}    /* a=2, b=0, c=0 */
+#foo .bar {}    /* a=1, b=1, c=0 */
+#foo {}         /* a=1, b=0, c=0 */
+.bar: hover {}  /* a=0, b=2, c=0 */
+div.bar {}      /* a=0, b=1, c=1 */
+:hover {}       /* a=0, b=1, c=0 */
+&lbrack;title&rbrack; {} /* a=0, b=1, c=0 */
+.bar {}                  /* a=0, b=1, c=0 */
+div ul &plus; li {}      /* a=0, b=0, c=3 */
+p::after {}              /* a=0, b=0, c=2 */
+&ast;::before {}         /* a=0, b=0, c=1 */
+::before {}              /* a=0, b=0, c=1 */
+div {}                   /* a=0, b=0, c=1 */
+&ast; {}                 /* a=0, b=0, c=0 */</code></pre>
 
-type selectors div, li
+<h4>Example 2: How specificity is used by the browser</h4>
 
-::before                 ,   ::first-letter
+<p>Imagine the following CSS implementation:</p>
 
-
-<i>c</i> pseudo-elements
-
-Group <i>A</i> is the most specific, followed by Group <i>B</i>, then finally
-Group <i>c</i>.
-
-The universal selector (&ast;) and combinators (like &gt; and &#126;) have no
-specificity.
-
-<b>Example 1: Specificity of various selector sequences</b>
-
-```
-#foo
-#baz
-{
+<pre><code>#foo {
+  <b>color</b>: blue;
 }
-/* a=2, b=0, c=0 */
-#foo
-.bar
-{
-}
-/* a=1, b=1, c=0 */
-#foo
-{
-}
-/* a=1, b=0, c=0 */
-.bar
-:
-hover
-{
-}
-/* a=0, b=2, c=0 */
-div
-.bar
-{
-}
-/* a=0, b=1, c=1 */
-:
-hover
-{
-}
-/* a=0, b=1, c=0 */
-&lbrack;
-title
-&rbrack;
-{
-}
-/* a=0, b=1, c=0 */
-.bar
-{
-}
-/* a=0, b=1, c=0 */
-div ul
-&plus;
-li
-{
-}
-/* a=0, b=0, c=3 */
-p
-::
-after
-{
-}
-/* a=0, b=0, c=2 */
-&ast;::
-before
-{
-}
-/* a=0, b=0, c=1 */
-::
-before
-{
-}
-/* a=0, b=0, c=1 */
-div
-{
-}
-/* a=0, b=0, c=1 */
-&ast;
-{
-}
-```
+.bar {
+  <b>color</b>: red;
+  <b>background</b>: black;
+}</code></pre>
 
-/* a=0, b=0, c=0 */
-
-<b>Example 2: How specificity is used by the browser</b>
-
-Imagine the following CSS implementation:
-
-```
-#foo
-{
-<b>color</b>
-:
-blue
-;
-}
-.bar
-{
-<b>color</b>
-:
-red
-;
-<b>background</b>
-:
-black
-;
-}
-```
-
-Here we have an ID selector which declares color as <i>blue</i>, and a
+<p>Here we have an ID selector which declares color as <i>blue</i>, and a
 class selector which declares color as <i>red</i> and background as
-<i>black</i>.
+<i>black</i>.</p>
 
-An element with an ID of #foo and a class of .bar will be selected by
+<p>An element with an ID of #foo and a class of .bar will be selected by
 both declarations. ID selectors have a Group <i>A</i> specificity and class
 selectors have a Group <i>B</i> specificity. An ID selector outweighs any
-number of class selectors.
-
-<b>color</b>   :   blue   ; from the #foo selector and the      <b>background</b>   :   black
-
-Because of this, ; from the .bar selector will be
+number of class selectors. Because of this, color: blue; from the #foo selector 
+will be
 
 applied to the element. The higher specificity of the ID selector will
 cause the browser to ignore the .bar selector&apos;s color declaration.
 
-Now imagine a different CSS implementation:
+<b>color</b>   :   blue   ; from the #foo selector and the      <b>background</b>   :   black
 
-```
-.bar
-{
-<b>color</b>
-:
-red
-;
-<b>background</b>
-:
-black
-;
+<h4>Now imagine a different CSS implementation:</h4>
+
+<pre><code>.bar {
+  <b>color</b>: red;
+  <b>background</b>: black;
 }
-.baz
-{
-<b>background</b>
-:
-white
-;
-}
-```
+.baz {
+  <b>background</b>: white;
+}</code></pre>
 
-Here we have two class selectors; one of which declares color as <i>red</i>
-and background as <i>black</i>, and the other declares background as
-<i>white</i>.
+<p>Here we have two class selectors; one of which declares color as <i>red</i>
+and background as <i>black</i>, and the other declares background as <i>white</i>.</p>
 
-An element with both the .bar and .baz classes will be affected by
-both of these declarations, however the problem we have now is that
-both .bar and .baz have an identical Group <i>B</i> specificity. The
-cascading nature of CSS resolves this for us: as .baz is defined
-<i>after</i> .bar, our element ends up with the <i>red</i> color from .bar but
-the <i>white</i> background from .baz.
+<p>An element with both the .bar and .baz classes will be affected by both of 
+these declarations, however the problem we have now is that both .bar and .baz 
+have an identical Group <i>B</i> specificity. The cascading nature of CSS resolves 
+this for us: as .baz is defined <i>after</i> .bar, our element ends up with the 
+<i>red</i> color from .bar but the <i>white</i> background from .baz.</p>
 
-<b>Example 3: How to manipulate specificity</b>
+<h4>Example 3: How to manipulate specificity</h4>
 
-The last snippet from Example 2 above can be manipulated to ensure our
+<p>The last snippet from Example 2 above can be manipulated to ensure our
 .bar class selector&apos;s color declaration is used instead of that of
-the .baz class selector.
+the .baz class selector.</p>
 
-```
-.bar
-{
-}
-/* a=0, b=1, c=0 */
-.baz
-{
-}
-/* a=0, b=1, c=0 */
-```
+<pre><code>.bar {}     /* a=0, b=1, c=0 */
+.baz {}     /* a=0, b=1, c=0 */</code></pre>
 
-The most common way to achieve this would be to find out what other
+<p>The most common way to achieve this would be to find out what other
 selectors can be applied to the .bar selector sequence. For example,
 if the .bar class was only ever applied to span elements, we could
 modify the .bar selector to span.bar. This would give it a new Group
 <i>C</i> specificity, which would override the .baz selector&apos;s lack
-thereof:
+thereof:</p>
 
-```
-span
-.bar
-{
-}
-/* a=0, b=1, c=1 */
-.baz
-{
-}
-/* a=0, b=1, c=0 */
-```
+<pre><code>span .bar {}  /* a=0, b=1, c=1 */
+.baz {}       /* a=0, b=1, c=0 */</code></pre>
 
-  .bar.bar
-
-
-However it may not always possible to find another common selector
+<p>However it may not always possible to find another common selector
 which is shared between any element which uses the .bar class. Because
 of this, CSS allows us to duplicate selectors to increase specificity.
-Instead of just .bar, we can use instead (See &lbrack;&lbrack;The grammar of
-Selectors, W3C
-Recommendation&rbrack;&rbrack;(https://www.w3.org/TR/css3-selectors/#grammar)).
-This still selects any element with a class of .bar, but now has
-double the Group <i>B</i> specificity:
+Instead of just .bar, we can use instead (See 
+<a href="https://www.w3.org/TR/css3-selectors/#grammar">The grammar of
+Selectors, W3C Recommendation). This still selects any element with a 
+class of .bar, but now has double the Group <i>B</i> specificity:</p>
 
-```
-.bar
-.bar
-{
-}
-/* a=0, b=2, c=0 */
-.baz
-{
-}
-/* a=0, b=1, c=0 */
-```
+<pre><code>.bar.bar {}  /* a=0, b=2, c=0 */
+.baz {}      /* a=0, b=1, c=0 */</code></pre>
 
-<b>!important and inline style declarations</b>
->
-The !important flag on a style declaration and styles declared by the
+<h4>!important and inline style declarations</h4>
+
+<p>The !important flag on a style declaration and styles declared by the
 HTML style attribute are considered to have a greater specificity than
 any selector. If these exist, the style declaration they affect will
 overrule other declarations regardless of their specificity. That is,
 unless you have more than one declaration that contains an !important
 flag for the same property that apply to the same element. Then,
 normal specificity rules will apply to those properties in reference
-to each other.
->
-Because they completely override specificity, the use of !important is
+to each other.</p>
+
+<p>Because they completely override specificity, the use of !important is
 frowned upon in most use cases. One should use it as little as
 possible. To keep CSS code efficient and maintainable in the long run,
 it&apos;s almost always better to increase the specificity of the
-surrounding selector than to use !important.
->
-One of those rare exceptions where !important is not frowned upon, is
+surrounding selector than to use !important.</p>
+
+<p>One of those rare exceptions where !important is not frowned upon, is
 when implementing generic helper classes like a .hidden or
 .background-yellow class that are supposed to always override one or
 more properties wherever they are encountered. And even then, you need
 > to know what you&apos;re doing. The last thing you want, when writing
-maintainable CSS, is to have !important flags throughout your CSS.
->
-<b>A final note</b>
+maintainable CSS, is to have !important flags throughout your CSS.</p>
 
-  b                    =5,                            c
-
+<h4>A final note</h4>
 
 <p>A common misconception about CSS specificity is that the Group <i>A</i>,
 <i>B</i> and <i>c</i> values should be combined with each other (a=1,=1 =&gt;
@@ -5793,12 +5657,10 @@ specificity &quot;wins&quot;.</p>
 
 <i>Internal css (in HTML file)</i>
 
-<pre><code>
-<b>&lt;style&gt;</b>
+<pre><code><b>&lt;style&gt;</b>
 .class {
-background: #000;
-}
-<b>&lt;style&gt;</b></code></pre>
+  background: #000;
+}<b>&lt;style&gt;</b></code></pre>
 
 <p>In this case, where you have identical selectors, the cascade kicks
 in, and determines that the last one loaded &quot;wins&quot;.</p>
@@ -5862,240 +5724,114 @@ body.mystyle &gt; div.myotherstyle {
   <b>&lt;/div&gt;</b>
 <b>&lt;/body&gt;</b></code></pre>
 
-What borders, colors, and font-sizes will the text be? font-size:
+<p>What borders, colors, and font-sizes will the text be? font-size:</p>
 
-  <b>font-size</b>   :   24   ;, since #elmnt1 rule set has the highest specificity <b>&lt;div</b>
-                           for the                                               
+<h4>font-size>
+<blockquote>
+  <b>font-size</b>: 24;, since #elmnt1 rule set has the highest specificity <b>&lt;div</b>
+    in question, every property here is set.
+</blockquote>
 
-<b>&gt;</b> in question, every property here is set.
+<h4>border</h4>
+<blockquote>
+  <b>border</b>: 3px dotted red; The border color red is take from #elmnt1 rule set,
+    since it has the highest specificity. The other properties of the border, border-thickness,
+    and border-style are from the div rule set.
+</blockquote>
 
-border:
+<h4>background-color:</h4>
+<blockquote>
+  <b>background-color</b>: green; The background-color is set in the div, 
+    body.mystyle &gt; div.myotherstyle and .mystyle .myotherstyle rule sets. 
+    The specificities are (0,0,1)vs.(0,2,2)vs.(0,2,0), so the middle one "wins".
+</blockquote>
 
-;. The border-color red is taken from #elmnt1 rule set, since it has
-the highest
-
-  <b>border</b>          :   3px dotted red
-
-specificity. The other properties of the border, border-thickness, and
-border-style are from the div rule set.
-
-background-color:
-
-  <b>background-color</b>   :   green   ;. The background-color is   body.mystyle   &gt;   div.myotherstyle
-                                     set in the div,                                  
-
-
-  .mystyle .myotherstyle
-
-, and rule sets. The specificities are (0, 0, 1) vs. (0, 2, 2) vs. (0,
-2, 0), so the middle one &quot;wins&quot;.
-
-color:
-
-  <b>color</b>   :   red   ;. The color is set in both the div .mystyle .myotherstyle
-                        and                                 
-
-rule sets. The latter has the higher specificity of (0, 2, 0) and
-&quot;wins&quot;.
-
+<h4>color:</h4>
+<blockquote>
+  <b>color</b>: red; The color is set in both the div and .mystyle .myotherstyle
+    rule sets. The latter has the higher specificity of (0,2,0) and "wins".
+</blockquote>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ch18">Chapter 18: Colors</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch18-1">Section 18.1: currentColor</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p>currentColor returns the computed color value of the current element.</p>
 
-currentColor returns the computed color value of the current element.
+<h4>Use in same element</h4>
 
-<b>Use in same element</b>
+<p>Here currentColor evaluates to red since the color property is set to red:</p>
 
-Here currentColor evaluates to red since the color property is set to
-red:
+<pre><code>div {
+  <b>color</b>: red;
+  <b>border</b>: 5px solid currentColor;
+  <b>box-shadow</b>: 0 0 5px currentColor;
+}</code></pre>
 
-div
-
-{
-
-<b>color</b>
-
-:
-
-red
-
-;
-
-<b>border</b>
-
-:
-
-5
-
-px
-
-solid
-
-currentColor
-
-;
-
-<b>box-shadow</b>
-
-:
-
-0
-
-0
-
-5
-
-px
-
-currentColor
-
-;
-
-}
-
-In this case, specifying currentColor for the border is most likely
+<p>In this case, specifying currentColor for the border is most likely
 redundant because omitting it should produce identical results. Only
 use currentColor inside the border property within the same element if
-it would be overwritten otherwise due to a more specific selector.
->
-Since it&apos;s the computed color, the border will be green in the
-following example due to the second rule overriding the first:
+it would be overwritten otherwise due to a more specific selector.</p>
 
-div
+<p>Since it&apos;s the computed color, the border will be green in the
+following example due to the second rule overriding the first:</p>
 
-{
+<pre><code>div {
+  <b>color</b>: blue;
+  <b>border</b>: 3px solid currentColor;
+  <b>color</b>: green;
+</code></pre>
 
-<b>color</b>
+<h4>Inherited from parent element</h4>
 
-:
+<p>The parent&apos;s color is inherited, here currentColor evaluates to
+&apos;blue&apos;, making the child element&apos;s border-color blue.</p>
 
-blue
-
-;
-
-<b>border</b>
-
-:
-
-3
-
-px
-
-solid
-
-currentColor
-
-;
-
-<b>color</b>
-
-:
-
-green
-
-;
-
+<pre><code>.parent-class {
+  <b>color</b>: blue;
 }
+.parent-class .child-class {
+  <b>border-color</b>: currentColor;
+}</code></pre>
 
-<b>Inherited from parent element</b>
-
-The parent&apos;s color is inherited, here currentColor evaluates to
-&apos;blue&apos;, making the child element&apos;s border-color blue.
-
-.parent-class
-
-{
-
-<b>color</b>
-
-:
-
-blue
-
-;
-
-}
-
-.parent-class
-
-.child-class
-
-{
-
-<b>border-color</b>
-
-:
-
-currentColor
-
-;
-
-}
-
-currentColor can also be used by other rules which normally would not
+<p>currentColor can also be used by other rules which normally would not
 inherit from the color property, such as background-color. The example
 below shows the children using the color set in the parent as its
-background:
+background:</p>
 
-.parent-class
-
-{
-
-<b>color</b>
-
-:
-
-blue
-
-;
-
+<pre><code>.parent-class {
+  <b>color</b>: blue;
 }
-
-.parent-class
-
-.child-class
-
-{
-
-<b>background-color</b>
-
-:
-
-currentColor
-
-;
-
-}
+.parent-class .child-class {
+  <b>background-color</b>: currentColor;
+}</code></pre>
 
 <h4>Possible Result:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 49.  (xxx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~ 49. parent element, child element * 2 (116) ~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="center" width="100%">
 <img src="./images/image049.png"
   style="width:50%"
-  title=""
-  alt="." />
+  title="parent element, child element rectangle * 2"
+  alt="parent element, child element rectangle * 2." />
 </p>
 <!-- [image049.png 5.2 x 3.09](./images/image049.png) -->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch18-2">Section 18.2: Color Keywords</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p>Most browsers support using color keywords to specify a color. For
+example, to set the color of an element to blue, use the blue keyword:</p>
 
-Most browsers support using color keywords to specify a color. For
-example, to set the color of an element to blue, use the blue keyword:
-
-<pre><code>
-.some-class {
+<pre><code>.some-class {
   <b>color</b>: blue;
-}
-</code></pre>
+}</code></pre>
 
 <p>CSS keywords are not case sensitive---blue, Blue and BLUE will all
 result in #0000FF.</p>
 
 | <b>Color Keywords</b> | <b>Color name | Hex value RGB values Color</b> |
+
+| <b>Color name</b> | <b>Hex value</b> | <b>RGB values</b>
 |-----------------------|---------------|-------------------------|
 | AliceBlue | #F0F8FF | rgb(240,248,255) |
 | AntiqueWhite #FAEBD7 | rgb(250,235,215) |
@@ -6109,30 +5845,17 @@ result in #0000FF.</p>
 | Blue | #0000FF | rgb(0,0,255) |
 | BlueViolet | #8A2BE2 | rgb(138,43,226) |
 | Brown | #A52A2A | rgb(165,42,42) |
-|   ---  
-|   BurlyWood | #DEB887 | rgb(222,184,135)                  |
-|   CadetBlue | #5F9EA0 | rgb(95,158,160)                   |
-|   Chartreuse | #7FFF00 | rgb(127,255,0)                    |
-|                                                                |     |
-|   Chocolate                  #D2691E                           |     |
-|                              rgb(210,105,30)                   |     |
-|                                                                |     |
-|   Coral                      #FF7F50                           |     |
-|                              rgb(255,127,80)                   |     |
-|                                                                |     |
-|   CornflowerBlue             #6495ED                           |     |
-|                              rgb(100,149,237)                  |     |
-|                                                                |     |
-|   Cornsilk                   #FFF8DC                           |     |
-|                              rgb(255,248,220)                  |     |
-|                                                                |     |
-|   Crimson                    #DC143C                           |     |
-|                              rgb(220,20,60)                    |     |
-|                                                                |     |
-|   Cyan                       #00FFFF                           |     |
-|                              rgb(0,255,255)                    |     |
-|                                                                |     |
-|   DarkBlue                   #00008B                           |     |
+|   BurlyWood | #DEB887 | rgb(222,184,135) |
+|   CadetBlue | #5F9EA0 | rgb(95,158,160) |
+|   Chartreuse | #7FFF00 | rgb(127,255,0) |
+|   Chocolate | #D2691E | rgb(210,105,30) |
+|   Coral | #FF7F50  | rgb(255,127,80) |
+|   CornflowerBlue | #6495ED | rgb(100,149,237) |
+|   Cornsilk       | #FFF8DC | rgb(255,248,220) |
+|   Crimson | #DC143C | rgb(220,20,60) |
+|   Cyan           | #00FFFF | rgb(0,255,255) |
+|                                             |
+|   DarkBlue                   #00008B        |
 |                              rgb(0,0,139)                      |     |
 |                                                                |     |
 |   DarkCyan                   #008B8B                           |     |
@@ -6395,18 +6118,12 @@ Yellow #FFFF00 rgb(255,255,0)
 
 YellowGreen #9ACD32 rgb(154,205,50)
 
-In addition to the named colors, there is also the keyword
-transparent, which represents a fully-transparent black:
-
-  rgba
-
-(0,0,0,0)
-
+<p>In addition to the named colors, there is also the keyword
+transparent, which represents a fully-transparent black: rgba(0,0,0,0).</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch18-3">Section 18.3: Hexadecimal Value</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-
-<b>Background</b>
+<h4>Background</h4>
 
 CSS colors may also be represented as a hex triplet, where the members
 represent the red, green and blue components of a color. Each of these
