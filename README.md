@@ -5994,7 +5994,7 @@ is 256 &Hat; 3 or 16,777,216.</p>
 <h4>Syntax</h4>
 
 <blockquote>
-  <b>color</b>: #rrggbb;
+  <b>color</b>: #rrggbb;<br>
   <b>color</b>: #rgb;
 </blockquote>
 
@@ -6005,8 +6005,7 @@ is 256 &Hat; 3 or 16,777,216.</p>
 | bb           | 00-FF for the amount of blue. |
 
 
-<pre><code>
-.some-class {
+<pre><code>.some-class {
   /* This is equivalent to using the color keyword &apos;blue&apos; */
   <b>color</b>: #0000FF;
 }
@@ -6034,14 +6033,13 @@ about capitalization. #FFC125 and #ffc125 are the same color.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch18-4">Section 18.4: rgb() Notation</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-RGB is an additive color model which represents colors as mixtures of
+<p>RGB is an additive color model which represents colors as mixtures of
 red, green, and blue light. In essence, the RGB representation is the
 decimal equivalent of the Hexadecimal Notation. In Hexadecimal each
 number ranges from 00-FF which is equivalent to 0-255 in decimal and
-0%-100% in percentages.
+0%-100% in percentages.</p>
 
-<pre><code>
-.some-class {
+<pre><code>.some-class {
   /* Scalar RGB, equivalent to &apos;blue&apos; */
   <b>color</b>: rgb (0,0,255);
 }
@@ -6051,40 +6049,19 @@ number ranges from 00-FF which is equivalent to 0-255 in decimal and
 }</code></pre>
 
 <b>Syntax</b>
-rgb
-(
-&lt;
-red
-&gt;
-,
-&lt;green
-&gt;
-,
-&lt;blue
-&gt;
-)
-```
 
-<b>Value Description</b>
+<pre><code>rgb(&lt;red&gt;, &lt;green&gt;, &lt;blue&gt;)</code></pre>
 
-  <b>&lt;red</b>
-
-
-<b>&gt;</b> an integer from 0 - 255 or percentage from 0 - 100%
-
-  <b>&lt;green</b>
-
-  <b>&lt;blue</b>
-
-<b>&gt;</b> an integer from 0 - 255 or percentage from 0 - 100% <b>&gt;</b> an
-integer from 0 - 255 or percentage from 0 - 100%
+|<b>Value</b> | <b>Description</b> |
+|-------------|--------------------|
+| <b>&lt;red&gt;</b> | an integer from 0 - 255 or percentage from 0 - 100%. |
+| <b>&lt;green</b>   | an integer from 0 - 255 or percentage from 0 - 100%. |
+| <b>&lt;blue</b>    | an integer from 0 - 255 or percentage from 0 - 100%. |
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch18-5">Section 18.5: rgba() Notation</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-
-Similar to rgb() notation, but with an additional alpha (opacity)
-value.
+<p>Similar to rgb() notation, but with an additional alpha (opacity) value.</p>
 
 .red
 
