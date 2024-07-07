@@ -6773,7 +6773,7 @@ li {
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ section 23-1-c.  (xxx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left" width="100%">
 <img src="./images/section-23-1-c.png"
-  style="width:25%"
+  style="width:40%"
   title="3 horizontal rectangles; First Element, Second Element, Third Element"
   alt="3 horizontal rectangles; First Element, Second Element, Third Element." />
 </p>
@@ -6799,7 +6799,7 @@ li {
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ section 23-1-d.  (xxx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left" width="100%">
 <img src="./images/section-23-1-d.png"
-  style="width:25%"
+  style="width:40%"
   title="3 vertical rectangles; First Element, Second Element, Third Element"
   alt="3 vertical rectangles; First Element, Second Element, Third Element." />
 </p>
@@ -6824,7 +6824,7 @@ li {
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ section 23-1-e.  (xxx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left" width="100%">
 <img src="./images/section-23-1-e.png"
-  style="width:25%"
+  style="width:40%"
   title="3 horizontal rectangles; First Element, Second Element, Third Element"
   alt="3 horizontal rectangles; First Element, Second Element, Third Element." />
 </p>
@@ -6864,7 +6864,6 @@ actually delete and re-create them.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch23-2">Section 23.2: To get old table structure using div</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-
 <h4>This is the normal HTML table structure</h4>
 
 <pre><code><b>&lt;style&gt;</b>
@@ -7037,20 +7036,20 @@ empty-cells property:
 | hide         | This value hides a cell altogether if there are no contents in the cell. |
 
 <h4>More Information:</h4>
-
-[https://www.w3.org/TR/CSS21/tables.html#empty-cells](https://www.w3.org/TR/CSS21/tables.html#empty-cells)
-[https://developer.mozilla.org/en-US/docs/Web/CSS/empty-cells](https://developer.mozilla.org/en-US/docs/Web/CSS/empty-cells)
-[http://codepen.io/SitePoint/pen/yfhtq](http://codepen.io/SitePoint/pen/yfhtq)
-
-[https://css-tricks.com/almanac/properties/e/empty-cells/](https://css-tricks.com/almanac/properties/e/empty-cells/)
+<ul>
+  <li><a href="https://www.w3.org/TR/CSS21/tables.html#empty-cells">w3.org empty cells</a>.</li>
+  <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/empty-cells">Mozilla empty cells</a>.</li>
+  <li><a href="http://codepen.io/SitePoint/pen/yfhtq">CodePen SitePoint</a>.</li>
+  <li><a href="https://css-tricks.com/almanac/properties/e/empty-cells/">CSS Tricks empty cells.</li>
+</ul>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch25-3">Section 25.3: border-collapse</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-The border-collapse property determines if a tables&apos; borders should
-be separated or merged.
+<p>The border-collapse property determines if a tables&apos; borders should
+be separated or merged.</p>
 
-Below an example of two tables with different values to the
-border-collapse property:
+<p>Below an example of two tables with different values to the
+border-collapse property:</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 202.  (xxx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left" width="100%">
@@ -7061,27 +7060,23 @@ border-collapse property:
 </p>
 <!-- (./images/image202.jpg){width="5.666666666666667in" height="0.9270833333333334in"} -->
 
-  <b>border-collapse</b>   :   separate   while the one on the     <b>border-collapse</b>   :   collapse
-                                       right has                                          
+<p>The table on the left has <b>border-collapse</b>: separate while the one on the right has 
 
+<b>border-collapse</b>: collapse.</p>
 
-The table on the left has .
-
-<b>Value Description</b>
-
-separate This is the default value. It makes the borders of the table
-separate from each other. collapse This value sets the borders of the
-table to merge together, rather than being distinct.
+| <b>Value</b> | <b>Description</b> |
+|--------------|-----------------------------------------------------|
+| separate | This is the default value. It makes the borders of the table separate from each other. |
+| collapse | This value sets the borders of the table to merge together, rather than being distinct. |
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch25-4">Section 25.4: border-spacing</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p>The border-spacing property determines the spacing between cells. This
+has no effect unless border-collapse is set to separate.</p>
 
-The border-spacing property determines the spacing between cells. This
-has no effect unless border-collapse is set to separate.
-
-Below an example of two tables with different values to the
-border-spacing property:
+<p>Below an example of two tables with different values to the
+border-spacing property:</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 203.  (xxx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left" width="100%">
@@ -7092,29 +7087,22 @@ border-spacing property:
 </p>
 <!-- (./images/image203.jpg){width="6.03125in" height="1.15625in"} -->
 
-<b>border-spacing</b>: 2px (default) while the one on the <b>border-spacing</b>: 8px
-right has
-The table on the left has .
+The table on the left has <b>border-spacing</b>: 2px (default) while the one on 
+the right has <b>border-spacing</b>: 8px.
 
-<b>Value Description</b>
+| <b>Value</b> | <b>Description</b> |
+|--------------|--------------------------------------------|
+| <i>&lt;length&gt;</i> | This is the default behavior, though the exact value can vary between browsers. |
+| &lt;length&gt; &lt;length&gt; | This syntax allows specifying separate horizontal and vertical values respectively. |
 
-<i>&lt;length&gt;</i>This is the default behavior, though the exact value can
-vary between browsers.
-
-&lt;length&gt; &lt;length&gt; This syntax allows specifying separate
-horizontal and vertical values respectively.
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch25-5">Section 25.5: caption-side</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p>The caption-side property determines the vertical positioning of the <b>&lt;caption&gt;</b> 
+element within a table. This has no effect if such element does not exist.</p>
 
-<b>&lt;caption</b>
-
-The caption-side property determines the vertical positioning of the
-<b>&gt;</b> element within a table. This has no effect if such element does
-not exist.
-
-Below an example with two tables with different values set to the
-caption-side property:
+<p>Below an example with two tables with different values set to the
+caption-side property:</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 204.  (xxx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left" width="100%">
@@ -7125,85 +7113,62 @@ caption-side property:
 </p>
 <!-- (./images/image204.jpg){width="5.729166666666667in" height="1.1458333333333333in"} -->
 
-  <b>caption-side</b>   :   top   while the one on the right    <b>caption-side</b>   :   bottom
-                               has                                                  
+<p>The table on the left has <b>caption-side</b>: top while the one on the right has 
+<b>caption-side</b>: bottom.</p>
 
-The table on the left has .
-
-<b>Value Description</b>
-
-<i>top</i> This is the default value. It places the caption above the
-table. bottom This value places the caption below the table.
+| <b>Value</b> | <b>Description</b> |
+|--------------|-----------------------------------|
+| <i>top</i>   | This is the default value. It places the caption above the table. |
+| bottom       | This value places the caption below the table. |
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ch26">Chapter 26: Transitions</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<b>Parameter Details</b>
+| <b>Parameter</b> | <b>Details</b> |
+|-----------------|---------------------------------------|
+| transition-property | The specific CSS property whose value change needs to be transitioned (or) all, if all the |
+|                     | <a href="https://www.w3.org/TR/css3-transitions/">transitionable properties</a> need to be transitioned. |
+| transition-duration | The duration (or period) in secdons (s) or milliseconds (ms) over which the transition |
+|                     | must take place. |
+| transition-timing-function | A function that describes how the intermediate values during the transition are |
+|                    | calculated. Commonly used values are ease, ease-in, ease-out, ease-in-out, linear, |
+|                    | cubic-bezier(), steps(). More information about the various timing functions can be |
+|                    | found in the <a href="https://www.w3.org/TR/css3-transitions/#transition-timing-function">W3C specs</a>. |
+| transition-delary  | The amount of time that must have elapsed before the transition can start. Can be |
+|                    | specified in seconds (s) or milliseconds (ms). |
 
-The specific CSS property whose value change needs to be transitioned
-(or) all, if all the transition-property &lbrack;&lbrack;transitionable
-properties&rbrack;&rbrack;(https://www.w3.org/TR/css3-transitions/#animatable-properties)
-need to be transitioned.
-
-The duration (or period) in seconds (s) or milliseconds (ms) over
-which the transition transition-duration must take place.
-
-  cubic-bezier                               (),        steps
-
-A function that describes how the intermediate values during the
-transition are calculated. Commonly used values are ease, ease-in,
-ease-out, ease-in-out, linear, transition-timing-function
-
-(). More information about the various timing functions can be
-
-found in the <a href="https://www.w3.org/TR/css3-transitions/#transition-timing-function">W3C specs</a>.
-
-The amount of time that must have elapsed before the transition can
-start. Can be transition-delay specified in seconds (s) or milliseconds (ms)
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch26-1">Section 26.1: Transition shorthand</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>CSS</h4>
 
-<pre><code>
-div {
+<pre><code>div {
   <b>width</b>: 150px;
   <b>height</b>: 150px;
   <b>background-color</b>: red;
   <b>transition</b>: background-color 1s;
 }
-div:
-hover {
+div:hover {
   <b>background-color</b>: green;
-}
-</code></pre>
+}</code></pre>
 
 <h4>HTML:</h4>
 
-<pre><code>
-<b>&lt;</b><b>div</b><b>&gt;</b>
-<b>&lt;</b><b>/div</b><b>&gt;</b>
-</code></pre>
+<pre><code><b>&lt;div&gt;&lt;/div&gt;</b></code></pre>
 
-This example will change the background color when the div is hovered
-the background-color change will last 1 second.
-
+<p>This example will change the background color when the div is hovered
+the background-color change will last 1 second.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch26-2">Section 26.2: cubic-bezier</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p>The cubic-bezier function is a transition timing function which is
+often used for custom and smooth transitions.</p>
 
-The cubic-bezier function is a transition timing function which is
-often used for custom and smooth transitions.
+<p><b>transition-timing-function</b>: cubic-bezier(0.1, 0.7, 1.0, 0.1);</p>
 
-  <b>transition-timing-function</b>   :   cubic-bezier    (   0.1   ,   0.7   ,   1.0   ,   0.1
+<p>The function takes four parameters:</p>
 
-);
-
-The function takes four parameters:
-
-  cubic-bezier             (   P1_x     ,   P1_y       ,   P2_x       ,   P2_y
-
-)
+<p>cubic-bezier(P1_x, P1_y, P2_x, P2_y)</p>
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 205.  (xxx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -7215,8 +7180,8 @@ The function takes four parameters:
 </p>
 <!-- (./images/image205.jpg){width="4.395833333333333in" height="2.2083333333333335in"} -->
 
-These parameters will be mapped to points which are part of a &lbrack;&lbrack;Bézier
-curve&rbrack;&rbrack;(https://en.wikipedia.org/wiki/B%C3%A9zier_curve#Cubic_B.C3.A9zier_curves):
+These parameters will be mapped to points which are part of a 
+<a href="https://en.wikipedia.org/wiki/B%C3%A9zier_curve#Cubic_B.C3.A9zier_curves">Bézier curve</a>:</p>
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 206.  (xxx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -7228,26 +7193,23 @@ curve&rbrack;&rbrack;(https://en.wikipedia.org/wiki/B%C3%A9zier_curve#Cubic_B.C3
 </p>
 <!-- (./images/image206.jpg){width="4.96875in" height="4.958333333333333in"} -->
 
-For CSS Bézier Curves, P0 and P3 are always in the same spot. P0 is at
+<p>For CSS Bézier Curves, P0 and P3 are always in the same spot. P0 is at
 (0,0) and P3 is at (1,1), which menas that the parameters passed to
-the cubic-bezier function can only be between 0 and 1.
+the cubic-bezier function can only be between 0 and 1.</p>
 
-If you pass parameters which aren&apos;t in this interval the function
-will default to a linear transition.
+<p>If you pass parameters which aren&apos;t in this interval the function
+will default to a linear transition.</p>
 
-Since cubic-bezier is the most flexible transition in CSS, you can
-translate all other transition timing function to cubic-bezier
-functions:
+<p>Since cubic-bezier is the most flexible transition in CSS, you can
+translate all other transition timing function to cubic-bezier functions:</p>
 
-cubic-bezier
+<pre><code>linear:cubic-bezier(0,0,1,1)
 
-linear: (0,0,1,1)
+ease-in: cubic-bezier(0.42, 0.0, 1.0, 1.0)
 
-  cubic-bezier               (   0.42     ,   0.0      ,   1.0      ,   1.0
-  cubic-bezier               (   0.0    ,   0.0      ,   0.58        ,   1.0
-  cubic-bezier              (   0.42     ,   0.0      ,   0.58       ,   1.0
+ease-out: cubic-bezier(0.0, 0.0, 0.58, 1.0)
 
-ease-in: ) ease-out: ) ease-in-out: )
+ease-in-out: cubic-bezier(0.42, 0.0, 0.58, 1.0)</code></pre>
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch26-3">Section 26.3: Transition (longhand)</h3>
@@ -7272,59 +7234,44 @@ div: hover {
 
 <b>&lt;div&gt;&lt;/div&gt;</b>
 
-<b>transition-property</b>: Specifies the CSS properties the transition
-effect is for. In this case, the div will expand both horizontally and
-vertically when hovered.
-
-<b>transition-duration</b>: Specifies the length of time a transition
-takes to complete. In the above example, the height and width
-transitions will take 1 second and 500 milliseconds respectively.
-
-<b>transition-timing-function</b>: Specifies the speed curve of the
-transition effect. A *linear* value indicates the transition will have
-the same speed from start to finish.
-
-<b>transition-delay</b>: Specifies the amount of time needed to wait
-before the transition effect starts. In this case, the height will
-start transitioning immediately, whereas the width will wait 1 second.
+<ul>
+  <li><b>transition-property</b>: Specifies the CSS properties the transition
+    effect is for. In this case, the div will expand both horizontally and
+    vertically when hovered.</li>
+  <li><b>transition-duration</b>: Specifies the length of time a transition
+    takes to complete. In the above example, the height and width transitions 
+	will take 1 second and 500 milliseconds respectively.</li>
+  <li><b>transition-timing-function</b>: Specifies the speed curve of the transition 
+    effect. A <i>linear</i> value indicates the transition will have the same speed from 
+	start to finish.</li>
+  <li><b>transition-delay</b>: Specifies the amount of time needed to wait before the 
+    transition effect starts. In this case, the height will start transitioning 
+	immediately, whereas the width will wait 1 second.</li>
+</ul>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ch27">Chapter 27: Animations</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
-| &gt;             |                                                      |
-| Transition |                                                      |
+<h4>Transition</h4>
+
 | Parameter     | Details                                            |
 |---------------|------------------------------------------------------|
 | property      | Either the CSS property to transition on, or all,  |
 |               | which specifies all transition-able properties.    |
 | duration      | Transition time, either in seconds or              |
 |               | milliseconds.                                      |
-| ti            | Specifies a function to define how intermediate    |
-| ming-function | values for properties are computed. Common values  |
+| timing-function | Specifies a function to define how intermediate    |
+|               | values for properties are computed. Common values  |
 |               | are ease, linear, and step-end. Check out the      |
-|               | &lbrack;&lbrack;easing function                                  |
-|               | cheatsheet&rbrack;&rbrack;(http://easings.net/) for  |
-|               | more.                                              |
+|               | <a href="http://easings.net/">easing function cheatsheet</a> for more. |
 | delay         | Amount of time, in seconds or milliseconds, to     |
 |               | wait before playing the animation.                 |
-|               |                                                      |
-|             |                                                      |
-| <span style="color:blue">&commat;keyframes</span> |                                                      |
 
-  <b>&lt;percentage</b>
+<h4>@commat;keyframes</h4>
 
-
-  10%                        ,        20%
-
-
-You can either specify a set time with a percentage value, or two
-percentage values, ie
-
-&lbrack; from &vert; to &vert; <b>&gt;</b> &rbrack;
-
-, for a period of time where the keyframe&apos;s set attributes are set.
-
-block Any amount of CSS attributes for the keyframe.
+&lbrack; from | to | <b>&lt;percentage&gt;</b> &rbrack; You can either specify a set time with a percentage value, or two percentage values, IE
+                                                        10%, 20%, for a period of time where the keyframe's set attributes are set.
+block 													Any amount of CSS attributes for the keyframe.														
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch27-1">Section 27.1: Animations with keyframes</h3>
