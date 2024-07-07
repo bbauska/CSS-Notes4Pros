@@ -4281,7 +4281,7 @@ clearfix reloaded</a> by T.J. Koblentx);</p>
 
 <h4>Clearfix also preventing top margin collapsing of contained floats</h4>
 
-<pre><code>/&ast;*
+<pre><code>/&ast;&ast;
  &ast; For modern browsers
  &ast; 1. The space content is one way to avoid an Opera bug when the
  &ast; contenteditable attribute is included anywhere else in the document.
@@ -4289,7 +4289,7 @@ clearfix reloaded</a> by T.J. Koblentx);</p>
  &ast; that are clearfixed.
  &ast; 2. The use of &apos;table&apos; rather than &apos;block&apos; is only necessary if using
  &ast; &apos;:before&apos; to contain the top-margins of child elements.
- &ast;/
+ &ast;&ast;/
 .cf:before,
 .cf:after {
   <b>content</b>: &quot; &quot;; /* 1 */
@@ -4312,7 +4312,7 @@ clearfix reloaded</a> by T.J. Koblentx);</p>
 /*&ast;
 * For IE 6/7 only
 * Include this rule to trigger hasLayout and contain floats.
-&ast;*/
+*&ast;/
 .cf {
   &ast;zoom: 1;
 }</code></pre>
@@ -6022,7 +6022,7 @@ color values&apos;.</a></p>
 <p>There are a lot of tools available on the Internet for looking up
 hexadecimal (or simply hex) color values.</p>
 
-<p>Search for &quot;<b>hex color palette<b>&quot; or &quot;</b>hex color picker&quot; with
+<p>Search for &quot;<b>hex color palette</b>&quot; or &quot;</b>hex color picker&quot; with
 your favorite web browser to find a bunch of options!</p>
 
 <p>Hex values always start with a pound sign (#), are up to six
@@ -6046,9 +6046,10 @@ number ranges from 00-FF which is equivalent to 0-255 in decimal and
   <b>color</b>: rgb(0&percnt;, 0&percnt;, 100&percnt;);
 }</code></pre>
 
-<b>Syntax</b>
+<h4><b>Syntax</b></h4>
 
 <pre><code>rgb(&lt;red&gt;, &lt;green&gt;, &lt;blue&gt;)</code></pre>
+
 
 |<b>Value</b> | <b>Description</b> |
 |-------------|--------------------|
@@ -6061,295 +6062,88 @@ number ranges from 00-FF which is equivalent to 0-255 in decimal and
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Similar to rgb() notation, but with an additional alpha (opacity) value.</p>
 
-.red
-
-{
-
-*/&ast; Opaque red &ast;/*
-
-<b>color</b>
-
-:
-
-rgba
-
-(
-
-255
-
-,
-
-0
-
-,
-
-0
-
-,
-
-1
-
-)
-
-;
-
+<pre><code>.red {
+  /* Opaque red */
+  <b>color</b>: rgba (255, 0, 0, 1);
 }
+.red-50p {
+  /* Half-translucent red. */
+  <b>color</b>: rgba(255, 0, 0, .5);
+}</code></pre>
 
-.red-50p
+<h4>Syntax</h4>
 
-{
+<pre><code>rgba(&lt;red&gt;, &lt;green&gt;, &lt;blue&gt;, &lt;alpha&gt;);</code></pre>
 
-*/&ast; Half-translucent red. &ast;/*
+| <b>Value</b> | <b>Description</b>
+|--------------|--------------------------------|
+| <b>&lt;red&gt;</b> | an integer from 0 - 255 or percentage from 0 - 100%. |
+| <b>&lt;green&gt;</b> | an integer from 0 - 255 or percentage from 0 - 100%. |
+| <b>&lt;blue&gt;</b> | an integer from 0 - 255 or percentage from 0 - 100%. |
+| <b>&lt;alpha&gt;</b> | a number from 0 - 1, where 0.0 is fully transparent and 1.0 is fully opaque. |
 
-<b>color</b>
-
-:
-
-rgba
-
-(
-
-255
-
-,
-
-0
-
-,
-
-0
-
-,
-
-.5
-
-)
-
-;
-
-}
-
-<b>Syntax</b>
-
-rgba
-
-(
-
-&lt;
-
-red
-
-&gt;
-
-,
-
-&lt;green
-
-&gt;
-
-,
-
-&lt;blue
-
-&gt;
-
-,
-
-&lt;alpha
-
-&gt;
-
-)
-
-;
-
-<b>Value Description</b>
-
-  <b>&lt;red</b>
-
-<b>&gt;</b> an integer from 0 - 255 or percentage from 0 - 100%
-
-  <b>&lt;green</b>
-
-<b>&gt;</b> an integer from 0 - 255 or percentage from 0 - 100%
-
-  <b>&lt;blue</b>
-
-<b>&gt;</b> an integer from 0 - 255 or percentage from 0 - 100%
-
-  <b>&lt;alpha</b>
-
-<b>&gt;</b> a number from 0 - 1, where 0.0 is fully transparent and 1.0 is fully opaque
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch18-6">Section 18.6: hsl() Notation</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p>HSL stands for <b>hue</b> (&quot;which color&quot;), <b>saturation</b> (&quot;how much
+color&quot;) and <b>lightness</b> (&quot;how much white&quot;).</p>
 
-HSL stands for <b>hue</b> (&quot;which color&quot;), <b>saturation</b> (&quot;how much
-color&quot;) and <b>lightness</b> (&quot;how much white&quot;).
->
-Hue is represented as an angle from 0° to 360° (without units), while
-saturation and lightness are represented as percentages.
+<p>Hue is represented as an angle from 0° to 360° (without units), while
+saturation and lightness are represented as percentages.</p>
 
-p
-
-{
-
-<b>color</b>
-
-:
-
-hsl
-
-(
-
-240
-
-,
-
-100
-
-&percnt;
-
-,
-
-50
-
-&percnt;
-
-)
-
-;
-
-*/&ast; Blue &ast;/*
-
-}
+<pre><code>p {
+  <b>color</b>: hsl(240, 100&percnt;, 50&percnt;); /* Blue */
+}</code></pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 189.  (xxx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 189. saturation and hue (124) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="center" width="100%">
 <img src="./images/image189.jpg"
   style="width:75%"
-  title=""
-  alt="." />
+  title="Saturation and Hue"
+  alt="Saturation and Hue." />
 </p>
 <!-- [image189.jpg 7.48 x 5.61](img src="./images/image189.jpg") -->
 <!-- {width="7.48037510936133in" height="5.610277777777778in"} -->
 
-<b>Syntax</b>
-<b>color</b>
-:
-hsl
-(
-&lt;
-hue
-&gt;
-,
-&lt;saturation
-&gt;
-&percnt;
-,
-&lt;lightness
-&gt;
-&percnt;
-)
-;
-<b>Value Description</b>
-  <b>&lt;hue</b>
+<h4>Syntax</h4>
 
+<pre><code><b>color</b>: hsl(&lt;hue&gt;, &lt;saturation&gt;&percnt;, &lt;lightness&gt;&percnt;);</code></pre>
 
-specified in degrees around the color wheel (without units), where 0°
-is red, 60° is yellow, 120° is
+| <b>Value</b> | <b>Description</b> |
+|----------------|-------------------------------------------|
+| <b>&lt;hue</b> | specified in degrees around the color wheel (without units), where 0° is red, 60° is yellow, 120° is |
+|                | green, 180° is cyan, 240° is blue, 300° is magenta, and 360° is red. |
+| <b>&lt;saturation</b> | specified in percentage where 0% is fully desaturated (grayscale) and 100% is fully saturated (vividly |
+|               | colored).
+| <b>&lt;lightness&gt; | specified in percentage where 0% is fully blakc and 100% is fully white. |
 
-  <b>&lt;saturation</b>
+<h4>Notes</h4>
 
-<b>&gt;</b> green, 180° is cyan, 240° is blue, 300° is magenta, and 360° is
-red specified in percentage where 0% is fully desaturated (grayscale)
-and 100% is fully saturated (vividly <b>&gt;</b> colored)
-
-  <b>&lt;lightness</b>
-
-
-<b>&gt;</b> specified in percentage where 0% is fully black and 100% is
-fully white
-
-<b>Notes</b>
-
-A saturation of 0% always produces a grayscale color; changing the hue
-has no effect.
-
-A lightness of 0% always produces black, and 100% always produces
-white; changing the hue or saturation has no effect.
-
+<ul>
+  <li>A saturation of 0% always produces a grayscale color; changing the hue has no effect.</li>
+  <li>A lightness of 0% always produces black, and 100% always produces white; changing the hue or saturation
+    has no effect.</li>
+</ul>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch18-7">Section 18.7: hsla() Notation</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p>Similar to hsl() notation, but with an added alpha (opacity) value.</p>
 
-Similar to hsl() notation, but with an added alpha (opacity) value.
+<pre><code>hsla(240, 100%, 50%, 0) /* transparent */
+hsla(240, 100%, 50%, 0.5) /* half-translucent blue */
+hsla(240, 100%, 50%, 1) /* fully opaque blue */</code></pre>
 
-hsla(240, 100%, 50%, 0) */&ast; transparent &ast;/* hsla(240, 100%, 50%,
-0.5) */&ast; half-translucent blue &ast;/* hsla(240, 100%, 50%, 1) */&ast;
-fully opaque blue &ast;/*
+<h4>Syntax</h4>
 
-<b>Syntax</b>
+<pre><code>hsla(&lt;hue&gt;, &lt;saturation&gt;&percnt;, &lt;lightness&gt;&percnt;, &lt;alpha&gt;);</code></pre>
 
-hsla
-
-(
-
-&lt;
-
-hue
-
-&gt;
-
-,
-
-&lt;saturation
-
-&gt;
-
-&percnt;
-
-,
-
-&lt;lightness
-
-&gt;
-
-&percnt;
-
-,
-
-&lt;alpha
-
-&gt;
-
-)
-
-;
-
-<b>Value Description</b>
-
-  <b>&lt;hue</b>
-
-
-specified in degrees around the color wheel (without units), where 0°
-is red, 60° is yellow, 120° is
-
-<b>&gt;</b> green, 180° is cyan, 240° is blue, 300° is magenta, and 360° is
-red
-
-  <b>&lt;saturation</b>
-
-  <b>&lt;lightness</b>
-
-<b>&gt;</b> percentage where 0% is fully desaturated (grayscale) and 100%
-is fully saturated (vividly colored) <b>&gt;</b> percentage where 0% is
-fully black and 100% is fully white
-
-  <b>&lt;alpha</b>
-
-<b>&gt;</b> a number from 0 - 1 where 0 is fully transparent and 1 is fully
-opaque
+| <b>Value</b> | <b>Description</b> |
+|--------------|-------------------------------------------------|
+| <b>&lt;hue&gt;</b> | specified in degrees around the color wheel (without units), where 0° is red, 60° is yellow, 120° is |
+|                | green, 180° is cyan, 240° is blue, 300° is magenta, and 360° is red. |
+| <b>&lt;saturation&gt;</b> | percentage where 0% is fully desaturated (grayscale) and 100% is fully saturated (vividly colored) |
+| <b>&lt;lightness&gt;</b> | percentage where 0% is fully black and 100% is fully white. |
+} <b>&lt;alpha&gt;</b> | a number from 0 - 1 where 0 is fully transparent and 1 is fully opaque. |
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ch19">Chapter 19: Opacity</h2>
@@ -6361,91 +6155,39 @@ can be anywhere from 0.0 (transparent) to 1.0 (opaque).
 
 <h4>Example Usage</h4>
 
-<b>&lt;</b>
+<pre><code>
+<b>&lt;</b><b>div</b> style=&quot;opacity:0.8;&quot;<b>&gt;</b>
+  This is a partially transparent element
+<b>&lt;</b><b>/div</b><b>&gt;</b>
+</code></pre>
 
-<b>div</b>
-
-style
-
-=
-
-&quot;opacity:0.8;&quot;
-
-<b>&gt;</b>
-
-This is a partially transparent element
-
-<b>&lt;</b>
-
-<b>/div</b>
-
-<b>&gt;</b>
-
-<b>Property Value Transparency</b>
-
-  <b>opacity</b>: 1.0;
-
-
-> Opaque
-
-  <b>opacity</b>: 0.75;
-
-
-> 25% transparent (75% Opaque)
-
-  <b>opacity</b>: 0.5;
-
-
-> 50% transparent (50% Opaque)
-
-  <b>opacity</b>: 0.25;
-
-  <b>opacity</b>: 0.0;
-
-> 75% transparent (25% Opaque) Transparent
+| <b>Property Value</b> | <b>Transparency</b> |
+|-----------------------|----------------------|
+| <b>opacity</b>: 1.0; | Opaque. |
+| <b>opacity</b>: 0.75; | 25% transparent (75% Opaque). |
+| <b>opacity</b>: 0.5; | 50% transparent (50% Opaque) |
+| <b>opacity</b>: 0.25; | 75% transparent (25% Opaque) |
+| <b>opacity</b>: 0.0; | Transparent |
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch19-2">Section 19.2: IE Compatibility for &apos;opacity&apos;</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p>To use opacity in all versions of IE, the order is:</p>
 
-To use opacity in all versions of IE, the order is:
-
-<pre><code>
-.transparent-element {
-/* for IE 8 & 9 */
--ms-filter
-:
-&quot;progid:DXImageTransform.Microsoft.Alpha(Opacity=60)&quot;
-;
-// IE8
-/ works in IE 8 & 9 too, but also 5, 6, 7 */
-<b>filter</b>
-:
-alpha
-(
-opacity
-=
-60
-)
-;
-// IE
-5
-&minus;
-7
-/* Modern Browsers */
-<b>opacity</b>
-:
-0.6
-;
-}
-</code></pre>
-
+<pre><code>.transparent-element {
+  /* for IE 8 & 9 */
+  -ms-filter: &quot;progid:DXImageTransform.Microsoft.Alpha(Opacity=60)&quot;; // IE8
+  /* works in IE 8 & 9 too, but also 5, 6, 7 */
+  <b>filter</b>: alpha(opacity=60);  // IE 5&minus;7
+  /* Modern Browsers */
+  <b>opacity</b>: 0.6;
+}</code></pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ch20">Chapter 20: Length Units</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
-<b>Unit Description</b>
-
+<b>Unit</b> | <b>Description</b>
+|-----------|-------------------------------------------------|
 | &percnt; | Define sizes in terms of parent objects or current object dependent on property |
 | em | Relative to the font-size of the element (2em means 2 times the size of the current font) |
 | rem | Relative to font-size of the root element |
@@ -8675,14 +8417,14 @@ all of the available properties/parameters:
 
 <b>animation</b>: 3s ease-in 1s 2 reverse both paused slidein;
 
-*/&ast; duration &vert; timing-function &vert; delay &vert; iteration-count &vert;
-direction &vert; fill-mode &vert; playstate &vert; name &ast;/*
+/* duration &vert; timing-function &vert; delay &vert; iteration-count &vert;
+direction &vert; fill-mode &vert; playstate &vert; name */
 
 Our second example is a little more simple, and shows that some
 properties can be omitted:
 
-<b>animation</b>: 3s linear 1s slidein; */&ast; duration &vert; timing-function
-&vert; delay &vert; name &ast;/*
+<b>animation</b>: 3s linear 1s slidein; /* duration &vert; timing-function
+&vert; delay &vert; name */
 
 Our third example shows the most minimal declaration. Note that the
 animation-name and animation-duration must be declared:
@@ -8699,7 +8441,7 @@ slidein
 
 ;
 
-*/&ast; duration &vert; name &ast;/*
+/* duration &vert; name */
 
 It&apos;s also worth mentioning that when using the animation shorthand
 the order of the properties makes a difference. Obviously the browser
@@ -9424,7 +9166,7 @@ rotateZ
 deg
 )
 ;
-*/&ast; presentational &ast;/*
+/* presentational */
 <b>background-image</b>
 :
 linear-gradient
@@ -11415,7 +11157,7 @@ px
 
 ;
 
-*/&ast; purely for demo &ast;/*
+/* purely for demo */
 
 }
 
@@ -11550,30 +11292,30 @@ li
 
 > Specific for <b>&gt;</b>):
 >
-> <b>list-style</b>: disc; */&ast; A filled circle (default) &ast;/*
-> <b>list-style</b>: circle; */&ast; A hollow circle &ast;/* <b>list-style</b>:
-> square; */&ast; A filled square &ast;/* <b>list-style</b>: &apos;-&apos;; */&ast; any
-> string &ast;/*
+> <b>list-style</b>: disc; /* A filled circle (default) */
+> <b>list-style</b>: circle; /* A hollow circle */ <b>list-style</b>:
+> square; /* A filled square */ <b>list-style</b>: &apos;-&apos;; /* any
+> string */
 
 <b>&lt;li</b>   <b>&gt;</b> tags within an ordered list (                      <b>&lt;ol</b>
 
 > Specific for <b>&gt;</b>):
 
-<b>list-style</b>: decimal; */&ast; Decimal numbers beginning with 1 (default)
-&ast;/* <b>list-style</b>: decimal-leading-zero;*/&ast; Decimal numbers padded by
-initial zeros (01, 02, 03,* ... *10) &ast;/* <b>list-style</b>: lower-roman;
-*/&ast; Lowercase roman numerals (i., ii., iii., iv., &period;..) &ast;/*
-<b>list-style</b>: upper-roman; */&ast; Uppercase roman numerals (I., II.,
-III., IV., &period;..) &ast;/* <b>list-style-type</b>: lower-greek; */&ast; Lowercase
-roman letters (*α*.,* β*.,* γ*.,* δ*., &period;..) &ast;/* <b>list-style-type</b>:
-lower-alpha; */&ast; Lowercase letters (a., b., c., d., &period;..) &ast;/*
-<b>list-style-type</b>: lower-latin; */&ast; Lowercase letters (a., b., c.,
-d., &period;..) &ast;/* <b>list-style-type</b>: upper-alpha; */&ast; Uppercase letters
-(A., B., C., D., &period;..) &ast;/* <b>list-style-type</b>: upper-latin; */&ast;
-Uppercase letters (A., B., C., D., &period;..) &ast;/* Non-specific:
+<b>list-style</b>: decimal; /* Decimal numbers beginning with 1 (default)
+*/ <b>list-style</b>: decimal-leading-zero;/* Decimal numbers padded by
+initial zeros (01, 02, 03,* ... *10) */ <b>list-style</b>: lower-roman;
+/* Lowercase roman numerals (i., ii., iii., iv., &period;..) */
+<b>list-style</b>: upper-roman; /* Uppercase roman numerals (I., II.,
+III., IV., &period;..) */ <b>list-style-type</b>: lower-greek; /* Lowercase
+roman letters (*α*.,* β*.,* γ*.,* δ*., &period;..) */ <b>list-style-type</b>:
+lower-alpha; /* Lowercase letters (a., b., c., d., &period;..) */
+<b>list-style-type</b>: lower-latin; /* Lowercase letters (a., b., c.,
+d., &period;..) */ <b>list-style-type</b>: upper-alpha; /* Uppercase letters
+(A., B., C., D., &period;..) */ <b>list-style-type</b>: upper-latin; /*
+Uppercase letters (A., B., C., D., &period;..) */ Non-specific:
 
-> <b>list-style</b>: none; */&ast; No visible list marker &ast;/* <b>list-style</b>:
-> inherit; */&ast; Inherits from parent &ast;/*
+> <b>list-style</b>: none; /* No visible list marker */ <b>list-style</b>:
+> inherit; /* Inherits from parent */
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ch35">Chapter 35: Counters</h2>
@@ -11942,9 +11684,9 @@ for the latest browser support.</p>
 > Creates an image representing a gradient of colors radiating from the
 > center of the gradient
 >
-> radial-gradient(red, orange, yellow) */&ast;A gradient coming out from
+> radial-gradient(red, orange, yellow) /*A gradient coming out from
 > the middle of the gradient, red at the center, then orange, until it
-> is finally yellow at the edges&ast;/*
+> is finally yellow at the edges*/
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch36-5">Section 36.5: linear-gradient() function</h3>
@@ -12560,7 +12302,7 @@ content
 
 }
 
-*/&ast; Other Styles &ast;/*
+/* Other Styles */
 
 body
 
@@ -14264,7 +14006,7 @@ webkit-column-count
 
 ;
 
-*/&ast; Chrome, Safari, Opera &ast;/*
+/* Chrome, Safari, Opera */
 
 &minus;
 
@@ -14276,7 +14018,7 @@ moz-column-count
 
 ;
 
-*/&ast; Firefox &ast;/*
+/* Firefox */
 
 <b>column-count</b>
 
@@ -15320,7 +15062,7 @@ at
 &percnt;
 )
 ;
-*/&ast; refer remarks before usage &ast;/*
+/* refer remarks before usage */
 }
 </code></pre>
 
@@ -15404,7 +15146,7 @@ polygon
 &percnt;
 )
 ;
-*/&ast; refer remarks before usage &ast;/*
+/* refer remarks before usage */
 }
 </code></pre>
 
@@ -15511,7 +15253,7 @@ div
 
 {
 
-*/&ast; check remarks before usage &ast;/*
+/* check remarks before usage */
 
 <b>height</b>
 
@@ -15862,7 +15604,7 @@ flex
 
 {
 
-*/&ast; Flexbox is available, so use it &ast;/*
+/* Flexbox is available, so use it */
 
 .my-container
 
@@ -15944,7 +15686,7 @@ px
 
 {
 
-*/&ast; Probably do some fancy 3d stuff here &ast;/*
+/* Probably do some fancy 3d stuff here */
 
 }
 
@@ -15984,8 +15726,8 @@ table-cell
 
 {
 
-*/&ast; Will be used if the browser supports flexbox or display: table-cell
-&ast;/*
+/* Will be used if the browser supports flexbox or display: table-cell
+*/
 
 }
 
@@ -16021,8 +15763,8 @@ translate
 
 {
 
-*/&ast; Will &ast;not&ast; be used if the browser supports -webkit-transform:
-translate(&period;..) &ast;/*
+/* Will &ast;not&ast; be used if the browser supports -webkit-transform:
+translate(&period;..) */
 
 }
 
@@ -16113,7 +15855,7 @@ px
 
 {
 
-*/&ast; &period;.. &ast;/*
+/* &period;.. */
 
 }
 
@@ -16496,7 +16238,7 @@ px
 
 ;
 
-*/&ast; does not create block formatting context &ast;/*
+/* does not create block formatting context */
 
 }
 
@@ -16520,7 +16262,7 @@ hidden
 
 ;
 
-*/&ast; creates block formatting context &ast;/*
+/* creates block formatting context */
 
 }
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -17036,7 +16778,7 @@ px
 
 ;
 
-*/&ast; set height &ast;/*
+/* set height */
 
 <b>line-height</b>
 
@@ -17048,7 +16790,7 @@ px
 
 ;
 
-*/&ast; set line-height equal to the height &ast;/*
+/* set line-height equal to the height */
 
 <b>vertical-align</b>
 
@@ -17058,8 +16800,8 @@ middle
 
 ;
 
-*/&ast; works without this rule, but it is good having it explicitly set
-&ast;/*
+/* works without this rule, but it is good having it explicitly set
+*/
 
 }
 
@@ -18009,7 +17751,7 @@ CSS&rbrack;&rbrack;(http://meyerweb.com/eric/tools/css/reset/)
 > Normalize CSS on the other and deals with many of these separately.
 > The following is a sample from the version (v4.2.0) of the code.
 
-*/&ast;&ast;*
+/**/
 
 *&ast; 1. Change the default font family in all browsers (opinionated).*
 
@@ -18018,12 +17760,12 @@ CSS&rbrack;&rbrack;(http://meyerweb.com/eric/tools/css/reset/)
 *&ast; 3. Prevent adjustments of font size after orientation changes in IE
 and iOS.*
 
-*&ast;/*
+**/
 
-*/&ast; Document*
+/* Document*
 
 *==========================================================================
-&ast;/*
+*/
 
 html
 
@@ -18037,7 +17779,7 @@ sans-serif
 
 ;
 
-*/&ast; 1 &ast;/*
+/* 1 */
 
 <b>line-height</b>
 
@@ -18047,7 +17789,7 @@ sans-serif
 
 ;
 
-*/&ast; 2 &ast;/*
+/* 2 */
 
 -ms-text-size-adjust
 
@@ -18059,7 +17801,7 @@ sans-serif
 
 ;
 
-*/&ast; 3 &ast;/*
+/* 3 */
 
 -webkit-text-size-adjust
 
@@ -18071,20 +17813,20 @@ sans-serif
 
 ;
 
-*/&ast; 3 &ast;/*
+/* 3 */
 
 }
 
-*/&ast; Sections*
+/* Sections*
 
 *==========================================================================
-&ast;/*
+*/
 
-*/&ast;&ast;*
+/**/
 
 *&ast; Remove the margin in all browsers (opinionated).*
 
-*&ast;/*
+**/
 
 body
 
@@ -18100,11 +17842,11 @@ body
 
 }
 
-*/&ast;&ast;*
+**/
 
-*&ast; Add the correct display in IE 9-.*
+/* Add the correct display in IE 9-.
 
-*&ast;/*
+*/
 
 article
 
@@ -18140,14 +17882,10 @@ block
 
 }
 
-*/&ast;&ast;*
-
-*&ast; Correct the font size and margin on &apos;h1&apos; elements within
-&apos;section&apos; and*
-
-*&ast; &apos;article&apos; contexts in Chrome, Firefox, and Safari.*
-
-*&ast;/*
+/**
+  Correct the font size and margin on &apos;h1&apos; elements within &apos;section&apos; and
+  &apos;article&apos; contexts in Chrome, Firefox, and Safari.
+**/
 
 h1
 
