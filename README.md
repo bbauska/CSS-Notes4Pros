@@ -6454,10 +6454,10 @@ div::before {
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~ section 21-1. before, div element, after (131) ~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left" width="100%">
-<img src="./images/section21-1.png"
+<img src="./images/section-21-1.png"
   style="width:15%"
-  title="Section 21-1. Before div element, after"
-  alt="Section 21-1. Before div element, after." />
+  title="Section 21-1. Before, div element, after"
+  alt="Section 21-1. Before, div element, after." />
 </p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch21-2">Section 21.2: Pseudo-Elements in Lists</h3>
@@ -6585,7 +6585,7 @@ div #div3 {
 |--------------|---------------------------------------------|
 | number       | An integer value. A higher number is higher on the z-index stack. 0 is the default value. Negative |
 |              | values are allowed. |
-} auto         | Gives the element the same stacking context as its parent. (<b>Default</b>) |
+| auto         | Gives the element the same stacking context as its parent. (<b>Default</b>) |
 
 <h4><b>Remarks</b></h4>
 
@@ -6731,7 +6731,7 @@ elements, it does not restrict the type of elements it may contain.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ section 23-1-b.  (xxx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left" width="100%">
 <img src="./images/section-23-1-b.png"
-  style="width:25%"
+  style="width:15%"
   title="Hello world! This is an example!"
   alt="Hello world! This is an example!" />
 </p>
@@ -6799,7 +6799,7 @@ li {
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ section 23-1-d.  (xxx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left" width="100%">
 <img src="./images/section-23-1-d.png"
-  style="width:40%"
+  style="width:60%"
   title="3 vertical rectangles; First Element, Second Element, Third Element"
   alt="3 vertical rectangles; First Element, Second Element, Third Element." />
 </p>
@@ -6844,16 +6844,13 @@ not be displayed at all.</p>
   <b>display</b>: none;
 }</code></pre>
 
-<p>When an element has been set to be display;none; the browser ignores every other
+<p>When an element has been set to be <b>display</b>:none; the browser ignores every other
 layout property for that specific element (both position and float). No box will 
 be rendered for that element and its existence in html does not affect the position 
 of following elements.</p>
 
-<b>visibility</b>: hidden
-
-
 <p>Note that this is different from setting the visibility property to
-hidden. Setting ; for an element would not display the element on the
+hidden. Setting <b>visibility</b>: hidden; for an element would not display the element on the
 page but the element would still take up the space in the rendering
 process as if it would be visible. This will therefore affect how
 following elements are displayed on the page.</p>
@@ -6910,9 +6907,9 @@ divide a web page content into rows and columns in an easy way.</p>
 <h3 id="ch24-1">Section 24.1: Basic Example</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Property Possible Values</h4>
-display grid / inline-grid
+<p>display grid / inline-grid</p>
 
-The CSS Grid is defined as a display property. It applies to a parent element and its immediate children only.
+<p>The CSS Grid is defined as a display property. It applies to a parent element and its immediate children only.</p>
 
 <p>Consider the following markup:</p>
 
@@ -7025,8 +7022,6 @@ empty-cells property:
 </p>
 <!-- [imag201.jpg](./images/image201.jpg){width="5.708333333333333in" height="0.8854166666666666in"} -->
 
-<b>empty-cells</b>   :   show   while the one on the right has  <b>empty-cells</b>   :   hide
-
 <p>The table on the left has <b>empty-cells</b>: show while the one on the right has 
 <b>empty-cells</b>: hide. The former does display the empty cells whereas the latter does not.</p>
 
@@ -7124,6 +7119,7 @@ caption-side property:</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ch26">Chapter 26: Transitions</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+
 | <b>Parameter</b> | <b>Details</b> |
 |-----------------|---------------------------------------|
 | transition-property | The specific CSS property whose value change needs to be transitioned (or) all, if all the |
@@ -7267,11 +7263,11 @@ div: hover {
 | delay         | Amount of time, in seconds or milliseconds, to     |
 |               | wait before playing the animation.                 |
 
-<h4>@commat;keyframes</h4>
+<h4>@keyframes</h4>
 
-&lbrack; from | to | <b>&lt;percentage&gt;</b> &rbrack; You can either specify a set time with a percentage value, or two percentage values, IE
-                                                        10%, 20%, for a period of time where the keyframe's set attributes are set.
-block 													Any amount of CSS attributes for the keyframe.														
+| &lbrack; from | to | <b>&lt;percentage&gt;</b> &rbrack; | You can either specify a set time with a percentage value, or two percentage values, IE |
+|                                                       | 10%, 20%, for a period of time where the keyframe's set attributes are set. |
+| block 												| Any amount of CSS attributes for the keyframe. |
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch27-1">Section 27.1: Animations with keyframes</h3>
@@ -7285,81 +7281,37 @@ keyframe, to define more complex animations.
 <p>In this example, we&apos;ll make a basic background animation that cycles
 between all colors.</p>
 
+<pre><code>
 <span style="color:blue">&commat;keyframes</span> rainbow-background {
 |--------:|------------------------------|
-| 0&percnt; | {<b>background-color</b>: #ff0000; } |
-| 8.333&percnt; | {<span style="color:blue">
-
-  <b>background-color</b>: #ff8000;
-}
-16.667&percnt; {
-  <b>background-color</b>: #ffff00;
-}
-25.000&percnt; {
-  <b>background-color</b>: #80ff00;
-}
-33.333&percnt; {
-  <b>background-color</b>: #00ff00;
-}
-41.667&percnt; {
-  <b>background-color</b>: #00ff80;
-}
-50.000&percnt; {
-  <b>background-color</b>: #00ffff;
-}
-58.333&percnt; {
-  <b>background-color</b>: #0080ff;
-}
-66.667&percnt; {
-  <b>background-color</b>: #0000ff;
-}
-75.000&percnt; {
-  <b>background-color</b>: #8000ff;
-}
-83.333&percnt; {
-  <b>background-color</b>: #ff00ff;
-}
-91.667&percnt; {
-  <b>background-color</b>: #ff0080;
-}
-100.00&percnt; {
-  <b>background-color</b>: #ff0000;
-}
-
+| 0&percnt; | { <b>background-color</b>: #ff0000; } |
+| 8.333&percnt; | { <b>background-color</b>: #ff8000; } |
+| 16.667&percnt; | { <b>background-color</b>: #ffff00; } |
+| 25.000&percnt; | { <b>background-color</b>: #80ff00; } |
+| 33.333&percnt; | { <b>background-color</b>: #00ff00; } |
+| 41.667&percnt; | { <b>background-color</b>: #00ff80; } |
+| 50.000&percnt; | { <b>background-color</b>: #00ffff; } |
+| 58.333&percnt; | { <b>background-color</b>: #0080ff; } |
+| 66.667&percnt; | { <b>background-color</b>: #0000ff; } |
+| 75.000&percnt; | { <b>background-color</b>: #8000ff; } |
+| 83.333&percnt; | { <b>background-color</b>: #ff00ff; } |
+| 91.667&percnt; | { <b>background-color</b>: #ff0080; } |
+| 100.00&percnt; | { <b>background-color</b>: #ff0000; } |
 }
 .RainbowBackground {
   <b>animation</b>: rainbow-background 5s infinite;
-}
-</code></pre>
+}</code></pre>
 
 <p><a href="https://jsfiddle.net/s9m3od3p/6/">View Result</a>.</p>
 
 There&apos;s a few different things to note here. First, the actual
 <span style="color:blue">&commat;</span>keyframes syntax.
 
-<span style="color:blue">&commat;</span>keyframes
-
-rainbow-background
-
-{
+<pre><code><span style="color:blue">&commat;</span>keyframes rainbow-background{</code></pre>
 
 This sets the name of the animation to rainbow-background.
 
-0
-
-&percnt;
-
-{
-
-<b>background-color</b>
-
-:
-
-#ff0000
-
-;
-
-}
+<pre><code>0&percent;  { <b>background-color</b>: #ff0000; }</code>></pre> 
 
 This is the definition for a keyframe within the animation. The first
 part, the 0% in the case, defines where the keyframe is during the
@@ -7371,33 +7323,24 @@ setting the next background color at 8.333%, the animation will
 smoothly take 8.333% of the time to transition between those
 keyframes.
 
-.RainbowBackground {
+<pre><code>.RainbowBackground {
   <b>animation</b>: rainbow-background 5s infinite;
-}
+}</code></pre>
 
-This code attaches our animation to all elements which have the
-.RainbowBackground class.
+This code attaches our animation to all elements which have the .RainbowBackground class.
 
-The actual animation property takes the following arguments.
+<p>The actual animation property takes the following arguments;</p>
 
-<b>animation-name</b>: The name of our animation. In this case,
-rainbow-background <b>animation-duration</b>?: How long the animation will
-take, in this case 5 seconds.
-
-<b>animation-iteration-count (Optional)</b>: The number of times the
-animation will loop. In this case, the animation will go on
-indefinitely. By default, the animation will play once.
-
-<b>animation-delay (Optional)</b>: Specifies how long to wait before the
-animation starts. It defaults to 0 seconds, and can take negative
-values. For example, -2s would start the animation 2 seconds into its
-loop.
-
-<b>animation-timing-function (Optional)</b>: Specifies the speed curve of
-the animation. It defaults to ease, where the animation starts slow,
-gets faster and ends slow.
-
-<pre><code><b>background-color</b>: #ff0000</code></pre>
+<ul>
+  <li><b>animation-name</b>: The name of our animation. In this case, rainbow-background.</li>
+  <li><b>animation-duration</b>: How long the animation will take, in this case 5 seconds.</li>
+  <li><b>animation-iteration-count (Optional)</b>: The number of times the animation will loop. In this case, 
+    the animation will go on indefinitely. By default, the animation will play once.</li>
+  <li><b>animation-delay (Optional)</b>: Specifies how long to wait before the animation starts. It defaults to 0 seconds, 
+    and can take negative values. For example, -2s would start the animation 2 seconds into its loop.</li>
+  <li><b>animation-timing-function (Optional)</b>: Specifies the speed curve of the animation. It defaults to ease, 
+    where the animation starts slow, gets faster and ends slow.</li>
+</ul>
 
 <p>In this particular example, both the 0% and 100% keyframes specify {;
 }. Wherever two or more keyframes share a state, one may specify them in a single
@@ -7406,16 +7349,19 @@ with this single line:</p>
 
 <pre><code>0&percnt;, 100&percnt; {
   <b>background-color</b>: #ff0000;
-}
-  <b>Cross-browser compatibility</b>
-For older WebKit-based browsers, you&apos;ll need to use the vendor prefix
+}</code></pre>
+
+<h4>Cross-browser compatibility</h4>
+
+<p>For older WebKit-based browsers, you&apos;ll need to use the vendor prefix
 on both the &commat;keyframes declaration and the animation property, like
-so:
-  <b>@-webkit-keyframes</b> {}&minus;webkit-animation: &period;..</code></pre>
+so:</p>
+
+<pre><code><b>@-webkit-keyframes</b>{}
+&minus;webkit-animation: &period;..</code></pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch27-2">Section 27.2: Animations with the transition property</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-
 Useful for simple animations, the CSS transition property allows
 number-based CSS properties to animate between states.
 
