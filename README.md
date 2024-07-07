@@ -6603,7 +6603,7 @@ Mozilla Developer Network</a>.</p>
 <h3 id="ch22-2">Section 22.2: Absolute Position</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>When absolute positioning is used the box of the desired element is taken out 
-of the <i>Normal Flow<i> and it no longer affects the position of the other elements 
+of the <i>Normal Flow</i> and it no longer affects the position of the other elements 
 on the page. Offset properties:</p>
 
 1.  top
@@ -6708,8 +6708,14 @@ horizontally with other elements of the same type and may not contain
 other non-inline elements.</p>
 
 <b>&lt;</b><b>span</b><b>&gt;</b>This is some <b>&lt;</b><b>b</b><b>&gt;</b>bolded<b>&lt;</b><b>/b</b><b>&gt;</b> text!<b>&lt;</b><b>/span</b><b>&gt;</b>
-
-<Image 298? This is some bolded text!>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ section 23-1-a.  (xxx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p align="left" width="100%">
+<img src="./images/section-23-1-a.png"
+  style="width:25%"
+  title="This is some bolded text"
+  alt="This is some bolded text." />
+</p>
 
 <p>As demonstrated above, two inline elements, <b>&gt;</b>, are in-line (hence
 the name) and do not break the flow of the text.</p>
@@ -6721,8 +6727,14 @@ element. It starts with a new line and, in contrast to inline
 elements, it does not restrict the type of elements it may contain.</p>
 
 <pre><code><b>&lt;</b><b>div</b><b>&gt;</b>Hello world!<b>&lt;</b><b>/div</b><b>&gt;</b><b>&lt;</b><b>div</b><b>&gt;</b>This is an example!<b>&lt;</b><b>/div</b><b>&gt;</b></code></pre>
-<image Hello world!
-This is an example>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ section 23-1-b.  (xxx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p align="left" width="100%">
+<img src="./images/section-23-1-b.png"
+  style="width:25%"
+  title="Hello world! This is an example!"
+  alt="Hello world! This is an example!" />
+</p>
 
 <p>The div element is block-level by default, and as shown above, the two
 block elements are vertically stacked and, unlike the inline elements,
@@ -6740,35 +6752,34 @@ as a result are affected by rules controlling the flow of text such as
 text-align. By default they are also shrunk to the the smallest size
 possible to accommodate their content.</p>
 
-*&lt;!&minus;-*
-*Inline: unordered list*
-*&minus;-&gt;*
-<b>&lt;</b><b>style</b><b>&gt;</b>
+<pre><code>&lt;!&minus;-Inline: unordered list&minus;-&gt;
+<b>&lt;style&gt;</b>
 li {
-display : inline;
-background : lightblue;
-padding:10px;
-border-width:2px;
-border-color:black;
-border-style:solid;
+  display : inline;
+  background : lightblue;
+  padding:10px;
+  border-width:2px;
+  border-color:black;
+  border-style:solid;
 }
-<b>&lt;</b><b>/style</b><b>&gt;</b>
-<b>&lt;</b><b>ul</b><b>&gt;</b>
-<b>&lt;</b><b>li</b><b>&gt;</b>
-First Element
-<b>&lt;</b><b>/li</b><b>&gt;</b>
-<b>&lt;</b><b>li</b><b>&gt;</b>
-Second Element
-<b>&lt;</b><b>/li</b><b>&gt;</b>
-<b>&lt;</b><b>li</b><b>&gt;</b>
-Third Element
-<b>&lt;</b><b>/li</b><b>&gt;</b>
-<b>&lt;</b><b>/ul</b><b>&gt;</b>
+<b>&lt;/style&gt;</b>
 
-&lt;!&minus;-
-block: unordered list
-&minus;-
-<b>&gt;</b><b>&lt;</b><b>style</b><b>&gt;</b>
+<b>&lt;ul&gt;</b>
+  <b>&lt;li&gt;</b>First Element <b>&lt;/li&gt;</b>
+  <b>&lt;li&gt;</b>Second Element <b>&lt;/li&gt;</b>
+  <b>&lt;li&gt;</b>Third Element <b>&lt;/li&gt;</b>
+<b>&lt;/ul&gt;</b></code></pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ section 23-1-c.  (xxx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p align="left" width="100%">
+<img src="./images/section-23-1-c.png"
+  style="width:25%"
+  title="3 horizontal rectangles; First Element, Second Element, Third Element"
+  alt="3 horizontal rectangles; First Element, Second Element, Third Element." />
+</p>
+
+<pre><code>&lt;!&minus;-block: unordered list&minus;-&gt;
+<b>&gt;&lt;style&gt;</b>
 li {
   display : block;
   background : lightblue;
@@ -6777,22 +6788,24 @@ li {
   border-color:black;
   border-style:solid;
 }
-<b>&lt;</b><b>/style</b><b>&gt;</b>
-<b>ul</b><b>&lt;</b><b>&gt;</b>
-<b>&lt;</b><b>li</b><b>&gt;</b>
-First Element
-<b>&lt;</b><b>/li</b><b>&gt;</b>
-<b>&lt;</b><b>li</b><b>&gt;</b>
-Second Element
-<b>&lt;</b><b>/li</b><b>&gt;</b>
-<b>&lt;</b><b>li</b><b>&gt;</b>
-Third Element
-<b>&lt;</b><b>/li</b><b>&gt;</b>
-<b>&lt;</b><b>/ul</b><b>&gt;</b>
-&lt;!&minus;-
-Inline-block: unordered list
-&minus;-
-<b>&gt;</b><b>&lt;</b><b>style</b><b>&gt;</b>
+<b>&lt;/style&gt;</b>
+
+<b>ul&lt;&gt;</b>
+  <b>&lt;li&gt;</b>First Element<b>&lt;/li&gt;</b>
+  <b>&lt;li&gt;</b>Second Element<b>&lt;/li&gt;</b>
+  <b>&lt;li&gt;</b>Third Element<b>&lt;/li&gt;</b>
+<b>&lt;/ul&gt;</b></code></pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ section 23-1-d.  (xxx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p align="left" width="100%">
+<img src="./images/section-23-1-d.png"
+  style="width:25%"
+  title="3 vertical rectangles; First Element, Second Element, Third Element"
+  alt="3 vertical rectangles; First Element, Second Element, Third Element." />
+</p>
+
+<pre><code>&lt;!&minus;-Inline-block: unordered list&minus;-&gt;
+<b>&lt;style&gt;</b>
 li {
   display : inline-block;
   background : lightblue;
@@ -6801,164 +6814,118 @@ li {
   border-color:black;
   border-style:solid;
 }
-<b>&lt;</b><b>/style</b><b>&gt;</b>
-<b>ul</b><b>&lt;</b><b>&gt;</b>
-<b>&lt;</b>
-<b>li</b>
-<b>&gt;</b>
-First Element
-<b>&lt;</b>
-<b>/li</b>
-<b>&gt;</b>
-<b>&lt;</b>
-<b>li</b>
-<b>&gt;</b>
-Second Element
-<b>&lt;</b>
-<b>/li</b>
-<b>&gt;</b>
-<b>&lt;</b>
-<b>li</b>
-<b>&gt;</b>
-Third Element
-<b>&lt;</b>
-<b>/li</b>
-<b>&gt;</b>
-<b>&lt;</b>
-<b>/ul</b>
-<b>&gt;</b>
+<b>&lt;/style&gt;</b>
+<b>&lt;ul&gt;</b>
+  <b>&lt;li&gt;</b>First Element <b>&lt;/li&gt;</b>
+  <b>&lt;li&gt;</b>Second Element <b>&lt;/li&gt;</b>
+  <b>&lt;li&gt;</b>Third Element <b>&lt;/li&gt;</b>
+<b>&lt;/ul&gt;</b></code></pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ section 23-1-e.  (xxx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p align="left" width="100%">
+<img src="./images/section-23-1-e.png"
+  style="width:25%"
+  title="3 horizontal rectangles; First Element, Second Element, Third Element"
+  alt="3 horizontal rectangles; First Element, Second Element, Third Element." />
+</p>
 
-<b>none</b>
+<h4><b>none</b></h4>
 
-An element that is given the none value to its display property will
-not be displayed at all.
+<p>An element that is given the none value to its display property will
+not be displayed at all.</p>
 
-For example let&apos;s create a div-element that has an id of myDiv:
+<p>For example let&apos;s create a div-element that has an id of myDiv:</p>
 
-<b>&lt;</b><b>div</b> id=&quot;myDiv&quot;<b>&gt;</b>
-<b>&lt;</b><b>/div</b><b>&gt;</b>
+<pre><code><b>&lt;div</b> id=&quot;myDiv&quot;<b>&gt;&lt;/div&gt;</b></code></pre>
 
-This can now be marked as not being displayed by the following CSS
-rule:
+<p>This can now be marked as not being displayed by the following CSS rule:</p>
 
-#myDiv {
+<pre><code>#myDiv {
   <b>display</b>: none;
-}
+}</code></pre>
 
-<b>display</b>                               :     none
+<p>When an element has been set to be display;none; the browser ignores every other
+layout property for that specific element (both position and float). No box will 
+be rendered for that element and its existence in html does not affect the position 
+of following elements.</p>
 
-
-When an element has been set to be ; the browser ignores every other
-layout property for that specific element (both position and float).
-No box will be rendered for that element and its existence in html
-does not affect the position of following elements.
-
-  <b>visibility</b>                          :   hidden
+<b>visibility</b>: hidden
 
 
-> Note that this is different from setting the visibility property to
-> hidden. Setting ; for an element would not display the element on the
-> page but the element would still take up the space in the rendering
-> process as if it would be visible. This will therefore affect how
-> following elements are displayed on the page.
->
-> The none value for the display property is commonly used along with
-> JavaScript to show or hide elements at will, eliminating the need to
-> actually delete and re-create them.
+<p>Note that this is different from setting the visibility property to
+hidden. Setting ; for an element would not display the element on the
+page but the element would still take up the space in the rendering
+process as if it would be visible. This will therefore affect how
+following elements are displayed on the page.</p>
+
+<p>The none value for the display property is commonly used along with
+JavaScript to show or hide elements at will, eliminating the need to
+actually delete and re-create them.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch23-2">Section 23.2: To get old table structure using div</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 <h4>This is the normal HTML table structure</h4>
 
-<pre><code>
-<b>&lt;</b><b>style</b><b>&gt;</b>
-table {
-  width: 100%;
-}
-<b>&lt;</b>
-<b>/style</b>
-<b>&gt;</b>
-<b>&lt;</b>
-<b>table</b>
-<b>&gt;</b>
-<b>&lt;</b>
-<b>tr</b>
-<b>&gt;</b>
-<b>&lt;</b>
-<b>td</b>
-<b>&gt;</b>
-I&apos;m a table
-<b>&lt;</b>
-<b>/td</b>
-<b>&gt;</b>
-<b>&lt;</b>
-<b>/tr</b>
-<b>&gt;</b>
-<b>&lt;</b>
-<b>/table</b>
-<b>&gt;</b>
-</code></pre>
+<pre><code><b>&lt;style&gt;</b>
+  table {
+    width: 100%;
+  }
+<b>&lt;/style&gt;</b>
+  <b>&lt;table&gt;</b>
+    <b>&lt;tr&gt;</b>
+      <b>&lt;td&gt;</b>
+        I&apos;m a table
+      <b>&lt;/td&gt;</b>
+    <b>&lt;/tr&gt;</b>
+  <b>&lt;/table&gt;</b></code></pre>
 
-You can do same implementation like this
+<p>You can do same implementation like this;</p>
 
 <pre><code>
-<b>&lt;</b><b>style</b><b>&gt;</b>
-.table-div {
-  display: table;
-}
-.table-row-div {
-  display: table-row;
-}
-.table-cell-div {
-  display: table-cell; 
-}
-<b>&lt;</b><b>/style</b><b>&gt;</b>
-<b>&lt;</b><b>div</b> class=&quot;table-div&quot;<b>&gt;</b>
-<b>&lt;</b><b>div</b> class=&quot;table-row-div&quot;<b>&gt;</b>
-<b>&lt;</b><b>div</b> class=&quot;table-cell-div&quot;<b>&gt;</b>
-I behave like a table now
-<b>&lt;</b><b>/div</b><b>&gt;</b>
-<b>&lt;</b><b>/div</b><b>&gt;</b>
-<b>&lt;</b><b>/div</b><b>&gt;</b>
-</code></pre>
+<b>&lt;style&gt;</b>
+  .table-div {
+    display: table;
+  }
+  .table-row-div {
+    display: table-row;
+  }
+  .table-cell-div {
+    display: table-cell; 
+  }
+<b>&lt;/style&gt;</b>
+
+<b>&lt;div</b> class=&quot;table-div&quot;<b>&gt;</b>
+  <b>&lt;div</b> class=&quot;table-row-div&quot;<b>&gt;</b>
+    <b>&lt;div</b> class=&quot;table-cell-div&quot;<b>&gt;</b>
+      I behave like a table now
+    <b>&lt;/div&gt;</b>
+  <b>&lt;/div&gt;</b>
+<b>&lt;/div&gt;</b></code></pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ch24">Chapter 24: Grid</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-
-Grid layout is a new and powerful CSS layout system that allows to
-divide a web page content into rows and columns in an easy way.
-
+<p>Grid layout is a new and powerful CSS layout system that allows to
+divide a web page content into rows and columns in an easy way.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch24-1">Section 24.1: Basic Example</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<b>Property Possible Values</b> display grid / inline-grid
+<h4>Property Possible Values</h4>
+display grid / inline-grid
 
-The CSS Grid is defined as a display property. It applies to a parent
-element and its immediate children only.
+The CSS Grid is defined as a display property. It applies to a parent element and its immediate children only.
 
-Consider the following markup:
+<p>Consider the following markup:</p>
 
-<pre><code>
-<b>&lt;</b>
-<b>section</b> class=&quot;container&quot;<b>&gt;</b>
-<b>&lt;</b><b>div</b> class=&quot;item1&quot;<b>&gt;</b>
-item1
-<b>&lt;</b><b>/div</b><b>&gt;</b>
-<b>&lt;</b><b>div</b> class=&quot;item2&quot;<b>&gt;</b>
-item2
-<b>&lt;</b><b>/div</b><b>&gt;</b>
-<b>&lt;</b><b>div</b> class=&quot;item3&quot;<b>&gt;</b>
-item3
-<b>&lt;</b><b>/div</b><b>&gt;</b>
-<b>&lt;</b><b>div</b> class=&quot;item4&quot;<b>&gt;</b>
-item4
-<b>&lt;</b><b>/div</b><b>&gt;</b>
-<b>&lt;</b><b>/section</b><b>&gt;</b>
-</code></pre>
+<pre><code><b>&lt;</b><b>section</b> class=&quot;container&quot;<b>&gt;</b>
+  <b>&lt;div</b> class=&quot;item1&quot;<b>&gt;</b>item1<b>&lt;/div&gt;</b>
+  <b>&lt;div</b> class=&quot;item2&quot;<b>&gt;</b>item2<b>&lt;/div&gt;</b>
+  <b>&lt;div</b> class=&quot;item3&quot;<b>&gt;</b>item3<b>&lt;/div&gt;</b>
+  <b>&lt;div</b> class=&quot;item4&quot;<b>&gt;</b>item4<b>&lt;/div&gt;</b>
+<b>&lt;/section&gt;</b></code></pre>
 
-The easiest way to define the markup structure above as a grid is to
-simply set its display property to grid:
+<p>The easiest way to define the markup structure above as a grid is to
+simply set its display property to grid:</p>
 
 <pre><code>.container {
   <b>display</b>: grid;
@@ -6973,59 +6940,50 @@ explicitly tell them.</p>
 columns will make up its structure and we can do this using the
 grid-columns and grid-rows properties (note the pluralisation):</p>
 
-<pre><code>
-.container {
+<pre><code>.container {
   <b>display</b>: grid;
   <b>grid-columns</b>: 50px 50px 50px;
   <b>grid-rows</b>: 50px 50px;
-}
-</code></pre>
+}</code></pre>
 
 <p>However, that still doesn&apos;t help us much because we need to give an
 order to each child element. We can do this by specifying the grid-row
 and grid-column values which will tell it where it sits in the grid:</p>
 
-<pre><code>
-.container
-.item1 {
+<pre><code>.container .item1 {
   <b>grid-column</b>: 1;
   <b>grid-row</b>: 1;
 }
-.container
-.item2 {
+.container .item2 {
   <b>grid-column</b>: 2;
 <b>grid-row</b>: 1;
 }
-.container
-.item3 {
+.container .item3 {
   <b>grid-column</b>: 1;
   <b>grid-row</b>: 2;
 }
-.container
-.item4 {
+.container .item4 {
   <b>grid-column</b>: 2;
   <b>grid-row</b>: 2;
 }</code></pre>
 
-By giving each item a column and row value it identifies the items
-order within the container.
+<p>By giving each item a column and row value it identifies the items
+order within the container.</p>
 
-View a working example on <a href="https://jsfiddle.net/fexfwkkv/3/">Demo (JS Fiddle)</a>.
+<p>View a working example on <a href="https://jsfiddle.net/fexfwkkv/3/">Demo (JS Fiddle)</a>.
 You&apos;ll need to view this in IE10, IE11 or Edge for it to work as these are
 currently the only browsers supporting Grid Layout (with vendor prefix
 -ms-) or enable a flag in Chrome, Opera and Firefox according to
-<a href="http://caniuse.com/#feat=css-grid">canIuse</a> in order to test with them.
+<a href="http://caniuse.com/#feat=css-grid">canIuse</a> in order to test with them.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ch25">Chapter 25: Tables</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch25-1">Section 25.1: table-layout</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-The table-layout property changes the algorithm that is used for the
-layout of a table.
+<p>The table-layout property changes the algorithm that is used for the
+layout of a table.</p>
 
-  <b>width</b>                     :     150px
-
-Below an example of two tables both set to :
+<p>Below an example of two tables both set to: <b>width</b> 150px:</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 200.  (xxx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left" width="100%">
@@ -7036,22 +6994,19 @@ Below an example of two tables both set to :
 </p>
 <!-- (./images/image200.jpg){width="4.625in" height="1.125in"} -->
 
-<b>table-layout</b>   :   auto   while the one on the right    <b>table-layout</b>   :   fixed
+<p>The table on the left has <b>table-layout</b>: auto while the one on the right has 
+<b>table-layout</b>: fixed. The former is wider than the specified width (210px 
+instead of 150px) but the contents fit. The latter takes the defined width of 150px, 
+regardless if the contents overflow or not.</p>
 
-The table on the left has . The former is
+| <b>Value</b> | <b>Description</b> |
+|--------------|--------------------|
+| <i>auto</i>  | This is the default value. It defines the layout of the table to |
+|              | be determined by the contents of its&apos; cells. |
+| fixed        | This value sets the table layout to be determined by the width |
+|              | property provided to the table. If the content fixed of a cell exceeds |
+|              | this width, the cell will not resize but instead, let the content overflow. |
 
-wider than the specified width (210px instead of 150px) but the
-contents fit. The latter takes the defined width of 150px, regardless
-if the contents overflow or not.
-
-<b>Value Description</b>
-
-<i>auto</i> This is the default value. It defines the layout of the table to
-be determined by the contents of its&apos; cells.
-
-This value sets the table layout to be determined by the width property provided 
-to the table. If the content fixed of a cell exceeds this width, the cell will 
-not resize but instead, let the content overflow.
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch25-2">Section 25.2: empty-cells</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -7073,23 +7028,21 @@ empty-cells property:
 
 <b>empty-cells</b>   :   show   while the one on the right has  <b>empty-cells</b>   :   hide
 
+<p>The table on the left has <b>empty-cells</b>: show while the one on the right has 
+<b>empty-cells</b>: hide. The former does display the empty cells whereas the latter does not.</p>
 
-The table on the left has . The former does display the empty cells
-whereas the latter does not.
+| <b>Value</b> | <b>Description</b>
+|--------------|--------------------------|
+| <i>show</i>  | This is the default value. It shows cells even if they are empty. |
+| hide         | This value hides a cell altogether if there are no contents in the cell. |
 
-<b>Value Description</b>
+<h4>More Information:</h4>
 
-<i>show</i> This is the default value. It shows cells even if they are
-empty. hide This value hides a cell altogether if there are no
-contents in the cell.
+[https://www.w3.org/TR/CSS21/tables.html#empty-cells](https://www.w3.org/TR/CSS21/tables.html#empty-cells)
+[https://developer.mozilla.org/en-US/docs/Web/CSS/empty-cells](https://developer.mozilla.org/en-US/docs/Web/CSS/empty-cells)
+[http://codepen.io/SitePoint/pen/yfhtq](http://codepen.io/SitePoint/pen/yfhtq)
 
-More Information:
-
-https://www.w3.org/TR/CSS21/tables.html#empty-cells&rbrack;&rbrack;(https://www.w3.org/TR/CSS21/tables.html#empty-cells)
-https://developer.mozilla.org/en-US/docs/Web/CSS/empty-cells&rbrack;&rbrack;(https://developer.mozilla.org/en-US/docs/Web/CSS/empty-cells)
-http://codepen.io/SitePoint/pen/yfhtq&rbrack;&rbrack;(http://codepen.io/SitePoint/pen/yfhtq)
-
-https://css-tricks.com/almanac/properties/e/empty-cells/&rbrack;&rbrack;(https://css-tricks.com/almanac/properties/e/empty-cells/)
+[https://css-tricks.com/almanac/properties/e/empty-cells/](https://css-tricks.com/almanac/properties/e/empty-cells/)
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch25-3">Section 25.3: border-collapse</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -7129,13 +7082,18 @@ has no effect unless border-collapse is set to separate.
 
 Below an example of two tables with different values to the
 border-spacing property:
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 203.  (xxx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p align="left" width="100%">
+<img src="./images/image203.jpg"
+  style="width:60%"
+  title=""
+  alt="." />
+</p>
+<!-- (./images/image203.jpg){width="6.03125in" height="1.15625in"} -->
 
-(./images/image203.jpg){width="6.03125in" height="1.15625in"}
-
-<b>border-spacing</b>   :   2px   (default) while the one on the    <b>border-spacing</b>   :   8px
-                                 right has                                                  
-
-
+<b>border-spacing</b>: 2px (default) while the one on the <b>border-spacing</b>: 8px
+right has
 The table on the left has .
 
 <b>Value Description</b>
@@ -9953,11 +9911,25 @@ image&apos;s reference box.
 Below are a couple of screenshots to illustrate how the content would
 be wrapped around when shape-outside is used and when it is not used.
 <b>Output with shape-outside</b>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 223.  (xxx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p align="left" width="100%">
+<img src="./images/image223.jpg"
+  style="width:33%"
+  title=""
+  alt="." />
+</p>
 <!-- (./images/image223.jpg){width="3.3333333333333335in" height="1.3229166666666667in"} -->
 
 > <b>Output without shape-outside</b>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 224.  (xxx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p align="left" width="100%">
+<img src="./images/image224.jpg"
+  style="width:33%"
+  title=""
+  alt="." />
+</p>
 <!-- (./images/image224.jpg){width="3.3333333333333335in" height="1.4895833333333333in"} -->
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -10154,7 +10126,14 @@ px
 
 
 <h4>Output:</h4>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 225.  (xxx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p align="left" width="100%">
+<img src="./images/image225.jpg"
+  style="width:33%"
+  title=""
+  alt="." />
+</p>
 <!-- (./images/image225.jpg){width="3.3333333333333335in" height="1.3958333333333333in"} -->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ch34">Chapter 34: List Styles</h2>
@@ -10788,8 +10767,14 @@ Button Hovered On
 </code></pre>
 
 <h4>And get this result:</h4>
-
-[image226.jpg](./images/image226.jpg)
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 226.  (xxx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p align="left" width="100%">
+<img src="./images/image226.jpg"
+  style="width:37%"
+  title=""
+  alt="." />
+</p>
 <!-- {width="3.71875in" height="0.6041666666666666in"} -->
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -11381,21 +11366,32 @@ red
 > Demo&rbrack;&rbrack;(https://codepen.io/mkumaran/pen/BZaXvz)
 >
 > Here&apos;s an animated screenshot of the resizing in action:
-
-!&lbrack;&rbrack;(./images/image227.jpg){width="7.48037510936133in"
-height="4.327166447944007in"}
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 227.  (xxx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p align="left" width="100%">
+<img src="./images/image227.jpg"
+  style="width:75%"
+  title=""
+  alt="." />
+</p>
+<!-- (./images/image227.jpg){width="7.48037510936133in" height="4.327166447944007in"} -->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ch38">Chapter 38: Single Element Shapes</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch38-1">Section 38.1: Trapezoid</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-
-> A trapezoid can be made by a block element with zero height (height of
-> 0px), a width greater than zero and a border, that is transparent
-> except for one side:
-
-!&lbrack;&rbrack;(./images/image228.jpg){width="4.75in" height="1.96875in"}
+<p>A trapezoid can be made by a block element with zero height (height of
+0px), a width greater than zero and a border, that is transparent
+except for one side:</p>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 228.  (xxx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p align="left" width="100%">
+<img src="./images/image228.jpg"
+  style="width:47%"
+  title=""
+  alt="." />
+</p>
+<!-- !&lbrack;&rbrack;(./images/image228.jpg){width="4.75in" height="1.96875in"} -->
 
 > <b>HTML:</b>
 
@@ -11497,18 +11493,30 @@ black
 > For an element with 0 height and width the 4 borders (top, right,
 > bottom, left) each form a triangle. Here&apos;s an element with 0
 > height/width and 4 different colored borders.
-
-!&lbrack;&rbrack;(./images/image229.jpg){width="1.6666666666666667in"
-height="1.7083333333333333in"}
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 229.  (xxx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p align="left" width="100%">
+<img src="./images/image229.jpg"
+  style="width:16%"
+  title=""
+  alt="." />
+</p>
+< !-- (./images/image229.jpg){width="1.6666666666666667in" height="1.7083333333333333in"} -->
 
 > By setting some borders to transparent, and others to a color we can
 > create various triangles. For example, in the Up triangle, we set the
 > bottom border to the desired color, then set the left and right
 > borders to transparent. Here&apos;s an image with the left and right
 > borders shaded slightly to show how the triangle is being formed.
-
-!&lbrack;&rbrack;(./images/image230.jpg){width="1.1458333333333333in"
-height="1.1875in"}
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 230.  (xxx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p align="left" width="100%">
+<img src="./images/image230.jpg"
+  style="width:11%"
+  title=""
+  alt="." />
+</p>
+<!-- (./images/image230.jpg){width="1.1458333333333333in" height="1.1875in"} -->
 
 > The dimensions of the triangle can be altered by changing the
 > different border widths - taller, shorter, lopsided, etc. The examples
@@ -11711,9 +11719,15 @@ rgb
 }
 
 > **Triangle - Pointing Right**
-
-!&lbrack;&rbrack;(./images/image233.jpg){width="1.1458333333333333in"
-height="1.1875in"}
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 233.  (xxx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p align="left" width="100%">
+<img src="./images/image233.jpg"
+  style="width:14%"
+  title=""
+  alt="." />
+</p>
+<!-- (./images/image233.jpg){width="1.1458333333333333in" height="1.1875in"} -->
 
 **&lt;**
 
@@ -12254,29 +12268,20 @@ transparent
 > To create a **circle**, define an element with an equal width and
 > height (a *square*) and then set the border-radius property of this
 > element to 50%.
-
-!&lbrack;&rbrack;(./images/image239.jpg){width="1.1458333333333333in"
-height="1.1875in"}
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 239.  (xxx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p align="left" width="100%">
+<img src="./images/image239.jpg"
+  style="width:11%"
+  title=""
+  alt="." />
+</p>
+<!-- (./images/image239.jpg){width="1.1458333333333333in" height="1.1875in"} -->
 
 <h4>HTML:</h4>
 
-**&lt;**
-
-**div**
-
-class
-
-=
-
-&quot;circle&quot;
-
-**&gt;**
-
-**&lt;**
-
-**/div**
-
-**&gt;**
+**&lt;****div** class=&quot;circle&quot;**&gt;**
+**&lt;****/div****&gt;**
 
 > <h4>CSS</h4>
 
