@@ -6907,10 +6907,9 @@ divide a web page content into rows and columns in an easy way.</p>
 <h3 id="ch24-1">Section 24.1: Basic Example</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Property Possible Values</h4>
+
 <p>display grid / inline-grid</p>
-
 <p>The CSS Grid is defined as a display property. It applies to a parent element and its immediate children only.</p>
-
 <p>Consider the following markup:</p>
 
 <pre><code><b>&lt;</b><b>section</b> class=&quot;container&quot;<b>&gt;</b>
@@ -7005,12 +7004,12 @@ regardless if the contents overflow or not.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch25-2">Section 25.2: empty-cells</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-The empty-cells property determines if cells with no content should be
+<p>The empty-cells property determines if cells with no content should be
 displayed or not. This has no effect unless border-collapse is set to
-separate.
+separate.</p>
 
-Below an example with two tables with different values set to the
-empty-cells property:
+<p>Below an example with two tables with different values set to the
+empty-cells property:</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~ 201. two tables with different values set to empty-cells property (143) ~~~~~~~~~~-->
 <p align="left" width="100%">
@@ -7170,7 +7169,7 @@ often used for custom and smooth transitions.</p>
   alt="Cubic-bezier." />
 </p>
 
-These parameters will be mapped to points which are part of a 
+<p>These parameters will be mapped to points which are part of a 
 <a href="https://en.wikipedia.org/wiki/B%C3%A9zier_curve#Cubic_B.C3.A9zier_curves">Bézier curve</a>:</p>
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -7291,30 +7290,30 @@ between all colors.</p>
 
 <p><a href="https://jsfiddle.net/s9m3od3p/6/">View Result</a>.</p>
 
-There&apos;s a few different things to note here. First, the actual
-<span style="color:blue">&commat;</span>keyframes syntax.
+<p>There&apos;s a few different things to note here. First, the actual
+<span style="color:blue">&commat;</span>keyframes syntax.</p>
 
 <pre><code><span style="color:blue">&commat;</span>keyframes rainbow-background{</code></pre>
 
-This sets the name of the animation to rainbow-background.
+<p>This sets the name of the animation to rainbow-background.</p>
 
 <pre><code>0&percnt;    { <b>background-color</b>: #ff0000; }</code>></pre> 
 
-This is the definition for a keyframe within the animation. The first
+<p>This is the definition for a keyframe within the animation. The first
 part, the 0&percnt; in the case, defines where the keyframe is during the
 animation. The 0&percnt; implies it is 0&percnt; of the total animation time from
-the beginning.
+the beginning.</p>
 
-The animation will automatically transition between keyframes. So, by
+<p>The animation will automatically transition between keyframes. So, by
 setting the next background color at 8.333&percnt;, the animation will
 smoothly take 8.333&percnt; of the time to transition between those
-keyframes.
+keyframes.</p>
 
 <pre><code>.RainbowBackground {
   <b>animation</b>: rainbow-background 5s infinite;
 }</code></pre>
 
-This code attaches our animation to all elements which have the .RainbowBackground class.
+<p>This code attaches our animation to all elements which have the .RainbowBackground class.</p>
 
 <p>The actual animation property takes the following arguments;</p>
 
@@ -7838,9 +7837,9 @@ longer faces the screen.</p>
   -ms-backface-visibility:     visible;
 }
 .flip.back {
--webkit-backface-visibility: hidden;
--moz-backface-visibility:    hidden;
--ms-backface-visibility:     hidden;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility:    hidden;
+  -ms-backface-visibility:     hidden;
 }</code></pre>
 
 <p>Firefox 10+ and IE 10+ support backface-visibility without a prefix. Opera, Chrome, Safari, iOS, 
@@ -8071,7 +8070,6 @@ Additional styling is added in the demo and a transform is applied on hover to v
   title="Turns fro white to black"
   alt="Turns fro white to black." />
 </p>
-<!-- (./images/image218.jpg){width="1.1979166666666667in" height="1.1979166666666667in"} -->
 
 <p>Turns from white to black.</p>
 
@@ -8212,7 +8210,6 @@ other content is inserted by the user&apos;s typing or editing.</p>
   title="Blue rectangle"
   alt="Blue rectangle." />
 </p>
-<!-- [image220.jpg 6.25 x 3.75](./images/image220.jpg) -->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch32-2">Section 32.2: drop shadow</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -8259,7 +8256,6 @@ other content is inserted by the user&apos;s typing or editing.</p>
   title="Light blue rectange within a silvery white rectangle"
   alt="Light blue rectange within a silvery white rectangle." />
 </p>
-<!-- [image221.jpg 2.645 x 1.541](./images/image221.jpg) -->
 
 <a href="https://jsfiddle.net/UnsungHero97/80qod7aL/1/&rbrack;&rbrack;(https://jsfiddle.net/UnsungHero97/80qod7aL/1/">Demo (JSFiddle):</a>
 
@@ -8292,7 +8288,6 @@ other content is inserted by the user&apos;s typing or editing.</p>
   title="Orange, green, blue &amp; yellow (MS shit colors)"
   alt="Orange, green, blue &amp; yellow (MS shit colors)." />
 </p>
-<!-- [image222 6.125 x 5.833](./images/image222.jpg) -->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ch33">Chapter 33: Shapes for Floats</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -8616,15 +8611,13 @@ item&apos;s number before its header (using content property of
 
 <pre><code>ul {
   <b>list-style</b>: none;
-  <b>counter-reset</b>: list-item-number;
-/* self nesting counter as name is same for all levels */
+  <b>counter-reset</b>: list-item-number;  /* self nesting counter as name is same for all levels */
 }
 li {
-<b>counter-increment</b>: list-item-number;
+  <b>counter-increment</b>: list-item-number;
 }
 li: before {
-  <b>content</b>: counters (list-item-number, &quot;.&quot;)&quot; &quot;;
-/* usage of counters() function means value of
+  <b>content</b>: counters (list-item-number, &quot;.&quot;)&quot; &quot;; /* usage of counters() function means value of
   counters at all higher levels are combined before printing */
 }</code></pre>
 
@@ -8633,222 +8626,122 @@ li: before {
 <pre><code><b>&lt;ul&gt;</b>
   <b>&lt;li&gt;</b>Level 1
     <b>&lt;ul&gt;</b>
-      <b>&lt;li&gt;</b>Level 1.1<b>&lt;li&gt;</b>
+      <b>&lt;li&gt;</b>Level 1.1
+	    <b>&lt;ul&gt;</b>
+		  <b>&lt;li&gt;Level 1.1.1<b>&lt;/li&gt;</b>
+        <b>&lt;/ul&gt;</b>
+      <b>&lt;/li&gt;</b>
     <b>&lt;/ul&gt;</b>
+  <b>&lt;/li&gt;</b>
+  <b>&lt;li&gt;</b>Level 2
+    <b>&lt;ul&gt;</b>
+      <b>&lt;li&gt;</b>Level 2.1
+        <b>&lt;ul&gt;</b>
+          <b>&lt;li&gt;</b>Level 2.1.1<b>&lt;/li&gt;</b>
+          <b>&lt;li&gt;</b>Level 2.1.2<b>&lt;/li&gt;</b>
+        <b>&lt;/ul&gt;</b>
+      <b>&lt;/li&gt;</b>
+    <b>&lt;/ul&gt;</b>
+  <b>&lt;/li&gt;</b>
+  <b>&lt;li&gt;</b>Level 3<b>&lt;/li&gt;</b>
+<b>&lt;/ul&gt;</b></code></pre>
 
-Level 1.1.1
+<p>The above is an example of multi-level numbering using CSS counters.
+It makes use of the <i><b>self-nesting</b></i> concept of counters. Self
+nesting is a concept where if an element already has a counter with
+the given name but is having to create another then it creates it as a
+child of the existing counter. Here, the second level ul already
+inherits the list-item-number counter from its parent but then has to
+create its own list-item-number (for its children li) and so creates
+(counter for first level). Thus it achieves the multi-level numbering.</p>
 
-<b>&lt;/li&gt;</b>
-<b>&lt;/ul&gt;</b>
-<b>&lt;/li&gt;</b>
-<b>&lt;/ul&gt;</b>
-<b>&lt;/li&gt;</b>
-<b>&lt;li&gt;</b>
-
-Level 2
-
-<b>&lt;ul&gt;</b>
-<b>&lt;li&gt;</b>
-
-Level 2.1
-
-<b>&lt;ul&gt;</b>
-<b>&lt;li&gt;</b>
-
-Level 2.1.1
-
-<b>&lt;/li&gt;</b>
-<b>&lt;li&gt;</b>
-
-Level 2.1.2
-
-<b>&lt;/li&gt;</b>
-<b>&lt;/ul&gt;</b>
-<b>&lt;/li&gt;</b>
-<b>&lt;/ul&gt;</b>
-<b>&lt;/li&gt;</b>
-<b>&lt;li&gt;</b>
-
-Level 3
-
-<b>&lt;/li&gt;</b>
-<b>&lt;/ul&gt;</b>
-
-list-item-number   &lbrack;1&rbrack; (counter for second level) and     list-item-number
-nests it under                           
-
-> The above is an example of multi-level numbering using CSS counters.
-> It makes use of the <i><b>self-nesting</b></i> concept of counters. Self
-> nesting is a concept where if an element already has a counter with
-> the given name but is having to create another then it creates it as a
-> child of the existing counter. Here, the second level ul already
-> inherits the list-item-number counter from its parent but then has to
-> create its own list-item-number (for its children li) and so creates
-> &lbrack;0&rbrack; (counter for first level). Thus it achieves the multi-level
-> numbering.
-
-counters   () function instead of  counter   () function because    counters
-
-The output is printed using the () function is designed to prefix the
-value of all higher level counters (parent) when printing the output.
+<p>The output is printed using the counters() function instead of the counter() function
+because the counters() function is designed to prefix the value of all higher level
+counters (parent) when printing the output.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ch36">Chapter 36: Functions</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch36-1">Section 36.1: calc() function</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-Accepts a mathematical expression and returns a numerical value.
+<p>Accepts a mathematical expression and returns a numerical value.</p>
 
-It is especially useful when working with different types of units
+<p>It is especially useful when working with different types of units
 (e.g. subtracting a px value from a percentage) to calculate the value
-of an attribute.
+of an attribute.</p>
 
-+, -, /, and &ast; operators can all be used, and parentheses can be
-added to specify the order of operations if necessary.
+<p>+, -, /, and &ast; operators can all be used, and parentheses can be
+added to specify the order of operations if necessary.</p>
 
-Use
+<p>Use calc() to calculate the width of a div element:</p>
 
-<pre><code>
-calc (
-)
-to calculate the width of a div element:
-#div1 {
+<pre><code>#div1 {
   <b>position</b>: absolute;
   <b>left</b>: 50px;
-  <b>width</b>: calc (100&percnt;
-  &minus;
-100px
-);
+  <b>width</b>: calc (100&percnt; &minus; 100px);
   <b>border</b>: 1px solid black;
   <b>background-color</b>: yellow;
   <b>padding</b>: 5px;
   <b>text-align</b>: center;
-}
-</code></pre>
+}</code></pre>
 
-  calc
+<p>Use calc() to determine the position of a background-image:</p>
 
-> Use () to determine the position of a background-image:
+<pre><code><b>background-position</b>: calc (50&percnt;&plus; 17px) calc (50&percnt;&plus; 10px), 50&percnt; 50&percnt;;</code></pre>
 
-<pre><code>
-<b>background-position</b>: calc (50&percnt;&plus; 17px)
-calc (
-50&percnt;&plus; 10px), 50&percnt; 50&percnt;;
-</code></pre>
+<p>Use calc() to determine the height of an element:</p>
 
-calc
-
-> Use () to determine the height of an element:
-
-<b>height</b>
-
-:
-
-calc
-
-(
-
-100&percnt;
-&minus;
-20px);
+<p><b>height</b>: calc(100% - 20px);
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch36-2">Section 36.2: attr() function</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-> Returns the value of an attribute of the selected element.
+<p>Returns the value of an attribute of the selected element.</p>
 
-  data-
+<p>Below is a blockquote element which contains a character inside a data-&ast;
+attribute which CSS can use (e.g. inside the ::before and ::after pseudo-element) using
+this function.</p>
 
-  ::before                      and             ::after
+<pre><code><b>&lt;</b><b>blockquote</b>data-mark=&apos;&quot;&apos;<b>&gt;</b><b>&lt;</b><b>/blockquote</b><b>&gt;</b></code></pre>
 
-> Below is a blockquote element which contains a character inside a &ast;
-> attribute which CSS can use (e.g. inside the pseudo-element) using
-> this function.
+<p>In the following CSS block, the character is appended before and after the text inside the element:</p>
 
-<pre><code>
-<b>&lt;</b>
-<b>blockquote</b>
-data-mark
-=
-&apos;&quot;&apos;
-<b>&gt;</b>
-<b>&lt;</b>
-<b>/blockquote</b>
-<b>&gt;</b>
-</code></pre>
-
-> In the following CSS block, the character is appended before and after
-> the text inside the element:
-
-<pre><code>
-blockquote
-&lbrack;
-data-mark
-&rbrack;
-::
-before
-,
-blockquote
-&lbrack;
-data-mark
-&rbrack;
-::
-after
-{
-<b>content</b>
-:
-attr
-(
-data-mark
-)
-;
-}
-</code></pre>
+<pre><code>blockquote&lbrack;data-mark&rbrack;::before,
+blockquote&lbrack;data-mark&rbrack;::after {
+  <b>content</b>: attr(data-mark);
+}</code></pre>
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch36-3">Section 36.3: var() function</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-
 <p> The var() function allows CSS variables to be accessed.</p>
 
 /* set a variable */
-
-<pre><code>
-:root{&minus;- primary-color: blue;}
+<pre><code>:root {
+&minus;- primary-color: blue;
+}
 /* access variable */
 selector{
-  <b>color</b>: var (
-  &minus;-
-  primary-color
-  );
-}
-</code></pre>
+  <b>color</b>: var (&minus;-primary-color);
+}</code></pre>
 
-<p> This feature is currently under development. Check 
+<p>This feature is currently under development. Check 
 <a href="http://caniuse.com/#feat=css-variables">CanIuse.com</a> 
 for the latest browser support.</p>
-
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch36-4">Section 36.4: radial-gradient() function</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+Creates an image representing a gradient of colors radiating from the
+center of the gradient
 
-> Creates an image representing a gradient of colors radiating from the
-> center of the gradient
->
-> radial-gradient(red, orange, yellow) /*A gradient coming out from
-> the middle of the gradient, red at the center, then orange, until it
-> is finally yellow at the edges*/
+<pre><code>radial-gradient(red, orange, yellow) /*A gradient coming out from the middle of the 
+gradient, red at the center, then orange, until it is finally yellow at the edges*/</code></pre>
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch36-5">Section 36.5: linear-gradient() function</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p>Creates a image representing a linear gradient of colors.</p>
 
-> Creates a image representing a linear gradient of colors.
-
-<pre><code>
-linear-gradient (
-  0 deg, red, yellow 50&percnt;, blue
-);
-</code></pre>
+<pre><code>linear-gradient( 0 deg, red, yellow 50&percnt;, blue);</code></pre>
 
 <p>This creates a gradient going from bottom to top, with colors starting
 at red, then yellow at 50%, and finishing in blue.</p>
@@ -8868,84 +8761,49 @@ using traditional CSS values.</p>
 <h3 id="ch37-1">Section 37.1: Variable Color</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
-<pre><code>
-:root {&minus;- red: #b00; &minus;-
-blue: #4679bd; &minus;- grey: #ddd;
+<pre><code>:root {
+  &minus;-red: #b00; 
+  &minus;-blue: #4679bd; 
+  &minus;- grey: #ddd;
 }
-.Bx1
-{
+.Bx1 {
   <b>color</b>: var (&minus;- red);
   <b>background</b>: var(&minus;- grey);
-  <b>border</b>: 1px solid var (
-  &minus;- red);
-}
-</code></pre>
+  <b>border</b>: 1px solid var (&minus;- red);
+}</code></pre>
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch37-2">Section 37.2: Variable Dimensions</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
-<pre><code>
-:root {&minus;-W200: 200px;
-&minus;- W 10: 10px;
+<pre><code>:root {
+  &minus;-W200: 200px;
+  &minus;- W 10: 10px;
 }
-.Bx2 {<b>width</b>: var (
-  &minus;-W200
-);
-<b>height</b>: var (&minus;-W200);
-<b>margin</b>: var (&minus;- W 10);
-}
-</code></pre>
+.Bx2 {
+  <b>width</b>: var (&minus;-W200);
+  <b>height</b>: var (&minus;-W200);
+  <b>margin</b>: var (&minus;- W 10);
+}</code></pre>
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch37-3">Section 37.3: Variable Cascading</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p>CSS variables cascade in much the same way as other properties, and
+can be restated safely.</p>
 
-> CSS variables cascade in much the same way as other properties, and
-> can be restated safely.
->
-> You can define variables multiple times and only the definition with
-> the highest specificity will apply to the element selected.
->
-> Assuming this HTML:
+<p>You can define variables multiple times and only the definition with
+the highest specificity will apply to the element selected.</p>
 
-<pre><code>
-<b>&lt;</b>
-<b>a</b>
-class
-=
-&quot;button&quot;
-<b>&gt;</b>
-Button Green
-<b>&lt;</b>
-<b>/a</b>
-<b>&gt;</b>
-<b>&lt;</b>
-<b>a</b>
-class
-=
-&quot;button button_red&quot;
-<b>&gt;</b>
-Button Red
-<b>&lt;</b>
-<b>/a</b>
-<b>&gt;</b>
-<b>&lt;</b>
-<b>a</b>
-class
-=
-&quot;button&quot;
-<b>&gt;</b>
-Button Hovered On
-<b>&lt;</b>
-<b>/a</b>
-<b>&gt;</b>
-</code></pre>
+<p>Assuming this HTML:</p>
 
-> We can write this CSS:
+<pre><code><b>&lt;a</b> class=&quot;button&quot;<b>&gt;</b>Button Green<b>&lt;/a&gt;</b>
+<b>&lt;a</b> class=&quot;button button_red&quot;<b>&gt;</b>Button Red<b>&lt;/a&gt;</b>
+<b>&lt;a</b> class=&quot;button&quot;<b>&gt;</b>Button Hovered On<b>&lt;/a&gt;</b></code></pre>
 
-<pre><code>
-.button {&minus;- color: green;
+<p>We can write this CSS:</p>
+
+<pre><code>.button {&minus;- color: green;
   <b>padding</b>: .5rem;
   <b>border</b>: 1px solid var (&minus;- color);
   <b>color</b>: var (&minus;- color);
@@ -8955,8 +8813,7 @@ Button Hovered On
 }
 .button_red {
   &minus;- color: red;
-}
-</code></pre>
+}</code></pre>
 
 <h4>And get this result:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -8967,8 +8824,6 @@ Button Hovered On
   title=""
   alt="." />
 </p>
-<!-- {width="3.71875in" height="0.6041666666666666in"} -->
-
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch37-4">Section 37.4: Valid/Invalids</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -8978,233 +8833,65 @@ dashes just like other CSS properties (eg: lineheight,
 
 //These are Invalids variable names
 
-<pre><code>
-&minus;-123
-color
-:
-blue
-;
-&minus;-
-&num;
-<b>color</b>
-:
-red
-;
-&minus;-
-bg
-&lowbar;color
-:
-yellow
-&minus;-
-&dollar;
-<b>width</b>
-:
-100
-px
-;
-</code></pre>
+<pre><code>&minus;-123color: blue;
+&minus;-&num;<b>color</b>: red;
+&minus;-bg&lowbar;color: yellow
+&minus;-&dollar;<b>width</b>: 100px;</code></pre>
 
 //Valid variable names
 
-<pre><code>
-&minus;-
-color
-:
-red
-;
-&minus;-
-bg-color
-:
-yellow
-&minus;-
-width
-:
-100
-px
-;
-</code></pre>
+<pre><code>&minus;-color: red;
+&minus;-bg-color: yellow
+&minus;-width: 100px;</code></pre>
 
-> <b>CSS Variables are case sensitive.</b>
+<h4>CSS Variables are case sensitive</h4>
 
 /* The variable names below are all different variables */
 
-<pre><code>
-&minus;-
-pcolor
-:
-;
-&minus;-
-Pcolor
-:
-;
-&minus;-
-pColor
-:
-;
-</code></pre>
+<pre><code>&minus;-pcolor: ;
+&minus;-Pcolor: ;
+&minus;-pColor: ;</code></pre>
 
-> <b>Empty Vs Space</b>
+<h4>Empty Vs Space</h4>
 
-/* Invalid */
-<pre><code>
-&minus;-
-color
-:
-;
-</code></pre>
+<pre><code>/* Invalid */
+  &minus;-color:;
 
 /* Valid */
-<pre><code>
-&minus;-
-color
-:
-;
-</code></pre>
-/* space is assigned */
+  &minus;-color:; /* space is assigned */</code></pre>
 
-> <b>Concatenations</b>
+<h4>Concatenations</h4>
 
-/* Invalid - CSS doesn&apos;t support concatenation */
-<pre><code>
-.logo
-{
-&minus;-
-logo-url
-:
-&apos;logo&apos;
-;
-<b>background</b>
-:
-url
-(
-&apos;assets/img/&apos;
-var
-(
-&minus;-
-logo-url
-)
-&apos;.png&apos;
-)
-;
-}
-</code></pre>
+<pre><code>/* Invalid - CSS doesn&apos;t support concatenation */
+.logo{
+  &minus;-logo-url: &apos;logo&apos;;
+  <b>background</b>: url(&apos;assets/img/&apos; var(&minus;-logo-url) &apos;.png&apos;);
+}</code></pre>
 
-/* Invalid - CSS bug */
+<pre><code>/* Invalid - CSS bug */
+.logo{
+  &minus;-logo-url: &apos;assets/img/logo.png&apos;;
+  <b>background</b>: url(var(&minus;-logo-url));
+}</code></pre>
 
-<pre><code>
-.logo
-{
-&minus;-
-logo-url
-:
-&apos;assets/img/logo.png&apos;
-;
-<b>background</b>
-:
-url
-(
-var
-(
-&minus;-
-logo-url
-)
-)
-;
-}
-</code></pre>
+<pre><code>/* Valid */
+.logo{
+  &minus;-logo-url: url(&apos;assets/img/logo.png&apos;);
+  <b>background</b>: var(&minus;-logo-url);
+}</code></pre>
 
+<h4>Careful when using Units</h4>
+
+<pre><code>/* Invalid */
+&minus;-width: 10;
+<b>width</b>: var(&minus;-width)px;
 /* Valid */
-<pre><code>
-.logo
-{
-&minus;-
-logo-url
-:
-url
-(
-&apos;assets/img/logo.png&apos;
-)
-;
-<b>background</b>
-:
-var
-(
-&minus;-
-logo-url
-)
-;
-}
-</code></pre>
-
-> <b>Careful when using Units</b>
-
-/* Invalid */
-<pre><code>
-&minus;-
-width
-:
-10
-;
-<b>width</b>
-:
-var
-(
-&minus;-
-width
-)
-px
-;
+&minus;-width: 10px;
+<b>width</b>: var(&minus;-width);
 /* Valid */
-&minus;-
-width
-:
-10
-px
-;
-<b>width</b>
-:
-var
-(
-&minus;-
-width
-)
-;
-/* Valid */
-&minus;-
-width
-:
-10
-;
-<b>width</b>
-:
-calc
-(
-1
-px
-&ast;
-var
-(
-&minus;-
-width
-)
-)
-;
-/* multiply by 1 unit to convert */
-<b>width</b>
-:
-calc
-(
-1
-em
-&ast;
-var
-(
-&minus;-
-width
-)
-)
-;
-</code></pre>
+&minus;-width:10;
+<b>width</b>: calc(1px &ast; var(&minus;-width)); /* multiply by 1 unit to convert */
+<b>width</b>: calc(1em &ast; var(&minus;-width));</code></pre>
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch37-5">Section 37.5: With media queries</h3>
