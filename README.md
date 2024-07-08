@@ -7580,116 +7580,74 @@ not provided, the first scale-factor will be applied for Y-axis also.
 
 <h4>CSS</h4>
 
-.rotate {
+<pre><code>.rotate {
   <b>width</b>: 100px;
   <b>height</b>: 100px;
   <b>background</b>: teal;
   <b>transform</b>: rotate (45deg);
-}
+}</code></pre>
 
-This example will rotate the div by 45 degrees clockwise. The center
+<p>This example will rotate the div by 45 degrees clockwise. The center
 of rotation is in the center of the div, 50% from left and 50% from
 top. You can change the center of rotation by setting the
-transform-origin property.
+transform-origin property.</p>
 
-<b>transform-origin</b>: 100&percnt; 50&percnt;;
+<pre><code><b>transform-origin</b>: 100&percnt; 50&percnt;;</code></pre>
 
-The above example will set the center of rotation to the middle of the
-right side end.
-
+<p>The above example will set the center of rotation to the middle of the right side end.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-## Section 28.2: Scale
+<h3 id="ch28-2">Section 28.2: Scale</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-
 <h4>HTML:</h4>
 
-<b>&lt;</b><b>div</b> class=&quot;scale&quot;<b>&gt;</b>
-<b>&lt;</b><b>/div</b><b>&gt;</b>
+<pre><code><b>&lt;div</b> class=&quot;scale&quot;<b>&gt;&lt;/div&gt;</b></code></pre>
 
 <h4>CSS</h4>
 
-.scale {
+<pre><code>.scale {
   <b>width</b>: 100px;
   <b>height</b>: 100px;
   <b>background</b>: teal;
   <b>transform</b>: scale (0.5, 1.3);
-}
+}</code></pre>
 
-  100px   &ast;   0.5    =   50px   on the X axis and to    100px   &ast;   1.3    =   130px
+<pre><code>This example will scale the div to 100px &ast; 0.5 = 50px   on the X axis and to 100px &ast; 1.3 = 130px on the Y axis.</code></pre>
 
-This example will scale the div to on the Y axis.
-
-The center of the transform is in the center of the div, 50% from left
-and 50% from top.
-
+<p>The center of the transform is in the center of the div, 50% from left and 50% from top.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch28-3">Section 28.3: Skew</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>HTML:</h4>
 
-<pre><code>
-<b>&lt;</b><b>div</b> class=&quot;skew&quot;<b>&gt;</b>
-<b>&lt;</b><b>/div</b><b>&gt;</b>
-</code></pre>
+<pre><code><b>&lt;div</b> class=&quot;skew&quot;<b>&gt;&lt;/div&gt;</b></code></pre>
 
 <h4>CSS:</h4>
 
-<pre><code>
-.skew {
+<pre><code>.skew {
   <b>width</b>: 100px;
   <b>height</b>: 100px;
   <b>background</b>: teal;
   <b>transform</b>: skew (20deg, -30deg);
-}
-</code></pre>
+}</code></pre>
 
-This example will skew the div by 20 degrees on the X axis and by - 30
-degrees on the Y axis.
+<p>This example will skew the div by 20 degrees on the X axis and by - 30 degrees on the Y axis.
+The center of the transform is in the center of the div, 50% from left and 50% from top.</p>
 
-The center of the transform is in the center of the div, 50% from left
-and 50% from top.
-
-See the result
-&lbrack;&lbrack;here&rbrack;&rbrack;(https://jsfiddle.net/MadalinaTn/gtt4osms/1/).
-
+<p><a href="https://jsfiddle.net/MadalinaTn/gtt4osms/1/">See the result here</a>.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch28-4">Section 28.4: Multiple transforms</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 Multiple transforms can be applied to an element in one property like this:
 
-<b>transform</b>
+<pre><code><b>transform</b>: rotate(15deg) translateX(200px);</code></pre>
 
-:
+<p>This will rotate the element 15 degrees clockwise and then translate
+it 200px to the right.</p>
 
-rotate
-
-(
-
-15
-
-deg
-
-)
-
-translateX
-
-(
-
-200
-
-px
-
-)
-
-;
-
-This will rotate the element 15 degrees clockwise and then translate
-it 200px to the right.
-
-In chained transforms, <b>the coordinate system moves with the
+<p>In chained transforms, <b>the coordinate system moves with the
 element</b>. This means that the translation won&apos;t be horizontal but on
-an axis rotate 15 degrees clockwise as shown in the following image:
+an axis rotate 15 degrees clockwise as shown in the following image:</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 207.  (xxx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left" width="100%">
@@ -7700,86 +7658,15 @@ an axis rotate 15 degrees clockwise as shown in the following image:
 </p>
 <!-- (./images/image207.jpg){width="7.48037510936133in" height="2.7919728783902014in"} -->
 
-Changing the order of the transforms will change the output. The first
-example will be different to
+<p>Changing the order of the transforms will change the output. The first example will be different to</p>
 
-<b>transform</b>
+<pre><code><b>transform</b>: translateX(200px) rotate(15deg);
+<b>&lt;div</b> class=&quot;transform&quot;<b>&gt;&lt;/div&gt;</b>
+  .transform {
+  <b>transform</b>: rotate(15deg) translateX(200px);
+}</code></pre>
 
-:
-
-translateX
-
-(
-
-200
-
-px
-
-)
-
-rotate
-
-(
-
-15
-
-deg
-
-)
-
-;
-
-<b>&lt;</b>
-
-<b>div</b>
-
-class
-
-=
-
-&quot;transform&quot;
-
-<b>&gt;</b>
-
-<b>&lt;</b>
-
-<b>/div</b>
-
-<b>&gt;</b>
-
-.transform
-
-{
-
-<b>transform</b>
-
-:
-
-rotate
-
-(
-
-15
-
-deg
-
-)
-
-translateX
-
-(
-
-200
-
-px
-
-)
-
-;
-
-}
-
-As shown in this image:
+<p>As shown in this image:</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 208.  (xxx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left" width="100%">
@@ -7789,43 +7676,36 @@ As shown in this image:
   alt="." />
 </p>
 <!-- (./images/image208.jpg){width="7.48037510936133in" height="2.7919728783902014in"} -->
-
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch28-5">Section 28.5: Translate</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-
 <h4>HTML:</h4>
 
-<b>&lt;</b><b>div</b> class=&quot;translate&quot;<b>&gt;</b><b>&lt;</b><b>/div</b><b>&gt;</b>
+<pre><code><b>&lt;div</b> class=&quot;translate&quot;<b>&gt;&lt;/div&gt;</b></code></pre>
 
 <h4>CSS</h4>
 
-<pre><code>
-.translate {
+<pre><code>.translate {
   <b>width</b>: 100px;
   <b>height</b>: 100px;
   <b>background</b>: teal;
-  <b>transform</b>: translate ( 200px, 50&percnt;);
-}
-</code></pre>
+  <b>transform</b>: translate (200px, 50&percnt;);
+}</code></pre>
 
-This example will move the div by 200px on the X axis and by on the Y
-axis.
+<p>This example will move the div by 200px on the X axis and by 100px &ast; 50&percnt; = 50px on the Y axis.</p>
 
-You can also specify translations on a single axis.
+<p>You can also specify translations on a single axis.</p>
 
-On the X axis:
+<p>On the X axis:</p>
 
-<pre><code>
-.translate {
-  <b>transform</b>: translateX ( 200px );
-}
-</code></pre>
+<pre><code>.translate {
+  <b>transform</b>: translateX (200px);
+}</code></pre>
 
 <p>On the Y axis:</p>
 
 <pre><code>.translate {
-  <b>transform</b>: translateY ( 50&percnt; );
+  <b>transform</b>: translateY (50&percnt;);
 }</code></pre>
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
