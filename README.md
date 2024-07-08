@@ -993,7 +993,7 @@ Selectors Level 4:</p>
 <div style="load: right">
   <img src="./images/image002.png"
     align="right"
-	width="50%"
+    width="50%"
     title="Input focused, background blue"
     alt="Input focused, background blue." />
 </div>
@@ -2152,12 +2152,12 @@ IE8 and older versions.</p>
   <li>The element is being positioned according to the first non-static
     parent (<b>position</b>: relative, absolute, or fixed). Explore more in this
     <a href="https://jsfiddle.net/siavasfiroozbakht/ox8kyypa/">fiddle </a> and 
-	this documentation topic.</li>
+    this documentation topic.</li>
   <li>For horizontal-only centering, use <b>left</b>. 50% and <b>transform</b>: translateX(-50%).
     The same goes for vertical-only centering: center with <b>top</b>: 50% and <b>transform</b>: translateY(-50%).</li>
   <li>Using a non-static width/height elements with this method of centering can cause the centered 
     element to appear squished. This mostly happens with elements containing text, and can be fixed 
-	by adding: <b>margin-right</b>: -50%; and <b>margin-bottom</b>: -50%;. View this
+    by adding: <b>margin-right</b>: -50%; and <b>margin-bottom</b>: -50%;. View this
     <a href="https://jsfiddle.net/4xxmxca0/">fiddle for more information.</li>
 </ul>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -2605,7 +2605,7 @@ of the content:</p>
     isn&apos;t applicable to block-level elements</a></li>
   <li><b>margin-top</b>:auto and <b>margin-bottom</b>:auto 
     <a href="http://www.w3.org/TR/CSS2/visudet.html#Computing_heights_and_margins">
-	used values would compute as zero</a></li>
+    used values would compute as zero</a></li>
   <li><b>margin-top</b>:-50% <a href="http://www.w3.org/TR/CSS2/box.html#margin-properties">
     percentage-based margin values are calculated relative to the width of containing block</a></li>
 </ul>
@@ -2723,14 +2723,14 @@ to the content to create this rectangle.</p>
 <ul>
   <li>The innermost rectangle is the <b>content box</b>. The width and height of 
     this depends on the element&apos;s rendered content (text, images and any 
-	child elements it may have).</li>
+    child elements it may have).</li>
   <li>Next is the <b>padding box</b>, as defined by the padding property. If there 
     is no padding width defined, the padding edge is equal to the content edge.</li>
   <li>Then we have the <b>border box</b>, as defined by the border property. If there 
     is no border width defined, the border edge is equal to the padding edge.</li>
   <li>The outermost rectangle is the <b>margin box</b>, as defined by the margin 
     property. If there is no margin width defined, the margin edge is equal to the 
-	border edge.</li>
+    border edge.</li>
 </ul>
 
 <h4>Example:</h4>
@@ -3475,7 +3475,7 @@ image to be used instead of normal border styles.</p>
   <li>border-image-source: The path to the image to be used</li>
   <li>border-image-slice: Specifies the offset that is used to divide the image 
     into <b>nine regions</b> (four <b>corners</b>, four <b>edges</b> and a 
-	<b>middle</b>)</li>
+    <b>middle</b>)</li>
   <li>border-image-repeat: Specifies how the images for the sides and the middle 
     of the border image are scaled</li>
 </ul>
@@ -4412,7 +4412,7 @@ multiple columns appear to be the same height.</p>
 <pre><code><b>&lt;div</b> class=&quot;wrapper&quot;<b>&gt;</b>
   <b>&lt;div</b> class=&quot;sidebar&quot;<b>&gt;</b>
     <b>&lt;h2&gt;</b>Sidebar<b>&lt;/h2&gt;</b>
-	
+    
     <b>&lt;p&gt;</b>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio.<b>&lt;/p&gt;</b>
   <b>&lt;/div&gt;</b>
 
@@ -4461,10 +4461,10 @@ massa. Fusce ac turpis quis ligula lacinia aliquet. <b>&lt;/p&gt;</b>
   <b>&lt;div</b> class=&quot;content&quot;<b>&gt;</b>
     <b>&lt;h1&gt;</b>Content<b>&lt;/h1&gt;</b>
     <b>&lt;p&gt;</b>Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. 
-	Curabitur sodales ligula in libero. Sed dignissim lacinia nunc. Curabitur tortor. Pellentesque 
-	nibh. Aenean quam. In scelerisque sem at dolor. Maecenas mattis. Sed convallis tristique sem. Proin 
-	ut ligula vel nunc egestas porttitor. Morbi lectus risus, iaculis vel, suscipit quis, luctus non, 
-	massa. <b>&lt;/p&gt;</b>
+    Curabitur sodales ligula in libero. Sed dignissim lacinia nunc. Curabitur tortor. Pellentesque 
+    nibh. Aenean quam. In scelerisque sem at dolor. Maecenas mattis. Sed convallis tristique sem. Proin 
+    ut ligula vel nunc egestas porttitor. Morbi lectus risus, iaculis vel, suscipit quis, luctus non, 
+    massa. <b>&lt;/p&gt;</b>
   <b>&lt;/div&gt;</b>
   <b>&lt;div</b> class=&quot;right-sidebar&quot;<b>&gt;</b>
     <b>&lt;h1&gt;</b>Right Sidebar<b>&lt;/h1</b>
@@ -5288,18 +5288,18 @@ achieve this with a very simple markup:</p>
 <pre><code><b>&lt;div</b> class=&quot;cards&quot;<b>&gt;</b>
   <b>&lt;div</b> class=&quot;card&quot;<b>&gt;</b>
     <b>&lt;p&gt;</b>Lorem ipsum Magna proident ex anim dolor ullamco pariatur reprehenderit culpa esse enim 
-	  mollit labore dolore voluptate ullamco et ut sed qui minim.<b>&lt;/p&gt;</b>
+      mollit labore dolore voluptate ullamco et ut sed qui minim.<b>&lt;/p&gt;</b>
     <b>&lt;p&gt;&lt;button&gt;</b>Action<b>&lt;/button&gt;&lt;/p&gt;</b>
   <b>&lt;/div&gt;</b>
   <b>&lt;div</b> class=&quot;card&quot;<b>&gt;</b>
     <b>&lt;p&gt;</b>Lorem ipsum Magna proident ex anim dolor ullamco pariatur reprehenderit culpa esse enim 
-	  mollit labore dolore voluptate ullamco et ut sed qui minim.<b>&lt;/p&gt;</b>
+      mollit labore dolore voluptate ullamco et ut sed qui minim.<b>&lt;/p&gt;</b>
     <b>&lt;p&gt;</b>Lorem ipsum Magna proident ex anim dolor ullamco pariatur reprehenderit culpa esse enim 
-	  mollit labore dolore voluptate ullamco et ut sed qui minim.<b>&lt;/p&gt;</b>
+      mollit labore dolore voluptate ullamco et ut sed qui minim.<b>&lt;/p&gt;</b>
     <b>&lt;p&gt;</b>Lorem ipsum Magna proident ex anim dolor ullamco pariatur reprehenderit culpa esse enim 
-	  mollit labore dolore voluptate ullamco et ut sed qui minim.<b>&lt;/p&gt;</b>
+      mollit labore dolore voluptate ullamco et ut sed qui minim.<b>&lt;/p&gt;</b>
     <b>&lt;p&gt;</b>Lorem ipsum Magna proident ex anim dolor ullamco pariatur reprehenderit culpa esse enim 
-	  mollit labore dolore voluptate ullamco et ut sed qui minim.<b>&lt;/p&gt;</b>
+      mollit labore dolore voluptate ullamco et ut sed qui minim.<b>&lt;/p&gt;</b>
     <b>&lt;p&gt;&lt;button&gt;</b>Action<b>&lt;/button&gt;&lt;/p&gt;</b>
   <b>&lt;/div&gt;</b>
 <b>&lt;/div&gt;</b></code></pre>
@@ -5610,9 +5610,9 @@ resolving conflicts in CSS rule sets.</p>
   <li>User stylesheet (The additional styling a user has set on his/her browser)</li>
   <li>Author stylesheet (Author here means the creator of the webpage/website)
     <ul>
-	  <li>Maybe one or more .css files</li>
-	  <li>In the <b>&lt;style&gt;</b> element of the HTML document</li>
-	</ul>
+      <li>Maybe one or more .css files</li>
+      <li>In the <b>&lt;style&gt;</b> element of the HTML document</li>
+    </ul>
   <li>Inline styles (In the style attribute on an HTML element)</li>
 </ol>
 
@@ -6272,7 +6272,7 @@ which stands for &quot;root em&quot;. Let&apos;s look at how rem works.</p>
     compounding issue.</li>
   <li><b>rem</b>: Relative to the font size of the root or <b>&gt;</b> element. 
     This means it&apos;s possible to declare a single font size for the html 
-	element and define all rem units to be a percentage of that.</li>
+    element and define all rem units to be a percentage of that.</li>
 </ul>
 
 <p>The main issue with using rem for font sizing is that the values are
@@ -7228,13 +7228,13 @@ div: hover {
     vertically when hovered.</li>
   <li><b>transition-duration</b>: Specifies the length of time a transition
     takes to complete. In the above example, the height and width transitions 
-	will take 1 second and 500 milliseconds respectively.</li>
+    will take 1 second and 500 milliseconds respectively.</li>
   <li><b>transition-timing-function</b>: Specifies the speed curve of the transition 
     effect. A <i>linear</i> value indicates the transition will have the same speed from 
-	start to finish.</li>
+    start to finish.</li>
   <li><b>transition-delay</b>: Specifies the amount of time needed to wait before the 
     transition effect starts. In this case, the height will start transitioning 
-	immediately, whereas the width will wait 1 second.</li>
+    immediately, whereas the width will wait 1 second.</li>
 </ul>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ch27">Chapter 27: Animations</h2>
@@ -7255,7 +7255,7 @@ div: hover {
 
 | &lbrack; from | to | <b>&lt;percentage&gt;</b> &rbrack; | You can either specify a set time with a percentage value, or two percentage values, IE |
 |                                                       | 10&percnt;, 20&percnt;, for a period of time where the keyframe's set attributes are set. |
-| block 												| Any amount of CSS attributes for the keyframe. |
+| block                                                 | Any amount of CSS attributes for the keyframe. |
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch27-1">Section 27.1: Animations with keyframes</h3>
@@ -8627,8 +8627,8 @@ li: before {
   <b>&lt;li&gt;</b>Level 1
     <b>&lt;ul&gt;</b>
       <b>&lt;li&gt;</b>Level 1.1
-	    <b>&lt;ul&gt;</b>
-		  <b>&lt;li&gt;</b>Level 1.1.1<b>&lt;/li&gt;</b>
+        <b>&lt;ul&gt;</b>
+          <b>&lt;li&gt;</b>Level 1.1.1<b>&lt;/li&gt;</b>
         <b>&lt;/ul&gt;</b>
       <b>&lt;/li&gt;</b>
     <b>&lt;/ul&gt;</b>
@@ -8701,7 +8701,7 @@ added to specify the order of operations if necessary.</p>
 attribute which CSS can use (e.g. inside the ::before and ::after pseudo-element) using
 this function.</p>
 
-<pre><code><b>&lt;</b><b>blockquote</b>data-mark=&apos;&quot;&apos;<b>&gt;</b><b>&lt;</b><b>/blockquote</b><b>&gt;</b></code></pre>
+<pre><code><b>&lt;</b><b>blockquote</b> data-mark=&apos;&quot;&apos;<b>&gt;</b><b>&lt;</b><b>/blockquote</b><b>&gt;</b></code></pre>
 
 <p>In the following CSS block, the character is appended before and after the text inside the element:</p>
 
@@ -8831,24 +8831,23 @@ the highest specificity will apply to the element selected.</p>
 dashes just like other CSS properties (eg: lineheight,
 -moz-box-sizing) but it should start with double dashes (&minus;-)</p>
 
-//These are Invalids variable names
 
-<pre><code>&minus;-123color: blue;
+
+<pre><code>//These are Invalids variable names
+&minus;-123color: blue;
 &minus;-&num;<b>color</b>: red;
 &minus;-bg&lowbar;color: yellow
 &minus;-&dollar;<b>width</b>: 100px;</code></pre>
 
-//Valid variable names
-
-<pre><code>&minus;-color: red;
+<pre><code>//Valid variable names
+&minus;-color: red;
 &minus;-bg-color: yellow
 &minus;-width: 100px;</code></pre>
 
 <h4>CSS Variables are case sensitive</h4>
 
-/* The variable names below are all different variables */
-
-<pre><code>&minus;-pcolor: ;
+<pre><code>/* The variable names below are all different variables */
+&minus;-pcolor: ;
 &minus;-Pcolor: ;
 &minus;-pColor: ;</code></pre>
 
@@ -8866,15 +8865,13 @@ dashes just like other CSS properties (eg: lineheight,
 .logo{
   &minus;-logo-url: &apos;logo&apos;;
   <b>background</b>: url(&apos;assets/img/&apos; var(&minus;-logo-url) &apos;.png&apos;);
-}</code></pre>
-
-<pre><code>/* Invalid - CSS bug */
+}
+/* Invalid - CSS bug */
 .logo{
   &minus;-logo-url: &apos;assets/img/logo.png&apos;;
   <b>background</b>: url(var(&minus;-logo-url));
-}</code></pre>
-
-<pre><code>/* Valid */
+}
+/* Valid */
 .logo{
   &minus;-logo-url: url(&apos;assets/img/logo.png&apos;);
   <b>background</b>: var(&minus;-logo-url);
@@ -8884,9 +8881,11 @@ dashes just like other CSS properties (eg: lineheight,
 
 <pre><code>/* Invalid */
 &minus;-width: 10;
+
 <b>width</b>: var(&minus;-width)px;
 /* Valid */
 &minus;-width: 10px;
+
 <b>width</b>: var(&minus;-width);
 /* Valid */
 &minus;-width:10;
@@ -8896,355 +8895,63 @@ dashes just like other CSS properties (eg: lineheight,
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch37-5">Section 37.5: With media queries</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-> You can re-set variables within media queries and have those new
-> values cascade wherever they are used, something that isn&apos;t possible
-> with pre-processor variables.
->
-> Here, a media query changes the variables used to set up a very simple
-> grid:
->
+You can re-set variables within media queries and have those new
+values cascade wherever they are used, something that isn&apos;t possible
+with pre-processor variables.
+
+Here, a media query changes the variables used to set up a very simple
+grid:
+
 <h4>HTML:</h4>
 
-<b>&lt;</b>
+<pre><code><b>&lt;div&gt;</b><b>&lt;/div&gt;</b>
+<b>&lt;div&gt;</b><b>&lt;/div&gt;</b>
+<b>&lt;div&gt;</b><b>&lt;/div&gt;</b>
+<b>&lt;div&gt;</b><b>&lt;/div&gt;</b></code></pre>
 
-<b>div</b>
+<h4>CSS</h4>
 
-<b>&gt;</b>
-
-<b>&lt;</b>
-
-<b>/div</b>
-
-<b>&gt;</b>
-
-<b>&lt;</b>
-
-<b>div</b>
-
-<b>&gt;</b>
-
-<b>&lt;</b>
-
-<b>/div</b>
-
-<b>&gt;</b>
-
-<b>&lt;</b>
-
-<b>div</b>
-
-<b>&gt;</b>
-
-<b>&lt;</b>
-
-<b>/div</b>
-
-<b>&gt;</b>
-
-<b>&lt;</b>
-
-<b>div</b>
-
-<b>&gt;</b>
-
-<b>&lt;</b>
-
-<b>/div</b>
-
-<b>&gt;</b>
-
-> <h4>CSS</h4>
-
-:
-
-root
-
-{
-
-&minus;-
-
-width
-
-:
-
-25
-
-&percnt;
-
-;
-
-&minus;-
-
-content
-
-:
-
-&apos;This is desktop&apos;
-
-;
-
+<pre><code>:root{
+  &minus;-width: 25&percnt;;
+  &minus;-content: &apos;This is desktop&apos;;
 }
-
-<b>&commat;media</b>
-
-only screen and
-
-(
-
-<b>max-width</b>
-
-:
-
-767
-
-px
-
-)
-
-{
-
-:
-
-root
-
-{
-
-&minus;-
-
-width
-
-:
-
-50
-
-&percnt;
-
-;
-
-&minus;-
-
-content
-
-:
-
-&apos;This is mobile&apos;
-
-;
-
+<b>&commat;media</b> only screen and (<b>max-width</b>: 767px){
+  :root{
+    &minus;-width: 50&percnt;;
+    &minus;-content: &apos;This is mobile&apos;;
+  }
 }
-
+<b>&commat;media</b> only screen and (<b>max-width</b>: 480px){
+  :root{
+    &minus;-width: 100&percnt;;
+  }
 }
-
-<b>&commat;media</b>
-
-only screen and
-
-(
-
-<b>max-width</b>
-
-:
-
-480
-
-px
-
-)
-
-{
-
-:
-
-root
-
-{
-
-&minus;-
-
-width
-
-:
-
-100
-
-&percnt;
-
-;
-
+div {
+  <b>width</b>: calc(var(&minus;-width) &minus; 20px);
+  <b>height</b>: 100px;
 }
-
+div: before{
+  <b>content</b>: var(&minus;-content);
 }
-
-div
-
-{
-
-<b>width</b>
-
-:
-
-calc
-
-(
-
-var
-
-(
-
-&minus;-
-
-width
-
-)
-
-&minus;
-
-20
-
-px
-
-)
-
-;
-
-<b>height</b>
-
-:
-
-100
-
-px
-
-;
-
-}
-
-div
-
-:
-
-before
-
-{
-
-<b>content</b>
-
-:
-
-var
-
-(
-
-&minus;-
-
-content
-
-)
-
-;
-
-}
-
 /* Other Styles */
-
-body
-
-{
-
-<b>padding</b>
-
-:
-
-10
-
-px
-
-;
-
+body {
+  <b>padding</b>: 10px;
 }
+div {
+  <b>display</b>: flex;
+  <b>align-items</b>: center;
+  <b>justify-content</b>: center;
+  <b>font-weight</b>: bold;
+  <b>float</b>: left;
+  <b>margin</b>: 10px;
+  <b>border</b>: 4px solid black;
+  <b>background</b>: red;
+}</code></pre>
 
-div
+<p>You can try resizing the window in this 
+<a href="https://codepen.io/mkumaran/pen/BZaXvz">Demo (CodePen)</a>.</p>
 
-{
-
-<b>display</b>
-
-:
-
-flex
-
-;
-
-<b>align-items</b>
-
-:
-
-center
-
-;
-
-<b>justify-content</b>
-
-:
-
-center
-
-;
-
-<b>font-weight</b>
-
-:
-
-bold
-
-;
-
-<b>float</b>
-
-:
-
-left
-
-;
-
-<b>margin</b>
-
-:
-
-10
-
-px
-
-;
-
-<b>border</b>
-
-:
-
-4
-
-px
-
-solid
-
-black
-
-;
-
-<b>background</b>
-
-:
-
-red
-
-;
-
-}
-
-> You can try resizing the window in this &lbrack;&lbrack;CodePen
-> Demo&rbrack;&rbrack;(https://codepen.io/mkumaran/pen/BZaXvz)
->
-> Here&apos;s an animated screenshot of the resizing in action:
+<p>Here&apos;s an animated screenshot of the resizing in action:</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 227.  (xxx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left" width="100%">
@@ -9253,7 +8960,6 @@ red
   title=""
   alt="." />
 </p>
-<!-- (./images/image227.jpg){width="7.48037510936133in" height="4.327166447944007in"} -->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ch38">Chapter 38: Single Element Shapes</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -9270,108 +8976,32 @@ except for one side:</p>
   title=""
   alt="." />
 </p>
-<!-- !&lbrack;&rbrack;(./images/image228.jpg){width="4.75in" height="1.96875in"} -->
 
-> <b>HTML:</b>
+<h4>HTML:</h4>
 
-<b>&lt;</b>
+<pre><code><b>&lt;</b><b>div</b> class=&quot;trapezoid&quot;<b>&gt;</b><b>&lt;</b><b>/div</b><b>&gt;</b></code></pre>
 
-<b>div</b>
+<h4>CSS:</h4>
 
-class
+<pre><code>.trapezoid {
+  <b>width</b>: 50px;
+  <b>height</b>: 0;
+  <b>border-left</b>: 50px solid transparent;
+  <b>border-right</b>: 50px solid transparent;
+  <b>border-bottom</b>: 100px solid black;
+}</code></pre>
 
-=
-
-&quot;trapezoid&quot;
-
-<b>&gt;</b>
-
-<b>&lt;</b>
-
-<b>/div</b>
-
-<b>&gt;</b>
-
-> <b>CSS:</b>
-
-.trapezoid
-
-{
-
-<b>width</b>
-
-:
-
-50
-
-px
-
-;
-
-<b>height</b>
-
-:
-
-0
-
-;
-
-<b>border-left</b>
-
-:
-
-50
-
-px
-
-solid
-
-transparent
-
-;
-
-<b>border-right</b>
-
-:
-
-50
-
-px
-
-solid
-
-transparent
-
-;
-
-<b>border-bottom</b>
-
-:
-
-100
-
-px
-
-solid
-
-black
-
-;
-
-}
-
-> With changing the border sides, the orientation of the trapezoid can
-> be adjusted.
+With changing the border sides, the orientation of the trapezoid can
+be adjusted.
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch38-2">Section 38.2: Triangles</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-
-> To create a CSS triangle define an element with a width and height of
-> 0 pixels. The triangle shape will be formed using border properties.
-> For an element with 0 height and width the 4 borders (top, right,
-> bottom, left) each form a triangle. Here&apos;s an element with 0
-> height/width and 4 different colored borders.
+To create a CSS triangle define an element with a width and height of
+0 pixels. The triangle shape will be formed using border properties.
+For an element with 0 height and width the 4 borders (top, right,
+bottom, left) each form a triangle. Here&apos;s an element with 0
+height/width and 4 different colored borders.
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 229.  (xxx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left" width="100%">
@@ -9380,13 +9010,12 @@ black
   title=""
   alt="." />
 </p>
-< !-- (./images/image229.jpg){width="1.6666666666666667in" height="1.7083333333333333in"} -->
 
-> By setting some borders to transparent, and others to a color we can
-> create various triangles. For example, in the Up triangle, we set the
-> bottom border to the desired color, then set the left and right
-> borders to transparent. Here&apos;s an image with the left and right
-> borders shaded slightly to show how the triangle is being formed.
+By setting some borders to transparent, and others to a color we can
+create various triangles. For example, in the Up triangle, we set the
+bottom border to the desired color, then set the left and right
+borders to transparent. Here&apos;s an image with the left and right
+borders shaded slightly to show how the triangle is being formed.
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 230.  (xxx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left" width="100%">
@@ -9395,206 +9024,110 @@ black
   title=""
   alt="." />
 </p>
-<!-- (./images/image230.jpg){width="1.1458333333333333in" height="1.1875in"} -->
 
-> The dimensions of the triangle can be altered by changing the
-> different border widths - taller, shorter, lopsided, etc. The examples
-> below all show a 50x50 pixel triangle.
->
-> <b>Triangle - Pointing Up</b>
+The dimensions of the triangle can be altered by changing the
+different border widths - taller, shorter, lopsided, etc. The examples
+below all show a 50x50 pixel triangle.
 
+<b>Triangle - Pointing Up</b>
 <b>&lt;</b>
-
 <b>div</b>
-
 class
-
 =
-
 &quot;triangle-up&quot;
-
 <b>&gt;</b>
-
 <b>&lt;</b>
-
 <b>/div</b>
-
 <b>&gt;</b>
-
 .triangle-up
-
 {
-
 <b>width</b>
-
 :
-
 0
-
 ;
-
 <b>height</b>
-
 :
-
 0
-
 ;
-
 <b>border-left</b>
-
 :
-
 25
-
 px
-
 solid
-
 transparent
-
 ;
-
 <b>border-right</b>
-
 :
-
 25
-
 px
-
 solid
-
 transparent
-
 ;
-
 **border-bottom**
-
 :
-
 50
-
 px
-
 solid
-
 rgb
-
 (
-
 246
-
 ,
-
 156
-
 ,
-
 85
-
 )
-
 ;
-
 }
 
 > **Triangle - Pointing Down**
 
 **&lt;**
-
 **div**
-
 class
-
 =
-
 &quot;triangle-down&quot;
-
 **&gt;**
-
 **&lt;**
-
 **/div**
-
 **&gt;**
-
 .triangle-down
-
 {
-
 **width**
-
 :
-
 0
-
 ;
-
 **height**
-
 :
-
 0
-
 ;
-
 **border-left**
-
 :
-
 25
-
 px
-
 solid
-
 transparent
-
 ;
-
 **border-right**
-
 :
-
 25
-
 px
-
 solid
-
 transparent
-
 ;
-
 **border-top**
-
 :
-
 50
-
 px
-
 solid
-
 rgb
-
 (
-
 246
-
 ,
-
 156
-
 ,
-
 85
-
 )
-
 ;
-
 }
 
 > **Triangle - Pointing Right**
@@ -9609,544 +9142,288 @@ rgb
 <!-- (./images/image233.jpg){width="1.1458333333333333in" height="1.1875in"} -->
 
 **&lt;**
-
 **div**
-
 class
-
 =
-
 &quot;triangle-right&quot;
-
 **&gt;**
-
 **&lt;**
-
 **/div**
-
 **&gt;**
-
 .triangle-right
-
 {
-
 **width**
-
 :
-
 0
-
 ;
-
 **height**
-
 :
-
 0
-
 ;
-
 **border-top**
-
 :
-
 25
-
 px
-
 solid
-
 transparent
-
 ;
-
 **border-bottom**
-
 :
-
 25
-
 px
-
 solid
-
 transparent
-
 ;
-
 **border-left**
-
 :
-
 50
-
 px
-
 solid
-
 rgb
-
 (
-
 246
-
 ,
-
 156
-
 ,
-
 85
-
 )
-
 ;
-
 }
 
 > **Triangle - Pointing Left**
 
 **&lt;**
-
 **div**
-
 class
-
 =
-
 &quot;triangle-left&quot;
-
 **&gt;**
-
 **&lt;**
-
 **/div**
-
 **&gt;**
-
 .triangle-left
-
 {
-
 **width**
-
 :
-
 0
-
 ;
-
 **height**
-
 :
-
 0
-
 ;
-
 **border-top**
-
 :
-
 25
-
 px
-
 solid
-
 transparent
-
 ;
-
 **border-bottom**
-
 :
-
 25
-
 px
-
 solid
-
 transparent
-
 ;
-
 **border-right**
-
 :
-
 50
-
 px
-
 solid
-
 rgb
-
 (
-
 246
-
 ,
-
 156
-
 ,
-
 85
-
 )
-
 ;
-
 }
 
 > **Triangle - Pointing Up/Right**
 
 **&lt;**
-
 **div**
-
 class
-
 =
-
 &quot;triangle-up-right&quot;
-
 **&gt;**
-
 **&lt;**
-
 **/div**
-
 **&gt;**
-
 .triangle-up-right
-
 {
-
 **width**
-
 :
-
 0
-
 ;
-
 **height**
-
 :
-
 0
-
 ;
-
 **border-top**
-
 :
-
 50
-
 px
-
 solid
-
 rgb
-
 (
-
 246
-
 ,
-
 156
-
 ,
-
 85
-
 )
-
 ;
-
 **border-left**
-
 :
-
 50
-
 px
-
 solid
-
 transparent
-
 ;
-
 }
-
 > **Triangle - Pointing Up/Left**
-
 **&lt;**
-
 **div**
-
 class
-
 =
-
 &quot;triangle-up-left&quot;
-
 **&gt;**
-
 **&lt;**
-
 **/div**
-
 **&gt;**
-
 .triangle-up-left
-
 {
-
 **width**
-
 :
-
 0
-
 ;
-
 **height**
-
 :
-
 0
-
 ;
-
 **border-top**
-
 :
-
 50
-
 px
-
 solid
-
 rgb
-
 (
-
 246
-
 ,
-
 156
-
 ,
-
 85
-
 )
-
 ;
-
 **border-right**
-
 :
-
 50
-
 px
-
 solid
-
 transparent
-
 ;
-
 }
 
 > **Triangle - Pointing Down/Right**
 
 **&lt;**
-
 **div**
-
 class
-
 =
-
 &quot;triangle-down-right&quot;
-
 **&gt;**
-
 **&lt;**
-
 **/div**
-
 **&gt;**
-
 .triangle-down-right
-
 {
-
 **width**
-
 :
-
 0
-
 ;
-
 **height**
-
 :
-
 0
-
 ;
-
 **border-bottom**
-
 :
-
 50
-
 px
-
 solid
-
 rgb
-
 (
-
 246
-
 ,
-
 156
-
 ,
-
 85
-
 )
-
 ;
-
 **border-left**
-
 :
-
 50
-
 px
-
 solid
-
 transparent
-
 ;
-
 }
 
 > **Triangle - Pointing Down/Left**
 
 **&lt;**
-
 **div**
-
 class
-
 =
-
 &quot;triangle-down-left&quot;
-
 **&gt;**
-
 **&lt;**
-
 **/div**
-
 **&gt;**
-
 .triangle-down-left
-
 {
-
 **width**
-
 :
-
 0
-
 ;
-
 **height**
-
 :
-
 0
-
 ;
-
 **border-bottom**
-
 :
-
 50
-
 px
-
 solid
-
 rgb
-
 (
-
 246
-
 ,
-
 156
-
 ,
-
 85
-
 )
-
 ;
-
 **border-right**
-
 :
-
 50
-
 px
-
 solid
-
 transparent
-
 ;
-
 }
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch38-3">Section 38.3: Circles and Ellipses</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
-> **Circle**
->
-> To create a **circle**, define an element with an equal width and
-> height (a *square*) and then set the border-radius property of this
-> element to 50%.
+**Circle**
+
+To create a **circle**, define an element with an equal width and
+height (a *square*) and then set the border-radius property of this
+element to 50%.
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 239.  (xxx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left" width="100%">
@@ -10165,67 +9442,39 @@ transparent
 > <h4>CSS</h4>
 
 .circle
-
 {
-
 **width**
-
 :
-
 50
-
 px
-
 ;
-
 **height**
-
 :
-
 50
-
 px
-
 ;
-
 **background**
-
 :
-
 rgb
-
 (
-
 246
-
 ,
-
 156
-
 ,
-
 85
-
 )
-
 ;
-
 **border-radius**
-
 :
-
 50
-
 &percnt;
-
 ;
-
 }
 
-> **Ellipse**
->
-> An **ellipse** is similar to a circle, but with different values for
-> width and height.
+**Ellipse**
+
+An **ellipse** is similar to a circle, but with different values for
+width and height.
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 240.  (xxx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left" width="100%">
@@ -10250,7 +9499,7 @@ class
 **&gt;**
 </code></pre>
 
-> <h4>CSS</h4>
+<h4>CSS:</h4>
 
 <pre><code>
 .oval
@@ -10287,25 +9536,23 @@ rgb
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch38-4">Section 38.4: Bursts</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+A burst is similar to a star but with the points extending less
+distance from the body. Think of a burst shape as a square with
+additional, slightly rotated, squares layered on top.
 
-> A burst is similar to a star but with the points extending less
-> distance from the body. Think of a burst shape as a square with
-> additional, slightly rotated, squares layered on top.
+::before and ::after
 
-  ::before                      and             ::after
+The additional squares are created using the psuedo-elements.
 
+**8 Point Burst**
 
-> The additional squares are created using the psuedo-elements.
->
-> **8 Point Burst**
-
-  before
+before
 
 
-> An 8 point burst are 2 layered squares. The bottom square is the
-> element itself, the additional square is created using the :
-> pseudo-element. The bottom is rotated 20°, the top square is rotated
-> 135°.
+An 8 point burst are 2 layered squares. The bottom square is the
+element itself, the additional square is created using the :
+pseudo-element. The bottom is rotated 20°, the top square is rotated
+135°.
 
 <pre><code>
 **&lt;**
@@ -10345,10 +9592,10 @@ before
 and:
 after
 
-> An 12 point burst are 3 layered squares. The bottom square is the
-> element itself, the additional squares are created using the :
-> pseudo-elements. The bottom is rotated 0°, the next square is rotated
-> 30°, and the top is rotated 60°.
+<p>An 12 point burst are 3 layered squares. The bottom square is the
+element itself, the additional squares are created using the :
+pseudo-elements. The bottom is rotated 0°, the next square is rotated
+30°, and the top is rotated 60°.</p>
 
 <pre><code>
 **&lt;**
@@ -10385,14 +9632,12 @@ transform: rotate(30deg);
 transform: rotate(60deg);
 }
 </code></pre>
-
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch38-5">Section 38.5: Square</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-
-> To create a square, define an element with both a width and height. In
-> the example below, we have an element with a width and height of 100
-> pixels each.
+To create a square, define an element with both a width and height. In
+the example below, we have an element with a width and height of 100
+pixels each.
 
 <pre><code>
 **&lt;**
@@ -10588,12 +9833,10 @@ px
 }
 &lbrack;**&lbrack;See demo&rbrack;**&rbrack;(https://jsfiddle.net/codename0/9po0r1L1/)
 </code></pre>
-
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch38-7">Section 38.7: Pyramid</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-
-  skewY()
+skewY()
 
 This example shows how to create a **pyramid** using borders and 2D
 transformation methods and rotate() on pseudo elements.
@@ -10796,45 +10039,25 @@ pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
 culpa qui officia deserunt mollit anim id est laborum
 
 **&lt;**
-
 **/div**
-
 **&gt;**
-
 .multi-columns
-
 {
-
 -moz-column-width
-
 :
-
 100
-
 px
-
 ;
-
 -webkit-column-width
-
 :
-
 100
-
 px
-
 ;
-
 <b>column-width</b>
-
 :
-
 100
-
 px
-
 ;
-
 }
 
 <h4>Result</h4>
@@ -10872,104 +10095,67 @@ px
 > CSS
 
 .content
-
 {
-
 &minus;
-
 webkit-column-count
-
 :
-
 3
-
 ;
-
 /* Chrome, Safari, Opera */
-
 &minus;
-
 moz-column-count
-
 :
-
 3
-
 ;
-
 /* Firefox */
-
 <b>column-count</b>
-
 :
-
 3
-
 ;
-
 }
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch40-2">Section 40.2: Basic example</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+Consider the following HTML markup:
 
-> Consider the following HTML markup:
->
-> <b>&lt;section&gt;</b> <b>&lt;p&gt;</b>Lorem ipsum dolor sit amet, consetetur
-> sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
-> dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam
-> et justo duo dolores et ea rebum.<b>&lt;/p&gt;</b> <b>&lt;p&gt;</b> Stet clita kasd
-> gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-> nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
-> sed diam voluptua. At vero eos et accusam et justo duo dolores et ea
-> rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem
-> ipsum dolor sit amet.<b>&lt;/p&gt;</b> <b>&lt;p&gt;</b>Lorem ipsum dolor sit amet,
-> consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
-> labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos
-> et accusam et justo duo dolores et ea rebum. Stet clita kasd
-> gubergren, no sea takimata sanctus est Lorem ipsum dolor sit
-> amet.<b>&lt;/p&gt; &lt;/section&gt;</b>
->
-> With the following CSS applied the content is split into three columns
-> separated by a gray column rule of two pixels.
+<b>&lt;section&gt;</b> <b>&lt;p&gt;</b>Lorem ipsum dolor sit amet, consetetur
+sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
+dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam
+et justo duo dolores et ea rebum.<b>&lt;/p&gt;</b> <b>&lt;p&gt;</b> Stet clita kasd
+gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
+sed diam voluptua. At vero eos et accusam et justo duo dolores et ea
+rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem
+ipsum dolor sit amet.<b>&lt;/p&gt;</b> <b>&lt;p&gt;</b>Lorem ipsum dolor sit amet,
+consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
+labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos
+et accusam et justo duo dolores et ea rebum. Stet clita kasd
+gubergren, no sea takimata sanctus est Lorem ipsum dolor sit
+amet.<b>&lt;/p&gt; &lt;/section&gt;</b>
+
+With the following CSS applied the content is split into three columns
+separated by a gray column rule of two pixels.
 
 section
-
 {
-
 <b>columns</b>
-
 :
-
 3
-
 ;
-
 <b>column-gap</b>
-
 :
-
 40
-
 px
-
 ;
-
 <b>column-rule</b>
-
 :
-
 2
-
 px
-
 solid
-
 gray
-
 ;
-
 }
 
 See a &lbrack;&lbrack;live sample of this on
@@ -10980,229 +10166,125 @@ JSFiddle&rbrack;&rbrack;(https://jsfiddle.net/vjL9ewmb/).
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="41-1">Section 41.1: Justified navigation bar</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-
-> The horizontally justified navigation (menu) bar has some number of
-> items that should be justified. The first (left) item has no left
-> margin within the container, the last (right) item has no right margin
-> within the container. The distance between items is equal, independent
-> on the individual item width.
+The horizontally justified navigation (menu) bar has some number of
+items that should be justified. The first (left) item has no left
+margin within the container, the last (right) item has no right margin
+within the container. The distance between items is equal, independent
+on the individual item width.
 
 <h4>HTML:</h4>
 
 <b>&lt;</b>
-
 <b>nav</b>
-
 <b>&gt;</b>
-
 <b>&lt;</b>
-
 <b>ul</b>
-
 <b>&gt;</b>
-
 <b>&lt;</b>
-
 <b>li</b>
-
 <b>&gt;</b>
-
 abc
-
 <b>&lt;</b>
-
 <b>/li</b>
-
 <b>&gt;</b>
-
 <b>&lt;</b>
-
 <b>li</b>
-
 <b>&gt;</b>
-
 abcdefghijkl
-
 <b>&lt;</b>
-
 <b>/li</b>
-
 <b>&gt;</b>
-
 <b>&lt;</b>
-
 <b>li</b>
-
 <b>&gt;</b>
-
 abcdef
-
 <b>&lt;</b>
-
 <b>/li</b>
-
 <b>&gt;</b>
-
 <b>&lt;</b>
-
 <b>/ul</b>
-
 <b>&gt;</b>
-
 <b>&lt;</b>
-
 <b>/nav</b>
-
 <b>&gt;</b>
 
 <h4>CSS</h4>
 
 nav
-
 {
-
 <b>width</b>
-
 :
-
 100
-
 &percnt;
-
 ;
-
 <b>line-height</b>
-
 :
-
 1.4
-
 em
-
 ;
-
 }
-
 ul
-
 {
-
 <b>list-style</b>
-
 :
-
 none
-
 ;
-
 <b>display</b>
-
 :
-
-block
-
+lock
 ;
-
 <b>width</b>
-
 :
-
 100
-
 &percnt;
-
 ;
-
 <b>margin</b>
-
 :
-
 0
-
 ;
-
 <b>padding</b>
-
 :
-
 0
-
 ;
-
 <b>text-align</b>
-
 :
-
 justify
-
 ;
-
 <b>margin-bottom</b>
-
 :
-
 -1.4
-
 em
-
 ;
-
+}
+ul
+:
+after
+{
+<b>content</b>
+:
+&quot;&quot;
+;
+<b>display</b>
+:
+inline-block
+;
+<b>width</b>
+:
+100
+&percnt;
+;
+}
+li
+{
+<b>display</b>
+:
+inline-block
+;
 }
 
-ul
-
-:
+<b>Notes</b>
 
 after
-
-{
-
-<b>content</b>
-
-:
-
-&quot;&quot;
-
-;
-
-<b>display</b>
-
-:
-
-inline-block
-
-;
-
-<b>width</b>
-
-:
-
-100
-
-&percnt;
-
-;
-
-}
-
-li
-
-{
-
-<b>display</b>
-
-:
-
-inline-block
-
-;
-
-}
-
-> <b>Notes</b>
-
-  after
-
 
 The nav, ul and li tags were chosen for their semantic meaning of &apos;a
 list of navigation (menu) items&apos;. Other tags may also be used of
@@ -11235,27 +10317,16 @@ this line. The total height of the menu will grow as needed.
 > Assume the following stylesheet:
 
 #myContainer
-
 {
-
 <b>color</b>
-
 :
-
 red
-
 ;
-
 <b>padding</b>
-
 :
-
 5
-
 px
-
 ;
-
 }
 
   <b>color</b>   :   red   not only to the  <b>&lt;div</b>   <b>&gt;</b> element but also to <b>&lt;h3</b>   <b>&gt;</b>   <b>&lt;p</b>
@@ -11264,174 +10335,104 @@ px
 > its value will <b>*not*</b> be inherited to those elements.
 
 <b>&lt;</b>
-
 <b>div</b>
-
 id
-
 =
-
 &quot;myContainer&quot;
-
 <b>&gt;</b>
-
 <b>&lt;</b>
-
 <b>h</b>
-
 <b>3</b>
-
 <b>&gt;</b>
-
 Some header
-
 <b>&lt;</b>
-
 <b>/h</b>
-
 <b>3</b>
-
 <b>&gt;</b>
-
 <b>&lt;</b>
-
 <b>p</b>
-
 <b>&gt;</b>
-
 Some paragraph
-
 <b>&lt;</b>
-
 <b>/p</b>
-
 <b>&gt;</b>
-
 <b>&lt;</b>
-
 <b>/div</b>
-
 <b>&gt;</b>
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch42-2">Section 42.2: Enforced inheritance</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+Some properties are not automatically inherited from an element down
+to its&apos; children. This is because those properties are typically
+desired to be unique to the element (or selection of elements) to
+which the property is applied to. Common such properties are margin,
+padding, background, display, etc.
 
-> Some properties are not automatically inherited from an element down
-> to its&apos; children. This is because those properties are typically
-> desired to be unique to the element (or selection of elements) to
-> which the property is applied to. Common such properties are margin,
-> padding, background, display, etc.
->
-> However, sometimes inheritance is desired anyway. To achieve this, we
-> can apply the inherit value to the property that should be inherited.
-> The inherit value can be appied to *any* CSS property and *any* HTML
-> element.
->
-> Assume the following stylesheet:
+However, sometimes inheritance is desired anyway. To achieve this, we
+can apply the inherit value to the property that should be inherited.
+The inherit value can be appied to *any* CSS property and *any* HTML
+element.
+
+Assume the following stylesheet:
 
 #myContainer
-
 {
-
 <b>color</b>
-
 :
-
 red
-
 ;
-
 <b>padding</b>
-
 :
-
 5
-
 px
-
 ;
-
 }
-
 #myContainer
-
 p
-
 {
-
 <b>padding</b>
-
 :
-
 inherit
-
 ;
-
 }
 
-  <b>color</b>   :   red       to both the              <b>&lt;h3</b>   <b>&gt;</b> and   <b>&lt;p</b>
+<b>color</b>   :   red       to both the              <b>&lt;h3</b>   <b>&gt;</b> and   <b>&lt;p</b>
 
 
-> This will apply <b>&gt;</b> elements due to the inheritance nature of the
-> color property.
+This will apply <b>&gt;</b> elements due to the inheritance nature of the
+color property.
 
-  <b>&lt;p</b>
+<b>&lt;p</b>
 
-
-> However, the <b>&gt;</b> element will also inherit the padding value from
-> its&apos; parent because this was specified.
+However, the <b>&gt;</b> element will also inherit the padding value from
+its&apos; parent because this was specified.
 
 <b>&lt;</b>
-
 <b>div</b>
-
 id
-
 =
-
 &quot;myContainer&quot;
-
 <b>&gt;</b>
-
 <b>&lt;</b>
-
 <b>h</b>
-
 <b>3</b>
-
 <b>&gt;</b>
-
 Some header
-
 <b>&lt;</b>
-
 <b>/h</b>
-
 <b>3</b>
-
 <b>&gt;</b>
-
 <b>&lt;</b>
-
 <b>p</b>
-
 <b>&gt;</b>
-
 Some paragraph
-
 <b>&lt;</b>
-
 <b>/p</b>
-
 <b>&gt;</b>
-
 <b>&lt;</b>
-
 <b>/div</b>
-
 <b>&gt;</b>
-
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ch43">Chapter 43: CSS Image Sprites</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
