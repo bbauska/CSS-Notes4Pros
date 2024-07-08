@@ -7252,16 +7252,13 @@ div: hover {
 
 | Parameter     | Details                                            |
 |---------------|------------------------------------------------------|
-| property      | Either the CSS property to transition on, or all,  |
-|               | which specifies all transition-able properties.    |
-| duration      | Transition time, either in seconds or              |
-|               | milliseconds.                                      |
-| timing-function | Specifies a function to define how intermediate    |
-|               | values for properties are computed. Common values  |
-|               | are ease, linear, and step-end. Check out the      |
-|               | <a href="http://easings.net/">easing function cheatsheet</a> for more. |
-| delay         | Amount of time, in seconds or milliseconds, to     |
-|               | wait before playing the animation.                 |
+| property      | Either the CSS property to transition on, or all, which specifies all transition-able |
+|               | properties.    |
+| duration      | Transition time, either in seconds or milliseconds. |
+| timing-function | Specifies a function to define how intermediate  values for properties are computed. |
+|               | Common values are ease, linear, and step-end. Check out the <a href="http://easings.net/">easing function cheat- |
+|               | sheet</a> for more. |
+| delay         | Amount of time, in seconds or milliseconds, to wait before playing the animation. |
 
 <h4>@keyframes</h4>
 
@@ -7309,7 +7306,7 @@ There&apos;s a few different things to note here. First, the actual
 
 This sets the name of the animation to rainbow-background.
 
-<pre><code>0&percent;  { <b>background-color</b>: #ff0000; }</code>></pre> 
+<pre><code>0&percnt;    { <b>background-color</b>: #ff0000; }</code>></pre> 
 
 This is the definition for a keyframe within the animation. The first
 part, the 0% in the case, defines where the keyframe is during the
@@ -7356,6 +7353,7 @@ on both the &commat;keyframes declaration and the animation property, like
 so:</p>
 
 <pre><code><b>@-webkit-keyframes</b>{}
+
 &minus;webkit-animation: &period;..</code></pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch27-2">Section 27.2: Animations with the transition property</h3>
@@ -7365,80 +7363,76 @@ number-based CSS properties to animate between states.
 
 <b>Example</b>
 
-.Example {
+<pre><code>.Example {
   <b>height</b>: 100px;
   <b>background</b>: #fff;
 }
 .Example: hover {
   <b>height</b>: 120px;
   <b>background</b>: #ff0000;
-}
+}</code></pre>
 
-&lbrack;*&lbrack;View Result&rbrack;*&rbrack;(https://jsfiddle.net/0kcm6rwo/)
+<p><a href="https://jsfiddle.net/0kcm6rwo/">View Result</a></p>
 
-By default, hovering over an element with the .Example class would
+<p>By default, hovering over an element with the .Example class would
 immediately cause the element&apos;s height to jump to 120px and its
-background color to red (#ff0000).
+background color to red (#ff0000).</p>
 
-By adding the transition property, we can cause these changes to occur
-over time:
+<p>By adding the transition property, we can cause these changes to occur
+over time:</p>
 
-
+<pre><code>
 .Example {
 &period;..
 
-<b>transition</b>: all 400ms ease;
-}
-
-&lbrack;*&lbrack;View Result&rbrack;*&rbrack;(https://jsfiddle.net/v2j4ggue/1/)
-
-The all value applies the transition to all compatible (numbers-based)
-properties. Any compatible property name (such as height or top) can
-be substituted for this keyword.
-
-400ms specifies the amount of time the transition takes. In this case,
-the element&apos;s change in height will take 400 milliseconds to
-complete.
-
-Finally, the value ease is the animation function, which determines
-how the animation is played. ease means start slow, speed up, then end
-slow again. Other values are linear, ease-out, and ease-in.
-
-<b>Cross-Browser Compatibility</b>
-
-The transition property is generally well-supported across all major
-browsers, excepting IE 9. For earlier versions of Firefox and
-Webkit-based browsers, use vendor prefixes like so:
-
-.Example {
   <b>transition</b>: all 400ms ease;
--moz-transition: all 400ms ease;
--webkit-transition: all 400ms ease;
-}
+}</code></pre>
 
-*Note:* The transition property can animate changes between any two
+<p><a href="https://jsfiddle.net/v2j4ggue/1/">View Result</a></p>
+
+<p>The all value applies the transition to all compatible (numbers-based)
+properties. Any compatible property name (such as height or top) can
+be substituted for this keyword.</p>
+
+<p>400ms specifies the amount of time the transition takes. In this case,
+the element&apos;s change in height will take 400 milliseconds to
+complete.</p>
+
+<p>Finally, the value ease is the animation function, which determines
+how the animation is played. ease means start slow, speed up, then end
+slow again. Other values are linear, ease-out, and ease-in.</p>
+
+<h4>Cross-Browser Compatibility</h4>
+
+<p>The transition property is generally well-supported across all major
+browsers, excepting IE 9. For earlier versions of Firefox and
+Webkit-based browsers, use vendor prefixes like so:</p>
+
+<pre><code>.Example {
+  <b>transition</b>: all 400ms ease;
+  -moz-transition: all 400ms ease;
+  -webkit-transition: all 400ms ease;
+}</code></pre>
+
+<p><i>Note:</i> The transition property can animate changes between any two
 numerical values, regardless of unit. It can also transition between
 units, such as 100px to 50vh. However, it cannot transition between a
 number and a default or automatic value, such as transitioning an
-element&apos;s height from 100px to auto.
-
+element&apos;s height from 100px to auto.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch27-3">Section 27.3: Syntax Examples</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p>Our first syntax example shows the animation shorthand property using
+all of the available properties/parameters:</p>
 
-Our first syntax example shows the animation shorthand property using
-all of the available properties/parameters:
+<b>animation</b>: 3s              ease-in                 1s      2                 reverse    both      paused slidein;
+/*                duration &vert; timing-function &vert; delay &vert; iteration-count &vert; direction &vert; fill-mode &vert; play-
+state &vert; name */
 
-<b>animation</b>: 3s ease-in 1s 2 reverse both paused slidein;
+<p>Our second example is a little more simple, and shows that some properties can be omitted:</p>
 
-/* duration &vert; timing-function &vert; delay &vert; iteration-count &vert;
-direction &vert; fill-mode &vert; playstate &vert; name */
-
-Our second example is a little more simple, and shows that some
-properties can be omitted:
-
-<b>animation</b>: 3s linear 1s slidein; /* duration &vert; timing-function
-&vert; delay &vert; name */
+<b>animation</b>: 3s              linear             1s        slidein; 
+/*                duration &vert; timing-function &vert; delay &vert; name */
 
 Our third example shows the most minimal declaration. Note that the
 animation-name and animation-duration must be declared:
