@@ -7827,10 +7827,9 @@ longer faces the screen.</p>
 
 <p><a href="https://jsfiddle.net/3z3z843c/">Demo (jsFIDDLE)</a></p>
 
-<b>&lt;</b><b>div</b> class=&quot;flip&quot;<b>&gt;</b>Loren ipsum<b>&lt;</b><b>/div</b><b>&gt;</b>
-<b>&lt;</b><b>div</b> class=&quot;flip back&quot;<b>&gt;</b>Lorem ipsum<b>&lt;</b><b>/div</b><b>&gt;</b>
-
-<pre><code>.flip {
+<pre><code><b>&lt;div</b> class=&quot;flip&quot;<b>&gt;</b>Loren ipsum<b>&lt;/div&gt;</b>
+<b>&lt;div</b> class=&quot;flip back&quot;<b>&gt;</b>Lorem ipsum<b>&lt;/div&gt;</b>
+.flip {
   -webkit-transform: rotateY(180deg);
   -moz-transform: rotateY(180deg);
   -ms-transform: rotateY(180deg);
@@ -8297,298 +8296,122 @@ other content is inserted by the user&apos;s typing or editing.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ch33">Chapter 33: Shapes for Floats</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<b>Parameter Details</b>
 
-> A value of none means that the float area (the area that is used for
-> wrapping content around a float none element) is unaffected. This is
-> the default/initial value.
-
-  inset     (),   circle      (),   ellipse       () or     polygon
-
-> Refers to one among (). Using one of these functions and its
-> basic-shape values the shape is defined.
->
-> Refers to one among margin-box, border-box, padding-box, content-box.
-> When only &lt;shape-box&gt; is
->
-> shape-box provided (without &lt;basic-shape&gt;) this box *is the* shape.
-> When it is used along with &lt;basic-shape&gt;, this acts as the reference
-> box.
->
-> When an image is provided as value, the shape is computed based on the
-> alpha channel of the image image specified.
+|<b>Parameter</b> | <b>Details</b> |
+|-----------------|------------------------------------------------|
+| none            | A value of none means that the float area (the area that is used for wrapping content around a float |
+|                 | element) is unaffected. This is the default/initial value. |
+| basic-shape     | Refers to one among inset&lpar;&rpar;, circle&lpar;&rpar, ellipse&lpar;&rpar; or polygon&lpar;&rpar;. Using one of these functions and its |
+|                 | values the shape is defined. |
+| shape-box       | Refers to one among margin-box, border-box, padding-box, content-box. When only &lt;shape-box&gt; is |
+|                 | provided (without &lt;basic-shape&gt;) this box <i>is the</i> shape. When it is used along with &lt;basic-shape&gt;, this |
+|                 | acts as the reference box. |
+| image           | When an image is provided as value, the shape is computed based on the alpha channel of the image image |
+|                 | specified. |
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch33-1">Section 33.1: Shape Outside with Basic Shape -- circle()</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p>With the shape-outside CSS property one can define shape values for
+the float area so that the inline content wraps around the shape
+instead of the float&apos;s box.</p>
 
-> With the shape-outside CSS property one can define shape values for
-> the float area so that the inline content wraps around the shape
-> instead of the float&apos;s box.
->
-> <h4>CSS</h4>
+<h4>CSS:</h4>
 
-img: nth-of-type (1) {
-<b>shape-outside</b>: circle (
-80px at 50&percnt; 50&percnt;
-);
+<pre><code>img: nth-of-type (1) {
+  <b>shape-outside</b>: circle (80px at 50&percnt; 50&percnt;);
   <b>float</b>: left;
   <b>width</b>: 200px;
 }
 img: nth-of-type (2) {
-  <b>shape-outside</b>: circle (
-80px at 50&percnt;
-50&percnt;
-);
+  <b>shape-outside</b>: circle (80px at 50&percnt; 50&percnt;);
 <b>float</b>: right;
 <b>width</b>: 200px;
 }
 p {
-<b>text-align</b>: center;
-<b>line-height</b>: 30px;
-/* purely for demo */
-}
+  <b>text-align</b>: center;
+  <b>line-height</b>: 30px;  /* purely for demo */
+}</code></pre>
 
 <h4>HTML:</h4>
 
-<b>&lt;img</b>
-src=&quot;http://images.clipartpanda.com/circle-clip-art-circlergb.jpg&quot;<b>&gt;</b>
-
-<b>&lt;img</b>
- src=&quot;http://images.clipartpanda.com/circle-clip-art-circlergb.jpg&quot;<b>&gt;</b>
-
+<pre><code><b>&lt;img</b> src=&quot;http://images.clipartpanda.com/circle-clip-art-circlergb.jpg&quot;<b>&gt;</b>
+<b>&lt;img</b> src=&quot;http://images.clipartpanda.com/circle-clip-art-circlergb.jpg&quot;<b>&gt;</b>
 <b>&lt;p&gt;</b>Some paragraph whose text content is required to be wrapped
 such that it follows the curve of the circle on either side. And then
 there is some filler text just to make the text long enough. Lorem
-Ipsum Dolor Sit Amet&period;...<b>&lt;/p&gt;</b>
+Ipsum Dolor Sit Amet&period;...<b>&lt;/p&gt;</b></code></pre>
 
-In the above example, both the images are actually square images and
+<p>In the above example, both the images are actually square images and
 when the text is placed without the shapeoutside property, it will not
 flow around the circle on either side. It will flow around the
 containing box of the image only. With shape-outside the float area is
-re-defined as a *circle* and the content is made to flow around this
-*imaginary circle* that is created using shape-outside.
+re-defined as a <i>circle</i> and the content is made to flow around this
+<i>imaginary circle</i> that is created using shape-outside.</p>
 
-The *imaginary circle* that is used to re-define the float area is a
+<p>The <i>imaginary circle</i> that is used to re-define the float area is a
 circle with radius of 80px drawn from the center-mid point of the
-image&apos;s reference box.
+image&apos;s reference box.</p>
 
-Below are a couple of screenshots to illustrate how the content would
-be wrapped around when shape-outside is used and when it is not used.
-<b>Output with shape-outside</b>
+<p>Below are a couple of screenshots to illustrate how the content would
+be wrapped around when shape-outside is used and when it is not used.</p>
+
+<h4>Output with shape-outside</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 223.  (xxx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~ 223. output with shape-outside (171) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left" width="100%">
 <img src="./images/image223.jpg"
   style="width:33%"
-  title=""
-  alt="." />
+  title="Output with shape-outside"
+  alt="Output with shape-outside." />
 </p>
-<!-- (./images/image223.jpg){width="3.3333333333333335in" height="1.3229166666666667in"} -->
 
-> <b>Output without shape-outside</b>
+<h4>Output without shape-outside</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 224.  (xxx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~ 224. output without shape-outside (171) ~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left" width="100%">
 <img src="./images/image224.jpg"
   style="width:33%"
-  title=""
-  alt="." />
+  title="Output without shape-outside"
+  alt="Output without shape-outside." />
 </p>
-<!-- (./images/image224.jpg){width="3.3333333333333335in" height="1.4895833333333333in"} -->
-
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch33-2">Section 33.2: Shape margin</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p>The shape-margin CSS property adds a <i>margin</i> to shape-outside.</p>
 
-> The shape-margin CSS property adds a *margin* to shape-outside.
->
-> <h4>CSS</h4>
+<h4>CSS:</h4>
 
-img
-
-:
-
-nth-of-type
-
-(
-
-1
-
-)
-
-{
-
-<b>shape-outside</b>
-
-:
-
-circle
-
-(
-
-80
-
-px
-
-at
-
-50
-
-&percnt;
-
-50
-
-&percnt;
-
-)
-
-;
-
-<b>shape-margin</b>
-
-:
-
-10
-
-px
-
-;
-
-<b>float</b>
-
-:
-
-left
-
-;
-
-<b>width</b>
-
-:
-
-200
-
-px
-
-;
-
+<pre><code>img:nth-of-type(1) {
+  <b>shape-outside</b>: circle(80px at 50&percnt; 50&percnt;);
+  <b>shape-margin</b>: 10px;
+  <b>float</b>: left;
+  <b>width</b>: 200px;
 }
-
-img
-
-:
-
-nth-of-type
-
-(
-
-2
-
-)
-
-{
-
-<b>shape-outside</b>
-
-:
-
-circle
-
-(
-
-80
-
-px
-
-at
-
-50
-
-&percnt;
-
-50
-
-&percnt;
-
-)
-
-;
-
-<b>shape-margin</b>
-
-:
-
-10
-
-px
-
-;
-
-<b>float</b>
-
-:
-
-right
-
-;
-
-<b>width</b>
-
-:
-
-200
-
-px
-
-;
-
+img:nth-of-type(2) {
+  <b>shape-outside</b>: circle(80px at 50&percnt; 50&percnt;);
+  <b>shape-margin</b>: 10px;
+  <b>float</b>: right;
+  <b>width</b>: 200px;
 }
-
-p
-
-{
-
-<b>text-align</b>
-
-:
-
-center
-
-;
-
-<b>line-height</b>
-
-:
-
-30
-
-px
-
-;
-
-/* purely for demo */
-
-}
+p {
+  <b>text-align</b>: center;
+  <b>line-height</b>: 30px;  /* purely for demo */
+}</code></pre>
 
 <h4>HTML:</h4>
->
-> <b>&lt;img</b>
-> src=&quot;http://images.clipartpanda.com/circle-clip-art-circlergb.jpg&quot;<b>&gt;</b>
->
-> <b>&lt;img</b>
-> src=&quot;http://images.clipartpanda.com/circle-clip-art-circlergb.jpg&quot;<b>&gt;</b>
->
-> <b>&lt;p&gt;</b>Some paragraph whose text content is required to be wrapped
-> such that it follows the curve of the circle on either side. And then
-> there is some filler text just to make the text long enough. Lorem
-> Ipsum Dolor Sit Amet&period;...<b>&lt;/p&gt;</b>
->
-> In this example, a 10px margin is added around the <b>shape</b> using
-> shape-margin. This creates a bit more space between the *imaginary
-> circle* that defines the float area and the actual content that is
-> flowing around.
 
+<pre><code><b>&lt;img</b> src=&quot;http://images.clipartpanda.com/circle-clip-art-circlergb.jpg&quot;<b>&gt;</b>
+<b>&lt;img</b> src=&quot;http://images.clipartpanda.com/circle-clip-art-circlergb.jpg&quot;<b>&gt;</b>
+<b>&lt;p&gt;</b>Some paragraph whose text content is required to be wrapped
+such that it follows the curve of the circle on either side. And then
+there is some filler text just to make the text long enough. Lorem
+Ipsum Dolor Sit Amet&period;...<b>&lt;/p&gt;</b></code></pre>
+
+<p>In this example, a 10px margin is added around the <b>shape</b> using
+shape-margin. This creates a bit more space between the <i>imaginary
+circle</i> that defines the float area and the actual content that is
+flowing around.</p>
 
 <h4>Output:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -8599,59 +8422,43 @@ px
   title=""
   alt="." />
 </p>
-<!-- (./images/image225.jpg){width="3.3333333333333335in" height="1.3958333333333333in"} -->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ch34">Chapter 34: List Styles</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-> <b>Value Description</b> list-style-type the type of list-item marker.
->
-> list-style-position specifies where to place the marker
-> list-style-image specifies the type of list-item marker initial sets
-> this property to its default value inherit inherits this property from
-> its parent element
+
+| <b>Value</b> | <b>Description</b> |
+|---------------|-----------------------------------------------------|
+| list-style-type | the type of list-item marker. |
+| list-style-position | specifies where to place the marker. |
+| list-style-image | specifies the type of list-item marker. |
+| initial | sets this property to its default value. |
+| inherit | inherits this property from its parent element., |
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch34-1">Section 34.1: Bullet Position</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p>A list consists of <b>&lt;li&gt;</b> elements inside a containing element 
+(<b>&lt;ul&gt;</b> or <b>&lt;ol&gt;</b>). Both the list items and the container can 
+have margins and paddings which influence the exact position of the list item 
+content in the document. The default values for the margin and padding may be 
+different for each browser. In order to get the same layout cross-
+browser, these need to be set specifically.</p>
 
-<pre><code>
-<b>&lt;li</b>   <b>&gt;</b> elements inside a containing element (       <b>&lt;ul</b>   <b>&gt;</b>   <b>&lt;ol</b>
-or       
-</code></pre>
+<p>Each list item gets a &apos;marker box&apos;, which contains the bullet
+marker. This box can either be placed inside or outside of the list
+item box.</p>
 
-> A list consists of <b>&gt;</b>). Both the list items and the container can
->
-> have margins and paddings which influence the exact position of the
-> list item content in the document. The default values for the margin
-> and padding may be different for each browser. In order to get the
-> same layout crossbrowser, these need to be set specifically.
->
-> Each list item gets a &apos;marker box&apos;, which contains the bullet
-> marker. This box can either be placed inside or outside of the list
-> item box.
+<pre><code>list-style-position: inside;</code></pre>
 
-<pre><code>
-<b>list-style-position</b>
-:
-inside
-;
-<b>&lt;li</b>
-</code></pre>
+<p>places the bullet within the <b>&lt;li&gt; element, pushing the content to the right as needed.</p>
 
-> places the bullet within the <b>&gt;</b> element, pushing the content to
-> the right as needed.
+<pre><code>list-style-position: outside;</code></pre>
 
-<pre><code>
-<b>list-style-position</b>: outside;
-<b>&lt;li</b>
-</code></pre>
+<p>places the bullet left of the <b>&lt;li&gt;</b> element. If there is not enough
+space in the padding of the containing element, the marker box will
+extend to the left even if it would fall off the page.</p>
 
-> places the bullet left of the <b>&gt;</b> element. If there is not enough
-> space in the padding of the containing element, the marker box will
-> extend to the left even if it would fall off the page.
->
-> Showing the result of inside and outside positioning:
-> &lbrack;&lbrack;jsfiddle&rbrack;&rbrack;(https://jsfiddle.net/pqh3cxdp/)
+<p>Showing the result of inside and outside positioning:<a href="https://jsfiddle.net/pqh3cxdp/">jsFiddle</a></p>
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch34-2">Section 34.2: Removing Bullets / Numbers</h3>
