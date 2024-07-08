@@ -7916,14 +7916,24 @@ and Android all need -webkit-backface-visibility.</p>
   <b>margin</b>: 0 auto;
   <b>transform-style</b>: inherit;
   <b>background</b>: #C53329;
-  <b>box-shadow<b>: inset 0 0 0 5px #333;
+  <b>box-shadow</b>: inset 0 0 0 5px #333;
   <b>transform-origin</b>: 50&percnt; 50&percnt;;
-  <b>transform<b>: rotateX&lpar;90deg&rpar;;
+  <b>transform</b>: rotateX&lpar;90deg&rpar;;
   <b>backface-visibility</b>: hiddent;
 }
 .face2 {
   <b>transform-origin</b>: 50&percnt; 50&percnt;;
   <b>transform</b>: rotatez&lpar;90deg&rpar; translateX&lpar;100&percnt&rpar; rotateY&lpar;90deg&rpar;;
+}
+.cubeFace:before, cubeFace:after {
+  <b>content</b>: &apos&apos;
+  <b>position</b>: absolute;
+  <b>width</b>: 100&percnt;;
+  <b>height</b>: 100&percnt;;
+  <b>transform-origin</b>: 0 0;
+  <b>background</b>: inherit;
+  <b>box-shadow</b>: inherit;
+  <b>backface-visibility</b>: inherit;
 }
 .cubeFace:before {
   <b>top</b>: 100&percnt;;
