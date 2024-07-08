@@ -8628,7 +8628,7 @@ li: before {
     <b>&lt;ul&gt;</b>
       <b>&lt;li&gt;</b>Level 1.1
 	    <b>&lt;ul&gt;</b>
-		  <b>&lt;li&gt;Level 1.1.1<b>&lt;/li&gt;</b>
+		  <b>&lt;li&gt;</b>Level 1.1.1<b>&lt;/li&gt;</b>
         <b>&lt;/ul&gt;</b>
       <b>&lt;/li&gt;</b>
     <b>&lt;/ul&gt;</b>
