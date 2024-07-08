@@ -8191,6 +8191,7 @@ other content is inserted by the user&apos;s typing or editing.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ch32">Chapter 32: box-shadow</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+
 | <b>Parameters</b> | <b>Details</b> |
 |----------------------|----------------------------------------------------------|
 | inset | by default, the shadow is treated as a drop shadow. the inset keyword draws the shadow inside the |
@@ -8234,12 +8235,12 @@ other content is inserted by the user&apos;s typing or editing.</p>
           <b>box-shadow</b>: 0px 0px 8px 2px #444444;
 }</code></pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 220.  (xxx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 220. blue rectangle (xxx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left" width="100%">
 <img src="./images/image220.jpg"
   style="width:62%"
-  title=""
-  alt="." />
+  title="Blue rectangle"
+  alt="Blue rectangle." />
 </p>
 <!-- [image220.jpg 6.25 x 3.75](./images/image220.jpg) -->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
