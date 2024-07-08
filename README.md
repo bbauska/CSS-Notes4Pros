@@ -7372,7 +7372,7 @@ number-based CSS properties to animate between states.
   <b>background</b>: #ff0000;
 }</code></pre>
 
-<p><a href="https://jsfiddle.net/0kcm6rwo/">View Result</a></p>
+<p><a href="https://jsfiddle.net/0kcm6rwo/"><i>View Result</i></a></p>
 
 <p>By default, hovering over an element with the .Example class would
 immediately cause the element&apos;s height to jump to 120px and its
@@ -7381,10 +7381,8 @@ background color to red (#ff0000).</p>
 <p>By adding the transition property, we can cause these changes to occur
 over time:</p>
 
-<pre><code>
-.Example {
+<pre><code>.Example {
 &period;..
-
   <b>transition</b>: all 400ms ease;
 }</code></pre>
 
@@ -7425,42 +7423,44 @@ element&apos;s height from 100px to auto.</p>
 <p>Our first syntax example shows the animation shorthand property using
 all of the available properties/parameters:</p>
 
+<pre><code>
 <b>animation</b>: 3s              ease-in                 1s      2                 reverse    both      paused slidein;
 /*                duration &vert; timing-function &vert; delay &vert; iteration-count &vert; direction &vert; fill-mode &vert; play-
 state &vert; name */
+</code></pre>
 
 <p>Our second example is a little more simple, and shows that some properties can be omitted:</p>
 
+<pre><code>
 <b>animation</b>: 3s              linear             1s        slidein; 
 /*                duration &vert; timing-function &vert; delay &vert; name */
+</code></pre>
 
-Our third example shows the most minimal declaration. Note that the
-animation-name and animation-duration must be declared:
+<p>Our third example shows the most minimal declaration. Note that the
+animation-name and animation-duration must be declared:</p>
 
-<b>animation</b>: 3s slidein;
+<pre><code><b>animation</b>: 3s         slidein;
+/*                duration &vert; name */</code></pre>
 
-/* duration &vert; name */
-
-It&apos;s also worth mentioning that when using the animation shorthand
+<p>It&apos;s also worth mentioning that when using the animation shorthand
 the order of the properties makes a difference. Obviously the browser
-may confuse your duration with your delay.
+may confuse your duration with your delay.</p>
 
-If brevity isn&apos;t your thing, you can also skip the shorthand property
-and write out each property individually:
+<p>If brevity isn&apos;t your thing, you can also skip the shorthand property
+and write out each property individually:</p>
 
-  <b>animation-duration</b>: 3s;
+<pre><code>  <b>animation-duration</b>: 3s;
   <b>animation-timing-function</b>: ease-in;
   <b>animation-delay</b>: 1s;
   <b>animation-iteration-count</b>: 2;
   <b>animation-direction</b>: reverse;
   <b>animation-fill-mode</b>: both;
   <b>animation-play-state</b>: paused;
-  <b>animation-name</b>: slidein;
+  <b>animation-name</b>: slidein;</code></pre>
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch27-4">Section 27.4: Increasing Animation Performance Using the &apos;will-change&apos; Attribute</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-
 When creating animations and other GPU-heavy actions, it&apos;s important
 to understand the will-change attribute.
 
@@ -7476,11 +7476,10 @@ The will-change property accepts a comma-separated list of properties
 to be animated. For example, if you plan on transforming an object and
 changing its opacity, you would specify:
 
-.Example {
-&period;..
-
-<b>will-change</b>: transform, opacity;
-}
+<pre><code>.Example {
+  &period;..
+  <b>will-change</b>: transform, opacity;
+}</code></pre>
 
 <b>Note:</b> Use will-change sparingly. Setting will-change for every
 element on a page can cause performance problems, as the browser may
