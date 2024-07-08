@@ -6111,9 +6111,9 @@ saturation and lightness are represented as percentages.</p>
 
 | <b>Value</b> | <b>Description</b> |
 |----------------|-------------------------------------------|
-| <b>&lt;hue</b> | specified in degrees around the color wheel (without units), where 0° is red, 60° is yellow, 120° is |
+| <b>&lt;hue&gt;</b> | specified in degrees around the color wheel (without units), where 0° is red, 60° is yellow, 120° is |
 |                | green, 180° is cyan, 240° is blue, 300° is magenta, and 360° is red. |
-| <b>&lt;saturation</b> | specified in percentage where 0% is fully desaturated (grayscale) and 100% is fully saturated (vividly |
+| <b>&lt;saturation&gt;</b> | specified in percentage where 0% is fully desaturated (grayscale) and 100% is fully saturated (vividly |
 |               | colored).
 | <b>&lt;lightness&gt; | specified in percentage where 0% is fully blakc and 100% is fully white. |
 
@@ -6129,9 +6129,9 @@ saturation and lightness are represented as percentages.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Similar to hsl() notation, but with an added alpha (opacity) value.</p>
 
-<pre><code>hsla(240, 100%, 50%, 0) /* transparent */
+<pre><code>hsla(240, 100%, 50%, 0)   /* transparent */
 hsla(240, 100%, 50%, 0.5) /* half-translucent blue */
-hsla(240, 100%, 50%, 1) /* fully opaque blue */</code></pre>
+hsla(240, 100%, 50%, 1)   /* fully opaque blue */</code></pre>
 
 <h4>Syntax</h4>
 
@@ -6981,14 +6981,13 @@ layout of a table.</p>
 
 <p>Below an example of two tables both set to: <b>width</b> 150px:</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 200.  (xxx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~ 200. two tables, both set to width: 150px (143) ~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left" width="100%">
 <img src="./images/image200.jpg"
   style="width:45%"
-  title=""
-  alt="." />
+  title="Two tables, both set to width: 150px"
+  alt="Two tables, both set to width: 150px." />
 </p>
-<!-- (./images/image200.jpg){width="4.625in" height="1.125in"} -->
 
 <p>The table on the left has <b>table-layout</b>: auto while the one on the right has 
 <b>table-layout</b>: fixed. The former is wider than the specified width (210px 
@@ -7013,14 +7012,13 @@ separate.
 Below an example with two tables with different values set to the
 empty-cells property:
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 201.  (xxx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~ 201. two tables with different values set to empty-cells property (143) ~~~~~~~~~~-->
 <p align="left" width="100%">
 <img src="./images/image201.jpg"
   style="width:57%"
-  title=""
-  alt="." />
+  title="Two tables with different values set to empty-cells property"
+  alt="Two tables with different values set to empty-cells property." />
 </p>
-<!-- [imag201.jpg](./images/image201.jpg){width="5.708333333333333in" height="0.8854166666666666in"} -->
 
 <p>The table on the left has <b>empty-cells</b>: show while the one on the right has 
 <b>empty-cells</b>: hide. The former does display the empty cells whereas the latter does not.</p>
@@ -7046,14 +7044,13 @@ be separated or merged.</p>
 <p>Below an example of two tables with different values to the
 border-collapse property:</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 202.  (xxx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~ 202. two tables with diff values to the border-collapse property (144) ~~~~~~~~-->
 <p align="left" width="100%">
 <img src="./images/image202.jpg"
   style="width:57%"
-  title=""
-  alt="." />
+  title="Two tables with different values set to the border-collapse property"
+  alt="Two tables with different values set to the border-collapse property." />
 </p>
-<!-- (./images/image202.jpg){width="5.666666666666667in" height="0.9270833333333334in"} -->
 
 <p>The table on the left has <b>border-collapse</b>: separate while the one on the right has 
 
@@ -7073,14 +7070,13 @@ has no effect unless border-collapse is set to separate.</p>
 <p>Below an example of two tables with different values to the
 border-spacing property:</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 203.  (xxx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~ 203. two tables with diff values to the border-spacing property (144) ~~~~~~~~~-->
 <p align="left" width="100%">
 <img src="./images/image203.jpg"
   style="width:60%"
-  title=""
-  alt="." />
+  title="Two tables with diff values to the border-spacing property"
+  alt="Two tables with diff values to the border-spacing property." />
 </p>
-<!-- (./images/image203.jpg){width="6.03125in" height="1.15625in"} -->
 
 The table on the left has <b>border-spacing</b>: 2px (default) while the one on 
 the right has <b>border-spacing</b>: 8px.
@@ -7099,14 +7095,13 @@ element within a table. This has no effect if such element does not exist.</p>
 <p>Below an example with two tables with different values set to the
 caption-side property:</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 204.  (xxx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~ 204. two tables with diff values set to caption-side property (144) ~~~~~~~~~~~~-->
 <p align="left" width="100%">
 <img src="./images/image204.jpg"
   style="width:57%"
-  title=""
-  alt="." />
+  title="Two tables with diff values set to caption-side property"
+  alt="Two tables with diff values set to caption-side property." />
 </p>
-<!-- (./images/image204.jpg){width="5.729166666666667in" height="1.1458333333333333in"} -->
 
 <p>The table on the left has <b>caption-side</b>: top while the one on the right has 
 <b>caption-side</b>: bottom.</p>
@@ -7167,27 +7162,25 @@ often used for custom and smooth transitions.</p>
 <p>cubic-bezier(P1_x, P1_y, P2_x, P2_y)</p>
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 205.  (xxx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 205. cubic-bezier (146) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left" width="100%">
 <img src="./images/image205.jpg"
   style="width:44%"
-  title=""
-  alt="." />
+  title="Cubic-bezier"
+  alt="Cubic-bezier." />
 </p>
-<!-- (./images/image205.jpg){width="4.395833333333333in" height="2.2083333333333335in"} -->
 
 These parameters will be mapped to points which are part of a 
 <a href="https://en.wikipedia.org/wiki/B%C3%A9zier_curve#Cubic_B.C3.A9zier_curves">Bézier curve</a>:</p>
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 206.  (xxx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 206. bézier curve (146) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left" width="100%">
 <img src="./images/image206.jpg"
   style="width:50%"
-  title=""
-  alt="." />
+  title="Bézier curve"
+  alt="Bézier curve." />
 </p>
-<!-- (./images/image206.jpg){width="4.96875in" height="4.958333333333333in"} -->
 
 <p>For CSS Bézier Curves, P0 and P3 are always in the same spot. P0 is at
 (0,0) and P3 is at (1,1), which menas that the parameters passed to
@@ -7247,7 +7240,6 @@ div: hover {
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ch27">Chapter 27: Animations</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-
 <h4>Transition</h4>
 
 | Parameter     | Details                                            |
@@ -7342,9 +7334,7 @@ This code attaches our animation to all elements which have the .RainbowBackgrou
 statement. In this case, the two 0&percnt; and 100&percnt; lines could be replaced
 with this single line:</p>
 
-<pre><code>0&percnt;, 100&percnt; {
-  <b>background-color</b>: #ff0000;
-}</code></pre>
+<pre><code>0&percnt;, 100&percnt; { <b>background-color</b>: #ff0000;}</code></pre>
 
 <h4>Cross-browser compatibility</h4>
 
@@ -7382,7 +7372,7 @@ background color to red (#ff0000).</p>
 over time:</p>
 
 <pre><code>.Example {
-&period;..
+  &period;..
   <b>transition</b>: all 400ms ease;
 }</code></pre>
 
@@ -7424,15 +7414,15 @@ element&apos;s height from 100px to auto.</p>
 all of the available properties/parameters:</p>
 
 <pre><code>
-<b>animation</b>: 3s              ease-in                 1s      2                 reverse    both      paused slidein;
-/*                duration &vert; timing-function &vert; delay &vert; iteration-count &vert; direction &vert; fill-mode &vert; play-
+<b>animation</b>:      3s        ease-in              1s     2             reverse     both     paused slidein;
+/*              duration &vert; timing-function &vert; delay &vert; iteration-count &vert; direction &vert; fill-mode &vert; play-
 state &vert; name */
 </code></pre>
 
 <p>Our second example is a little more simple, and shows that some properties can be omitted:</p>
 
 <pre><code>
-<b>animation</b>: 3s              linear             1s        slidein; 
+<b>animation</b>:      3s        linear               1s       slidein; 
 /*                duration &vert; timing-function &vert; delay &vert; name */
 </code></pre>
 
@@ -7440,7 +7430,7 @@ state &vert; name */
 animation-name and animation-duration must be declared:</p>
 
 <pre><code><b>animation</b>: 3s         slidein;
-/*                duration &vert; name */</code></pre>
+/*        duration &vert; name */</code></pre>
 
 <p>It&apos;s also worth mentioning that when using the animation shorthand
 the order of the properties makes a difference. Obviously the browser
@@ -7593,33 +7583,31 @@ it 200px to the right.</p>
 element</b>. This means that the translation won&apos;t be horizontal but on
 an axis rotate 15 degrees clockwise as shown in the following image:</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 207.  (xxx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~ 207. Step 1 rotate, step 2 translation (154) ~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left" width="100%">
 <img src="./images/image207.jpg"
   style="width:75%"
-  title=""
-  alt="." />
+  title="Step 1 rotate, step 2 translation"
+  alt="Step 1 rotate, step 2 translation." />
 </p>
-<!-- (./images/image207.jpg){width="7.48037510936133in" height="2.7919728783902014in"} -->
 
 <p>Changing the order of the transforms will change the output. The first example will be different to</p>
 
 <pre><code><b>transform</b>: translateX(200px) rotate(15deg);
 <b>&lt;div</b> class=&quot;transform&quot;<b>&gt;&lt;/div&gt;</b>
-  .transform {
+.transform {
   <b>transform</b>: rotate(15deg) translateX(200px);
 }</code></pre>
 
 <p>As shown in this image:</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 208.  (xxx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~ 208. step 1 translation, step 2 rotate (154) ~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left" width="100%">
 <img src="./images/image208.jpg"
   style="width:75%"
-  title=""
-  alt="." />
+  title="Step 1 translation, step 2 rotate"
+  alt="Step 1 translation, step 2 rotate." />
 </p>
-<!-- (./images/image208.jpg){width="7.48037510936133in" height="2.7919728783902014in"} -->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch28-5">Section 28.5: Translate</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -7655,18 +7643,10 @@ an axis rotate 15 degrees clockwise as shown in the following image:</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch28-6">Section 28.6: Transform Origin</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-
 <p>Transformations are done with respect to a point which is defined by
 the transform-origin property.</p>
 
-  <b>transform-origin</b>                                   :   X Y
-
-<p>The property takes 2 values : X Y;</p>
-
-  <b>transform-origin</b>
-
-  <b>transform-origin</b>                              :   100&percnt;
-
+<p>The property takes 2 values: transform-origin: X Y;</p>
 
 <p>In the following example the first div (.tl) is rotate around the top
 left corner with <b>transform-origin</b>: 0 0; and the second (.tr) is transformed around
@@ -7745,7 +7725,6 @@ create something that resembles the Safari logo or a compass dial.</p>
   title="Screenshot of element with no transform"
   alt="Screenshot of element with no transform." />
 </p>
-<!-- (./images/image209.jpg){width="1.6979166666666667in" height="1.6979166666666667in"} -->
 
 <b>Screenshot of element with only 2D transform:</b>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -7756,7 +7735,6 @@ create something that resembles the Safari logo or a compass dial.</p>
   title="Screenshot of element with only 2D transform"
   alt="Screenshot of element with only 2D transform." />
 </p>
-<!-- (./images/image210.jpg){width="2.3541666666666665in" height="2.3645833333333335in"} -->
 
 <b>Screenshot of element with 3D transform:</b>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -7767,11 +7745,9 @@ create something that resembles the Safari logo or a compass dial.</p>
   title="Screenshot of element with 3D transform"
   alt="Screenshot of element with 3D transform." />
 </p>
-<!-- [image211.jpg .739 x 2.47](./images/image211.jpg) -->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch29-2">Section 29.2: 3D text effect with shadow</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-
 <h4>HTML:</h4>
 
 <pre><code><b>&lt;div</b> id=&quot;title&quot;<b>&gt;</b>
@@ -7827,7 +7803,6 @@ h1:after {
   title="Hover effect 3d with shadow"
   alt="Hover effect 3d with shadow." />
 </p>
-<!-- (./images/image212.jpg){width="7.48037510936133in" height="3.642194881889764in"} -->
 
 <p>In this example, the text is transformed to make it look like it is
 going into the screen away from the user.</p>
@@ -7842,7 +7817,6 @@ element. It is skewed and uses border-radius for the rounded corner.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch29-3">Section 29.3: backface-visibility</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-
 <p>The backface-visibility property relates to 3D transforms.</p>
 
 <p>With 3D transforms and the backface-visibility property, you&apos;re able
@@ -7856,7 +7830,7 @@ longer faces the screen.</p>
 <b>&lt;</b><b>div</b> class=&quot;flip&quot;<b>&gt;</b>Loren ipsum<b>&lt;</b><b>/div</b><b>&gt;</b>
 <b>&lt;</b><b>div</b> class=&quot;flip back&quot;<b>&gt;</b>Lorem ipsum<b>&lt;</b><b>/div</b><b>&gt;</b>
 
-<pre></code.flip {
+<pre><code>.flip {
   -webkit-transform: rotateY(180deg);
   -moz-transform: rotateY(180deg);
   -ms-transform: rotateY(180deg);
@@ -7919,14 +7893,14 @@ and Android all need -webkit-backface-visibility.</p>
   <b>box-shadow</b>: inset 0 0 0 5px #333;
   <b>transform-origin</b>: 50&percnt; 50&percnt;;
   <b>transform</b>: rotateX&lpar;90deg&rpar;;
-  <b>backface-visibility</b>: hiddent;
+  <b>backface-visibility</b>: hidden;
 }
 .face2 {
   <b>transform-origin</b>: 50&percnt; 50&percnt;;
   <b>transform</b>: rotatez&lpar;90deg&rpar; translateX&lpar;100&percnt&rpar; rotateY&lpar;90deg&rpar;;
 }
 .cubeFace:before, cubeFace:after {
-  <b>content</b>: &apos&apos;
+  <b>content</b>: &apos;&apos;
   <b>position</b>: absolute;
   <b>width</b>: 100&percnt;;
   <b>height</b>: 100&percnt;;
@@ -7938,7 +7912,7 @@ and Android all need -webkit-backface-visibility.</p>
 .cubeFace:before {
   <b>top</b>: 100&percnt;;
   <b>left</b>: 0;
-  <b>transform</b>: rotateX&lpar;&minus90deg&rpar;;
+  <b>transform</b>: rotateX&lpar;&minus;90deg&rpar;;
 }
 .cubeFace:after {
   <b>top</b>: 0;
@@ -7991,14 +7965,13 @@ Additional styling is added in the demo and a transform is applied on hover to v
 
 <h4>Result</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 214.  (xxx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~ 214. donald duck a bit blurred (161) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left" width="100%">
 <img src="./images/image214.jpg"
   style="width:22%"
-  title=""
-  alt="." />
+  title="Donald Duck, a bit blurred"
+  alt="Donald Duck, a bit blurred." />
 </p>
-<!-- (./images/image214.jpg){width="2.2395833333333335in" height="2.8125in"} -->
 
 <h5>Makes you wanna rub your glasses.</h5>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -8024,7 +7997,6 @@ Additional styling is added in the demo and a transform is applied on hover to v
   title="My shadow always follows me"
   alt="My shadow always follows me." />
 </p>
-<!-- [image215 2.406 x .572](./images/image215.jpg) -->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch30-3">Section 30.3: Hue Rotate</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -8041,14 +8013,13 @@ Additional styling is added in the demo and a transform is applied on hover to v
 
 <h4>Result</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 216. donald duck, pink & blue (xxx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~ 216. donald duck, pink & blue (162) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left" width="100%">
 <img src="./images/image216.jpg"
   style="width:22%"
   title="Donald Duck in pink an light blue"
   alt="Donald Duck in pink an light blue." />
 </p>
-<!-- (./images/image216.jpg){width="2.2604166666666665in" height="2.8125in"} -->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch30-4">Section 30.4: Multiple Filter Values</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
