@@ -8450,7 +8450,7 @@ item box.</p>
 
 <pre><code>list-style-position: inside;</code></pre>
 
-<p>places the bullet within the <b>&lt;li&gt; element, pushing the content to the right as needed.</p>
+<p>places the bullet within the <b>&lt;li&gt;</b> element, pushing the content to the right as needed.</p>
 
 <pre><code>list-style-position: outside;</code></pre>
 
