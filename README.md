@@ -3,7 +3,7 @@ title: |
   CSS Notes for Professionals
   by web@petercv.com, PDF https://goalkicker.com/CSSBook
 author: "bbauska"
-date last editted: "7/7/2024 Sun 8+pm"
+date last editted: "7/8/2024 Mon 8+am"
 output: 
   markdown:
     with some style
@@ -8459,150 +8459,100 @@ space in the padding of the containing element, the marker box will
 extend to the left even if it would fall off the page.</p>
 
 <p>Showing the result of inside and outside positioning:<a href="https://jsfiddle.net/pqh3cxdp/">jsFiddle</a></p>
-
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch34-2">Section 34.2: Removing Bullets / Numbers</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
-> Sometimes, a list should just not display any bullet points or
-> numbers. In that case, remember to specify margin and padding.
+<p>Sometimes, a list should just not display any bullet points or
+numbers. In that case, remember to specify margin and padding.</p>
 
-<pre><code>
-<b>&lt;</b>
-<b>ul</b>
-<b>&gt;</b>
-<b>&lt;</b>
-<b>li</b>
-<b>&gt;</b>
-first item
-<b>&lt;</b>
-<b>/li</b>
-<b>&gt;</b>
-<b>&lt;</b>
-<b>li</b>
-<b>&gt;</b>
-second item
-<b>&lt;</b>
-<b>/li</b>
-<b>&gt;</b>
-<b>&lt;</b>
-<b>/ul</b>
-<b>&gt;</b>
-</code></pre>
+<pre><code><b>&lt;ul&gt;</b>
+<b>&lt;li&gt;</b>first item<b>&lt;/li&gt;</b>
+<b>&lt;li&gt;</b>second item<b>&lt;/li&gt;</b>
+<b>&lt;/ul&gt;</b></code></pre>
 
-> CSS
+<h4> CSS:</h4>
 
-<pre><code>
-ul
-{
-<b>list-style-type</b>
-:
-none
-;
+<pre><code>ul {
+  <b>list-style-type</b>: none;
 }
-li
-{
-<b>margin</b>
-:
-0
-;
-<b>padding</b>
-:
-0
-;
-}
-</code></pre>
-
+li {
+  <b>margin</b>: 0;
+  <b>padding</b>: 0;
+}</code></pre>
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch34-3">Section 34.3: Type of Bullet or Numbering</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p>Specific for <b>&lt;li&gt;</b> tags within an unordered list (<b>&lt;ul&gt;</b>);
 
-<b>&lt;li</b>   <b>&gt;</b> tags within an unordered list (                     <b>&lt;ul</b>
+<pre><code><b>list-style</b>: disc; /* A filled circle (default) */
+<b>list-style</b>: circle; /* A hollow circle */ 
+<b>list-style</b>: square; /* A filled square */ 
+<b>list-style</b>: &apos;-&apos;; /* any string */</code></pre>
 
-> Specific for <b>&gt;</b>):
->
-> <b>list-style</b>: disc; /* A filled circle (default) */
-> <b>list-style</b>: circle; /* A hollow circle */ <b>list-style</b>:
-> square; /* A filled square */ <b>list-style</b>: &apos;-&apos;; /* any
-> string */
+<p>Specific for <b>&lt;li&gt;</b> tags within an ordered list (<b>&lt;ol&gt;</b>);</p>
 
-<b>&lt;li</b>   <b>&gt;</b> tags within an ordered list (                      <b>&lt;ol</b>
+<pre><code><b>list-style</b>: decimal; /* Decimal numbers beginning with 1 (default) */ 
+<b>list-style</b>: decimal-leading-zero; /* Decimal numbers padded by initial zeros (01, 02, 03,* ... *10) */
+<b>list-style</b>: lower-roman;          /* Lowercase roman numerals (i., ii., iii., iv., &period;..) */
+<b>list-style</b>: upper-roman; /* Uppercase roman numerals (I., II., III., IV., &period;..) */
+<b>list-style-type</b>: lower-greek; /* Lowercase roman letters (*α*.,* β*.,* γ*.,* δ*., &period;..) */ 
+<b>list-style-type</b>: lower-alpha; /* Lowercase letters (a., b., c., d., &period;..) */
+<b>list-style-type</b>: lower-latin; /* Lowercase letters (a., b., c., d., &period;..) */ 
+<b>list-style-type</b>: upper-alpha; /* Uppercase letters (A., B., C., D., &period;..) */ 
+<b>list-style-type</b>: upper-latin; /* Uppercase letters (A., B., C., D., &period;..) */</code></pre>
 
-> Specific for <b>&gt;</b>):
+<p>Non-specific:</p>
 
-<b>list-style</b>: decimal; /* Decimal numbers beginning with 1 (default)
-*/ <b>list-style</b>: decimal-leading-zero;/* Decimal numbers padded by
-initial zeros (01, 02, 03,* ... *10) */ <b>list-style</b>: lower-roman;
-/* Lowercase roman numerals (i., ii., iii., iv., &period;..) */
-<b>list-style</b>: upper-roman; /* Uppercase roman numerals (I., II.,
-III., IV., &period;..) */ <b>list-style-type</b>: lower-greek; /* Lowercase
-roman letters (*α*.,* β*.,* γ*.,* δ*., &period;..) */ <b>list-style-type</b>:
-lower-alpha; /* Lowercase letters (a., b., c., d., &period;..) */
-<b>list-style-type</b>: lower-latin; /* Lowercase letters (a., b., c.,
-d., &period;..) */ <b>list-style-type</b>: upper-alpha; /* Uppercase letters
-(A., B., C., D., &period;..) */ <b>list-style-type</b>: upper-latin; /*
-Uppercase letters (A., B., C., D., &period;..) */ Non-specific:
-
-> <b>list-style</b>: none; /* No visible list marker */ <b>list-style</b>:
-> inherit; /* Inherits from parent */
+<pre><code><b>list-style</b>: none;    /* No visible list marker */
+<b>list-style</b>: inherit; /* Inherits from parent */</code></pre>
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ch35">Chapter 35: Counters</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
-| Parameter  | &gt; Details                                              |
+| <b>Parameter</b>  | <b>Details</b>                                   |
 |---------|------------------------------------------------------------|
-| count   | This is the name of the counter that needs to be created   |
-| er-name | or incremented or printed. It can be any custom name as    |
+| counter-name | This is the name of the counter that needs to be created   |
+|         | or incremented or printed. It can be any custom name as    |
 |         | the developer wishes.                                      |
 | integer | This integer is an optional value that when provided next  |
 |         | to the counter name will represent the initial value of    |
 |         | the counter (in counter-set, counter-reset properties) or  |
 |         | the value by which the counter should be incremented (in   |
 |         | counter-increment).                                        |
+| none    | This is the initial value for all 3 counter-&ast; properties. When this value is used for counter- |
+|         | increment, the value of none of the counters are affected. When this is used for the other two, no |
+|         | counter is created. |
+| counter-style | This specifies the style in which the counter value needs to be displayed. It supports all values |
+|               | supported by the list-style-type property. If none is used then the counter value is not printed |
+|               | at all. |
+| connector-string | This represents the string that must be placed between the values of two different counter levels |
+|                  | (like the &quot.&quot in &quot2.1.1&quot;). |
 
-<p>This is the initial value for all 3 &ast; properties. When this value is
-used for counter-none increment, the value of none of the counters are affected. When
-this is used for the other two, no counter is created.
-This specifies the style in which the counter value needs to be
-displayed. It supports all values counter-style supported by the list-style-type property. If none is used
-then the counter value is not printed at all.</p>
-
-<p>This represents the string that must be placed between the values of
-two different counter levels connector-string (like the &quot;.&quot; in &quot;2.1.1&quot;).
-</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch35-1">Section 35.1: Applying roman numerals styling to the counter output</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 <h4>CSS</h4>
 
-<pre><code>
-body 
-{
+<pre><code>body {
   <b>counter-reset</b>: item-counter;
 }
 .item {
   <b>counter-increment</b>: item-counter;
 }
 .item: before {
-  <b>content</b>: counter (
-item-counter, upper-roman 
-)
-&quot;. &quot;;
-/* by specifying the upper-roman as style the
+  <b>content</b>: counter (item-counter, upper-roman) &quot;. &quot;; /* by specifying the upper-roman as style the
    output would be in roman numbers */
-}
-</code></pre>
+}</code></pre>
 
 <h4>HTML:</h4>
 
-<pre><code>
-<b>&lt;</b><b>div</b> class=&apos;item&apos;<b>&gt;</b>Item No: 1<b>&lt;</b><b>/div</b><b>&gt;</b>
-<b>&lt;</b><b>div</b> class=&apos;item&apos;<b>&gt;</b>Item No: 2<b>&lt;</b><b>/div</b><b>&gt;</b>
-<b>&lt;</b><b>div</b> class=&apos;item&apos;<b>&gt;</b>Item No: 3<b>&lt;</b><b>/div</b><b>&gt;</b>
-</code></pre>
+<pre><code><b>&lt;div</b> class=&apos;item&apos;<b>&gt;</b>Item No: 1<b>&lt;/div&gt;</b>
+<b>&lt;div</b> class=&apos;item&apos;<b>&gt;</b>Item No: 2<b>&lt;/div&gt;</b>
+<b>&lt;div</b> class=&apos;item&apos;<b>&gt;</b>Item No: 3<b>&lt;/div&gt;</b></code></pre>
 
 <p>In the above example, the counter&apos;s output would be displayed as I,
 II, III (roman numbers) instead of the usual 1, 2, 3 as the developer
@@ -8611,20 +8561,16 @@ has explicitly specified the counter&apos;s style.</p>
 <h3 id="ch35-2">Section 35.2: Number each item using CSS Counter</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
-<h4>CSS</h4>
+<h4>CSS:</h4>
 
-<pre><code>
-body {
-  <b>counter-reset</b>: item-counter;
-/* create the counter */
+<pre><code>body {
+  <b>counter-reset</b>: item-counter;  /* create the counter */
 }
 .item {
-  <b>counter-increment</b>: item-counter;
-/* increment the counter every time an element with class &quot;item&quot; is encountered */
+  <b>counter-increment</b>: item-counter; /* increment the counter every time an element with class &quot;item&quot; is encountered */
 }
 .item-header: before {
-  <b>content</b>: counter (item-counter)&quot;. &quot;;
-/* print the value of the counter before the header and
+  <b>content</b>: counter (item-counter)&quot;. &quot;;  /* print the value of the counter before the header and
   append a &quot;.&quot; to it */
 }
 /* just for demo */
@@ -8641,52 +8587,34 @@ body {
 }
 .item-content {
   <b>padding</b>: 8px;
-}
-</code></pre>
+}</code></pre>
 
 <h4>HTML:</h4>
 
-<pre><code>
-<b>&lt;div</b> class=&apos;item&apos;<b>&gt;</b>
-<b>&lt;div</b> class=&apos;item-header&apos;<b>&gt;</b>
-Item 1 Header<b>&lt;/div&gt;</b>
-<b>&lt;div</b> class=&apos;item-content&apos;<b>&gt;</b>
-Lorem Ipsum Dolor Sit Amet&period;...
-<b>&lt;/div&gt;</b>
+<pre><code><b>&lt;div</b> class=&apos;item&apos;<b>&gt;</b>
+  <b>&lt;div</b> class=&apos;item-header&apos;<b>&gt;</b>Item 1 Header<b>&lt;/div&gt;</b>
+  <b>&lt;div</b> class=&apos;item-content&apos;<b>&gt;</b>Lorem Ipsum Dolor Sit Amet&period;...<b>&lt;/div&gt;</b>
 <b>&lt;/div&gt;</b>
 <b>&lt;div</b> class=&apos;item&apos;<b>&gt;</b>
-<b>&lt;div</b> class=&apos;item-header&apos;<b>&gt;</b>
-Item 2 Header
-<b>&lt;/div&gt;</b>
-<b>&lt;div</b> class=&apos;item-content&apos;<b>&gt;</b>
-Lorem Ipsum Dolor Sit Amet&period;...
-<b>&lt;/div&gt;</b>
+  <b>&lt;div</b> class=&apos;item-header&apos;<b>&gt;</b>Item 2 Header<b>&lt;/div&gt;</b>
+  <b>&lt;div</b> class=&apos;item-content&apos;<b>&gt;</b>Lorem Ipsum Dolor Sit Amet&period;...<b>&lt;/div&gt;</b>
 <b>&lt;/div&gt;</b>
 <b>&lt;div</b> class=&apos;item&apos;<b>&gt;</b>
-<b>&lt;div</b> class=&apos;item-header&apos;<b>&gt;</b>
-Item 3 Header
-<b>&lt;/div&gt;</b>
-<b>&lt;div</b> class=&apos;item-content&apos;<b>&gt;</b>
-Lorem Ipsum Dolor Sit Amet&period;...
-<b>&lt;/div&gt;</b>
-<b>&lt;/div&gt;</b>
-</code></pre>
-
-:before
-
+  <b>&lt;div</b> class=&apos;item-header&apos;<b>&gt;</b>Item 3 Header<b>&lt;/div&gt;</b>
+<b>&lt;div</b> class=&apos;item-content&apos;<b>&gt;</b>Lorem Ipsum Dolor Sit Amet&period;...<b>&lt;/div&gt;</b>
+<b>&lt;/div&gt;</b></code></pre>
 
 <p>The above example numbers every &quot;item&quot; in the page and adds the
 item&apos;s number before its header (using content property of
-.item-header element&apos;s pseudo). A live demo of this code is available
-&lbrack;&lbrack;here&rbrack;&rbrack;(https://jsfiddle.net/a7rmje3r/).</p>
+.item-header element&apos;s pseudo). A live demo of this code is available 
+<a href="https://jsfiddle.net/a7rmje3r/">here</a>.</p>
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch35-3">Section 35.3: Implementing multi-level numbering using CSS counters</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>CSS</h4>
 
-<pre><code>
-ul {
+<pre><code>ul {
   <b>list-style</b>: none;
   <b>counter-reset</b>: list-item-number;
 /* self nesting counter as name is same for all levels */
@@ -8698,23 +8626,15 @@ li: before {
   <b>content</b>: counters (list-item-number, &quot;.&quot;)&quot; &quot;;
 /* usage of counters() function means value of
   counters at all higher levels are combined before printing */
-}
-</code></pre>
+}</code></pre>
 
 <h4>HTML:</h4>
 
-<b>&lt;ul&gt;</b>
-<b>&lt;li&gt;</b>
-
-Level 1
-
-<b>&lt;ul&gt;</b>
-<b>&lt;li&gt;</b>
-
-Level 1.1
-
-<b>&lt;ul&gt;</b>
-<b>&lt;li&gt;</b>
+<pre><code><b>&lt;ul&gt;</b>
+  <b>&lt;li&gt;</b>Level 1
+    <b>&lt;ul&gt;</b>
+      <b>&lt;li&gt;</b>Level 1.1<b>&lt;li&gt;</b>
+    <b>&lt;/ul&gt;</b>
 
 Level 1.1.1
 
@@ -15180,3 +15100,4 @@ same animation, took <b>1.3ms</b> for rendering, <b>2.0ms</b> for painting.</p>
 <!-- 7/5/2024 Fri 8:48pm -->
 <!-- 7/6/2024 Sat 3:21am -->
 <!-- 7/7/2024 Sun 8:52pm -->
+<!-- 7/8/2024 Mon 8:50am -->
