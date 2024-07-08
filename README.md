@@ -7461,30 +7461,30 @@ and write out each property individually:</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch27-4">Section 27.4: Increasing Animation Performance Using the &apos;will-change&apos; Attribute</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-When creating animations and other GPU-heavy actions, it&apos;s important
-to understand the will-change attribute.
+<p>When creating animations and other GPU-heavy actions, it&apos;s important
+to understand the will-change attribute.</p>
 
-Both CSS keyframes and the transition property use GPU acceleration.
+<p>Both CSS keyframes and the transition property use GPU acceleration.
 Performance is increased by offloading calculations to the device&apos;s
 GPU. This is done by creating paint layers (parts of the page that are
 individually rendered) that are offloaded to the GPU to be calculated.
 The will-change property tells the browser what will animate, allowing
 the browser to create smaller paint areas, thus increasing
-performance.
+performance.</p>
 
-The will-change property accepts a comma-separated list of properties
+<p>The will-change property accepts a comma-separated list of properties
 to be animated. For example, if you plan on transforming an object and
-changing its opacity, you would specify:
+changing its opacity, you would specify:</p>
 
 <pre><code>.Example {
   &period;..
   <b>will-change</b>: transform, opacity;
 }</code></pre>
 
-<b>Note:</b> Use will-change sparingly. Setting will-change for every
+<p><b>Note:</b> Use will-change sparingly. Setting will-change for every
 element on a page can cause performance problems, as the browser may
 attempt to create paint layers for every element, significantly
-increasing the amount of processing done by the GPU.
+increasing the amount of processing done by the GPU.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ch28">Chapter 28: 2D Transforms</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -7524,7 +7524,7 @@ increasing the amount of processing done by the GPU.
 
 <pre><code><b>&lt;div</b> class=&quot;rotate&quot;<b>&gt;&lt;/div&gt;</b></code></pre>
 
-<h4>CSS</h4>
+<h4>CSS:</h4>
 
 <pre><code>.rotate {
   <b>width</b>: 100px;
@@ -7582,8 +7582,7 @@ The center of the transform is in the center of the div, 50&percnt; from left an
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch28-4">Section 28.4: Multiple transforms</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-
-Multiple transforms can be applied to an element in one property like this:
+<p>Multiple transforms can be applied to an element in one property like this:</p>
 
 <pre><code><b>transform</b>: rotate(15deg) translateX(200px);</code></pre>
 
@@ -7628,7 +7627,7 @@ an axis rotate 15 degrees clockwise as shown in the following image:</p>
 
 <pre><code><b>&lt;div</b> class=&quot;translate&quot;<b>&gt;&lt;/div&gt;</b></code></pre>
 
-<h4>CSS</h4>
+<h4>CSS:</h4>
 
 <pre><code>.translate {
   <b>width</b>: 100px;
@@ -7644,34 +7643,34 @@ an axis rotate 15 degrees clockwise as shown in the following image:</p>
 <p>On the X axis:</p>
 
 <pre><code>.translate {
-  <b>transform</b>: translateX (200px);
+  <b>transform</b>: translateX(200px);
 }</code></pre>
 
 <p>On the Y axis:</p>
 
 <pre><code>.translate {
-  <b>transform</b>: translateY (50&percnt;);
+  <b>transform</b>: translateY(50&percnt;);
 }</code></pre>
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch28-6">Section 28.6: Transform Origin</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
-Transformations are done with respect to a point which is defined by
-the transform-origin property.
+<p>Transformations are done with respect to a point which is defined by
+the transform-origin property.</p>
 
   <b>transform-origin</b>                                   :   X Y
 
-The property takes 2 values : ;
+<p>The property takes 2 values : X Y;</p>
 
   <b>transform-origin</b>
 
   <b>transform-origin</b>                              :   100&percnt;
 
 
-In the following example the first div (.tl) is rotate around the top
-left corner with : 0 0; and the second (.tr)is transformed around
-it&apos;s top right corner with 0. The rotation is applied <b>on hover</b> :
+<p>In the following example the first div (.tl) is rotate around the top
+left corner with <b>transform-origin</b>: 0 0; and the second (.tr) is transformed around
+it&apos;s top right corner with <b>transform-origin</b>: 100&percnt; 0. The rotation is applied <b>on hover</b>:</p>
 
 <h4>HTML:</h4>
 
@@ -7697,9 +7696,8 @@ it&apos;s top right corner with 0. The rotation is applied <b>on hover</b> :
   <b>transform</b>: rotate(30deg);
 }</code></pre>
 
-The default value for the transform-origin property is which is the
-center of the element.
-
+<p>The default value for the transform-origin property is 50&percnt; 50&percnt; which is the
+center of the element.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ch29">Chapter 29: 3D Transforms</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -7712,75 +7710,72 @@ center of the element.
   <b>margin</b>:100px;
   <b>height</b>:150px;
   <b>width</b>:150px;
-  <b>transform</b>:rotateY(85deg) rotateZ(45deg);  /* presentational */
+  <b>transform</b>:rotateY(85deg) rotateZ(45deg);
+  /* presentational */
   <b>background-image</b>: linear-gradient(to top left, #555 0&percnt;, #555 40&percnt;, #444 50&percnt;, #333 97&percnt;);
   <b>box-shadow</b>:inset 6px 6px 22px 8px #272727;
 }</code></pre>
 
 <h4>HTML:</h4>
 
-<pre><code><b>&lt;div</b> class=&apos;needle&apos;<b>&gt;</b>
-<b>&lt;/div&gt;</b></code></pre>
+<pre><code><b>&lt;div</b> class=&apos;needle&apos;<b>&gt;&lt;/div&gt;</b></code></pre>
 
-In the above example, a needle or compass pointer shape is created
+<p>In the above example, a needle or compass pointer shape is created
 using 3D transforms. Generally when we apply the rotate transform on
 an element, the rotation happens only in the Z-axis and at best we
 will end up with diamond shapes only. But when a rotateY transform is
 added on top of it, the element gets squeezed in the Y-axis and thus
 ends up looking like a needle. The more the rotation of the Y-axis the
-more squeezed the element looks.
+more squeezed the element looks.</p>
 
-  rotateX           (   85deg        )   rotateZ              (   45deg
+<p>The output of the above example would be a needle resting on its tip. For creating a 
+needle that is resting on its base, the rotation should be along the X-axis instead of 
+along Y-axis. So the transform property&apos;s value would have to be something like 
+rotate&lpar;85deg&rpar; rotateZ&lpar;45deg&rpar;;.</p>
 
-The output of the above example would be a needle resting on its tip.
-For creating a needle that is resting on its base, the rotation should
-be along the X-axis instead of along Y-axis. So the transform
-property&apos;s value would have to be something like );.
+<p><a href="http://codepen.io/hari_shanx/pen/YXzoBo">This pen</a> uses a similar approach to 
+create something that resembles the Safari logo or a compass dial.</p>
 
-&lbrack;&lbrack;This pen&rbrack;&rbrack;(http://codepen.io/hari_shanx/pen/YXzoBo) uses
-a similar approach to create something that resembles the Safari logo
-or a compass dial.
-
-<b>Screenshot of element with no transform:</b>
+<h4>Screenshot of element with no transform:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 209.  (xxx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~ 209. screenshot of element with no transform (156) ~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left" width="100%">
 <img src="./images/image209.jpg"
   style="width:17%"
-  title=""
-  alt="." />
+  title="Screenshot of element with no transform"
+  alt="Screenshot of element with no transform." />
 </p>
 <!-- (./images/image209.jpg){width="1.6979166666666667in" height="1.6979166666666667in"} -->
 
 <b>Screenshot of element with only 2D transform:</b>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 210.  (xxx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~ 210. screenshot of element with only 2d transform (156) ~~~~~~~~~~~~~~~~~~~-->
 <p align="left" width="100%">
 <img src="./images/image210.jpg"
   style="width:25%"
-  title=""
-  alt="." />
+  title="Screenshot of element with only 2D transform"
+  alt="Screenshot of element with only 2D transform." />
 </p>
 <!-- (./images/image210.jpg){width="2.3541666666666665in" height="2.3645833333333335in"} -->
 
 <b>Screenshot of element with 3D transform:</b>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 211.  (xxx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~ 211. screenshot of element with 3d transform (157) ~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left" width="100%">
 <img src="./images/image211.jpg"
   style="width:7%"
-  title=""
-  alt="." />
+  title="Screenshot of element with 3D transform"
+  alt="Screenshot of element with 3D transform." />
 </p>
 <!-- [image211.jpg .739 x 2.47](./images/image211.jpg) -->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch29-2">Section 29.2: 3D text eect with shadow</h3>
+<h3 id="ch29-2">Section 29.2: 3D text effect with shadow</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 <h4>HTML:</h4>
 
 <pre><code><b>&lt;div</b> id=&quot;title&quot;<b>&gt;</b>
-<b>&lt;h1</b> data-content=&quot;HOVER&quot;<b>&gt;</b>HOVER<b>&lt;/h1&gt;</b>
+  <b>&lt;h1</b> data-content=&quot;HOVER&quot;<b>&gt;</b>HOVER<b>&lt;/h1&gt;</b>
 <b>&lt;/div&gt;</b></code></pre>
 
 <h4>CSS:</h4>
@@ -7825,478 +7820,166 @@ h1:after {
 
 <p><a href="http://codepen.io/web-tiki/pen/azeKNy">View example with additional hover effect</a>.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 212.  (xxx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~ 212. hover effect 3d with shadow (158) ~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left" width="100%">
 <img src="./images/image212.jpg"
   style="width:75%"
-  title=""
-  alt="." />
+  title="Hover effect 3d with shadow"
+  alt="Hover effect 3d with shadow." />
 </p>
 <!-- (./images/image212.jpg){width="7.48037510936133in" height="3.642194881889764in"} -->
 
-In this example, the text is transformed to make it look like it is
-going into the screen away from the user.
+<p>In this example, the text is transformed to make it look like it is
+going into the screen away from the user.</p>
 
-The shadow is transformed accordingly so it follows the text. As it is
+<p>The shadow is transformed accordingly so it follows the text. As it is
 made with a pseudo element and the data attribute, it inherits the
-transforms form it&apos;s parent (the H1 tag).
+transforms form it&apos;s parent (the H1 tag).</p>
 
-The white &quot;light&quot; is made with a pseudo element on the #title
-element. It is skewed and uses border-radius for the rounded corner.
+<p>The white &quot;light&quot; is made with a pseudo element on the #title
+element. It is skewed and uses border-radius for the rounded corner.</p>
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch29-3">Section 29.3: backface-visibility</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
-The backface-visibility property relates to 3D transforms.
+<p>The backface-visibility property relates to 3D transforms.</p>
 
-With 3D transforms and the backface-visibility property, you&apos;re able
+<p>With 3D transforms and the backface-visibility property, you&apos;re able
 to rotate an element such that the original front of an element no
-longer faces the screen.
+longer faces the screen.</p>
 
-For example, this would flip an element away from the screen:
+<p>For example, this would flip an element away from the screen:</p>
 
-&lbrack;&lbrack;JSFIDDLE&rbrack;&rbrack;(https://jsfiddle.net/3z3z843c/)
+<p><a href="https://jsfiddle.net/3z3z843c/">Demo (jsFIDDLE)</a></p>
 
-<b>&lt;</b>
+<b>&lt;</b><b>div</b> class=&quot;flip&quot;<b>&gt;</b>Loren ipsum<b>&lt;</b><b>/div</b><b>&gt;</b>
+<b>&lt;</b><b>div</b> class=&quot;flip back&quot;<b>&gt;</b>Lorem ipsum<b>&lt;</b><b>/div</b><b>&gt;</b>
 
-<b>div</b>
-
-class
-
-=
-
-&quot;flip&quot;
-
-<b>&gt;</b>
-
-Loren ipsum
-
-<b>&lt;</b>
-
-<b>/div</b>
-
-<b>&gt;</b>
-
-<b>&lt;</b>
-
-<b>div</b>
-
-class
-
-=
-
-&quot;flip back&quot;
-
-<b>&gt;</b>
-
-Lorem ipsum
-
-<b>&lt;</b>
-
-<b>/div</b>
-
-<b>&gt;</b>
-
-.flip
-
-{
-
--webkit-transform
-
-:
-
-rotateY
-
-(
-
-180
-
-deg
-
-)
-
-;
-
--moz-transform
-
-:
-
-rotateY
-
-(
-
-180
-
-deg
-
-)
-
-;
-
--ms-transform
-
-:
-
-rotateY
-
-(
-
-180
-
-deg
-
-)
-
-;
-
--webkit-backface-visibility
-
-:
-
-visible
-
-;
-
--moz-backface-visibility
-
-:
-
-visible
-
-;
-
--ms-backface-visibility
-
-:
-
-visible
-
-;
-
+<pre></code.flip {
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  -ms-transform: rotateY(180deg);
+  -webkit-backface-visibility: visible;
+  -moz-backface-visibility:    visible;
+  -ms-backface-visibility:     visible;
 }
+.flip.back {
+-webkit-backface-visibility: hidden;
+-moz-backface-visibility:    hidden;
+-ms-backface-visibility:     hidden;
+}</code></pre>
 
-.flip
+<p>Firefox 10+ and IE 10+ support backface-visibility without a prefix. Opera, Chrome, Safari, iOS, 
+and Android all need -webkit-backface-visibility.</p>
 
-.back
+<p>It has 4 values:</p>
 
-{
-
--webkit-backface-visibility
-
-:
-
-hidden
-
-;
-
--moz-backface-visibility
-
-:
-
-hidden
-
-;
-
--ms-backface-visibility
-
-:
-
-hidden
-
-;
-
-}
-
-Firefox 10+ and IE 10+ support backface-visibility without a prefix.
-Opera, Chrome, Safari, iOS, and Android all need
--webkit-backface-visibility.
-
-It has 4 values:
-
-1.  <b>visible</b> (default) - the element will always be visible even when
-    not facing the screen.
-
-2.  <b>hidden</b> - the element is not visible when not facing the screen.
-
-3.  <b>inherit</b> - the property will gets its value from the its parent
-    element
-
-4.  <b>initial</b> - sets the property to its default, which is visible
-
+<ol>
+  <li><b>visible</b> (default) - the element will always be visible even when not facing the screen.</li>
+  <li><b>hidden</b> - the element is not visible when not facing the screen.</li>
+  <li><b>inherit</b> - the property will gets its value from the its parent element.</li>
+  <li><b>initial</b> - sets the property to its default, which is visible.</li>
+</ol>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch29-4">Section 29.4: 3D cube</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-
-3D transforms can be use to create many 3D shapes. Here is a simple 3D
-CSS cube example:
+<p>3D transforms can be use to create many 3D shapes. Here is a simple 3D CSS cube example:</p>
 
 <h4>HTML:</h4>
 
-<b>&lt;</b>
+<pre><code><b>&lt;div</b> class=&quot;cube&quot;<b>&gt;</b>
+  <b>&lt;div</b> class=&quot;cubeFace&quot;<b>&gt;&lt;/div&gt;</b>
+  <b>&lt;div</b> class=&quot;cubeFace face2&quot;<b>&gt;&lt;/div&gt;</b>
+<b>&lt;/div&gt;</b></code></pre>
 
-<b>div</b>
+<h4>CSS:</h4>
 
-class
-
-=
-
-&quot;cube&quot;
-
-<b>&gt;</b>
-
-<b>&lt;</b>
-
-<b>div</b>
-
-class
-
-=
-
-&quot;cubeFace&quot;
-
-<b>&gt;</b>
-
-<b>&lt;</b>
-
-<b>/div</b>
-
-<b>&gt;</b>
-
-<b>&lt;</b>
-
-<b>div</b>
-
-class
-
-=
-
-&quot;cubeFace face2&quot;
-
-<b>&gt;</b>
-
-<b>&lt;</b>
-
-<b>/div</b>
-
-<b>&gt;</b>
-
-<b>&lt;</b>
-
-<b>/div</b>
-
-<b>&gt;</b>
-
-*CSS:*
-
-body
-
-{
-
-<b>perspective-origin</b>
-
-:
-
-50
-
-&percnt;
-
-100
-
-&percnt;
-
-;
-
-<b>perspective</b>
-
-:
-
-1500
-
-px
-
-;
-
-<b>overflow</b>
-
-:
-
-hidden
-
-;
-
+<pre><code>body {
+  <b>perspective-origin</b>: 50&percnt; 100&percnt;;
+  <b>perspective</b>: 1500px;
+  <b>overflow</b>: hidden;
 }
-
-.cube
-
-{
-
-<b>position</b>
-
-:
-
-relative
-
-;
-
-<b>padding-bottom</b>
-
-:
-
-20
-
-&percnt;
-
-;
-
-<b>transform-style</b>
-
-:
-
-preserve-3d
-
-;
-
-<b>transform-origin</b>
-
-:
-
-50
-
-&percnt;
-
-100
-
-&percnt;
-
-;
-
-<b>transform</b>
-
-:
-
-rotateY
-
-(
-
-45
-
-deg
-
-)
-
-rotateX
-
-(
-
-0
-
-)
-
-;
-
+.cube {
+  <b>position</b>: relative;
+  <b>padding-bottom</b>: 20&percnt;;
+  <b>transform-style</b>: preserve-3d;
+  <b>transform-origin</b>: 50&percnt; 100&percnt;;
+  <b>transform</b>: rotateY(45deg) rotateX(0);
 }
+.cubeFace {
+  <b>position</b>: absolute;
+  <b>top</b>: 0;
+  <b>left</b>: 40&percnt;
+  <b>width</b>: 20&percnt;
+  <b>height</b>: 100&percnt;
+  <b>margin</b>: 0 auto;
+  <b>transform-style</b>: inherit;
+  <b>background</b>: #C53329;
+  <b>box-shadow<b>: inset 0 0 0 5px #333;
+  <b>transform-origin</b>: 50&percnt; 50&percnt;;
+  <b>transform<b>: rotateX&lpar;90deg&rpar;;
+  <b>backface-visibility</b>: hiddent;
+}
+.face2 {
+  <b>transform-origin</b>: 50&percnt; 50&percnt;;
+  <b>transform</b>: rotatez&lpar;90deg&rpar; translateX&lpar;100&percnt&rpar; rotateY&lpar;90deg&rpar;;
+}
+.cubeFace:before {
+  <b>top</b>: 100&percnt;;
+  <b>left</b>: 0;
+  <b>transform</b>: rotateX&lpar;&minus90deg&rpar;;
+}
+.cubeFace:after {
+  <b>top</b>: 0;
+  <b>left</b>: 100&percnt;;
+  <b>transform</b>: rotateY&lpar;90deg&rpar;;
+}</code></pre>
 
-.cubeFace
+<p><a href="http://codepen.io/web-tiki/pen/NNwqBa">View this example</a><br>
+Additional styling is added in the demo and a transform is applied on hover to view the 6 faces of the cube.</p>
 
-{
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 213.  (xxx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p align="left" width="100%">
-<img src="./images/image213.jpg"
-  style="width:75%"
-  title=""
-  alt="." />
-</p>
-<!-- (./images/image213.png){width="7.486667760279965in" height="6.386666666666667in"} -->
+<p>Should be noted that:</p>
 
-<a href="http://codepen.io/web-tiki/pen/NNwqBa">View this example</a>
-
-Additional styling is added in the demo and a transform is applied on
-hover to view the 6 faces of the cube.
-
-Should be noted that:
-
-4 faces are made with pseudo elements chained transforms are applied
-
+<ul>
+  <li>4 faces are made with pseudo elements</li>
+  <li>chained transforms are applied</li>
+</ul>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ch30">Chapter 30: Filter Property</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 | <b>Value</b> | <b>Description</b> |
+|--------------|-------------------------------------------------------------|
 | blur&lpar;x&rpar; | Blurs the image by x pixels. |
->
-> Brightens the image at any value above 1.0 or 100&percnt;. Below that, the
-> image will be brightness&lpar;x&rpar; darkened.
->
-> Provides more contrast to the image at any value above 1.0 or 100&percnt;.
-> Below that, the contrast&lpar;x&rpar; image will get less saturated.
->
-> drop-shadow&lpar;h, v, x, y, z&rpar; Gives the image a drop-shadow. h and v can
-> have negative values. x, y, and z are optional.
-  | Value         | Description |
-  |---------------|------------------------------------------------------|
-  | greyscale&lpar;x&rpar;  | Shows the image in greyscale, with a maximum value of |
-  |               | 1.0 or 100%. |
-  | hue-rotate&lpar;x&rpar; | Applies a hue-rotation to the image. |
-  | invert&lpar;x&rpar;     | Inverts the color of the image with a maximum value of |
-  |               | 1.0 or 100%. |
-  | opacity&lpar;x&rpar;    | Sets how opaque/transparent the image is with a |
-  |               | maximum value of 1.0 or 100%. |
-  | saturate&lpar;x&rpar;   | Saturates the image at any value above 1.0 or 100%. |
-  |               | Below that, the image will start to de-saturate. |
-  | sepia&lpar;x&rpar;      | Converts the image to sepia with a maximum value of |
-  |               |  1.0 or 100%. |
+| brightness&lpar;x&rpar; | Brightens the image at any value above 1.0 or 100&percnt;. Below that, the image will be |
+|                         | darkened. |
+| contrast&lpar;x&rpar; | Provides more contrast to the image at any value above 1.0 or 100&percnt;. Below that, the | 
+|                       | image will get less saturated. |
+| drop-shadow&lpar;h,v,x,y,z&rpar; | Gives the image a drop-shadow. h and v can have negative values. x, y, and z are optional. |
+| greyscale&lpar;x&rpar;  | Shows the image in greyscale, with a maximum value of 1.0 or 100&percnt;. |
+| hue-rotate&lpar;x&rpar; | Applies a hue-rotation to the image. |
+| invert&lpar;x&rpar;     | Inverts the color of the image with a maximum value of 1.0 or 100&percnt;. |
+| opacity&lpar;x&rpar;    | Sets how opaque/transparent the image is with a maximum value of 1.0 or 100&percnt;. |
+| saturate&lpar;x&rpar;   | Saturates the image at any value above 1.0 or 100%. Below that, the image will start to |
+|                         | de-saturate. |
+| sepia&lpar;x&rpar;      | Converts the image to sepia with a maximum value of 1.0 or 100&percnt;. |
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch30-1">Section 30.1: Blur</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>HTML:</h4>
 
-> <b>&lt;img</b> src=&apos;donald-duck.png&apos; alt=&apos;Donald Duck&apos; title=&apos;Donald
-> Duck&apos; <b>/&gt;</b>
->
-> <h4>CSS</h4>
+<pre><code><b>&lt;img</b> src=&apos;donald-duck.png&apos; alt=&apos;Donald Duck&apos; title=&apos;Donald Duck&apos; <b>/&gt;</b></code></pre>
 
-img
+<h4>CSS:</h4>
 
-{
+<pre><code>img {
+  -webkit-filter: blur(1px);
+  <b>filter</b>: blur(1px);
+}</code></pre>
 
--webkit-filter
-
-:
-
-blur
-
-(
-
-1
-
-px
-
-)
-
-;
-
-<b>filter</b>
-
-:
-
-blur
-
-(
-
-1
-
-px
-
-)
-
-;
-
-}
-
-> <b>Result</b>
+<h4>Result</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 214.  (xxx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left" width="100%">
@@ -8307,96 +7990,29 @@ px
 </p>
 <!-- (./images/image214.jpg){width="2.2395833333333335in" height="2.8125in"} -->
 
-> Makes you wanna rub your glasses.
-
+<h5>Makes you wanna rub your glasses.</h5>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch30-2">Section 30.2: Drop Shadow (use box-shadow instead if possible)</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-
 <h4>HTML:</h4>
 
-<b>&lt;</b>
+<pre><code><b>&lt;p&gt;</b>My shadow always follows me.<b>&lt;/p&gt;</b></code></pre>
 
-<b>p</b>
+<h4>CSS:</h4>
 
-<b>&gt;</b>
+<pre><code>p {
+  -webkit-filter: drop-shadow(10px 10px 1px green);
+  <b>filter</b>: drop-shadow(10px 10px 1px green);
+}</code></pre>
 
-My shadow always follows me.
-
-<b>&lt;</b>
-
-<b>/p</b>
-
-<b>&gt;</b>
-
-> <h4>CSS</h4>
-
-p
-
-{
-
--webkit-filter
-
-:
-
-drop-shadow
-
-(
-
-10
-
-px
-
-10
-
-px
-
-1
-
-px
-
-green
-
-)
-
-;
-
-<b>filter</b>
-
-:
-
-drop-shadow
-
-(
-
-10
-
-px
-
-10
-
-px
-
-1
-
-px
-
-green
-
-)
-
-;
-
-}
-
-> <b>Result</b>
+<h4>Result</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 215.  (xxx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~ 215. my shadow always follows me (162) ~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left" width="100%">
 <img src="./images/image215.jpg"
   style="width:24%"
-  title=""
-  alt="." />
+  title="My shadow always follows me"
+  alt="My shadow always follows me." />
 </p>
 <!-- [image215 2.406 x .572](./images/image215.jpg) -->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -8404,57 +8020,23 @@ green
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>HTML:</h4>
 
-<p><b>&lt;img</b> src=&apos;donald-duck.png&apos; alt=&apos;Donald Duck&apos; title=&apos;Donald
-Duck&apos; <b>/&gt;</b></p>
+<pre><code><b>&lt;img</b> src=&apos;donald-duck.png&apos; alt=&apos;Donald Duck&apos; title=&apos;Donald Duck&apos; <b>/&gt;</b></code></pre>
 
-<h4>CSS</h4>
+<h4>CSS:</h4>
 
-img
+<pre><code>img {
+  -webkit-filter: hue-rotate(120deg);
+  <b>filter</b>: hue-rotate(120deg);
+}</code></pre>
 
-{
-
--webkit-filter
-
-:
-
-hue-rotate
-
-(
-
-120
-
-deg
-
-)
-
-;
-
-<b>filter</b>
-
-:
-
-hue-rotate
-
-(
-
-120
-
-deg
-
-)
-
-;
-
-}
-
-> <b>Result</b>
+<h4>Result</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 216.  (xxx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 216. donald duck, pink & blue (xxx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left" width="100%">
 <img src="./images/image216.jpg"
   style="width:22%"
-  title=""
-  alt="." />
+  title="Donald Duck in pink an light blue"
+  alt="Donald Duck in pink an light blue." />
 </p>
 <!-- (./images/image216.jpg){width="2.2604166666666665in" height="2.8125in"} -->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -8464,118 +8046,23 @@ deg
 
 <h4>HTML:</h4>
 
-> <b>&lt;img</b> src=&apos;donald-duck.png&apos; alt=&apos;Donald Duck&apos; title=&apos;Donald
-> Duck&apos; <b>/&gt;</b>
+<pre><code><b>&lt;img</b> src=&apos;donald-duck.png&apos; alt=&apos;Donald Duck&apos; title=&apos;Donald Duck&apos; <b>/&gt;</b></code></pre>
 
 <h4>CSS</h4>
 
-img
-
-{
-
--webkit-filter
-
-:
-
-brightness
-
-(
-
-200
-
-&percnt;
-
-)
-
-grayscale
-
-(
-
-100
-
-&percnt;
-
-)
-
-sepia
-
-(
-
-100
-
-&percnt;
-
-)
-
-invert
-
-(
-
-100
-
-&percnt;
-
-)
-
-;
-
-<b>filter</b>
-
-:
-
-brightness
-
-(
-
-200
-
-&percnt;
-
-)
-
-grayscale
-
-(
-
-100
-
-&percnt;
-
-)
-
-sepia
-
-(
-
-100
-
-&percnt;
-
-)
-
-invert
-
-(
-
-100
-
-&percnt;
-
-)
-
-;
-
-}
+<pre><code>img {
+  -webkit-filter: brightness(200&percnt;) grayscale(100&percnt;) sepia(100&percnt;) invert(100&percnt;);
+  <b>filter</b>: brightness(200&percnt;) grayscale(100&percnt;) sepia(100&percnt;) invert(100&percnt;);
+}</code></pre>
 
 <h4>Result</h4>
-
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 217.  (xxx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~ 217. donald duck - black light - sorta (163) ~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left" width="100%">
 <img src="./images/image217.jpg"
   style="width:22%"
-  title=""
-  alt="." />
+  title="Donald Duck - Black Light colors"
+  alt="Donald Duck - Black Light colors." />
 </p>
 <!-- [image217 2.114 x 2.708](./images/image217.jpg) -->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -8583,98 +8070,30 @@ invert
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>HTML:</h4>
 
-<b>&lt;</b>
+<pre><code><b>&lt;div&gt;&lt;/div&gt;</b></code></pre>
 
-<b>div</b>
+<h4>CSS:</h4>
 
-<b>&gt;</b>
+<pre><code>div {
+  <b>width</b>: 100px;
+  <b>height</b>: 100px;
+  <b>background-color</b>: white;
+  -webkit-filter: invert(100&percnt;);
+  <b>filter</b>: invert(100&percnt;);
+}</code></pre>
 
-<b>&lt;</b>
-
-<b>/div</b>
-
-<b>&gt;</b>
-
-> <h4>CSS</h4>
-
-div
-
-{
-
-<b>width</b>
-
-:
-
-100
-
-px
-
-;
-
-<b>height</b>
-
-:
-
-100
-
-px
-
-;
-
-<b>background-color</b>
-
-:
-
-white
-
-;
-
--webkit-filter
-
-:
-
-invert
-
-(
-
-100
-
-&percnt;
-
-)
-
-;
-
-<b>filter</b>
-
-:
-
-invert
-
-(
-
-100
-
-&percnt;
-
-)
-
-;
-
-}
-
-> <b>Result</b>
+<h4>Result</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 218.  (xxx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~ 218. turns from white to black (163) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left" width="100%">
 <img src="./images/image218.jpg"
   style="width:11%"
-  title=""
-  alt="." />
+  title="Turns fro white to black"
+  alt="Turns fro white to black." />
 </p>
 <!-- (./images/image218.jpg){width="1.1979166666666667in" height="1.1979166666666667in"} -->
 
-> Turns from white to black.
+<p>Turns from white to black.</p>
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ch31">Chapter 31: Cursor Styling</h2>
@@ -8682,62 +8101,60 @@ invert
 <h3 id="ch31-1">Section 31.1: Changing cursor type</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
-<b>cursor</b>
+<p><b>cursor</b>: value;</p>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~ section-31-1. cursor styling images (164) ~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p align="left" width="100%">
+<img src="./images/section-31-1.png"
+  style="width:50%"
+  title="Cursor styling images"
+  alt="Cursor styling images." />
+</p>
 
-:
+<h4>Examples:</h4>
 
-value
-
-;
-
-> <b>Examples:</b>
-
-<b>Value Description</b>
-
-> none No cursor is rendered for the element auto Default. The browser
-> sets a cursor help The cursor indicates that help is available wait
-> The cursor indicates that the program is busy move The cursor
-> indicates something is to be moved pointer The cursor is a pointer and
-> indicates a link
+| <b>Value<b> | <b>Description</b> |
+|-------------|------------------------------------|
+| none     | No cursor is rendered for the element. |
+| auto     | Default. The browser sets a cursor. |
+| help     | The cursor indicates that help is available. |
+| wait     | The cursor indicates that the program is busy. |
+| move     | The cursor indicates something is to be moved. |
+| pointer  | The cursor is a pointer and indicates a link. |
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch31-2">Section 31.2: pointer-events</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p>The pointer-events property allows for control over how HTML elements respond to mouse/touch events.</p>
 
-> The pointer-events property allows for control over how HTML elements
-> respond to mouse/touch events.
+<pre><code>.disabled {
+  <b>pointer-events</b>: none;
+}</code></pre>
 
-.disabled
+<p>In this example,</p>
 
-{
+<blockquote>
+  &apos;none&apos; prevents all click, state and cursor options on the specified HTML element.
+</blockquote>
 
-<b>pointer-events</b>
+<p>Other valid values for HTMl elements are:</p>
+<ul>
+  <li>auto;</li>
+  <li>inherit.</li>
+</ul>
 
-:
+<ol>
+  <li><a href="https://css-tricks.com/almanac/properties/p/pointer-events/">https://css-tricks.com/almanac/properties/p/pointer-events/</a></li>
+</ol>
 
-none
+<p>Other resources:</p>
 
-;
-
-}
-
-> In this example,
-
-&apos;none&apos; prevents all click, state and cursor options on the specified
-HTML element &lbrack;&lbrack;1&rbrack;&rbrack;
-
-> Other valid values for HTMl elements are:
->
-> auto; inherit.
->
-> 1&period;
-> &lbrack;&lbrack;https://css-tricks.com/almanac/properties/p/pointer-events/&rbrack;&rbrack;(https://css-tricks.com/almanac/properties/p/pointer-events/)
->
-> Other resources:
->
-> &lbrack;&lbrack;https://developer.mozilla.org/en-US/docs/Web/CSS/pointer-events&rbrack;&rbrack;(https://developer.mozilla.org/en-US/docs/Web/CSS/pointer-events)
-> &lbrack;&lbrack;https://davidwalsh.name/pointer-events&rbrack;&rbrack;(https://davidwalsh.name/pointer-events)
-
+<ul>
+  <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/pointer-events">
+    https://developer.mozilla.org/en-US/docs/Web/CSS/pointer-events</a></li>
+  <li><a href="https://davidwalsh.name/pointer-events">
+    https://davidwalsh.name/pointer-events</a></li>
+</ul>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch31-3">Section 31.3: caret-color</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -8747,272 +8164,65 @@ other content is inserted by the user&apos;s typing or editing.</p>
 
 <h4>HTML:</h4>
 
-<pre><code>
-<b>&lt;</b><b>input</b> id=&quot;example&quot;<b>/&gt;</b>
-</code></pre>
+<pre><code><b>&lt;input</b> id=&quot;example&quot;<b>/&gt;</b></code></pre>
 
-<h4>CSS</h4>
+<h4>CSS:</h4>
 
-<pre><code>
-#example {
+<pre><code>#example {
   <b>caret-color</b>: red;
-}
-</code></pre>
+}</code></pre>
 
 <h4>Resources:</h4>
 
-[!https://developer.mozilla.org/en-US/docs/Web/CSS/caret-color](https://developer.mozilla.org/en-US/docs/Web/CSS/caret-color)
-
+<ul>
+  <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/caret-color">
+    https://developer.mozilla.org/en-US/docs/Web/CSS/caret-color</a></li>
+</ul>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ch32">Chapter 32: box-shadow</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-
-<b>Parameters Details</b>
-
-> by default, the shadow is treated as a drop shadow. the inset keyword
-> draws the shadow inside the inset frame/border.
->
-> offset-x the horizontal distance offset-y the vertical distance
->
-> 0 by default. value cannot be negative. the bigger the value, the
-> bigger and lighter the shadow blur-radius becomes.
->
-> 0 by default. positive values will cause the shadow to expand.
-> negative values will cause the shadow spread-radius to shrink.
-
-  rgb()          ,   rgba()            ,   hsl()          ,   hsla()
-
-color can be of various notations: a color keyword, hexadecimal,
+| <b>Parameters</b> | <b>Details</b> |
+|----------------------|----------------------------------------------------------|
+| inset | by default, the shadow is treated as a drop shadow. the inset keyword draws the shadow inside the |
+|       | frame/border. |
+| offset-x | the horizontal distance. |
+| offset-y | the vertical distance. |
+| blur-radius | 0 by default. Value cannot be negative. the bigger the value, the bigger and lighter the shadow |
+|             | becomes. |
+| spread-radius | 0 by default. Positive values will cause the shadow to expand. Negative values will cause the shadow |
+|               | to shrink. |
+| color         | can be various notations: a color keyword, hexadecimal, rgb(), rgba(), hsla(). |
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch32-1">Section 32.1: bottom-only drop shadow using a pseudoelement</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-
-JSFiddle:
-&lbrack;&lbrack;https://jsfiddle.net/UnsungHero97/80qod7aL/2/&rbrack;&rbrack;(https://jsfiddle.net/UnsungHero97/80qod7aL/2/)
+<p><a href="https://jsfiddle.net/UnsungHero97/80qod7aL/2/">JSFiddle:</a></p>
 
 <h4>HTML:</h4>
 
-<b>&lt;</b>
+<pre></code><b>&lt;div</b> class=&quot;box_shadow&quot;<b>&gt;&lt;/div&gt;</b></code></pre>
 
-<b>div</b>
+<h4>CSS</h4>
 
-class
-
-=
-
-&quot;box_shadow&quot;
-
-<b>&gt;</b>
-
-<b>&lt;</b>
-
-<b>/div</b>
-
-<b>&gt;</b>
-
-> <h4>CSS</h4>
-
-.box_shadow
-
-{
-
-<b>background-color</b>
-
-:
-
-#1C90F3
-
-;
-
-<b>width</b>
-
-:
-
-200
-
-px
-
-;
-
-<b>height</b>
-
-:
-
-100
-
-px
-
-;
-
-<b>margin</b>
-
-:
-
-50
-
-px
-
-;
-
+<pre><code>.box_shadow {
+  <b>background-color</b>: #1C90F3;
+  <b>width</b>: 200px;
+  <b>height</b>: 100px;
+  <b>margin</b>: 50px;
 }
-
-.box_shadow
-
-:
-
-after
-
-{
-
-<b>content</b>
-
-:
-
-&quot;&quot;
-
-;
-
-<b>width</b>
-
-:
-
-190
-
-px
-
-;
-
-<b>height</b>
-
-:
-
-1
-
-px
-
-;
-
-<b>margin-top</b>
-
-:
-
-98
-
-px
-
-;
-
-<b>margin-left</b>
-
-:
-
-5
-
-px
-
-;
-
-<b>display</b>
-
-:
-
-block
-
-;
-
-<b>position</b>
-
-:
-
-absolute
-
-;
-
-<b>z-index</b>
-
-:
-
-&minus;
-
-1
-
-;
-
--webkit-box-shadow
-
-:
-
-0
-
-px
-
-0
-
-px
-
-8
-
-px
-
-2
-
-px
-
-#444444
-
-;
-
--moz-box-shadow
-
-:
-
-0
-
-px
-
-0
-
-px
-
-8
-
-px
-
-2
-
-px
-
-#444444
-
-;
-
-<b>box-shadow</b>
-
-:
-
-0
-
-px
-
-0
-
-px
-
-8
-
-px
-
-2
-
-px
-
-#444444
-
-;
-
-}
-
+.box_shadow:after {
+  <b>content</b>: &quot;&quot;;
+  <b>width</b>: 190px;
+  <b>height</b>: 1px;
+  <b>margin-top</b>: 98px;
+  <b>margin-left</b>: 5px;
+  <b>display</b>: block;
+  <b>position</b>: absolute;
+  <b>z-index</b>: &minus;1;
+  -webkit-box-shadow: 0px 0px 8px 2px #444444;
+     -moz-box-shadow: 0px 0px 8px 2px #444444;
+          <b>box-shadow</b>: 0px 0px 8px 2px #444444;
+}</code></pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 220.  (xxx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left" width="100%">
@@ -9025,72 +8235,19 @@ px
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch32-2">Section 32.2: drop shadow</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-
 <a href="https://jsfiddle.net/UnsungHero97/80qod7aL/&rbrack;&rbrack;(https://jsfiddle.net/UnsungHero97/80qod7aL/">Demo (JSFiddle):</a>
 
 <h4>HTML:</h4>
 
-<b>&lt;</b>
+<pre><code><b>&lt;div</b> class=&quot;box_shadow&quot;<b>&gt;&lt;/div&gt;</b></code></pre>
 
-<b>div</b>
+<h4>CSS:</h4>
 
-class
-
-=
-
-&quot;box_shadow&quot;
-
-<b>&gt;</b>
-
-<b>&lt;</b>
-
-<b>/div</b>
-
-<b>&gt;</b>
-
-<h4>CSS</h4>
-
-<pre><code>
-.box_shadow
-{
--webkit-box-shadow
-:
-0
-px
-0
-px
-10
-px
--1
-px
-#444444
-;
--moz-box-shadow
-:
-0
-px
-0
-px
-10
-px
--1
-px
-#444444
-;
-<b>box-shadow</b>
-:
-0
-px
-0
-px
-10
-px
--1
-px
-#444444
-;
-}
-</code></pre>
+<pre><code>.box_shadow {
+  -webkit-box-shadow: 0px 0px 10px -1px #444444;
+     -moz-box-shadow: 0px 0px 10px -1px #444444;
+          <b>box-shadow</b>: 0px 0px 10px -1px #444444;
+}</code></pre>
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch32-3">Section 32.3: inner drop shadow</h3>
@@ -9098,32 +8255,28 @@ px
 
 <h4>HTML:</h4>
 
-<pre><code>
-<b>&lt;</b><b>div</b> class=&quot;box_shadow&quot;<b>&gt;</b><b>&lt;</b><b>/div</b><b>&gt;</b>
-</code></pre>
+<pre><code><b>&lt;div</b> class=&quot;box_shadow&quot;<b>&gt;&lt;/div&gt;</b></code></pre>
 
-<h4>CSS</h4>
+<h4>CSS:</h4>
 
-<pre><code>
-.box_shadow {
+<pre><code>.box_shadow {
   <b>background-color</b>: #1C90F3;
   <b>width</b>: 200px;
   <b>height</b>: 100px;
   <b>margin</b>: 50px;
   -webkit-box-shadow: inset 0px 0px 10px 0px #444444;
-  -moz-box-shadow: inset 0px 0px 10px 0px #444444;
-  <b>box-shadow</b>: inset 0px 0px 10px 0px #444444;
-}
-</code></pre>
+     -moz-box-shadow: inset 0px 0px 10px 0px #444444;
+      <b>box-shadow</b>: inset 0px 0px 10px 0px #444444;
+}</code></pre>
 
 <h4>Result:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 221.  (xxx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~ 221. light blue rectange within a silver/white rectangle (xxx) ~~~~~~~~~~~~~~-->
 <p align="left" width="100%">
 <img src="./images/image221.jpg"
   style="width:26%"
-  title=""
-  alt="." />
+  title="Light blue rectange within a silvery white rectangle"
+  alt="Light blue rectange within a silvery white rectangle." />
 </p>
 <!-- [image221.jpg 2.645 x 1.541](./images/image221.jpg) -->
 
@@ -9136,14 +8289,11 @@ px
 
 <h4>HTML:</h4>
 
-<pre><code>
-<b>&lt;</b><b>div</b> class=&quot;box_shadow&quot;<b>&gt;</b><b>&lt;</b><b>/div</b><b>&gt;</b>
-</code></pre>
+<pre><code><b>&lt;div</b> class=&quot;box_shadow&quot;<b>&gt;&lt;/div&gt;</b></code></pre>
 
-> <h4>CSS</h4>
+<h4>CSS:</h4>
 
-<pre><code>
-.box_shadow {
+<pre><code>.box_shadow {
   <b>width</b>: 100px;
   <b>height</b>: 100px;
   <b>margin</b>: 100px;
@@ -9151,16 +8301,15 @@ px
                    52px -52px 0px 0px #7cbb00,
                   -52px 52px 0px 0px #00a1f1,
                    52px 52px 0px 0px #ffbb00;
-}
-</code></pre>
+}</code></pre>
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 222.  (xxx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~ 222. orange, gree, blue & yellow (ms shit colors) (xxx) ~~~~~~~~~~~~~~~~~~-->
 <p align="left" width="100%">
 <img src="./images/image222.jpg"
   style="width:61%"
-  title=""
-  alt="." />
+  title="Orange, green, blue &amp; yellow (MS shit colors)"
+  alt="Orange, green, blue &amp; yellow (MS shit colors)." />
 </p>
 <!-- [image222 6.125 x 5.833](./images/image222.jpg) -->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -14246,8 +13395,7 @@ respect to its sibling&apos;s DIV.</p>
 
 <h4>HTML:</h4>
 
-<pre><code>
-<b>&lt;div</b> id=&quot;div1&quot;<b>&gt;</b>
+<pre><code><b>&lt;div</b> id=&quot;div1&quot;<b>&gt;</b>
 <b>&lt;h1&gt;</b>
 Division Element #1
 <b>&lt;/h1&gt;</b>
@@ -15151,119 +14299,26 @@ middle
 <h3 id="ch50-5">Section 50.5: Centering with Position: absolute</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
-> <b>HTML:</b>
+<h4>HTML:</h4>
 
-<b>&lt;</b>
+<pre><code><b>&lt;div</b> class=&quot;wrapper&quot;<b>&gt;</b>
+<b>&lt;img</b> src=&quot;http://cdn.sstatic.net/Sites/stackoverflow/company/img/logos/so/so-icon.png?v=c78bd457575a&quot;<b>&gt;</b>
+<b>&lt;/div&gt;</b></code></pre>
 
-<b>div</b>
+<h4>CSS:</h4>
 
-class
-
-=
-
-&quot;wrapper&quot;
-
-<b>&gt;</b>
-
-<b>&lt;</b>
-
-<b>img</b>
-
-src
-
-=
-
-&quot;http://cdn.sstatic.net/Sites/stackoverflow/company/img/logos/so/so-icon.png?v=c78bd457575a&quot;
-
-<b>&gt;</b>
-
-<b>&lt;</b>
-
-<b>/div</b>
-
-<b>&gt;</b>
-
-> <b>CSS:</b>
-
-.wrapper
-
-{
-
-<b>position</b>
-
-:
-
-relative
-
-;
-
-<b>height</b>
-
-:
-
-600
-
-px
-
-;
-
+<pre><code>.wrapper {
+  <b>position</b>: relative;
+  <b>height</b>: 600px;
 }
-
-.wrapper
-
-img
-
-{
-
-<b>position</b>
-
-:
-
-absolute
-
-;
-
-<b>top</b>
-
-:
-
-0
-
-;
-
-<b>left</b>
-
-:
-
-0
-
-;
-
-<b>right</b>
-
-:
-
-0
-
-;
-
-<b>bottom</b>
-
-:
-
-0
-
-;
-
-<b>margin</b>
-
-:
-
-auto
-
-;
-
-}
+.wrapper img {
+  <b>position</b>: absolute;
+  <b>top</b>: 0;
+  <b>left</b>: 0;
+  <b>right</b>: 0;
+  <b>bottom</b>: 0;
+  <b>margin</b>: auto;
+}</code></pre>
 
 > If you want to center other then images, then you must give height and
 > width to that element.
@@ -15430,135 +14485,27 @@ solid
 
 <h4>HTML:</h4>
 
-<b>&lt;</b>
+<pre><code><b>&lt;div</b> class=&quot;wrapper&quot;<b>&gt;</b>
+  <b>&lt;div</b> class=&quot;content&quot;<b>&gt;</b>
+  <b>&lt;/div&gt;</b>
+<b>&lt;/div&gt;</b></code></pre>
 
-<b>div</b>
+<h4>CSS:</h4>
 
-class
-
-=
-
-&quot;wrapper&quot;
-
-<b>&gt;</b>
-
-<b>&lt;</b>
-
-<b>div</b>
-
-class
-
-=
-
-&quot;content&quot;
-
-<b>&gt;</b>
-
-<b>&lt;</b>
-
-<b>/div</b>
-
-<b>&gt;</b>
-
-<b>&lt;</b>
-
-<b>/div</b>
-
-<b>&gt;</b>
-
-> <b>CSS:</b>
-
-.wrapper
-
-{
-
-<b>min-height</b>
-
-:
-
-600
-
-px
-
-;
-
+<pre><code>.wrapper {
+  <b>min-height</b>: 600px;
 }
-
-.wrapper
-
-:
-
-before
-
-{
-
-<b>content</b>
-
-:
-
-&quot;&quot;
-
-;
-
-<b>display</b>
-
-:
-
-inline-block
-
-;
-
-<b>height</b>
-
-:
-
-100
-
-&percnt;
-
-;
-
-<b>vertical-align</b>
-
-:
-
-middle
-
-;
-
+.wrapper:before {
+  <b>content</b>:&quot;&quot;;
+  <b>display</b>: inline-block;
+  <b>height</b>: 100&percnt;;
+  <b>vertical-align</b>: middle;
 }
-
-.content
-
-{
-
-<b>display</b>
-
-:
-
-inline-block
-
-;
-
-<b>height</b>
-
-:
-
-80
-
-px
-
-;
-
-<b>vertical-align</b>
-
-:
-
-middle
-
-;
-
-}
+.content {
+  <b>display</b>: inline-block;
+  <b>height</b>: 80px;
+  <b>vertical-align</b>: middle;
+}</code></pre>
 
 > This method is best used in cases where you have a varied-height
 > .content centered inside .wrapper; and you want .wrapper&apos;s height to
@@ -15603,11 +14550,7 @@ the image&apos;s aspect ratio.</p>
 
 <b>object-fit</b>
 
-:
-
-none
-
-;
+:none;
 
 > None ignores the size of the box and is not resized.
 >
@@ -15615,11 +14558,7 @@ none
 
 <b>object-fit</b>
 
-:
-
-scale-down
-
-;
+:scale-down;
 
 > Scale-down either sizes the object as none or as contain. It displays
 > whichever option results in a smaller image size.
@@ -16313,107 +15252,29 @@ inline
 >
 > <b>Examples</b>
 
-<b>&commat;media</b>
-
-screen and
-
-(
-
-&minus;
-
-ms-high-contrast
-
-:
-
-active
-
-)
-
-,
-
-(
-
-&minus;
-
-ms-high-contrast
-
-:
-
-black-on-white
-
-)
-
-{
-
-.header
-
-{
-
-<b>background</b>
-
-:
-
-#fff
-
-;
-
-<b>color</b>
-
-:
-
-#000
-
-;
-
-}
-
-}
+<pre><code><b>&commat;media</b>
+screen and (
+  &minus; ms-high-contrast: active
+), 
+  (&minus;ms-high-contrast: black-on-white){
+  .header {
+    <b>background</b>: #fff;
+    <b>color</b>: #000;
+  }
+}</code></pre>
 
 > This will change the header background to white and the text color to
 > black when high contrast mode is active *and* it is in black-on-white
 > mode.
 
-<b>&commat;media</b>
-
-screen and
-
-(
-
-&minus;
-
-ms-high-contrast
-
-:
-
-white-on-black
-
-)
-
-{
-
-.header
-
-{
-
-<b>background</b>
-
-:
-
-#000
-
-;
-
-<b>color</b>
-
-:
-
-#fff
-
-;
-
+<pre><code><b>&commat;media</b>
+screen and (
+  &minus;ms-high-contrast: white-on-black){
+  .header {
+    <b>background</b>: #000;
+    <b>color</b>: #fff;
 }
-
-}
+}</code></pre>
 
 > Similar to the first example, but this specifically selects the
 > white-on-black state only, and inverts the header colors to a black
@@ -16422,44 +15283,35 @@ white-on-black
 > <b>More Information:</b>
 
 <a href="https://msdn.microsoft.com/en-us/library/windows/apps/hh465764.aspx">Microsoft Documentation</a>
-on -ms-high-contrast
-
+on -ms-high-contrast.
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch55-3">Section 55.3: Internet Explorer 6 & Internet Explorer 7 only</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 > To target Internet Explorer 6 and Internet Explorer 7, start your
 > properties with &ast;:
 
-<pre><code>
-.hide-on-ie6-and-ie7 {
+<pre><code>.hide-on-ie6-and-ie7 {
 &ast;
 <b>display</b>: none;
 // This line is processed only on IE6 and IE7
-}
-</code></pre>
+}</code></pre>
 
-> To target Internet Explorer 8, wrap your selectors inside :
+<p>To target Internet Explorer 8, wrap your selectors inside:</p>
 
-<pre><code>
-<b>&commat;media</b>
+<pre><code><b>&commat;media</b>
 &bsol;&bsol; 0
 screen {
   .hide-on-ie8 {
     <b>display</b>: none;
   }
-}
-</code></pre>
+}</code></pre>
 
-| <b>&commat;media</b> &bsol;&bsol;0             | screen { }                           |
-
-> Everything between is processed only by I
-
+<p>Everything between is processed only by I</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ch56">Chapter 56: Performance</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch56-1">Section 56.1: Use transform and opacity to avoid trigger layout</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-
 Changing some CSS attribute will trigger the browser to synchronously
 calculate the style and layout, which is a bad thing when you need to
 animate at 60fps.
