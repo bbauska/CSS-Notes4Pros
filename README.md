@@ -3,7 +3,7 @@ title: |
   CSS Notes for Professionals
   by web@petercv.com, PDF https://goalkicker.com/CSSBook
 author: "bbauska"
-date last editted: "7/6/2024 Sat 3+am"
+date last editted: "7/7/2024 Sun 8+pm"
 output: 
   markdown:
     with some style
@@ -7479,10 +7479,10 @@ changing its opacity, you would specify:
 .Example {
 &period;..
 
-<b>will-change<b>: transform, opacity;
+<b>will-change</b>: transform, opacity;
 }
 
-<b>Note:<b> Use will-change sparingly. Setting will-change for every
+<b>Note:</b> Use will-change sparingly. Setting will-change for every
 element on a page can cause performance problems, as the browser may
 attempt to create paint layers for every element, significantly
 increasing the amount of processing done by the GPU.
@@ -7490,7 +7490,7 @@ increasing the amount of processing done by the GPU.
 <h2 id="ch28">Chapter 28: 2D Transforms</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
-| <b>Function/Parameter</b> | <b>Details<b> |
+| <b>Function/Parameter</b> | <b>Details</b> |
 |---------------------------|-------------------------------------------------------------------------------------|
 | rotate&lpar;x&rpar;       | Defines a transformation that moves the element around a fixed point on the Z axis. |
 | translate&lpar;x,y&rpar;  | Moves the position of the element on the X and Y axis. |
@@ -7523,7 +7523,7 @@ increasing the amount of processing done by the GPU.
 
 <h4>HTML:</h4>
 
-<b>&lt;</b><b>div</b> class=&quot;rotate&quot;<b>&gt;</b><b>&lt;</b><b>/div</b><b>&gt;</b>
+<pre><code><b>&lt;div</b> class=&quot;rotate&quot;<b>&gt;&lt;/div&gt;</b></code></pre>
 
 <h4>CSS</h4>
 
@@ -16913,3 +16913,4 @@ same animation, took <b>1.3ms</b> for rendering, <b>2.0ms</b> for painting.</p>
 <!-- 7/4/2024 Thu 1:35am -->
 <!-- 7/5/2024 Fri 8:48pm -->
 <!-- 7/6/2024 Sat 3:21am -->
+<!-- 7/7/2024 Sun 8:52pm -->
