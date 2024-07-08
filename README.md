@@ -6678,7 +6678,7 @@ MDN</a>:</p>
 |<b>Value</b> | <b>Effect</b> |
 |------------:|------------------------------------------|
 | none | Hide the element and prevent it from occupying space. |
-| block | Block element, occupy 100% of the available width, break after element. |
+| block | Block element, occupy 100&percnt; of the available width, break after element. |
 | inline | Inline element, occupy no width, no break after element. |
 | inline-block | Taking special properties from both inline and block elements, no break, but can have width. |
 | inline-flex | Displays an element as an inline-level flex container. |
@@ -6865,7 +6865,7 @@ actually delete and re-create them.</p>
 
 <pre><code><b>&lt;style&gt;</b>
   table {
-    width: 100%;
+    width: 100&percnt;;
   }
 <b>&lt;/style&gt;</b>
   <b>&lt;table&gt;</b>
@@ -7263,7 +7263,7 @@ div: hover {
 <h4>@keyframes</h4>
 
 | &lbrack; from | to | <b>&lt;percentage&gt;</b> &rbrack; | You can either specify a set time with a percentage value, or two percentage values, IE |
-|                                                       | 10%, 20%, for a period of time where the keyframe's set attributes are set. |
+|                                                       | 10&percnt;, 20&percnt;, for a period of time where the keyframe's set attributes are set. |
 | block 												| Any amount of CSS attributes for the keyframe. |
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -7309,13 +7309,13 @@ This sets the name of the animation to rainbow-background.
 <pre><code>0&percnt;    { <b>background-color</b>: #ff0000; }</code>></pre> 
 
 This is the definition for a keyframe within the animation. The first
-part, the 0% in the case, defines where the keyframe is during the
-animation. The 0% implies it is 0% of the total animation time from
+part, the 0&percnt; in the case, defines where the keyframe is during the
+animation. The 0&percnt; implies it is 0&percnt; of the total animation time from
 the beginning.
 
 The animation will automatically transition between keyframes. So, by
-setting the next background color at 8.333%, the animation will
-smoothly take 8.333% of the time to transition between those
+setting the next background color at 8.333&percnt;, the animation will
+smoothly take 8.333&percnt; of the time to transition between those
 keyframes.
 
 <pre><code>.RainbowBackground {
@@ -7332,14 +7332,14 @@ This code attaches our animation to all elements which have the .RainbowBackgrou
   <li><b>animation-iteration-count (Optional)</b>: The number of times the animation will loop. In this case, 
     the animation will go on indefinitely. By default, the animation will play once.</li>
   <li><b>animation-delay (Optional)</b>: Specifies how long to wait before the animation starts. It defaults to 0 seconds, 
-    and can take negative values. For example, -2s would start the animation 2 seconds into its loop.</li>
+    and can take negative values. For example, &minus;2s would start the animation 2 seconds into its loop.</li>
   <li><b>animation-timing-function (Optional)</b>: Specifies the speed curve of the animation. It defaults to ease, 
     where the animation starts slow, gets faster and ends slow.</li>
 </ul>
 
-<p>In this particular example, both the 0% and 100% keyframes specify {;
+<p>In this particular example, both the 0&percnt; and 100&percnt; keyframes specify {;
 }. Wherever two or more keyframes share a state, one may specify them in a single
-statement. In this case, the two 0% and 100% lines could be replaced
+statement. In this case, the two 0&percnt; and 100&percnt; lines could be replaced
 with this single line:</p>
 
 <pre><code>0&percnt;, 100&percnt; {
@@ -7535,7 +7535,7 @@ increasing the amount of processing done by the GPU.
 }</code></pre>
 
 <p>This example will rotate the div by 45 degrees clockwise. The center
-of rotation is in the center of the div, 50% from left and 50% from
+of rotation is in the center of the div, 50&percnt; from left and 50&percnt; from
 top. You can change the center of rotation by setting the
 transform-origin property.</p>
 
@@ -7558,9 +7558,8 @@ transform-origin property.</p>
   <b>transform</b>: scale (0.5, 1.3);
 }</code></pre>
 
-<pre><code>This example will scale the div to 100px &ast; 0.5 = 50px   on the X axis and to 100px &ast; 1.3 = 130px on the Y axis.</code></pre>
-
-<p>The center of the transform is in the center of the div, 50% from left and 50% from top.</p>
+<p>This example will scale the div to 100px &ast; 0.5 = 50px on the X axis and to 100px &ast; 1.3 = 130px on the Y axis.</p>
+<p>The center of the transform is in the center of the div, 50&percnt; from left and 50&percnt; from top.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch28-3">Section 28.3: Skew</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -7577,8 +7576,8 @@ transform-origin property.</p>
   <b>transform</b>: skew (20deg, -30deg);
 }</code></pre>
 
-<p>This example will skew the div by 20 degrees on the X axis and by - 30 degrees on the Y axis.
-The center of the transform is in the center of the div, 50% from left and 50% from top.</p>
+<p>This example will skew the div by 20 degrees on the X axis and by &minus; 30 degrees on the Y axis.
+The center of the transform is in the center of the div, 50&percnt; from left and 50&percnt; from top.</p>
 
 <p><a href="https://jsfiddle.net/MadalinaTn/gtt4osms/1/">See the result here</a>.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -7668,7 +7667,7 @@ The property takes 2 values : ;
 
   <b>transform-origin</b>
 
-  <b>transform-origin</b>                              :   100%
+  <b>transform-origin</b>                              :   100&percnt;
 
 
 In the following example the first div (.tl) is rotate around the top
@@ -7677,88 +7676,27 @@ it&apos;s top right corner with 0. The rotation is applied <b>on hover</b> :
 
 <h4>HTML:</h4>
 
-<pre><code>
-<b>&lt;</b>
-<b>div</b>
-class
-=
-&quot;transform originl&quot;
-<b>&gt;</b>
-<b>&lt;</b>
-<b>/div</b>
-<b>&gt;</b>
-<b>&lt;</b>
-<b>div</b>
-class
-=
-&quot;transform origin2&quot;
-<b>&gt;</b>
-<b>&lt;</b>
-<b>/div</b>
-<b>&gt;</b>
-</code></pre>
+<pre><code><b>&lt;div</b> class=&quot;transform originl&quot;<b>&gt;&lt;/div&gt;</b>
+<b>&lt;div</b> class=&quot;transform origin2&quot;<b>&gt;&lt;/div&gt;</b></code></pre>
 
 <h4>CSS:</h4>
 
-<pre><code>
-.transform
-{
-<b>display</b>
-:
-inline-block
-;
-<b>width</b>
-:
-200
-px
-;
-<b>height</b>
-:
-100
-px
-;
-<b>background</b>
-:
-teal
-;
-<b>transition</b>
-:
-transform
-1
-s
-;
+<pre><code>.transform {
+  <b>display</b>: inline-block;
+  <b>width</b>: 200px;
+  <b>height</b>: 100px;
+  <b>background</b>: teal;
+  <b>transition</b>: transform 1s;
 }
-.origin1
-{
-<b>transform-origin</b>
-:
-0
-0
-;
+.origin1 {
+  <b>transform-origin</b>: 0 0;
 }
-.origin2
-{
-<b>transform-origin</b>
-:
-100
-&percnt;
-0
-;
+.origin2 {
+  <b>transform-origin</b>: 100&percnt; 0;
 }
-.transform
-:
-hover
-{
-<b>transform</b>
-:
-rotate
-(
-30
-deg
-)
-;
-}
-</code></pre>
+.transform: hover {
+  <b>transform</b>: rotate(30deg);
+}</code></pre>
 
 The default value for the transform-origin property is which is the
 center of the element.
@@ -7771,93 +7709,19 @@ center of the element.
 
 <h4>CSS</h4>
 
-<pre><code>
-div
-.needle
-{
-<b>margin</b>
-:
-100
-px
-;
-<b>height</b>
-:
-150
-px
-;
-<b>width</b>
-:
-150
-px
-;
-<b>transform</b>
-:
-rotateY
-(
-85
-deg
-)
-rotateZ
-(
-45
-deg
-)
-;
-/* presentational */
-<b>background-image</b>
-:
-linear-gradient
-(
-to
-top
-left
-,
-#555
-0
-&percnt;
-,
-#555
-40
-&percnt;
-,
-#444
-50
-&percnt;
-,
-#333
-97
-&percnt;
-)
-;
-<b>box-shadow</b>
-:
-inset
-6
-px
-6
-px
-22
-px
-8
-px
-#272727
-;
-}
-</code></pre>
+<pre><code>div.needle {
+  <b>margin</b>:100px;
+  <b>height</b>:150px;
+  <b>width</b>:150px;
+  <b>transform</b>:rotateY(85deg) rotateZ(45deg);  /* presentational */
+  <b>background-image</b>: linear-gradient(to top left, #555 0&percnt;, #555 40&percnt;, #444 50&percnt;, #333 97&percnt;);
+  <b>box-shadow</b>:inset 6px 6px 22px 8px #272727;
+}</code></pre>
 
 <h4>HTML:</h4>
 
-<pre><code>
-<b>&lt;</b>
-<b>div</b>
-class
-=
-&apos;needle&apos;
-<b>&gt;</b>
-<b>&lt;</b>
-<b>/div</b>
-<b>&gt;</b>
-</code></pre>
+<pre><code><b>&lt;div</b> class=&apos;needle&apos;<b>&gt;</b>
+<b>&lt;/div&gt;</b></code></pre>
 
 In the above example, a needle or compass pointer shape is created
 using 3D transforms. Generally when we apply the rotate transform on
@@ -7868,7 +7732,6 @@ ends up looking like a needle. The more the rotation of the Y-axis the
 more squeezed the element looks.
 
   rotateX           (   85deg        )   rotateZ              (   45deg
-  ----------------- --- ------------ --- -------------------- --- ------------
 
 The output of the above example would be a needle resting on its tip.
 For creating a needle that is resting on its base, the rotation should
@@ -7917,289 +7780,51 @@ or a compass dial.
 
 <h4>HTML:</h4>
 
-<pre><code>
-<b>&lt;</b>
-<b>div</b>
-id
-=
-&quot;title&quot;
-<b>&gt;</b>
-<b>&lt;</b>
-<b>h</b>
-<b>1</b>
-data-content
-=
-&quot;HOVER&quot;
-<b>&gt;</b>
-HOVER
-<b>&lt;</b>
-<b>/h</b>
-<b>1</b>
-<b>&gt;</b>
-<b>&lt;</b>
-<b>/div</b>
-<b>&gt;</b>
-</code></pre>
+<pre><code><b>&lt;div</b> id=&quot;title&quot;<b>&gt;</b>
+<b>&lt;h1</b> data-content=&quot;HOVER&quot;<b>&gt;</b>HOVER<b>&lt;/h1&gt;</b>
+<b>&lt;/div&gt;</b></code></pre>
 
 <h4>CSS:</h4>
 
-<pre><code>
-&ast;
-{
-<b>margin</b>
-:
-0
-;
-<b>padding</b>
-:
-0
-;
+<pre><code>&ast;{<b>margin</b>:0;<b>padding</b>:0;}
+html,body{<b>height</b>:100&percnt;;<b>width</b>:100&percnt;;<b>overflow</b>:hidden;<b>background</b>:#0099CC;}
+#title {
+  <b>position</b>: absolute;
+  <b>top</b>: 50&percnt;; <b>left</b>:50&percnt;;
+  <b>transform</b>: translate(-50&percnt;,-50&percnt;);
+  <b>perspective-origin</b>:50&percnt;50&percnt;;
+  <b>perspective</b>:300px;
 }
-html
-,
-body
-{
-<b>height</b>
-:
-100
-&percnt;
-;
-<b>width</b>
-:
-100
-&percnt;
-;
-<b>overflow</b>
-:
-hidden
-;
-<b>background</b>
-:
-#0099CC
-;
+h1 {
+  <b>text-align</b>:center;
+  <b>font-size</b>:12vmin;
+  <b>font-family</b>:&apos;Open Sans&apos;, sans-serif;
+  <b>color</b>:rgba(0,0,0,0.8);
+  <b>line-height</b>:1em;
+  <b>transform</b>:rotateY(50deg);
+  <b>perspective</b>:150px;
+  <b>perspective-origin</b>:0&percnt; 50&percnt;;
 }
-#title
-{
-<b>position</b>
-:
-absolute
-;
-<b>top</b>
-:
-50
-&percnt;
-;
-<b>left</b>
-:
-50
-&percnt;
-;
-<b>transform</b>
-:
-translate
-(
--50
-&percnt;
-,
--50
-&percnt;
-)
-;
-<b>perspective-origin</b>
-:
-50
-&percnt;
-50
-&percnt;
-;
-<b>perspective</b>
-:
-300
-px
-;
+h1:after {
+  <b>content</b>:attr(data-content);
+  <b>position</b>:absolute;
+  <b>left</b>:0; <b>top</b>:0;
+  <b>transform-origin</b>:50&percnt;100&percnt;;
+  <b>transform</b>:rotateX(-90deg);
+  <b>color</b>:#0099CC;
 }
-h1
-{
-<b>text-align</b>
-:
-center
-;
-<b>font-size</b>
-:
-12
-vmin
-;
-<b>font-family</b>
-:
-&apos;Open Sans&apos;
-,
-sans-serif
-;
-<b>color</b>
-:
-rgba
-(
-0
-,
-0
-,
-0
-,
-0.8
-)
-;
-<b>line-height</b>
-:
-1
-em
-;
-<b>transform</b>
-:
-rotateY
-(
-50
-deg
-)
-;
-<b>perspective</b>
-:
-150
-px
-;
-<b>perspective-origin</b>
-:
-0
-&percnt;
-50
-&percnt;
-;
-}
-h1
-:
-after
-{
-<b>content</b>
-:
-attr
-(
-data-content
-)
-;
-<b>position</b>
-:
-absolute
-;
-<b>left</b>
-:
-0
-;
-<b>top</b>
-:
-0
-;
-<b>transform-origin</b>
-:
-50
-&percnt;
-100
-&percnt;
-;
-<b>transform</b>
-:
-rotateX
-(
--90
-deg
-)
-;
-<b>color</b>
-:
-#0099CC
-;
-}
-#title
-:
-before
-{
-<b>content</b>
-:
-&apos;&apos;
-;
-<b>position</b>
-:
-absolute
-;
-<b>top</b>
-:
--150
-&percnt;
-;
-<b>left</b>
-:
--25
-&percnt;
-;
-<b>width</b>
-:
-180
-&percnt;
-;
-<b>height</b>
-:
-328
-&percnt;
-;
-<b>background</b>
-:
-rgba
-(
-255
-,
-255
-,
-255
-,
-0.7
-)
-;
-<b>transform-origin</b>
-:
-0
-100
-&percnt;
-;
-<b>transform</b>
-:
-translatez
-(
--200
-px
-)
-rotate
-(
-40
-deg
-)
-skewX
-(
-35
-deg
-)
-;
-<b>border-radius</b>
-:
-0
-0
-100
-&percnt;
-0
-;
-}
-</code></pre>
+#title:before {
+  <b>content</b>:&apos;&apos;;
+  <b>position</b>:absolute;
+  <b>top</b>:-150&percnt;; <b>left</b>:-25&percnt;;
+  <b>width</b>:180&percnt;; <b>height</b>:328&percnt;;
+  <b>background</b>:rgba(255,255,255,0.7);
+  <b>transform-origin</b>:0 100&percnt;;
+  <b>transform</b>:translatez(-200px) rotate(40deg) skewX(35deg);
+  <b>border-radius</b>:0 0 100&percnt; 0;
+}</code></pre>
 
-&lbrack;&lbrack;View example with additional hover
-effect&rbrack;&rbrack;(http://codepen.io/web-tiki/pen/azeKNy)
-
+<p><a href="http://codepen.io/web-tiki/pen/azeKNy">View example with additional hover effect</a>.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 212.  (xxx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left" width="100%">
@@ -8599,28 +8224,29 @@ Should be noted that:
 <h2 id="ch30">Chapter 30: Filter Property</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
-> <b>Value Description</b> blur(x) Blurs the image by x pixels.
+| <b>Value</b> | <b>Description</b> |
+| blur&lpar;x&rpar; | Blurs the image by x pixels. |
 >
-> Brightens the image at any value above 1.0 or 100%. Below that, the
-> image will be brightness(x) darkened.
+> Brightens the image at any value above 1.0 or 100&percnt;. Below that, the
+> image will be brightness&lpar;x&rpar; darkened.
 >
-> Provides more contrast to the image at any value above 1.0 or 100%.
-> Below that, the contrast(x) image will get less saturated.
+> Provides more contrast to the image at any value above 1.0 or 100&percnt;.
+> Below that, the contrast&lpar;x&rpar; image will get less saturated.
 >
-> drop-shadow(h, v, x, y, z) Gives the image a drop-shadow. h and v can
+> drop-shadow&lpar;h, v, x, y, z&rpar; Gives the image a drop-shadow. h and v can
 > have negative values. x, y, and z are optional.
   | Value         | Description |
   |---------------|------------------------------------------------------|
-  | greyscale(x)  | Shows the image in greyscale, with a maximum value of |
+  | greyscale&lpar;x&rpar;  | Shows the image in greyscale, with a maximum value of |
   |               | 1.0 or 100%. |
-  | hue-rotate(x) | Applies a hue-rotation to the image. |
-  | invert(x)     | Inverts the color of the image with a maximum value of |
+  | hue-rotate&lpar;x&rpar; | Applies a hue-rotation to the image. |
+  | invert&lpar;x&rpar;     | Inverts the color of the image with a maximum value of |
   |               | 1.0 or 100%. |
-  | opacity(x)    | Sets how opaque/transparent the image is with a |
+  | opacity&lpar;x&rpar;    | Sets how opaque/transparent the image is with a |
   |               | maximum value of 1.0 or 100%. |
-  | saturate(x)   | Saturates the image at any value above 1.0 or 100%. |
+  | saturate&lpar;x&rpar;   | Saturates the image at any value above 1.0 or 100%. |
   |               | Below that, the image will start to de-saturate. |
-  | sepia(x)      | Converts the image to sepia with a maximum value of |
+  | sepia&lpar;x&rpar;      | Converts the image to sepia with a maximum value of |
   |               |  1.0 or 100%. |
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
