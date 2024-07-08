@@ -7490,85 +7490,32 @@ increasing the amount of processing done by the GPU.
 <h2 id="ch28">Chapter 28: 2D Transforms</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
-<b>Function/Parameter Details<b>
-
-  rotate
-
-&lpar;x&rpar; Defines a transformation that moves the element around a fixed
-point on the Z axis
-
-  translate
-
-(x,y) Moves the position of the element on the X and Y axis
-
-  translateX
-
-(x) Moves the position of the element on the X axis
-
-  translateY
-
-(y) Moves the position of the element on the Y axis
-
-  scale
-
-(x,y) Modifies the size of the element on the X and Y axis
-
-  scaleX
-
-  scaleY
-
-&lpar;x&rpar; Modifies the size of the element on the X axis (y) Modifies the
-size of the element on the Y axis
-
-  skew
-
-Shear mapping, or transvection, distorting each point of an element by
-a certain angle in
-
-(x,y) each direction
-
-  skewX
-
-Horizontal shear mapping distorting each point of an element by a
-certain angle in the
-
-(x) horizontal direction
-
-  skewY
-
-Vertical shear mapping distorting each point of an element by a
-certain angle in the vertical
-
-(y) direction
-
-  matrix
-
-() Defines a 2D transformation in the form of a transformation matrix.
-
-  skew
-
-The angle by which the element should be rotated or skewed (depending
-on the function with which it is used). Angle can be provided in
-degrees (deg), gradians (grad), radians (rad) angle or turns (turn).
-In () function, the second angle is optional. If not provided, there
-will be no (0) skew in Y-axis.
-
-The distance expressed as a length or a percentage by which the
-element should be
-
-  translate
-
-length-or-percentage translated. In () function, the second
-length-or-percentage is optional. If not provided, then there would be
-no (0) translation in Y-axis.
-
-A number which defines how many times the element should be scaled in
-the specified axis.
-
-  scale
-
-scale-factor In () function, the second scale-factor is optional. If
-not provided, the first scale-factor will be applied for Y-axis also.
+| <b>Function/Parameter</b> | <b>Details<b> |
+|---------------------------|-------------------------------------------------------------------------------------|
+| rotate&lpar;x&rpar;       | Defines a transformation that moves the element around a fixed point on the Z axis. |
+| translate&lpar;x,y&rpar;  | Moves the position of the element on the X and Y axis. |
+| translateX&lpar;x&rpar;  | Moves the position of the element on the X axis. |
+| translateY&lpar;y&rpar;  | Moves the position of the element on the Y axis. |
+| scale&lpar;x,y&rpar; | Modifies the size of the element on the X and Y axis. |
+| scaleX&lpar;x&rpar; | Modifies the size of the element on the X axis. |
+| scaleY&lpar;y&rpar; | Modifies the size of the element on the Y axis. |
+| skew&lpar;x,y&rpar; | Shear mapping, or transvection, distorting each point of an element by a certain angle in |
+|                     | each direction. |
+| skewX&lpar;x&rpar; | Horizontal shear mapping distorting each point of an element by a certain angle in the |
+|                     | horizontal direction. |
+| skewY&lpar;y&rpar; | Vertical shear mapping distorting each point of an element by a certain angle in the vertical |
+|                     | direction. |
+| matrix&lpar;&rpar; | Defines a 2D transformation in the form of a transformation matrix. |
+| angle | The angle by which the element should be rotated or skewed (depending on the function |
+|       | with which it is used). Angle can be provided in degrees (deg), gradians (grad), radians (rad) |
+|       | or turns (turn). In skew &lpar;&rpar; function, the second angle is optional. If not provided, there will be |
+|       | no &lpar;0&rpar; skew in Y-axis. |
+| length-or-percentage | The distance expressed as a length or percentage by which the element should be |
+|                      | translated. In translate &lpar;&rpar; function, the second length-or-percentage is optional. If not |
+|                      | provided, then there would be no &lpar;0&rpar; translation in Y-axis. |
+| scale-factor | A number which defines how many times the element should be scaled in the specified axis. |
+|              | In scale &lpar;&rpar function, the second scale-factor is optional. If not provided, the first scale-factor |
+|              | will be applied for Y-axis also. |
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="28-1">Section 28.1: Rotate</h3>
