@@ -8713,11 +8713,11 @@ blockquote&lbrack;data-mark&rbrack;::after {
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch36-3">Section 36.3: var() function</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p> The var() function allows CSS variables to be accessed.</p>
+<p>The var() function allows CSS variables to be accessed.</p>
 
-/* set a variable */
-<pre><code>:root {
-&minus;- primary-color: blue;
+<pre><code>/* set a variable */
+:root {
+  &minus;- primary-color: blue;
 }
 /* access variable */
 selector{
@@ -8760,7 +8760,6 @@ using traditional CSS values.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch37-1">Section 37.1: Variable Color</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-
 <pre><code>:root {
   &minus;-red: #b00; 
   &minus;-blue: #4679bd; 
@@ -8775,7 +8774,6 @@ using traditional CSS values.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch37-2">Section 37.2: Variable Dimensions</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-
 <pre><code>:root {
   &minus;-W200: 200px;
   &minus;- W 10: 10px;
@@ -8803,7 +8801,8 @@ the highest specificity will apply to the element selected.</p>
 
 <p>We can write this CSS:</p>
 
-<pre><code>.button {&minus;- color: green;
+<pre><code>.button {
+  &minus;- color: green;
   <b>padding</b>: .5rem;
   <b>border</b>: 1px solid var (&minus;- color);
   <b>color</b>: var (&minus;- color);
@@ -8831,15 +8830,13 @@ the highest specificity will apply to the element selected.</p>
 dashes just like other CSS properties (eg: lineheight,
 -moz-box-sizing) but it should start with double dashes (&minus;-)</p>
 
-
-
 <pre><code>//These are Invalids variable names
 &minus;-123color: blue;
 &minus;-&num;<b>color</b>: red;
 &minus;-bg&lowbar;color: yellow
 &minus;-&dollar;<b>width</b>: 100px;</code></pre>
 
-<pre><code>//Valid variable names
+//Valid variable names
 &minus;-color: red;
 &minus;-bg-color: yellow
 &minus;-width: 100px;</code></pre>
@@ -8895,12 +8892,12 @@ dashes just like other CSS properties (eg: lineheight,
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch37-5">Section 37.5: With media queries</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-You can re-set variables within media queries and have those new
+<p>You can re-set variables within media queries and have those new
 values cascade wherever they are used, something that isn&apos;t possible
-with pre-processor variables.
+with pre-processor variables.</p>
 
-Here, a media query changes the variables used to set up a very simple
-grid:
+<p>Here, a media query changes the variables used to set up a very simple
+grid:</p>
 
 <h4>HTML:</h4>
 
@@ -8953,12 +8950,12 @@ div {
 
 <p>Here&apos;s an animated screenshot of the resizing in action:</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 227.  (xxx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~ 227. animated screenshot of resizing in action (183) ~~~~~~~~~~~~~~~~~~~~-->
 <p align="left" width="100%">
 <img src="./images/image227.jpg"
   style="width:75%"
-  title=""
-  alt="." />
+  title="Animated screenshot of the resizing in action"
+  alt="Animated screenshot of the resizing in action." />
 </p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ch38">Chapter 38: Single Element Shapes</h2>
@@ -8969,12 +8966,12 @@ div {
 0px), a width greater than zero and a border, that is transparent
 except for one side:</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 228.  (xxx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~ 228. example: trapezoid with borders (184) ~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left" width="100%">
 <img src="./images/image228.jpg"
   style="width:47%"
-  title=""
-  alt="." />
+  title="Example: Trapezoid with borders"
+  alt="Example: Trapezoid with borders." />
 </p>
 
 <h4>HTML:</h4>
@@ -9000,12 +8997,12 @@ The triangle shape will be formed using border properties. For an element with 0
 height and width the 4 borders (top, right, bottom, left) each form a triangle. 
 Here&apos;s an element with 0 height/width and 4 different colored borders.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 229.  (xxx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~ 229. 4 colored square; black,red,blue,green (184) ~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left" width="100%">
 <img src="./images/image229.jpg"
   style="width:16%"
-  title=""
-  alt="." />
+  title="4 colored square; black,red,blue,green"
+  alt="4 colored square; black,red,blue,green." />
 </p>
 
 <p>By setting some borders to transparent, and others to a color we can
@@ -9014,12 +9011,12 @@ bottom border to the desired color, then set the left and right
 borders to transparent. Here&apos;s an image with the left and right
 borders shaded slightly to show how the triangle is being formed.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 230.  (xxx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~ 230. arrow pointing up with background shade (185) ~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left" width="100%">
 <img src="./images/image230.jpg"
   style="width:11%"
-  title=""
-  alt="." />
+  title="Arrow pointing up with background shade"
+  alt="Arrow pointing up with background shade." />
 </p>
 
 <p>The dimensions of the triangle can be altered by changing the
@@ -9028,13 +9025,14 @@ below all show a 50x50 pixel triangle.</p>
 
 <h4>Triangle - Pointing Up</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 231.  (xxx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~ 231. arrow pointing up - no shade (185) ~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left" width="100%">
-<img src="./images/image231.jpg"
+<img src="./images/image231.png"
   style="width:11%"
-  title=""
-  alt="." />
+  title="Arrow pointing up - no shade"
+  alt="Arrow pointing up - no shade." />
 </p>
+
 <pre><code><b>&lt;div</b> class=&quot;triangle-up&quot;<b>&gt;&lt;/div&gt;</b>
 .triangle-up {
   <b>width</b>: 0;
@@ -9045,410 +9043,176 @@ below all show a 50x50 pixel triangle.</p>
 }</code></pre>
 
 <h4>Triangle - Pointing Down</h4>
-
-<b>&lt;</b>
-<b>div</b>
-class
-=
-&quot;triangle-down&quot;
-<b>&gt;</b>
-<b>&lt;</b>
-<b>/div</b>
-<b>&gt;</b>
-.triangle-down
-{
-<b>width</b>
-:
-0
-;
-<b>height</b>
-:
-0
-;
-<b>border-left</b>
-:
-25
-px
-solid
-transparent
-;
-<b>border-right</b>
-:
-25
-px
-solid
-transparent
-;
-<b>border-top</b>
-:
-50
-px
-solid
-rgb
-(
-246
-,
-156
-,
-85
-)
-;
-}
-
-> <b>Triangle - Pointing Right</b>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 233.  (xxx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~ 232. arrow pointing down - no shade (185) ~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left" width="100%">
-<img src="./images/image233.jpg"
-  style="width:14%"
-  title=""
-  alt="." />
+<img src="./images/image232.png"
+  style="width:11%"
+  title="Arrow pointing down - no shade"
+  alt="Arrow pointing down - no shade." />
 </p>
-<!-- (./images/image233.jpg){width="1.1458333333333333in" height="1.1875in"} -->
 
-<b>&lt;</b>
-<b>div</b>
-class
-=
-&quot;triangle-right&quot;
-<b>&gt;</b>
-<b>&lt;</b>
-<b>/div</b>
-<b>&gt;</b>
-.triangle-right
-{
-<b>width</b>
-:
-0
-;
-<b>height</b>
-:
-0
-;
-<b>border-top</b>
-:
-25
-px
-solid
-transparent
-;
-<b>border-bottom</b>
-:
-25
-px
-solid
-transparent
-;
-<b>border-left</b>
-:
-50
-px
-solid
-rgb
-(
-246
-,
-156
-,
-85
-)
-;
-}
+<pre><code><b>&lt;div</b> class=&quot;triangle-down&quot;<b>&gt;&lt;/div&gt;</b>
+.triangle-down {
+  <b>width</b>: 0;
+  <b>height</b>: 0;
+  <b>border-left</b>: 25px solid transparent;
+  <b>border-right</b>: 25px solid transparent;
+  <b>border-top</b>: 50px solid rgb(246, 156, 85);
+}</code></pre>
 
-> <b>Triangle - Pointing Left</b>
+<h4>Triangle - Pointing Right</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~ 233. arrow pointing right - no shade (185) ~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p align="left" width="100%">
+<img src="./images/image233.png"
+  style="width:14%"
+  title="Arrow pointing right - no shade"
+  alt="Arrow pointing right - no shade." />
+</p>
 
-<b>&lt;</b>
-<b>div</b>
-class
-=
-&quot;triangle-left&quot;
-<b>&gt;</b>
-<b>&lt;</b>
-<b>/div</b>
-<b>&gt;</b>
-.triangle-left
-{
-<b>width</b>
-:
-0
-;
-<b>height</b>
-:
-0
-;
-<b>border-top</b>
-:
-25
-px
-solid
-transparent
-;
-<b>border-bottom</b>
-:
-25
-px
-solid
-transparent
-;
-<b>border-right</b>
-:
-50
-px
-solid
-rgb
-(
-246
-,
-156
-,
-85
-)
-;
-}
+<pre><code><b>&lt;div</b> class=&quot;triangle-right&quot;<b>&gt;&lt;/div&gt;</b>
+.triangle-right {
+  <b>width</b>: 0;
+  <b>height</b>: 0;
+  <b>border-top</b>: 25px solid transparent;
+  <b>border-bottom</b>: 25px solid transparent;
+  <b>border-left</b>: 50px solid rgb(246, 156, 85);
+}</code></pre>
+
+<h4>Triangle - Pointing Left</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~ 234. arrow pointing left - no shade (186) ~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p align="left" width="100%">
+<img src="./images/image234.png"
+  style="width:14%"
+  title="Arrow pointing left - no shade"
+  alt="Arrow pointing left - no shade." />
+</p>
+
+<pre><code><b>&lt;div</b> class=&quot;triangle-left&quot;<b>&gt;&lt;/div&gt;</b>
+.triangle-left {
+  <b>width</b>: 0;
+  <b>height</b>: 0;
+  <b>border-top</b>: 25px solid transparent;
+  <b>border-bottom</b>: 25px solid transparent;
+  <b>border-right</b>: 50px solid rgb(246, 156, 85);
+}</code></pre>
 
 > <b>Triangle - Pointing Up/Right</b>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~ 235. arrow pointing up/right - no shade (186) ~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p align="left" width="100%">
+<img src="./images/image235.png"
+  style="width:14%"
+  title="Arrow pointing up/right - no shade"
+  alt="Arrow pointing up/right - no shade." />
+</p>
 
-<b>&lt;</b>
-<b>div</b>
-class
-=
-&quot;triangle-up-right&quot;
-<b>&gt;</b>
-<b>&lt;</b>
-<b>/div</b>
-<b>&gt;</b>
-.triangle-up-right
-{
-<b>width</b>
-:
-0
-;
-<b>height</b>
-:
-0
-;
-<b>border-top</b>
-:
-50
-px
-solid
-rgb
-(
-246
-,
-156
-,
-85
-)
-;
-<b>border-left</b>
-:
-50
-px
-solid
-transparent
-;
-}
-> <b>Triangle - Pointing Up/Left</b>
-<b>&lt;</b>
-<b>div</b>
-class
-=
-&quot;triangle-up-left&quot;
-<b>&gt;</b>
-<b>&lt;</b>
-<b>/div</b>
-<b>&gt;</b>
-.triangle-up-left
-{
-<b>width</b>
-:
-0
-;
-<b>height</b>
-:
-0
-;
-<b>border-top</b>
-:
-50
-px
-solid
-rgb
-(
-246
-,
-156
-,
-85
-)
-;
-<b>border-right</b>
-:
-50
-px
-solid
-transparent
-;
-}
+<pre><code><b>&lt;div</b> class=&quot;triangle-up-right&quot;<b>&gt;&lt;/div&gt;</b>
+.triangle-up-right {
+  <b>width</b>: 0;
+  <b>height</b>: 0;
+  <b>border-top</b>: 50px solid rgb(246, 156, 85);
+  <b>border-left</b>: 50px solid transparent;
+}</code></pre>
 
-> <b>Triangle - Pointing Down/Right</b>
+<h4>Triangle - Pointing Up/Left</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~ 236. arrow pointing up/left - no shade (186) ~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p align="left" width="100%">
+<img src="./images/image236.png"
+  style="width:14%"
+  title="Arrow pointing up/left - no shade"
+  alt="Arrow pointing up/left - no shade." />
+</p>
 
-<b>&lt;</b>
-<b>div</b>
-class
-=
-&quot;triangle-down-right&quot;
-<b>&gt;</b>
-<b>&lt;</b>
-<b>/div</b>
-<b>&gt;</b>
-.triangle-down-right
-{
-<b>width</b>
-:
-0
-;
-<b>height</b>
-:
-0
-;
-<b>border-bottom</b>
-:
-50
-px
-solid
-rgb
-(
-246
-,
-156
-,
-85
-)
-;
-<b>border-left</b>
-:
-50
-px
-solid
-transparent
-;
-}
+<pre><code><b>&lt;div</b> class=&quot;triangle-up-left&quot;<b>&gt;&lt;/div&gt;</b>
+.triangle-up-left {
+  <b>width</b>: 0;
+  <b>height</b>: 0;
+  <b>border-top</b>: 50px solid rgb(246, 156, 85);
+  <b>border-right</b>: 50px solid transparent;
+}</code></pre>
 
-> <b>Triangle - Pointing Down/Left</b>
+<h4>Triangle - Pointing Down/Right</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~ 237. arrow pointing down/right - no shade (187) ~~~~~~~~~~~~~~~~~~~~~~-->
+<p align="left" width="100%">
+<img src="./images/image237.png"
+  style="width:14%"
+  title="Arrow pointing down/right - no shade"
+  alt="Arrow pointing down/right - no shade." />
+</p>
 
-<b>&lt;</b>
-<b>div</b>
-class
-=
-&quot;triangle-down-left&quot;
-<b>&gt;</b>
-<b>&lt;</b>
-<b>/div</b>
-<b>&gt;</b>
-.triangle-down-left
-{
-<b>width</b>
-:
-0
-;
-<b>height</b>
-:
-0
-;
-<b>border-bottom</b>
-:
-50
-px
-solid
-rgb
-(
-246
-,
-156
-,
-85
-)
-;
-<b>border-right</b>
-:
-50
-px
-solid
-transparent
-;
-}
+<pre><code><b>&lt;div</b> class=&quot;triangle-down-right&quot;<b>&gt;&lt;/div&gt;</b>
+.triangle-down-right {
+  <b>width</b>: 0;
+  <b>height</b>: 0;
+  <b>border-bottom</b>: 50px solid rgb(246, 156, 85);
+  <b>border-left</b>: 50px solid transparent;
+}</code></pre>
+
+<h4>Triangle - Pointing Down/Left</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~ 238. arrow pointing down/left - no shade (187) ~~~~~~~~~~~~~~~~~~~~~~~-->
+<p align="left" width="100%">
+<img src="./images/image238.png"
+  style="width:14%"
+  title="Arrow pointing down/left - no shade"
+  alt="Arrow pointing down/left - no shade." />
+</p>
+
+<pre><code><b>&lt;div</b> class=&quot;triangle-down-left&quot;<b>&gt;&lt;/div&gt;</b>
+.triangle-down-left {
+  <b>width</b>: 0;
+  <b>height</b>: 0;
+  <b>border-bottom</b>: 50px solid rgb(246, 156, 85);
+  <b>border-right</b>: 50px solid transparent;
+}</code></pre>
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch38-3">Section 38.3: Circles and Ellipses</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h4>Circle</h4>
 
-<b>Circle</b>
-
-To create a <b>circle</b>, define an element with an equal width and
+<p>To create a <b>circle</b>, define an element with an equal width and
 height (a *square*) and then set the border-radius property of this
-element to 50%.
+element to 50%.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 239.  (xxx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 239. circle (187) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left" width="100%">
 <img src="./images/image239.jpg"
-  style="width:11%"
-  title=""
-  alt="." />
+  style="width:14%"
+  title="Circle"
+  alt="Circle." />
 </p>
-<!-- (./images/image239.jpg){width="1.1458333333333333in" height="1.1875in"} -->
 
 <h4>HTML:</h4>
 
-<b>&lt;</b><b>div</b> class=&quot;circle&quot;<b>&gt;</b>
-<b>&lt;</b><b>/div</b><b>&gt;</b>
+<pre><code><b>&lt;div</b> class=&quot;circle&quot;<b>&gt;&lt;/div&gt;</b></code></pre>
 
-> <h4>CSS</h4>
+<h4>CSS</h4>
 
-.circle
-{
-<b>width</b>
-:
-50
-px
-;
-<b>height</b>
-:
-50
-px
-;
-<b>background</b>
-:
-rgb
-(
-246
-,
-156
-,
-85
-)
-;
-<b>border-radius</b>
-:
-50
-&percnt;
-;
-}
+<pre><code>.circle {
+  <b>width</b>: 50px;
+  <b>height</b>: 50px;
+  <b>background</b>: rgb(246, 156, 85);
+  <b>border-radius</b>: 50&percnt;;
+}</code></pre>
 
-<b>Ellipse</b>
+<h4>Ellipse</h4>
 
 An <b>ellipse</b> is similar to a circle, but with different values for
 width and height.
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 240.  (xxx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~ 240. Ellipse - squished circle (188) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left" width="100%">
 <img src="./images/image240.jpg"
   style="width:10%"
-  title=""
-  alt="." />
+  title="Ellipse - squished circle"
+  alt="Ellipse - squished circle." />
 </p>
-<!-- {width="0.9375in" height="0.9375in"} -->
 
 <h4>HTML:</h4>
 
@@ -9514,131 +9278,101 @@ The additional squares are created using the psuedo-elements.
 before
 
 
-An 8 point burst are 2 layered squares. The bottom square is the
+<p>An 8 point burst are 2 layered squares. The bottom square is the
 element itself, the additional square is created using the :
-pseudo-element. The bottom is rotated 20°, the top square is rotated
-135°.
+pseudo-element. The bottom is rotated 20°, the top square is rotated 135°.</p>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 241. 8 point burst (188) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p align="left" width="100%">
+<img src="./images/image241.png"
+  style="width:10%"
+  title="8 Point Burst"
+  alt="8 Point Burst." />
+</p>
 
-<pre><code>
-<b>&lt;</b>
-<b>div</b>
-class
-=
-&quot;burst-8&quot;
-<b>&gt;</b>
-<b>&lt;</b>
-<b>/div</b>
-<b>&gt;</b>
+<pre><code><b>&lt;div</b> class=&quot;burst-8&quot;<b>&gt;&lt;/div&gt;</b>
 .burst-8 {
-background: rgb(246, 156, 85);
-width: 40px;
-height: 40px;
-position: relative;
-text-align: center;
--ms-transform: rotate(20deg);
-transform: rotate(20eg);
+  background: rgb(246, 156, 85);
+  width: 40px;
+  height: 40px;
+  position: relative;
+  text-align: center;
+  -ms-transform: rotate(20deg);
+  transform: rotate(20eg);
 }
 .burst-8::before {
-content: &quot;&quot;;
-position: absolute;
-top: 0;
-left: 0;
-height: 40px;
-width: 40px;
-background: rgb(246, 156, 85);
--ms-transform: rotate(135deg);
-transform: rotate(135deg);
-}
-</code></pre>
+  content: &quot;&quot;;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 40px;
+  width: 40px;
+  background: rgb(246, 156, 85);
+  -ms-transform: rotate(135deg);
+  transform: rotate(135deg);
+}</code></pre>
 
-> <b>12 Point Burst</b>
-
-before
-and:
-after
+<h4>12 Point Burst</h4>
 
 <p>An 12 point burst are 3 layered squares. The bottom square is the
 element itself, the additional squares are created using the :
 pseudo-elements. The bottom is rotated 0°, the next square is rotated
 30°, and the top is rotated 60°.</p>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 242. 12 point burst (188) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p align="left" width="100%">
+<img src="./images/image242.png"
+  style="width:10%"
+  title="12 Point Burst"
+  alt="12 Point Burst." />
+</p>
 
-<pre><code>
-<b>&lt;</b>
-<b>div</b>
-class
-=
-&quot;burst-12&quot;
-<b>&gt;</b>
-<b>&lt;</b>
-<b>/div</b>
-<b>&gt;</b>
+<pre><code><b>&lt;div</b> class=&quot;burst-12&quot;<b>&gt;&lt;/div&gt;</b>
 .burst-12 {
-width: 40px;
-height: 40px;
-position: relative;
-text-align: center;
-background: rgb(246, 156, 85);
+  width: 40px;
+  height: 40px;
+  position: relative;
+  text-align: center;
+  background: rgb(246, 156, 85);
 }
 .burst-12::before, .burst-12::after {
-content: &quot;&quot;;
-position: absolute;
-top: 0;
-left: 0;
-height: 40px;
-width: 40px;
-background: rgb(246, 156, 85);
+  content: &quot;&quot;;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 40px;
+  width: 40px;
+  background: rgb(246, 156, 85);
 }
 .burst-12::before {
--ms-transform: rotate(30deg);
-transform: rotate(30deg);
+  -ms-transform: rotate(30deg);
+  transform: rotate(30deg);
 }
 .burst-12::after {
--ms-transform: rotate(60deg);
-transform: rotate(60deg);
-}
-</code></pre>
+  -ms-transform: rotate(60deg);
+  transform: rotate(60deg);
+}</code></pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch38-5">Section 38.5: Square</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 To create a square, define an element with both a width and height. In
 the example below, we have an element with a width and height of 100
 pixels each.
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 243. square (190) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p align="left" width="100%">
+<img src="./images/image243.png"
+  style="width:10%"
+  title="Square"
+  alt="Square" />
+</p>
 
-<pre><code>
-<b>&lt;</b>
-<b>div</b>
-class
-=
-&quot;square&quot;
-<b>&gt;</b>
-<b>&lt;</b>
-<b>/div</b>
-<b>&gt;</b>
-.square
-{
-<b>width</b>
-:
-100
-px
-;
-<b>height</b>
-:
-100
-px
-;
-<b>background</b>
-:
-rgb
-(
-246
-,
-156
-,
-85
-)
-;
-}
-</code></pre>
+<pre><code><b>&lt;div</b> class=&quot;square&quot;<b>&gt;&lt;/div&gt;</b>
+.square {
+  <b>width</b>: 100px;
+  <b>height</b>: 100px;
+  <b>background</b>: rgb(246, 156, 85);
+}</code></pre>
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch38-6">Section 38.6: Cube</h3>
@@ -9648,12 +9382,12 @@ rgb
 <p>This example shows how to create a cube using 2D transformation
 methods () on pseudo elements.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 244. 3d red square (190) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 244. 3d red cube (190) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left" width="100%">
 <img src="./images/image244.jpg"
   style="width:20%"
-  title="3d red square"
-  alt="3d red square." />
+  title="3d red cube"
+  alt="3d red cube." />
 </p>
 
 <h4>HTML:</h4>
@@ -9801,8 +9535,8 @@ culpa qui officia deserunt mollit anim id est laborum
 <p align="left" width="100%">
 <img src="./images/image247.jpg"
   style="width:60%"
-  title=""
-  alt="." />
+  title="Example: Stack Overflow"
+  alt="Example: Stack Overflow." />
 </p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ch40">Chapter 40: Multiple columns</h2>
@@ -9854,8 +9588,8 @@ facer possim assum. <b>&lt;/div&gt;</b></code></pre>
   dolor sit amet.<b>&lt;/p&gt;</b>
 <b>&lt;/section&gt;</b></code></pre>
 
-With the following CSS applied the content is split into three columns
-separated by a gray column rule of two pixels.
+<p>With the following CSS applied the content is split into three columns
+separated by a gray column rule of two pixels.</p>
 
 <pre><code>section {
   <b>columns</b>: 3;
@@ -9886,7 +9620,7 @@ on the individual item width.</p>
   <b>&lt;/ul&gt;</b>
 <b>&lt;/nav&gt;</b></code></pre>
 
-<h4>CSS</h4>
+<h4>CSS:</h4>
 
 <pre><code>nav {
   <b>width</b>: 100&percnt;;
@@ -10005,7 +9739,6 @@ one asset that can be extracted from it.</p>
   title="Example: Image sprite sheet"
   alt="Example: Image sprite sheet." />
 </p>
-<!-- (./images/image248.jpg){width="1.75in" height="1.875in"} -->
 
 <p>The image above is an image sprite sheet, and each one of those stars
 is a sprite within the sprite sheet. These sprite sheets are useful
@@ -10101,7 +9834,6 @@ circle(), polygon() or ellipse().</p>
   title="Example: clip-path"
   alt="Example: clip-path." />
 </p>
-<!-- (./images/image249.jpg){width="3.3333333333333335in" height="2.71875in"} -->
 
 <h5>Example</h5>
 
@@ -10171,25 +9903,23 @@ transparent.
 
 <h4>Output without the mask:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 251.  (xxx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~ 251. output without the mask (201) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left" width="100%">
 <img src="./images/image251.jpg"
   style="width:20%"
-  title=""
-  alt="." />
+  title="Output without the mask"
+  alt="Output without the mask." />
 </p>
-<!-- [image251.jpg 2.18 x 2.18](./images/image251.jpg) -->
 
 <h4>Output with the mask:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 252.  (xxx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 252. output with the mask (201) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left" width="100%">
 <img src="./images/image252.jpg"
   style="width:20%"
-  title=""
-  alt="." />
+  title="Output with the mask"
+  alt="Output with the mask." />
 </p>
-<!-- [image252.jpg 2.18 x 2.18](./images/image252.jpg) -->
 
 <p><b>Note:</b> As mentioned in remarks, the above example would work in
 Chrome, Safari and Opera only when used with the -webkit prefix. This
@@ -10226,7 +9956,7 @@ reference box.</p>
 
 <h4>Output:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 253.  (xxx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 253. teal colored circle (202) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left" width="100%">
 <img src="./images/image253.jpg"
   style="width:20%"
@@ -10240,140 +9970,82 @@ reference box.</p>
 
 <h4>CSS:</h4>
 
-<pre><code>
-div
-{
-<b>width</b>
-:
-200
-px
-;
-<b>height</b>
-:
-200
-px
-;
-<b>background</b>
-:
-teal
-;
-<b>clip-path</b>
-:
-polygon
-(
-0
-0
-,
-0
-100
-&percnt;
-,
-100
-&percnt;
-50
-&percnt;
-)
-;
-/* refer remarks before usage */
-}
-</code></pre>
+<pre><code>div {
+  <b>width</b>: 200px;
+  <b>height</b>: 200px;
+  <b>background</b>: teal;
+  <b>clip-path</b>: polygon(0 0, 0 100&percnt;, 100&percnt; 50&percnt;); /* refer remarks before usage */
+}</code></pre>
 
 <h4>HTML:</h4>
 
-<pre><code>
-<b>&lt;</b>
-<b>div</b>
-<b>&gt;</b>
-<b>&lt;</b>
-<b>/div</b>
-<b>&gt;</b>
-</code></pre>
+<pre><code><b>&lt;div&gt;&lt;/div&gt;</b></code></pre>
 
-In the above example, a <b>polygonal</b> clipping path is used to clip
+<p>In the above example, a <b>polygonal</b> clipping path is used to clip
 the square (200 x 200) element into a triangle shape. The output shape
 is a triangle because the path starts at (that is, first coordinates
-are at) 0 0 - which is the top-left
+are at) 0 0 - which is the top-left corner of the box, then goes to 0 100% - 
+which is botom-left cornder of the box and then finally to 100% 50% which is
+nothing but the right-middle point of the box. These paths are self closing (that is,
+the starting point will be the ending point) and so the final shape is that of a&gt
+triangle.</p>
 
-  100%   &minus; which is bottom-left corner of the box and then       100% 50%
-         finally to                                               
+<p>This can also be used on an element with an image or a gradient as
+background.</p>
 
-
-corner of the box, then goes to 0 which is
-
-nothing but the right-middle point of the box. These paths are self
-closing (that is, the starting point will be the ending point) and so
-the final shape is that of a triangle.
-
-This can also be used on an element with an image or a gradient as
-background.
-
-&lbrack;<b>&lbrack;View Example&rbrack;</b>&rbrack;(https://jsfiddle.net/eoa4a94k/)
+<a href="https://jsfiddle.net/eoa4a94k/">View Example (jsFiddle)
 
 <b>Output:</b>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 254.  (xxx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~ 254. teal arrow pointing right (203) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left" width="100%">
 <img src="./images/image254.jpg"
   style="width:20%"
-  title=""
-  alt="." />
+  title="Teal arrow pointing right"
+  alt="Teal arrow pointing right." />
 </p>
-<!-- [image254.jpg 2.16 x 2.16](./images/image254.jpg) -->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch44-5">Section 44.5: Using masks to cut a hole in the middle of an image</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 <h4>CSS:</h4>
 
-<pre><code>
-div {
+<pre><code>div {
   <b>width</b>: 200px;
   <b>height</b>: 200px;
   <b>background</b>: url (http://lorempixel.com/ 200/200/abstract/6);
-  <b>mask-image</b>: radial-gradient (
-    circle
-    farthest-side at
-    center,
-    transparent
-    49&percnt;,
-    white 50&percnt;
-    );
-/* check remarks before using */
-  }
-</code></pre>
+  <b>mask-image</b>: radial-gradient (circle farthest-side at center, transparent 49&percnt;, white 50&percnt;); /* check remarks before using */
+}</code></pre>
 
 <h4>HTML:</h4>
 
-In the above example, a transparent circle is created at the center
+<p>In the above example, a transparent circle is created at the center
 using radial-gradient and this is then used as a mask to produce the
-effect of a circle being cut out from the center of an image.
+effect of a circle being cut out from the center of an image.</p>
 
-<b>Image without mask:</b>
+<h4>Image without mask:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 255.  (xxx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 255. image without mask (203) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left" width="100%">
 <img src="./images/image255.jpg"
   style="width:20%"
-  title=""
-  alt="." />
+  title="Image without mask"
+  alt="Image without mask." />
 </p>
-<!-- [image255.jpg 2.16 x 2.16](./images/image255.jpg) -->
 
-<b>Image with mask:</b>
+<h4>Image with mask:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 256.  (xxx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 256. image with mask (204) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left" width="100%">
 <img src="./images/image256.jpg"
   style="width:20%"
-  title=""
-  alt="." />
+  title="Image with mask"
+  alt="Image with mask." />
 </p>
-<!-- [image256.jpg 2.16 x 2.16](./images/image256.jpg) -->
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch44-6">Section 44.6: Using masks to create images with irregular shapes</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-
 <h4>CSS:</h4>
 
 <pre><code>div { /* check remarks before usage */
@@ -10398,23 +10070,22 @@ triangular shaped cut at the bottom of the image.</p>
 
 <h4>Image without the mask:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 257.  (xxx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 257. image without mask (204) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left" width="100%">
 <img src="./images/image257.jpg"
   style="width:40%"
-  title=""
-  alt="." />
+  title="Image without mask"
+  alt="Image without mask." />
 </p>
-<!-- [image257.jpg 4.25 x 2.167](./images/image257.jpg) -->
 
 <h4>Image with the mask:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 258.  (xxx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 258. image with mask (205) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left" width="100%">
 <img src="./images/image258.jpg"
   style="width:40%"
-  title=""
-  alt="." />
+  title="Image with mask"
+  alt="Image with mask." />
 </p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ch45">Chapter 45: Fragmentation</h2>
