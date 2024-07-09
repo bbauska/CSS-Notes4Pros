@@ -10515,164 +10515,34 @@ breaks onto a new line, you will have two very tall lines of text.</p>
   <b>margin</b>: auto;
 }</code></pre>
 
-If you want to center other then images, then you must give height and
-width to that element.
+<p>If you want to center other then images, then you must give height and
+width to that element.</p>
 
 <h4>HTML:</h4>
 
-<pre><code><b>&lt;</b>
-
-<b>div</b>
-
-class
-
-=
-
-&quot;wrapper&quot;
-
-<b>&gt;</b>
-
-<b>&lt;</b>
-
-<b>div</b>
-
-class
-
-=
-
-&quot;child&quot;
-
-<b>&gt;</b>
-
-make me center
-
-<b>&lt;</b>
-
-<b>/div</b>
-
-<b>&gt;</b>
-
-<b>&lt;</b>
-
-<b>/div</b>
-
-<b>&gt;</b>
+<pre><code><b>&lt;div</b> class=&quot;wrapper&quot;<b>&gt;</b>
+  <b>&lt;div</b> class=&quot;child&quot;<b>&gt;</b>
+    make me center
+  <b>&lt;/div&gt;</b>
+<b>&lt;/div&gt;</b></code></pre>
 
 <h4>CSS:</h4>
 
-<pre><code>.wrapper
-
-{
-
-<b>position</b>
-
-:
-
-relative
-
-;
-
-<b>height</b>
-
-:
-
-600
-
-px
-
-;
-
+<pre><code>.wrapper {
+  <b>position</b>: relative;
+  <b>height</b>: 600px;
 }
-
-.wrapper
-
-.child
-
-{
-
-<b>position</b>
-
-:
-
-absolute
-
-;
-
-<b>top</b>
-
-:
-
-0
-
-;
-
-<b>left</b>
-
-:
-
-0
-
-;
-
-<b>right</b>
-
-:
-
-0
-
-;
-
-<b>bottom</b>
-
-:
-
-0
-
-;
-
-<b>margin</b>
-
-:
-
-auto
-
-;
-
-<b>width</b>
-
-:
-
-200
-
-px
-
-;
-
-<b>height</b>
-
-:
-
-30
-
-px
-
-;
-
-<b>border</b>
-
-:
-
-1
-
-px
-
-solid
-
-#f00
-
-;
-
-}
+.wrapper .child {
+  <b>position</b>: absolute;
+  <b>top</b>: 0;
+  <b>left</b>: 0;
+  <b>right</b>: 0;
+  <b>bottom</b>: 0;
+  <b>margin</b>: auto;
+  <b>width</b>: 200px;
+  <b>height</b>: 30px;
+  <b>border</b>: 1px solid #f00;
+}</code></pre>
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch50-6">Section 50.6: Centering with pseudo element</h3>
