@@ -9000,7 +9000,7 @@ Here&apos;s an element with 0 height/width and 4 different colored borders.</p>
 <!--~~~~~~~~~~~~~~~~~~~~ 229. 4 colored square; black,red,blue,green (184) ~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left" width="100%">
 <img src="./images/image229.jpg"
-  style="width:16%"
+  style="width:18%"
   title="4 colored square; black,red,blue,green"
   alt="4 colored square; black,red,blue,green." />
 </p>
@@ -9014,7 +9014,7 @@ borders shaded slightly to show how the triangle is being formed.</p>
 <!--~~~~~~~~~~~~~~~~~~~ 230. arrow pointing up with background shade (185) ~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left" width="100%">
 <img src="./images/image230.jpg"
-  style="width:11%"
+  style="width:13%"
   title="Arrow pointing up with background shade"
   alt="Arrow pointing up with background shade." />
 </p>
@@ -9028,7 +9028,7 @@ below all show a 50x50 pixel triangle.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~ 231. arrow pointing up - no shade (185) ~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left" width="100%">
 <img src="./images/image231.png"
-  style="width:11%"
+  style="width:10%"
   title="Arrow pointing up - no shade"
   alt="Arrow pointing up - no shade." />
 </p>
@@ -9047,7 +9047,7 @@ below all show a 50x50 pixel triangle.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~ 232. arrow pointing down - no shade (185) ~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left" width="100%">
 <img src="./images/image232.png"
-  style="width:11%"
+  style="width:10%"
   title="Arrow pointing down - no shade"
   alt="Arrow pointing down - no shade." />
 </p>
@@ -9066,7 +9066,7 @@ below all show a 50x50 pixel triangle.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~ 233. arrow pointing right - no shade (185) ~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left" width="100%">
 <img src="./images/image233.png"
-  style="width:14%"
+  style="width:10%"
   title="Arrow pointing right - no shade"
   alt="Arrow pointing right - no shade." />
 </p>
@@ -9085,7 +9085,7 @@ below all show a 50x50 pixel triangle.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~ 234. arrow pointing left - no shade (186) ~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left" width="100%">
 <img src="./images/image234.png"
-  style="width:14%"
+  style="width:10%"
   title="Arrow pointing left - no shade"
   alt="Arrow pointing left - no shade." />
 </p>
@@ -9104,7 +9104,7 @@ below all show a 50x50 pixel triangle.</p>
 <!--~~~~~~~~~~~~~~~~~~~~ 235. arrow pointing up/right - no shade (186) ~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left" width="100%">
 <img src="./images/image235.png"
-  style="width:14%"
+  style="width:10%"
   title="Arrow pointing up/right - no shade"
   alt="Arrow pointing up/right - no shade." />
 </p>
@@ -9122,7 +9122,7 @@ below all show a 50x50 pixel triangle.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~ 236. arrow pointing up/left - no shade (186) ~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left" width="100%">
 <img src="./images/image236.png"
-  style="width:14%"
+  style="width:10%"
   title="Arrow pointing up/left - no shade"
   alt="Arrow pointing up/left - no shade." />
 </p>
@@ -9140,7 +9140,7 @@ below all show a 50x50 pixel triangle.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~ 237. arrow pointing down/right - no shade (187) ~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left" width="100%">
 <img src="./images/image237.png"
-  style="width:14%"
+  style="width:10%"
   title="Arrow pointing down/right - no shade"
   alt="Arrow pointing down/right - no shade." />
 </p>
@@ -9158,7 +9158,7 @@ below all show a 50x50 pixel triangle.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~ 238. arrow pointing down/left - no shade (187) ~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left" width="100%">
 <img src="./images/image238.png"
-  style="width:14%"
+  style="width:10%"
   title="Arrow pointing down/left - no shade"
   alt="Arrow pointing down/left - no shade." />
 </p>
@@ -9216,76 +9216,36 @@ width and height.
 
 <h4>HTML:</h4>
 
-<pre><code>
-<b>&lt;</b>
-<b>div</b>
-class
-=
-&quot;oval&quot;
-<b>&gt;</b>
-<b>&lt;</b>
-<b>/div</b>
-<b>&gt;</b>
-</code></pre>
+<pre><code><b>&lt;div</b> class=&quot;oval&quot;<b>&gt;&lt;/div&gt;</b></code></pre>
 
 <h4>CSS:</h4>
 
-<pre><code>
-.oval
-{
-<b>width</b>
-:
-50
-px
-;
-<b>height</b>
-:
-80
-px
-;
-<b>background</b>
-:
-rgb
-(
-246
-,
-156
-,
-85
-)
-;
-<b>border-radius</b>
-:
-50
-&percnt;
-;
-}
-</code></pre>
+<pre><code>.oval {
+  <b>width</b>: 50px;
+  <b>height</b>: 80px;
+  <b>background</b>:rgb(246, 156, 85);
+  <b>border-radius</b>: 50&percnt;;
+}</code></pre>
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch38-4">Section 38.4: Bursts</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-A burst is similar to a star but with the points extending less
+<p>A burst is similar to a star but with the points extending less
 distance from the body. Think of a burst shape as a square with
-additional, slightly rotated, squares layered on top.
+additional, slightly rotated, squares layered on top.</p>
 
-::before and ::after
+<p>The additional squares are created using the ::before and ::after psuedo-elements.</p>
 
-The additional squares are created using the psuedo-elements.
-
-<b>8 Point Burst</b>
-
-before
-
+<h4>8 Point Burst</h4>
 
 <p>An 8 point burst are 2 layered squares. The bottom square is the
-element itself, the additional square is created using the :
-pseudo-element. The bottom is rotated 20°, the top square is rotated 135°.</p>
+element itself, the additional square is created using the :before pseudo-element. 
+The bottom is rotated 20°, the top square is rotated 135°.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 241. 8 point burst (188) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left" width="100%">
 <img src="./images/image241.png"
-  style="width:10%"
+  style="width:7%"
   title="8 Point Burst"
   alt="8 Point Burst." />
 </p>
@@ -9322,7 +9282,7 @@ pseudo-elements. The bottom is rotated 0°, the next square is rotated
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 242. 12 point burst (188) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left" width="100%">
 <img src="./images/image242.png"
-  style="width:10%"
+  style="width:7%"
   title="12 Point Burst"
   alt="12 Point Burst." />
 </p>
@@ -9355,11 +9315,11 @@ pseudo-elements. The bottom is rotated 0°, the next square is rotated
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch38-5">Section 38.5: Square</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-To create a square, define an element with both a width and height. In
+<p>To create a square, define an element with both a width and height. In
 the example below, we have an element with a width and height of 100
-pixels each.
+pixels each.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 243. square (190) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 243. square (190) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left" width="100%">
 <img src="./images/image243.png"
   style="width:10%"
@@ -9392,7 +9352,7 @@ methods () on pseudo elements.</p>
 
 <h4>HTML:</h4>
 
-<pre><code><b>&lt;div</b> class=&quot;cube&quot;<b>&gt;&lt;/div&gt;</b>
+<pre><code><b>&lt;div</b> class=&quot;cube&quot;<b>&gt;&lt;/div&gt;</b></code></pre>
 
 <h4>CSS:</h4>
 
@@ -9960,10 +9920,9 @@ reference box.</p>
 <p align="left" width="100%">
 <img src="./images/image253.jpg"
   style="width:20%"
-  title=""
-  alt="." />
+  title="Teal-colored circle"
+  alt="Teal-colored circle." />
 </p>
-<!-- [image253.jpg 2.468 x 2.229](./images/image253.jpg) -->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch44-4">Section 44.4: Clipping (Polygon)</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -10007,7 +9966,6 @@ background.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch44-5">Section 44.5: Using masks to cut a hole in the middle of an image</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-
 <h4>CSS:</h4>
 
 <pre><code>div {
@@ -10042,7 +10000,6 @@ effect of a circle being cut out from the center of an image.</p>
   title="Image with mask"
   alt="Image with mask." />
 </p>
-
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch44-6">Section 44.6: Using masks to create images with irregular shapes</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -10070,12 +10027,12 @@ triangular shaped cut at the bottom of the image.</p>
 
 <h4>Image without the mask:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 257. image without mask (204) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~ 257. image without the mask (204) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left" width="100%">
 <img src="./images/image257.jpg"
   style="width:40%"
-  title="Image without mask"
-  alt="Image without mask." />
+  title="Image without the mask"
+  alt="Image without the mask." />
 </p>
 
 <h4>Image with the mask:</h4>
