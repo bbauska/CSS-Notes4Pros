@@ -3,7 +3,7 @@ title: |
   CSS Notes for Professionals
   by web@petercv.com, PDF https://goalkicker.com/CSSBook
 author: "bbauska"
-date last editted: "7/8/2024 Mon 8+am"
+date last editted: "7/9/2024 Tue 5+am"
 output: 
   markdown:
     with some style
@@ -375,7 +375,7 @@ a <b>&lt;div&gt;</b> would be red.</p>
   <li><b>&lt;p&gt;</b></li>
   <li>elements of the blue class</li>
   <li>element with the ID first</li>
-  <li>every <b>&lt;span&gt;</b> inside of a <b>&lt;div&gt;</b>
+  <li>every <b>&lt;span&gt;</b> inside of a <b>&lt;div&gt;</b></li>
 </ul>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch2-3">Section 2.3: Rules, Selectors, and Declaration Blocks</h3>
@@ -10126,7 +10126,6 @@ Object Model.</p>
   title="Document Object Model (DOM), CSS Object Model (CSS0M) and Render Tree"
   alt="Document Object Model (DOM), CSS Object Model (CSS0M) and Render Tree." />
 </p>
-
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ch47">Chapter 47: Feature Queries</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -10143,7 +10142,6 @@ Object Model.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch47-1">Section 47.1: Basic &commat;supports usage</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-
 <pre><code><b>&commat;supports</b> (<b>display</b>: flex) {
   /* Flexbox is available, so use it */
   .my-container {
@@ -10155,8 +10153,8 @@ Object Model.</p>
 of detecting screen size and orientation, &commat;supports will detect
 whether the browser can handle a given CSS rule.</p>
 
-<p>Rather than doing something like &commat;supports (flex), notice that the rule is &commat;supports (<b>display</b>: flex).</p>
-
+<p>Rather than doing something like &commat;supports (flex), notice that the 
+rule is &commat;supports (<b>display</b>: flex).</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch47-2">Section 47.2: Chaining feature detections</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -10327,14 +10325,13 @@ h1 {
 
 <h4>Result:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<!--~~~~~ 260. example; using the overflow property with a value different to visible (211) ~~~~-->
+<!--~~~~~ 261. example; using the overflow property with a value different to visible (211) ~~~~-->
 <p align="left" width="100%">
 <img src="./images/image261.jpg"
   style="width:60%"
   title="Example; Using th overflow property with a value different to visible"
   alt="Example; Using th overflow property with a value different to visible." />
 </p>
-[image260.jpg 6x3 inc](./images/image260.jpg)
 
 <p>Source:</p>
 
@@ -10363,12 +10360,12 @@ Demo (Understanding z-index)</a>.</p>
 }</code></pre>
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<!--~~~~~ 261. example; using the overflow property with a value different to visible (211) ~~~~-->
+<!--~~~~~ 262. example; using the overflow property with a value different to visible (211) ~~~~-->
 <p align="left" width="100%">
-<img src="./images/image261.jpg"
+<img src="./images/image262.jpg"
   style="width:60%"
-  title="Example; Using th overflow property with a value different to visible"
-  alt="Example; Using th overflow property with a value different to visible." />
+  title="Example; Using the overflow property with a value different to visible"
+  alt="Example; Using the overflow property with a value different to visible." />
 </p>
 
 <p><a href="https://jsfiddle.net/MadalinaTn/qkwwmu6m/2/&rbrack;&rbrack;(https://jsfiddle.net/MadalinaTn/qkwwmu6m/2/">Demo (jsFiddle)</a>.</p>
@@ -10547,7 +10544,6 @@ width to that element.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch50-6">Section 50.6: Centering with pseudo element</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-
 <h4>HTML:</h4>
 
 <pre><code><b>&lt;div</b> class=&quot;wrapper&quot;<b>&gt;</b>
@@ -10590,7 +10586,7 @@ image or video, Object-fit accepts the following five values:</p>
 <pre><code><b>object-fit</b>: fill;</code></pre>
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 263. original and object-fit: fill (217) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~ 263. original and object-fit: fill (217) ~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left" width="100%">
 <img src="./images/image263.png"
   style="width:60%"
@@ -10603,7 +10599,7 @@ image&apos;s original aspect ratio.</p>
 
 <pre><code><b>CONTAIN object-fit</b>:contain;</code></pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 265. original and object-fit: contain (217) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~ 265. original and object-fit: contain (217) ~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left" width="100%">
 <img src="./images/image265.png"
   style="width:60%"
@@ -10615,7 +10611,7 @@ the image&apos;s aspect ratio.</p>
 
 <pre><code><b>COVER object-fit</b>:cover;</code></pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 266. original and object-fit: cover (217) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~ 266. original and object-fit: cover (217) ~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left" width="100%">
 <img src="./images/image266.png"
   style="width:60%"
@@ -10623,17 +10619,16 @@ the image&apos;s aspect ratio.</p>
   alt="Original image and object-fit: cover." />
 </p>
 
-Cover fills the entire box with the image. The image aspect ratio is
-preserved, but the image is cropped to the dimensions of the box.
+<p>Cover fills the entire box with the image. The image aspect ratio is
+preserved, but the image is cropped to the dimensions of the box.</p>
 
 <b>NONE</b>
 
 <b>object-fit</b>
 
-:none;
-
+<p>:none;</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 267. original image and object-fit: none (xxx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~ 267. original image and object-fit: none (218) ~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left" width="100%">
 <img src="./images/image267.png"
   style="width:70%"
@@ -10676,8 +10671,8 @@ It&apos;s a methodology initially conceived by a Russian tech company
 <a href="https://en.wikipedia.org/wiki/Yandex">Yandex</a>, But
 which gained quite some traction among American &amp; Western-European web developers as well.</p>
 
-As the name implies, BEM metholology is all about componentization of
-your HTML and CSS code into three types of components:
+<p>As the name implies, BEM metholology is all about componentization of
+your HTML and CSS code into three types of components:</p>
 
 <ul>
   <li><b>Blocks:</b> standalone entities that are meaningful on their own.<br><br>
@@ -10709,16 +10704,12 @@ the following rules.</p>
 <p>If you apply BEM to your form elements, your CSS selectors should look
 something like this:</p>
 
-.form { } // Block
-
+<pre><code>.form { } // Block
 .form&minus;-theme-xmas { } // Block + modifier .form&minus;-simple { } //
 Block + modifier
-
 .form&lowbar;&lowbar;input { } // Block &gt; element
-
 .form&lowbar;&lowbar;submit { } // Block &gt; element
-
-.form&lowbar;&lowbar;submit&minus;-disabled { } // Block &gt; element + modifier
+.form&lowbar;&lowbar;submit&minus;-disabled { } // Block &gt; element + modifier</code></pre>
 
 <p>The corresponding HTML should look something like this:</p>
 
@@ -10745,18 +10736,15 @@ Block + modifier
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch53-1">Section 53.1: Transitions</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-
 <pre><code>div {
   -webkit-transition: all 4s ease;
   -moz-transition: all 4s ease;
   -o-transition: all 4s ease;
   <b>transition</b>: all 4s ease;
 }</code></pre>
-
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch53-2">Section 53.2: Transform</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-
 <pre><code>div {
   -webkit-transform: rotate(45deg);
   -moz-transform: rotate(45deg);
@@ -10764,73 +10752,64 @@ Block + modifier
   -o-transform: rotate(45deg);
   <b>transform</b>: rotate(45deg);
 }</code></pre>
-
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ch54">Chapter 54: Normalizing Browser Styles</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-
-Every browser has a default set of CSS styles that it uses for
+<p>Every browser has a default set of CSS styles that it uses for
 rendering elements. These default styles may not be consistent across
 browsers because: the language specifications are unclear so base
 styles are up for interpretation, browsers may not follow
 specifications that are given, or browsers may not have default styles
 for newer HTML elements. As a result, people may want to normalize
-default styles across as many browsers as possible.
-
+default styles across as many browsers as possible.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch54-1">Section 54.1: normalize.css</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-Browsers have a default set of CSS styles they use for rendering
+<p>Browsers have a default set of CSS styles they use for rendering
 elements. Some of these styles can even be customised using the
 browser&apos;s settings to change default font face and size definitions,
 for example. The styles contain the definition of which elements are
-supposed to be block-level or inline, among other things.
+supposed to be block-level or inline, among other things.</p>
 
-Because these default styles are given some leeway by the language
+<p>Because these default styles are given some leeway by the language
 specifications and because browsers may not follow the specs properly
-they can differ from browser to browser.
+they can differ from browser to browser.</p>
 
-This is where
-&lbrack;&lbrack;normalize.css&rbrack;&rbrack;(http://necolas.github.io/normalize.css/)
+<p>This is where <a href="http://necolas.github.io/normalize.css/">normalize.css</a> 
 comes into play. It overrides the most common inconsistencies and
-fixes known bugs.
+fixes known bugs.</p>
 
 <b>What does it do</b>
 
-	- Preserves useful defaults, unlike many CSS resets.
+<ul>
+  <li>Preserves useful defaults, unlike many CSS resets.</li>
+  <li>Normalizes styles for a wide range of elements.</li>
+  <li>Corrects bugs and common browser inconsistencies.</li>
+  <li>Improves usability with subtle modifications.</li>
+  <li>Explains what code does using detailed comments.</li>
+</ul>
 
-	- Normalizes styles for a wide range of elements.
-
-	- Corrects bugs and common browser inconsistencies.
-
-	- Improves usability with subtle modifications.
-
-	- Explains what code does using detailed comments.
-
-So, by including normalize.css in your project your design will look
-more alike and consistent across different browsers.
+<p>So, by including normalize.css in your project your design will look
+more alike and consistent across different browsers.</p>
 
 <b>Difference to reset.css</b>
 
-You may have heard of reset.css. What&apos;s the difference between the
-two?
+<p>You may have heard of reset.css. What&apos;s the difference between the two?</p>
 
-While normalize.css provides consistency by setting different
+<p>While normalize.css provides consistency by setting different
 properties to unified defaults, reset.css achieves consistency by
 <b>removing</b> all basic styling that a browser may apply. While this
 might sound like a good idea at first, this actually means you have to
 write <b>all</b> rules yourself, which goes against having a solid
-standard.
-
+standard.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch54-2">Section 54.2: Approaches and Examples</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-
-> CSS resets take separate approaches to browser defaults. Eric Meyer's
-> Reset CSS has been around for a while. His approach nullifies many of
-> the browser elements that have been known to cause problems right off
-> the back. The following is from his version (v2.0 &vert; 20110126) CSS
-> Reset.
+<p>CSS resets take separate approaches to browser defaults. Eric Meyer's
+Reset CSS has been around for a while. His approach nullifies many of
+the browser elements that have been known to cause problems right off
+the back. The following is from his version (v2.0 &vert; 20110126) CSS
+Reset.</p>
 
 <pre><code>html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, <b>p</b>, blockquote, pre,
@@ -10853,11 +10832,10 @@ time, mark, audio, video <b>{</b>
   vertical-align: baseline;
 }</code></pre>
 
-&lbrack;&lbrack;Eric Meyer&apos;s Reset
-CSS&rbrack;&rbrack;(http://meyerweb.com/eric/tools/css/reset/)
+<p><a href="http://meyerweb.com/eric/tools/css/reset/">Eric Meyer&apos;s Reset CSS</a></p>
 
-> Normalize CSS on the other and deals with many of these separately.
-> The following is a sample from the version (v4.2.0) of the code.
+<p>Normalize CSS on the other and deals with many of these separately.
+The following is a sample from the version (v4.2.0) of the code.</p>
 
 /**/
 
@@ -10868,90 +10846,41 @@ CSS&rbrack;&rbrack;(http://meyerweb.com/eric/tools/css/reset/)
 <i>&ast; 3. Prevent adjustments of font size after orientation changes in IE
 and iOS.</i>
 
-</b>/
-
-/* Document*
+<pre><code>/* Document*
 *==========================================================================
 */
-html
-{
-<b>font-family</b>
-:
-sans-serif
-;
+html {
+<b>font-family</b>: sans-serif;
 /* 1 */
-<b>line-height</b>
-:
-1.15
-;
+<b>line-height</b>: 1.15;
 /* 2 */
--ms-text-size-adjust
-:
-100
-&percnt;
-;
+-ms-text-size-adjust: 100&percnt;;
 /* 3 */
--webkit-text-size-adjust
-:
-100
-&percnt;
-;
+-webkit-text-size-adjust: 100&percnt;;
 /* 3 */
 }
 /* Sections*
 *==========================================================================
 */
-/**/
+/* */
 *&ast; Remove the margin in all browsers (opinionated).*
 </b>/
-body
-{
-<b>margin</b>
-:
-0
-;
+body {
+  <b>margin</b>: 0;
 }
-**/
-/* Add the correct display in IE 9-.
-*/
-article
-,
-aside
-,
-footer
-,
-header
-,
-nav
-,
-section
-{
-
-
-<b>display</b>
-
-:
-block
-;
+/* */
+/* Add the correct display in IE 9-. */
+article, aside, footer, header, nav, section {
+  <b>display</b>: block;
 }
 /**
   Correct the font size and margin on &apos;h1&apos; elements within &apos;section&apos; and
   &apos;article&apos; contexts in Chrome, Firefox, and Safari.
 **/
-h1
-{
-<b>font-size</b>
-:
-2
-em
-;
-<b>margin</b>
-:
-0.67
-em
-0
-;
-}
+h1 {
+  <b>font-size</b>: 2em;
+  <b>margin</b>: 0.67em0;
+}</code></pre>
 
 <a href="http://normalize.css/">Normalize CSS</a>
 
@@ -10960,7 +10889,6 @@ em
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch55-1">Section 55.1: Adding Inline Block support to IE6 and IE7</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-
 <pre><code><b>display</b>: inline-block;</code></pre>
 
 <p>The display property with the value of inline-block is not supported
@@ -11043,9 +10971,9 @@ Equipment Corporation, Linux, or Unix.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch56-1">Section 56.1: Use transform and opacity to avoid trigger layout</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-Changing some CSS attribute will trigger the browser to synchronously
+<p>Changing some CSS attribute will trigger the browser to synchronously
 calculate the style and layout, which is a bad thing when you need to
-animate at 60fps.
+animate at 60fps.</p>
 
 <b>DON&apos;T</b>
 
@@ -11068,12 +10996,12 @@ animate at 60fps.
 <p><a href="https://jsfiddle.net/trungdq88/gmpzxLyq/">Demo</a> 
 took 11.7ms for rendering 9.8ms for painting.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 267.  (230) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 267. animate with transform (229) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left" width="100%">
 <img src="./images/image267.jpg"
   style="width:75%"
-  title=""
-  alt="." />
+  title="Animate with transform"
+  alt="Animate with transform." />
 </p>
 
 <h4>DO</h4>
@@ -11096,12 +11024,12 @@ took 11.7ms for rendering 9.8ms for painting.</p>
 }</code></pre>
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 269.  (xxx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 269. test time / rendering (229) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left" width="100%">
 <img src="./images/image269.png"
   style="width:60%"
-  title=""
-  alt="." />
+  title="Test time/rendering"
+  alt="Test time/rendering." />
 </p>
 
 <p><a href="https://jsfiddle.net/trungdq88/Logdo0rn/">Demo (jsFiddle)</a>
@@ -11117,3 +11045,4 @@ same animation, took <b>1.3ms</b> for rendering, <b>2.0ms</b> for painting.</p>
 <!-- 7/6/2024 Sat 3:21am -->
 <!-- 7/7/2024 Sun 8:52pm -->
 <!-- 7/8/2024 Mon 8:50am -->
+<!-- 7/9/2024 Tue 5:11am -->
