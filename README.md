@@ -10103,217 +10103,92 @@ url(&apos;http://cdn.sstatic.net/Sites/stackoverflow/img/favicon.ico&apos;);}&qu
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch46-2">Section 46.2: Introduction</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p>The browser identifies tokens from stylesheet and coverts them into
+nodes which are linked into a tree structure. The entire map of all
+the nodes with their associated styles of a page would be the CSS
+Object Model.</p>
 
-> The browser identifies tokens from stylesheet and coverts them into
-> nodes which are linked into a tree structure. The entire map of all
-> the nodes with their associated styles of a page would be the CSS
-> Object Model.
->
-> To display the webpage, a web browser takes following steps.
+<p>To display the webpage, a web browser takes following steps.</p>
 
-1.  The web browser examines your HTML and builds the DOM (Document
-    Object Model).
-
-2.  The web browser examines your CSS and builds the CSSOM (CSS Object
-    Model).
-
-3.  The web browser combines the DOM and the CSSOM to create a render
-    tree. The web browser displays your webpage.
-
+<ol>
+  <li>The web browser examines your HTML and builds the DOM (Document
+    Object Model).</li>
+  <li>The web browser examines your CSS and builds the CSSOM (CSS Object
+     Model).</li>
+  <li>The web browser combines the DOM and the CSSOM to create a render
+    tree. The web browser displays your webpage.</li>
+</ol>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~ 259. dom, cssom and render tree (207) ~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left" width="100%">
 <img src="./images/image259.png"
   style="width:75%"
-  title="DOM, CSSOM and Render Tree"
-  alt="DOM, CSSOM and Render Tree." />
+  title="Document Object Model (DOM), CSS Object Model (CSS0M) and Render Tree"
+  alt="Document Object Model (DOM), CSS Object Model (CSS0M) and Render Tree." />
 </p>
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ch47">Chapter 47: Feature Queries</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
-<b>Parameter Details</b>
-
-  property                              :    value
-
-> Evaluates true if the browser can handle the CSS rule. The parenthesis
-> around the rule are
->
-> ()
->
-> required.
->
-> and Returns true only if both the previous and next conditions are
-> true. not Negates the next condition or Returns true if either the
-> previous or next condition is true.
-
-  &period;..
-
-
-() Groups conditions
+| <b>Parameter</b> | <b>Details</h4> |
+|------------------|-----------------------------------------|
+| &lpar;property: value&rpar; | Evaluates true if the browser can handle the CSS rule. The parenthesis around the rule are |
+|                             | required. |
+| and                         | Returns true only if both the previous and next conditions are true. |
+| not                         | Negates the next condition. |
+| or                          | Returns true if either the previous or next condition is true. |
+| &lpar;&period;..&rpar;      | Groups conditions. |
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch47-1">Section 47.1: Basic &commat;supports usage</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
-<b>&commat;supports</b>
+<pre><code><b>&commat;supports</b> (<b>display</b>: flex) {
+  /* Flexbox is available, so use it */
+  .my-container {
+    <b>display</b>: flex;
+  }
+}</code></pre>
 
-(
+<p>In terms of syntax, &commat;supports is very similar to &commat;media, but instead
+of detecting screen size and orientation, &commat;supports will detect
+whether the browser can handle a given CSS rule.</p>
 
-<b>display</b>
-
-:
-
-flex
-
-)
-
-{
-
-/* Flexbox is available, so use it */
-
-.my-container
-
-{
-
-<b>display</b>
-
-:
-
-flex
-
-;
-
-}
-
-}
-
-> In terms of syntax, &commat;supports is very similar to &commat;media, but instead
-> of detecting screen size and orientation, &commat;supports will detect
-> whether the browser can handle a given CSS rule.
-
-  <b>&commat;supports</b>   (   flex   ), notice that the rule  <b>&commat;supports</b>   (   <b>display</b>   :   flex
-                              is                                                              
-
-
-Rather than doing something like ).
+<p>Rather than doing something like &commat;supports (flex), notice that the rule is &commat;supports (<b>display</b>: flex).</p>
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch47-2">Section 47.2: Chaining feature detections</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p>To detect multiple features at once, use the and operator.</p>
 
-> To detect multiple features at once, use the and operator.
+<pre><code><b>&commat;supports</b> (<b>transform</b>: translateZ(1px)) and (<b>transform-style</b>: preserve-3d) and (<b>perspective</b>: 1px) {
+  /* Probably do some fancy 3d stuff here */
+}</code></pre>
 
-<b>&commat;supports</b>
+<p>There is also an or opeartor and a not operator:</p>
 
-(
-
-<b>transform</b>
-
-:
-
-translateZ
-
-(
-
-1
-
-px
-
-)
-
-)
-
-and
-
-(
-
-<b>transform-style</b>
-
-:
-
-preserve-3d
-
-)
-
-and
-
-(
-
-<b>perspective</b>
-
-:
-
-1
-
-px
-
-)
-
-{
-
-/* Probably do some fancy 3d stuff here */
-
+<pre><code><b>&commat;supports</b> (<b>display</b>: flex) or (<b>display</b>: table-cell) {
+  /* Will be used if the browser supports flexbox or display: table-cell */
 }
+<b>&commat;supports</b> not (webkit-transform &minus;: translate(0, 0, 0)) {
+  /* Will &ast;not&ast; be used if the browser supports -webkit-transform: translate(&period;..) */
+}</code></pre>
 
-There is also an
+<p>For the ultimate &commat;supports experience, try grouping logical expressions with parenthesis:</p>
 
-or
-
-operator and a
-
-not
-
-operator:
-
-<b>&commat;supports</b>
-
-(
-
-<b>display</b>
-
-:
-
-flex
-
-)
-
-or
-
-(
-
-<b>display</b>: table-cell) { 
-/* Will be used if the browser supports flexbox or display: table-cell */
-}
-<b>&commat;supports</b> not (webkit-transform &minus;: translate(0, 0, 0)
-)
-{
-/* Will &ast;not&ast; be used if the browser supports -webkit-transform: translate(&period;..) */
-}
-
-<p>For the ultimate &commat;supports experience, try grouping logical
-expressions with parenthesis:</p>
-
-<b>&commat;supports</b> ( (<b>display</b>: block) and (zoom: 1) ) or
-( ( <b>display</b>: flex ) and ( not( <b>display</b>: table-cell ) ) )
-or ( <b>transform</b>: translateX (1px) ) {
-/* &period;.. */
-}
+<pre><code><b>&commat;supports</b> ((<b>display</b>: block) and (zoom: 1)) or ((<b>display</b>: flex) and (not(<b>display</b>: table-cell))) or 
+  (<b>transform</b>: translateX (1px) ) {
+  /* &period;.. */
+}</code></pre>
 
 <p>This will work if the browser</p>
 
-<b>display</b>: block AND zoom
-
-1.  Supports : 1, or
-
-<b>display</b>: flex AND NOT <b>display</b>: table-cell
-
-2.  Supports , or
-
-<b>transform</b>: translateX ( 1px 
-
-3.  Supports ).
+<ol>
+  <li>Supports <b>display</b>: block AND zoom: 1, or</li>
+  <li>Supports <b>display</b>: flex AND NOT <b>display</b>: table-cell, or</li>
+  <li>Supoorts <b>transform</b>: translateX(1px).</li>
+</ol>
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ch48">Chapter 48: Stacking Context</h2>
@@ -10451,7 +10326,14 @@ h1 {
 }</code></pre>
 
 <h4>Result:</h4>
-<imagexxx.png Division Element #1-#6>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~ 260. example; using the overflow property with a value different to visible (211) ~~~~-->
+<p align="left" width="100%">
+<img src="./images/image261.jpg"
+  style="width:60%"
+  title="Example; Using th overflow property with a value different to visible"
+  alt="Example; Using th overflow property with a value different to visible." />
+</p>
 [image260.jpg 6x3 inc](./images/image260.jpg)
 
 <p>Source:</p>
@@ -10481,33 +10363,28 @@ Demo (Understanding z-index)</a>.</p>
 }</code></pre>
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<!--~~~~~ 261. example; using the overflow property with a value different to visible (212) ~~~~-->
+<!--~~~~~ 261. example; using the overflow property with a value different to visible (211) ~~~~-->
 <p align="left" width="100%">
 <img src="./images/image261.jpg"
   style="width:60%"
   title="Example; Using th overflow property with a value different to visible"
   alt="Example; Using th overflow property with a value different to visible." />
 </p>
-<!-- [image261.jpg 6 x 3](./images/image261.jpg) -->
 
-<a href="https://jsfiddle.net/MadalinaTn/qkwwmu6m/2/&rbrack;&rbrack;(https://jsfiddle.net/MadalinaTn/qkwwmu6m/2/">jsFiddle Demo</a>.
+<p><a href="https://jsfiddle.net/MadalinaTn/qkwwmu6m/2/&rbrack;&rbrack;(https://jsfiddle.net/MadalinaTn/qkwwmu6m/2/">Demo (jsFiddle)</a>.</p>
 
-> Using the overflow property with a value different to visible (its
-> default) will create a new block formatting&rbrack; &lbrack;context.
-> This is technically necessary&rbrack; &lbrack;---&rbrack; &lbrack;if a
-> float intersected with the scrolling element it would
-> forcibly&rbrack; &lbrack;rewrap the
-> content.&rbrack;&rbrack;(https://css-tricks.com/almanac/properties/o/overflow/)
->
-> This example that show how a number of paragraphs will interact with a
-> floated image is similar to &lbrack;&lbrack;this
-> example&rbrack;&rbrack;(https://css-tricks.com/almanac/properties/o/overflow/),
-> on css-tricks.com.
+<blockquote>
+  Using the overflow property with a value different to visible (its
+  default) will create a new block formatting&rbrack; &lbrack;context.
+  This is technically necessary if a float intersected with the scrolling element it would
+  <a href="https://css-tricks.com/almanac/properties/o/overflow/">forcibly rewrap the content.
+</blockquote>
 
-&lbrack;&lbrack;2&rbrack;&rbrack;(https://css-tricks.com/almanac/properties/o/overflow/):
-&lbrack;&lbrack;https://developer.mozilla.org/en-US/docs/Web/CSS/overflow&rbrack;&rbrack;(https://developer.mozilla.org/en-US/docs/Web/CSS/overflow)
-MDN
+<p>This example that show how a number of paragraphs will interact with a
+floated image is similar to <a href="https://css-tricks.com/almanac/properties/o/overflow/">
+this example</a> on CSS-trics.com.</p>
 
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/overflow">MDN CSS Overflow</a>.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ch50">Chapter 50: Vertical Centering</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -10516,513 +10393,101 @@ MDN
 
 <h4>HTML:</h4>
 
-<b>&lt;</b>
+<pre><code><b>&lt;div</b> class=&quot;wrapper&quot;<b>&gt;</b>
+  <b>&lt;div</b> class=&quot;outer&quot;<b>&gt;</b>
+    <b>&lt;div</b> class=&quot;inner&quot;<b>&gt;</b>
+      centered
+    <b>&lt;/div&gt;</b>
+  <b>&lt;/div&gt;</b>
+<b>&lt;/div&gt;</b></code></pre>
 
-<b>div</b>
+<h4>CSS:</h4>
 
-class
-
-=
-
-&quot;wrapper&quot;
-
-<b>&gt;</b>
-
-<b>&lt;</b>
-
-<b>div</b>
-
-class
-
-=
-
-&quot;outer&quot;
-
-<b>&gt;</b>
-
-<b>&lt;</b>
-
-<b>div</b>
-
-class
-
-=
-
-&quot;inner&quot;
-
-<b>&gt;</b>
-
-centered
-
-<b>&lt;</b>
-
-<b>/div</b>
-
-<b>&gt;</b>
-
-<b>&lt;</b>
-
-<b>/div</b>
-
-<b>&gt;</b>
-
-<b>&lt;</b>
-
-<b>/div</b>
-
-<b>&gt;</b>
-
-> <b>CSS:</b>
-
-.wrapper
-
-{
-
-<b>height</b>
-
-:
-
-600
-
-px
-
-;
-
-<b>text-align</b>
-
-:
-
-center
-
-;
-
+<pre><code>.wrapper {
+  <b>height</b>: 600px;
+  <b>text-align</b>: center;
 }
-
-.outer
-
-{
-
-<b>display</b>
-
-:
-
-table
-
-;
-
-<b>height</b>
-
-:
-
-100
-
-&percnt;
-
-;
-
-<b>width</b>
-
-:
-
-100
-
-&percnt;
-
-;
-
+.outer {
+  <b>display</b>: table;
+  <b>height</b>: 100&percnt;;
+  <b>width</b>: 100&percnt;;
 }
-
-.outer
-
-.inner
-
-{
-
-<b>display</b>
-
-:
-
-table-cell
-
-;
-
-<b>text-align</b>
-
-:
-
-center
-
-;
-
-<b>vertical-align</b>
-
-:
-
-middle
-
-;
-
-}
+.outer .inner {
+  <b>display</b>: table-cell;
+  <b>text-align</b>: center;
+  <b>vertical-align</b>: middle;
+}</code></pre>
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch50-2">Section 50.2: Centering with Flexbox</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-
 <h4>HTML:</h4>
 
-<b>&lt;</b>
+<pre><code><b>&lt;div</b> class=&quot;container&quot;<b>&gt;</b>
+  <b>&lt;div</b> class=&quot;child&quot;<b>&gt;&lt;/div&gt;</b>
+<b>&lt;/div&gt;</b></code></pre>
 
-<b>div</b>
+<h4>CSS:</h4>
 
-class
-
-=
-
-&quot;container&quot;
-
-<b>&gt;</b>
-
-<b>&lt;</b>
-
-<b>div</b>
-
-class
-
-=
-
-&quot;child&quot;
-
-<b>&gt;</b>
-
-<b>&lt;</b>
-
-<b>/div</b>
-
-<b>&gt;</b>
-
-<b>&lt;</b>
-
-<b>/div</b>
-
-<b>&gt;</b>
-
-> <b>CSS:</b>
-
-.container
-
-{
-
-<b>height</b>
-
-:
-
-500
-
-px
-
-;
-
-<b>width</b>
-
-:
-
-500
-
-px
-
-;
-
-<b>display</b>
-
-:
-
-flex
-
-;
-
-// Use Flexbox
-
-<b>align-items</b>
-
-:
-
-center
-
-;
-
-// This centers children vertically in the parent.
-
-<b>justify-content</b>
-
-:
-
-center
-
-;
-
-// This centers children horizontally.
-
-<b>background</b>
-
-:
-
-white
-
-;
-
+<pre><code>.container {
+  <b>height</b>: 500px;
+  <b>width</b>: 500px;
+  <b>display</b>: flex;           // Use Flexbox
+  <b>align-items</b>: center;     // This centers children vertically in the parent.
+  <b>justify-content</b>: center; // This centers children horizontally.
+  <b>background</b>: white;
 }
-
-.child
-
-{
-
-<b>width</b>
-
-:
-
-100
-
-px
-
-;
-
-<b>height</b>
-
-:
-
-100
-
-px
-
-;
-
-<b>background</b>
-
-:
-
-blue
-
-;
-
-}
+.child {
+  <b>width</b>: 100px;
+  <b>height</b>: 100px;
+  <b>background</b>: blue;
+}</code></pre>
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch50-3">Section 50.3: Centering with Transform</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-
 <h4>HTML:</h4>
 
-<b>&lt;</b>
+<pre><code><b>&lt;</b><b>div</b> class=&quot;wrapper&quot;<b>&gt;</b>
+  <b>&lt;</b><b>div</b> class=&quot;centered&quot;<b>&gt;</b>
+    centered
+  <b>&lt;</b><b>/div</b><b>&gt;</b>
+<b>&lt;</b><b>/div</b><b>&gt;</b></code></pre>
 
-<b>div</b>
+<h4>CSS:</h4>
 
-class
-
-=
-
-&quot;wrapper&quot;
-
-<b>&gt;</b>
-
-<b>&lt;</b>
-
-<b>div</b>
-
-class
-
-=
-
-&quot;centered&quot;
-
-<b>&gt;</b>
-
-centered
-
-<b>&lt;</b>
-
-<b>/div</b>
-
-<b>&gt;</b>
-
-<b>&lt;</b>
-
-<b>/div</b>
-
-<b>&gt;</b>
-
-> <b>CSS:</b>
-
-.wrapper
-
-{
-
-<b>position</b>
-
-:
-
-relative
-
-;
-
-<b>height</b>
-
-:
-
-600
-
-px
-
-;
-
+<pre><code>.wrapper {
+  <b>position</b>: relative;
+  <b>height</b>: 600px;
 }
-
-.centered
-
-{
-
-<b>position</b>
-
-:
-
-absolute
-
-;
-
-<b>z-index</b>
-
-:
-
-999
-
-;
-
-<b>transform</b>
-
-:
-
-translate
-
-(
-
--50
-
-&percnt;
-
-,
-
--50
-
-&percnt;
-
-)
-
-;
-
-<b>top</b>
-
-:
-
-50
-
-&percnt;
-
-;
-
-<b>left</b>
-
-:
-
-50
-
-&percnt;
-
-;
-
-}
+.centered {
+  <b>position</b>: absolute;
+  <b>z-index</b>: 999;
+  <b>transform</b>: translate(-50&percnt;, -50&percnt;);
+  <b>top</b>: 50&percnt;;
+  <b>left</b>: 50&percnt;;
+}</code></pre>
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch50-4">Section 50.4: Centering Text with Line Height</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>HTML:</h4>
 
-<b>&lt;</b>
+<pre><code><b>&lt;div</b> class=&quot;container&quot;<b>&gt;</b>
+  <b>&lt;span&gt;</b>vertically centered<b>&lt;/span&gt;</b>
+<b>&lt;/div&gt;</b></code></pre>
 
-<b>div</b>
+<h4>CSS:</h4>
 
-class
+<pre><code>.container {
+  <b>height</b>: 50px;  /* set height */
+  <b>line-height</b>: 50px; /* set line-height equal to the height */
+  <b>vertical-align</b>: middle; /* works without this rule, but it is good having it explicitly set */
+}</code></pre>
 
-=
-
-&quot;container&quot;
-
-<b>&gt;</b>
-
-<b>&lt;</b>
-
-<b>span</b>
-
-<b>&gt;</b>
-
-vertically centered
-
-<b>&lt;</b>
-
-<b>/span</b>
-
-<b>&gt;</b>
-
-<b>&lt;</b>
-
-<b>/div</b>
-
-<b>&gt;</b>
-
-> <b>CSS:</b>
-
-.container
-
-{
-
-<b>height</b>
-
-:
-
-50
-
-px
-
-;
-
-/* set height */
-
-<b>line-height</b>
-
-:
-
-50
-
-px
-
-;
-
-/* set line-height equal to the height */
-
-<b>vertical-align</b>
-
-:
-
-middle
-
-;
-
-/* works without this rule, but it is good having it explicitly set
-*/
-
-}
-
-> <b>Note:</b> This method will only vertically center a <i>single line of
-> text</i>. It will not center block elements correctly and if the text
-> breaks onto a new line, you will have two very tall lines of text.
+<p><b>Note:</b> This method will only vertically center a <i>single line of
+text</i>. It will not center block elements correctly and if the text
+breaks onto a new line, you will have two very tall lines of text.</p>
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch50-5">Section 50.5: Centering with Position: absolute</h3>
@@ -11031,7 +10496,8 @@ middle
 <h4>HTML:</h4>
 
 <pre><code><b>&lt;div</b> class=&quot;wrapper&quot;<b>&gt;</b>
-<b>&lt;img</b> src=&quot;http://cdn.sstatic.net/Sites/stackoverflow/company/img/logos/so/so-icon.png?v=c78bd457575a&quot;<b>&gt;</b>
+  <b>&lt;img</b> 
+  src=&quot;http://cdn.sstatic.net/Sites/stackoverflow/company/img/logos/so/so-icon.png?v=c78bd457575a&quot;<b>&gt;</b>
 <b>&lt;/div&gt;</b></code></pre>
 
 <h4>CSS:</h4>
@@ -11049,12 +10515,12 @@ middle
   <b>margin</b>: auto;
 }</code></pre>
 
-> If you want to center other then images, then you must give height and
-> width to that element.
->
-> <b>HTML:</b>
+If you want to center other then images, then you must give height and
+width to that element.
 
-<b>&lt;</b>
+<h4>HTML:</h4>
+
+<pre><code><b>&lt;</b>
 
 <b>div</b>
 
@@ -11092,9 +10558,9 @@ make me center
 
 <b>&gt;</b>
 
-> <b>CSS:</b>
+<h4>CSS:</h4>
 
-.wrapper
+<pre><code>.wrapper
 
 {
 
@@ -11236,9 +10702,9 @@ solid
   <b>vertical-align</b>: middle;
 }</code></pre>
 
-> This method is best used in cases where you have a varied-height
-> .content centered inside .wrapper; and you want .wrapper&apos;s height to
-> expand when .content&apos;s height exceed .wrapper&apos;s min-height.
+<p>This method is best used in cases where you have a varied-height
+.content centered inside .wrapper; and you want .wrapper&apos;s height to
+expand when .content&apos;s height exceed .wrapper&apos;s min-height.</p>
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ch51">Chapter 51: Object Fit and Placement</h2>
@@ -11253,54 +10719,74 @@ image or video, Object-fit accepts the following five values:</p>
 
 <pre><code><b>object-fit</b>: fill;</code></pre>
 
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 263. original and object-fit: fill (217) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p align="left" width="100%">
+<img src="./images/image263.png"
+  style="width:60%"
+  title="Original image and object-fit: fill"
+  alt="Original image and object-fit: fill." />
+</p>
+
 <p>Fill stretches the image to fit the content box without regard to the
 image&apos;s original aspect ratio.</p>
 
 <pre><code><b>CONTAIN object-fit</b>:contain;</code></pre>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 265. original and object-fit: contain (217) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p align="left" width="100%">
+<img src="./images/image265.png"
+  style="width:60%"
+  title="Original image and object-fit: contain"
+  alt="Original image and object-fit: contain." />
+</p>
 <p>Contain fits the image in the box&apos;s height or width while maintaining
 the image&apos;s aspect ratio.</p>
 
 <pre><code><b>COVER object-fit</b>:cover;</code></pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 264.  (xxx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 266. original and object-fit: cover (217) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left" width="100%">
-<img src="./images/image264.jpg"
+<img src="./images/image266.png"
   style="width:60%"
-  title=""
-  alt="." />
+  title="Original image and object-fit: cover"
+  alt="Original image and object-fit: cover." />
 </p>
-<!-- [image264.jpg 6.2 x 2.8](./images/image264.jpg) -->
 
-> Cover fills the entire box with the image. The image aspect ratio is
-> preserved, but the image is cropped to the dimensions of the box.
->
-> <b>NONE</b>
+Cover fills the entire box with the image. The image aspect ratio is
+preserved, but the image is cropped to the dimensions of the box.
+
+<b>NONE</b>
 
 <b>object-fit</b>
 
 :none;
 
-> None ignores the size of the box and is not resized.
->
-> <b>SCALE-DOWN</b>
-
-<b>object-fit</b>
-
-:scale-down;
-
-> Scale-down either sizes the object as none or as contain. It displays
-> whichever option results in a smaller image size.
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 266.  (xxx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 267. original image and object-fit: none (xxx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left" width="100%">
-<img src="./images/image266.jpg"
+<img src="./images/image267.png"
   style="width:70%"
-  title=""
-  alt="." />
+  title="Original image and object-fit: none"
+  alt="Original image and object-fit: none." />
 </p>
-<!-- [image266.jpg 7.2 x 3.65](./images/image266.jpg) -->
 
+<p>None ignores the size of the box and is not resized.</p>
+
+<h4>SCALE-DOWN</h4>
+
+<pre><code><b>object-fit</b>:scale-down;</code></pre>
+
+<p>Scale-down either sizes the object as none or as contain. It displays
+whichever option results in a smaller image size.</p>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~ 268. original image and object-fit: scale-down (219) ~~~~~~~~~~~~~~~~~~~-->
+<p align="left" width="100%">
+<img src="./images/image268.png"
+  style="width:70%"
+  title="Original image and object-fit scale-down"
+  alt="Original image and object-fit scale-down." />
+</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ch52">Chapter 52: CSS design patterns</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
