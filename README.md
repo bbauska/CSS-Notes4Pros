@@ -7251,16 +7251,17 @@ div: hover {
 
 <h4>@keyframes</h4>
 
+<pre><code>|               
 | &lbrack; from | to | <b>&lt;percentage&gt;</b> &rbrack; | You can either specify a set time with a percentage value, or two percentage values, IE |
-|                                                       | 10&percnt;, 20&percnt;, for a period of time where the keyframe's set attributes are set. |
-| block                                                 | Any amount of CSS attributes for the keyframe. |
+|                                                         | 10&percnt;, 20&percnt;, for a period of time where the keyframe's set attributes are set. |
+| block                                                   | Any amount of CSS attributes for the keyframe. |</code></pre>
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch27-1">Section 27.1: Animations with keyframes</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-For multi-stage CSS animations, you can create CSS <span style="color:blue">&commat;keyframes</span>.
+<p>For multi-stage CSS animations, you can create CSS <span style="color:blue">&commat;keyframes</span>.
 Keyframes allow you to define multiple animation points, called a
-keyframe, to define more complex animations.
+keyframe, to define more complex animations.</p>
 
 <h4>Basic Example</h4>
 
