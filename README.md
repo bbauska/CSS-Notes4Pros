@@ -10660,366 +10660,167 @@ whichever option results in a smaller image size.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ch52">Chapter 52: CSS design patterns</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p>These examples are for documenting CSS-specific design patterns like 
+<a href="http://getbem.com/">BEM</a>, 
+<a href="https://www.smashingmagazine.com/2011/12/an-introduction-to-object-oriented-css-oocss/">OOCSS</a> and 
+<a href="https://smacss.com/">SMACSS</a>.</p>
 
-> These examples are for documenting CSS-specific design patterns like
-> &lbrack;&lbrack;BEM&rbrack;&rbrack;(http://getbem.com/),
-> &lbrack;&lbrack;OOCSS&rbrack;&rbrack;(https://www.smashingmagazine.com/2011/12/an-introduction-to-object-oriented-css-oocss/)
-> and &lbrack;&lbrack;SMACSS&rbrack;&rbrack;(https://smacss.com/).
->
-> These examples are NOT for documenting CSS frameworks like
-> &lbrack;&lbrack;Bootstrap&rbrack;&rbrack;(http://getbootstrap.com/) or
-> &lbrack;&lbrack;Foundation&rbrack;&rbrack;(http://foundation.zurb.com/).
+<p>These examples are NOT for documenting CSS frameworks like
+<a href="http://getbootstrap.com/">Bootstrap</a> or <a href="http://foundation.zurb.com/">Foundation</a>.</p>
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch52-1">Section 52.1: BEM</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p><a href="http://getbem.com/introduction/">BEM</a> stands for Blocks, Elements, and Modifiers.  
+It&apos;s a methodology initially conceived by a Russian tech company 
+<a href="https://en.wikipedia.org/wiki/Yandex">Yandex</a>, But
+which gained quite some traction among American &amp; Western-European web developers as well.</p>
 
-  Blocks         ,   Elements and Modifiers
+As the name implies, BEM metholology is all about componentization of
+your HTML and CSS code into three types of components:
 
-> &lbrack;&lbrack;BEM&rbrack;&rbrack;(http://getbem.com/introduction/) stands for .
-> It&apos;s a methodology initially conceived by Russian tech company
->
-> &lbrack;&lbrack;Yandex&rbrack;&rbrack;(https://en.wikipedia.org/wiki/Yandex), but
-> which gained quite some traction among American & Western-European web
-> developers as well.
->
-> As the same implies, BEM metholology is all about componentization of
-> your HTML and CSS code into three types of components:
->
-> <b>Blocks:</b> standalone entities that are meaningful on their own
->
-> Examples are header, container, menu, checkbox & textbox
->
-> <b>Elements:</b> Part of blocks that have no standalone meaning and are
-> semantically tied to their blocks.
+<ul>
+  <li><b>Blocks:</b> standalone entities that are meaningful on their own.<br><br>
+    Examples are header, container, menu, checkbox &amp; textbox.</li>
+  <li><b>Elements:</b> Part of blocks that have no standalone meaning and are 
+    semantically tied to their blocks.<br><br>
+    Examples are menu item, list item, checkbox caption &amp; header title.</li>
+  <li><b>Modifiers:</b> Flags on a block or element, used to change appearance 
+    or behavior.<br><br>
+	Examples are disabled, highlighted, checked, fixed, size big &amp; color yellow.</li>
+</ul>
 
-  menu item         , list item,          checkbox caption
+<p>The goal of BEM is to optimize the readability, maintainability
+and flexibility of your CSS code. The way to achieve this, is to apply
+the following rules.</p>
 
-> Examples are & header title
->
-> <b>Modifiers:</b> Flags on a block or element, used to change appearance
-> or behavior
+<ul>
+  <li>Block styles are never dependent on other elements on a page.</li>
+  <li>Blocks should have a simple, short name and avoid &lowbar; or - characters.</li>
+  <li>When styling elements, use selectors of format blockname&lowbar;&lowbar;elementname.</li>
+  <li>When styling modifiers, use selectors of format blockname&dash;-modifiername and 
+    blockname&lowbar;&lowbar;elementname&dash;&dash;modifiername.</li>
+  <li>Elements or blocks that have modifiers should inherit everything from the body
+    or element it is modifying except the properties the modifier is supposed to modify.</li>
+</ul>
 
-  color yellow
+<h4>Code example</h4>
 
-> Examples are disabled, highlighted, checked, fixed, size big &
->
-> The goal of BEM is to keep optimize the readability, maintainability
-> and flexibility of your CSS code. The way to achieve this, is to apply
-> the following rules.
+<p>If you apply BEM to your form elements, your CSS selectors should look
+something like this:</p>
 
-  blockname&minus;-modifiername        and   blockname&lowbar;&lowbar;elementname&minus;-
+.form { } // Block
 
-> Block styles are never dependent on other elements on a page
->
-> Blocks should have a simple, short name and avoid &lowbar; or - characters
->
-> When styling elements, use selectors of format
-> blockname&lowbar;&lowbar;elementname When styling modifiers, use selectors of
-> format modifiername
->
-> Elements or blocks that have modifiers should inherit everything from
-> the block or element it is modifying except the properties the
-> modifier is supposed to modify
->
-> <b>Code example</b>
->
-> If you apply BEM to your form elements, your CSS selectors should look
-> something like this:
->
-> .form { } // Block
->
-> .form&minus;-theme-xmas { } // Block + modifier .form&minus;-simple { } //
-> Block + modifier
->
-> .form&lowbar;&lowbar;input { } // Block &gt; element
->
-> .form&lowbar;&lowbar;submit { } // Block &gt; element
->
-> .form&lowbar;&lowbar;submit&minus;-disabled { } // Block &gt; element + modifier
->
-> The corresponding HTML should look something like this:
+.form&minus;-theme-xmas { } // Block + modifier .form&minus;-simple { } //
+Block + modifier
 
-<b>&lt;</b>
+.form&lowbar;&lowbar;input { } // Block &gt; element
 
-<b>form</b>
+.form&lowbar;&lowbar;submit { } // Block &gt; element
 
-class
+.form&lowbar;&lowbar;submit&minus;-disabled { } // Block &gt; element + modifier
 
-=
+<p>The corresponding HTML should look something like this:</p>
 
-&quot;form form&minus;-theme-xmas form&minus;-simple&quot;
-
-<b>&gt;</b>
-
-<b>&lt;</b>
-
-<b>input</b>
-
-class
-
-=
-
-&quot;form&lowbar;&lowbar;input&quot;
-
-type
-
-=
-
-&quot;text&quot;
-
-<b>/&gt;</b>
-
-<b>&lt;</b>
-
-<b>input</b>
-
-class
-
-=
-
-&quot;form&lowbar;&lowbar;submit form&lowbar;&lowbar;submit&minus;-disabled&quot;
-
-type
-
-=
-
-&quot;submit&quot;
-
-<b>/&gt;</b>
-
-<b>&lt;</b>
-
-<b>/form</b>
-
-<b>&gt;</b>
+<pre><code><b>&lt;</b><b>form</b> class=&quot;form form&minus;-theme-xmas form&minus;-simple&quot;<b>&gt;</b>
+  <b>&lt;</b><b>input</b> class=&quot;form&lowbar;&lowbar;input&quot; type=&quot;text&quot;<b>/&gt;</b>
+  <b>&lt;</b><b>input</b> class=&quot;form&lowbar;&lowbar;submit form&lowbar;&lowbar;submit&minus;-disabled&quot; type=&quot;submit&quot;<b>/&gt;</b>
+<b>&lt;</b><b>/form</b><b>&gt;</b></code></pre>
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ch53">Chapter 53: Browser Support & Prefixes</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <b>Prefix Browser(s)</b>
 
-> -webkit- Google Chrome, Safari, newer versions of Opera 12 and up,
-> Android, Blackberry and UC browsers -moz- Mozilla Firefox
+| <b>Prefix</b> } <b>Browser(s)</b>
+|----------|-----------------------------------------------------------|
+| -webkit- | Google Chrome, Safari, newer versions of Opera 12 and up, |
+|          | Android, Blackberry and UC browsers |
+| -moz- | Mozilla Firefox |
+| -ms- | Internet Explorer, Edge |
+| -o-     | Opera until version 12 |
+| , -xv-  |
+| -khtml- | Konquerer |
 
--ms- Internet Explorer, Edge
-
-> Opera until version 12
->
-> -khtml- Konquerer
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch53-1">Section 53.1: Transitions</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
-div
-
-{
-
--webkit-transition
-
-:
-
-all
-
-4
-
-s
-
-ease
-
-;
-
--moz-transition
-
-:
-
-all
-
-4
-
-s
-
-ease
-
-;
-
--o-transition
-
-:
-
-all
-
-4
-
-s
-
-ease
-
-;
-
-<b>transition</b>
-
-:
-
-all
-
-4
-
-s
-
-ease
-
-;
-
-}
+<pre><code>div {
+  -webkit-transition: all 4s ease;
+  -moz-transition: all 4s ease;
+  -o-transition: all 4s ease;
+  <b>transition</b>: all 4s ease;
+}</code></pre>
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch53-2">Section 53.2: Transform</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
-div
-
-{
-
--webkit-transform
-
-:
-
-rotate
-
-(
-
-45
-
-deg
-
-)
-
-;
-
--moz-transform
-
-:
-
-rotate
-
-(
-
-45
-
-deg
-
-)
-
-;
-
--ms-transform
-
-:
-
-rotate
-
-(
-
-45
-
-deg
-
-)
-
-;
-
--o-transform
-
-:
-
-rotate
-
-(
-
-45
-
-deg
-
-)
-
-;
-
-<b>transform</b>
-
-:
-
-rotate
-
-(
-
-45
-
-deg
-
-)
-
-;
-
-}
+<pre><code>div {
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  <b>transform</b>: rotate(45deg);
+}</code></pre>
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ch54">Chapter 54: Normalizing Browser Styles</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
-> Every browser has a default set of CSS styles that it uses for
-> rendering elements. These default styles may not be consistent across
-> browsers because: the language specifications are unclear so base
-> styles are up for interpretation, browsers may not follow
-> specifications that are given, or browsers may not have default styles
-> for newer HTML elements. As a result, people may want to normalize
-> default styles across as many browsers as possible.
+Every browser has a default set of CSS styles that it uses for
+rendering elements. These default styles may not be consistent across
+browsers because: the language specifications are unclear so base
+styles are up for interpretation, browsers may not follow
+specifications that are given, or browsers may not have default styles
+for newer HTML elements. As a result, people may want to normalize
+default styles across as many browsers as possible.
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch54-1">Section 54.1: normalize.css</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+Browsers have a default set of CSS styles they use for rendering
+elements. Some of these styles can even be customised using the
+browser&apos;s settings to change default font face and size definitions,
+for example. The styles contain the definition of which elements are
+supposed to be block-level or inline, among other things.
 
-> Browsers have a default set of CSS styles they use for rendering
-> elements. Some of these styles can even be customised using the
-> browser&apos;s settings to change default font face and size definitions,
-> for example. The styles contain the definition of which elements are
-> supposed to be block-level or inline, among other things.
->
-> Because these default styles are given some leeway by the language
-> specifications and because browsers may not follow the specs properly
-> they can differ from browser to browser.
->
-> This is where
-> &lbrack;&lbrack;normalize.css&rbrack;&rbrack;(http://necolas.github.io/normalize.css/)
-> comes into play. It overrides the most common inconsistencies and
-> fixes known bugs.
->
-> <b>What does it do</b>
->
-> Preserves useful defaults, unlike many CSS resets.
->
-> Normalizes styles for a wide range of elements.
->
-> Corrects bugs and common browser inconsistencies.
->
-> Improves usability with subtle modifications.
->
-> Explains what code does using detailed comments.
->
-> So, by including normalize.css in your project your design will look
-> more alike and consistent across different browsers.
->
-> <b>Difference to reset.css</b>
->
-> You may have heard of reset.css. What&apos;s the difference between the
-> two?
->
-> While normalize.css provides consistency by setting different
-> properties to unified defaults, reset.css achieves consistency by
-> <b>removing</b> all basic styling that a browser may apply. While this
-> might sound like a good idea at first, this actually means you have to
-> write <b>all</b> rules yourself, which goes against having a solid
-> standard.
+Because these default styles are given some leeway by the language
+specifications and because browsers may not follow the specs properly
+they can differ from browser to browser.
+
+This is where
+&lbrack;&lbrack;normalize.css&rbrack;&rbrack;(http://necolas.github.io/normalize.css/)
+comes into play. It overrides the most common inconsistencies and
+fixes known bugs.
+
+<b>What does it do</b>
+
+	- Preserves useful defaults, unlike many CSS resets.
+
+	- Normalizes styles for a wide range of elements.
+
+	- Corrects bugs and common browser inconsistencies.
+
+	- Improves usability with subtle modifications.
+
+	- Explains what code does using detailed comments.
+
+So, by including normalize.css in your project your design will look
+more alike and consistent across different browsers.
+
+<b>Difference to reset.css</b>
+
+You may have heard of reset.css. What&apos;s the difference between the
+two?
+
+While normalize.css provides consistency by setting different
+properties to unified defaults, reset.css achieves consistency by
+<b>removing</b> all basic styling that a browser may apply. While this
+might sound like a good idea at first, this actually means you have to
+write <b>all</b> rules yourself, which goes against having a solid
+standard.
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch54-2">Section 54.2: Approaches and Examples</h3>
@@ -11031,81 +10832,26 @@ deg
 > the back. The following is from his version (v2.0 &vert; 20110126) CSS
 > Reset.
 
-html, body, div, span, applet, object, iframe,
-
-h1, h2, h3, h4, h5, h6,
-
-<b>p</b>
-
-, blockquote, pre,
-
+<pre><code>html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, <b>p</b>, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
-
 del, dfn, em, img, ins, kbd, q, s, samp,
-
-small, strike, strong,
-
-<b>sub</b>
-
-, sup, tt, var,
-
+small, strike, strong, <b>sub</b>, sup, tt, var,
 b, u, i, center,
-
 dl, dt, dd, ol, ul, li,
-
 fieldset, form, label, legend,
-
 table, caption, tbody, tfoot, thead, tr, th, td,
-
 article, aside, canvas, details, embed,
-
 figure, figcaption, footer, header, hgroup,
-
 menu, nav, output, ruby, section, summary,
-
-time, mark, audio, video
-
-<b>{</b>
-
-margin:
-
-0
-
-;
-
-padding:
-
-0
-
-;
-
-border:
-
-0
-
-;
-
-font
-
-<b>-</b>
-
-size:
-
-100
-
-<b>%</b>
-
-;
-
-font: inherit;
-
-vertical
-
-<b>-</b>
-
-align: baseline;
-
-<b>}</b>
+time, mark, audio, video <b>{</b>
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit; 
+  vertical-align: baseline;
+}</code></pre>
 
 &lbrack;&lbrack;Eric Meyer&apos;s Reset
 CSS&rbrack;&rbrack;(http://meyerweb.com/eric/tools/css/reset/)
