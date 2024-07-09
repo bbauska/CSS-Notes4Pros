@@ -8979,7 +8979,7 @@ except for one side:</p>
 
 <h4>HTML:</h4>
 
-<pre><code><b>&lt;</b><b>div</b> class=&quot;trapezoid&quot;<b>&gt;</b><b>&lt;</b><b>/div</b><b>&gt;</b></code></pre>
+<pre><code><b>&lt;div</b> class=&quot;trapezoid&quot;<b>&gt;&lt;/div&gt;</b></code></pre>
 
 <h4>CSS:</h4>
 
@@ -8991,17 +8991,14 @@ except for one side:</p>
   <b>border-bottom</b>: 100px solid black;
 }</code></pre>
 
-With changing the border sides, the orientation of the trapezoid can
-be adjusted.
-
+<p>With changing the border sides, the orientation of the trapezoid can be adjusted.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch38-2">Section 38.2: Triangles</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-To create a CSS triangle define an element with a width and height of
-0 pixels. The triangle shape will be formed using border properties.
-For an element with 0 height and width the 4 borders (top, right,
-bottom, left) each form a triangle. Here&apos;s an element with 0
-height/width and 4 different colored borders.
+<p>To create a CSS triangle define an element with a width and height of 0 pixels. 
+The triangle shape will be formed using border properties. For an element with 0 
+height and width the 4 borders (top, right, bottom, left) each form a triangle. 
+Here&apos;s an element with 0 height/width and 4 different colored borders.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 229.  (xxx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left" width="100%">
@@ -9011,11 +9008,11 @@ height/width and 4 different colored borders.
   alt="." />
 </p>
 
-By setting some borders to transparent, and others to a color we can
+<p>By setting some borders to transparent, and others to a color we can
 create various triangles. For example, in the Up triangle, we set the
 bottom border to the desired color, then set the left and right
 borders to transparent. Here&apos;s an image with the left and right
-borders shaded slightly to show how the triangle is being formed.
+borders shaded slightly to show how the triangle is being formed.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 230.  (xxx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left" width="100%">
@@ -9025,21 +9022,40 @@ borders shaded slightly to show how the triangle is being formed.
   alt="." />
 </p>
 
-The dimensions of the triangle can be altered by changing the
+<p>The dimensions of the triangle can be altered by changing the
 different border widths - taller, shorter, lopsided, etc. The examples
-below all show a 50x50 pixel triangle.
+below all show a 50x50 pixel triangle.</p>
 
-<b>Triangle - Pointing Up</b>
+<h4>Triangle - Pointing Up</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 231.  (xxx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p align="left" width="100%">
+<img src="./images/image231.jpg"
+  style="width:11%"
+  title=""
+  alt="." />
+</p>
+<pre><code><b>&lt;div</b> class=&quot;triangle-up&quot;<b>&gt;&lt;/div&gt;</b>
+.triangle-up {
+  <b>width</b>: 0;
+  <b>height</b>: 0;
+  <b>border-left</b>: 25px solid transparent;
+  <b>border-right</b>: 25px solid transparent;
+  <b>border-bottom</b>: 50px solid rgb(246, 156, 85);
+}</code></pre>
+
+<h4>Triangle - Pointing Down</h4>
+
 <b>&lt;</b>
 <b>div</b>
 class
 =
-&quot;triangle-up&quot;
+&quot;triangle-down&quot;
 <b>&gt;</b>
 <b>&lt;</b>
 <b>/div</b>
 <b>&gt;</b>
-.triangle-up
+.triangle-down
 {
 <b>width</b>
 :
@@ -9063,7 +9079,7 @@ px
 solid
 transparent
 ;
-**border-bottom**
+<b>border-top</b>
 :
 50
 px
@@ -9079,58 +9095,7 @@ rgb
 ;
 }
 
-> **Triangle - Pointing Down**
-
-**&lt;**
-**div**
-class
-=
-&quot;triangle-down&quot;
-**&gt;**
-**&lt;**
-**/div**
-**&gt;**
-.triangle-down
-{
-**width**
-:
-0
-;
-**height**
-:
-0
-;
-**border-left**
-:
-25
-px
-solid
-transparent
-;
-**border-right**
-:
-25
-px
-solid
-transparent
-;
-**border-top**
-:
-50
-px
-solid
-rgb
-(
-246
-,
-156
-,
-85
-)
-;
-}
-
-> **Triangle - Pointing Right**
+> <b>Triangle - Pointing Right</b>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 233.  (xxx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left" width="100%">
@@ -9141,40 +9106,40 @@ rgb
 </p>
 <!-- (./images/image233.jpg){width="1.1458333333333333in" height="1.1875in"} -->
 
-**&lt;**
-**div**
+<b>&lt;</b>
+<b>div</b>
 class
 =
 &quot;triangle-right&quot;
-**&gt;**
-**&lt;**
-**/div**
-**&gt;**
+<b>&gt;</b>
+<b>&lt;</b>
+<b>/div</b>
+<b>&gt;</b>
 .triangle-right
 {
-**width**
+<b>width</b>
 :
 0
 ;
-**height**
+<b>height</b>
 :
 0
 ;
-**border-top**
+<b>border-top</b>
 :
 25
 px
 solid
 transparent
 ;
-**border-bottom**
+<b>border-bottom</b>
 :
 25
 px
 solid
 transparent
 ;
-**border-left**
+<b>border-left</b>
 :
 50
 px
@@ -9190,42 +9155,42 @@ rgb
 ;
 }
 
-> **Triangle - Pointing Left**
+> <b>Triangle - Pointing Left</b>
 
-**&lt;**
-**div**
+<b>&lt;</b>
+<b>div</b>
 class
 =
 &quot;triangle-left&quot;
-**&gt;**
-**&lt;**
-**/div**
-**&gt;**
+<b>&gt;</b>
+<b>&lt;</b>
+<b>/div</b>
+<b>&gt;</b>
 .triangle-left
 {
-**width**
+<b>width</b>
 :
 0
 ;
-**height**
+<b>height</b>
 :
 0
 ;
-**border-top**
+<b>border-top</b>
 :
 25
 px
 solid
 transparent
 ;
-**border-bottom**
+<b>border-bottom</b>
 :
 25
 px
 solid
 transparent
 ;
-**border-right**
+<b>border-right</b>
 :
 50
 px
@@ -9241,28 +9206,28 @@ rgb
 ;
 }
 
-> **Triangle - Pointing Up/Right**
+> <b>Triangle - Pointing Up/Right</b>
 
-**&lt;**
-**div**
+<b>&lt;</b>
+<b>div</b>
 class
 =
 &quot;triangle-up-right&quot;
-**&gt;**
-**&lt;**
-**/div**
-**&gt;**
+<b>&gt;</b>
+<b>&lt;</b>
+<b>/div</b>
+<b>&gt;</b>
 .triangle-up-right
 {
-**width**
+<b>width</b>
 :
 0
 ;
-**height**
+<b>height</b>
 :
 0
 ;
-**border-top**
+<b>border-top</b>
 :
 50
 px
@@ -9276,7 +9241,7 @@ rgb
 85
 )
 ;
-**border-left**
+<b>border-left</b>
 :
 50
 px
@@ -9284,27 +9249,27 @@ solid
 transparent
 ;
 }
-> **Triangle - Pointing Up/Left**
-**&lt;**
-**div**
+> <b>Triangle - Pointing Up/Left</b>
+<b>&lt;</b>
+<b>div</b>
 class
 =
 &quot;triangle-up-left&quot;
-**&gt;**
-**&lt;**
-**/div**
-**&gt;**
+<b>&gt;</b>
+<b>&lt;</b>
+<b>/div</b>
+<b>&gt;</b>
 .triangle-up-left
 {
-**width**
+<b>width</b>
 :
 0
 ;
-**height**
+<b>height</b>
 :
 0
 ;
-**border-top**
+<b>border-top</b>
 :
 50
 px
@@ -9318,7 +9283,7 @@ rgb
 85
 )
 ;
-**border-right**
+<b>border-right</b>
 :
 50
 px
@@ -9327,28 +9292,28 @@ transparent
 ;
 }
 
-> **Triangle - Pointing Down/Right**
+> <b>Triangle - Pointing Down/Right</b>
 
-**&lt;**
-**div**
+<b>&lt;</b>
+<b>div</b>
 class
 =
 &quot;triangle-down-right&quot;
-**&gt;**
-**&lt;**
-**/div**
-**&gt;**
+<b>&gt;</b>
+<b>&lt;</b>
+<b>/div</b>
+<b>&gt;</b>
 .triangle-down-right
 {
-**width**
+<b>width</b>
 :
 0
 ;
-**height**
+<b>height</b>
 :
 0
 ;
-**border-bottom**
+<b>border-bottom</b>
 :
 50
 px
@@ -9362,7 +9327,7 @@ rgb
 85
 )
 ;
-**border-left**
+<b>border-left</b>
 :
 50
 px
@@ -9371,28 +9336,28 @@ transparent
 ;
 }
 
-> **Triangle - Pointing Down/Left**
+> <b>Triangle - Pointing Down/Left</b>
 
-**&lt;**
-**div**
+<b>&lt;</b>
+<b>div</b>
 class
 =
 &quot;triangle-down-left&quot;
-**&gt;**
-**&lt;**
-**/div**
-**&gt;**
+<b>&gt;</b>
+<b>&lt;</b>
+<b>/div</b>
+<b>&gt;</b>
 .triangle-down-left
 {
-**width**
+<b>width</b>
 :
 0
 ;
-**height**
+<b>height</b>
 :
 0
 ;
-**border-bottom**
+<b>border-bottom</b>
 :
 50
 px
@@ -9406,7 +9371,7 @@ rgb
 85
 )
 ;
-**border-right**
+<b>border-right</b>
 :
 50
 px
@@ -9419,9 +9384,9 @@ transparent
 <h3 id="ch38-3">Section 38.3: Circles and Ellipses</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
-**Circle**
+<b>Circle</b>
 
-To create a **circle**, define an element with an equal width and
+To create a <b>circle</b>, define an element with an equal width and
 height (a *square*) and then set the border-radius property of this
 element to 50%.
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -9436,24 +9401,24 @@ element to 50%.
 
 <h4>HTML:</h4>
 
-**&lt;****div** class=&quot;circle&quot;**&gt;**
-**&lt;****/div****&gt;**
+<b>&lt;</b><b>div</b> class=&quot;circle&quot;<b>&gt;</b>
+<b>&lt;</b><b>/div</b><b>&gt;</b>
 
 > <h4>CSS</h4>
 
 .circle
 {
-**width**
+<b>width</b>
 :
 50
 px
 ;
-**height**
+<b>height</b>
 :
 50
 px
 ;
-**background**
+<b>background</b>
 :
 rgb
 (
@@ -9464,16 +9429,16 @@ rgb
 85
 )
 ;
-**border-radius**
+<b>border-radius</b>
 :
 50
 &percnt;
 ;
 }
 
-**Ellipse**
+<b>Ellipse</b>
 
-An **ellipse** is similar to a circle, but with different values for
+An <b>ellipse</b> is similar to a circle, but with different values for
 width and height.
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 240.  (xxx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -9488,15 +9453,15 @@ width and height.
 <h4>HTML:</h4>
 
 <pre><code>
-**&lt;**
-**div**
+<b>&lt;</b>
+<b>div</b>
 class
 =
 &quot;oval&quot;
-**&gt;**
-**&lt;**
-**/div**
-**&gt;**
+<b>&gt;</b>
+<b>&lt;</b>
+<b>/div</b>
+<b>&gt;</b>
 </code></pre>
 
 <h4>CSS:</h4>
@@ -9504,17 +9469,17 @@ class
 <pre><code>
 .oval
 {
-**width**
+<b>width</b>
 :
 50
 px
 ;
-**height**
+<b>height</b>
 :
 80
 px
 ;
-**background**
+<b>background</b>
 :
 rgb
 (
@@ -9525,7 +9490,7 @@ rgb
 85
 )
 ;
-**border-radius**
+<b>border-radius</b>
 :
 50
 &percnt;
@@ -9544,7 +9509,7 @@ additional, slightly rotated, squares layered on top.
 
 The additional squares are created using the psuedo-elements.
 
-**8 Point Burst**
+<b>8 Point Burst</b>
 
 before
 
@@ -9555,15 +9520,15 @@ pseudo-element. The bottom is rotated 20°, the top square is rotated
 135°.
 
 <pre><code>
-**&lt;**
-**div**
+<b>&lt;</b>
+<b>div</b>
 class
 =
 &quot;burst-8&quot;
-**&gt;**
-**&lt;**
-**/div**
-**&gt;**
+<b>&gt;</b>
+<b>&lt;</b>
+<b>/div</b>
+<b>&gt;</b>
 .burst-8 {
 background: rgb(246, 156, 85);
 width: 40px;
@@ -9586,7 +9551,7 @@ transform: rotate(135deg);
 }
 </code></pre>
 
-> **12 Point Burst**
+> <b>12 Point Burst</b>
 
 before
 and:
@@ -9598,15 +9563,15 @@ pseudo-elements. The bottom is rotated 0°, the next square is rotated
 30°, and the top is rotated 60°.</p>
 
 <pre><code>
-**&lt;**
-**div**
+<b>&lt;</b>
+<b>div</b>
 class
 =
 &quot;burst-12&quot;
-**&gt;**
-**&lt;**
-**/div**
-**&gt;**
+<b>&gt;</b>
+<b>&lt;</b>
+<b>/div</b>
+<b>&gt;</b>
 .burst-12 {
 width: 40px;
 height: 40px;
@@ -9640,28 +9605,28 @@ the example below, we have an element with a width and height of 100
 pixels each.
 
 <pre><code>
-**&lt;**
-**div**
+<b>&lt;</b>
+<b>div</b>
 class
 =
 &quot;square&quot;
-**&gt;**
-**&lt;**
-**/div**
-**&gt;**
+<b>&gt;</b>
+<b>&lt;</b>
+<b>/div</b>
+<b>&gt;</b>
 .square
 {
-**width**
+<b>width</b>
 :
 100
 px
 ;
-**height**
+<b>height</b>
 :
 100
 px
 ;
-**background**
+<b>background</b>
 :
 rgb
 (
@@ -9697,37 +9662,37 @@ and skewY
 <h4>HTML:</h4>
 
 <pre><code>
-**&lt;**
-**div**
+<b>&lt;</b>
+<b>div</b>
 class
 =
 &quot;cube&quot;
-**&gt;**
-**&lt;**
-**/div**
-**&gt;**
-> **CSS:**
+<b>&gt;</b>
+<b>&lt;</b>
+<b>/div</b>
+<b>&gt;</b>
+> <b>CSS:</b>
 .cube
 {
-**background**
+<b>background</b>
 :
 #dc2e2e
 ;
-**width**
+<b>width</b>
 :
 100
 px
 ;
-**height**
+<b>height</b>
 :
 100
 px
 ;
-**position**
+<b>position</b>
 :
 relative
 ;
-**margin**
+<b>margin</b>
 :
 50
 px
@@ -9737,29 +9702,29 @@ px
 ::
 before
 {
-**content**
+<b>content</b>
 :
 &apos;&apos;
 ;
-**display**
+<b>display</b>
 :
 inline-block
 ;
-**background**
+<b>background</b>
 :
 #f15757
 ;
-**width**
+<b>width</b>
 :
 100
 px
 ;
-**height**
+<b>height</b>
 :
 20
 px
 ;
-**transform**
+<b>transform</b>
 :
 skewX
 (
@@ -9767,16 +9732,16 @@ skewX
 deg
 )
 ;
-**position**
+<b>position</b>
 :
 absolute
 ;
-**top**
+<b>top</b>
 :
 -20
 px
 ;
-**left**
+<b>left</b>
 :
 8
 px
@@ -9786,29 +9751,29 @@ px
 ::
 after
 {
-**content**
+<b>content</b>
 :
 &apos;&apos;
 ;
-**display**
+<b>display</b>
 :
 inline-block
 ;
-**background**
+<b>background</b>
 :
 #9e1515
 ;
-**width**
+<b>width</b>
 :
 16
 px
 ;
-**height**
+<b>height</b>
 :
 100
 px
 ;
-**transform**
+<b>transform</b>
 :
 skewY
 (
@@ -9816,29 +9781,29 @@ skewY
 deg
 )
 ;
-**position**
+<b>position</b>
 :
 absolute
 ;
-**top**
+<b>top</b>
 :
 -10
 px
 ;
-**left**
+<b>left</b>
 :
 100
 &percnt;
 ;
 }
-&lbrack;**&lbrack;See demo&rbrack;**&rbrack;(https://jsfiddle.net/codename0/9po0r1L1/)
+&lbrack;<b>&lbrack;See demo&rbrack;</b>&rbrack;(https://jsfiddle.net/codename0/9po0r1L1/)
 </code></pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch38-7">Section 38.7: Pyramid</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 skewY()
 
-This example shows how to create a **pyramid** using borders and 2D
+This example shows how to create a <b>pyramid</b> using borders and 2D
 transformation methods and rotate() on pseudo elements.
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 245.  (xxx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -9853,15 +9818,15 @@ transformation methods and rotate() on pseudo elements.
 <h4>HTML:</h4>
 
 <pre><code>
-**&lt;**
-**div**
+<b>&lt;</b>
+<b>div</b>
 class
 =
 &quot;pyramid&quot;
-**&gt;**
-**&lt;**
-**/div**
-**&gt;**
+<b>&gt;</b>
+<b>&lt;</b>
+<b>/div</b>
+<b>&gt;</b>
 </code></pre>
 
 <h4>CSS:</h4>
@@ -9869,21 +9834,21 @@ class
 <pre><code>
 .pyramid
 {
-**width**
+<b>width</b>
 :
 100
 px
 ;
-**height**
+<b>height</b>
 :
 200
 px
 ;
-**position**
+<b>position</b>
 :
 relative
 ;
-**margin**
+<b>margin</b>
 :
 50
 px
@@ -9897,29 +9862,29 @@ before
 ::
 after
 {
-**content**
+<b>content</b>
 :
 &apos;&apos;
 ;
-**display**
+<b>display</b>
 :
 inline-block
 ;
-**width**
+<b>width</b>
 :
 0
 ;
-**height**
+<b>height</b>
 :
 0
 ;
-**border**
+<b>border</b>
 :
 50
 px
 solid
 ;
-**position**
+<b>position</b>
 :
 absolute
 ;
@@ -9928,14 +9893,14 @@ absolute
 ::
 before
 {
-**border-color**
+<b>border-color</b>
 :
 transparent
 transparent
 #ff5656
 transparent
 ;
-**transform**
+<b>transform</b>
 :
 scaleY
 (
@@ -9957,14 +9922,14 @@ deg
 ::
 after
 {
-**border-color**
+<b>border-color</b>
 :
 transparent
 transparent
 #d64444
 transparent
 ;
-**transform**
+<b>transform</b>
 :
 scaleY
 (
@@ -9992,22 +9957,22 @@ deg
 The CSS multi-column layout makes it easy to create multiple columns
 of text.
 
-**Code**
+<b>Code</b>
 
-**&lt;div** id=&quot;multi-columns&quot;**&gt;**Lorem ipsum dolor sit amet,
+<b>&lt;div</b> id=&quot;multi-columns&quot;<b>&gt;</b>Lorem ipsum dolor sit amet,
 consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
 labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
 exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
 Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
 dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
 proident, sunt in culpa qui officia deserunt mollit anim id est
-laborum**&lt;/div&gt;**
+laborum<b>&lt;/div&gt;</b>
 
 .multi-columns {
 
--moz-column-count: 2; -webkit-column-count: 2; **column-count**: 2; }
+-moz-column-count: 2; -webkit-column-count: 2; <b>column-count</b>: 2; }
 
-**Result**
+<b>Result</b>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 246.  (xxx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left" width="100%">
@@ -10026,9 +9991,9 @@ The column-width property sets the minimum column width. If
 column-count is not defined the browser will make as many columns as
 fit in the available width.
 
-**Code:**
+<b>Code:</b>
 
-**&lt;div** id=&quot;multi-columns&quot;**&gt;**
+<b>&lt;div</b> id=&quot;multi-columns&quot;<b>&gt;</b>
 
 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
 eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
@@ -10038,9 +10003,9 @@ reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
 pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
 culpa qui officia deserunt mollit anim id est laborum
 
-**&lt;**
-**/div**
-**&gt;**
+<b>&lt;</b>
+<b>/div</b>
+<b>&gt;</b>
 .multi-columns
 {
 -moz-column-width
@@ -10174,468 +10139,170 @@ on the individual item width.
 
 <h4>HTML:</h4>
 
-<b>&lt;</b>
-<b>nav</b>
-<b>&gt;</b>
-<b>&lt;</b>
-<b>ul</b>
-<b>&gt;</b>
-<b>&lt;</b>
-<b>li</b>
-<b>&gt;</b>
-abc
-<b>&lt;</b>
-<b>/li</b>
-<b>&gt;</b>
-<b>&lt;</b>
-<b>li</b>
-<b>&gt;</b>
-abcdefghijkl
-<b>&lt;</b>
-<b>/li</b>
-<b>&gt;</b>
-<b>&lt;</b>
-<b>li</b>
-<b>&gt;</b>
-abcdef
-<b>&lt;</b>
-<b>/li</b>
-<b>&gt;</b>
-<b>&lt;</b>
-<b>/ul</b>
-<b>&gt;</b>
-<b>&lt;</b>
-<b>/nav</b>
-<b>&gt;</b>
+<pre><code><b>&lt;nav&gt;</b>
+  <b>&lt;ul&gt;</b>
+    <b>&lt;li&gt;</b>abc<b>&lt;/li&gt;</b>
+    <b>&lt;li&gt;</b>abcdefghijkl<b>&lt;/li&gt;</b>
+    <b>&lt;li&gt;</b>abcdef<b>&lt;/li&gt;</b>
+  <b>&lt;/ul&gt;</b>
+<b>&lt;/nav&gt;</b></code></pre>
 
 <h4>CSS</h4>
 
-nav
-{
-<b>width</b>
-:
-100
-&percnt;
-;
-<b>line-height</b>
-:
-1.4
-em
-;
+<pre><code>nav {
+  <b>width</b>: 100&percnt;;
+  <b>line-height</b>: 1.4em;
 }
-ul
-{
-<b>list-style</b>
-:
-none
-;
-<b>display</b>
-:
-lock
-;
-<b>width</b>
-:
-100
-&percnt;
-;
-<b>margin</b>
-:
-0
-;
-<b>padding</b>
-:
-0
-;
-<b>text-align</b>
-:
-justify
-;
-<b>margin-bottom</b>
-:
--1.4
-em
-;
+ul {
+  <b>list-style</b>: none;
+  <b>display</b>: lock;
+  <b>width</b>: 100&percnt;;
+  <b>margin</b>: 0;
+  <b>padding</b>: 0;
+  <b>text-align</b>: justify;
+  <b>margin-bottom</b>: -1.4em;
 }
-ul
-:
-after
-{
-<b>content</b>
-:
-&quot;&quot;
-;
-<b>display</b>
-:
-inline-block
-;
-<b>width</b>
-:
-100
-&percnt;
-;
+ul:after {
+  <b>content</b>: &quot;&quot;;
+  <b>display</b>: inline-block;
+  <b>width</b>: 100&percnt;;
 }
-li
-{
-<b>display</b>
-:
-inline-block
-;
-}
+li {
+  <b>display</b>: inline-block;
+}</code></pre>
 
 <b>Notes</b>
 
-after
-
-The nav, ul and li tags were chosen for their semantic meaning of &apos;a
-list of navigation (menu) items&apos;. Other tags may also be used of
-course.
-
-The : pseudo-element causes an extra &apos;line&apos; in the ul and thus an
-extra, empty height of this block, pushing other content down. This is
-solved by the negative margin-bottom, which has to have the same
-magnitude as the line-height (but negative).
-
-If the page becomes too narrow for all the items to fit, the items
-will break to a new line (starting from the right) and be justified on
-this line. The total height of the menu will grow as needed.
-
+<ul>
+  <li>The nav, ul and li tags were chosen for their semantic meaning of &apos;a
+    list of navigation (menu) items&apos;. Other tags may also be used of course.</li>
+  <li>The :after pseudo-element causes an extra &apos;line&apos; in the ul and thus an
+    extra, empty height of this block, pushing other content down. This is solved by the 
+	negative margin-bottom, which has to have the same magnitude as the line-height (but 
+	negative).</li>
+  <li>If the page becomes too narrow for all the items to fit, the items will break to a 
+  new line (starting from the right) and be justified on this line. The total height of 
+  the menu will grow as needed.</li>
+</ul>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ch42">Chapter 42: Inheritance</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch42-1">Section 42.1: Automatic inheritance</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p>Inheritance the a fundamental mechanism of CSS by which the computed
+values of some properties of an element are applied to its&apos; children.
+This is particularly useful when you want to set a global style to
+your elements rather than having to set said properties to each and
+every element in your markup.</p>
 
-> Inheritance the a fundamental mechanism of CSS by which the computed
-> values of some properties of an element are applied to its&apos; children.
-> This is particularly useful when you want to set a global style to
-> your elements rather than having to set said properties to each and
-> every element in your markup.
->
-> Common properties that are automatically inherited are: font, color,
-> text-align, line-height.
->
-> Assume the following stylesheet:
+<p>Common properties that are automatically inherited are: font, color,
+text-align, line-height.</p>
 
-#myContainer
-{
-<b>color</b>
-:
-red
-;
-<b>padding</b>
-:
-5
-px
-;
-}
+<p>Assume the following stylesheet:</p>
 
-  <b>color</b>   :   red   not only to the  <b>&lt;div</b>   <b>&gt;</b> element but also to <b>&lt;h3</b>   <b>&gt;</b>   <b>&lt;p</b>
+<pre><code>#myContainer {
+  <b>color</b>: red;
+  <b>padding</b>: 5px;
+}</code></pre>
 
-> This will apply <b>&gt;</b> elements. However, due to the nature of padding
-> its value will <b>*not*</b> be inherited to those elements.
+<p>This will apply color: red not only to the <b>&lt;div&gt;</b> element but also to the 
+<b>&lt;h3&gt;</b> and <b>&lt;p&gt;</b> elements. However, due to the nature of padding its 
+value will <b>not</b> be inherited to those elements.</p>
 
-<b>&lt;</b>
-<b>div</b>
-id
-=
-&quot;myContainer&quot;
-<b>&gt;</b>
-<b>&lt;</b>
-<b>h</b>
-<b>3</b>
-<b>&gt;</b>
-Some header
-<b>&lt;</b>
-<b>/h</b>
-<b>3</b>
-<b>&gt;</b>
-<b>&lt;</b>
-<b>p</b>
-<b>&gt;</b>
-Some paragraph
-<b>&lt;</b>
-<b>/p</b>
-<b>&gt;</b>
-<b>&lt;</b>
-<b>/div</b>
-<b>&gt;</b>
+<pre><code><b>&lt;div</b> id=&quot;myContainer&quot;<b>&gt;</b>
+  <b>&lt;h3&gt;</b>Some header<b>&lt;/h3&gt;</b>
+  <b>&lt;p&gt;</b>Some paragraph<b>&lt;/p&gt;</b>
+<b>&lt;/div&gt;</b></code></pre>
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch42-2">Section 42.2: Enforced inheritance</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-Some properties are not automatically inherited from an element down
+<p>Some properties are not automatically inherited from an element down
 to its&apos; children. This is because those properties are typically
 desired to be unique to the element (or selection of elements) to
 which the property is applied to. Common such properties are margin,
-padding, background, display, etc.
+padding, background, display, etc.</p>
 
-However, sometimes inheritance is desired anyway. To achieve this, we
+<p>However, sometimes inheritance is desired anyway. To achieve this, we
 can apply the inherit value to the property that should be inherited.
-The inherit value can be appied to *any* CSS property and *any* HTML
-element.
+The inherit value can be appied to <i>any</i> CSS property and <i>any</i> HTML</p>
+element.</p>
 
-Assume the following stylesheet:
+<p>Assume the following stylesheet:</p>
 
-#myContainer
-{
-<b>color</b>
-:
-red
-;
-<b>padding</b>
-:
-5
-px
-;
+<pre><code>#myContainer {
+  <b>color</b>: red;
+  <b>padding</b>: 5px;
 }
-#myContainer
-p
-{
-<b>padding</b>
-:
-inherit
-;
-}
+#myContainer p {
+  <b>padding</b>: inherit;
+}</code></pre>
 
-<b>color</b>   :   red       to both the              <b>&lt;h3</b>   <b>&gt;</b> and   <b>&lt;p</b>
+<p>This will apply <b>color</b>: red to both the <b>&lt;h3&gt;</b> and <b>&lt;p&gt;</b> 
+elements due to the inheritance nature of the color property.  However, the <b>&lt;p&gt;</b> 
+element will also inherit the padding value from its&apos; parent because this was specified.</p>
 
-
-This will apply <b>&gt;</b> elements due to the inheritance nature of the
-color property.
-
-<b>&lt;p</b>
-
-However, the <b>&gt;</b> element will also inherit the padding value from
-its&apos; parent because this was specified.
-
-<b>&lt;</b>
-<b>div</b>
-id
-=
-&quot;myContainer&quot;
-<b>&gt;</b>
-<b>&lt;</b>
-<b>h</b>
-<b>3</b>
-<b>&gt;</b>
-Some header
-<b>&lt;</b>
-<b>/h</b>
-<b>3</b>
-<b>&gt;</b>
-<b>&lt;</b>
-<b>p</b>
-<b>&gt;</b>
-Some paragraph
-<b>&lt;</b>
-<b>/p</b>
-<b>&gt;</b>
-<b>&lt;</b>
-<b>/div</b>
-<b>&gt;</b>
+<pre><code><b>&lt;div</b> id=&quot;myContainer&quot;<b>&gt;</b>
+  <b>&lt;h3&gt;</b>Some header<b>&lt;/h3&gt;</b>
+  <b>&lt;p&gt;</b>Some paragraph<b>&lt;/p&gt;</b>
+<b>&lt;/div&gt;</b></code></pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ch43">Chapter 43: CSS Image Sprites</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch43-1">Section 43.1: A Basic Implementation</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h4>What&apos;s an image sprite?</h4>
 
-> <b>What&apos;s an image sprite?</b>
->
-> An image sprite is a single asset located within an image sprite
-> sheet. An image sprite sheet is an image file that contains more than
-> one asset that can be extracted from it.
->
-> For example:
+<p>An image sprite is a single asset located within an image sprite
+sheet. An image sprite sheet is an image file that contains more than
+one asset that can be extracted from it.</p>
+
+<h5>For example:<h5>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 248.  (xxx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 248. example: image sprite sheet (198) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left" width="100%">
 <img src="./images/image248.jpg"
   style="width:17%"
-  title=""
-  alt="." />
+  title="Example: Image sprite sheet"
+  alt="Example: Image sprite sheet." />
 </p>
 <!-- (./images/image248.jpg){width="1.75in" height="1.875in"} -->
 
-> The image above is an image sprite sheet, and each one of those stars
-> is a sprite within the sprite sheet. These sprite sheets are useful
-> because they improve performance by reducing the number of HTTP
-> requests a browser might have to make.
->
-> So how do you implement one? Here&apos;s some example code.
->
+<p>The image above is an image sprite sheet, and each one of those stars
+is a sprite within the sprite sheet. These sprite sheets are useful
+because they improve performance by reducing the number of HTTP
+requests a browser might have to make.</p>
+
+<p>So how do you implement one? Here&apos;s some example code.</p>
+
+
 <h4>HTML:</h4>
 
-<b>&lt;</b>
-
-<b>div</b>
-
-class
-
-=
-
-&quot;icon icon1&quot;
-
-<b>&gt;</b>
-
-<b>&lt;</b>
-
-<b>/div</b>
-
-<b>&gt;</b>
-
-<b>&lt;</b>
-
-<b>div</b>
-
-class
-
-=
-
-&quot;icon icon2&quot;
-
-<b>&gt;</b>
-
-<b>&lt;</b>
-
-<b>/div</b>
-
-<b>&gt;</b>
-
-<b>&lt;</b>
-
-<b>div</b>
-
-class
-
-=
-
-&quot;icon icon3&quot;
-
-<b>&gt;</b>
-
-<b>&lt;</b>
-
-<b>/div</b>
-
-<b>&gt;</b>
+<pre><code><b>&lt;div</b> class=&quot;icon icon1&quot;<b>&gt;&lt;/div&gt;</b>
+<b>&lt;div</b> class=&quot;icon icon2&quot;<b>&gt;&lt;/div&gt;</b>
+<b>&lt;div</b> class=&quot;icon icon3&quot;<b>&gt;&lt;/div&gt;</b></code></pre>
 
 <h4>CSS:</h4>
 
-.icon
-
-{
-
-<b>background</b>
-
-:
-
-url
-
-(
-
-"
-
-icons-sprite.png
-
-"
-
-)
-
-;
-
-<b>display</b>
-
-:
-
-inline-block
-
-;
-
-<b>height</b>
-
-:
-
-20
-
-px
-
-;
-
-<b>width</b>
-
-:
-
-20
-
-px
-
-;
-
+<pre><code>.icon {
+  <b>background</b>: url("icons-sprite.png");
+  <b>display</b>: inline-block;
+  <b>height</b>: 20px;
+  <b>width</b>: 20px;
 }
-
-.icon1
-
-{
-
-<b>background-position</b>
-
-:
-
-0
-
-px
-
-0
-
-px
-
-;
-
+.icon1 {
+  <b>background-position</b>: 0px 0px;
 }
-
-.icon2
-
-{
-
-<b>background-position</b>
-
-:
-
--20
-
-px
-
-0
-
-px
-
-;
-
+.icon2 {
+  <b>background-position</b>: -20px 0px;
 }
+.icon3 {
+  <b>background-position</b>: -40px 0px;
+}</code></pre>
 
-.icon3
-
-{
-
-<b>background-position</b>
-
-:
-
--40
-
-px
-
-0
-
-px
-
-;
-
-}
-
-By using setting the sprite&apos;s width and height and by using the
+<p>By using setting the sprite&apos;s width and height and by using the
 background-position property in CSS (with an x and y value) you can
-easily extract sprites from a sprite sheet using CSS.
+easily extract sprites from a sprite sheet using CSS.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ch44">Chapter 44: Clipping and Masking</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -10677,214 +10344,93 @@ easily extract sprites from a sprite sheet using CSS.
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch44-1">Section 44.1: Clipping and Masking: Overview and Dierence</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p>With <b>Clipping</b> and <b>Masking</b> you can make some specified parts of
+elements transparent or opaque. Both can be applied to any HTML element.</p>
 
-With <b>Clipping</b> and <b>Masking</b> you can make some specified parts of
-elements transparent or opaque. Both can be applied to any HTML
-element.
+<h4>Clipping</h4>
 
-<b>Clipping</b>
-
-  circle          (),     polygon           () or        ellipse
-
-
-Clips are vector paths. Outside of this path the element will be
+<p>Clips are vector paths. Outside of this path the element will be
 transparent, inside it&apos;s opaque. Therefore you can define a clip-path
 property on elements. Every graphical element that also exists in SVG
-you can use here as a function to define the path. Examples are ().
+you can use here as a function to define the path. Examples are 
+circle(), polygon() or ellipse().</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 249.  (xxx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 249. example; clip-path (200) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left" width="100%">
 <img src="./images/image249.jpg"
   style="width:33%"
-  title=""
-  alt="." />
+  title="Example: clip-path"
+  alt="Example: clip-path." />
 </p>
 <!-- (./images/image249.jpg){width="3.3333333333333335in" height="2.71875in"} -->
 
-Example
+<h5>Example</h5>
 
-<b>clip-path</b>
+<pre><code><b>clip-path</b>: circle(100px at center);</code></pre>
 
-:
+<p>The element will be only visible inside of this circle, which is
+positioned at the center of the element and has a radius of 100px.</p>
 
-circle
+<h4>Masking</h4>
 
-(
-
-100
-
-px
-
-at
-
-center
-
-)
-
-;
-
-The element will be only visible inside of this circle, which is
-positioned at the center of the element and has a radius of 100px.
-
-<b>Masking</b>
-
-Masks are similar to Clips, but instead of defining a path you define
+<p>Masks are similar to Clips, but instead of defining a path you define
 a mask what layers over the element. You can imagine this mask as an
-image what consist of mainly two colors: black and white.
+image what consist of mainly two colors: black and white.</p>
 
-<b>Luminance Mask</b>: Black means the region is opaque, and white that
+<p><b>Luminance Mask</b>: Black means the region is opaque, and white that
 it&apos;s transparent, but there is also a grey area which is
-semi-transparent, so you are able to make smooth transitions.
+semi-transparent, so you are able to make smooth transitions.</p>
 
-<b>Alpha Mask</b>: Only on the transparent areas of the mask the element
-will be opaque.
+<p><b>Alpha Mask</b>: Only on the transparent areas of the mask the element
+will be opaque.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 250.  (xxx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~ 250. black and white luminance mask; opaque to transparent (right to left) (200) ~~~~~-->
 <p align="left" width="100%">
 <img src="./images/image250.jpg"
   style="width:33%"
-  title=""
-  alt="." />
+  title="Black and white luminance mask; opaque to transparent (right to left)"
+  alt="Black and white luminance mask; opaque to transparent (right to left)." />
 </p>
-<!-- (./images/image250.jpg){width="3.3333333333333335in" height="2.0625in"} -->
 
-This image for example can be used as a luminance mask to make for an
+<p>This image for example can be used as a luminance mask to make for an
 element a very smooth transition from right to left and from opaque to
-transparent.
+transparent.</p>
 
-The mask property let you specify the the mask type and an image to be
-used as layer.
+<p>The mask property let you specify the the mask type and an image to be
+used as layer.</p>
 
-Example
+<h5>Example<h5>
 
-<b>mask</b>
+<pre><code><b>mask</b>: url(masks.svg#rectangle) luminance;</code></pre>
 
-:
-
-url
-
-(
-
-masks
-
-.svg
-
-#rectangle
-
-)
-
-luminance
-
-;
-
-An element called rectangle defined in masks.svg will be used as an
-<b>luminance mask</b> on the element.
-
+<p>An element called rectangle defined in masks.svg will be used as an
+<b>luminance mask</b> on the element.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch44-2">Section 44.2: Simple mask that fades an image from solid to transparent</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-
 <h4>CSS:</h4>
 
-div
-
-{
-
-<b>height</b>
-
-:
-
-200
-
-px
-
-;
-
-<b>width</b>
-
-:
-
-200
-
-px
-
-;
-
-<b>background</b>
-
-:
-
-url
-
-(
-
-http
-
-:
-
-//lorempixel.com/
-
-200
-
-/
-
-200
-
-/nature/
-
-1
-
-)
-
-;
-
-<b>mask-image</b>
-
-:
-
-linear-gradient
-
-(
-
-to
-
-right
-
-,
-
-white
-
-,
-
-transparent
-
-)
-
-;
-
-}
+<pre><code>div {
+  <b>height</b>: 200px;
+  <b>width</b>: 200px;
+  <b>background</b>: url(http://lorempixel.com/200/200/nature/1);
+  <b>mask-image</b>: linear-gradient(to right, white, transparent);
+}</code></pre>
 
 <h4>HTML:</h4>
 
-<pre><code>
-<b>&lt;</b>
-<b>div</b>
-<b>&gt;</b>
-<b>&lt;</b>
-<b>/div</b>
-<b>&gt;</b>
-</code></pre>
+<pre><code><b>&lt;div&gt;&lt;/div&gt;</b></code></pre>
 
-> In the above example there is an element with an image as its
-> background. The mask that is applied on the image (using CSS) makes it
-> look as though it is fading out from left to right.
->
-> The masking is achieved by using a linear-gradient that goes from
-> white (on the left) to transparent (on the right) as the mask. As it
-> is an alpha mask, image becomes transparent where the mask is
-> transparent.
->
-> <b>Output without the mask:</b>
+In the above example there is an element with an image as its
+background. The mask that is applied on the image (using CSS) makes it
+look as though it is fading out from left to right.
+
+The masking is achieved by using a linear-gradient that goes from
+white (on the left) to transparent (on the right) as the mask. As it
+is an alpha mask, image becomes transparent where the mask is
+transparent.
+
+<h4>Output without the mask:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 251.  (xxx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left" width="100%">
@@ -10895,7 +10441,7 @@ transparent
 </p>
 <!-- [image251.jpg 2.18 x 2.18](./images/image251.jpg) -->
 
-> <b>Output with the mask:</b>
+<h4>Output with the mask:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 252.  (xxx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left" width="100%">
@@ -10913,79 +10459,38 @@ Firefox.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch44-3">Section 44.3: Clipping (Circle)</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-
 <h4>CSS:</h4>
 
-<pre><code>
-div
-{
-<b>width</b>
-:
-200
-px
-;
-<b>height</b>
-:
-200
-px
-;
-<b>background</b>
-:
-teal
-;
-<b>clip-path</b>
-:
-circle
-(
-30
-&percnt;
-at
-50
-&percnt;
-50
-&percnt;
-)
-;
-/* refer remarks before usage */
-}
-</code></pre>
+<pre><code>div {
+  <b>width</b>: 200px;
+  <b>height</b>: 200px;
+  <b>background</b>: teal;
+  <b>clip-path</b>: circle(30&percnt; at 50&percnt; 50&percnt;); /* refer remarks before usage */
+}</code></pre>
 
 <h4>HTML:</h4>
 
-<pre><code>
-<b>&lt;</b>
-<b>div</b>
-<b>&gt;</b>
-<b>&lt;</b>
-<b>/div</b>
-<b>&gt;</b>
-</code></pre>
+<pre><code><b>&lt;div&gt;&lt;/div&gt;</b></code></pre>
 
-> This example shows how to clip a div to a circle. The element is
-> clipped into a circle whose radius is 30% based on the dimensions of
-> the reference box with its center point at the center of the reference
-> box. Here since no &lt;clipgeometry-box&gt; (in other words, reference
-> box) is provided, the border-box of the element will be used as the
-> reference box.
->
-> The circle shape needs to have a radius and a center with (x,y)
-> coordinates:
+<p>This example shows how to clip a div to a circle. The element is
+clipped into a circle whose radius is 30% based on the dimensions of
+the reference box with its center point at the center of the reference
+box. Here since no &lt;clipgeometry-box&gt; (in other words, reference
+box) is provided, the border-box of the element will be used as the
+reference box.</p>
 
-circle
+<p>The circle shape needs to have a radius and a center with (x,y) coordinates:
 
-<pre><code>
-(
-radius at x y
-)
-</code></pre>
+<pre><code>circle(radius at x y)</code></pre>
 
-&lbrack;<b>&lbrack;View Example&rbrack;</b>&rbrack;(https://jsfiddle.net/webtiki/qp69n494/)
-<b>Output:</b>
+<p><a href="https://jsfiddle.net/webtiki/qp69n494/">View Example (jsFiddle)</a>.</p>
+
+<h4>Output:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 253.  (xxx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left" width="100%">
 <img src="./images/image253.jpg"
-  style="width:25%"
+  style="width:20%"
   title=""
   alt="." />
 </p>
@@ -11075,7 +10580,6 @@ background.
   alt="." />
 </p>
 <!-- [image254.jpg 2.16 x 2.16](./images/image254.jpg) -->
-
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch44-5">Section 44.5: Using masks to cut a hole in the middle of an image</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -11133,214 +10637,20 @@ effect of a circle being cut out from the center of an image.
 
 <h4>CSS:</h4>
 
-div
-
-{
-
-/* check remarks before usage */
-
-<b>height</b>
-
-:
-
-200
-
-px
-
-;
-
-<b>width</b>
-
-:
-
-400
-
-px
-
-;
-
-<b>background-image</b>
-
-:
-
-url
-
-(
-
-http
-
-:
-
-//lorempixel.com/
-
-400
-
-/
-
-200
-
-/nature/
-
-4
-
-)
-
-;
-
-<b>mask-image</b>
-
-:
-
-linear-gradient
-
-(
-
-to
-
-top
-
-right
-
-,
-
-transparent
-
-49.5
-
-&percnt;
-
-,
-
-white
-
-50.5
-
-&percnt;
-
-)
-
-,
-
-linear-gradient
-
-(
-
-to
-
-top
-
-left
-
-,
-
-transparent
-
-49.5
-
-&percnt;
-
-,
-
-white
-
-50.5
-
-&percnt;
-
-)
-
-,
-
-linear-gradient
-
-(
-
-white
-
-,
-
-white
-
-)
-
-;
-
-<b>mask-size</b>
-
-:
-
-75
-
-&percnt;
-
-25
-
-&percnt;
-
-,
-
-25
-
-&percnt;
-
-25
-
-&percnt;
-
-,
-
-100
-
-&percnt;
-
-75
-
-&percnt;
-
-;
-
-<b>mask-position</b>
-
-:
-
-bottom
-
-left
-
-,
-
-bottom
-
-right
-
-,
-
-top
-
-left
-
-;
-
-<b>mask-repeat</b>
-
-:
-
-no-repeat
-
-;
-
-}
+<pre><code>div { /* check remarks before usage */
+  <b>height</b>: 200px;
+  <b>width</b>: 400px;
+  <b>background-image</b>: url(http://lorempixel.com/400/200/nature/4);
+  <b>mask-image</b>: linear-gradient(to top right, transparent 49.5&percnt;, white 50.5&percnt;), linear-gradient(to top
+  left, transparent 49.5&percnt;, white 50.5&percnt;), linear-gradient(white, white);
+  <b>mask-size</b>: 75&percnt; 25&percnt;, 25&percnt; 25&percnt;, 100&percnt; 75&percnt;;
+  <b>mask-position</b>: bottom left, bottom right, top left;
+  <b>mask-repeat</b>: no-repeat;
+}</code></pre>
 
 <h4>HTML:</h4>
 
-<pre><code>
-<b>&lt;</b>
-<b>div</b>
-<b>&gt;</b>
-<b>&lt;</b>
-<b>/div</b>
-<b>&gt;</b>
-</code></pre>
+<pre><code><b>&lt;div&gt;&lt;/div&gt;</b></code></pre>
 
 <p>In the above example, three linear-gradient images (which when placed
 in their appropriate positions would cover 100% x 100% of the
@@ -11367,7 +10677,6 @@ triangular shaped cut at the bottom of the image.</p>
   title=""
   alt="." />
 </p>
-<!-- [image258.jpg 4.26 x 2.21](./images/image258.jpg) -->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ch45">Chapter 45: Fragmentation</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -11444,7 +10753,14 @@ url(&apos;http://cdn.sstatic.net/Sites/stackoverflow/img/favicon.ico&apos;);}&qu
 3.  The web browser combines the DOM and the CSSOM to create a render
     tree. The web browser displays your webpage.
 
-[image259.jpg 7.5 x 3](./images/image259.jpg)
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~ 259. dom, cssom and render tree (207) ~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p align="left" width="100%">
+<img src="./images/image259.png"
+  style="width:75%"
+  title="DOM, CSSOM and Render Tree"
+  alt="DOM, CSSOM and Render Tree." />
+</p>
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ch47">Chapter 47: Feature Queries</h2>
@@ -11600,163 +10916,35 @@ or
 
 (
 
-<b>display</b>
-
-:
-
-table-cell
-
+<b>display</b>: table-cell) { 
+/* Will be used if the browser supports flexbox or display: table-cell */
+}
+<b>&commat;supports</b> not (webkit-transform &minus;: translate(0, 0, 0)
 )
-
 {
-
-/* Will be used if the browser supports flexbox or display: table-cell
-*/
-
+/* Will &ast;not&ast; be used if the browser supports -webkit-transform: translate(&period;..) */
 }
 
-<b>&commat;supports</b>
+<p>For the ultimate &commat;supports experience, try grouping logical
+expressions with parenthesis:</p>
 
-not
-
-(
-
-webkit-transform
-
-&minus;
-
-:
-
-translate
-
-(
-
-0
-
-,
-
-0
-
-,
-
-0
-
-)
-
-)
-
-{
-
-/* Will &ast;not&ast; be used if the browser supports -webkit-transform:
-translate(&period;..) */
-
-}
-
-> For the ultimate &commat;supports experience, try grouping logical
-> expressions with parenthesis:
-
-<b>&commat;supports</b>
-
-(
-
-(
-
-<b>display</b>
-
-:
-
-block
-
-)
-
-and
-
-(
-
-zoom
-
-:
-
-1
-
-)
-
-)
-
-or
-
-(
-
-(
-
-<b>display</b>
-
-:
-
-flex
-
-)
-
-and
-
-(
-
-not
-
-(
-
-<b>display</b>
-
-:
-
-table-cell
-
-)
-
-)
-
-)
-
-or
-
-(
-
-<b>transform</b>
-
-:
-
-translateX
-
-(
-
-1
-
-px
-
-)
-
-)
-
-{
-
+<b>&commat;supports</b> ( (<b>display</b>: block) and (zoom: 1) ) or
+( ( <b>display</b>: flex ) and ( not( <b>display</b>: table-cell ) ) )
+or ( <b>transform</b>: translateX (1px) ) {
 /* &period;.. */
-
 }
 
-> This will work if the browser
+<p>This will work if the browser</p>
 
-  <b>display</b>           :   block              AND             zoom
-
+<b>display</b>: block AND zoom
 
 1.  Supports : 1, or
 
-  <b>display</b>   :   flex     AND NOT         <b>display</b>   :   table-cell
-
+<b>display</b>: flex AND NOT <b>display</b>: table-cell
 
 2.  Supports , or
 
-  <b>transform</b>             :   translateX                      (   1px
-
+<b>transform</b>: translateX ( 1px 
 
 3.  Supports ).
 
@@ -11765,24 +10953,30 @@ px
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch48-1">Section 48.1: Stacking Context</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p>In this example every positioned element creates its own stacking
+context, because of their positioning and z-index values. The
+hierarchy of stacking contexts is organized as follows:</p>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~ 260. example; positioning and z-index (209) ~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p align="left" width="100%">
+<img src="./images/image260.png"
+  style="width:60%"
+  title="Example; positioning and z-index"
+  alt="Example; positioning and z-index." />
+</p>
 
-> In this example every positioned element creates its own stacking
-> context, because of their positioning and z-index values. The
-> hierarchy of stacking contexts is organized as follows:
-
-Root
-
-DIV #1
-
-DIV #2
-
-DIV #3
-
-DIV #4
-
-DIV #5
-
-DIV #6
+<ul>
+  <li>Root
+    <ul>
+	  <li>DIV #1</li>
+	  <li>DIV #2</li>
+	  <li>DIV #3</li>
+	  <li>DIV #4</li>
+	  <li>DIV #5</li>
+	  <li>DIV #6</li>
+	</ul>
+  </li>
+</ul>
 
 <p>It is important to note that DIV #4, DIV #5 and DIV #6 are children of
 DIV #3, so stacking of those elements is completely resolved within
@@ -11793,279 +10987,110 @@ respect to its sibling&apos;s DIV.</p>
 <h4>HTML:</h4>
 
 <pre><code><b>&lt;div</b> id=&quot;div1&quot;<b>&gt;</b>
-<b>&lt;h1&gt;</b>
-Division Element #1
-<b>&lt;/h1&gt;</b>
-<b>&lt;code&gt;</b>
-position: relative;
-<b>&lt;</b><b>br</b><b>/&gt;</b>
-z-index: 5;
-<b>&lt;</b>
-<b>/code</b>
-<b>&gt;</b>
-<b>&lt;</b>
-<b>/div</b>
-<b>&gt;</b>
-<b>&lt;</b>
-<b>div</b>
-id
-=
-&quot;div2&quot;
-<b>&gt;</b>
-<b>&lt;</b>
-<b>h</b>
-<b>1</b>
-<b>&gt;</b>
-Division Element #2
-<b>&lt;</b>
-<b>/h</b>
-<b>1</b>
-<b>&gt;</b>
-<b>&lt;</b>
-<b>code</b>
-<b>&gt;</b>
-position: relative;
-<b>&lt;</b>
-<b>br</b>
-<b>/&gt;</b>
-z-index: 2;
-<b>&lt;</b>
-<b>/code</b>
-<b>&gt;</b>
-<b>&lt;</b>
-<b>/div</b>
-<b>&gt;</b>
-<b>&lt;</b>
-<b>div</b>
-id
-=
-&quot;div3&quot;
-<b>&gt;</b>
-<b>&lt;</b>
-<b>div</b>
-id
-=
-&quot;div4&quot;
-<b>&gt;</b>
-<b>&lt;</b>
-<b>h</b>
-<b>1</b>
-<b>&gt;</b>
-Division Element #4
-<b>&lt;</b>
-<b>/h</b>
-<b>1</b>
-<b>&gt;</b>
-<b>&lt;</b>
-<b>code</b>
-<b>&gt;</b>
-position: relative;
-<b>&lt;</b>
-<b>br</b>
-<b>/&gt;</b>
-z-index: 6;
-<b>&lt;</b>
-<b>/code</b>
-<b>&gt;</b>
-<b>&lt;</b>
-<b>/div</b>
-<b>&gt;</b>
-<b>&lt;</b>
-<b>h</b>
-<b>1</b>
-<b>&gt;</b>
-Division Element #3
-<b>&lt;</b>
-<b>/h</b>
-<b>1</b>
-<b>&gt;</b>
-<b>&lt;</b>
-<b>code</b>
-<b>&gt;</b>
-position: absolute;
-<b>&lt;</b>
-<b>br</b>
-<b>/&gt;</b>
-z-index: 4;
-<b>&lt;</b>
-<b>/code</b>
-<b>&gt;</b>
-<b>&lt;</b>
-<b>div</b>
-id
-=
-&quot;div5&quot;
-<b>&gt;</b>
-<b>&lt;</b>
-<b>h</b>
-<b>1</b>
-<b>&gt;</b>
-Division Element #5
-<b>&lt;</b>
-<b>/h</b>
-<b>1</b>
-<b>&gt;</b>
-<b>&lt;</b>
-<b>code</b>
-<b>&gt;</b>
-position: relative;
-<b>&lt;</b>
-<b>br</b>
-<b>/&gt;</b>
-z-index: 1;
-<b>&lt;</b>
-<b>/code</b>
-<b>&gt;</b>
-<b>&lt;</b>
-<b>/div</b>
-<b>&gt;</b>
-<b>&lt;</b>
-<b>div</b>
-id
-=
-&quot;div6&quot;
-<b>&gt;</b>
-<b>&lt;</b>
-<b>h</b>
-<b>1</b>
-<b>&gt;</b>
-Division Element #6
-<b>&lt;</b>
-<b>/h</b>
-<b>1</b>
-<b>&gt;</b>
-<b>&lt;</b>
-<b>code</b>
-<b>&gt;</b>
-position: absolute;
-<b>&lt;</b>
-<b>br</b>
-<b>/&gt;</b>
-z-index: 3;
-<b>&lt;</b>
-<b>/code</b>
-<b>&gt;</b>
-<b>&lt;</b>
-<b>/div</b>
-<b>&gt;</b>
-<b>&lt;</b>
-<b>/div</b>
-<b>&gt;</b>
-> <b>CSS:</b>
-#div5
-{
-<b>border</b>
-:
-1
-px
-dashed
-#996
-;
-<b>background-color</b>
-:
-#ffc
-;
+  <b>&lt;h1&gt;</b>Division Element #1<b>&lt;/h1&gt;</b>
+  <b>&lt;code&gt;</b>position: relative;<b>&lt;br/&gt;</b>
+  z-index: 5;<b>&lt;/code&gt;</b>
+<b>&lt;/div&gt;</b>
+<b>&lt;div</b> id=&quot;div2&quot;<b>&gt;</b>
+  <b>&lt;h1&gt;</b>Division Element #2<b>&lt;/h1&gt;</b>
+  <b>&lt;code&gt;</b>position: relative;<b>&lt;br/&gt;</b>
+  z-index: 2;<b>&lt;/code&gt;</b>
+<b>&lt;/div&gt;</b>
+<b>&lt;div</b> id=&quot;div3&quot;<b>&gt;</b>
+  <b>&lt;div</b> id=&quot;div4&quot;<b>&gt;</b>
+    <b>&lt;h1&gt;</b>Division Element #4<b>&lt;/h1&gt;</b>
+    <b>&lt;code&gt;</b>position: relative;<b>&lt;br/&gt;</b>
+    z-index: 6;<b>&lt;/code&gt;</b>
+  <b>&lt;/div&gt;</b>
+  <b>&lt;h1&gt;</b>Division Element #3<b>&lt;/h1&gt;</b>
+  <b>&lt;code&gt;</b>position: absolute;<b>&lt;br/&gt;</b>
+  z-index: 4;<b>&lt;/code&gt;</b>
+  <b>&lt;div</b> id=&quot;div5&quot;<b>&gt;</b>
+    <b>&lt;h1&gt;</b>Division Element #5<b>&lt;/h1&gt;</b>
+    <b>&lt;code&gt;</b>position: relative;<b>&lt;br/&gt;</b>
+    z-index: 1;<b>&lt;/code&gt;</b>
+  <b>&lt;/div&gt;</b>
+  <b>&lt;div</b> id=&quot;div6&quot;<b>&gt;</b>
+    <b>&lt;h1&gt;</b>Division Element #6<b>&lt;/h1&gt;</b>
+    <b>&lt;code&gt;</b>position: absolute;<b>&lt;br/&gt;</b>
+    z-index: 3;<b>&lt;/code&gt;</b>
+  <b>&lt;/div&gt;</b>
+<b>&lt;/div&gt;</b></code></pre>
+  
+<h4>CSS:</h4>
+
+<pre><code>&ast; {
+  <b>margin</b>: 0;
 }
-#div4
-{
-<b>z-index</b>
-:
-6
-;
-<b>margin-bottom</b>
-:
-15
-px
-;
-<b>padding</b>
-:
-25
-px
-10
-px
-5
-px
-;
+html {
+  <b>padding</b>: 20px;
+  <b>font</b>: 12px/20px Arial, sans-serif;
 }
-#div5
-{
-<b>z-index</b>
-:
-1
-;
-<b>margin-top</b>
-:
-15
-px
-;
-<b>padding</b>
-:
-5
-px
-10
-px
-;
+div {
+  <b>opacity</b>: 0.7;
+  <b>position</b>: relative;
+h1 {
+  <b>font</b>: inherit;
+  <b>font-weight</b>: bold;
 }
-#div6
-{
-<b>z-index</b>
-:
-3
-;
-<b>position</b>
-:
-absolute
-;
-<b>top</b>
-:
-20
-px
-;
-<b>left</b>
-:
-180
-px
-;
-<b>width</b>
-:
-150
-px
-;
-<b>height</b>
-:
-125
-px
-;
-<b>border</b>
-:
-1
-px
-dashed
-#009
-;
-<b>padding-top</b>
-:
-125
-px
-;
-<b>background-color</b>
-:
-#ddf
-;
-<b>text-align</b>
-:
-center
-;
+#div1,
+#div2 {
+  <b>border</b>: 1px dashed #696;
+  <b>padding</b>: 10px;
+  <b>background-color</b>: #cfc;
+#div1 {
+  <b>z-index</b>: 5;
+  <b>margin-bottom</b>: 190px;
+#div2 {
+  <b>z-index</b>: 2;
+
+#div3 {
+  <b>z-index</b>: 4;
+  <b>opacity</b>: 1;
+  <b>position</b>: absolute;
+  <b>top</b>: 40px;
+  <b>left</b>: 180px;
+  <b>width</b>: 330px;
+  <b>border</b>: 1px dashed #900;
+  <b>background-color</b>: #fdd;
+  <b>padding</b>: 40px 20px 20px;
 }
-</code></pre>
+#div4,
+#div5 {
+  <b>border</b>: 1px dashed #996;
+  <b>background-color</b>: #ffc;
+}
+#div4 {
+  <b>z-index</b>: 6;
+  <b>margin-bottom</b>: 15px;
+  <b>padding</b>: 25px 10px 5px;
+}
+#div5 {
+  <b>z-index</b>: 1;
+  <b>margin-top</b>: 15px;
+  <b>padding</b>: 5px 10px;
+}
+#div6 {
+  <b>z-index</b>: 3;
+  <b>position</b>: absolute;
+  <b>top</b>: 20px;
+  <b>left</b>: 180px;
+  <b>width</b>: 150px;
+  <b>height</b>: 125px;
+  <b>border</b>: 1px dashed #009;
+  <b>padding-top</b>: 125px;
+  <b>background-color</b>: #ddf;
+  <b>text-align</b>: center;
+}</code></pre>
 
 <h4>Result:</h4>
-
+<imagexxx.png Division Element #1-#6>
 [image260.jpg 6x3 inc](./images/image260.jpg)
 
-> Source:
+<p>Source:</p>
 
-;;https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context&rbrack;&rbrack;(https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context).
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context">
+Demo (Understanding z-index)</a>.</p>
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ch49">Chapter 49: Block Formatting Contexts</h2>
@@ -12073,88 +11098,28 @@ center
 <h3 id="ch49-1">Section 49.1: Using the overflow property with a value dierent to visible</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
-img
-
-{
-
-<b>float</b>
-
-:
-
-left
-
-;
-
-<b>width</b>
-
-:
-
-100
-
-px
-
-;
-
-<b>margin</b>
-
-:
-
-0
-
-10
-
-px
-
-;
-
+<pre><code>img {
+  <b>float</b>: left;
+  <b>width</b>: 100px;
+  <b>margin</b>: 0 10px;
 }
-
-.div1
-
-{
-
-<b>background</b>
-
-:
-
-#f1f1f1
-
-;
-
-/* does not create block formatting context */
-
+.div1 {
+  <b>background</b>: #f1f1f1;
+  /* does not create block formatting context */
 }
-
-.div2
-
-{
-
-<b>background</b>
-
-:
-
-#f1f1f1
-
-;
-
-<b>overflow</b>
-
-:
-
-hidden
-
-;
-
+.div2 {
+  <b>background</b>: #f1f1f1;
+  <b>overflow</b>: hidden;
 /* creates block formatting context */
+}</code></pre>
 
-}
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 261.  (xxx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~ 261. example; using the overflow property with a value different to visible (212) ~~~~-->
 <p align="left" width="100%">
 <img src="./images/image261.jpg"
   style="width:60%"
-  title=""
-  alt="." />
+  title="Example; Using th overflow property with a value different to visible"
+  alt="Example; Using th overflow property with a value different to visible." />
 </p>
 <!-- [image261.jpg 6 x 3](./images/image261.jpg) -->
 
@@ -12688,8 +11653,8 @@ middle
 
 }
 
-> <b>Note:</b> This method will only vertically center a *single line of
-> text*. It will not center block elements correctly and if the text
+> <b>Note:</b> This method will only vertically center a <i>single line of
+> text</i>. It will not center block elements correctly and if the text
 > breaks onto a new line, you will have two very tall lines of text.
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -13427,14 +12392,14 @@ CSS&rbrack;&rbrack;(http://meyerweb.com/eric/tools/css/reset/)
 
 /**/
 
-*&ast; 1. Change the default font family in all browsers (opinionated).*
+<i>&ast; 1. Change the default font family in all browsers (opinionated).</i>
 
-*&ast; 2. Correct the line height in all browsers.*
+<i>&ast; 2. Correct the line height in all browsers.</i>
 
-*&ast; 3. Prevent adjustments of font size after orientation changes in IE
-and iOS.*
+<i>&ast; 3. Prevent adjustments of font size after orientation changes in IE
+and iOS.</i>
 
-**/
+</b>/
 
 /* Document*
 
@@ -13500,7 +12465,7 @@ sans-serif
 
 *&ast; Remove the margin in all browsers (opinionated).*
 
-**/
+</b>/
 
 body
 
