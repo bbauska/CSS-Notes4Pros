@@ -10871,156 +10871,86 @@ and iOS.</i>
 </b>/
 
 /* Document*
-
 *==========================================================================
 */
-
 html
-
 {
-
 <b>font-family</b>
-
 :
-
 sans-serif
-
 ;
-
 /* 1 */
-
 <b>line-height</b>
-
 :
-
 1.15
-
 ;
-
 /* 2 */
-
 -ms-text-size-adjust
-
 :
-
 100
-
 &percnt;
-
 ;
-
 /* 3 */
-
 -webkit-text-size-adjust
-
 :
-
 100
-
 &percnt;
-
 ;
-
 /* 3 */
-
 }
-
 /* Sections*
-
 *==========================================================================
 */
-
 /**/
-
 *&ast; Remove the margin in all browsers (opinionated).*
-
 </b>/
-
 body
-
 {
-
 <b>margin</b>
-
 :
-
 0
-
 ;
-
 }
-
 **/
-
 /* Add the correct display in IE 9-.
-
 */
-
 article
-
 ,
-
 aside
-
 ,
-
 footer
-
 ,
-
 header
-
 ,
-
 nav
-
 ,
-
 section
-
 {
+
 
 <b>display</b>
 
 :
-
 block
-
 ;
-
 }
-
 /**
   Correct the font size and margin on &apos;h1&apos; elements within &apos;section&apos; and
   &apos;article&apos; contexts in Chrome, Firefox, and Safari.
 **/
-
 h1
-
 {
-
 <b>font-size</b>
-
 :
-
 2
-
 em
-
 ;
-
 <b>margin</b>
-
 :
-
 0.67
-
 em
-
 0
-
 ;
-
 }
 
 <a href="http://normalize.css/">Normalize CSS</a>
@@ -11031,113 +10961,83 @@ em
 <h3 id="ch55-1">Section 55.1: Adding Inline Block support to IE6 and IE7</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
-<b>display</b>
+<pre><code><b>display</b>: inline-block;</code></pre>
 
-:
+<p>The display property with the value of inline-block is not supported
+by Internet Explorer 6 and 7. A work-around for this is:</p>
 
-inline-block
+<pre><code>zoom: 1;
+&ast;<b>display</b>: inline;</code></pre>
 
-;
-
-> The display property with the value of inline-block is not supported
-> by Internet Explorer 6 and 7. A work-around for this is:
-
-zoom
-
-:
-
-1
-
-;
-
-&ast;
-
-<b>display</b>
-
-:
-
-inline
-
-;
-
-  display
-
-
-> The zoom property triggers the hasLayout feature of elements, and it
-> is available only in Internet Explorer. The &ast; makes sure that the
-> invalid property executes only on the affected browsers. Other
-> browsers will simply ignore the rule.
-
+<p>The zoom property triggers the hasLayout feature of elements, and it
+is available only in Internet Explorer (woopie). The &ast;display makes sure that the
+invalid property executes only on the affected browsers. Other browsers will simply ignore the rule.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch55-2">Section 55.2: High Contrast Mode in Internet Explorer 10 and greater</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p>In Internet Explorer 10+ and Edge, Microsoft provides the
+-ms-high-contrast media selector to expose the &quot;High Contrast&quot;
+setting from the browser, which allows the programmer to adjust their
+site&apos;s styles accordingly.</p>
 
-> In Internet Explorer 10+ and Edge, Microsoft provides the
-> -ms-high-contrast media selector to expose the &quot;High Contrast&quot;
-> setting from the browser, which allows the programmer to adjust their
-> site&apos;s styles accordingly.
->
-> The -ms-high-contrast selector has 3 states: active, black-on-white,
-> and white-on-black. In IE10+ it also had a none state, but that is no
-> longer supported in Edge going forward.
->
-> <b>Examples</b>
+<p>The -ms-high-contrast selector has 3 states: active, black-on-white,
+and white-on-black. In IE10+ it also had a none state, but that is no
+longer supported in Edge going forward.</p>
 
-<pre><code><b>&commat;media</b>
-screen and (
-  &minus; ms-high-contrast: active
-), 
-  (&minus;ms-high-contrast: black-on-white){
+<h4>Examples</h4>
+
+<pre><code><b>&commat;media</b> screen and (&minus; ms-high-contrast: active), (&minus;ms-high-contrast: black-on-white) {
   .header {
     <b>background</b>: #fff;
     <b>color</b>: #000;
   }
 }</code></pre>
 
-> This will change the header background to white and the text color to
-> black when high contrast mode is active *and* it is in black-on-white
-> mode.
+<p>This will change the header background to white and the text color to
+black when high contrast mode is active *and* it is in black-on-white
+mode.</p>
 
-<pre><code><b>&commat;media</b>
-screen and (
-  &minus;ms-high-contrast: white-on-black){
+<pre><code><b>&commat;media</b> screen and (&minus;ms-high-contrast: white-on-black){
   .header {
     <b>background</b>: #000;
     <b>color</b>: #fff;
-}
+  }
 }</code></pre>
 
-> Similar to the first example, but this specifically selects the
-> white-on-black state only, and inverts the header colors to a black
-> background with white text.
->
-> <b>More Information:</b>
+<p>Similar to the first example, but this specifically selects the
+white-on-black state only, and inverts the header colors to a black
+background with white text.</p>
 
-<a href="https://msdn.microsoft.com/en-us/library/windows/apps/hh465764.aspx">Microsoft Documentation</a>
-on -ms-high-contrast.
+<h4>More Information:</h4>
+
+<p><a href="https://msdn.microsoft.com/en-us/library/windows/apps/hh465764.aspx">Microsoft Documentation</a>
+on -ms-high-contrast.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch55-3">Section 55.3: Internet Explorer 6 & Internet Explorer 7 only</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-> To target Internet Explorer 6 and Internet Explorer 7, start your
-> properties with &ast;:
+To target Internet Explorer 6 and Internet Explorer 7, start your
+properties with &ast;:
 
 <pre><code>.hide-on-ie6-and-ie7 {
-&ast;
-<b>display</b>: none;
-// This line is processed only on IE6 and IE7
+&ast;<b>display</b>: none; // This line is processed only on IE6 and IE7
 }</code></pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h3 id="ch55-4">Section 55.4: Internet Explorer 8 only</h3>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p>To target Internet Explorer 8, wrap your selectors inside: @media \0.</p>
 
-<p>To target Internet Explorer 8, wrap your selectors inside:</p>
+<p>It's microsoft, so it really isn't worth spending more time learning.</p>
 
-<pre><code><b>&commat;media</b>
-&bsol;&bsol; 0
-screen {
+<p>So pathetic. The only good MS code was stolen from Universities, Digital
+Equipment Corporation, Linux, or Unix.</p>
+
+<pre><code><b>&commat;media</b>&bsol;&bsol; 0 screen {
   .hide-on-ie8 {
     <b>display</b>: none;
   }
 }</code></pre>
 
-<p>Everything between is processed only by I</p>
+<p>Everything between &commat;media \0 screen { } is processed only by I</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ch56">Chapter 56: Performance</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -11149,10 +11049,9 @@ animate at 60fps.
 
 <b>DON&apos;T</b>
 
-Animate with left and top trigger layout.
+<p>Animate with left and top trigger layout.</p>
 
-<pre><code>
-#box {
+<pre><code>#box {
   <b>left</b>: 0;
   <b>top</b>: 0;
   <b>transition</b>: left 0.5s, top 0.5s;
@@ -11164,25 +11063,22 @@ Animate with left and top trigger layout.
 #box.active {
   <b>left</b>: 100px;
   <b>top</b>: 100px;
-}
-</code></pre>
+}</code></pre>
 
-<a href="https://jsfiddle.net/trungdq88/gmpzxLyq/">Demo</a>
-took 11.7ms for rendering 9.8ms
-for painting
+<p><a href="https://jsfiddle.net/trungdq88/gmpzxLyq/">Demo</a> 
+took 11.7ms for rendering 9.8ms for painting.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 267.  (xxx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 267.  (230) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left" width="100%">
 <img src="./images/image267.jpg"
   style="width:75%"
   title=""
   alt="." />
 </p>
-<!-- [image267.jpg 7.5 x 7.5](./images/image267.jpg) -->
 
-> <b>DO</b>
+<h4>DO</h4>
 
-Animate with transform with the same animation.
+<p>Animate with transform with the same animation.</p>
 
 <pre><code>#box {
   <b>left</b>: 0;
@@ -11200,18 +11096,16 @@ Animate with transform with the same animation.
 }</code></pre>
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 268.  (xxx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 269.  (xxx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left" width="100%">
-<img src="./images/image268.jpg"
-  style="width:50%"
+<img src="./images/image269.png"
+  style="width:60%"
   title=""
   alt="." />
 </p>
 
 <p><a href="https://jsfiddle.net/trungdq88/Logdo0rn/">Demo (jsFiddle)</a>
 same animation, took <b>1.3ms</b> for rendering, <b>2.0ms</b> for painting.</p>
-
-<!-- [imge268.jpg](./images/image268.jpg) -->
 <!-- width 6.2" -->
 
 <!-- the end -->
