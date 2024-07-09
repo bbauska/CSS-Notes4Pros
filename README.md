@@ -7253,8 +7253,8 @@ div: hover {
 
 <pre><code>|               
 | &lbrack; from | to | <b>&lt;percentage&gt;</b> &rbrack; | You can either specify a set time with a percentage value, or two percentage values, IE |
-|                                                         | 10&percnt;, 20&percnt;, for a period of time where the keyframe's set attributes are set. |
-| block                                                   | Any amount of CSS attributes for the keyframe. |</code></pre>
+|                                    10&percnt;, 20&percnt;, for a period of time where the keyframe's set attributes are set. |
+| block                              Any amount of CSS attributes for the keyframe. |</code></pre>
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch27-1">Section 27.1: Animations with keyframes</h3>
