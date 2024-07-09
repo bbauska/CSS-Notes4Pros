@@ -10630,13 +10630,13 @@ your HTML and CSS code into three types of components:</p>
 
 <ul>
   <li><b>Blocks:</b> standalone entities that are meaningful on their own.<br><br>
-    Examples are header, container, menu, checkbox &amp; textbox.</li>
+    Examples are header, container, menu, checkbox &amp; textbox.<br><br></li>
   <li><b>Elements:</b> Part of blocks that have no standalone meaning and are 
     semantically tied to their blocks.<br><br>
-    Examples are menu item, list item, checkbox caption &amp; header title.</li>
+    Examples are menu item, list item, checkbox caption &amp; header title.<br><br></li>
   <li><b>Modifiers:</b> Flags on a block or element, used to change appearance 
     or behavior.<br><br>
-	Examples are disabled, highlighted, checked, fixed, size big &amp; color yellow.</li>
+	Examples are disabled, highlighted, checked, fixed, size big &amp; color yellow.<br><br></li>
 </ul>
 
 <p>The goal of BEM is to optimize the readability, maintainability
@@ -10658,10 +10658,10 @@ the following rules.</p>
 <p>If you apply BEM to your form elements, your CSS selectors should look
 something like this:</p>
 
-<pre><code>.form { } // Block
-.form&minus;-theme-xmas { } // Block + modifier .form&minus;-simple { } //
-Block + modifier
-.form&lowbar;&lowbar;input { } // Block &gt; element
+<pre><code>.form { }            // Block
+.form&minus;-theme-xmas { }     // Block + modifier 
+.form&minus;-simple { }         // Block + modifier
+.form&lowbar;&lowbar;input { }  // Block &gt; element
 .form&lowbar;&lowbar;submit { } // Block &gt; element
 .form&lowbar;&lowbar;submit&minus;-disabled { } // Block &gt; element + modifier</code></pre>
 
@@ -10676,7 +10676,7 @@ Block + modifier
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <b>Prefix Browser(s)</b>
 
-| <b>Prefix</b> } <b>Browser(s)</b>
+| <b>Prefix</b> | <b>Browser(s)</b> |
 |----------|-----------------------------------------------------------|
 | -webkit- | Google Chrome, Safari, newer versions of Opera 12 and up, |
 |          | Android, Blackberry and UC browsers |
@@ -10691,19 +10691,19 @@ Block + modifier
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre><code>div {
   -webkit-transition: all 4s ease;
-  -moz-transition: all 4s ease;
-  -o-transition: all 4s ease;
-  <b>transition</b>: all 4s ease;
+     -moz-transition: all 4s ease;
+       -o-transition: all 4s ease;
+       <b>transition</b>: all 4s ease;
 }</code></pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch53-2">Section 53.2: Transform</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre><code>div {
   -webkit-transform: rotate(45deg);
-  -moz-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  -o-transform: rotate(45deg);
-  <b>transform</b>: rotate(45deg);
+     -moz-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+       -o-transform: rotate(45deg);
+          <b>transform</b>: rotate(45deg);
 }</code></pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ch54">Chapter 54: Normalizing Browser Styles</h2>
@@ -10790,55 +10790,52 @@ time, mark, audio, video <b>{</b>
 <p>Normalize CSS on the other and deals with many of these separately.
 The following is a sample from the version (v4.2.0) of the code.</p>
 
-/**/
-
+<pre><code>/*&ast;
 <i>&ast; 1. Change the default font family in all browsers (opinionated).</i>
-
 <i>&ast; 2. Correct the line height in all browsers.</i>
-
 <i>&ast; 3. Prevent adjustments of font size after orientation changes in IE
 and iOS.</i>
-
-<pre><code>/* Document*
-*==========================================================================
-*/
+/* Document
+*==========================================================================*/
 html {
-<b>font-family</b>: sans-serif;
-/* 1 */
-<b>line-height</b>: 1.15;
-/* 2 */
--ms-text-size-adjust: 100&percnt;;
-/* 3 */
--webkit-text-size-adjust: 100&percnt;;
-/* 3 */
+<b>font-family</b>: sans-serif; /* 1 */
+<b>line-height</b>: 1.15; /* 2 */
+-ms-text-size-adjust: 100&percnt;; /* 3 */
+-webkit-text-size-adjust: 100&percnt;; /* 3 */
 }
-/* Sections*
-*==========================================================================
+/* Sections
+*==========================================================================*/
+/*&ast;
+*&ast; Remove the margin in all browsers (opinionated).
 */
-/* */
-*&ast; Remove the margin in all browsers (opinionated).*
-</b>/
 body {
   <b>margin</b>: 0;
 }
-/* */
-/* Add the correct display in IE 9-. */
-article, aside, footer, header, nav, section {
+/*&ast;
+/* Add the correct display in IE 9-. 
+*/
+article, 
+aside, 
+footer, 
+header, 
+nav, 
+section {
   <b>display</b>: block;
 }
-/**
+
+/*&ast;
   Correct the font size and margin on &apos;h1&apos; elements within &apos;section&apos; and
   &apos;article&apos; contexts in Chrome, Firefox, and Safari.
-**/
+*/
 h1 {
   <b>font-size</b>: 2em;
   <b>margin</b>: 0.67em0;
 }</code></pre>
 
-<a href="http://normalize.css/">Normalize CSS</a>
+<a href="https://www.npmjs.com/package/normalize.css/v/3.0.3">Normalize CSS</a>
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="ch55">Chapter 55: Internet Explorer Hacks</h2>
+<h2 id="ch55">Chapter 55: Internet Explorer Crap &amp; Hacks (mostly crap)</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch55-1">Section 55.1: Adding Inline Block support to IE6 and IE7</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -10949,9 +10946,9 @@ animate at 60fps.</p>
 <p><a href="https://jsfiddle.net/trungdq88/gmpzxLyq/">Demo</a> 
 took 11.7ms for rendering 9.8ms for painting.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 267. animate with transform (229) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 269. animate with transform (229) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left" width="100%">
-<img src="./images/image267.jpg"
+<img src="./images/image269.png"
   style="width:75%"
   title="Animate with transform"
   alt="Animate with transform." />
@@ -10976,18 +10973,16 @@ took 11.7ms for rendering 9.8ms for painting.</p>
   <b>transform</b>: translate3d(100px, 100px, 0);
 }</code></pre>
 
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 269. test time / rendering (229) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p align="left" width="100%">
-<img src="./images/image269.png"
-  style="width:60%"
-  title="Test time/rendering"
-  alt="Test time/rendering." />
-</p>
-
 <p><a href="https://jsfiddle.net/trungdq88/Logdo0rn/">Demo (jsFiddle)</a>
 same animation, took <b>1.3ms</b> for rendering, <b>2.0ms</b> for painting.</p>
-<!-- width 6.2" -->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 270. test time / rendering (230) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p align="left" width="100%">
+<img src="./images/image270.png"
+  style="width:60%"
+  title="Test time/rendering, #2"
+  alt="Test time/rendering, #2." />
+</p>
 
 <!-- the end -->
 <!-- 6/28/2024 Fri 5:41pm -->
