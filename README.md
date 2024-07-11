@@ -449,39 +449,36 @@ pseudo-classes, and patterns.</p>
 <p>Attribute selectors can be used with various types of operators that
 change the selection criteria accordingly. They select an element
 using the presence of a given attribute or attribute value.</p>
-/********************************************************************
+
 <table class="greenTbl">
 <thead>
 <tr>
-<th>head1</th>
-<th>head2</th>
-<th>head3</th>
+<th>Selector(1)</th>
+<th>Matched element</th>
+<th>Selects elements...</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>&lbrack;attr&rbrack;</td><td>&lt;div attr&gt;</td><td>With attribute attr</td></tr>
 <tr>
-<td>cell1_2</td><td>cell2_2</td><td>cell3_2</td></tr>
+<td>&lbrack;attr='val'&rbrack;</td><td>&lt;div attr="val"&gt;</td><td>Where attribute attr has value val</td></tr>
 <tr>
-<td>cell1_3</td><td>cell2_3</td><td>cell3_3</td></tr>
+<td>&lbrack;attr~='val'&rbrack;</td><td>&lt;div attr="val val2 val3"&gt;</td><td>Where val appears in the whitespace-separated list of attr</td></tr>
 <tr>
-<td>cell1_4</td><td>cell2_4</td><td>cell3_4</td></tr>
+<td>&lbrack;attr^='val'&rbrack;</td><td>&lt;div attr="val1 val2"&gt;</td><td>Where attr's value begins with val</td></tr>
 <tr>
-<td>cell1_5</td><td>cell2_5</td><td>cell3_5</td></tr>
+<td>&lbrack;attr$='val'&rbrack;</td><td>&lt;div attr="sth aval"&gt;</td><td>Where attr's value ends with val</td></tr>
 <tr>
-<td>cell1_6</td><td>cell2_6</td><td>cell3_6</td></tr>
+<td>&lbrack;attr&ast;='val'&rbrack;</td><td>&lt;div attr="somevalhere"&gt;</td><td>Where attr contains val anywhere</td></tr>
 <tr>
-<td>cell1_7</td><td>cell2_7</td><td>cell3_7</td></tr>
+<td>&lbrack;attr&vert;='val'&rbrack;</td><td>&lt;div attr="val-sth etc"&gt;</td><td>Where attr's value is exactly val, or starts with val and immediately followed by - (U+002D)</td></tr>
 <tr>
-<td>cell1_8</td><td>cell2_8</td><td>cell3_8</td></tr>
+<td>&lbrack;attr&vert;='val' i&rbrack;</td><td>&lt;div attr="val"&gt;</td><td>Where attr has val, ignoring val's letter casing.</td></tr>
 </tbody>
 </tr>
 </table>
 
-
-
-********************************************************************/
 | Selector(1)     | Matched element            | Selects elements...                |
 |----------------:|----------------------------|------------------------------------|
 | &lbrack;attr&rbrack;          | &lt;div attr&gt;                 | With attribute attr                |
