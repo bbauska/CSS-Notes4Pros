@@ -3,7 +3,7 @@ title: |
   CSS Notes for Professionals
   by web@petercv.com, PDF https://goalkicker.com/CSSBook
 author: "bbauska"
-date last editted: "7/9/2024 Tue 5+am"
+date last editted: "7/10/2024 Thu 1+pm"
 output: 
   markdown:
     with some style
@@ -478,21 +478,6 @@ using the presence of a given attribute or attribute value.</p>
 </tbody>
 </tr>
 </table>
-
-| Selector(1)     | Matched element            | Selects elements...                |
-|----------------:|----------------------------|------------------------------------|
-| &lbrack;attr&rbrack;          | &lt;div attr&gt;                 | With attribute attr                |
-| &lbrack;attr='val'&rbrack;    | &lt;div attr="val"&gt;           | Where attribute attr has value val |
-| &lbrack;attr~='val'&rbrack;   | &lt;div attr="val val2 val3"&gt; | Where val appears in the           |
-|                 |                            | whitespace-separated list of attr  |
-| &lbrack;attr^='val'&rbrack;   | &lt;div attr="val1 val2"&gt;     | Where attr's value begins with val |
-| &lbrack;attr$='val'&rbrack;   | &lt;div attr="sth aval"&gt;      | Where attr's value ends with val   |
-| &lbrack;attr&ast;='val'&rbrack;    | &lt;div attr="somevalhere"&gt;   | Where attr contains val anywhere   |
-| &lbrack;attr&vert;='val'&rbrack;   | &lt;div attr="val-sth etc"&gt;   | Where attr's value is exactly val, |
-|                 |                            | or starts with val and immediately |
-|                 |                            | followed by - (U+002D) |
-| &lbrack;attr&vert;='val' i&rbrack; | &lt;div attr="val"&gt;           | Where attr has val, |
-|                 |                            | ignoring val's letter casing. |
 
 <b>Notes:</b>
 
@@ -11024,3 +11009,4 @@ same animation, took <b>1.3ms</b> for rendering, <b>2.0ms</b> for painting.</p>
 <!-- 7/7/2024 Sun 8:52pm -->
 <!-- 7/8/2024 Mon 8:50am -->
 <!-- 7/9/2024 Tue 5:11am -->
+<!-- 7/10/2024 Thu 1:18pm -->
