@@ -1,17 +1,69 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h1>CSS-Notes4Pros</h1>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~ index.html of CSS-Notes4Pros.bauska.org ~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>CSS Notes For Professionals - intermediate level CSS learning
-course.<br />
-All on-line. No money, unless you’d like to donate. I’m game for that.</p>
+<head>
+  <meta charset="utf-8" />
+  <link rel="shortcut icon" type="image/jpg" href="/images/favicon.ico">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="Brian Bauska (bbauska)" />
+  <meta name="title" content="CSS Notes 4 Pros" />
+  <meta name="description" content="CSS Notes for Professionals - Alot of great CSS notes
+    for Professional Web Developers; This CSS Notes for Professionals website is compiled 
+    from Stack Overflow Documentation, the content is written by the beautiful people at 
+    Stack Overflow. Text content is released under Creative Commons BY-SA, see credits at 
+    the end of this book whom contributed to the various chapters. Images may be copyright 
+    of their respective owners unless otherwise specified. This is an unofficial free website
+    created for educational purposes and is not affiliated with official CSS group(s) or 
+    company(s) nor Stack Overflow. All trademarks and registered trademarks are the property 
+    of their respective company owners. The information presented in this website is not 
+    guaranteed to be correct nor accurate, use at your own risk." />
+
+  <title>CSS Notes 4 Pros</title>
+  <link rel="stylesheet" type="text/css" href="/css/styles.css">
+</head>
+<body>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ script function: scrollFunction() ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <script>
+  <!-- get the button -->
+  var mybutton = document.getElementById("myBtn");
+
+  <!-- when the user scrolls down 10px from the top of the document, show the button -->
+  window.onscroll = function() {scrollFunction()};
+
+  function scrollFunction() {
+    if (document.body.scrollTop > 10 || document.documentElement.scrollTop > 10) {
+      mybutton.style.display = "block";
+    } else {
+      mybutton.style.display = "none";
+    }
+  }
+
+  <!-- when the user clicks on the button, scroll to the top of the document. 0,0 or -->
+  <!-- to table of contents (approx ###), if applicable was; 315 -->
+  function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+  }
+</script>
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h1 align="center">Advanced CSS Notes for Professionals</h1>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h6 align="center">(by web@petercs.com, lecturer - PDF <span class="citation"
 data-cites="https://goalkicker.com">@https://goalkicker.com</span>)</h6>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<!--~~~~~~~~~~~~~~~~~~~ readme.md of CSS Advanced - Notes for Professionals ~~~~~~~~~~~~~~~~~~~~-->
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ CSS-Notes4-pros.bauska.github.io ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p>CSS Notes For Professionals - intermediate level CSS learning course.<br />
+All on-line. No money, unless you’d like to donate. I’m an old programmer from 
+the late 70's without retirement. So, would greatly appreciate any donations to paypal 
+@brianbauska@gmail.com or @Brian-Bauska with Venmo.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 01/02. javascript/css logos (01) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="center" width="100%">
@@ -31,7 +83,7 @@ version of this book can be downloaded from:<br>
 <a href="https://goalkicker.com/CSSBook">Advanced CSS Book</a>.
 </p>
 <p align="center">
-This <i>CSS Notes for Professionals</i> book is compiled from
+This <i>CSS Notes for Professionals</i> website is compiled from
 <a href="https://archive.org/details/documentation-dump.7z">Stack
 Overflow Documentation</a>, the content is written by the beautiful
 people at Stack Overflow.<br/> Text content is released under Creative
@@ -39,16 +91,16 @@ Commons BY-SA, see credits at the end of this book whom contributed to
 the various chapters. Images may be copyright of their respective owners
 unless otherwise specified.</p>
 <p align="center">
-This is an unofficial free book created for educational purposes and is
+This is an unofficial free website created for educational purposes and is
 not affiliated with official CSS group(s) or company(s) nor Stack
 Overflow. All trademarks and registered trademarks are the property of
 their respective company owners.</p>
 <p align="center">
-The information presented in this book is not guaranteed to be correct
+The information presented in this website is not guaranteed to be correct
 nor accurate, use at your own risk.</p>
 <p align="center">
 Please send feedback and corrections to
-<a href="web@petercv.com">web@petercv.com</a>
+<a href="brianbauska@gmail.com">brianbauska@gmail.com</a>
 </p>
 <!-- page 2 -->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
