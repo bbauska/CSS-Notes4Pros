@@ -93,12 +93,12 @@ h2 { font-size: 18px;
      font-family: Inter, Georgia, BahnSchrift, sans-serif, Consolas; }
 h3 { font-size: 17px;
      font-family: Inter, Georgia, BahnSchrift, sans-serif, Consolas; }
-h4 { font-size: 13px;
+h4 { font-size: 15px;
      font-family: Inter, Georgia, BahnSchrift, sans-serif, Consolas; }
-h5 { font-size: 12px;
+h5 { font-size: 13px;
      font-family: Bahnschrift, Inter, Helvetic, sans-serif; }
-h6 { font-size: 10px;
-     font-family: Bahnschrift, Inter, Helvetic, sans-serif; }
+h6 { font-size: 11px;
+     font-family: Consolas, Inter, Bahnschrift, Inter, Helvetic, sans-serif; }
 
 body {
   font-family: Bahnschrift, Inter, Helvetic, sans-serif;
@@ -154,8 +154,8 @@ details[open] > summary {
 
 pre, code {
   font-family: monospace, monospace;
-  font-size: 10px;
-  margin-left: 10px;
+  font-size: 11px;
+  margin-left: 11px;
   }
 pre {
   overflow: auto;
