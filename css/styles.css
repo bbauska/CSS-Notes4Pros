@@ -34,7 +34,6 @@ table.greenTbl thead th {
 table.greenTbl thead th:first-child {
   border-left: none;
 }
-
 table.greenTbl tfoot td {
   font-size: 14px;
 }
@@ -74,8 +73,8 @@ p.em3 {
 p.em4 {
   margin-left: 4em; }
 
-background: linear-gradient(60deg, #3d3393 0%, #2b76b9 37%, #2cacd1 65%, #35eb93 100%);
-
+/* background: linear-gradient(60deg, #3d3393 0%, #2b76b9 37%, #2cacd1 65%, #35eb93 100%); */
+background: linear-gradient(34deg, #5cc0fb 0%, transparent 48.18%, #83d8ff 56.429%, rgba(134,252,212,0.36) 100%);
 a {
   text-decoration: none; 
 }
