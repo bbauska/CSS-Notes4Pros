@@ -9851,88 +9851,80 @@ div: hover {
   <b>height</b>: 200px;
   <b>width</b>: 200px;
 }</code></pre>
-<h4>
-HTML:
-</h4>
+
+<h4>HTML:</h4>
+
 <p><b>&lt;div&gt;&lt;/div&gt;</b></p>
+
 <ul>
-<li>
-<b>transition-property</b>: Specifies the CSS properties the transition
-effect is for. In this case, the div will expand both horizontally and
-vertically when hovered.
-</li>
-<li>
-<b>transition-duration</b>: Specifies the length of time a transition
-takes to complete. In the above example, the height and width
-transitions will take 1 second and 500 milliseconds respectively.
-</li>
-<li>
-<b>transition-timing-function</b>: Specifies the speed curve of the
-transition effect. A <i>linear</i> value indicates the transition will
-have the same speed from start to finish.
-</li>
-<li>
-<b>transition-delay</b>: Specifies the amount of time needed to wait
-before the transition effect starts. In this case, the height will start
-transitioning immediately, whereas the width will wait 1 second.
-</li>
+  <li><b>transition-property</b>: Specifies the CSS properties the transition
+    effect is for. In this case, the div will expand both horizontally and
+	vertically when hovered.</li>
+  <li><b>transition-duration</b>: Specifies the length of time a transition
+    takes to complete. In the above example, the height and width transitions 
+	will take 1 second and 500 milliseconds respectively.</li>
+  <li><b>transition-timing-function</b>: Specifies the speed curve of the transition 
+    effect. A <i>linear</i> value indicates the transition will have the same speed 
+	from start to finish.</li>
+  <li><b>transition-delay</b>: Specifies the amount of time needed to wait before 
+    the transition effect starts. In this case, the height will start transitioning 
+	immediately, whereas the width will wait 1 second.</li>
 </ul>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ch27">Chapter 27: Animations</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h4>
-Transition
-</h4>
+<h4>Transition</h4>
+
 <table>
-<colgroup>
-<col style="width: 21%" />
-<col style="width: 78%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th>Parameter</th>
-<th>Details</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>property</td>
-<td>Either the CSS property to transition on, or all, which specifies
-all transition-able</td>
-</tr>
-<tr class="even">
-<td></td>
-<td>properties.</td>
-</tr>
-<tr class="odd">
-<td>duration</td>
-<td>Transition time, either in seconds or milliseconds.</td>
-</tr>
-<tr class="even">
-<td>timing-function</td>
-<td>Specifies a function to define how intermediate values for
-properties are computed.</td>
-</tr>
-<tr class="odd">
-<td></td>
-<td>Common values are ease, linear, and step-end. Check out the
-<a href="http://easings.net/ 
-target="_blank" rel="noopener noreferrer">easing function cheat-</a></td>
-</tr>
-<tr class="even">
-<td></td>
-<td>sheet</a> for more.</td>
-</tr>
-<tr class="odd">
-<td>delay</td>
-<td>Amount of time, in seconds or milliseconds, to wait before playing
-the animation.</td>
-</tr>
-</tbody>
+  <colgroup>
+    <col style="width: 21%" />
+    <col style="width: 78%" />
+  </colgroup>
+  <thead>
+    <tr class="header">
+      <th>Parameter</th>
+      <th>Details</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="odd">
+      <td>property</td>
+      <td>Either the CSS property to transition on, or all, which specifies
+        all transition-able</td>
+    </tr>
+    <tr class="even">
+      <td></td>
+      <td>properties.</td>
+    </tr>
+    <tr class="odd">
+      <td>duration</td>
+      <td>Transition time, either in seconds or milliseconds.</td>
+    </tr>
+    <tr class="even">
+      <td>timing-function</td>
+      <td>Specifies a function to define how intermediate values for
+        properties are computed.</td>
+    </tr>
+    <tr class="odd">
+      <td></td>
+      <td>Common values are ease, linear, and step-end. Check out the
+        <a href="http://easings.net/ 
+        target="_blank" rel="noopener noreferrer">easing function cheat-</a></td>
+    </tr>
+    <tr class="even">
+      <td></td>
+      <td>sheet</a> for more.</td>
+    </tr>
+    <tr class="odd">
+      <td>delay</td>
+      <td>Amount of time, in seconds or milliseconds, to wait before playing
+        the animation.</td>
+    </tr>
+  </tbody>
 </table>
-<h4>
-<span class="citation" data-cites="keyframes">@keyframes</span>
-</h4>
+
+<h4><span class="citation" data-cites="keyframes">@keyframes</span></h4>
+
 <div class="line-block">[ from | to | <b>&lt;percentage&gt;</b> ] | You
 can either specify a set time with a percentage value, or two percentage
 values, IE |<br />
