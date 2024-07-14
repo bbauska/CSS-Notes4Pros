@@ -8714,9 +8714,7 @@ style certain parts of an html element.</p>
 <p>For example, the ::first-letter pseudo-element targets only the first
 letter of a block element specified by the selector.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch21-1">
-Section 21.1: Pseudo-Elements
-</h3>
+<h3 id="ch21-1">Section 21.1: Pseudo-Elements</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Pseudo-elements are added to selectors but instead of describing a
 special state, they allow you to style certain parts of a document.</p>
@@ -8872,9 +8870,9 @@ that.</p>
 <pre><code><b>&lt;div</b> id=&quot;div1&quot;<b>&gt;</b><b>&lt;/div&gt;</b>
 <b>&lt;div</b> id=&quot;div2&quot;<b>&gt;</b><b>&lt;/div&gt;</b>
 <b>&lt;div</b> id=&quot;div3&quot;<b>&gt;</b><b>&lt;/div&gt;</b></code></pre>
-<h4>
-CSS
-</h4>
+
+<h4>CSS</h4>
+
 <pre><code>div {
   <b>position</b>: absolute;
   <b>height</b>: 200px;
@@ -8898,9 +8896,8 @@ div #div3 {
   <b>top</b>: 150px;
   <b>background-color</b>: red;
 }</code></pre>
-<h4>
-This creates the following effect:
-</h4>
+
+<h4>This creates the following effect:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~ 194. 3 overlapping squares; blue, red & green (xxx) ~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left" width="100%">
@@ -8959,48 +8956,40 @@ target="_blank" rel="noopener noreferrer">CSS
 Specification</a> on layered presentation and at the
 <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/z-index" 
 target="_blank" rel="noopener noreferrer">
-Mozilla Developer Network</a>.
-</p>
+Mozilla Developer Network</a>.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch22-2">
-Section 22.2: Absolute Position
-</h3>
+<h3 id="ch22-2">Section 22.2: Absolute Position</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>
-When absolute positioning is used the box of the desired element is
+<p>When absolute positioning is used the box of the desired element is
 taken out of the <i>Normal Flow</i> and it no longer affects the
-position of the other elements on the page. Offset properties:
-</p>
+position of the other elements on the page. Offset properties:</p>
+
 <ol type="1">
-<li>top</li>
-<li>left</li>
-<li>right</li>
-<li>bottom</li>
+  <li>top</li>
+  <li>left</li>
+  <li>right</li>
+  <li>bottom</li>
 </ol>
-<p>
-specify the element should appear in relation to its next non-static
-containing element.
-</p>
+
+<p>specify the element should appear in relation to its next non-static
+containing element.</p>
+
 <pre><code>.abspos {
   <b>position</b>: absolute;
   <b>top</b>: 0px;
   <b>left</b>: 500px;
 }</code></pre>
-<p>
-This code will move the box containing element with attribute down 0px
-and right 500px relative to its containing element.
-</p>
+
+<p>This code will move the box containing element with attribute down 0px
+and right 500px relative to its containing element.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch22-3">
-Section 22.3: Fixed position
-</h3>
+<h3 id="ch22-3">Section 22.3: Fixed position</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>
-Defining position as fixed we can remove an element from the document
+<p>Defining position as fixed we can remove an element from the document
 flow and set its position relatively to the browser window. One obvious
 use is when we want something to be visible when we scroll to the bottom
-of a long page.
-</p>
+of a long page.</p>
+
 <pre><code>
 #stickyDiv {
   <b>position</b>: fixed;
@@ -9008,57 +8997,49 @@ of a long page.
   <b>left</b>: 10px;
 }</code></pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch22-4">
-Section 22.4: Relative Position
-</h3>
+<h3 id="ch22-4">Section 22.4: Relative Position</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>
-Relative positioning moves the element in relation to where it would
-have been in <i>normal flow</i> .Offset properties:
-</p>
+<p>Relative positioning moves the element in relation to where it would
+have been in <i>normal flow</i> .Offset properties:</p>
+
 <ol type="1">
-<li>top</li>
-<li>left</li>
-<li>right</li>
-<li>bottom</li>
+  <li>top</li>
+  <li>left</li>
+  <li>right</li>
+  <li>bottom</li>
 </ol>
-<p>
-are used to indicate how far to move the element from where it would
-have been in normal flow.
-</p>
+
+<p>are used to indicate how far to move the element from where it would
+have been in normal flow.</p>
+
 <pre><code>.relpos {
   <b>position</b>: relative;
   <b>top</b>: 20px;
   <b>left</b>: 30px;
 }</code></pre>
-<p>
-This code will move the box containing element with attribute
+
+<p>This code will move the box containing element with attribute
 class="relpos" 20px down and 30px to the right from where it would have
-been in normal flow.
-</p>
+been in normal flow.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch22-5">
-Section 22.5: Static positioning
-</h3>
+<h3 id="ch22-5">Section 22.5: Static positioning</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>
-The default position of an element is static. To quote
+<p>The default position of an element is static. To quote
 <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/position#values" 
 target="_blank" rel="noopener noreferrer">
-MDN</a>:
-</p>
+MDN</a>:</p>
+
 <blockquote>
-This keyword lets the element use the normal behavior, that is it is
-laid out in its current position in the flow. The top, right, bottom,
-left and z-index properties do not apply.
+  This keyword lets the element use the normal behavior, that is it is
+  laid out in its current position in the flow. The top, right, bottom,
+  left and z-index properties do not apply.
 </blockquote>
+
 <pre><code>.element {
   <b>position</b>: static;
 }</code></pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="ch23">
-Chapter 23: Layout Control
-</h2>
+<h2 id="ch23">Chapter 23: Layout Control</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <table>
 <colgroup>
@@ -9144,23 +9125,18 @@ in the HTML specifications or</td>
 </tbody>
 </table>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch23-1">
-Section 23.1: The display property
-</h3>
+<h3 id="ch23-1">Section 23.1: The display property</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>
-The display CSS property is fundamental for controlling the layout and
+<p>The display CSS property is fundamental for controlling the layout and
 flow of an HTML document. Most elements have a default display value of
-either block or inline (though some elements have other default values).
-</p>
-<h4>
-Inline
-</h4>
-<p>
-An inline element occupies only as much width as necessary. It stacks
+either block or inline (though some elements have other default values).</p>
+
+<h4>Inline</h4>
+
+<p>An inline element occupies only as much width as necessary. It stacks
 horizontally with other elements of the same type and may not contain
-other non-inline elements.
-</p>
+other non-inline elements.</p>
+
 <b>&lt;</b><b>span</b><b>&gt;</b>This is some
 <b>&lt;</b><b>b</b><b>&gt;</b>bolded<b>&lt;</b><b>/b</b><b>&gt;</b>
 text!<b>&lt;</b><b>/span</b><b>&gt;</b>
@@ -9172,18 +9148,16 @@ text!<b>&lt;</b><b>/span</b><b>&gt;</b>
   title="This is some bolded text"
   alt="This is some bolded text." />
 </p>
-<p>
-As demonstrated above, two inline elements, <b>&gt;</b>, are in-line
-(hence the name) and do not break the flow of the text.
-</p>
-<h4>
-Block
-</h4>
-<p>
-A block element occupies the maximum available width of its' parent
+
+<p>As demonstrated above, two inline elements, <b>&gt;</b>, are in-line
+(hence the name) and do not break the flow of the text.</p>
+
+<h4>Block</h4>
+
+<p>A block element occupies the maximum available width of its' parent
 element. It starts with a new line and, in contrast to inline elements,
-it does not restrict the type of elements it may contain.
-</p>
+it does not restrict the type of elements it may contain.</p>
+
 <pre><code><b>&lt;</b><b>div</b><b>&gt;</b>Hello world!<b>&lt;</b><b>/div</b><b>&gt;</b><b>&lt;</b><b>div</b><b>&gt;</b>This is an example!<b>&lt;</b><b>/div</b><b>&gt;</b></code></pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ section 23-1-b.  (xxx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -9193,24 +9167,22 @@ it does not restrict the type of elements it may contain.
   title="Hello world! This is an example!"
   alt="Hello world! This is an example!" />
 </p>
-<p>
-The div element is block-level by default, and as shown above, the two
+
+<p>The div element is block-level by default, and as shown above, the two
 block elements are vertically stacked and, unlike the inline elements,
-the flow of the text breaks.
-</p>
+the flow of the text breaks.</p>
+
 <p><b>Inline Block</b></p>
-<p>
-The inline-block value gives us the best of both worlds: it blends the
+
+<p>The inline-block value gives us the best of both worlds: it blends the
 element in with the flow of the text while allowing us to use padding,
 margin, height and similar properties which have no visible effect on
-inline elements.
-</p>
-<p>
-Elements with this display value act as if they were regular text and as
+inline elements.</p>
+<p>Elements with this display value act as if they were regular text and as
 a result are affected by rules controlling the flow of text such as
 text-align. By default they are also shrunk to the the smallest size
-possible to accommodate their content.
-</p>
+possible to accommodate their content.</p>
+
 <pre><code>&lt;!&minus;-Inline: unordered list&minus;-&gt;
 <b>&lt;style&gt;</b>
 li {
@@ -9236,6 +9208,7 @@ li {
   title="3 horizontal rectangles; First Element, Second Element, Third Element"
   alt="3 horizontal rectangles; First Element, Second Element, Third Element." />
 </p>
+
 <pre><code>&lt;!&minus;-block: unordered list&minus;-&gt;
 <b>&gt;&lt;style&gt;</b>
 li {
@@ -9261,6 +9234,7 @@ li {
   title="3 vertical rectangles; First Element, Second Element, Third Element"
   alt="3 vertical rectangles; First Element, Second Element, Third Element." />
 </p>
+
 <pre><code>&lt;!&minus;-Inline-block: unordered list&minus;-&gt;
 <b>&lt;style&gt;</b>
 li {
@@ -9285,49 +9259,38 @@ li {
   title="3 horizontal rectangles; First Element, Second Element, Third Element"
   alt="3 horizontal rectangles; First Element, Second Element, Third Element." />
 </p>
-<h4>
-<b>none</b>
-</h4>
-<p>
-An element that is given the none value to its display property will not
-be displayed at all.
-</p>
-<p>
-For example let's create a div-element that has an id of myDiv:
-</p>
+
+<h4><b>none</b></h4>
+
+<p>An element that is given the none value to its display property will not
+be displayed at all.</p>
+<p>For example let's create a div-element that has an id of myDiv:</p>
+
 <pre><code><b>&lt;div</b> id=&quot;myDiv&quot;<b>&gt;&lt;/div&gt;</b></code></pre>
-<p>
-This can now be marked as not being displayed by the following CSS rule:
-</p>
+
+<p>This can now be marked as not being displayed by the following CSS rule:</p>
+
 <pre><code>#myDiv {
   <b>display</b>: none;
 }</code></pre>
-<p>
-When an element has been set to be <b>display</b>:none; the browser
+
+<p>When an element has been set to be <b>display</b>:none; the browser
 ignores every other layout property for that specific element (both
 position and float). No box will be rendered for that element and its
-existence in html does not affect the position of following elements.
-</p>
-<p>
-Note that this is different from setting the visibility property to
+existence in html does not affect the position of following elements.</p>
+<p>Note that this is different from setting the visibility property to
 hidden. Setting <b>visibility</b>: hidden; for an element would not
 display the element on the page but the element would still take up the
 space in the rendering process as if it would be visible. This will
-therefore affect how following elements are displayed on the page.
-</p>
-<p>
-The none value for the display property is commonly used along with
+therefore affect how following elements are displayed on the page.</p>
+<p>The none value for the display property is commonly used along with
 JavaScript to show or hide elements at will, eliminating the need to
-actually delete and re-create them.
-</p>
+actually delete and re-create them.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch23-2">
-Section 23.2: To get old table structure using div
-</h3>
+<h3 id="ch23-2">Section 23.2: To get old table structure using div</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h4>
-This is the normal HTML table structure
-</h4>
+<h4>This is the normal HTML table structure</h4>
+
 <pre><code><b>&lt;style&gt;</b>
   table {
     width: 100&percnt;;
@@ -9340,9 +9303,9 @@ This is the normal HTML table structure
       <b>&lt;/td&gt;</b>
     <b>&lt;/tr&gt;</b>
   <b>&lt;/table&gt;</b></code></pre>
-<p>
-You can do same implementation like this;
-</p>
+  
+<p>You can do same implementation like this;</p>
+
 <pre><code>
 <b>&lt;style&gt;</b>
   .table-div {
@@ -9364,66 +9327,52 @@ You can do same implementation like this;
   <b>&lt;/div&gt;</b>
 <b>&lt;/div&gt;</b></code></pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="ch24">
-Chapter 24: Grid
-</h2>
+<h2 id="ch24">Chapter 24: Grid</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>
-Grid layout is a new and powerful CSS layout system that allows to
-divide a web page content into rows and columns in an easy way.
-</p>
+<p>Grid layout is a new and powerful CSS layout system that allows to
+divide a web page content into rows and columns in an easy way.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch24-1">
-Section 24.1: Basic Example
-</h3>
+<h3 id="ch24-1">Section 24.1: Basic Example</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h4>
-Property Possible Values
-</h4>
-<p>
-display grid / inline-grid
-</p>
-<p>
-The CSS Grid is defined as a display property. It applies to a parent
-element and its immediate children only.
-</p>
-<p>
-Consider the following markup:
-</p>
+<h4>Property Possible Values</h4>
+
+<p>display grid / inline-grid</p>
+<p>The CSS Grid is defined as a display property. It applies to a parent
+element and its immediate children only.</p>
+<p>Consider the following markup:</p>
+
 <pre><code><b>&lt;</b><b>section</b> class=&quot;container&quot;<b>&gt;</b>
   <b>&lt;div</b> class=&quot;item1&quot;<b>&gt;</b>item1<b>&lt;/div&gt;</b>
   <b>&lt;div</b> class=&quot;item2&quot;<b>&gt;</b>item2<b>&lt;/div&gt;</b>
   <b>&lt;div</b> class=&quot;item3&quot;<b>&gt;</b>item3<b>&lt;/div&gt;</b>
   <b>&lt;div</b> class=&quot;item4&quot;<b>&gt;</b>item4<b>&lt;/div&gt;</b>
 <b>&lt;/section&gt;</b></code></pre>
-<p>
-The easiest way to define the markup structure above as a grid is to
-simply set its display property to grid:
-</p>
+
+<p>The easiest way to define the markup structure above as a grid is to
+simply set its display property to grid:</p>
+
 <pre><code>.container {
   <b>display</b>: grid;
 }</code></pre>
-<p>
-However, doing this will invariably cause all the child elements to
+
+<p>However, doing this will invariably cause all the child elements to
 collapse on top of one another. This is because the children do not
 currently know how to position themselves within the grid. But we can
-explicitly tell them.
-</p>
-<p>
-First we need to tell the grid element .container how many rows and
+explicitly tell them.</p>
+<p>First we need to tell the grid element .container how many rows and
 columns will make up its structure and we can do this using the
-grid-columns and grid-rows properties (note the pluralisation):
-</p>
+grid-columns and grid-rows properties (note the pluralisation):</p>
+
 <pre><code>.container {
   <b>display</b>: grid;
   <b>grid-columns</b>: 50px 50px 50px;
   <b>grid-rows</b>: 50px 50px;
 }</code></pre>
-<p>
-However, that still doesn't help us much because we need to give an
+
+<p>However, that still doesn't help us much because we need to give an
 order to each child element. We can do this by specifying the grid-row
-and grid-column values which will tell it where it sits in the grid:
-</p>
+and grid-column values which will tell it where it sits in the grid:</p>
+
 <pre><code>.container .item1 {
   <b>grid-column</b>: 1;
   <b>grid-row</b>: 1;
@@ -9440,12 +9389,10 @@ and grid-column values which will tell it where it sits in the grid:
   <b>grid-column</b>: 2;
   <b>grid-row</b>: 2;
 }</code></pre>
-<p>
-By giving each item a column and row value it identifies the items order
-within the container.
-</p>
-<p>
-View a working example on
+
+<p>By giving each item a column and row value it identifies the items order
+within the container.</p>
+<p>View a working example on
 <a href="https://jsfiddle.net/fexfwkkv/3/" 
 target="_blank" rel="noopener noreferrer">Demo (jsFiddle)</a>. You'll
 need to view this in IE10, IE11 or Edge for it to work as these are
@@ -9453,24 +9400,15 @@ currently the only browsers supporting Grid Layout (with vendor prefix
 -ms-) or enable a flag in Chrome, Opera and Firefox according to
 <a href="http://caniuse.com/#feat=css-grid" 
 target="_blank" rel="noopener noreferrer">canIuse</a> in order to test
-with them.
-</p>
+with them.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="ch25">
-Chapter 25: Tables
-</h2>
+<h2 id="ch25">Chapter 25: Tables</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch25-1">
-Section 25.1: table-layout
-</h3>
+<h3 id="ch25-1">Section 25.1: table-layout</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>
-The table-layout property changes the algorithm that is used for the
-layout of a table.
-</p>
-<p>
-Below an example of two tables both set to: <b>width</b> 150px:
-</p>
+<p>The table-layout property changes the algorithm that is used for the
+layout of a table.</p>
+<p>Below an example of two tables both set to: <b>width</b> 150px:</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~ 200. two tables, both set to width: 150px (143) ~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left" width="100%">
@@ -9479,13 +9417,13 @@ Below an example of two tables both set to: <b>width</b> 150px:
   title="Two tables, both set to width: 150px"
   alt="Two tables, both set to width: 150px." />
 </p>
-<p>
-The table on the left has <b>table-layout</b>: auto while the one on the
+
+<p>The table on the left has <b>table-layout</b>: auto while the one on the
 right has <b>table-layout</b>: fixed. The former is wider than the
 specified width (210px instead of 150px) but the contents fit. The
 latter takes the defined width of 150px, regardless if the contents
-overflow or not.
-</p>
+overflow or not.</p>
+
 <table>
 <colgroup>
 <col style="width: 41%" />
@@ -9524,19 +9462,13 @@ overflow.</td>
 </tbody>
 </table>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch25-2">
-Section 25.2: empty-cells
-</h3>
+<h3 id="ch25-2">Section 25.2: empty-cells</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>
-The empty-cells property determines if cells with no content should be
+<p>The empty-cells property determines if cells with no content should be
 displayed or not. This has no effect unless border-collapse is set to
-separate.
-</p>
-<p>
-Below an example with two tables with different values set to the
-empty-cells property:
-</p>
+separate.</p>
+<p>Below an example with two tables with different values set to the
+empty-cells property:</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~ 201. two tables with different values set to empty-cells property (143) ~~~~~~~~~~-->
 <p align="left" width="100%">
@@ -9545,11 +9477,11 @@ empty-cells property:
   title="Two tables with different values set to empty-cells property"
   alt="Two tables with different values set to empty-cells property." />
 </p>
-<p>
-The table on the left has <b>empty-cells</b>: show while the one on the
+
+<p>The table on the left has <b>empty-cells</b>: show while the one on the
 right has <b>empty-cells</b>: hide. The former does display the empty
-cells whereas the latter does not.
-</p>
+cells whereas the latter does not.</p>
+
 <table>
 <colgroup>
 <col style="width: 35%" />
@@ -9574,9 +9506,9 @@ cell.</td>
 </tr>
 </tbody>
 </table>
-<h4>
-More Information:
-</h4>
+
+<h4>More Information:</h4>
+
 <ul>
 <li>
 <a href="https://www.w3.org/TR/CSS21/tables.html#empty-cells" 
@@ -9599,18 +9531,12 @@ Tricks empty cells.
 </li>
 </ul>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch25-3">
-Section 25.3: border-collapse
-</h3>
+<h3 id="ch25-3">Section 25.3: border-collapse</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>
-The border-collapse property determines if a tables' borders should be
-separated or merged.
-</p>
-<p>
-Below an example of two tables with different values to the
-border-collapse property:
-</p>
+<p>The border-collapse property determines if a tables' borders should be
+separated or merged.</p>
+<p>Below an example of two tables with different values to the
+border-collapse property:</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~ 202. two tables with diff values to the border-collapse property (144) ~~~~~~~~-->
 <p align="left" width="100%">
@@ -9619,11 +9545,11 @@ border-collapse property:
   title="Two tables with different values set to the border-collapse property"
   alt="Two tables with different values set to the border-collapse property." />
 </p>
-<p>
+
 <p>The table on the left has <b>border-collapse</b>: separate while the
-one on the right has</p>
-<b>border-collapse</b>: collapse.
-</p>
+one on the right has<br>
+<b>border-collapse</b>: collapse.</p>
+
 <table>
 <colgroup>
 <col style="width: 20%" />
@@ -9649,18 +9575,12 @@ than being distinct.</td>
 </tbody>
 </table>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch25-4">
-Section 25.4: border-spacing
-</h3>
+<h3 id="ch25-4">Section 25.4: border-spacing</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>
-The border-spacing property determines the spacing between cells. This
-has no effect unless border-collapse is set to separate.
-</p>
-<p>
-Below an example of two tables with different values to the
-border-spacing property:
-</p>
+<p>The border-spacing property determines the spacing between cells. This
+has no effect unless border-collapse is set to separate.</p>
+<p>Below an example of two tables with different values to the
+border-spacing property:</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~ 203. two tables with diff values to the border-spacing property (144) ~~~~~~~~~-->
 <p align="left" width="100%">
@@ -9669,8 +9589,10 @@ border-spacing property:
   title="Two tables with diff values to the border-spacing property"
   alt="Two tables with diff values to the border-spacing property." />
 </p>
+
 <p>The table on the left has <b>border-spacing</b>: 2px (default) while
 the one on the right has <b>border-spacing</b>: 8px.</p>
+
 <table>
 <colgroup>
 <col style="width: 24%" />
@@ -9696,19 +9618,13 @@ values respectively.</td>
 </tbody>
 </table>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch25-5">
-Section 25.5: caption-side
-</h3>
+<h3 id="ch25-5">Section 25.5: caption-side</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>
-The caption-side property determines the vertical positioning of the
+<p>The caption-side property determines the vertical positioning of the
 <b>&lt;caption&gt;</b> element within a table. This has no effect if
-such element does not exist.
-</p>
-<p>
-Below an example with two tables with different values set to the
-caption-side property:
-</p>
+such element does not exist.</p>
+<p>Below an example with two tables with different values set to the
+caption-side property:</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~ 204. two tables with diff values set to caption-side property (144) ~~~~~~~~~~~~-->
 <p align="left" width="100%">
@@ -9717,10 +9633,10 @@ caption-side property:
   title="Two tables with diff values set to caption-side property"
   alt="Two tables with diff values set to caption-side property." />
 </p>
-<p>
-The table on the left has <b>caption-side</b>: top while the one on the
-right has <b>caption-side</b>: bottom.
-</p>
+
+<p>The table on the left has <b>caption-side</b>: top while the one on the
+right has <b>caption-side</b>: bottom.</p>
+
 <table>
 <colgroup>
 <col style="width: 28%" />
@@ -9745,9 +9661,7 @@ table.</td>
 </tbody>
 </table>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="ch26">
-Chapter 26: Transitions
-</h2>
+<h2 id="ch26">Chapter 26: Transitions</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <table>
 <colgroup>
@@ -9815,13 +9729,10 @@ start. Can be</td>
 </tbody>
 </table>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch26-1">
-Section 26.1: Transition shorthand
-</h3>
+<h3 id="ch26-1">Section 26.1: Transition shorthand</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h4>
-CSS
-</h4>
+<h4>CSS:</h4>
+
 <pre><code>div {
   <b>width</b>: 150px;
   <b>height</b>: 150px;
@@ -9831,32 +9742,21 @@ CSS
 div:hover {
   <b>background-color</b>: green;
 }</code></pre>
-<h4>
-HTML:
-</h4>
+
+<h4>HTML:</h4>
+
 <pre><code><b>&lt;div&gt;&lt;/div&gt;</b></code></pre>
-<p>
-This example will change the background color when the div is hovered
-the background-color change will last 1 second.
-</p>
+
+<p>This example will change the background color when the div is hovered
+the background-color change will last 1 second.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch26-2">
-Section 26.2: cubic-bezier
-</h3>
+<h3 id="ch26-2">Section 26.2: cubic-bezier</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>
-The cubic-bezier function is a transition timing function which is often
-used for custom and smooth transitions.
-</p>
-<p>
-<b>transition-timing-function</b>: cubic-bezier(0.1, 0.7, 1.0, 0.1);
-</p>
-<p>
-The function takes four parameters:
-</p>
-<p>
-cubic-bezier(P1_x, P1_y, P2_x, P2_y)
-</p>
+<p>The cubic-bezier function is a transition timing function which is often
+used for custom and smooth transitions.</p>
+<p><b>transition-timing-function</b>: cubic-bezier(0.1, 0.7, 1.0, 0.1);</p>
+<p>The function takes four parameters:</p>
+<p>cubic-bezier(P1_x, P1_y, P2_x, P2_y)</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 205. cubic-bezier (146) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left" width="100%">
@@ -9865,12 +9765,10 @@ cubic-bezier(P1_x, P1_y, P2_x, P2_y)
   title="Cubic-bezier"
   alt="Cubic-bezier." />
 </p>
-<p>
-These parameters will be mapped to points which are part of a
+
+<p>These parameters will be mapped to points which are part of a
 <a href="https://en.wikipedia.org/wiki/B%C3%A9zier_curve#Cubic_B.C3.A9zier_curves" 
-target="_blank" rel="noopener noreferrer">Bézier
-curve</a>:
-</p>
+target="_blank" rel="noopener noreferrer">Bézier curve</a>:</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 206. bézier curve (146) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left" width="100%">
@@ -9879,20 +9777,16 @@ curve</a>:
   title="Bézier curve"
   alt="Bézier curve." />
 </p>
-<p>
-For CSS Bézier Curves, P0 and P3 are always in the same spot. P0 is at
+
+<p>For CSS Bézier Curves, P0 and P3 are always in the same spot. P0 is at
 (0,0) and P3 is at (1,1), which menas that the parameters passed to the
-cubic-bezier function can only be between 0 and 1.
-</p>
-<p>
-If you pass parameters which aren't in this interval the function will
-default to a linear transition.
-</p>
-<p>
-Since cubic-bezier is the most flexible transition in CSS, you can
+cubic-bezier function can only be between 0 and 1.</p>
+<p>If you pass parameters which aren't in this interval the function will
+default to a linear transition.</p>
+<p>Since cubic-bezier is the most flexible transition in CSS, you can
 translate all other transition timing function to cubic-bezier
-functions:
-</p>
+functions:</p>
+
 <pre><code>linear:cubic-bezier(0,0,1,1)
 
 ease-in: cubic-bezier(0.42, 0.0, 1.0, 1.0)
@@ -9901,13 +9795,10 @@ ease-out: cubic-bezier(0.0, 0.0, 0.58, 1.0)
 
 ease-in-out: cubic-bezier(0.42, 0.0, 0.58, 1.0)</code></pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch26-3">
-Section 26.3: Transition (longhand)
-</h3>
+<h3 id="ch26-3">Section 26.3: Transition (longhand)</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h4>
-CSS
-</h4>
+<h4>CSS:</h4>
+
 <pre><code>div {
   <b>height</b>: 100px;
   <b>width</b>: 100px;
@@ -9948,9 +9839,7 @@ transitioning immediately, whereas the width will wait 1 second.
 </li>
 </ul>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="ch27">
-Chapter 27: Animations
-</h2>
+<h2 id="ch27">Chapter 27: Animations</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>
 Transition
@@ -10012,21 +9901,18 @@ values, IE |<br />
 period of time where the keyframe’s set attributes are set. |<br />
 block | Any amount of CSS attributes for the keyframe. |</div>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch27-1">
-Section 27.1: Animations with keyframes
-</h3>
+<h3 id="ch27-1">Section 27.1: Animations with keyframes</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>For multi-stage CSS animations, you can create CSS <span
 style="color:blue">@keyframes</span>. Keyframes allow you to define
 multiple animation points, called a keyframe, to define more complex
 animations.</p>
-<h4>
-Basic Example
-</h4>
-<p>
-In this example, we'll make a basic background animation that cycles
-between all colors.
-</p>
+
+<h4>Basic Example</h4>
+
+<p>In this example, we'll make a basic background animation that cycles
+between all colors.</p>
+
 <pre><code><span style="color:blue">&commat;keyframes</span> rainbow-background {
  0&percnt;       { <b>background-color</b>: #ff0000; } 
  8.333&percnt;   { <b>background-color</b>: #ff8000; } 
@@ -10045,87 +9931,68 @@ between all colors.
 .RainbowBackground {
   <b>animation</b>: rainbow-background 5s infinite;
 }</code></pre>
-<p>
-<a href="https://jsfiddle.net/s9m3od3p/6/" 
-target="_blank" rel="noopener noreferrer">View Result</a>.
-</p>
-<p>
-There's a few different things to note here. First, the actual <span
-style="color:blue">@</span>keyframes syntax.
-</p>
+
+<p><a href="https://jsfiddle.net/s9m3od3p/6/" 
+target="_blank" rel="noopener noreferrer">View Result</a>.</p>
+<p>There's a few different things to note here. First, the actual <span
+style="color:blue">@</span>keyframes syntax.</p>
+
 <pre><code><span style="color:blue">&commat;</span>keyframes rainbow-background{</code></pre>
-<p>
-This sets the name of the animation to rainbow-background.
-</p>
+
+<p>This sets the name of the animation to rainbow-background.</p>
+
 <pre><code>0&percnt;    { <b>background-color</b>: #ff0000; }</code>></pre>
-<p>
-This is the definition for a keyframe within the animation. The first
+
+<p>This is the definition for a keyframe within the animation. The first
 part, the 0% in the case, defines where the keyframe is during the
 animation. The 0% implies it is 0% of the total animation time from the
-beginning.
-</p>
-<p>
-The animation will automatically transition between keyframes. So, by
+beginning.</p>
+<p>The animation will automatically transition between keyframes. So, by
 setting the next background color at 8.333%, the animation will smoothly
-take 8.333% of the time to transition between those keyframes.
-</p>
+take 8.333% of the time to transition between those keyframes.</p>
+
 <pre><code>.RainbowBackground {
   <b>animation</b>: rainbow-background 5s infinite;
 }</code></pre>
-<p>
-This code attaches our animation to all elements which have the
-.RainbowBackground class.
-</p>
-<p>
-The actual animation property takes the following arguments;
-</p>
+
+<p>This code attaches our animation to all elements which have the
+.RainbowBackground class.</p>
+<p>The actual animation property takes the following arguments;</p>
+
 <ul>
-<li>
-<b>animation-name</b>: The name of our animation. In this case,
-rainbow-background.
-</li>
-<li>
-<b>animation-duration</b>: How long the animation will take, in this
-case 5 seconds.
-</li>
-<li>
-<b>animation-iteration-count (Optional)</b>: The number of times the
-animation will loop. In this case, the animation will go on
-indefinitely. By default, the animation will play once.
-</li>
-<li>
-<b>animation-delay (Optional)</b>: Specifies how long to wait before the
-animation starts. It defaults to 0 seconds, and can take negative
-values. For example, −2s would start the animation 2 seconds into its
-loop.
-</li>
-<li>
-<b>animation-timing-function (Optional)</b>: Specifies the speed curve
-of the animation. It defaults to ease, where the animation starts slow,
-gets faster and ends slow.
-</li>
+  <li><b>animation-name</b>: The name of our animation. In this case,
+    rainbow-background.</li>
+  <li><b>animation-duration</b>: How long the animation will take, in this
+    case 5 seconds.</li>
+  <li><b>animation-iteration-count (Optional)</b>: The number of times the
+    animation will loop. In this case, the animation will go on indefinitely. 
+	By default, the animation will play once.</li>
+  <li><b>animation-delay (Optional)</b>: Specifies how long to wait before the
+    animation starts. It defaults to 0 seconds, and can take negative
+	values. For example, −2s would start the animation 2 seconds into its
+	loop.</li>
+  <li><b>animation-timing-function (Optional)</b>: Specifies the speed curve
+    of the animation. It defaults to ease, where the animation starts slow,
+	gets faster and ends slow.</li>
 </ul>
-<p>
-In this particular example, both the 0% and 100% keyframes specify {; }.
+
+<p>In this particular example, both the 0% and 100% keyframes specify {; }.
 Wherever two or more keyframes share a state, one may specify them in a
 single statement. In this case, the two 0% and 100% lines could be
-replaced with this single line:
-</p>
+replaced with this single line:</p>
+
 <pre><code>0&percnt;, 100&percnt; { <b>background-color</b>: #ff0000;}</code></pre>
-<h4>
-Cross-browser compatibility
-</h4>
-<p>
-For older WebKit-based browsers, you'll need to use the vendor prefix on
-both the @keyframes declaration and the animation property, like so:
-</p>
+
+<h4>Cross-browser compatibility</h4>
+
+<p>For older WebKit-based browsers, you'll need to use the vendor prefix on
+both the @keyframes declaration and the animation property, like so:</p>
+
 <pre><code><b>@-webkit-keyframes</b>{}
 
 &minus;webkit-animation: &period;..</code></pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch27-2">
-Section 27.2: Animations with the transition property
-</h3>
+<h3 id="ch27-2">Section 27.2: Animations with the transition property</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Useful for simple animations, the CSS transition property allows
 number-based CSS properties to animate between states.</p>
@@ -10399,103 +10266,84 @@ If not provided, the first scale-factor</td>
 </tbody>
 </table>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="28-1">
-Section 28.1: Rotate
-</h3>
+<h3 id="28-1">Section 28.1: Rotate</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h4>
-HTML:
-</h4>
+<h4>HTML:</h4>
+
 <pre><code><b>&lt;div</b> class=&quot;rotate&quot;<b>&gt;&lt;/div&gt;</b></code></pre>
-<h4>
-CSS:
-</h4>
+
+<h4>CSS:</h4>
+
 <pre><code>.rotate {
   <b>width</b>: 100px;
   <b>height</b>: 100px;
   <b>background</b>: teal;
   <b>transform</b>: rotate (45deg);
 }</code></pre>
-<p>
-This example will rotate the div by 45 degrees clockwise. The center of
+
+<p>This example will rotate the div by 45 degrees clockwise. The center of
 rotation is in the center of the div, 50% from left and 50% from top.
 You can change the center of rotation by setting the transform-origin
-property.
-</p>
+property.</p>
+
 <pre><code><b>transform-origin</b>: 100&percnt; 50&percnt;;</code></pre>
-<p>
-The above example will set the center of rotation to the middle of the
-right side end.
-</p>
+
+<p>The above example will set the center of rotation to the middle of the
+right side end.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch28-2">
-Section 28.2: Scale
-</h3>
+<h3 id="ch28-2">Section 28.2: Scale</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h4>
-HTML:
-</h4>
+<h4>HTML:</h4>
+
 <pre><code><b>&lt;div</b> class=&quot;scale&quot;<b>&gt;&lt;/div&gt;</b></code></pre>
-<h4>
-CSS
-</h4>
+
+<h4>CSS:</h4>
+
 <pre><code>.scale {
   <b>width</b>: 100px;
   <b>height</b>: 100px;
   <b>background</b>: teal;
   <b>transform</b>: scale (0.5, 1.3);
 }</code></pre>
-<p>
-This example will scale the div to 100px * 0.5 = 50px on the X axis and
-to 100px * 1.3 = 130px on the Y axis.
-</p>
-<p>
-The center of the transform is in the center of the div, 50% from left
-and 50% from top.
-</p>
+
+<p>This example will scale the div to 100px * 0.5 = 50px on the X axis and
+to 100px * 1.3 = 130px on the Y axis.</p>
+<p>The center of the transform is in the center of the div, 50% from left
+and 50% from top.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch28-3">
-Section 28.3: Skew
-</h3>
+<h3 id="ch28-3">Section 28.3: Skew</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h4>
-HTML:
-</h4>
+<h4>HTML:</h4>
+
 <pre><code><b>&lt;div</b> class=&quot;skew&quot;<b>&gt;&lt;/div&gt;</b></code></pre>
-<h4>
-CSS:
-</h4>
+
+<h4>CSS:</h4>
+
 <pre><code>.skew {
   <b>width</b>: 100px;
   <b>height</b>: 100px;
   <b>background</b>: teal;
   <b>transform</b>: skew (20deg, -30deg);
 }</code></pre>
-<p>
-This example will skew the div by 20 degrees on the X axis and by − 30
+
+<p>This example will skew the div by 20 degrees on the X axis and by − 30
 degrees on the Y axis. The center of the transform is in the center of
-the div, 50% from left and 50% from top.
-</p>
-<p>
-<a href="https://jsfiddle.net/MadalinaTn/gtt4osms/1/" 
+the div, 50% from left and 50% from top.</p>
+<p><a href="https://jsfiddle.net/MadalinaTn/gtt4osms/1/" 
 target="_blank" rel="noopener noreferrer">See the result here</a>.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch28-4">Section 28.4: Multiple transforms</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>
-Multiple transforms can be applied to an element in one property like
-this:
-</p>
+<p>Multiple transforms can be applied to an element in one property like
+this:</p>
+
 <pre><code><b>transform</b>: rotate(15deg) translateX(200px);</code></pre>
-<p>
-This will rotate the element 15 degrees clockwise and then translate it
-200px to the right.
-</p>
-<p>
-In chained transforms, <b>the coordinate system moves with the
+
+<p>This will rotate the element 15 degrees clockwise and then translate it
+200px to the right.</p>
+<p>In chained transforms, <b>the coordinate system moves with the
 element</b>. This means that the translation won't be horizontal but on
-an axis rotate 15 degrees clockwise as shown in the following image:
-</p>
+an axis rotate 15 degrees clockwise as shown in the following image:</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~ 207. Step 1 rotate, step 2 translation (154) ~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left" width="100%">
@@ -10504,18 +10352,17 @@ an axis rotate 15 degrees clockwise as shown in the following image:
   title="Step 1 rotate, step 2 translation"
   alt="Step 1 rotate, step 2 translation." />
 </p>
-<p>
-Changing the order of the transforms will change the output. The first
-example will be different to
-</p>
+
+<p>Changing the order of the transforms will change the output. The first
+example will be different to</p>
+
 <pre><code><b>transform</b>: translateX(200px) rotate(15deg);
 <b>&lt;div</b> class=&quot;transform&quot;<b>&gt;&lt;/div&gt;</b>
 .transform {
   <b>transform</b>: rotate(15deg) translateX(200px);
 }</code></pre>
-<p>
-As shown in this image:
-</p>
+
+<p>As shown in this image:</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~ 208. step 1 translation, step 2 rotate (154) ~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left" width="100%">
@@ -10525,68 +10372,53 @@ As shown in this image:
   alt="Step 1 translation, step 2 rotate." />
 </p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch28-5">
-Section 28.5: Translate
-</h3>
+<h3 id="ch28-5">Section 28.5: Translate</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h4>
-HTML:
-</h4>
+<h4>HTML:</h4>
+
 <pre><code><b>&lt;div</b> class=&quot;translate&quot;<b>&gt;&lt;/div&gt;</b></code></pre>
-<h4>
-CSS:
-</h4>
+
+<h4>CSS:</h4>
+
 <pre><code>.translate {
   <b>width</b>: 100px;
   <b>height</b>: 100px;
   <b>background</b>: teal;
   <b>transform</b>: translate (200px, 50&percnt;);
 }</code></pre>
-<p>
-This example will move the div by 200px on the X axis and by 100px * 50%
-= 50px on the Y axis.
-</p>
-<p>
-You can also specify translations on a single axis.
-</p>
-<p>
-On the X axis:
-</p>
+
+<p>This example will move the div by 200px on the X axis and by 100px * 50%
+= 50px on the Y axis.</p>
+<p>You can also specify translations on a single axis.</p>
+<p>On the X axis:</p>
+
 <pre><code>.translate {
   <b>transform</b>: translateX(200px);
 }</code></pre>
-<p>
-On the Y axis:
-</p>
+
+<p>On the Y axis:</p>
+
 <pre><code>.translate {
   <b>transform</b>: translateY(50&percnt;);
 }</code></pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch28-6">
-Section 28.6: Transform Origin
-</h3>
+<h3 id="ch28-6">Section 28.6: Transform Origin</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>
-Transformations are done with respect to a point which is defined by the
-transform-origin property.
-</p>
-<p>
-The property takes 2 values: transform-origin: X Y;
-</p>
-<p>
-In the following example the first div (.tl) is rotate around the top
+<p>Transformations are done with respect to a point which is defined by the
+transform-origin property.</p>
+<p>The property takes 2 values: transform-origin: X Y;</p>
+<p>In the following example the first div (.tl) is rotate around the top
 left corner with <b>transform-origin</b>: 0 0; and the second (.tr) is
 transformed around it's top right corner with <b>transform-origin</b>:
-100% 0. The rotation is applied <b>on hover</b>:
-</p>
-<h4>
-HTML:
-</h4>
+100% 0. The rotation is applied <b>on hover</b>:</p>
+
+<h4>HTML:</h4>
+
 <pre><code><b>&lt;div</b> class=&quot;transform originl&quot;<b>&gt;&lt;/div&gt;</b>
 <b>&lt;div</b> class=&quot;transform origin2&quot;<b>&gt;&lt;/div&gt;</b></code></pre>
-<h4>
-CSS:
-</h4>
+
+<h4>CSS:</h4>
+
 <pre><code>.transform {
   <b>display</b>: inline-block;
   <b>width</b>: 200px;
@@ -10603,22 +10435,16 @@ CSS:
 .transform: hover {
   <b>transform</b>: rotate(30deg);
 }</code></pre>
-<p>
-The default value for the transform-origin property is 50% 50% which is
-the center of the element.
-</p>
+
+<p>The default value for the transform-origin property is 50% 50% which is
+the center of the element.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="ch29">
-Chapter 29: 3D Transforms
-</h2>
+<h2 id="ch29">Chapter 29: 3D Transforms</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch29-1">
-Section 29.1: Compass pointer or needle shape using 3D transforms
-</h3>
+<h3 id="ch29-1">Section 29.1: Compass pointer or needle shape using 3D transforms</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h4>
-CSS
-</h4>
+<h4>CSS:</h4>
+
 <pre><code>div.needle {
   <b>margin</b>:100px;
   <b>height</b>:150px;
@@ -10628,34 +10454,28 @@ CSS
   <b>background-image</b>: linear-gradient(to top left, #555 0&percnt;, #555 40&percnt;, #444 50&percnt;, #333 97&percnt;);
   <b>box-shadow</b>:inset 6px 6px 22px 8px #272727;
 }</code></pre>
-<h4>
-HTML:
-</h4>
+
+<h4>HTML:</h4>
+
 <pre><code><b>&lt;div</b> class=&apos;needle&apos;<b>&gt;&lt;/div&gt;</b></code></pre>
-<p>
-In the above example, a needle or compass pointer shape is created using
+
+<p>In the above example, a needle or compass pointer shape is created using
 3D transforms. Generally when we apply the rotate transform on an
 element, the rotation happens only in the Z-axis and at best we will end
 up with diamond shapes only. But when a rotateY transform is added on
 top of it, the element gets squeezed in the Y-axis and thus ends up
 looking like a needle. The more the rotation of the Y-axis the more
-squeezed the element looks.
-</p>
-<p>
-The output of the above example would be a needle resting on its tip.
+squeezed the element looks.</p>
+<p>The output of the above example would be a needle resting on its tip.
 For creating a needle that is resting on its base, the rotation should
 be along the X-axis instead of along Y-axis. So the transform property's
-value would have to be something like rotate(85deg) rotateZ(45deg);.
-</p>
-<p>
-<a href="http://codepen.io/hari_shanx/pen/YXzoBo" 
+value would have to be something like rotate(85deg) rotateZ(45deg);.</p>
+<p><a href="http://codepen.io/hari_shanx/pen/YXzoBo" 
 target="_blank" rel="noopener noreferrer">This pen</a> uses a
 similar approach to create something that resembles the Safari logo or a
-compass dial.
-</p>
-<h4>
-Screenshot of element with no transform:
-</h4>
+compass dial.</p>
+
+<h4>Screenshot of element with no transform:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~ 209. screenshot of element with no transform (156) ~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left" width="100%">
@@ -10664,6 +10484,7 @@ Screenshot of element with no transform:
   title="Screenshot of element with no transform"
   alt="Screenshot of element with no transform." />
 </p>
+
 <b>Screenshot of element with only 2D transform:</b>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~ 210. screenshot of element with only 2d transform (156) ~~~~~~~~~~~~~~~~~~~-->
@@ -10673,6 +10494,7 @@ Screenshot of element with no transform:
   title="Screenshot of element with only 2D transform"
   alt="Screenshot of element with only 2D transform." />
 </p>
+
 <b>Screenshot of element with 3D transform:</b>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~ 211. screenshot of element with 3d transform (157) ~~~~~~~~~~~~~~~~~~~~~-->
@@ -10683,19 +10505,16 @@ Screenshot of element with no transform:
   alt="Screenshot of element with 3D transform." />
 </p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch29-2">
-Section 29.2: 3D text effect with shadow
-</h3>
+<h3 id="ch29-2">Section 29.2: 3D text effect with shadow</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h4>
-HTML:
-</h4>
+<h4>HTML:</h4>
+
 <pre><code><b>&lt;div</b> id=&quot;title&quot;<b>&gt;</b>
   <b>&lt;h1</b> data-content=&quot;HOVER&quot;<b>&gt;</b>HOVER<b>&lt;/h1&gt;</b>
 <b>&lt;/div&gt;</b></code></pre>
-<h4>
-CSS:
-</h4>
+
+<h4>CSS:</h4>
+
 <pre><code>&ast;{<b>margin</b>:0;<b>padding</b>:0;}
 html,body{<b>height</b>:100&percnt;;<b>width</b>:100&percnt;;<b>overflow</b>:hidden;<b>background</b>:#0099CC;}
 #title {
@@ -10733,11 +10552,10 @@ h1:after {
   <b>transform</b>:translatez(-200px) rotate(40deg) skewX(35deg);
   <b>border-radius</b>:0 0 100&percnt; 0;
 }</code></pre>
-<p>
-<a href="http://codepen.io/web-tiki/pen/azeKNy" 
+
+<p><a href="http://codepen.io/web-tiki/pen/azeKNy" 
 target="_blank" rel="noopener noreferrer">View example with
-additional hover effect</a>.
-</p>
+additional hover effect</a>.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~ 212. hover effect 3d with shadow (158) ~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left" width="100%">
@@ -10746,39 +10564,25 @@ additional hover effect</a>.
   title="Hover effect 3d with shadow"
   alt="Hover effect 3d with shadow." />
 </p>
-<p>
-In this example, the text is transformed to make it look like it is
-going into the screen away from the user.
-</p>
-<p>
-The shadow is transformed accordingly so it follows the text. As it is
+
+<p>In this example, the text is transformed to make it look like it is
+going into the screen away from the user.</p>
+<p>The shadow is transformed accordingly so it follows the text. As it is
 made with a pseudo element and the data attribute, it inherits the
-transforms form it's parent (the H1 tag).
-</p>
-<p>
-The white "light" is made with a pseudo element on the #title element.
-It is skewed and uses border-radius for the rounded corner.
-</p>
+transforms form it's parent (the H1 tag).</p>
+<p>The white "light" is made with a pseudo element on the #title element.
+It is skewed and uses border-radius for the rounded corner.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch29-3">
-Section 29.3: backface-visibility
-</h3>
+<h3 id="ch29-3">Section 29.3: backface-visibility</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>
-The backface-visibility property relates to 3D transforms.
-</p>
-<p>
-With 3D transforms and the backface-visibility property, you're able to
+<p>The backface-visibility property relates to 3D transforms.</p>
+<p>With 3D transforms and the backface-visibility property, you're able to
 rotate an element such that the original front of an element no longer
-faces the screen.
-</p>
-<p>
-For example, this would flip an element away from the screen:
-</p>
-<p>
-<a href="https://jsfiddle.net/3z3z843c/" 
-target="_blank" rel="noopener noreferrer">Demo (jsFIDDLE)</a>
-</p>
+faces the screen.</p>
+<p>For example, this would flip an element away from the screen:</p>
+<p><a href="https://jsfiddle.net/3z3z843c/" 
+target="_blank" rel="noopener noreferrer">Demo (jsFIDDLE)</a></p>
+
 <pre><code><b>&lt;div</b> class=&quot;flip&quot;<b>&gt;</b>Loren ipsum<b>&lt;/div&gt;</b>
 <b>&lt;div</b> class=&quot;flip back&quot;<b>&gt;</b>Lorem ipsum<b>&lt;/div&gt;</b>
 .flip {
@@ -10794,49 +10598,35 @@ target="_blank" rel="noopener noreferrer">Demo (jsFIDDLE)</a>
   -moz-backface-visibility:    hidden;
   -ms-backface-visibility:     hidden;
 }</code></pre>
-<p>
-Firefox 10+ and IE 10+ support backface-visibility without a prefix.
+
+<p>Firefox 10+ and IE 10+ support backface-visibility without a prefix.
 Opera, Chrome, Safari, iOS, and Android all need
--webkit-backface-visibility.
-</p>
-<p>
-It has 4 values:
-</p>
+-webkit-backface-visibility.</p>
+<p>It has 4 values:</p>
+
 <ol>
-<li>
-<b>visible</b> (default) - the element will always be visible even when
-not facing the screen.
-</li>
-<li>
-<b>hidden</b> - the element is not visible when not facing the screen.
-</li>
-<li>
-<b>inherit</b> - the property will gets its value from the its parent
-element.
-</li>
-<li>
-<b>initial</b> - sets the property to its default, which is visible.
-</li>
+  <li><b>visible</b> (default) - the element will always be visible even when
+    not facing the screen.</li>
+  <li><b>hidden</b> - the element is not visible when not facing the screen.</li>
+  <li><b>inherit</b> - the property will gets its value from the its parent
+    element.</li>
+  <li><b>initial</b> - sets the property to its default, which is visible.</li>
 </ol>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch29-4">
-Section 29.4: 3D cube
-</h3>
+<h3 id="ch29-4">Section 29.4: 3D cube</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>
-3D transforms can be use to create many 3D shapes. Here is a simple 3D
-CSS cube example:
-</p>
-<h4>
-HTML:
-</h4>
+<p>3D transforms can be use to create many 3D shapes. Here is a simple 3D
+CSS cube example:</p>
+
+<h4>HTML:</h4>
+
 <pre><code><b>&lt;div</b> class=&quot;cube&quot;<b>&gt;</b>
   <b>&lt;div</b> class=&quot;cubeFace&quot;<b>&gt;&lt;/div&gt;</b>
   <b>&lt;div</b> class=&quot;cubeFace face2&quot;<b>&gt;&lt;/div&gt;</b>
 <b>&lt;/div&gt;</b></code></pre>
-<h4>
-CSS:
-</h4>
+
+<h4>CSS:</h4>
+
 <pre><code>body {
   <b>perspective-origin</b>: 50&percnt; 100&percnt;;
   <b>perspective</b>: 1500px;
@@ -10887,8 +10677,8 @@ CSS:
   <b>left</b>: 100&percnt;;
   <b>transform</b>: rotateY&lpar;90deg&rpar;;
 }</code></pre>
-<p>
-<a href="http://codepen.io/web-tiki/pen/NNwqBa" 
+
+<p><a href="http://codepen.io/web-tiki/pen/NNwqBa" 
 target="_blank" rel="noopener noreferrer">View this example</a><br> 
 Additional styling is added in the demo and a transform
 is applied on hover to view the 6 faces of the cube.</p>
@@ -11188,28 +10978,24 @@ respond to mouse/touch events.</p>
     https://davidwalsh.name/pointer-events</a></li>
 </ul>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch31-3">
-Section 31.3: caret-color
-</h3>
+<h3 id="ch31-3">Section 31.3: caret-color</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>
-The caret-color CSS property specifies the color of the caret, the
+<p>The caret-color CSS property specifies the color of the caret, the
 visible indicator of the insertion point in an element where text and
-other content is inserted by the user's typing or editing.
-</p>
-<h4>
-HTML:
-</h4>
+other content is inserted by the user's typing or editing.</p>
+
+<h4>HTML:</h4>
+
 <pre><code><b>&lt;input</b> id=&quot;example&quot;<b>/&gt;</b></code></pre>
-<h4>
-CSS:
-</h4>
+
+<h4>CSS:</h4>
+
 <pre><code>#example {
   <b>caret-color</b>: red;
 }</code></pre>
-<h4>
-Resources:
-</h4>
+
+<h4>Resources:</h4>
+
 <ul>
 <li>
 <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/caret-color" 
@@ -11217,9 +11003,7 @@ target="_blank" rel="noopener noreferrer">
 https://developer.mozilla.org/en-US/docs/Web/CSS/caret-color</a></li>
 </ul>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="ch32">
-Chapter 32: box-shadow
-</h2>
+<h2 id="ch32">Chapter 32: box-shadow</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <table>
 <colgroup>
@@ -11276,9 +11060,7 @@ rgba(), hsla().</td>
 </tbody>
 </table>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch32-1">
-Section 32.1: bottom-only drop shadow using a pseudoelement
-</h3>
+<h3 id="ch32-1">Section 32.1: bottom-only drop shadow using a pseudoelement</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p><a href="https://jsfiddle.net/UnsungHero97/80qod7aL/2/" 
 target="_blank" rel="noopener noreferrer">Demo (jsFiddle)</a>.</p>
@@ -11596,54 +11378,44 @@ flowing around.</p>
 </tbody>
 </table>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch34-1">
-Section 34.1: Bullet Position
-</h3>
+<h3 id="ch34-1">Section 34.1: Bullet Position</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>
-A list consists of <b>&lt;li&gt;</b> elements inside a containing
+<p>A list consists of <b>&lt;li&gt;</b> elements inside a containing
 element (<b>&lt;ul&gt;</b> or <b>&lt;ol&gt;</b>). Both the list items
 and the container can have margins and paddings which influence the
 exact position of the list item content in the document. The default
 values for the margin and padding may be different for each browser. In
 order to get the same layout cross- browser, these need to be set
-specifically.
-</p>
-<p>
-Each list item gets a 'marker box', which contains the bullet marker.
-This box can either be placed inside or outside of the list item box.
-</p>
+specifically.</p>
+<p>Each list item gets a 'marker box', which contains the bullet marker.
+This box can either be placed inside or outside of the list item box.</p>
+
 <pre><code>list-style-position: inside;</code></pre>
-<p>
-places the bullet within the <b>&lt;li&gt;</b> element, pushing the
-content to the right as needed.
-</p>
+
+<p>places the bullet within the <b>&lt;li&gt;</b> element, pushing the
+content to the right as needed.</p>
+
 <pre><code>list-style-position: outside;</code></pre>
-<p>
-places the bullet left of the <b>&lt;li&gt;</b> element. If there is not
+
+<p>places the bullet left of the <b>&lt;li&gt;</b> element. If there is not
 enough space in the padding of the containing element, the marker box
-will extend to the left even if it would fall off the page.
-</p>
-<p>
-Showing the result of inside and outside
+will extend to the left even if it would fall off the page.</p>
+<p>Showing the result of inside and outside
 positioning:<a href="https://jsfiddle.net/pqh3cxdp/" target="_blank" rel="noopener noreferrer">jsFiddle</a>
 </p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch34-2">
-Section 34.2: Removing Bullets / Numbers
-</h3>
+<h3 id="ch34-2">Section 34.2: Removing Bullets / Numbers</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>
-Sometimes, a list should just not display any bullet points or numbers.
-In that case, remember to specify margin and padding.
-</p>
+<p>Sometimes, a list should just not display any bullet points or numbers.
+In that case, remember to specify margin and padding.</p>
+
 <pre><code><b>&lt;ul&gt;</b>
 <b>&lt;li&gt;</b>first item<b>&lt;/li&gt;</b>
 <b>&lt;li&gt;</b>second item<b>&lt;/li&gt;</b>
 <b>&lt;/ul&gt;</b></code></pre>
-<h4>
-CSS:
-</h4>
+
+<h4>CSS:</h4>
+
 <pre><code>ul {
   <b>list-style-type</b>: none;
 }
@@ -11652,21 +11424,19 @@ li {
   <b>padding</b>: 0;
 }</code></pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch34-3">
-Section 34.3: Type of Bullet or Numbering
-</h3>
+<h3 id="ch34-3">Section 34.3: Type of Bullet or Numbering</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>
-<p>Specific for <b>&lt;li&gt;</b> tags within an unordered list
+<p><p>Specific for <b>&lt;li&gt;</b> tags within an unordered list
 (<b>&lt;ul&gt;</b>);</p>
+
 <pre><code><b>list-style</b>: disc; /* A filled circle (default) */
 <b>list-style</b>: circle; /* A hollow circle */ 
 <b>list-style</b>: square; /* A filled square */ 
 <b>list-style</b>: &apos;-&apos;; /* any string */</code></pre>
-<p>
-Specific for <b>&lt;li&gt;</b> tags within an ordered list
-(<b>&lt;ol&gt;</b>);
-</p>
+
+<p>Specific for <b>&lt;li&gt;</b> tags within an ordered list
+(<b>&lt;ol&gt;</b>);</p>
+
 <pre><code><b>list-style</b>: decimal; /* Decimal numbers beginning with 1 (default) */ 
 <b>list-style</b>: decimal-leading-zero; /* Decimal numbers padded by initial zeros (01, 02, 03,* ... *10) */
 <b>list-style</b>: lower-roman;          /* Lowercase roman numerals (i., ii., iii., iv., &period;..) */
@@ -11676,15 +11446,13 @@ Specific for <b>&lt;li&gt;</b> tags within an ordered list
 <b>list-style-type</b>: lower-latin; /* Lowercase letters (a., b., c., d., &period;..) */ 
 <b>list-style-type</b>: upper-alpha; /* Uppercase letters (A., B., C., D., &period;..) */ 
 <b>list-style-type</b>: upper-latin; /* Uppercase letters (A., B., C., D., &period;..) */</code></pre>
-<p>
-Non-specific:
-</p>
+
+<p>Non-specific:</p>
+
 <pre><code><b>list-style</b>: none;    /* No visible list marker */
 <b>list-style</b>: inherit; /* Inherits from parent */</code></pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="ch35">
-Chapter 35: Counters
-</h2>
+<h2 id="ch35">Chapter 35: Counters</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <table>
 <colgroup>
@@ -11770,13 +11538,10 @@ two different counter levels</td>
 </tbody>
 </table>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch35-1">
-Section 35.1: Applying roman numerals styling to the counter output
-</h3>
+<h3 id="ch35-1">Section 35.1: Applying roman numerals styling to the counter output</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h4>
-CSS
-</h4>
+<h4>CSS:</h4>
+
 <pre><code>body {
   <b>counter-reset</b>: item-counter;
 }
@@ -11787,25 +11552,21 @@ CSS
   <b>content</b>: counter (item-counter, upper-roman) &quot;. &quot;; /* by specifying the upper-roman as style the
    output would be in roman numbers */
 }</code></pre>
-<h4>
-HTML:
-</h4>
+
+<h4>HTML:</h4>
+
 <pre><code><b>&lt;div</b> class=&apos;item&apos;<b>&gt;</b>Item No: 1<b>&lt;/div&gt;</b>
 <b>&lt;div</b> class=&apos;item&apos;<b>&gt;</b>Item No: 2<b>&lt;/div&gt;</b>
 <b>&lt;div</b> class=&apos;item&apos;<b>&gt;</b>Item No: 3<b>&lt;/div&gt;</b></code></pre>
-<p>
-In the above example, the counter's output would be displayed as I, II,
+
+<p>In the above example, the counter's output would be displayed as I, II,
 III (roman numbers) instead of the usual 1, 2, 3 as the developer has
-explicitly specified the counter's style.
-</p>
+explicitly specified the counter's style.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch35-2">
-Section 35.2: Number each item using CSS Counter
-</h3>
+<h3 id="ch35-2">Section 35.2: Number each item using CSS Counter</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h4>
-CSS:
-</h4>
+<h4>CSS:</h4>
+
 <pre><code>body {
   <b>counter-reset</b>: item-counter;  /* create the counter */
 }
@@ -11831,9 +11592,9 @@ CSS:
 .item-content {
   <b>padding</b>: 8px;
 }</code></pre>
-<h4>
-HTML:
-</h4>
+
+<h4>HTML:</h4>
+
 <pre><code><b>&lt;div</b> class=&apos;item&apos;<b>&gt;</b>
   <b>&lt;div</b> class=&apos;item-header&apos;<b>&gt;</b>Item 1 Header<b>&lt;/div&gt;</b>
   <b>&lt;div</b> class=&apos;item-content&apos;<b>&gt;</b>Lorem Ipsum Dolor Sit Amet&period;...<b>&lt;/div&gt;</b>
@@ -11846,20 +11607,16 @@ HTML:
   <b>&lt;div</b> class=&apos;item-header&apos;<b>&gt;</b>Item 3 Header<b>&lt;/div&gt;</b>
 <b>&lt;div</b> class=&apos;item-content&apos;<b>&gt;</b>Lorem Ipsum Dolor Sit Amet&period;...<b>&lt;/div&gt;</b>
 <b>&lt;/div&gt;</b></code></pre>
-<p>
-The above example numbers every "item" in the page and adds the item's
+
+<p>The above example numbers every "item" in the page and adds the item's
 number before its header (using content property of .item-header
 element's pseudo). A live demo of this code is available
-<a href="https://jsfiddle.net/a7rmje3r/" target="_blank" rel="noopener noreferrer">here (jsFiddle)</a>.
-</p>
+<a href="https://jsfiddle.net/a7rmje3r/" target="_blank" rel="noopener noreferrer">here (jsFiddle)</a>.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch35-3">
-Section 35.3: Implementing multi-level numbering using CSS counters
-</h3>
+<h3 id="ch35-3">Section 35.3: Implementing multi-level numbering using CSS counters</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h4>
-CSS
-</h4>
+<h4>CSS:</h4>
+
 <pre><code>ul {
   <b>list-style</b>: none;
   <b>counter-reset</b>: list-item-number;  /* self nesting counter as name is same for all levels */
@@ -11871,9 +11628,9 @@ li: before {
   <b>content</b>: counters (list-item-number, &quot;.&quot;)&quot; &quot;; /* usage of counters() function means value of
   counters at all higher levels are combined before printing */
 }</code></pre>
-<h4>
-HTML:
-</h4>
+
+<h4>HTML:</h4>
+
 <pre><code><b>&lt;ul&gt;</b>
   <b>&lt;li&gt;</b>Level 1
     <b>&lt;ul&gt;</b>
@@ -11896,46 +11653,31 @@ HTML:
   <b>&lt;/li&gt;</b>
   <b>&lt;li&gt;</b>Level 3<b>&lt;/li&gt;</b>
 <b>&lt;/ul&gt;</b></code></pre>
-<p>
-The above is an example of multi-level numbering using CSS counters. It
+
+<p>The above is an example of multi-level numbering using CSS counters. It
 makes use of the <i><b>self-nesting</b></i> concept of counters. Self
 nesting is a concept where if an element already has a counter with the
 given name but is having to create another then it creates it as a child
 of the existing counter. Here, the second level ul already inherits the
 list-item-number counter from its parent but then has to create its own
 list-item-number (for its children li) and so creates (counter for first
-level). Thus it achieves the multi-level numbering.
-</p>
-<p>
-The output is printed using the counters() function instead of the
+level). Thus it achieves the multi-level numbering.</p>
+<p>The output is printed using the counters() function instead of the
 counter() function because the counters() function is designed to prefix
-the value of all higher level counters (parent) when printing the
-output.
-</p>
+the value of all higher level counters (parent) when printing the output.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="ch36">
-Chapter 36: Functions
-</h2>
+<h2 id="ch36">Chapter 36: Functions</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch36-1">
-Section 36.1: calc() function
-</h3>
+<h3 id="ch36-1">Section 36.1: calc() function</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>
-Accepts a mathematical expression and returns a numerical value.
-</p>
-<p>
-It is especially useful when working with different types of units
+<p>Accepts a mathematical expression and returns a numerical value.</p>
+<p>It is especially useful when working with different types of units
 (e.g. subtracting a px value from a percentage) to calculate the value
-of an attribute.
-</p>
-<p>
-+, -, /, and * operators can all be used, and parentheses can be added
-to specify the order of operations if necessary.
-</p>
-<p>
-Use calc() to calculate the width of a div element:
-</p>
+of an attribute.</p>
+<p>+, -, /, and * operators can all be used, and parentheses can be added
+to specify the order of operations if necessary.</p>
+<p>Use calc() to calculate the width of a div element:</p>
+
 <pre><code>#div1 {
   <b>position</b>: absolute;
   <b>left</b>: 50px;
@@ -11945,45 +11687,35 @@ Use calc() to calculate the width of a div element:
   <b>padding</b>: 5px;
   <b>text-align</b>: center;
 }</code></pre>
-<p>
-Use calc() to determine the position of a background-image:
-</p>
+
+<p>Use calc() to determine the position of a background-image:</p>
+
 <pre><code><b>background-position</b>: calc (50&percnt;&plus; 17px) calc (50&percnt;&plus; 10px), 50&percnt; 50&percnt;;</code></pre>
-<p>
-Use calc() to determine the height of an element:
-</p>
-<p>
+
+<p>Use calc() to determine the height of an element:</p>
 <p><b>height</b>: calc(100% - 20px);</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch36-2">
-Section 36.2: attr() function
-</h3>
+<h3 id="ch36-2">Section 36.2: attr() function</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>
-Returns the value of an attribute of the selected element.
-</p>
-<p>
-Below is a blockquote element which contains a character inside a data-*
+<p>Returns the value of an attribute of the selected element.</p>
+<p>Below is a blockquote element which contains a character inside a data-*
 attribute which CSS can use (e.g. inside the ::before and ::after
-pseudo-element) using this function.
-</p>
+pseudo-element) using this function.</p>
+
 <pre><code><b>&lt;</b><b>blockquote</b> data-mark=&apos;&quot;&apos;<b>&gt;</b><b>&lt;</b><b>/blockquote</b><b>&gt;</b></code></pre>
-<p>
-In the following CSS block, the character is appended before and after
-the text inside the element:
-</p>
+
+<p>In the following CSS block, the character is appended before and after
+the text inside the element:</p>
+
 <pre><code>blockquote&lbrack;data-mark&rbrack;::before,
 blockquote&lbrack;data-mark&rbrack;::after {
   <b>content</b>: attr(data-mark);
 }</code></pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch36-3">
-Section 36.3: var() function
-</h3>
+<h3 id="ch36-3">Section 36.3: var() function</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>
-The var() function allows CSS variables to be accessed.
-</p>
+<p>The var() function allows CSS variables to be accessed.</p>
+
 <pre><code>/* set a variable */
 :root {
   &minus;- primary-color: blue;
@@ -11992,54 +11724,40 @@ The var() function allows CSS variables to be accessed.
 selector{
   <b>color</b>: var (&minus;-primary-color);
 }</code></pre>
-<p>
-This feature is currently under development. Check
+
+<p>This feature is currently under development. Check
 <a href="http://caniuse.com/#feat=css-variables" target="_blank" rel="noopener noreferrer">CanIuse.com</a> for the
-latest browser support.
-</p>
+latest browser support.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch36-4">
-Section 36.4: radial-gradient() function
-</h3>
+<h3 id="ch36-4">Section 36.4: radial-gradient() function</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Creates an image representing a gradient of colors radiating from the
 center of the gradient</p>
+
 <pre><code>radial-gradient(red, orange, yellow) /*A gradient coming out from the middle of the 
 gradient, red at the center, then orange, until it is finally yellow at the edges*/</code></pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch36-5">
-Section 36.5: linear-gradient() function
-</h3>
+<h3 id="ch36-5">Section 36.5: linear-gradient() function</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>
-Creates a image representing a linear gradient of colors.
-</p>
+<p>Creates a image representing a linear gradient of colors.</p>
+
 <pre><code>linear-gradient( 0 deg, red, yellow 50&percnt;, blue);</code></pre>
-<p>
-This creates a gradient going from bottom to top, with colors starting
-at red, then yellow at 50%, and finishing in blue.
-</p>
+
+<p>This creates a gradient going from bottom to top, with colors starting
+at red, then yellow at 50%, and finishing in blue.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="ch37">
-Chapter 37: Custom Properties (Variables)
-</h2>
+<h2 id="ch37">Chapter 37: Custom Properties (Variables)</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>
-CSS Variables allow authors to create reusable values which can be used
-throughout a CSS document.
-</p>
-<p>
-For example, it's common in CSS to reuse a single color throughout a
+<p>CSS Variables allow authors to create reusable values which can be used
+throughout a CSS document.</p>
+<p>For example, it's common in CSS to reuse a single color throughout a
 document. Prior to CSS Variables this would mean reusing the same color
 value many times throughout a document. With CSS Variables the color
 value can be assigned to a variable and referenced in multiple places.
 This makes changing values easier and is more semantic than using
-traditional CSS values.
-</p>
+traditional CSS values.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch37-1">
-Section 37.1: Variable Color
-</h3>
+<h3 id="ch37-1">Section 37.1: Variable Color</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre><code>:root {
   &minus;-red: #b00; 
@@ -12052,9 +11770,7 @@ Section 37.1: Variable Color
   <b>border</b>: 1px solid var (&minus;- red);
 }</code></pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch37-2">
-Section 37.2: Variable Dimensions
-</h3>
+<h3 id="ch37-2">Section 37.2: Variable Dimensions</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre><code>:root {
   &minus;-W200: 200px;
@@ -12066,27 +11782,20 @@ Section 37.2: Variable Dimensions
   <b>margin</b>: var (&minus;- W 10);
 }</code></pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch37-3">
-Section 37.3: Variable Cascading
-</h3>
+<h3 id="ch37-3">Section 37.3: Variable Cascading</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>
-CSS variables cascade in much the same way as other properties, and can
-be restated safely.
-</p>
-<p>
-You can define variables multiple times and only the definition with the
-highest specificity will apply to the element selected.
-</p>
-<p>
-Assuming this HTML:
-</p>
+<p>CSS variables cascade in much the same way as other properties, and can
+be restated safely.</p>
+<p>You can define variables multiple times and only the definition with the
+highest specificity will apply to the element selected.</p>
+<p>Assuming this HTML:</p>
+
 <pre><code><b>&lt;a</b> class=&quot;button&quot;<b>&gt;</b>Button Green<b>&lt;/a&gt;</b>
 <b>&lt;a</b> class=&quot;button button_red&quot;<b>&gt;</b>Button Red<b>&lt;/a&gt;</b>
 <b>&lt;a</b> class=&quot;button&quot;<b>&gt;</b>Button Hovered On<b>&lt;/a&gt;</b></code></pre>
-<p>
-We can write this CSS:
-</p>
+
+<p>We can write this CSS:</p>
+
 <pre><code>.button {
   &minus;- color: green;
   <b>padding</b>: .5rem;
@@ -12099,9 +11808,8 @@ We can write this CSS:
 .button_red {
   &minus;- color: red;
 }</code></pre>
-<h4>
-And get this result:
-</h4>
+
+<h4>And get this result:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 226.  (xxx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left" width="100%">
@@ -12111,41 +11819,37 @@ And get this result:
   alt="." />
 </p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch37-4">
-Section 37.4: Valid/Invalids
-</h3>
+<h3 id="ch37-4">Section 37.4: Valid/Invalids</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>
-<b>Naming</b> When naming CSS variables, it contains only letters and
+<p><b>Naming</b> When naming CSS variables, it contains only letters and
 dashes just like other CSS properties (eg: lineheight, -moz-box-sizing)
-but it should start with double dashes (−-)
-</p>
+but it should start with double dashes (−-)</p>
+
 <pre><code>//These are Invalids variable names
 &minus;-123color: blue;
 &minus;-&num;<b>color</b>: red;
 &minus;-bg&lowbar;color: yellow
 &minus;-&dollar;<b>width</b>: 100px;</code></pre>
 //Valid variable names −-color: red; −-bg-color: yellow −-width:
-100px;</code>
-</pre>
-<h4>
-CSS Variables are case sensitive
-</h4>
+100px;</code></pre>
+
+<h4>CSS Variables are case sensitive</h4>
+
 <pre><code>/* The variable names below are all different variables */
 &minus;-pcolor: ;
 &minus;-Pcolor: ;
 &minus;-pColor: ;</code></pre>
-<h4>
-Empty Vs Space
-</h4>
+
+<h4>Empty Vs Space</h4>
+
 <pre><code>/* Invalid */
   &minus;-color:;
 
 /* Valid */
   &minus;-color:; /* space is assigned */</code></pre>
-<h4>
-Concatenations
-</h4>
+
+<h4>Concatenations</h4>
+
 <pre><code>/* Invalid - CSS doesn&apos;t support concatenation */
 .logo{
   &minus;-logo-url: &apos;logo&apos;;
@@ -12161,9 +11865,9 @@ Concatenations
   &minus;-logo-url: url(&apos;assets/img/logo.png&apos;);
   <b>background</b>: var(&minus;-logo-url);
 }</code></pre>
-<h4>
-Careful when using Units
-</h4>
+
+<h4>Careful when using Units</h4>
+
 <pre><code>/* Invalid */
 &minus;-width: 10;
 
@@ -12177,29 +11881,23 @@ Careful when using Units
 <b>width</b>: calc(1px &ast; var(&minus;-width)); /* multiply by 1 unit to convert */
 <b>width</b>: calc(1em &ast; var(&minus;-width));</code></pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch37-5">
-Section 37.5: With media queries
-</h3>
+<h3 id="ch37-5">Section 37.5: With media queries</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>
-You can re-set variables within media queries and have those new values
+<p>You can re-set variables within media queries and have those new values
 cascade wherever they are used, something that isn't possible with
-pre-processor variables.
-</p>
-<p>
-Here, a media query changes the variables used to set up a very simple
-grid:
-</p>
-<h4>
-HTML:
-</h4>
+pre-processor variables.</p>
+<p>Here, a media query changes the variables used to set up a very simple
+grid:</p>
+
+<h4>HTML:</h4>
+
 <pre><code><b>&lt;div&gt;</b><b>&lt;/div&gt;</b>
 <b>&lt;div&gt;</b><b>&lt;/div&gt;</b>
 <b>&lt;div&gt;</b><b>&lt;/div&gt;</b>
 <b>&lt;div&gt;</b><b>&lt;/div&gt;</b></code></pre>
-<h4>
-CSS
-</h4>
+
+<h4>CSS:</h4>
+
 <pre><code>:root{
   &minus;-width: 25&percnt;;
   &minus;-content: &apos;This is desktop&apos;;
@@ -12236,13 +11934,11 @@ div {
   <b>border</b>: 4px solid black;
   <b>background</b>: red;
 }</code></pre>
-<p>
-You can try resizing the window in this
+
+<p>You can try resizing the window in this
 <a href="https://codepen.io/mkumaran/pen/BZaXvz" target="_blank" rel="noopener noreferrer">Demo (CodePen)</a>.
 </p>
-<p>
-Here's an animated screenshot of the resizing in action:
-</p>
+<p>Here's an animated screenshot of the resizing in action:</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~ 227. animated screenshot of resizing in action (183) ~~~~~~~~~~~~~~~~~~~~-->
 <p align="left" width="100%">
@@ -12252,19 +11948,13 @@ Here's an animated screenshot of the resizing in action:
   alt="Animated screenshot of the resizing in action." />
 </p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="ch38">
-Chapter 38: Single Element Shapes
-</h2>
+<h2 id="ch38">Chapter 38: Single Element Shapes</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch38-1">
-Section 38.1: Trapezoid
-</h3>
+<h3 id="ch38-1">Section 38.1: Trapezoid</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>
-A trapezoid can be made by a block element with zero height (height of
+<p>A trapezoid can be made by a block element with zero height (height of
 0px), a width greater than zero and a border, that is transparent except
-for one side:
-</p>
+for one side:</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~ 228. example: trapezoid with borders (184) ~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left" width="100%">
@@ -12273,13 +11963,13 @@ for one side:
   title="Example: Trapezoid with borders"
   alt="Example: Trapezoid with borders." />
 </p>
-<h4>
-HTML:
-</h4>
+
+<h4>HTML:</h4>
+
 <pre><code><b>&lt;div</b> class=&quot;trapezoid&quot;<b>&gt;&lt;/div&gt;</b></code></pre>
-<h4>
-CSS:
-</h4>
+
+<h4>CSS:</h4>
+
 <pre><code>.trapezoid {
   <b>width</b>: 50px;
   <b>height</b>: 0;
@@ -12287,22 +11977,17 @@ CSS:
   <b>border-right</b>: 50px solid transparent;
   <b>border-bottom</b>: 100px solid black;
 }</code></pre>
-<p>
-With changing the border sides, the orientation of the trapezoid can be
-adjusted.
-</p>
+
+<p>With changing the border sides, the orientation of the trapezoid can be
+adjusted.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch38-2">
-Section 38.2: Triangles
-</h3>
+<h3 id="ch38-2">Section 38.2: Triangles</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>
-To create a CSS triangle define an element with a width and height of 0
+<p>To create a CSS triangle define an element with a width and height of 0
 pixels. The triangle shape will be formed using border properties. For
 an element with 0 height and width the 4 borders (top, right, bottom,
 left) each form a triangle. Here's an element with 0 height/width and 4
-different colored borders.
-</p>
+different colored borders.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~ 229. 4 colored square; black,red,blue,green (184) ~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left" width="100%">
@@ -12311,13 +11996,12 @@ different colored borders.
   title="4 colored square; black,red,blue,green"
   alt="4 colored square; black,red,blue,green." />
 </p>
-<p>
-By setting some borders to transparent, and others to a color we can
+
+<p>By setting some borders to transparent, and others to a color we can
 create various triangles. For example, in the Up triangle, we set the
 bottom border to the desired color, then set the left and right borders
 to transparent. Here's an image with the left and right borders shaded
-slightly to show how the triangle is being formed.
-</p>
+slightly to show how the triangle is being formed.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~ 230. arrow pointing up with background shade (185) ~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left" width="100%">
@@ -12326,14 +12010,12 @@ slightly to show how the triangle is being formed.
   title="Arrow pointing up with background shade"
   alt="Arrow pointing up with background shade." />
 </p>
-<p>
-The dimensions of the triangle can be altered by changing the different
+
+<p>The dimensions of the triangle can be altered by changing the different
 border widths - taller, shorter, lopsided, etc. The examples below all
-show a 50x50 pixel triangle.
-</p>
-<h4>
-Triangle - Pointing Up
-</h4>
+show a 50x50 pixel triangle.</p>
+
+<h4>Triangle - Pointing Up</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~ 231. arrow pointing up - no shade (185) ~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left" width="100%">
@@ -12342,6 +12024,7 @@ Triangle - Pointing Up
   title="Arrow pointing up - no shade"
   alt="Arrow pointing up - no shade." />
 </p>
+
 <pre><code><b>&lt;div</b> class=&quot;triangle-up&quot;<b>&gt;&lt;/div&gt;</b>
 .triangle-up {
   <b>width</b>: 0;
@@ -12350,9 +12033,8 @@ Triangle - Pointing Up
   <b>border-right</b>: 25px solid transparent;
   <b>border-bottom</b>: 50px solid rgb(246, 156, 85);
 }</code></pre>
-<h4>
-Triangle - Pointing Down
-</h4>
+
+<h4>Triangle - Pointing Down</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~ 232. arrow pointing down - no shade (185) ~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left" width="100%">
@@ -12361,6 +12043,7 @@ Triangle - Pointing Down
   title="Arrow pointing down - no shade"
   alt="Arrow pointing down - no shade." />
 </p>
+
 <pre><code><b>&lt;div</b> class=&quot;triangle-down&quot;<b>&gt;&lt;/div&gt;</b>
 .triangle-down {
   <b>width</b>: 0;
@@ -12369,9 +12052,8 @@ Triangle - Pointing Down
   <b>border-right</b>: 25px solid transparent;
   <b>border-top</b>: 50px solid rgb(246, 156, 85);
 }</code></pre>
-<h4>
-Triangle - Pointing Right
-</h4>
+
+<h4>Triangle - Pointing Right</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~ 233. arrow pointing right - no shade (185) ~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left" width="100%">
@@ -12380,6 +12062,7 @@ Triangle - Pointing Right
   title="Arrow pointing right - no shade"
   alt="Arrow pointing right - no shade." />
 </p>
+
 <pre><code><b>&lt;div</b> class=&quot;triangle-right&quot;<b>&gt;&lt;/div&gt;</b>
 .triangle-right {
   <b>width</b>: 0;
@@ -12388,9 +12071,8 @@ Triangle - Pointing Right
   <b>border-bottom</b>: 25px solid transparent;
   <b>border-left</b>: 50px solid rgb(246, 156, 85);
 }</code></pre>
-<h4>
-Triangle - Pointing Left
-</h4>
+
+<h4>Triangle - Pointing Left</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~ 234. arrow pointing left - no shade (186) ~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left" width="100%">
@@ -12399,6 +12081,7 @@ Triangle - Pointing Left
   title="Arrow pointing left - no shade"
   alt="Arrow pointing left - no shade." />
 </p>
+
 <pre><code><b>&lt;div</b> class=&quot;triangle-left&quot;<b>&gt;&lt;/div&gt;</b>
 .triangle-left {
   <b>width</b>: 0;
@@ -12407,17 +12090,19 @@ Triangle - Pointing Left
   <b>border-bottom</b>: 25px solid transparent;
   <b>border-right</b>: 50px solid rgb(246, 156, 85);
 }</code></pre>
+
 <blockquote>
-<b>Triangle - Pointing Up/Right</b>
+  <b>Triangle - Pointing Up/Right</b>
+</blockquote>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~ 235. arrow pointing up/right - no shade (186) ~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left" width="100%">
-<p><img src="./images/image235.png"
+<img src="./images/image235.png"
 style="width:10%"
 title="Arrow pointing up/right - no shade"
-alt="Arrow pointing up/right - no shade." /></p>
-</blockquote>
+alt="Arrow pointing up/right - no shade." />
 </p>
+
 <pre><code><b>&lt;div</b> class=&quot;triangle-up-right&quot;<b>&gt;&lt;/div&gt;</b>
 .triangle-up-right {
   <b>width</b>: 0;
@@ -12425,9 +12110,8 @@ alt="Arrow pointing up/right - no shade." /></p>
   <b>border-top</b>: 50px solid rgb(246, 156, 85);
   <b>border-left</b>: 50px solid transparent;
 }</code></pre>
-<h4>
-Triangle - Pointing Up/Left
-</h4>
+
+<h4>Triangle - Pointing Up/Left</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~ 236. arrow pointing up/left - no shade (186) ~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left" width="100%">
@@ -12436,6 +12120,7 @@ Triangle - Pointing Up/Left
   title="Arrow pointing up/left - no shade"
   alt="Arrow pointing up/left - no shade." />
 </p>
+
 <pre><code><b>&lt;div</b> class=&quot;triangle-up-left&quot;<b>&gt;&lt;/div&gt;</b>
 .triangle-up-left {
   <b>width</b>: 0;
@@ -12443,9 +12128,8 @@ Triangle - Pointing Up/Left
   <b>border-top</b>: 50px solid rgb(246, 156, 85);
   <b>border-right</b>: 50px solid transparent;
 }</code></pre>
-<h4>
-Triangle - Pointing Down/Right
-</h4>
+
+<h4>Triangle - Pointing Down/Right</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~ 237. arrow pointing down/right - no shade (187) ~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left" width="100%">
@@ -12454,6 +12138,7 @@ Triangle - Pointing Down/Right
   title="Arrow pointing down/right - no shade"
   alt="Arrow pointing down/right - no shade." />
 </p>
+
 <pre><code><b>&lt;div</b> class=&quot;triangle-down-right&quot;<b>&gt;&lt;/div&gt;</b>
 .triangle-down-right {
   <b>width</b>: 0;
@@ -12461,9 +12146,8 @@ Triangle - Pointing Down/Right
   <b>border-bottom</b>: 50px solid rgb(246, 156, 85);
   <b>border-left</b>: 50px solid transparent;
 }</code></pre>
-<h4>
-Triangle - Pointing Down/Left
-</h4>
+
+<h4>Triangle - Pointing Down/Left</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~ 238. arrow pointing down/left - no shade (187) ~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left" width="100%">
@@ -12472,6 +12156,7 @@ Triangle - Pointing Down/Left
   title="Arrow pointing down/left - no shade"
   alt="Arrow pointing down/left - no shade." />
 </p>
+
 <pre><code><b>&lt;div</b> class=&quot;triangle-down-left&quot;<b>&gt;&lt;/div&gt;</b>
 .triangle-down-left {
   <b>width</b>: 0;
@@ -12480,18 +12165,13 @@ Triangle - Pointing Down/Left
   <b>border-right</b>: 50px solid transparent;
 }</code></pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch38-3">
-Section 38.3: Circles and Ellipses
-</h3>
+<h3 id="ch38-3">Section 38.3: Circles and Ellipses</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h4>
-Circle
-</h4>
-<p>
-To create a <b>circle</b>, define an element with an equal width and
+<h4>Circle</h4>
+
+<p>To create a <b>circle</b>, define an element with an equal width and
 height (a <em>square</em>) and then set the border-radius property of
-this element to 50%.
-</p>
+this element to 50%.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 239. circle (187) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left" width="100%">
@@ -12500,24 +12180,24 @@ this element to 50%.
   title="Circle"
   alt="Circle." />
 </p>
-<h4>
-HTML:
-</h4>
+
+<h4>HTML:</h4>
+
 <pre><code><b>&lt;div</b> class=&quot;circle&quot;<b>&gt;&lt;/div&gt;</b></code></pre>
-<h4>
-CSS
-</h4>
+
+<h4>CSS:</h4>
+
 <pre><code>.circle {
   <b>width</b>: 50px;
   <b>height</b>: 50px;
   <b>background</b>: rgb(246, 156, 85);
   <b>border-radius</b>: 50&percnt;;
 }</code></pre>
-<h4>
-Ellipse
-</h4>
-An <b>ellipse</b> is similar to a circle, but with different values for
-width and height.
+
+<h4>Ellipse</h4>
+
+<p>An <b>ellipse</b> is similar to a circle, but with different values for
+width and height.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~ 240. Ellipse - squished circle (188) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left" width="100%">
@@ -12526,13 +12206,13 @@ width and height.
   title="Ellipse - squished circle"
   alt="Ellipse - squished circle." />
 </p>
-<h4>
-HTML:
-</h4>
+
+<h4>HTML:</h4>
+
 <pre><code><b>&lt;div</b> class=&quot;oval&quot;<b>&gt;&lt;/div&gt;</b></code></pre>
-<h4>
-CSS:
-</h4>
+
+<h4>CSS:</h4>
+
 <pre><code>.oval {
   <b>width</b>: 50px;
   <b>height</b>: 80px;
@@ -12540,28 +12220,20 @@ CSS:
   <b>border-radius</b>: 50&percnt;;
 }</code></pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch38-4">
-Section 38.4: Bursts
-</h3>
+<h3 id="ch38-4">Section 38.4: Bursts</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>
-A burst is similar to a star but with the points extending less distance
+<p>A burst is similar to a star but with the points extending less distance
 from the body. Think of a burst shape as a square with additional,
-slightly rotated, squares layered on top.
-</p>
-<p>
-The additional squares are created using the ::before and ::after
-psuedo-elements.
-</p>
-<h4>
-8 Point Burst
-</h4>
-<p>
-An 8 point burst are 2 layered squares. The bottom square is the element
+slightly rotated, squares layered on top.</p>
+<p>The additional squares are created using the ::before and ::after
+psuedo-elements.</p>
+
+<h4>8 Point Burst</h4>
+
+<p>An 8 point burst are 2 layered squares. The bottom square is the element
 itself, the additional square is created using the :before
 pseudo-element. The bottom is rotated 20°, the top square is rotated
-135°.
-</p>
+135°.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 241. 8 point burst (188) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left" width="100%">
@@ -12570,6 +12242,7 @@ pseudo-element. The bottom is rotated 20°, the top square is rotated
   title="8 Point Burst"
   alt="8 Point Burst." />
 </p>
+
 <pre><code><b>&lt;div</b> class=&quot;burst-8&quot;<b>&gt;&lt;/div&gt;</b>
 .burst-8 {
   background: rgb(246, 156, 85);
@@ -12591,15 +12264,13 @@ pseudo-element. The bottom is rotated 20°, the top square is rotated
   -ms-transform: rotate(135deg);
   transform: rotate(135deg);
 }</code></pre>
-<h4>
-12 Point Burst
-</h4>
-<p>
-An 12 point burst are 3 layered squares. The bottom square is the
+
+<h4>12 Point Burst</h4>
+
+<p>An 12 point burst are 3 layered squares. The bottom square is the
 element itself, the additional squares are created using the :
 pseudo-elements. The bottom is rotated 0°, the next square is rotated
-30°, and the top is rotated 60°.
-</p>
+30°, and the top is rotated 60°.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 242. 12 point burst (188) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left" width="100%">
@@ -12608,6 +12279,7 @@ pseudo-elements. The bottom is rotated 0°, the next square is rotated
   title="12 Point Burst"
   alt="12 Point Burst." />
 </p>
+
 <pre><code><b>&lt;div</b> class=&quot;burst-12&quot;<b>&gt;&lt;/div&gt;</b>
 .burst-12 {
   width: 40px;
@@ -12634,15 +12306,11 @@ pseudo-elements. The bottom is rotated 0°, the next square is rotated
   transform: rotate(60deg);
 }</code></pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch38-5">
-Section 38.5: Square
-</h3>
+<h3 id="ch38-5">Section 38.5: Square</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>
-To create a square, define an element with both a width and height. In
+<p>To create a square, define an element with both a width and height. In
 the example below, we have an element with a width and height of 100
-pixels each.
-</p>
+pixels each.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 243. square (190) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left" width="100%">
@@ -12651,6 +12319,7 @@ pixels each.
   title="Square"
   alt="Square" />
 </p>
+
 <pre><code><b>&lt;div</b> class=&quot;square&quot;<b>&gt;&lt;/div&gt;</b>
 .square {
   <b>width</b>: 100px;
@@ -12658,15 +12327,12 @@ pixels each.
   <b>background</b>: rgb(246, 156, 85);
 }</code></pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch38-6">
-Section 38.6: Cube
-</h3>
+<h3 id="ch38-6">Section 38.6: Cube</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre><code>skewX () and skewY</code></pre>
-<p>
-This example shows how to create a cube using 2D transformation methods
-() on pseudo elements.
-</p>
+
+<p>This example shows how to create a cube using 2D transformation methods
+() on pseudo elements.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 244. 3d red cube (190) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left" width="100%">
@@ -12675,13 +12341,13 @@ This example shows how to create a cube using 2D transformation methods
   title="3d red cube"
   alt="3d red cube." />
 </p>
-<h4>
-HTML:
-</h4>
+
+<h4>HTML:</h4>
+
 <pre><code><b>&lt;div</b> class=&quot;cube&quot;<b>&gt;&lt;/div&gt;</b></code></pre>
-<h4>
-CSS:
-</h4>
+
+<h4>CSS:</h4>
+
 <pre><code>.cube {
   <b>background</b>: #dc2e2e;
   <b>width</b>: 100px;
@@ -14443,27 +14109,25 @@ supported in Edge going forward.</p>
   }
 }</code></pre>
 
-<p>
-This will change the header background to white and the text color to
+<p>This will change the header background to white and the text color to
 black when high contrast mode is active <em>and</em> it is in
-black-on-white mode.
-</p>
+black-on-white mode.</p>
+
 <pre><code><b>&commat;media</b> screen and (&minus;ms-high-contrast: white-on-black){
   .header {
     <b>background</b>: #000;
     <b>color</b>: #fff;
   }
 }</code></pre>
-<p>
-Similar to the first example, but this specifically selects the
+
+<p>Similar to the first example, but this specifically selects the
 white-on-black state only, and inverts the header colors to a black
-background with white text.
-</p>
+background with white text.</p>
+
 <h4>More Information:</h4>
-<p>
-<a href="https://msdn.microsoft.com/en-us/library/windows/apps/hh465764.aspx">Microsoft
-Documentation</a> on -ms-high-contrast.
-</p>
+
+<p><a href="https://msdn.microsoft.com/en-us/library/windows/apps/hh465764.aspx">Microsoft
+Documentation</a> on -ms-high-contrast.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch55-3">Section 55.3: Internet Explorer 6 &amp; Internet Explorer 7 only</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -14487,9 +14151,8 @@ Equipment Corporation, Linux, Unix, everywhere.</p>
     <b>display</b>: none;
   }
 }</code></pre>
-<p>
-Everything between @media \0 screen { } is processed only by I
-</p>
+
+<p>Everything between @media \0 screen { } is processed only by I</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ch56">Chapter 56: Performance</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -14499,9 +14162,8 @@ Everything between @media \0 screen { } is processed only by I
 calculate the style and layout, which is a bad thing when you need to
 animate at 60fps.</p>
 <p><b>DON'T</b></p>
-<p>
-Animate with left and top trigger layout.
-</p>
+<p>Animate with left and top trigger layout.</p>
+
 <pre><code>#box {
   <b>left</b>: 0;
   <b>top</b>: 0;
@@ -14515,10 +14177,9 @@ Animate with left and top trigger layout.
   <b>left</b>: 100px;
   <b>top</b>: 100px;
 }</code></pre>
-<p>
-<a href="https://jsfiddle.net/trungdq88/gmpzxLyq/">Demo</a> took 11.7ms
-for rendering 9.8ms for painting.
-</p>
+
+<p><a href="https://jsfiddle.net/trungdq88/gmpzxLyq/">Demo</a> took 11.7ms
+for rendering 9.8ms for painting.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~ 267. test took 11.7ms to render (230) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left" width="100%">
@@ -14527,12 +14188,11 @@ for rendering 9.8ms for painting.
   title="Demo test took 11.7ms to render and 9.8ms to paint"
   alt="Demo test took 11.7ms to render and 9.8ms to paint." />
 </p>
-<h4>
-DO
-</h4>
-<p>
-Animate with transform with the same animation.
-</p>
+
+<h4>DO</h4>
+
+<p>Animate with transform with the same animation.</p>
+
 <pre><code>#box {
   <b>left</b>: 0;
   <b>top</b>: 0;
@@ -14555,8 +14215,8 @@ Animate with transform with the same animation.
   title="Same demo but this one took 1.3ms to render and 2.0ms to paint"
   alt="Same demo but this one took 1.3ms to render and 2.0ms to paint." />
 </p>
-<p>
-<a href="https://jsfiddle.net/trungdq88/Logdo0rn/">Demo (jsFiddle)</a>
+
+<p><a href="https://jsfiddle.net/trungdq88/Logdo0rn/">Demo (jsFiddle)</a>
 same animation, took <b>1.3ms</b> for rendering, <b>2.0ms</b> for
 painting.</p>
 
