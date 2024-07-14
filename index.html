@@ -4400,7 +4400,6 @@ highest priority (meaning in a conflict, the border would not show).</p>
   alt="3 div border examples." />
 </p>
 
-<!-- [image027.jpg 1.458 x 4.021](./images/image027.jpg) -->
 <a href="http://jsfiddle.net/MadalinaTn/bvqpcohm/2/&rbrack;&rbrack;(http://jsfiddle.net/MadalinaTn/bvqpcohm/2/" 
 target="_blank" rel="noopener noreferrer">Demo (jsFiddle)</a>.
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -5362,57 +5361,54 @@ screen width larger than 600px.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch13-8">Section 13.8: Media queries and IE8</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>
-<a href="http://www.brianhadaway.com/responsive-web-design-using-css3-media-queries/">
-Media queries</a> are not supported at all in IE8 and below (MS
-managment sucks).
-</p>
-<h4>
-A Javascript based workaround for MS bullshit
-</h4>
-<p>
-To add support for IE8, you could use one of several JS solutions. For
-example, <a href="https://github.com/scottjehl/Respond">Respond</a> can
-be added to add media query support for IE8 only With the following
-code:
-</p>
+<p><a href="http://www.brianhadaway.com/responsive-web-design-using-css3-media-queries/" 
+target="_blank" rel="noopener noreferrer">Media queries</a> are not supported at all in 
+IE8 and below (MS managment sucks).</p>
+
+<h4>A Javascript based workaround for MS bullshit</h4>
+
+<p>To add support for IE8, you could use one of several JS solutions. For
+example, <a href="https://github.com/scottjehl/Respond" 
+target="_blank" rel="noopener noreferrer">Respond</a> can be added to add media 
+query support for IE8 only With the following code:</p>
+
 <pre><code>&lt;!&minus;-&lbrack;if lt IE 9&rbrack;<b>&gt;</b>
 <b>&lt;script</b>
   src=&quot;respond.min.js&quot;<b>&gt;</b>
 <b>&lt;/script&gt;</b>
 &lt;!&lbrack;endif&rbrack;&minus;-<b>&gt;</b></code></pre>
-<p>
-<a href="https://code.google.com/p/css3-mediaqueries-js/">CSS
-Mediaqueries</a> is another library that does the same thing. The code
-for adding that library to your HTML would be identical:
-</p>
+
+<p><a href="https://code.google.com/p/css3-mediaqueries-js/" 
+target="_blank" rel="noopener noreferrer">CSS Mediaqueries</a> is 
+another library that does the same thing. The code for adding that 
+library to your HTML would be identical:</p>
+
 <pre><code>&lt;!&minus;-&lbrack;if lt IE 9&rbrack;<b>&gt;</b>
 <b>&lt;script</b>
   src=&quot;css3-mediaqueries.js&quot;<b>&gt;</b>
 <b>&lt;/script&gt;</b>
 &lt;!&lbrack;endif&rbrack;&minus;-<b>&gt;</b></code></pre>
-<h4>
-The alternative
-</h4>
-<p>
-If you don't like a JS based solution, you should also consider adding
+
+<h4>The alternative</h4>
+
+<p>If you don't like a JS based solution, you should also consider adding
 an IE&lt;9 only stylesheet where you adjust your styling specific to
 IE&lt;9. For that, you should add the following HTML to your code:
 </p>
+
 <pre><code>&lt;!&minus;-&lbrack;if lt IE 9&rbrack;<b>&gt;</b>
 <b>&lt;link</b> rel=&quot;stylesheet&quot; type=&quot;text/css&quot; media=&quot;all&quot; href=&quot;style-ielt9.css&quot;<b>/&gt;</b>
 &lt;!&lbrack;endif&rbrack;&minus;-<b>&gt;</b></code></pre>
-<h4>
-Note:
-</h4>
-<p>
-Technically it's one more alternative: using
-<a href="http://browserhacks.com/"> CSS hacks</a> to target IE&lt;9. It
+
+<h4>Note:</h4>
+
+<p>Technically it's one more alternative: using 
+<a href="http://browserhacks.com/" 
+target="_blank" rel="noopener noreferrer">CSS hacks</a> to target IE&lt;9. It
 has the same impact as an IE&lt;9 only stylesheet, but you don't need a
 separate stylesheet for that. I do not recommend this option, though, as
 they produce invalid CSS code (which is but one of several reasons why
-the use of CSS hacks is generally frowned upon today).
-</p>
+the use of CSS hacks is generally frowned upon today).</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ch14">
 Chapter 14: Floats
@@ -5461,62 +5457,55 @@ This will be the output;
   title="Output from img float: left; margin-right: 1rem;"
   alt="Output from img float: left; margin-right: 1rem;" />
 </p>
-<!-- [image036.jpg 7.48 x 7.05](./images/image036.jpg) -->
-<p>
-<a href="http://codepen.io/vishak-kavalur/pen/pbxvLx">Demo (CodePen
-Link)</a>.
-</p>
+
+<p><a href="http://codepen.io/vishak-kavalur/pen/pbxvLx" 
+target="_blank" rel="noopener noreferrer">Demo (CodePen)</a>.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch14-2">
-Section 14.2: clear property
-</h3>
+<h3 id="ch14-2">Section 14.2: clear property</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>
-The clear property is directly related to floats.
-</p>
+<p>The clear property is directly related to floats.</p>
+
 <table>
-<colgroup>
-<col style="width: 18%" />
-<col style="width: 81%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th>Property Value</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>none</td>
-<td>Default. Allows floating elements on both sides.</td>
-</tr>
-<tr class="even">
-<td>left</td>
-<td>No floating elements allowed on the left side.</td>
-</tr>
-<tr class="odd">
-<td>right</td>
-<td>No floating elements allowed on the right side.</td>
-</tr>
-<tr class="even">
-<td>both</td>
-<td>No floating elements allowed on either the left or the right
-side.</td>
-</tr>
-<tr class="odd">
-<td>initial</td>
-<td>Sets this property to its default value. Read about initial.</td>
-</tr>
-<tr class="even">
-<td>inherit</td>
-<td>Inherits this property from its parent element. Read about
-inherit.</td>
-</tr>
-</tbody>
+  <colgroup>
+    <col style="width: 18%" />
+    <col style="width: 81%" />
+  </colgroup>
+  <thead>
+    <tr class="header">
+      <th>Property Value</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="odd">
+      <td>none</td>
+      <td>Default. Allows floating elements on both sides.</td>
+    </tr>
+    <tr class="even">
+      <td>left</td>
+      <td>No floating elements allowed on the left side.</td>
+    </tr>
+    <tr class="odd">
+      <td>right</td>
+      <td>No floating elements allowed on the right side.</td>
+    </tr>
+    <tr class="even">
+      <td>both</td>
+      <td>No floating elements allowed on either the left or the right side.</td>
+    </tr>
+    <tr class="odd">
+      <td>initial</td>
+      <td>Sets this property to its default value. Read about initial.</td>
+    </tr>
+    <tr class="even">
+      <td>inherit</td>
+      <td>Inherits this property from its parent element. Read about inherit.</td>
+    </tr>
+  </tbody>
 </table>
-<h4>
-HTML:
-</h4>
+
+<h4>HTML:</h4>
+
 <pre><code><b>&lt;html&gt;</b>
 <b>&lt;head&gt;</b>
 <b>&lt;style&gt;</b>
@@ -5539,32 +5528,27 @@ Lorem ipsoum Lorem ipsoum Lorem ipsoum Lorem ipsoum Lorem ipsoum Lorem ipsoum <b
 <b>&lt;/body&gt;</b>
 <b>&lt;/html&gt;</b></code></pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch14-3">
-Section 14.3: Clearfix
-</h3>
+<h3 id="ch14-3">Section 14.3: Clearfix</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <blockquote>
-The clearfix hack is a popular way to contain floats (N. Gallagher aka
-@necolas)
+  The clearfix hack is a popular way to contain floats (N. Gallagher aka @necolas)
 </blockquote>
-<p>
-Not to be confused with the clear property, clearfix is a <i>concept</i>
+
+<p>Not to be confused with the clear property, clearfix is a <i>concept</i>
 (that is also related to floats, thus the possible confusion). To
 <i>contain floats</i>, you've to add .cf or .clearfix class on the
 container (<b>the parent</b>) and style this class with a few rules
-described below.
-</p>
-<p>
-3 versions with slightly different effects (sources:
-<a href="http://nicolasgallagher.com/micro-clearfix-hack/">A new micro
-clearfix hack</a> by N. Gallagher and
-<a href="http://yuiblog.com/blog/2010/09/27/clearfix-reloaded-overflowhidden-demystified/">
-clearfix reloaded</a> by T.J. Koblentx);
-</p>
-<h4>
-Clearfix (with top margin collapsing of contained floats still
-occurring)
-</h4>
+described below.</p>
+<p>3 versions with slightly different effects (sources:
+
+<a href="http://nicolasgallagher.com/micro-clearfix-hack/" 
+target="_blank" rel="noopener noreferrer">
+A new micro clearfix hack</a> by N. Gallagher and
+<a href="http://yuiblog.com/blog/2010/09/27/clearfix-reloaded-overflowhidden-demystified/" 
+target="_blank" rel="noopener noreferrer">clearfix reloaded</a> by T.J. Koblentx);</p>
+
+<h4>Clearfix (with top margin collapsing of contained floats still occurring)</h4>
+
 <pre><code>.cf: after {
   <b>content</b>: &quot;&quot;;
   <b>display</b>: table;
@@ -5572,9 +5556,9 @@ occurring)
 .cf: after {
   <b>clear</b>: both;
 }</code></pre>
-<h4>
-Clearfix also preventing top margin collapsing of contained floats
-</h4>
+
+<h4>Clearfix also preventing top margin collapsing of contained floats</h4>
+
 <pre><code>/&ast;&ast;
  &ast; For modern browsers
  &ast; 1. The space content is one way to avoid an Opera bug when the
@@ -5610,17 +5594,15 @@ Clearfix with support of outdated browsers IE6 and IE7
 .cf {
   &ast;zoom: 1;
 }</code></pre>
+
 <p>
-<a href="http://codepen.io/PhilippeVay/pen/OXEqgW?editors=0100">Codepen
-showing ClearFix effect</a>
-</p>
-<p>
-Other resource:
-<a href="http://www.cssmojo.com/clearfix_block-formatting-context_and_hasLayout/">
-Everything you know about clearfix is wrong</a>(clearfix and BFC - Block
-Formatting Context while has Layout relates to outdated browsers IE6
-maybe 7)
-</p>
+<a href="http://codepen.io/PhilippeVay/pen/OXEqgW?editors=0100" 
+target="_blank" rel="noopener noreferrer">Codepen showing ClearFix effect</a></p>
+<p>Other resource:
+<a href="http://www.cssmojo.com/clearfix_block-formatting-context_and_hasLayout/" 
+target="_blank" rel="noopener noreferrer">
+Everything you know about clearfix is wrong</a> (clearfix and BFC - Block
+Formatting Context while has Layout relates to outdated browsers IE6 maybe 7)</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch14-4">
 Section 14.4: In-line DIV using float
@@ -5692,37 +5674,26 @@ p {
   title="This is DIV 1 (left blue) and DIV 2 (right red)"
   alt="This is DIV 1 (left blue) and DIV 2 (right red)." />
 </p>
-<!-- [image038.jpg 7.48 x .97](./images/image038.jpg) -->
-<p>
-<a href="http://codepen.io/vishak-kavalur/pen/bZxbBy">Codepen Link</a>.
-</p>
+
+<p><a href="http://codepen.io/vishak-kavalur/pen/bZxbBy" 
+target="_blank" rel="noopener noreferrer">Link (Codepen)</a>.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch14-5">
-Section 14.5: Use of overflow property to clear floats
-</h3>
+<h3 id="ch14-5">Section 14.5: Use of overflow property to clear floats</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>
-Setting overflow value to hidden,auto or scroll to an element, will
-clear all the floats within that element.
-</p>
-<p>
-<b>Note:</b> using <b>overflow</b>:scroll will always show the scrollbox
-</p>
+<p>Setting overflow value to hidden,auto or scroll to an element, will
+clear all the floats within that element.</p>
+<p><b>Note:</b> using <b>overflow</b>:scroll will always show the scrollbox.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch14-6">
-Section 14.6: Simple Two Fixed-Width Column Layout
-</h3>
+<h3 id="ch14-6">Section 14.6: Simple Two Fixed-Width Column Layout</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>
-A simple two-column layout consists of two fixed-width, floated
+<p>A simple two-column layout consists of two fixed-width, floated
 elements. Note that the sidebar and content area are not the same height
 in this example. This is one of the tricky parts with multi-column
 layouts using floats, and requires workarounds to make multiple columns
-appear to be the same height.
-</p>
-<h4>
-HTML:
-</h4>
+appear to be the same height.</p>
+
+<h4>HTML:</h4>
+
 <pre><code><b>&lt;div</b> class=&quot;wrapper&quot;<b>&gt;</b>
   <b>&lt;div</b> class=&quot;sidebar&quot;<b>&gt;</b>
     <b>&lt;h2&gt;</b>Sidebar<b>&lt;/h2&gt;</b>
@@ -5740,9 +5711,9 @@ ut ligula vel nunc egestas porttitor. Morbi lectus risus, iaculis vel, suscipit 
 massa. Fusce ac turpis quis ligula lacinia aliquet. <b>&lt;/p&gt;</b>
 <b>&lt;/div&gt;</b>
 <b>&lt;/div&gt;</b></code></pre>
-<h4>
-CSS:
-</h4>
+
+<h4>CSS:</h4>
+
 <pre><code>.wrapper {
   <b>width</b>: 600px;
   <b>padding</b>: 20px;
@@ -5763,13 +5734,10 @@ CSS:
   <b>background-color</b>: yellow;
 }</code></pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch14-7">
-Section 14.7: Simple Three Fixed-Width Column Layout
-</h3>
+<h3 id="ch14-7">Section 14.7: Simple Three Fixed-Width Column Layout</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h4>
-HTML:
-</h4>
+<h4>HTML:</h4>
+
 <pre><code><b>&lt;div</b> class=&quot;wrapper&quot;<b>&gt;</b>
   <b>&lt;div</b> class=&quot;left-sidebar&quot;<b>&gt;</b>
     <b>&lt;h1&gt;</b>Left Sidebar<b>&lt;/h1&gt;</b>
@@ -5788,9 +5756,9 @@ HTML:
     <b>&lt;p&gt;</b>Fusce ac turpis quis ligula lacinia aliquet.<b>&lt;/p&gt;</b>
   <b>&lt;/div&gt;</b>
 <b>&lt;/div&gt;</b></code></pre>
-<h4>
-CSS:
-</h4>
+
+<h4>CSS:</h4>
+
 <pre><code>.wrapper {
   <b>width</b>: 600px;
   <b>background-color</b>: pink;
@@ -5816,20 +5784,16 @@ CSS:
   <b>float</b>: right;
 }</code></pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch14-8">
-Section 14.8: Two-Column Lazy/Greedy Layout
-</h3>
+<h3 id="ch14-8">Section 14.8: Two-Column Lazy/Greedy Layout</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>
-This layout uses one floated column to create a two-column layout with
+<p>This layout uses one floated column to create a two-column layout with
 no defined widths. In this example the left sidebar is "lazy," in that
 it only takes up as much space as it needs. Another way to say this is
 that the left sidebar is "shrink-wrapped." The right content column is
-"greedy," in that it takes up all the remaining space.
-</p>
-<h4>
-HTML:
-</h4>
+"greedy," in that it takes up all the remaining space.</p>
+
+<h4>HTML:</h4>
+
 <pre><code><b>&lt;div</b> class=&quot;sidebar&quot;<b>&gt;</b>
 <b>&lt;h1&gt;</b>Sidebar<b>&lt;/h1&gt;</b>
 <b>&lt;img</b> src=&quot;http://lorempixel.com/150/200/&quot; <b>/&gt;</b>
@@ -5848,154 +5812,127 @@ ut ligula vel nunc egestas porttitor. Morbi lectus risus, iaculis vel, suscipit 
 massa. Fusce ac turpis quis ligula lacinia aliquet. Mauris ipsum. Nulla metus metus, ullamcorper 
 vel, tincidunt sed, euismod in, nibh. <b>&lt;/p&gt;</b>
 <b>&lt;/div&gt;</b></code></pre>
-<h4>
-CSS:
-</h4>
-.sidebar { /* 'display:table;' shrink-wraps the column <em>/
+
+<h4>CSS:</h4>
+
+<pre><code>.sidebar { /* 'display:table;' shrink-wraps the column <em>/
 <b>display</b>: table; <b>float</b>: left; <b>background-color</b>:
 blue; } .content { /</em> 'overflow:hidden;' prevents '.content' from
 flowing under '.sidebar' */ <b>overflow</b>: hidden;
-<b>background-color</b>: yellow; }</code>
-</pre>
-<p>
-<a href="https://jsfiddle.net/ooprqsL0/">Demo Fiddle</a>.
-</p>
+<b>background-color</b>: yellow; }</code></pre>
+
+<p><a href="https://jsfiddle.net/ooprqsL0/" 
+target="_blank" rel="noopener noreferrer">Demo (jsFiddle)</a>.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="ch15">
-Chapter 15: Typography
-</h2>
+<h2 id="ch15">Chapter 15: Typography</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <table>
-<colgroup>
-<col style="width: 31%" />
-<col style="width: 68%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th><b>Parameter</b></th>
-<th><b>Details</b></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><i>font-style</i></td>
-<td>italics or oblique</td>
-</tr>
-<tr class="even">
-<td><i>font-variant</i></td>
-<td>normal or small-caps</td>
-</tr>
-<tr class="odd">
-<td><i>font-weight</i></td>
-<td>normal, bold or numeric from 100 to 900.</td>
-</tr>
-<tr class="even">
-<td><i>font-size</i></td>
-<td>The font size given in %, px, em, or any other valid CSS
-measurement.</td>
-</tr>
-<tr class="odd">
-<td><i>line-height</i></td>
-<td>The line height given in %, px, em, or any other valid CSS
-measurement.</td>
-</tr>
-<tr class="even">
-<td><i>font-family</i></td>
-<td>This is for defining the family's name.</td>
-</tr>
-<tr class="odd">
-<td><i>color</i></td>
-<td>Any valid CSS color representation, like red, #00FF00,hsl(240, 100%,
-50%) etc.</td>
-</tr>
-<tr class="even">
-<td><i>font-stretch</i></td>
-<td>Whether or not to use a confenced or expanded face from font. Valid
-values are normal, ultra-</td>
-</tr>
-<tr class="odd">
-<td></td>
-<td>condensed, extra-condensed, condensed, semi-condensed,
-semi-expanded, expanded, extra-</td>
-</tr>
-<tr class="even">
-<td></td>
-<td>expanded or ultra-expanded.</td>
-</tr>
-<tr class="odd">
-<td><i>text-align</i></td>
-<td>start, end, left, right, center, justify, match-parent</td>
-</tr>
-<tr class="even">
-<td><i>text-decoration</i></td>
-<td>none, underline, overline, line-through, initial, inherit;</td>
-</tr>
-</tbody>
+  <colgroup>
+    <col style="width: 31%" />
+    <col style="width: 68%" />
+  </colgroup>
+  <thead>
+    <tr class="header">
+      <th><b>Parameter</b></th>
+      <th><b>Details</b></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="odd">
+      <td><i>font-style</i></td>
+      <td>italics or oblique</td>
+    </tr>
+    <tr class="even">
+      <td><i>font-variant</i></td>
+      <td>normal or small-caps</td>
+    </tr>
+    <tr class="odd">
+      <td><i>font-weight</i></td>
+      <td>normal, bold or numeric from 100 to 900.</td>
+    </tr>
+    <tr class="even">
+      <td><i>font-size</i></td>
+      <td>The font size given in %, px, em, or any other valid CSS measurement.</td>
+    </tr>
+    <tr class="odd">
+      <td><i>line-height</i></td>
+      <td>The line height given in %, px, em, or any other valid CSS measurement.</td>
+    </tr>
+    <tr class="even">
+      <td><i>font-family</i></td>
+      <td>This is for defining the family's name.</td>
+    </tr>
+    <tr class="odd">
+      <td><i>color</i></td>
+      <td>Any valid CSS color representation, like red, #00FF00,hsl(240, 100%, 50%) etc.</td>
+    </tr>
+    <tr class="even">
+      <td><i>font-stretch</i></td>
+      <td>Whether or not to use a confenced or expanded face from font. Valid values 
+	    are normal, ultra-</td>
+    </tr>
+    <tr class="odd">
+      <td></td>
+      <td>condensed, extra-condensed, condensed, semi-condensed, semi-expanded, expanded, 
+	    extra-</td>
+    </tr>
+    <tr class="even">
+      <td></td>
+      <td>expanded or ultra-expanded.</td>
+    </tr>
+    <tr class="odd">
+      <td><i>text-align</i></td>
+      <td>start, end, left, right, center, justify, match-parent</td>
+    </tr>
+    <tr class="even">
+      <td><i>text-decoration</i></td>
+      <td>none, underline, overline, line-through, initial, inherit;</td>
+    </tr>
+  </tbody>
 </table>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch15-1">
-Section 15.1: The Font Shorthand
-</h3>
+<h3 id="ch15-1">Section 15.1: The Font Shorthand</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>
-With the syntax:
-</p>
+<p>With the syntax:</p>
+
 <pre><code>element {
   <b>font</b>: &lbrack;font-style&rbrack; &lbrack;font-variant&rbrack; &lbrack;font-weight&rbrack; &lbrack;font-size/line-height&rbrack; &lbrack;font-family&rbrack;;
 }</code></pre>
-<p>
-You can have all your font-related styles in one declaration with the
+
+<p>You can have all your font-related styles in one declaration with the
 font shorthand. Simply use the font property, and put your values in the
-correct order.
-</p>
-<p>
-For example, to make all p elements bold with a font size of 20px and
-using Arial as the font family typically you would code it as follows:
-</p>
+correct order.</p>
+<p>For example, to make all p elements bold with a font size of 20px and
+using Arial as the font family typically you would code it as follows:</p>
+
 <pre><code>p {
   <b>font-weight</b>: bold;
   <b>font-size</b>: 20px;
   <b>font-family</b>: Arial, sans-serif;
 }</code></pre>
-<p>
-However with the font shorthand it can be condensed as follows:
-</p>
+
+<p>However with the font shorthand it can be condensed as follows:</p>
+
 <pre><code>p {
   <b>font</b>: bold 20px Arial, sans-serif;
 }</code></pre>
-<p>
-<b>Note</b>: that since font-style, font-variant, font-weight and
+
+<p><b>Note</b>: that since font-style, font-variant, font-weight and
 line-height are optional, the three of them are skipped in this example.
 It is important to note that using the shortcut <b>resets</b> the other
 attributes not given. Another important point is that the two necessary
 attributes for the font shortcut to work are font-size and fontfamily.
-If they are not both included the shortcut is ignored.
-</p>
-<p>
-Initial value for each of the properties:
-</p>
+If they are not both included the shortcut is ignored.</p>
+<p>Initial value for each of the properties:</p>
+
 <ul>
-<li>
-<b>font-style</b>: normal;
-</li>
-<li>
-<b>font-variant</b>: normal;
-</li>
-<li>
-<b>font-weight</b>: normal;
-</li>
-<li>
-<b>font-stretch</b>: normal;
-</li>
-<li>
-<b>font-size</b>: medium;
-</li>
-<li>
-<b>line-height</b>: normal;
-</li>
-<li>
-font-famly - depends on user agent
-</li>
+  <li><b>font-style</b>: normal;</li>
+  <li><b>font-variant</b>: normal;</li>
+  <li><b>font-weight</b>: normal;</li>
+  <li><b>font-stretch</b>: normal;</li>
+  <li><b>font-size</b>: medium;</li>
+  <li><b>line-height</b>: normal;</li>
+  <li>font-famly - depends on user agent</li>
 </ul>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch15-2>Section 15.2: Quotes</h3>
@@ -6009,28 +5946,24 @@ marks of the <b>&gt;</b> tag.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch15-3">Section 15.3: Font Size</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h4>
-HTML:
-</h4>
+<h4>HTML:</h4>
+
 <pre><code><b>&lt;div</b> id=&quot;element-one&quot;<b>&gt;</b>Hello I am some text.<b>&lt;/div&gt;</b>
 <b>&lt;div</b> id=&quot;element-two&quot;<b>&gt;</b>Hello I am some smaller text.<b>&lt;/div&gt;</b></code></pre>
-<h4>
-CSS:
-</h4>
+
+<h4>CSS:</h4>
+
 <pre><code>#element-one {
   <b>font-size</b>: 30px;
 }
 #element-two {
   <b>font-size</b>: 10px;
 }</code></pre>
-<p>
-The text inside #element-one will be 30px in size, while the text in
-#element-two will be 10px in size.
-</p>
+
+<p>The text inside #element-one will be 30px in size, while the text in
+#element-two will be 10px in size.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch15-4">
-Section 15.4: Text Direction
-</h3>
+<h3 id="ch15-4">Section 15.4: Text Direction</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre><code>div {
   <b>direction</b>: ltr; /* Default, text read read from left-to-right */
@@ -6047,59 +5980,51 @@ Section 15.4: Text Direction
 .vertical-ltr {
   <b>writing-mode</b>: vertical-rl;  /* text read from left-to-right and top to bottom */
 }</code></pre>
-<p>
-The direction property is used to change the horizontal text direction
-of an element.
-</p>
+
+<p>The direction property is used to change the horizontal text direction
+of an element.</p>
 <p><b>Syntax;direction</b>: ltr | rtl | initial | inherit;</p>
-<p>
-The writing-mode property changes the alignment of text so it can be
+<p>The writing-mode property changes the alignment of text so it can be
 read from top-to-bottom or from left-to-right, depending on the
-language.
-</p>
-<b>Syntax: direction</b>: horizontal-tb | vertical-rl | vertical-lr;
+language.</p>
+
+<p><b>Syntax: direction</b>: horizontal-tb | vertical-rl | vertical-lr;</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch15-5">
-Section 15.5: Font Stacks
-</h3>
+<h3 id="ch15-5">Section 15.5: Font Stacks</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre><code><b>font-family</b>: &apos;Segoe UI&apos;, Tahoma, sans-serif;</code></pre>
-<p>
-The browser will attempt to apply the font face "Segoe UI" to the
+
+<p>The browser will attempt to apply the font face "Segoe UI" to the
 characters within the elements targeted by the above property. If this
 font is not available, or the font does not contain a glyph for the
 required character, the browser will fall back to Tahoma, and, if
 necessary, any sans-serif font on the user's computer. Note that any
 font names with more than one word such as "Segoe UI" need to have
-single or double quotes around them.
-</p>
+single or double quotes around them.</p>
+
 <pre><code><b>font-family</b>: Consolas, &apos;Courier New&apos;, monospace;</code></pre>
-<p>
-The browser will attempt to apply the font face "Consolas" to the
+
+<p>The browser will attempt to apply the font face "Consolas" to the
 characters within the elements targeted by the above property. If this
 font is not available, or the font does not contain a glyph for the
 required character, the browser will fall back to "Courier New," and, if
-necessary, any monospace font on the user's computer.
-</p>
+necessary, any monospace font on the user's computer.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch15-6">
-Section 15.6: Text Overflow
-</h3>
+<h3 id="ch15-6">Section 15.6: Text Overflow</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>
-The text-overflow property deals with how overflowed content should be
+<p>The text-overflow property deals with how overflowed content should be
 signaled to users. In this example, the ellipsis represents clipped
-text.
-</p>
+text.</p>
+
 <pre><code>.text {
   <b>overflow</b>: hidden;
   <b>text-overflow</b>: ellipsis;
 }</code></pre>
-<p>
-Unfortunately, only works on a single line of text. There is no way to
+
+<p>Unfortunately, only works on a single line of text. There is no way to
 support ellipsis on the last line in standard CSS, but it can be
-achieved with non-standard webkit-only implementation of flexboxes.
-</p>
+achieved with non-standard webkit-only implementation of flexboxes.</p>
+
 <pre><code>.giveMeEllipsis {
   <b>overflow</b>: hidden;
   <b>text-overflow</b>: ellipsis;
@@ -6109,67 +6034,53 @@ achieved with non-standard webkit-only implementation of flexboxes.
   <b>line-height</b>: X;  /* fallback */
   <b>max-height</b>: X&ast;N; /* fallback */
 }</code></pre>
-<p>
-Example (open in Chrome or Safari):
-</p>
-<p>
-<a href="http://jsfiddle.net/csYjC/1131/">jsFiddle</a>.
-</p>
-<h4>
-Resources:
-</h4>
-<p>
-<a href="https://www.w3.org/TR/2012/WD-css3-ui-20120117/#text-overflow0">Text
-Overflow (jsFiddle)</a>.
+
+<p>Example (open in Chrome or Safari):<br>
+<a href="http://jsfiddle.net/csYjC/1131/" 
+target="_blank" rel="noopener noreferrer">Demo (jsFiddle)</a>.</p>
+
+<h4>Resources:</h4>
+
+<p><a href="https://www.w3.org/TR/2012/WD-css3-ui-20120117/#text-overflow0" 
+target="_blank" rel="noopener noreferrer">Text Overflow (jsFiddle)</a>.
 </p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch15-7">
-Section 15.7: Text Shadow
-</h3>
+<h3 id="ch15-7">Section 15.7: Text Shadow</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>
-To add shadows to text, use the text-shadow property. The syntax is as
-follows:
-</p>
+<p>To add shadows to text, use the text-shadow property. The syntax is as
+follows:</p>
+
 <pre><code><b>text-shadow</b>: horizontal-offset vertical-offset blur color;</code></pre>
-<h4>
-Shadow without blur radius
-</h4>
-<p>
-This creates a blue shadow effect around a heading
-</p>
-<h4>
-Shadow with blur radius
-</h4>
-<p>
-This creates a blue shadow effect around a heading
-</p>
-<p>To add a blur effect, add an option blur radius argument</p>
+
+<h4>Shadow without blur radius</h4>
+
+<p>This creates a blue shadow effect around a heading.</p>
+
+<h4>Shadow with blur radius</h4>
+
+<p>This creates a blue shadow effect around a heading.<br>
+To add a blur effect, add an option blur radius argument.</p>
+
 <pre><code>h1 {
   <b>text-shadow</b>: 2px 2px 10px #0000FF;
 }</code></pre>
-<h4>
-Multiple Shadows
-</h4>
-<p>
-To give an element multiple shadows, separate them with commas
-</p>
+
+<h4>Multiple Shadows</h4>
+
+<p>To give an element multiple shadows, separate them with commas.</p>
+
 <pre><code>h1 {
   <b>text-shadow</b>: 0 0 3px #FF0000, 0 0 5px #0000FF;
 }</code></pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch15-8">
-Section 15.8: Text Transform
-</h3>
+<h3 id="ch15-8">Section 15.8: Text Transform</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>
-The text-transform property allows you to change the capitalization of
+<p>The text-transform property allows you to change the capitalization of
 text. Valid values are: uppercase, capitalize, lowercase, initial,
-inherit, and none.
-</p>
-<h4>
-CSS:
-</h4>
+inherit, and none.</p>
+
+<h4>CSS:</h4>
+
 <pre><code>.example1 {
   <b>text-transform</b>: uppercase;
 }
@@ -6179,9 +6090,9 @@ CSS:
 .example3 {
   <b>text-transform</b>: lowercase;
 }</code></pre>
-<h4>
-HTML:
-</h4>
+
+<h4>HTML:</h4>
+
 <pre><code><b>&lt;p</b> class=&quot;example1&quot;<b>&gt;</b>
   all letters in uppercase&lt;!&minus;-&quot;ALL LETTERS IN UPPERCASE&quot;&minus;-&gt;
 <b>&lt;/p&gt;</b>
@@ -6192,196 +6103,148 @@ HTML:
   all letters in lowercase&lt;!&minus;-&quot;all letters in lowercase&quot;&minus;-&gt;
 <b>&lt;/p&gt;</b></code></pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch15-9">
-Section 15.9: Letter Spacing
-</h3>
+<h3 id="ch15-9">Section 15.9: Letter Spacing</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre><code>h2 {
   /* adds a 1px space horizontally between each letter;
   also known as tracking */
   <b>letter-spacing</b>: 1px;
 }</code></pre>
-<p>
-The letter-spacing property is used to specify the space between the
-characters in a text.
-</p>
-<p>
-!letter-spacing also supports negative values:
-</p>
+
+<p>The letter-spacing property is used to specify the space between the
+characters in a text.</p>
+
+<p>!letter-spacing also supports negative values:</p>
+
 <pre><code>p {
   <b>letter-spacing</b>: -1px;
 }</code></pre>
-<p>
-Resources:
-<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/letter-spacing">Letter
-Spacing</a>
-</p>
+
+<p>Resources: 
+<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/letter-spacing" 
+target="_blank" rel="noopener noreferrer">Letter Spacing</a></p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch15-10">
-Section 15.10: Text Indent
-</h3>
+<h3 id="ch15-10">Section 15.10: Text Indent</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre><code>p {
   <b>text-indent</b>: 50px;
 }</code></pre>
-<p>
-The text-indent property specifies how much horizontal space text should
+
+<p>The text-indent property specifies how much horizontal space text should
 be moved before the beginning of the first line of the text content of
-an element.
-</p>
-<h4>
-Resources:
-</h4>
+an element.</p>
+
+<h4>Resources:</h4>
+
 <ul>
-<li>
-<a href="http://stackoverflow.com/questions/5856952/indenting-only-the-first-line-of-text-in-a-paragraph">
-Indenting only the first line of text in a paragraph?</a>
-</li>
-<li>
-<a href="https://www.w3.org/TR/CSS21/text.html#propdef-text-indent">Text
-Indent</a>
-</li>
-<li>
-<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/text-indent">Mozilla
-Text Indent</a>
-</li>
+  <li><a href="http://stackoverflow.com/questions/5856952/indenting-only-the-first-line-of-text-in-a-paragraph" 
+    target="_blank" rel="noopener noreferrer">Indenting only the first line of text in a paragraph?</a></li>
+  <li><a href="https://www.w3.org/TR/CSS21/text.html#propdef-text-indent">Text Indent</a></li>
+  <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/text-indent">Mozilla Text Indent</a></li>
 </ul>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch15-11">
-Section 15.11: Text Decoration
-</h3>
+<h3 id="ch15-11">Section 15.11: Text Decoration</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>
-The text-decoration property is used to set or remove decorations from
-text.
-</p>
+<p>The text-decoration property is used to set or remove decorations from
+text.</p>
+
 <pre><code>h1 { <b>text-decoration</b>: none; }
 h2 { <b>text-decoration</b>: overline; }
 h3 { <b>text-decoration</b>: line-through; }
 h4 { <b>text-decoration</b>: underline; }</code></pre>
-<p>
-text-decoration can be used in combination with text-decoration-style
-and text-decoration-color as a shorthand property:
-</p>
+
+<p>text-decoration can be used in combination with text-decoration-style
+and text-decoration-color as a shorthand property:</p>
+
 <pre><code>.title { <b>text-decoration</b>: underline dotted blue; }</code></pre>
-<p>
-This is a shorthand version of
-</p>
+
+<p>This is a shorthand version of</p>
+
 <pre><code>.title
 {
   <b>text-decoration-style</b>: dotted;
   <b>text-decoration-line</b>: underline;
   <b>text-decoration-color</b>: blue;
 }</code></pre>
-<p>
-It should be noted that the following properties are only supported in
-Firefox
-</p>
+
+<p>It should be noted that the following properties are only supported in
+Firefox</p>
+
 <ul>
-<li>
-text-decoration-color
-</li>
-<li>
-text-decoration-line
-</li>
-<li>
-text-decoration-style
-</li>
-<li>
-text-decoration-skip
-</li>
+  <li>text-decoration-color</li>
+  <li>text-decoration-line</li>
+  <li>text-decoration-style</li>
+  <li>text-decoration-skip</li>
 </ul>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch15-12">
-Section 15.12: Word Spacing
-</h3>
+<h3 id="ch15-12">Section 15.12: Word Spacing</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>
-The word-spacing property specifies the spacing behavior between tags
-and words.
-</p>
-<h4>
-Possible values
-</h4>
+<p>The word-spacing property specifies the spacing behavior between tags
+and words.</p>
+
+<h4>Possible values</h4>
+
 <ul>
-<li>
-a positive or negative <i>length</i> (using em px vh cm etc.) or
-<i>percentage</i> (using %)
-</li>
-<li>
-the keyword normal uses the font's default word spacing
-</li>
-<li>
-the keyword inherit takes the value from the parent element
-</li>
+  <li>a positive or negative <i>length</i> (using em px vh cm etc.) or 
+    <i>percentage</i> (using %)</li>
+  <li>the keyword normal uses the font's default word spacing</li>
+  <li>the keyword inherit takes the value from the parent element</li>
 </ul>
-<h4>
-CSS
-</h4>
+
+<h4>CSS:</h4>
+
 <pre><code>.normal    { <b>word-spacing</b>: normal; }
 .narrow    { <b>word-spacing</b>: -3px; }
 .extensive {<b>word-spacing</b>: 10px; }</code></pre>
-<h4>
-HTML:
-</h4>
+
+<h4>HTML:</h4>
+
 <pre><code><b>&lt;p&gt;</b>
   <b>&lt;span</b> class=&quot;normal&quot;<b>&gt;</b>This is an example, showing the effect of &quot;word-spacing&quot;.<b>&lt;/span&gt;&lt;br&gt;</b>
   <b>&lt;span</b> class=&quot;narrow&quot;<b>&gt;</b>This is an example, showing the effect of &quot;word-spacing&quot;.<b>&lt;/span&gt;&lt;br&gt;</b> 
   <b>&lt;span</b> class=&quot;extensive&quot;<b>&gt;</b>This is an example, showing the effect of &quot;word-spacing&quot;.<b>&lt;/span&gt;&lt;br&gt;</b>
 <b>&lt;/p&gt;</b></code></pre>
-<h4>
-Online-Demo
-</h4>
+
+<h4>Online-Demo</h4>
+
 <p><a href="https://jsfiddle.net/91742Lxt/">Try it yourself</a></p>
-<h4>
-Further reading:
-</h4>
+
+<h4>Further reading:</h4>
+
 <ul>
-<li>
-<a href="https://developer.mozilla.org/de/docs/Web/CSS/word-spacing">
-word-spacing–]MDN</a>
-</li>
-<li>
-<a href="https://www.w3.org/wiki/CSS/Properties/word-spacing">
-word-spacing-w3.org</a>
-</li>
+  <li><a href="https://developer.mozilla.org/de/docs/Web/CSS/word-spacing" 
+    target="_blank" rel="noopener noreferrer">word-spacing–]MDN</a></li>
+  <li><a href="https://www.w3.org/wiki/CSS/Properties/word-spacing" 
+    target="_blank" rel="noopener noreferrer">word-spacing-w3.org</a></li>
 </ul>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch15-13">
-Section 15.13: Font Variant
-</h3>
+<h3 id="ch15-13">Section 15.13: Font Variant</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h4>
-Attributes:
-</h4>
+<h4>Attributes:</h4>
+
 <p><b><i>normal</i></b></p>
-<p>
-Default attribute of fonts.
-</p>
+<p>Default attribute of fonts.</p>
 <p><b><i>small-caps</i></b></p>
-<p>
-Sets every letter to uppercase, <b>but</b> makes the lowercase
+<p>Sets every letter to uppercase, <b>but</b> makes the lowercase
 letters(from original text) smaller in size than the letters that
-originally uppercase.
-</p>
-<h4>
-CSS:
-</h4>
+originally uppercase.</p>
+
+<h4>CSS:</h4>
+
 <pre><code>.smallcaps {
   <b>font-variant</b>: small-caps;
 }</code></pre>
-<h4>
-HTML:
-</h4>
+
+<h4>HTML:</h4>
+
 <pre><code>
 <b>&lt;p</b> class=&quot;smallcaps&quot;<b>&gt;</b>
   Documentation about CSS Fonts
   <b>&lt;br&gt;</b>
   aNd ExAmpLe
 <b>&lt;/p&gt;</b></code></pre>
-<h4>
-Output:
-</h4>
+
+<h4>Output:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~ 39. documentation about css fonts and example (95) ~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left" width="100%">
@@ -6390,41 +6253,33 @@ Output:
   title="Documentation about CSS Fonts aNd ExAmpLe."
   alt="Documentation about CSS Fonts aNd ExAmpLe." />
 </p>
-<!-- [image039.jpg 2.34 x .375](./images/image039.jpg) -->
-<p>
-Note: The font-variant property is a shorthand for the properties:
+
+<p>Note: The font-variant property is a shorthand for the properties:
 font-variant-caps, font-variant-numeric, fontvariant-alternates,
-font-variant-ligatures, and font-variant-east-asian.
-</p>
+font-variant-ligatures, and font-variant-east-asian.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="ch16">
-Chapter 16: Flexible Box Layout (Flexbox)
-</h2>
+<h2 id="ch16">Chapter 16: Flexible Box Layout (Flexbox)</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>
-The Flexible Box module, or just 'flexbox' for short, is a box model
+<p>The Flexible Box module, or just 'flexbox' for short, is a box model
 designed for user interfaces, and it allows users to align and
 distribute space among items in a container such that elements behave
 predictably when the page layout must accommodate different, unknown
 screen sizes. A flex container expands items to fill available space and
-shrinks them to prevent overflow.
-</p>
+shrinks them to prevent overflow.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch16-1">
-Section 16.1: Dynamic Vertical and Horizontal Centering (alignitems,
-justify-content)
-</h3>
+<h3 id="ch16-1">Section 16.1: Dynamic Vertical and Horizontal Centering (alignitems, 
+justify-content)</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p><b>Simple Example (centering a single element)</b></p>
-<h4>
-HTML:
-</h4>
+
+<h4>HTML:</h4>
+
 <pre><code><b>&lt;div</b> class=&quot;aligner&quot;<b>&gt;</b>
   <b>&lt;div</b> class=&quot;aligner-item&quot;<b>&gt;</b>...<b>&lt;/div&gt;</b>
 <b>&lt;/div&gt;</b></code></pre>
-<h4>
-CSS
-</h4>
+
+<h4>CSS:</h4>
+
 <pre><code>.aligner {
   <b>display</b>: flex;
   <b>align-items</b>: center;
@@ -6433,13 +6288,12 @@ CSS
 .aligner-item {
   <b>max-width</b>: 50&percnt;; /* for demo. Use actual width instead. */
 }</code></pre>
-<p>
-Here is a <a href="http://codepen.io/asim-coder/pen/ZOobqz">demo
-(CodePen)</a>.
-</p>
-<h4>
-Reasoning
-</h4>
+
+<p>Here is a <a href="http://codepen.io/asim-coder/pen/ZOobqz" 
+target="_blank" rel="noopener noreferrer">demo (CodePen)</a>.</p>
+
+<h4>Reasoning</h4>
+
 <table>
 <colgroup>
 <col style="width: 18%" />
@@ -6524,7 +6378,8 @@ Example: justify-content: center on a horizontal flexbox
   alt="3 squares in row 1." />
 </p>
 <!-- [image040.jpg ](./images/image040.jpg) -->
-<p>Here is the <a href="https://jsfiddle.net/d6pc5bmd/">demo
+<p>Here is the <a href="https://jsfiddle.net/d6pc5bmd/" 
+target="_blank" rel="noopener noreferrer">demo
 jsFiddle</a>.</p>
 <h4>
 Example: justify-content: center on a vertical flexbox
@@ -6548,7 +6403,8 @@ Outcome:
 </p>
 <!-- [image041.jpg](./images/image041.jpg) -->
 <p>
-Here is a <a href="https://jsfiddle.net/d6pc5bmd/1/">demo
+Here is a <a href="https://jsfiddle.net/d6pc5bmd/1/" 
+target="_blank" rel="noopener noreferrer">demo
 (jsFiddle)</a>.
 </p>
 <h4>
@@ -6575,7 +6431,8 @@ Outcome:
 </p>
 <!-- [image042.jpg](./images/image042.jpg) -->
 <p>
-Here is a <a href="https://jsfiddle.net/d6pc5bmd/2/">demo jsFiddle</a>.
+Here is a <a href="https://jsfiddle.net/d6pc5bmd/2/" 
+target="_blank" rel="noopener noreferrer">demo jsFiddle</a>.
 </p>
 <h4>
 align-content: center
@@ -6604,7 +6461,8 @@ Outcome:
 </p>
 <!-- [image043.jpg 6.97 x 6.15](./images/image043.jpg) -->
 <p>
-Here is a <a href="https://jsfiddle.net/d6pc5bmd/3/">demo
+Here is a <a href="https://jsfiddle.net/d6pc5bmd/3/" 
+target="_blank" rel="noopener noreferrer">demo
 (jsFiddle)</a>.
 </p>
 <h4>
@@ -6629,7 +6487,8 @@ Outcome:
 </p>
 <!-- [image044.jpog 6.93 x 6.13](./images/image044.jpg) -->
 <p>
-Here is a <a href="https://jsfiddle.net/d6pc5bmd/4/">Demo
+Here is a <a href="https://jsfiddle.net/d6pc5bmd/4/" 
+target="_blank" rel="noopener noreferrer">Demo
 (jsFiddle)</a>.
 </p>
 <h4>
@@ -6653,7 +6512,8 @@ Outcome:
   alt="3 squares down center, column &amp; row." />
 </p>
 <!-- [image045.jpg 6.93 x 6.11](./images/image045.jpg) -->
-Here is a <a href="https://jsfiddle.net/d6pc5bmd/5/">demo
+Here is a <a href="https://jsfiddle.net/d6pc5bmd/5/" 
+target="_blank" rel="noopener noreferrer">demo
 (jsFiddle)</a>.
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch16-2">
@@ -6718,7 +6578,8 @@ One of the nicest features of flexbox is to allow optimally fitting
 containers to their parent element.
 </p>
 <p>
-<a href="https://jsfiddle.net/6gfogoqk/">Live Demo (jsFiddle)</a>.
+<a href="https://jsfiddle.net/6gfogoqk/" 
+target="_blank" rel="noopener noreferrer">Live Demo (jsFiddle)</a>.
 </p>
 <h4>
 HTML:
@@ -6766,7 +6627,8 @@ Section 16.4: Holy Grail Layout using Flexbox
 </h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>
-<a href="http://alistapart.com/article/holygrail">Holy Grail layout</a>
+<a href="http://alistapart.com/article/holygrail" 
+target="_blank" rel="noopener noreferrer">Holy Grail layout</a>
 is a layout with a fixed height header and footer, and a center with 3
 columns. The 3 columns include a fixed width sidenav, a fluid center,
 and a column for other content like ads (the fluid center appears first
@@ -6822,7 +6684,8 @@ CSS:
 .footer {
   <b>flex</b>: 0 0 50px;
 }</code></pre>
-<a href="https://jsfiddle.net/adityarb88/hek6ms0x/">Demo (jsFiddle)</a>
+<a href="https://jsfiddle.net/adityarb88/hek6ms0x/" 
+target="_blank" rel="noopener noreferrer">Demo (jsFiddle)</a>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch16-5">
 Section 16.5: Perfectly aligned buttons inside cards with flexbox
@@ -6940,7 +6803,8 @@ Section 16.6: Same height on nested containers
 This code makes sure that all nested containers are always the same
 height. This is done by assuring that all nested elements are the same
 height as the containing parent div.
-<a href="https://jsfiddle.net/3wwh7ewp/"> See working example:</a>
+<a href="https://jsfiddle.net/3wwh7ewp/" 
+target="_blank" rel="noopener noreferrer"> See working example:</a>
 </p>
 <p>
 This effect is achieved due to the property align-items being set to
@@ -6970,7 +6834,8 @@ CSS
 }
 </code></pre>
 <p>
-Note: <a href="http://caniuse.com/#search=flexbox">Does not work on IE
+Note: <a href="http://caniuse.com/#search=flexbox" 
+target="_blank" rel="noopener noreferrer">Does not work on IE
 versions under 10</a>.
 </p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -7135,7 +7000,8 @@ However it may not always possible to find another common selector which
 is shared between any element which uses the .bar class. Because of
 this, CSS allows us to duplicate selectors to increase specificity.
 Instead of just .bar, we can use instead (See
-<a href="https://www.w3.org/TR/css3-selectors/#grammar">The grammar of
+<a href="https://www.w3.org/TR/css3-selectors/#grammar" 
+target="_blank" rel="noopener noreferrer">The grammar of
 Selectors, W3C Recommendation</a>). This still selects any element with
 a class of .bar, but now has double the Group <i>B</i> specificity:
 </p>
@@ -7194,7 +7060,8 @@ This makes future changes harder and pollutes that css page.
 </p>
 <p>
 You can calculate the specificity of your selector
-<a href="http://specificity.keegan.st/">here</a>.
+<a href="http://specificity.keegan.st/" 
+target="_blank" rel="noopener noreferrer">here</a>.
 </p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch17-2">
@@ -7244,7 +7111,8 @@ For testing and debugging using inspect element.
 <h4>
 See also:
 </h4>
-<a href="https://www.w3.org/TR/CSS22/cascade.html#important-rules">W3C -
+<a href="https://www.w3.org/TR/CSS22/cascade.html#important-rules" 
+target="_blank" rel="noopener noreferrer">W3C -
 6 Assigning property values, Cascading, and Inheritance −-6.4.2
 !important rules</a>.
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -8347,9 +8215,11 @@ Syntax
   <b>color</b>: #00F;
 }</code></pre>
 <p>
-<a href="https://en.wikipedia.org/wiki/Hexadecimal">Hexadecimal
+<a href="https://en.wikipedia.org/wiki/Hexadecimal" 
+target="_blank" rel="noopener noreferrer">Hexadecimal
 notation</a> is used to specify color values in the RGB color format,
-per the <a href="https://www.w3.org/TR/css3-color/#numerical">W3C's
+per the <a href="https://www.w3.org/TR/css3-color/#numerical" 
+target="_blank" rel="noopener noreferrer">W3C's
 'Numerical color values'.</a>
 </p>
 <p>
@@ -8605,59 +8475,54 @@ opaque.</td>
 Chapter 19: Opacity
 </h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch19-1">
-Section 19.1: Opacity Property
-</h3>
+<h3 id="ch19-1">Section 19.1: Opacity Property</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>
 <p>An element's opacity can be set using the opacity property. Values
 can be anywhere from 0.0 (transparent) to 1.0 (opaque).</p>
-<h4>
-Example Usage
-</h4>
+
+<h4>Example Usage</h4>
+
 <pre><code>
 <b>&lt;</b><b>div</b> style=&quot;opacity:0.8;&quot;<b>&gt;</b>
   This is a partially transparent element
 <b>&lt;</b><b>/div</b><b>&gt;</b>
 </code></pre>
+
 <table>
-<thead>
-<tr class="header">
-<th><b>Property Value</b></th>
-<th><b>Transparency</b></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><b>opacity</b>: 1.0;</td>
-<td>Opaque.</td>
-</tr>
-<tr class="even">
-<td><b>opacity</b>: 0.75;</td>
-<td>25% transparent (75% Opaque).</td>
-</tr>
-<tr class="odd">
-<td><b>opacity</b>: 0.5;</td>
-<td>50% transparent (50% Opaque)</td>
-</tr>
-<tr class="even">
-<td><b>opacity</b>: 0.25;</td>
-<td>75% transparent (25% Opaque)</td>
-</tr>
-<tr class="odd">
-<td><b>opacity</b>: 0.0;</td>
-<td>Transparent</td>
-</tr>
-</tbody>
+  <thead>
+    <tr class="header">
+      <th><b>Property Value</b></th>
+      <th><b>Transparency</b></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="odd">
+      <td><b>opacity</b>: 1.0;</td>
+      <td>Opaque.</td>
+    </tr>
+    <tr class="even">
+      <td><b>opacity</b>: 0.75;</td>
+      <td>25% transparent (75% Opaque).</td>
+    </tr>
+    <tr class="odd">
+      <td><b>opacity</b>: 0.5;</td>
+      <td>50% transparent (50% Opaque)</td>
+    </tr>
+    <tr class="even">
+      <td><b>opacity</b>: 0.25;</td>
+      <td>75% transparent (25% Opaque)</td>
+    </tr>
+    <tr class="odd">
+      <td><b>opacity</b>: 0.0;</td>
+      <td>Transparent</td>
+    </tr>
+  </tbody>
 </table>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch19-2">
-Section 19.2: IE Compatibility for 'opacity'
-</h2>
+<h3 id="ch19-2">Section 19.2: IE Compatibility for 'opacity'</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>
-To use opacity in all versions of IE, the order is:
-</p>
+<p>To use opacity in all versions of IE, the order is:</p>
+
 <pre><code>.transparent-element {
   /* for IE 8 & 9 */
   -ms-filter: &quot;progid:DXImageTransform.Microsoft.Alpha(Opacity=60)&quot;; // IE8
@@ -8667,34 +8532,30 @@ To use opacity in all versions of IE, the order is:
   <b>opacity</b>: 0.6;
 }</code></pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="ch20">
-Chapter 20: Length Units
-</h2>
+<h2 id="ch20">Chapter 20: Length Units</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <table>
-<colgroup>
-<col style="width: 18%" />
-<col style="width: 81%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th><b>Unit</b></th>
-<th><b>Description</b></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>%</td>
-<td>Define sizes in terms of parent objects or current object dependent
-on property</td>
-</tr>
-<tr class="even">
-<td>em</td>
-<td>Relative to the font-size of the element (2em means 2 times the size
-of the current font)</td>
-</tr>
-<tr class="odd">
-<td>rem</td>
+  <colgroup>
+    <col style="width: 18%" />
+    <col style="width: 81%" />
+  </colgroup>
+  <thead>
+    <tr class="header">
+      <th><b>Unit</b></th>
+      <th><b>Description</b></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="odd">
+      <td>%</td>
+      <td>Define sizes in terms of parent objects or current object dependent on property</td>
+    </tr>
+    <tr class="even">
+      <td>em</td>
+      <td>Relative to the font-size of the element (2em means 2 times the size of the current font)</td>
+    </tr>
+    <tr class="odd">
+      <td>rem</td>
 <td>Relative to font-size of the root element</td>
 </tr>
 <tr class="even">
@@ -8759,36 +8620,28 @@ of the current font)</td>
 </tr>
 </tbody>
 </table>
-<p>
-A CSS distance measurement is a number immediately followed by a length
-unit (px, em, pc, in, …)
-</p>
-<p>
-CSS supports a number of length measurements units. They are absolute or
-relative.
-</p>
+
+<p>A CSS distance measurement is a number immediately followed by a length
+unit (px, em, pc, in, …)</p>
+<p>CSS supports a number of length measurements units. They are absolute or
+relative.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch20-1">
-Section 20.1: Creating scalable elements using rems and ems
-</h3>
+<h3 id="ch20-1">Section 20.1: Creating scalable elements using rems and ems</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h4>
-Version ≥ 3
-</h4>
-<p>
-You can use rem defined by the font-size of your html tag to style
+<h4>Version ≥ 3</h4>
+
+<p>You can use rem defined by the font-size of your html tag to style
 elements by setting their font-size to a value of rem and use em inside
-the element to create elements that scale with your global font-size.
-</p>
-<h4>
-HTML:
-</h4>
+the element to create elements that scale with your global font-size.</p>
+
+<h4>HTML:</h4>
+
 <pre><code><b>&lt;input</b> type=&quot;button&quot; value=&quot;Button&quot;<b>&gt;</b>
 <b>&lt;input</b> type=&quot;range&quot;<b>&gt;</b>
 <b>&lt;input</b> type=&quot;text&quot; value=&quot;Text&quot;<b>&gt;</b></code></pre>
-<h4>
-Relevant CSS:
-</h4>
+
+<h4>Relevant CSS:</h4>
+
 <pre><code>html {
   <b>font-size</b>: 16px;
 }
@@ -8805,9 +8658,8 @@ input&lbrack;type=text&rbrack; {
   <b>font-size</b>: 1rem;
   <b>padding</b>: 0.5em;
 }</code></pre>
-<h4>
-Possible Result:
-</h4>
+
+<h4>Possible Result:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 190.  (xxx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left" width="100%">
@@ -8816,72 +8668,43 @@ Possible Result:
   title=""
   alt="." />
 </p>
-<!-- [image190.jpg 6.34 x 2.95](./images/image190.jpg) -->
-<!-- {width="6.34375in" height="2.9583333333333335in"} -->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch20-2">
-Section 20.2: Font size with rem
-</h3>
+<h3 id="ch20-2">Section 20.2: Font size with rem</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>
-CSS3 introduces a few new units, including the
-<a href="https://www.w3.org/TR/css-values/#font-relative-lengths">rem</a>
-unit, which stands for "root em". Let's look at how rem works.
-</p>
-<p>
-First, let's look at the differences between em and rem.
-</p>
+<p>CSS3 introduces a few new units, including the
+<a href="https://www.w3.org/TR/css-values/#font-relative-lengths" 
+target="_blank" rel="noopener noreferrer">rem</a>
+unit, which stands for "root em". Let's look at how rem works.</p>
+<p>First, let's look at the differences between em and rem.</p>
+
 <ul>
-<li>
-<b>em</b>: Relative to the font size of the parent. This causes the
-compounding issue.
-</li>
-<li>
-<b>rem</b>: Relative to the font size of the root or <b>&gt;</b>
-element. This means it's possible to declare a single font size for the
-html element and define all rem units to be a percentage of that.
-</li>
+  <li><b>em</b>: Relative to the font size of the parent. This causes the
+    compounding issue.</li>
+  <li><b>rem</b>: Relative to the font size of the root or <b>&gt;</b>
+    element. This means it's possible to declare a single font size for the
+	html element and define all rem units to be a percentage of that.</li>
 </ul>
-<p>
-The main issue with using rem for font sizing is that the values are
+
+<p>The main issue with using rem for font sizing is that the values are
 somewhat difficult to use. Here is an example of some common font sizes
-expressed in rem units, assuming that the base size is 16px:
-</p>
+expressed in rem units, assuming that the base size is 16px:</p>
+
 <ul>
-<li>
-10px = 0.625rem
-</li>
-<li>
-12px = 0.75rem
-</li>
-<li>
-14px = 0.875rem
-</li>
-<li>
-16px = 1rem (base)
-</li>
-<li>
-18px = 1.125rem
-</li>
-<li>
-20px = 1.25rem
-</li>
-<li>
-24px = 1.5rem
-</li>
-<li>
-30px = 1.875rem
-</li>
-<li>
-32px = 2rem
-</li>
+  <li>10px = 0.625rem</li>
+  <li>12px = 0.75rem</li>
+  <li>14px = 0.875rem</li>
+  <li>16px = 1rem (base)</li>
+  <li>18px = 1.125rem</li>
+  <li>20px = 1.25rem</li>
+  <li>24px = 1.5rem</li>
+  <li>30px = 1.875rem</li>
+  <li>32px = 2rem</li>
 </ul>
-<h4>
-CODE:
-</h4>
-<p>
-Version ≥ 3
-</p>
+
+<h4>CODE:</h4>
+
+<p>Version ≥ 3</p>
+
 <pre><code>html {
   <b>font-size</b>: 16px;
 }
@@ -8895,104 +8718,74 @@ li {
   <b>font-size</b>: 1.5em; /* 24px */
 }</code></pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch20-3">
-Section 20.3: vmin and vmax
-</h3>
+<h3 id="ch20-3">Section 20.3: vmin and vmax</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <ul>
-<li>
-<b>vmin</b>: Relative to 1 percent of the viewport's smaller dimension.
-</li>
-<li>
-<b>vmax</b>: Relative to 1 percent of the viewport's larger dimension.
-</li>
+  <li><b>vmin</b>: Relative to 1 percent of the viewport's smaller dimension.</li>
+  <li><b>vmax</b>: Relative to 1 percent of the viewport's larger dimension.</li>
 </ul>
-<p>
-In other words, 1 vmin is equal to the smaller of <i>1 vh</i> and <i>1
-vw</i>
-</p>
-<p>
-1 vmax is equal to the larger of <i>1 vh</i> and <i>1 vw</i>
-</p>
-<p>
-<b>Note</b>: vmax is
-<a href="http://caniuse.com/#feat=viewport-units">not supported in:
-</p>
+
+<p>In other words, 1 vmin is equal to the smaller of <i>1 vh</i> and <i>1
+vw</i></p>
+<p>1 vmax is equal to the larger of <i>1 vh</i> and <i>1 vw</i></p>
+<p><b>Note</b>: vmax is
+<a href="http://caniuse.com/#feat=viewport-units" 
+target="_blank" rel="noopener noreferrer">not supported in:</p>
+
 <ul>
-<li>
-any version of Internet Explorer
-</li>
-<li>
-Safari before version 6.1
-</li>
+  <li>any version of Internet Explorer</li>
+  <li>Safari before version 6.1</li>
 </ul>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch20-4">
-Section 20.4: vh and vw
-</h3>
+<h3 id="ch20-4">Section 20.4: vh and vw</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>
-CSS3 introduced two units for representing size.
-</p>
+<p>CSS3 introduced two units for representing size.</p>
+
 <ul>
-<li>
-vh, which stands for viewport height is relative to 1% of the viewport
-height.
-</li>
-<li>
-vw, which stands for viewport width is relative to 1% of the viewport
-width.
-</li>
+  <li>vh, which stands for viewport height is relative to 1% of the viewport 
+    height.</li>
+  <li>vw, which stands for viewport width is relative to 1% of the viewport
+    width.</li>
 </ul>
-<h4>
-Version ≥ 3
-</h4>
+
+<h4>Version ≥ 3</h4>
+
 <pre><code>div {
   <b>width</b>: 20vw;
   <b>height</b>: 20vh;
 }</code></pre>
-<p>
-Above, the size for the div takes up 20% of the width and height of the
-viewport.
-</p>
+
+<p>Above, the size for the div takes up 20% of the width and height of the
+viewport.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch20-5">
-Section 20.5: using percent %
-</h3>
+<h3 id="ch20-5">Section 20.5: using percent %</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>
-One of the useful unit when creating a responsive application.
-</p>
-<p>
-Its size depends on its parent container.
-</p>
+<p>One of the useful unit when creating a responsive application.</p>
+<p>Its size depends on its parent container.</p>
 <p><b>Equation:</b></p>
+
 <blockquote>
-( Parent Container's width ) * ( Percentage(%) ) = Output
+  ( Parent Container's width ) * ( Percentage(%) ) = Output
 </blockquote>
-<h4>
-For Example:
-</h4>
-<p>
-<i>Parent</i> has <b>100px</b> width while the <i>Child</i> has
-<b>50%</b>.
-</p>
-<p>
-<b>On the output</b>, the <em>Child</em>'s width will be half(50%) of
-the <i>Parent</i>'s, which is <b>50px</b>.
-</p>
-<h4>
-HTML:
-</h4>
+
+<h4>For Example:</h4>
+
+<p><i>Parent</i> has <b>100px</b> width while the <i>Child</i> has
+<b>50%</b>.</p>
+<p><b>On the output</b>, the <em>Child</em>'s width will be half(50%) of
+the <i>Parent</i>'s, which is <b>50px</b>.</p>
+
+<h4>HTML:</h4>
+
 <pre><code><b>&lt;div</b> class=&quot;parent&quot;<b>&gt;</b>
   PARENT
   <b>&lt;div</b> class=&quot;child&quot;<b>&gt;</b>
     CHILD
   <b>&lt;/div</b><b>&gt;</b>
 <b>&lt;/div</b><b>&gt;</b></code></pre>
-<h4>
-CSS
-</h4>
+
+<h4>CSS:</h4>
+
 <pre><code><b>&lt;style&gt;</b>
 &ast;{
   color: #CCC;
@@ -9008,7 +8801,7 @@ CSS
 <b>&lt;/style&gt;</b></code></pre>
 <b>OUTPUT</b>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 191.  (xxx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 191. parent, child, div.child (xxx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left" width="100%">
 <img src="./images/image191.jpg"
   style="width:15%"
@@ -9017,9 +8810,7 @@ CSS
 </p>
 <!-- [image191.jpg 1.4 x .875](./images/image191.jpg) -->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="ch21">
-Chapter 21: Pseudo-Elements
-</h2>
+<h2 id="ch21">Chapter 21: Pseudo-Elements</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <table>
 <colgroup>
@@ -9094,28 +8885,22 @@ incorrectly</td>
 </tr>
 </tbody>
 </table>
-<p>
-Pseudo-elements, just like pseudo-classes, are added to a CSS selectors
+
+<p>Pseudo-elements, just like pseudo-classes, are added to a CSS selectors
 but instead of describing a special state, they allow you to scope and
-style certain parts of an html element.
-</p>
-<p>
-For example, the ::first-letter pseudo-element targets only the first
-letter of a block element specified by the selector.
-</p>
+style certain parts of an html element.</p>
+<p>For example, the ::first-letter pseudo-element targets only the first
+letter of a block element specified by the selector.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch21-1">
 Section 21.1: Pseudo-Elements
 </h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>
-Pseudo-elements are added to selectors but instead of describing a
-special state, they allow you to style certain parts of a document.
-</p>
-<p>
-The content attribute is required for pseudo-elements to render;
-however, the attribute can have an empty value (e.g.content: "").
-</p>
+<p>Pseudo-elements are added to selectors but instead of describing a
+special state, they allow you to style certain parts of a document.</p>
+<p>The content attribute is required for pseudo-elements to render;
+however, the attribute can have an empty value (e.g.content: "").</p>
+
 <pre><code>div::after {
   <b>content</b>: &apos;after&apos;;
   <b>color</b>: red;
@@ -9140,24 +8925,19 @@ div::before {
   alt="Section 21-1. Before, div element, after." />
 </p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch21-2">
-Section 21.2: Pseudo-Elements in Lists
-</h3>
+<h3 id="ch21-2">Section 21.2: Pseudo-Elements in Lists</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>
-Pseudo-elements are often used to change the look of lists (mostly for
-unordered lists, ul).
-</p>
-<p>
-The first step is to remove the default list bullets:
-</p>
+<p>Pseudo-elements are often used to change the look of lists (mostly for
+unordered lists, ul).</p>
+<p>The first step is to remove the default list bullets:</p>
+
 <pre><code>ul {
   <b>list-style-type</b>: none;
 }</code></pre>
-<p>
-Then you add the custom styling. In this example, we will create
-gradient boxes for bullets.
-</p>
+
+<p>Then you add the custom styling. In this example, we will create
+gradient boxes for bullets.</p>
+
 <pre><code>li:before {
   <b>content</b>: &quot;&quot;;
   <b>display</b>: inline-block;
@@ -9166,16 +8946,15 @@ gradient boxes for bullets.
   <b>width</b>: 10px;
   <b>background</b>: linear-gradient (red, blue);
 }</code></pre>
-<h4>
-HTML:
-</h4>
+
+<h4>HTML:</h4>
+
 <pre><code><b>&lt;ul&gt;</b>
   <b>&lt;li&gt;</b>Test I<b>&lt;/li&gt;</b>
   <b>&lt;li&gt;</b>Test II<b>&lt;/li&gt;</b>
 <b>&lt;/ul&gt;</b></code></pre>
-<h4>
-Result
-</h4>
+
+<h4>Result</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~ 193. red/blue linear-gradient background (132) ~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left" width="100%">
@@ -9184,11 +8963,8 @@ Result
   title="Example; linear-gradient; Test I, Test II"
   alt="Example; linear-gradient; Test I, Test II." />
 </p>
-<!-- (./images/image193.jpg){width="2.4479166666666665in" height="1.3125in"} -->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="ch22">
-Chapter 22: Positioning
-</h2>
+<h2 id="ch22">Chapter 22: Positioning</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <table>
 <colgroup>
@@ -9250,32 +9026,27 @@ its parent until a given offset threshold }</td>
 <tr class="odd">
 <td>unset</td>
 <td>Combination of initial and inherit. More info
-<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/unset">here</a>.</td>
+<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/unset" 
+target="_blank" rel="noopener noreferrer">here</a>.</td>
 </tr>
 </tbody>
 </table>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch22-1">
-Section 22.1: Overlapping Elements with z-index
-</h3>
+<h3 id="ch22-1">Section 22.1: Overlapping Elements with z-index</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>
-To change the default
-<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context">stack
-order</a> positioned elements (position property set to relative,
-absolute or fixed), use the z-index property.
-</p>
-<p>
-The higher the z-index, the higher up in the stacking context (on the
-z-axis) it is placed.
-</p>
+<p>To change the default
+<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context" 
+target="_blank" rel="noopener noreferrer">stack order</a> positioned elements (position property set to relative,
+absolute or fixed), use the z-index property.</p>
+<p>The higher the z-index, the higher up in the stacking context (on the
+z-axis) it is placed.</p>
 <p><b>Example</b></p>
 <p>In the example below, a z-index value of 3 puts green on top, a
 z-index of 2 puts red just under it, and a z-index of 1 puts blue under
 that.</p>
-<h4>
-HTML:
-</h4>
+
+<h4>HTML:</h4>
+
 <pre><code><b>&lt;div</b> id=&quot;div1&quot;<b>&gt;</b><b>&lt;/div&gt;</b>
 <b>&lt;div</b> id=&quot;div2&quot;<b>&gt;</b><b>&lt;/div&gt;</b>
 <b>&lt;div</b> id=&quot;div3&quot;<b>&gt;</b><b>&lt;/div&gt;</b></code></pre>
@@ -9309,64 +9080,63 @@ div #div3 {
 This creates the following effect:
 </h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 194.  (xxx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~ 194. 3 overlapping squares; blue, red & green (xxx) ~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left" width="100%">
 <img src="./images/image194.jpg"
   style="width:35%"
-  title=""
-  alt="." />
+  title="3 overlapping squares; red, blue, green"
+  alt="3 overlapping squares; red, blue, green." />
 </p>
-<!-- (./images/image194.jpg){width="3.6458333333333335in" height="3.8645833333333335in"} -->
-<p>
-See a working example at <a href="https://jsfiddle.net/esnc10tq/">Demo
-(jsFiddle)</a>.
-</p>
+
+<p>See a working example at <a href="https://jsfiddle.net/esnc10tq/" 
+target="_blank" rel="noopener noreferrer">Demo (jsFiddle)</a>.</p>
 <p><b>Syntax</b></p>
+
 <pre><code><b>z-index</b>: &lbrack; number &rbrack; &vert; auto;</code></pre>
+
 <table>
-<colgroup>
-<col style="width: 23%" />
-<col style="width: 76%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th><b>Parameter</b></th>
-<th><b>Details</b></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>number</td>
-<td>An integer value. A higher number is higher on the z-index stack. 0
-is the default value. Negative</td>
-</tr>
-<tr class="even">
-<td></td>
-<td>values are allowed.</td>
-</tr>
-<tr class="odd">
-<td>auto</td>
-<td>Gives the element the same stacking context as its parent.
-(<b>Default</b>)</td>
-</tr>
-</tbody>
+  <colgroup>
+    <col style="width: 23%" />
+    <col style="width: 76%" />
+  </colgroup>
+  <thead>
+    <tr class="header">
+      <th><b>Parameter</b></th>
+      <th><b>Details</b></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="odd">
+      <td>number</td>
+      <td>An integer value. A higher number is higher on the z-index stack. 0
+	    is the default value. Negative</td>
+    </tr>
+    <tr class="even">
+      <td></td>
+      <td>values are allowed.</td>
+    </tr>
+    <tr class="odd">
+      <td>auto</td>
+      <td>Gives the element the same stacking context as its parent. (<b>Default</b>)</td>
+    </tr>
+  </tbody>
 </table>
-<h4>
-<b>Remarks</b>
-</h4>
-<p>
-All elements are laid out in a 3D axis in CSS, including a depth axis,
+
+<h4><b>Remarks</b></h4>
+
+<p>All elements are laid out in a 3D axis in CSS, including a depth axis,
 measured by the z-index property. z-index only works on positioned
 elements: (see:
-<a href="https://www.sitepoint.com/community/t/why-does-z-index-need-a-defined-position-to-work/46115">
+<a href="https://www.sitepoint.com/community/t/why-does-z-index-need-a-defined-position-to-work/46115" 
+target="_blank" rel="noopener noreferrer">
 Why does z-index need a defined position to work?</a>). The only value
-where it is ignored is the default value, static.
-</p>
-<p>
-Read about the z-index property and Stacking Contexts in the
-<a href="https://drafts.csswg.org/css-position/#layered-presentation">CSS
+where it is ignored is the default value, static.</p>
+<p>Read about the z-index property and Stacking Contexts in the
+<a href="https://drafts.csswg.org/css-position/#layered-presentation" 
+target="_blank" rel="noopener noreferrer">CSS
 Specification</a> on layered presentation and at the
-<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/z-index">
+<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/z-index" 
+target="_blank" rel="noopener noreferrer">
 Mozilla Developer Network</a>.
 </p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -9451,7 +9221,8 @@ Section 22.5: Static positioning
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>
 The default position of an element is static. To quote
-<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/position#values">
+<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/position#values" 
+target="_blank" rel="noopener noreferrer">
 MDN</a>:
 </p>
 <blockquote>
@@ -9853,11 +9624,13 @@ within the container.
 </p>
 <p>
 View a working example on
-<a href="https://jsfiddle.net/fexfwkkv/3/">Demo (JS Fiddle)</a>. You'll
+<a href="https://jsfiddle.net/fexfwkkv/3/" 
+target="_blank" rel="noopener noreferrer">Demo (jsFiddle)</a>. You'll
 need to view this in IE10, IE11 or Edge for it to work as these are
 currently the only browsers supporting Grid Layout (with vendor prefix
 -ms-) or enable a flag in Chrome, Opera and Firefox according to
-<a href="http://caniuse.com/#feat=css-grid">canIuse</a> in order to test
+<a href="http://caniuse.com/#feat=css-grid" 
+target="_blank" rel="noopener noreferrer">canIuse</a> in order to test
 with them.
 </p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -9984,18 +9757,22 @@ More Information:
 </h4>
 <ul>
 <li>
-<a href="https://www.w3.org/TR/CSS21/tables.html#empty-cells">w3.org
+<a href="https://www.w3.org/TR/CSS21/tables.html#empty-cells" 
+target="_blank" rel="noopener noreferrer">w3.org
 empty cells</a>.
 </li>
 <li>
-<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/empty-cells">Mozilla
+<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/empty-cells" 
+target="_blank" rel="noopener noreferrer">Mozilla
 empty cells</a>.
 </li>
 <li>
-<a href="http://codepen.io/SitePoint/pen/yfhtq">CodePen SitePoint</a>.
+<a href="http://codepen.io/SitePoint/pen/yfhtq" 
+target="_blank" rel="noopener noreferrer">CodePen SitePoint</a>.
 </li>
 <li>
-<a href="https://css-tricks.com/almanac/properties/e/empty-cells/">CSS
+<a href="https://css-tricks.com/almanac/properties/e/empty-cells/" 
+target="_blank" rel="noopener noreferrer">CSS
 Tricks empty cells.
 </li>
 </ul>
@@ -10169,7 +9946,8 @@ transitioned (or) all, if all the</td>
 </tr>
 <tr class="even">
 <td></td>
-<td><a href="https://www.w3.org/TR/css3-transitions/">transitionable
+<td><a href="https://www.w3.org/TR/css3-transitions/" 
+target="_blank" rel="noopener noreferrer">transitionable
 properties</a> need to be transitioned.</td>
 </tr>
 <tr class="odd">
@@ -10199,7 +9977,8 @@ functions can be</td>
 <tr class="even">
 <td></td>
 <td>found in the
-<a href="https://www.w3.org/TR/css3-transitions/#transition-timing-function">W3C
+<a href="https://www.w3.org/TR/css3-transitions/#transition-timing-function" 
+target="_blank" rel="noopener noreferrer">W3C
 specs</a>.</td>
 </tr>
 <tr class="odd">
@@ -10266,7 +10045,8 @@ cubic-bezier(P1_x, P1_y, P2_x, P2_y)
 </p>
 <p>
 These parameters will be mapped to points which are part of a
-<a href="https://en.wikipedia.org/wiki/B%C3%A9zier_curve#Cubic_B.C3.A9zier_curves">Bézier
+<a href="https://en.wikipedia.org/wiki/B%C3%A9zier_curve#Cubic_B.C3.A9zier_curves" 
+target="_blank" rel="noopener noreferrer">Bézier
 curve</a>:
 </p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -10386,7 +10166,8 @@ properties are computed.</td>
 <tr class="odd">
 <td></td>
 <td>Common values are ease, linear, and step-end. Check out the
-<a href="http://easings.net/">easing function cheat-</td>
+<a href="http://easings.net/ 
+target="_blank" rel="noopener noreferrer">easing function cheat-</a></td>
 </tr>
 <tr class="even">
 <td></td>
@@ -10443,7 +10224,8 @@ between all colors.
   <b>animation</b>: rainbow-background 5s infinite;
 }</code></pre>
 <p>
-<a href="https://jsfiddle.net/s9m3od3p/6/">View Result</a>.
+<a href="https://jsfiddle.net/s9m3od3p/6/" 
+target="_blank" rel="noopener noreferrer">View Result</a>.
 </p>
 <p>
 There's a few different things to note here. First, the actual <span
@@ -10535,7 +10317,8 @@ number-based CSS properties to animate between states.</p>
   <b>background</b>: #ff0000;
 }</code></pre>
 <p>
-<a href="https://jsfiddle.net/0kcm6rwo/"><i>View Result</i></a>
+<a href="https://jsfiddle.net/0kcm6rwo/" 
+target="_blank" rel="noopener noreferrer"><i>View Result</i></a>
 </p>
 <p>
 By default, hovering over an element with the .Example class would
@@ -10551,7 +10334,8 @@ over time:
   <b>transition</b>: all 400ms ease;
 }</code></pre>
 <p>
-<a href="https://jsfiddle.net/v2j4ggue/1/">View Result</a>
+<a href="https://jsfiddle.net/v2j4ggue/1/" 
+target="_blank" rel="noopener noreferrer">View Result</a>
 </p>
 <p>
 The all value applies the transition to all compatible (numbers-based)
@@ -10871,13 +10655,10 @@ degrees on the Y axis. The center of the transform is in the center of
 the div, 50% from left and 50% from top.
 </p>
 <p>
-<a href="https://jsfiddle.net/MadalinaTn/gtt4osms/1/">See the result
-here</a>.
-</p>
+<a href="https://jsfiddle.net/MadalinaTn/gtt4osms/1/" 
+target="_blank" rel="noopener noreferrer">See the result here</a>.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch28-4">
-Section 28.4: Multiple transforms
-</h3>
+<h3 id="ch28-4">Section 28.4: Multiple transforms</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>
 Multiple transforms can be applied to an element in one property like
@@ -11045,7 +10826,8 @@ be along the X-axis instead of along Y-axis. So the transform property's
 value would have to be something like rotate(85deg) rotateZ(45deg);.
 </p>
 <p>
-<a href="http://codepen.io/hari_shanx/pen/YXzoBo">This pen</a> uses a
+<a href="http://codepen.io/hari_shanx/pen/YXzoBo" 
+target="_blank" rel="noopener noreferrer">This pen</a> uses a
 similar approach to create something that resembles the Safari logo or a
 compass dial.
 </p>
@@ -11130,7 +10912,8 @@ h1:after {
   <b>border-radius</b>:0 0 100&percnt; 0;
 }</code></pre>
 <p>
-<a href="http://codepen.io/web-tiki/pen/azeKNy">View example with
+<a href="http://codepen.io/web-tiki/pen/azeKNy" 
+target="_blank" rel="noopener noreferrer">View example with
 additional hover effect</a>.
 </p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -11171,7 +10954,8 @@ faces the screen.
 For example, this would flip an element away from the screen:
 </p>
 <p>
-<a href="https://jsfiddle.net/3z3z843c/">Demo (jsFIDDLE)</a>
+<a href="https://jsfiddle.net/3z3z843c/" 
+target="_blank" rel="noopener noreferrer">Demo (jsFIDDLE)</a>
 </p>
 <pre><code><b>&lt;div</b> class=&quot;flip&quot;<b>&gt;</b>Loren ipsum<b>&lt;/div&gt;</b>
 <b>&lt;div</b> class=&quot;flip back&quot;<b>&gt;</b>Lorem ipsum<b>&lt;/div&gt;</b>
@@ -11282,25 +11066,18 @@ CSS:
   <b>transform</b>: rotateY&lpar;90deg&rpar;;
 }</code></pre>
 <p>
-<a href="http://codepen.io/web-tiki/pen/NNwqBa">View this
-example</a><br> Additional styling is added in the demo and a transform
-is applied on hover to view the 6 faces of the cube.
-</p>
-<p>
-Should be noted that:
-</p>
+<a href="http://codepen.io/web-tiki/pen/NNwqBa" 
+target="_blank" rel="noopener noreferrer">View this example</a><br> 
+Additional styling is added in the demo and a transform
+is applied on hover to view the 6 faces of the cube.</p>
+<p>Should be noted that:</p>
+
 <ul>
-<li>
-4 faces are made with pseudo elements
-</li>
-<li>
-chained transforms are applied
-</li>
+  <li>4 faces are made with pseudo elements</li>
+  <li>chained transforms are applied</li>
 </ul>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="ch30">
-Chapter 30: Filter Property
-</h2>
+<h2 id="ch30">Chapter 30: Filter Property</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <table>
 <colgroup>
@@ -11377,24 +11154,18 @@ image will start to</td>
 </tbody>
 </table>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch30-1">
-Section 30.1: Blur
-</h3>
+<h3 id="ch30-1">Section 30.1: Blur</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h4>
-HTML:
-</h4>
-<pre><code><b>&lt;img</b> src=&apos;donald-duck.png&apos; alt=&apos;Donald Duck&apos; title=&apos;Donald Duck&apos; <b>/&gt;</b></code></pre>
-<h4>
-CSS:
-</h4>
+<h4>HTML:</h4><pre><code><b>&lt;img</b> src=&apos;donald-duck.png&apos; alt=&apos;Donald Duck&apos; title=&apos;Donald Duck&apos; <b>/&gt;</b></code></pre>
+
+<h4>CSS:</h4>
+
 <pre><code>img {
   -webkit-filter: blur(1px);
   <b>filter</b>: blur(1px);
 }</code></pre>
-<h4>
-Result
-</h4>
+
+<h4>Result:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~ 214. donald duck a bit blurred (161) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left" width="100%">
@@ -11403,28 +11174,23 @@ Result
   title="Donald Duck, a bit blurred"
   alt="Donald Duck, a bit blurred." />
 </p>
-<h5>
-Makes you wanna rub your glasses.
-</h5>
+
+<h5>Makes you wanna rub your glasses.</h5>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch30-2">
-Section 30.2: Drop Shadow (use box-shadow instead if possible)
-</h3>
+<h3 id="ch30-2">Section 30.2: Drop Shadow (use box-shadow instead if possible)</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h4>
-HTML:
-</h4>
+<h4>HTML:</h4>
+
 <pre><code><b>&lt;p&gt;</b>My shadow always follows me.<b>&lt;/p&gt;</b></code></pre>
-<h4>
-CSS:
-</h4>
+
+<h4>CSS:</h4>
+
 <pre><code>p {
   -webkit-filter: drop-shadow(10px 10px 1px green);
   <b>filter</b>: drop-shadow(10px 10px 1px green);
 }</code></pre>
-<h4>
-Result
-</h4>
+
+<h4>Result:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~ 215. my shadow always follows me (162) ~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left" width="100%">
@@ -11434,24 +11200,20 @@ Result
   alt="My shadow always follows me." />
 </p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch30-3">
-Section 30.3: Hue Rotate
-</h3>
+<h3 id="ch30-3">Section 30.3: Hue Rotate</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h4>
-HTML:
-</h4>
+<h4>HTML:</h4>
+
 <pre><code><b>&lt;img</b> src=&apos;donald-duck.png&apos; alt=&apos;Donald Duck&apos; title=&apos;Donald Duck&apos; <b>/&gt;</b></code></pre>
-<h4>
-CSS:
-</h4>
+
+<h4>CSS:</h4>
+
 <pre><code>img {
   -webkit-filter: hue-rotate(120deg);
   <b>filter</b>: hue-rotate(120deg);
 }</code></pre>
-<h4>
-Result
-</h4>
+
+<h4>Result:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~ 216. donald duck, pink & blue (162) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left" width="100%">
@@ -11461,27 +11223,22 @@ Result
   alt="Donald Duck in pink an light blue." />
 </p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch30-4">
-Section 30.4: Multiple Filter Values
-</h3>
+<h3 id="ch30-4">Section 30.4: Multiple Filter Values</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>
-To use multiple filters, separate each value with a space.
-</p>
-<h4>
-HTML:
-</h4>
+<p>To use multiple filters, separate each value with a space.</p>
+
+<h4>HTML:</h4>
+
 <pre><code><b>&lt;img</b> src=&apos;donald-duck.png&apos; alt=&apos;Donald Duck&apos; title=&apos;Donald Duck&apos; <b>/&gt;</b></code></pre>
-<h4>
-CSS
-</h4>
+
+<h4>CSS:</h4>
+
 <pre><code>img {
   -webkit-filter: brightness(200&percnt;) grayscale(100&percnt;) sepia(100&percnt;) invert(100&percnt;);
   <b>filter</b>: brightness(200&percnt;) grayscale(100&percnt;) sepia(100&percnt;) invert(100&percnt;);
 }</code></pre>
-<h4>
-Result
-</h4>
+
+<h4>Result:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~ 217. donald duck - black light - sorta (163) ~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left" width="100%">
@@ -11490,19 +11247,15 @@ Result
   title="Donald Duck - Black Light colors"
   alt="Donald Duck - Black Light colors." />
 </p>
-<!-- [image217 2.114 x 2.708](./images/image217.jpg) -->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch30-5">
-Section 30.5: Invert Color
-</h3>
+<h3 id="ch30-5">Section 30.5: Invert Color</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h4>
-HTML:
-</h4>
+<h4>HTML:</h4>
+
 <pre><code><b>&lt;div&gt;&lt;/div&gt;</b></code></pre>
-<h4>
-CSS:
-</h4>
+
+<h4>CSS:</h4>
+
 <pre><code>div {
   <b>width</b>: 100px;
   <b>height</b>: 100px;
@@ -11510,9 +11263,8 @@ CSS:
   -webkit-filter: invert(100&percnt;);
   <b>filter</b>: invert(100&percnt;);
 }</code></pre>
-<h4>
-Result
-</h4>
+
+<h4>Result</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~ 218. turns from white to black (163) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left" width="100%">
@@ -11521,21 +11273,14 @@ Result
   title="Turns fro white to black"
   alt="Turns fro white to black." />
 </p>
-<p>
-Turns from white to black.
-</p>
+
+<p>Turns from white to black.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="ch31">
-Chapter 31: Cursor Styling
-</h2>
+<h2 id="ch31">Chapter 31: Cursor Styling</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch31-1">
-Section 31.1: Changing cursor type
-</h3>
+<h3 id="ch31-1">Section 31.1: Changing cursor type</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>
-<b>cursor</b>: value;
-</p>
+<p><b>cursor</b>: value;</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~ section-31-1. cursor styling images (164) ~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left" width="100%">
@@ -11544,9 +11289,9 @@ Section 31.1: Changing cursor type
   title="Cursor styling images"
   alt="Cursor styling images." />
 </p>
-<h4>
-Examples:
-</h4>
+
+<h4>Examples:</h4>
+
 <table>
 <thead>
 <tr class="header">
@@ -11582,52 +11327,43 @@ Examples:
 </tbody>
 </table>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch31-2">
-Section 31.2: pointer-events
-</h3>
+<h3 id="ch31-2">Section 31.2: pointer-events</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>
-The pointer-events property allows for control over how HTML elements
-respond to mouse/touch events.
-</p>
+<p>The pointer-events property allows for control over how HTML elements
+respond to mouse/touch events.</p>
+
 <pre><code>.disabled {
   <b>pointer-events</b>: none;
 }</code></pre>
-<p>
-In this example,
-</p>
+<p>In this example,</p>
+
 <blockquote>
-'none' prevents all click, state and cursor options on the specified
-HTML element.
+  'none' prevents all click, state and cursor options on the specified
+  HTML element.
 </blockquote>
-<p>
-Other valid values for HTMl elements are:
-</p>
+
+<p>Other valid values for HTMl elements are:</p>
+
 <ul>
-<li>
-auto;
-</li>
-<li>
-inherit.
-</li>
+  <li>auto;</li>
+  <li>inherit.</li>
 </ul>
+
 <ol>
-<li>
-<a href="https://css-tricks.com/almanac/properties/p/pointer-events/">https://css-tricks.com/almanac/properties/p/pointer-events/</a>
-</li>
+  <li><a href="https://css-tricks.com/almanac/properties/p/pointer-events/" 
+    target="_blank" rel="noopener noreferrer">
+	https://css-tricks.com/almanac/properties/p/pointer-events/</a></li>
 </ol>
-<p>
-Other resources:
-</p>
+
+<p>Other resources:</p>
+
 <ul>
-<li>
-<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/pointer-events">
-https://developer.mozilla.org/en-US/docs/Web/CSS/pointer-events</a>
-</li>
-<li>
-<a href="https://davidwalsh.name/pointer-events">
-https://davidwalsh.name/pointer-events</a>
-</li>
+  <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/pointer-events" 
+    target="_blank" rel="noopener noreferrer">
+	https://developer.mozilla.org/en-US/docs/Web/CSS/pointer-events</a></li>
+  <li><a href="https://davidwalsh.name/pointer-events" 
+    target="_blank" rel="noopener noreferrer">
+    https://davidwalsh.name/pointer-events</a></li>
 </ul>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch31-3">
@@ -11654,9 +11390,9 @@ Resources:
 </h4>
 <ul>
 <li>
-<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/caret-color">
-https://developer.mozilla.org/en-US/docs/Web/CSS/caret-color</a>
-</li>
+<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/caret-color" 
+target="_blank" rel="noopener noreferrer">
+https://developer.mozilla.org/en-US/docs/Web/CSS/caret-color</a></li>
 </ul>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ch32">
@@ -11722,8 +11458,8 @@ rgba(), hsla().</td>
 Section 32.1: bottom-only drop shadow using a pseudoelement
 </h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p><a href="https://jsfiddle.net/UnsungHero97/80qod7aL/2/" target="_blank" rel="noopener noreferrer">
-Demo (jsFiddle)</a>.</p>
+<p><a href="https://jsfiddle.net/UnsungHero97/80qod7aL/2/" 
+target="_blank" rel="noopener noreferrer">Demo (jsFiddle)</a>.</p>
 
 <h4>HTML:</h4>
 
@@ -12292,7 +12028,7 @@ HTML:
 The above example numbers every "item" in the page and adds the item's
 number before its header (using content property of .item-header
 element's pseudo). A live demo of this code is available
-<a href="https://jsfiddle.net/a7rmje3r/" target="_blank" rel="noopener noreferrer">here</a>.
+<a href="https://jsfiddle.net/a7rmje3r/" target="_blank" rel="noopener noreferrer">here (jsFiddle)</a>.
 </p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch35-3">
@@ -13153,18 +12889,13 @@ CSS:
   <b>top</b>: -10px;
   <b>left</b>: 100&percnt;;
 }</code></pre>
-<p>
-<a href="https://jsfiddle.net/codename0/9po0r1L1/" target="_blank" rel="noopener noreferrer">See demo</a>
-</p>
+
+<p><a href="https://jsfiddle.net/codename0/9po0r1L1/" target="_blank" rel="noopener noreferrer">See demo (jsFiddle)</a></p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch38-7">
-Section 38.7: Pyramid
-</h3>
+<h3 id="ch38-7">Section 38.7: Pyramid</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>
-This example shows how to create a <b>pyramid</b> using borders and 2D
-transformation methods skew() and rotate() on pseudo elements.
-</p>
+<p>This example shows how to create a <b>pyramid</b> using borders and 2D
+transformation methods skew() and rotate() on pseudo elements.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 245. 3d red pyramid (191) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left" width="100%">
@@ -13173,13 +12904,13 @@ transformation methods skew() and rotate() on pseudo elements.
   title="3d red pyramid"
   alt="3d red pyramid." />
 </p>
-<h4>
-HTML:
-</h4>
+
+<h4>HTML:</h4>
+
 <pre><code><b>&lt;div</b> class=&quot;pyramid&quot;<b>&gt;&lt;/div&gt;</b></code></pre>
-<h4>
-CSS:
-</h4>
+
+<h4>CSS:</h4>
+
 <pre><code>.pyramid {
   <b>width</b>: 100px;
   <b>height</b>: 200px;
@@ -13203,21 +12934,14 @@ CSS:
   <b>transform</b>: scaleY(2) skewY(40deg) rotate(-45deg);
 }</code></pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="ch39">
-Chapter 39: Columns
-</h2>
+<h2 id="ch39">Chapter 39: Columns</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch39-1">
-Section 39.1: Simple Example (column-count)
-</h3>
+<h3 id="ch39-1">Section 39.1: Simple Example (column-count)</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>
-The CSS multi-column layout makes it easy to create multiple columns of
-text.
-</p>
-<h4>
-Code
-</h4>
+<p>The CSS multi-column layout makes it easy to create multiple columns of text.</p>
+
+<h4>Code:</h4>
+
 <pre><code><b>&lt;div</b> id=&quot;multi-columns&quot;<b>&gt;</b>Lorem ipsum dolor sit amet,
 consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
 labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
@@ -13232,9 +12956,8 @@ laborum<b>&lt;/div&gt;</b>
   -webkit-column-count: 2; 
   <b>column-count</b>: 2; 
   }</code></pre>
-<h4>
-Result
-</h4>
+
+<h4>Result:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~ 246. example; stack overflow (193) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left" width="100%">
@@ -13244,18 +12967,14 @@ Result
   alt="Example: stack overflow." />
 </p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch39-2">
-Section 39.2: Column Width
-</h3>
+<h3 id="ch39-2">Section 39.2: Column Width</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>
-The column-width property sets the minimum column width. If column-count
+<p>The column-width property sets the minimum column width. If column-count
 is not defined the browser will make as many columns as fit in the
-available width.
-</p>
-<h4>
-Code:
-</h4>
+available width.</p>
+
+<h4>Code:</h4>
+
 <pre><code><b>&lt;div</b> id=&quot;multi-columns&quot;<b>&gt;</b>
   Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
 eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
@@ -13271,9 +12990,8 @@ culpa qui officia deserunt mollit anim id est laborum
   -webkit-column-width: 100px;
   <b>column-width</b>: 100px;
 }</code></pre>
-<h4>
-Result
-</h4>
+
+<h4>Result:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~ 247. example: stack overflow (194) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left" width="100%">
@@ -13283,18 +13001,14 @@ Result
   alt="Example: Stack Overflow." />
 </p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="ch40">
-Chapter 40: Multiple columns
-</h2>
+<h2 id="ch40">Chapter 40: Multiple columns</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <blockquote>
-<p>CSS allows to define that element contents wrap into multiple columns
-with gaps and rules between them.</p>
+  <p>CSS allows to define that element contents wrap into multiple columns
+  with gaps and rules between them.</p>
 </blockquote>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch40-1">
-Section 40.1: Create Multiple Columns
-</h3>
+<h3 id="ch40-1">Section 40.1: Create Multiple Columns</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre><code><b>&lt;div</b> class=&quot;content&quot;<b>&gt;</b> Lorem ipsum dolor sit amet,
 consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt
@@ -13307,22 +13021,19 @@ dignissim qui blandit praesent luptatum zzril delenit augue duis
 dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis
 eleifend option congue nihil imperdiet doming id quod mazim placerat
 facer possim assum. <b>&lt;/div&gt;</b></code></pre>
-<h4>
-CSS
-</h4>
+
+<h4>CSS:</h4>
+
 <pre><code>.content {
 &minus;webkit-column-count: 3; /* Chrome, Safari, Opera */
 &minus;moz-column-count: 3;    /* Firefox */
 <b>column-count</b>: 3;
 }</code></pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch40-2">
-Section 40.2: Basic example
-</h3>
+<h3 id="ch40-2">Section 40.2: Basic example</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>
-Consider the following HTML markup:
-</p>
+<p>Consider the following HTML markup:</p>
+
 <pre><code><b>&lt;section&gt;</b>
   <b>&lt;p&gt;</b>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor 
   invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et 
@@ -13337,38 +13048,31 @@ Consider the following HTML markup:
   justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum 
   dolor sit amet.<b>&lt;/p&gt;</b>
 <b>&lt;/section&gt;</b></code></pre>
-<p>
-With the following CSS applied the content is split into three columns
-separated by a gray column rule of two pixels.
-</p>
+
+<p>With the following CSS applied the content is split into three columns
+separated by a gray column rule of two pixels.</p>
+
 <pre><code>section {
   <b>columns</b>: 3;
   <b>column-gap</b>: 40px;
   <b>column-rule</b>: 2px solid gray;
 }</code></pre>
-<p>
-See a <a href="https://jsfiddle.net/vjL9ewmb/" target="_blank" rel="noopener noreferrer">live sample of this on
-jsFiddle</a>.
-</p>
+
+<p>See a <a href="https://jsfiddle.net/vjL9ewmb/" target="_blank" rel="noopener noreferrer">live sample of this on
+jsFiddle</a>.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="ch41">
-Chapter 41: Inline-Block Layout
-</h2>
+<h2 id="ch41">Chapter 41: Inline-Block Layout</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="41-1">
-Section 41.1: Justified navigation bar
-</h3>
+<h3 id="41-1">Section 41.1: Justified navigation bar</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>
-The horizontally justified navigation (menu) bar has some number of
+<p>The horizontally justified navigation (menu) bar has some number of
 items that should be justified. The first (left) item has no left margin
 within the container, the last (right) item has no right margin within
 the container. The distance between items is equal, independent on the
-individual item width.
-</p>
-<h4>
-HTML:
-</h4>
+individual item width.</p>
+
+<h4>HTML:</h4>
+
 <pre><code><b>&lt;nav&gt;</b>
   <b>&lt;ul&gt;</b>
     <b>&lt;li&gt;</b>abc<b>&lt;/li&gt;</b>
@@ -13376,9 +13080,9 @@ HTML:
     <b>&lt;li&gt;</b>abcdef<b>&lt;/li&gt;</b>
   <b>&lt;/ul&gt;</b>
 <b>&lt;/nav&gt;</b></code></pre>
-<h4>
-CSS:
-</h4>
+
+<h4>CSS:</h4>
+
 <pre><code>nav {
   <b>width</b>: 100&percnt;;
   <b>line-height</b>: 1.4em;
@@ -13400,84 +13104,62 @@ ul:after {
 li {
   <b>display</b>: inline-block;
 }</code></pre>
-<p><b>Notes</b></p>
+
+<p><b>Notes:</b></p>
+
 <ul>
-<li>
-The nav, ul and li tags were chosen for their semantic meaning of 'a
-list of navigation (menu) items'. Other tags may also be used of course.
-</li>
-<li>
-The :after pseudo-element causes an extra 'line' in the ul and thus an
-extra, empty height of this block, pushing other content down. This is
-solved by the negative margin-bottom, which has to have the same
-magnitude as the line-height (but negative).
-</li>
-<li>
-If the page becomes too narrow for all the items to fit, the items will
-break to a new line (starting from the right) and be justified on this
-line. The total height of the menu will grow as needed.
-</li>
+  <li>The nav, ul and li tags were chosen for their semantic meaning of 'a
+    list of navigation (menu) items'. Other tags may also be used of course.</li>
+  <li>The :after pseudo-element causes an extra 'line' in the ul and thus an
+    extra, empty height of this block, pushing other content down. This is
+	solved by the negative margin-bottom, which has to have the same
+	magnitude as the line-height (but negative).</li>
+  <li>If the page becomes too narrow for all the items to fit, the items will
+    break to a new line (starting from the right) and be justified on this
+	line. The total height of the menu will grow as needed.</li>
 </ul>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="ch42">
-Chapter 42: Inheritance
-</h2>
+<h2 id="ch42">Chapter 42: Inheritance</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch42-1">
-Section 42.1: Automatic inheritance
-</h3>
+<h3 id="ch42-1">Section 42.1: Automatic inheritance</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>
-Inheritance the a fundamental mechanism of CSS by which the computed
+<p>Inheritance the a fundamental mechanism of CSS by which the computed
 values of some properties of an element are applied to its' children.
 This is particularly useful when you want to set a global style to your
 elements rather than having to set said properties to each and every
-element in your markup.
-</p>
-<p>
-Common properties that are automatically inherited are: font, color,
-text-align, line-height.
-</p>
-<p>
-Assume the following stylesheet:
-</p>
+element in your markup.</p>
+<p>Common properties that are automatically inherited are: font, color,
+text-align, line-height.</p>
+<p>Assume the following stylesheet:</p>
+
 <pre><code>#myContainer {
   <b>color</b>: red;
   <b>padding</b>: 5px;
 }</code></pre>
-<p>
-This will apply color: red not only to the <b>&lt;div&gt;</b> element
+
+<p>This will apply color: red not only to the <b>&lt;div&gt;</b> element
 but also to the <b>&lt;h3&gt;</b> and <b>&lt;p&gt;</b> elements.
 However, due to the nature of padding its value will <b>not</b> be
-inherited to those elements.
-</p>
+inherited to those elements.</p>
+
 <pre><code><b>&lt;div</b> id=&quot;myContainer&quot;<b>&gt;</b>
   <b>&lt;h3&gt;</b>Some header<b>&lt;/h3&gt;</b>
   <b>&lt;p&gt;</b>Some paragraph<b>&lt;/p&gt;</b>
 <b>&lt;/div&gt;</b></code></pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch42-2">
-Section 42.2: Enforced inheritance
-</h3>
+<h3 id="ch42-2">Section 42.2: Enforced inheritance</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>
-Some properties are not automatically inherited from an element down to
+<p>Some properties are not automatically inherited from an element down to
 its' children. This is because those properties are typically desired to
 be unique to the element (or selection of elements) to which the
 property is applied to. Common such properties are margin, padding,
-background, display, etc.
-</p>
-<p>
-However, sometimes inheritance is desired anyway. To achieve this, we
+background, display, etc.</p>
+<p>However, sometimes inheritance is desired anyway. To achieve this, we
 can apply the inherit value to the property that should be inherited.
 The inherit value can be appied to <i>any</i> CSS property and
-<i>any</i> HTML
-</p>
-element.
-</p>
-<p>
-Assume the following stylesheet:
-</p>
+<i>any</i> HTML</p> element.</p>
+<p>Assume the following stylesheet:</p>
+
 <pre><code>#myContainer {
   <b>color</b>: red;
   <b>padding</b>: 5px;
@@ -13485,36 +13167,28 @@ Assume the following stylesheet:
 #myContainer p {
   <b>padding</b>: inherit;
 }</code></pre>
-<p>
-This will apply <b>color</b>: red to both the <b>&lt;h3&gt;</b> and
+
+<p>This will apply <b>color</b>: red to both the <b>&lt;h3&gt;</b> and
 <b>&lt;p&gt;</b> elements due to the inheritance nature of the color
 property. However, the <b>&lt;p&gt;</b> element will also inherit the
-padding value from its' parent because this was specified.
-</p>
+padding value from its' parent because this was specified.</p>
+
 <pre><code><b>&lt;div</b> id=&quot;myContainer&quot;<b>&gt;</b>
   <b>&lt;h3&gt;</b>Some header<b>&lt;/h3&gt;</b>
   <b>&lt;p&gt;</b>Some paragraph<b>&lt;/p&gt;</b>
 <b>&lt;/div&gt;</b></code></pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="ch43">
-Chapter 43: CSS Image Sprites
-</h2>
+<h2 id="ch43">Chapter 43: CSS Image Sprites</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch43-1">
-Section 43.1: A Basic Implementation
-</h3>
+<h3 id="ch43-1">Section 43.1: A Basic Implementation</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h4>
-What's an image sprite?
-</h4>
-<p>
-An image sprite is a single asset located within an image sprite sheet.
+<h4>What's an image sprite?</h4>
+
+<p>An image sprite is a single asset located within an image sprite sheet.
 An image sprite sheet is an image file that contains more than one asset
-that can be extracted from it.
-</p>
-<h5>
-For example:
-<h5>
+that can be extracted from it.</p>
+
+<h4>For example:<h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 248. example: image sprite sheet (198) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left" width="100%">
@@ -13523,24 +13197,21 @@ For example:
   title="Example: Image sprite sheet"
   alt="Example: Image sprite sheet." />
 </p>
-<p>
-The image above is an image sprite sheet, and each one of those stars is
+
+<p>The image above is an image sprite sheet, and each one of those stars is
 a sprite within the sprite sheet. These sprite sheets are useful because
 they improve performance by reducing the number of HTTP requests a
-browser might have to make.
-</p>
-<p>
-So how do you implement one? Here's some example code.
-</p>
-<h4>
-HTML:
-</h4>
+browser might have to make.</p>
+<p>So how do you implement one? Here's some example code.</p>
+
+<h4>HTML:</h4>
+
 <pre><code><b>&lt;div</b> class=&quot;icon icon1&quot;<b>&gt;&lt;/div&gt;</b>
 <b>&lt;div</b> class=&quot;icon icon2&quot;<b>&gt;&lt;/div&gt;</b>
 <b>&lt;div</b> class=&quot;icon icon3&quot;<b>&gt;&lt;/div&gt;</b></code></pre>
-<h4>
-CSS:
-</h4>
+
+<h4>CSS:</h4>
+
 <pre><code>.icon {
   <b>background</b>: url("icons-sprite.png");
   <b>display</b>: inline-block;
@@ -13556,15 +13227,12 @@ CSS:
 .icon3 {
   <b>background-position</b>: -40px 0px;
 }</code></pre>
-<p>
-By using setting the sprite's width and height and by using the
+
+<p>By using setting the sprite's width and height and by using the
 background-position property in CSS (with an x and y value) you can
-easily extract sprites from a sprite sheet using CSS.
-</p>
+easily extract sprites from a sprite sheet using CSS.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="ch44">
-Chapter 44: Clipping and Masking
-</h2>
+<h2 id="ch44">Chapter 44: Clipping and Masking</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <table>
 <colgroup>
@@ -13731,25 +13399,19 @@ Specs</a>.</td>
 </tbody>
 </table>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch44-1">
-Section 44.1: Clipping and Masking: Overview and Dierence
-</h3>
+<h3 id="ch44-1">Section 44.1: Clipping and Masking: Overview and Difference</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>
-With <b>Clipping</b> and <b>Masking</b> you can make some specified
+<p>With <b>Clipping</b> and <b>Masking</b> you can make some specified
 parts of elements transparent or opaque. Both can be applied to any HTML
-element.
-</p>
-<h4>
-Clipping
-</h4>
-<p>
-Clips are vector paths. Outside of this path the element will be
+element.</p>
+
+<h4>Clipping</h4>
+
+<p>Clips are vector paths. Outside of this path the element will be
 transparent, inside it's opaque. Therefore you can define a clip-path
 property on elements. Every graphical element that also exists in SVG
 you can use here as a function to define the path. Examples are
-circle(), polygon() or ellipse().
-</p>
+circle(), polygon() or ellipse().</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 249. example; clip-path (200) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left" width="100%">
@@ -13758,31 +13420,24 @@ circle(), polygon() or ellipse().
   title="Example: clip-path"
   alt="Example: clip-path." />
 </p>
-<h5>
-Example
-</h5>
+
+<h4>Example:</h4>
+
 <pre><code><b>clip-path</b>: circle(100px at center);</code></pre>
-<p>
-The element will be only visible inside of this circle, which is
-positioned at the center of the element and has a radius of 100px.
-</p>
-<h4>
-Masking
-</h4>
-<p>
-Masks are similar to Clips, but instead of defining a path you define a
+
+<p>The element will be only visible inside of this circle, which is
+positioned at the center of the element and has a radius of 100px.</p>
+
+<h4>Masking</h4>
+
+<p>Masks are similar to Clips, but instead of defining a path you define a
 mask what layers over the element. You can imagine this mask as an image
-what consist of mainly two colors: black and white.
-</p>
-<p>
-<b>Luminance Mask</b>: Black means the region is opaque, and white that
+what consist of mainly two colors: black and white.</p>
+<p><b>Luminance Mask</b>: Black means the region is opaque, and white that
 it's transparent, but there is also a grey area which is
-semi-transparent, so you are able to make smooth transitions.
-</p>
-<p>
-<b>Alpha Mask</b>: Only on the transparent areas of the mask the element
-will be opaque.
-</p>
+semi-transparent, so you are able to make smooth transitions.</p>
+<p><b>Alpha Mask</b>: Only on the transparent areas of the mask the element
+will be opaque.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~ 250. black and white luminance mask; opaque to transparent (right to left) (200) ~~~~~-->
 <p align="left" width="100%">
@@ -13791,27 +13446,21 @@ will be opaque.
   title="Black and white luminance mask; opaque to transparent (right to left)"
   alt="Black and white luminance mask; opaque to transparent (right to left)." />
 </p>
-<p>
-This image for example can be used as a luminance mask to make for an
+
+<p>This image for example can be used as a luminance mask to make for an
 element a very smooth transition from right to left and from opaque to
-transparent.
-</p>
-<p>
-The mask property let you specify the the mask type and an image to be
-used as layer.
-</p>
-<h5>
-Example
-<h5>
+transparent.</p>
+<p>The mask property let you specify the the mask type and an image to be
+used as layer.</p>
+
+<h4>Example:</h4>
+
 <pre><code><b>mask</b>: url(masks.svg#rectangle) luminance;</code></pre>
-<p>
-An element called rectangle defined in masks.svg will be used as an
-<b>luminance mask</b> on the element.
-</p>
+
+<p>An element called rectangle defined in masks.svg will be used as an
+<b>luminance mask</b> on the element.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch44-2">
-Section 44.2: Simple mask that fades an image from solid to transparent
-</h3>
+<h3 id="ch44-2">Section 44.2: Simple mask that fades an image from solid to transparent</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>CSS:</h4>
 
@@ -14883,31 +14532,58 @@ target="_blank" rel="noopener noreferrer">[Eric Meyer's Reset CSS]</a></p>
   The following is a sample from the version (v4.2.0) of the code.</p>
 </blockquote>
 
-<p>/&ast;&ast;/</p>
-<p><i>&ast; 1. Change the default font family in all browsers
-(opinionated).</i></p>
-<p><i>&ast; 2. Correct the line height in all browsers.</i></p>
-<p><i>&ast; 3. Prevent adjustments of font size after orientation changes in
-IE and iOS.</i></p>
+<pre><code>/&ast;&ast;
+  &ast; 1. Change the default font family in all browsers (opinionated).
+  &ast; 2. Correct the line height in all browsers.
+  &ast; 3. Prevent adjustments of font size after orientation changes in IE and iOS.
+&ast;/
 
-<p></b>/</p>
-<p>/* Document<em>
-</em>==========================================================================
-<em>/ html { <b>font-family</b> : sans-serif ; /</em> 1 <em>/
-<b>line-height</b> : 1.15 ; /</em> 2 <em>/ -ms-text-size-adjust : 100 %
-; /</em> 3 <em>/ -webkit-text-size-adjust : 100 % ; /</em> 3 <em>/ }
-/</em> Sections<em>
-</em>==========================================================================
-<em>/ /<strong>/ <em>* Remove the margin in all browsers
-(opinionated).</em> </b>/ body { <b>margin</b> : 0 ; } </strong>/ /</em>
-Add the correct display in IE 9-. */ article , aside , footer , header ,
-nav , section {</p>
-<p><b>display</b></p>
-<p>: block ; } /<strong> Correct the font size and margin on 'h1'
-elements within 'section' and 'article' contexts in Chrome, Firefox, and
-Safari. </strong>/ h1 { <b>font-size</b> : 2 em ; <b>margin</b> : 0.67
-em 0 ; }</p>
-<p><a href="http://normalize.css/">Normalize CSS</a></p>
+/&ast; Document
+  ========================================================================== &ast;/
+  
+html { 
+  <b>font-family</b>: sans-serif; /&ast; 1 &ast;/
+  <b>line-height</b>: 1.15 ; /&ast; 2 &ast;/
+  -ms-text-size-adjust: 100%; /&ast; 3 &ast;/
+  -webkit-text-size-adjust: 100%; /&ast; 3 &ast;/ 
+}
+
+/&ast; Sections
+  ========================================================================== &ast;/
+
+/&ast;&ast; 
+ &ast; Remove the margin in all browsers (opinionated).
+ &ast;/
+ 
+body { 
+  <b>margin</b>: 0; 
+}
+
+/&ast;&ast;
+ &ast; Add the correct display in IE 9-.
+ &ast;/
+
+article, 
+aside, 
+footer,
+header,
+nav,
+section {
+  <b>display</b>: block;
+}
+
+/&ast;&ast;
+ &ast; Correct the font size and margin on 'h1' elements within 'section' and 
+ &ast; 'article' contexts in Chrome, Firefox, and Safari. 
+&ast;/
+ 
+h1 {
+  <b>font-size</b>: 2 em;
+  <b>margin</b>: 0.67em 0;
+}</code></pre>
+
+<p><a href="http://normalize.css/" 
+target="_blank" rel="noopener noreferrer">Normalize CSS</a></p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ch55">Chapter 55: Internet Explorer Hacks</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
