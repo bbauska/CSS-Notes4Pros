@@ -6168,17 +6168,14 @@ hsla(240, 100%, 50%, 1)   /* fully opaque blue */</code></pre>
 can be anywhere from 0.0 (transparent) to 1.0 (opaque).
 
 <h4>Example Usage</h4>
-
-<pre><code>
-<b>&lt;div</b> style=&quot;opacity:0.8;&quot;<b>&gt;</b>
+<pre><code><b>&lt;div</b> style=&quot;opacity:0.8;&quot;<b>&gt;</b>
   This is a partially transparent element
-<b>&lt;/div&gt;</b>
-</code></pre>
+<b>&lt;/div&gt;</b></code></pre>
 
 | <b>Property Value</b> | <b>Transparency</b> |
 |-----------------------|----------------------|
 | <b>opacity</b>: 1.0; | Opaque. |
-| <b>opacity</b>: 0.75; | 25% transparent (75% Opaque). |
+| <b>opacity</b>: 0.75; | 25% transparent (75% Opaque) |
 | <b>opacity</b>: 0.5; | 50% transparent (50% Opaque) |
 | <b>opacity</b>: 0.25; | 75% transparent (25% Opaque) |
 | <b>opacity</b>: 0.0; | Transparent |
@@ -6187,7 +6184,6 @@ can be anywhere from 0.0 (transparent) to 1.0 (opaque).
 <h3 id="ch19-2">Section 19.2: IE Compatibility for &apos;opacity&apos;</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>To use opacity in all versions of IE, the order is:</p>
-
 <pre><code>.transparent-element {
   /* for IE 8 & 9 */
   -ms-filter: &quot;progid:DXImageTransform.Microsoft.Alpha(Opacity=60)&quot;; // IE8
@@ -6263,12 +6259,12 @@ input&lbrack;type=text&rbrack; {
 
 <h4>Possible Result:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 190.  (xxx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 190. button, scale and text (xxx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left" width="100%">
 <img src="./images/image190.jpg"
   style="width:65%"
-  title=""
-  alt="." />
+  title="Button, scale and text"
+  alt="Button, scale and text." />
 </p>
 <!-- [image190.jpg 6.34 x 2.95](./images/image190.jpg) -->
 <!-- {width="6.34375in" height="2.9583333333333335in"} -->
@@ -6333,7 +6329,7 @@ li {
 
 <p>1 vmax is equal to the larger of <i>1 vh</i> and <i>1 vw</i></p>
 
-<p><b>Note</b>: vmax is <a href="http://caniuse.com/#feat=viewport-units">not supported in:</p>
+<p><b>Note</b>: vmax is <a href="http://caniuse.com/#feat=viewport-units">not supported in:</a></p>
 
 <ul>
   <li>any version of Internet Explorer</li>
