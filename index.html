@@ -463,7 +463,7 @@ and patterns.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ch4-1">Section 4.1: Basic selectors</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<table>
+<table border="1" style="border-collapse: collapse;">
   <colgroup>
     <col style="width: 20%" />
     <col style="width: 79%" />
@@ -533,7 +533,7 @@ target="_blank" rel="noopener noreferrer">CSS Selectors Level 3 specification</a
 change the selection criteria accordingly. They select an element using
 the presence of a given attribute or attribute value.</p>
 
-<table>
+<table border="1" style="border-collapse: collapse;">
   <colgroup>
     <col style="width: 20%" />
     <col style="width: 34%" />
@@ -768,7 +768,7 @@ element as <b>#my-ID</b> but with lower specificity.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p><b>Overview</b> <b>Selector Description</b></p>
 
-<table>
+<table border="1" style="border-collapse: collapse;">
   <colgroup>
     <col style="width: 11%" />
     <col style="width: 88%" />
@@ -932,7 +932,7 @@ whether or not a link has been followed (:visited), the mouse is over an element
 
 <h4>List of pseudo-classes:</h4>
 
-<table>
+<table border="1" style="border-collapse: collapse;">
   <colgroup>
     <col style="width: 15%" />
     <col style="width: 84%" />
@@ -1327,59 +1327,59 @@ target="_blank" rel="noopener noreferrer"><b>Experimental</b></a>.</p>
 an+b-1 siblings before it in the document tree, for a given positive
 <b>or zero value</b> for n" - [MDN :nth-child]</p>
 
-<table>
-<colgroup>
-<col style="width: 27%" />
-<col style="width: 72%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th><b>pseudo-selector</b></th>
-<th><b>1  2   3   4   5   6   7   8   9   10</b></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>:first-child</td>
-<td>✔</td>
-</tr>
-<tr class="even">
-<td>:nth-child (3)</td>
-<td>   ✔</td>
-</tr>
-<tr class="odd">
-<td>:nth-child (n+3)</td>
-<td>  ✔  ✔  ✔  ✔  ✔  ✔  ✔  ✔</td>
-</tr>
-<tr class="even">
-<td>:nth-child (3n)</td>
-<td>✔ ✔ ✔</td>
-</tr>
-<tr class="odd">
-<td>:nth-child (3n+1)</td>
-<td>✔ ✔ ✔ ✔</td>
-</tr>
-<tr class="even">
-<td>:nth-child (-n+3)</td>
-<td>✔ ✔ ✔</td>
-</tr>
-<tr class="odd">
-<td>:nth-child (odd)</td>
-<td>✔ ✔ ✔ ✔ ✔</td>
-</tr>
-<tr class="even">
-<td>:nth-child (even)</td>
-<td>✔ ✔ ✔ ✔ ✔</td>
-</tr>
-<tr class="odd">
-<td>:last-child</td>
-<td>                    ✔</td>
-</tr>
-<tr class="even">
-<td>:nth-last-child(3)</td>
-<td>                  ✔</td>
-</tr>
-</tbody>
+<table border="1" style="border-collapse: collapse;">
+  <colgroup>
+    <col style="width: 27%" />
+    <col style="width: 72%" />
+  </colgroup>
+  <thead>
+    <tr class="header">
+      <th><b>pseudo-selector</b></th>
+      <th><b>1  2   3   4   5   6   7   8   9   10</b></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="odd">
+      <td>:first-child</td>
+      <td>✔</td>
+    </tr>
+    <tr class="even">
+      <td>:nth-child (3)</td>
+      <td>   ✔</td>
+    </tr>
+    <tr class="odd">
+      <td>:nth-child (n+3)</td>
+      <td>  ✔  ✔  ✔  ✔  ✔  ✔  ✔  ✔</td>
+    </tr>
+    <tr class="even">
+      <td>:nth-child (3n)</td>
+      <td>✔ ✔ ✔</td>
+    </tr>
+    <tr class="odd">
+      <td>:nth-child (3n+1)</td>
+      <td>✔ ✔ ✔ ✔</td>
+    </tr>
+    <tr class="even">
+      <td>:nth-child (-n+3)</td>
+      <td>✔ ✔ ✔</td>
+    </tr>
+    <tr class="odd">
+      <td>:nth-child (odd)</td>
+      <td>✔ ✔ ✔ ✔ ✔</td>
+    </tr>
+    <tr class="even">
+      <td>:nth-child (even)</td>
+      <td>✔ ✔ ✔ ✔ ✔</td>
+    </tr>
+    <tr class="odd">
+      <td>:last-child</td>
+      <td>                    ✔</td>
+    </tr>
+    <tr class="even">
+      <td>:nth-last-child(3)</td>
+      <td>                  ✔</td>
+    </tr>
+  </tbody>
 </table>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch4-6">Section 4.6: Class Name Selectors</h3>
@@ -1662,50 +1662,49 @@ element by a specific ID in CSS, the # prefix is used.</p>
 
 <h4>CSS:</h4>
 
-<table>
-<colgroup>
-<col style="width: 23%" />
-<col style="width: 76%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th><b>Effect</b></th>
-<th><b>Pseudo Selector</b></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Thumb</td>
-<td>input[type=range]::-webkit-slider-thumb,
-input[type=range]::-moz-range-thumb,</td>
-</tr>
-<tr class="even">
-<td></td>
-<td>input[type=range]::-ms-thumb</td>
-</tr>
-<tr class="odd">
-<td>Track</td>
-<td>input[type=range]::-webkit-slider-runnable-track,
-input[type=range]::-moz-range-track,</td>
-</tr>
-<tr class="even">
-<td></td>
-<td>input[type=range]::-ms-track</td>
-</tr>
-<tr class="odd">
-<td>OnFocus</td>
-<td>input[type=range]:focus</td>
-</tr>
-<tr class="even">
-<td>Lower part of</td>
-<td>input[type=range]::-moz-range-progress,
-input[type=range]::-mx-fill-lower(not possible</td>
-</tr>
-<tr class="odd">
-<td>the track</td>
-<td>in WebKit browsers currently -JS needed)</td>
-</tr>
-</tbody>
+<table border="1" style="border-collapse: collapse;">
+  <colgroup>
+    <col style="width: 23%" />
+    <col style="width: 76%" />
+  </colgroup>
+  <thead>
+    <tr class="header">
+      <th><b>Effect</b></th>
+      <th><b>Pseudo Selector</b></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="odd">
+      <td>Thumb</td>
+      <td>input[type=range]::-webkit-slider-thumb, input[type=range]::-moz-range-thumb,</td>
+    </tr>
+    <tr class="even">
+      <td></td>
+      <td>input[type=range]::-ms-thumb</td>
+    </tr>
+    <tr class="odd">
+      <td>Track</td>
+      <td>input[type=range]::-webkit-slider-runnable-track,
+        input[type=range]::-moz-range-track,</td>
+    </tr>
+    <tr class="even">
+      <td></td>
+      <td>input[type=range]::-ms-track</td>
+    </tr>
+    <tr class="odd">
+      <td>OnFocus</td>
+      <td>input[type=range]:focus</td>
+    </tr>
+    <tr class="even">
+      <td>Lower part of</td>
+      <td>input[type=range]::-moz-range-progress,
+        input[type=range]::-mx-fill-lower(not possible</td>
+    </tr>
+    <tr class="odd">
+      <td>the track</td>
+      <td>in WebKit browsers currently -JS needed)</td>
+    </tr>
+  </tbody>
 </table>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch4-14">Section 4.14: The :only-child pseudo-class selector example</h3>
@@ -1926,7 +1925,7 @@ repeating-radial-gradient()
 <p><b>background</b>: linear-gradient( &lt;direction&gt;?,
 &lt;color-stop-1&gt;, &lt;color-stop-2&gt;, …);</p>
 
-<table>
+<table border="1" style="border-collapse: collapse;">
   <colgroup>
     <col style="width: 28%" />
     <col style="width: 71%" />
@@ -1936,36 +1935,36 @@ repeating-radial-gradient()
       <th style="text-align: center;">Value</th>
       <th>Meaning</th>
     </tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: center;">&lt;direction&gt;</td>
-<td>Could be an argument like to top, to bottom, to right or to left; or
-an <a href="https://www.w3.org/TR/css3-values/#angles" 
-target="_blank" rel="noopener noreferrer">angle</a> as 0deg,</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;"></td>
-<td>90deg… . The angle starts from top and rotates clockwise. Can be
-specified in <a href="https://www.w3.org/TR/css3-values/#deg" target="_blank" rel="noopener noreferrer">deg</a>,
-<a href="https://www.w3.org/TR/css3-values/#grad" target="_blank" rel="noopener noreferrer">grad</a>,
-<a href="https://www.w3.org/TR/css3-values/#rad" target="_blank" rel="noopener noreferrer">rad</a>,</td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;"></td>
-<td>or <a href="https://www.w3.org/TR/css3-values/#turn" target="_blank" rel="noopener noreferrer">turn</a>. If
-omitted, the gradient flows from top to bottom.</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">&lt;color-stop-list&gt;</td>
-<td>List of colors, optionally followed each one by a percentage or
-length to display it at. For</td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;"></td>
-<td>example, yellow 10%, rgba(0,0,0,.5) 40px, #fff 100%…</td>
-</tr>
-</tbody>
+  </thead>
+  <tbody>
+    <tr class="odd">
+      <td style="text-align: center;">&lt;direction&gt;</td>
+      <td>Could be an argument like to top, to bottom, to right or to left; or
+        an <a href="https://www.w3.org/TR/css3-values/#angles" 
+        target="_blank" rel="noopener noreferrer">angle</a> as 0deg,</td>
+    </tr>
+    <tr class="even">
+      <td style="text-align: center;"></td>
+      <td>90deg… . The angle starts from top and rotates clockwise. Can be
+        specified in <a href="https://www.w3.org/TR/css3-values/#deg" target="_blank" rel="noopener noreferrer">deg</a>,
+        <a href="https://www.w3.org/TR/css3-values/#grad" target="_blank" rel="noopener noreferrer">grad</a>,
+        <a href="https://www.w3.org/TR/css3-values/#rad" target="_blank" rel="noopener noreferrer">rad</a>,</td>
+    </tr>
+    <tr class="odd">
+      <td style="text-align: center;"></td>
+      <td>or <a href="https://www.w3.org/TR/css3-values/#turn" target="_blank" rel="noopener noreferrer">turn</a>. If
+        omitted, the gradient flows from top to bottom.</td>
+    </tr>
+    <tr class="even">
+      <td style="text-align: center;">&lt;color-stop-list&gt;</td>
+      <td>List of colors, optionally followed each one by a percentage or
+        length to display it at. For</td>
+    </tr>
+    <tr class="odd">
+      <td style="text-align: center;"></td>
+      <td>example, yellow 10%, rgba(0,0,0,.5) 40px, #fff 100%…</td>
+    </tr>
+  </tbody>
 </table>
 
 <h4>Can be specified in;</h4>
@@ -2013,7 +2012,7 @@ gradient with 8 color stops;</p>
   <b>background</b>: radial-gradient(circle farthest-corner at top left, red, blue);
 }</code></pre>
 
-<table>
+<table border="1" style="border-collapse: collapse;">
 <colgroup>
 <col style="width: 12%" />
 <col style="width: 87%" />
@@ -2062,7 +2061,7 @@ examples, but tile the gradient across the background of the element.</p>
   <b>background</b>: repeating-linear-gradient(-45deg, yellow, yellow 10&percnt;, black 10&percnt;, black 20&percnt;);
 }</code/></pre>
 
-<table>
+<table border="1" style="border-collapse: collapse;">
 <colgroup>
 <col style="width: 48%" />
 <col style="width: 51%" />
@@ -2133,7 +2132,7 @@ url().</p>
 <p>The images will stack according to their order with the first declared
 image on top of the others and so on.</p>
 
-<table>
+<table border="1" style="border-collapse: collapse;">
 <colgroup>
 <col style="width: 42%" />
 <col style="width: 57%" />
@@ -2186,7 +2185,7 @@ center center | left top | right bottom</h4>
 <p>The background property can be used to set one or more background
 related properties:</p>
 
-<table>
+<table border="1" style="border-collapse: collapse;">
 <thead>
 <tr class="header">
 <th><b>Value</b></th>
@@ -2536,7 +2535,7 @@ or gradient.</p>
 <p>The position is set using an <b>X</b> and <b>Y</b> co-ordinate and be
 set using any of the units used within CSS.</p>
 
-<table>
+<table border="1" style="border-collapse: collapse;">
 <colgroup>
 <col style="width: 17%" />
 <col style="width: 82%" />
@@ -2732,7 +2731,7 @@ fixed or scrolls with the rest of the page.</p>
   <b>background-attachment</b>: fixed;
 }</code></pre>
 
-<table>
+<table border="1" style="border-collapse: collapse;">
   <colgroup>
     <col style="width: 19%" />
     <col style="width: 80%" />
@@ -3624,7 +3623,7 @@ target="_blank" rel="noopener noreferrer">original question</a>.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ch7">Chapter 7: The Box Model</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<table>
+<table border="1" style="border-collapse: collapse;">
   <colgroup>
     <col style="width: 28%" />
     <col style="width: 71%" />
@@ -3830,7 +3829,7 @@ following snippet:</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ch8">Chapter 8: Margins</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<table>
+<table border="1" style="border-collapse: collapse;">
   <colgroup>
     <col style="width: 22%" />
     <col style="width: 77%" />
@@ -4026,7 +4025,7 @@ target="_blank" rel="noopener noreferrer">View Result</a>.</p>
   <b>background-color</b>: #ff0000;
 }</code></pre>
 
-<table>
+<table border="1" style="border-collapse: collapse;">
 <thead>
 <tr class="header">
 <th><b>Parameter</b></th>
@@ -4587,7 +4586,7 @@ element, you could do:</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ch11">Chapter 11: Outlines</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<table>
+<table border="1" style="border-collapse: collapse;">
 <thead>
 <tr class="header">
 <th><b>Parameter</b></th>
@@ -4718,7 +4717,7 @@ element.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ch12">Chapter 12: Overflow</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<table>
+<table border="1" style="border-collapse: collapse;">
 <colgroup>
 <col style="width: 33%" />
 <col style="width: 66%" />
@@ -4798,7 +4797,7 @@ to overflowing it's container.</p>
   alt="div, overflow-wrap." />
 </p>
 
-<table>
+<table border="1" style="border-collapse: collapse;">
   <colgroup>
     <col style="width: 41%" />
     <col style="width: 58%" />
@@ -4961,7 +4960,7 @@ property set will interact with a floated image.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ch13">Chapter 13: Media Queries</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<table>
+<table border="1" style="border-collapse: collapse;">
 <colgroup>
 <col style="width: 18%" />
 <col style="width: 81%" />
@@ -4993,7 +4992,8 @@ applies for everything</td>
 </tr>
 </tbody>
 </table>
-<table>
+
+<table border="1" style="border-collapse: collapse;">
 <colgroup>
 <col style="width: 28%" />
 <col style="width: 71%" />
@@ -5080,7 +5080,8 @@ box on a printer).</td>
 </tr>
 </tbody>
 </table>
-<table>
+
+<table border="1" style="border-collapse: collapse;">
 <colgroup>
 <col style="width: 41%" />
 <col style="width: 58%" />
@@ -5241,7 +5242,7 @@ used:</p>
 
 <p>The list of mediatype can be understood better with the following table:</p>
 
-<table>
+<table border="1" style="border-collapse: collapse;">
 <colgroup>
 <col style="width: 27%" />
 <col style="width: 72%" />
@@ -5496,7 +5497,7 @@ target="_blank" rel="noopener noreferrer">Demo (CodePen)</a>.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>The clear property is directly related to floats.</p>
 
-<table>
+<table border="1" style="border-collapse: collapse;">
   <colgroup>
     <col style="width: 18%" />
     <col style="width: 81%" />
@@ -5854,7 +5855,7 @@ target="_blank" rel="noopener noreferrer">Demo (jsFiddle)</a>.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ch15">Chapter 15: Typography</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<table>
+<table border="1" style="border-collapse: collapse;">
   <colgroup>
     <col style="width: 31%" />
     <col style="width: 68%" />
@@ -6322,7 +6323,7 @@ target="_blank" rel="noopener noreferrer">demo (CodePen)</a>.</p>
 
 <h4>Reasoning</h4>
 
-<table>
+<table border="1" style="border-collapse: collapse;">
 <colgroup>
 <col style="width: 18%" />
 <col style="width: 15%" />
@@ -6823,7 +6824,7 @@ Selectors fall into one of three different specificity groups: <i>A</i>,
 element, the browser uses the styles applied by the sequence with the
 highest overall specificity.</p>
 
-<table style="width:100%;">
+<table border="1" style="border-collapse: collapse;">
 <colgroup>
 <col style="width: 24%" />
 <col style="width: 36%" />
@@ -7285,7 +7286,7 @@ in #0000FF.</p>
 
 <h4><b>Color Keywords</b></h4>
 
-<table>
+<table border="1" style="border-collapse: collapse;">
 <thead>
 <tr class="header">
 <th><b>Color name</b></th>
@@ -8061,7 +8062,7 @@ need to specify that explicitly.</p>
   <b>color</b>: #rrggbb;<br> <b>color</b>: #rgb;
 </blockquote>
 
-<table>
+<table border="1" style="border-collapse: collapse;">
   <thead>
     <tr class="header">
       <th><b>Value</b></th>
@@ -8129,7 +8130,7 @@ number ranges from 00-FF which is equivalent to 0-255 in decimal and
 
 <pre><code>rgb(&lt;red&gt;, &lt;green&gt;, &lt;blue&gt;)</code></pre>
 
-<table>
+<table border="1" style="border-collapse: collapse;">
   <colgroup>
     <col style="width: 39%" />
     <col style="width: 60%" />
@@ -8173,7 +8174,7 @@ number ranges from 00-FF which is equivalent to 0-255 in decimal and
 
 <pre><code>rgba(&lt;red&gt;, &lt;green&gt;, &lt;blue&gt;, &lt;alpha&gt;);</code></pre>
 
-<table>
+<table border="1" style="border-collapse: collapse;">
   <colgroup>
     <col style="width: 30%" />
     <col style="width: 69%" />
@@ -8227,7 +8228,7 @@ saturation and lightness are represented as percentages.</p>
 
 <pre><code><b>color</b>: hsl(&lt;hue&gt;, &lt;saturation&gt;&percnt;, &lt;lightness&gt;&percnt;);</code></pre>
 
-<table>
+<table border="1" style="border-collapse: collapse;">
   <colgroup>
     <col style="width: 27%" />
     <col style="width: 72%" />
@@ -8286,7 +8287,7 @@ hsla(240, 100%, 50%, 1)   /* fully opaque blue */</code></pre>
 <pre><code>hsla(&lt;hue&gt;, &lt;saturation&gt;&percnt;, &lt;lightness&gt;&percnt;, 
 &lt;alpha&gt;);</code></pre>
 
-<table>
+<table border="1" style="border-collapse: collapse;">
   <colgroup>
     <col style="width: 22%" />
 	<col style="width: 77%" />
@@ -8338,7 +8339,7 @@ can be anywhere from 0.0 (transparent) to 1.0 (opaque).</p>
 <b>&lt;</b><b>/div</b><b>&gt;</b>
 </code></pre>
 
-<table>
+<table border="1" style="border-collapse: collapse;">
   <thead>
     <tr class="header">
       <th><b>Property Value</b></th>
@@ -8384,7 +8385,7 @@ can be anywhere from 0.0 (transparent) to 1.0 (opaque).</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ch20">Chapter 20: Length Units</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<table>
+<table border="1" style="border-collapse: collapse;">
   <colgroup>
     <col style="width: 18%" />
     <col style="width: 81%" />
@@ -8661,7 +8662,7 @@ the <i>Parent</i>'s, which is <b>50px</b>.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ch21">Chapter 21: Pseudo-Elements</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<table>
+<table border="1" style="border-collapse: collapse;">
 <colgroup>
 <col style="width: 52%" />
 <col style="width: 47%" />
@@ -8814,7 +8815,7 @@ gradient boxes for bullets.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ch22">Chapter 22: Positioning</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<table>
+<table border="1" style="border-collapse: collapse;">
 <colgroup>
 <col style="width: 48%" />
 <col style="width: 51%" />
@@ -8940,7 +8941,7 @@ target="_blank" rel="noopener noreferrer">Demo (jsFiddle)</a>.</p>
 
 <pre><code><b>z-index</b>: &lbrack; number &rbrack; &vert; auto;</code></pre>
 
-<table>
+<table border="1" style="border-collapse: collapse;">
   <colgroup>
     <col style="width: 23%" />
     <col style="width: 76%" />
@@ -9067,7 +9068,7 @@ target="_blank" rel="noopener noreferrer">MDN</a>:</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ch23">Chapter 23: Layout Control</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<table>
+<table border="1" style="border-collapse: collapse;">
 <colgroup>
 <col style="width: 23%" />
 <col style="width: 76%" />
@@ -9454,7 +9455,7 @@ specified width (210px instead of 150px) but the contents fit. The
 latter takes the defined width of 150px, regardless if the contents
 overflow or not.</p>
 
-<table>
+<table border="1" style="border-collapse: collapse;">
 <colgroup>
 <col style="width: 41%" />
 <col style="width: 58%" />
@@ -9513,7 +9514,7 @@ empty-cells property:</p>
 right has <b>empty-cells</b>: hide. The former does display the empty
 cells whereas the latter does not.</p>
 
-<table>
+<table border="1" style="border-collapse: collapse;">
 <colgroup>
 <col style="width: 35%" />
 <col style="width: 65%" />
@@ -9571,7 +9572,7 @@ border-collapse property:</p>
 one on the right has<br>
 <b>border-collapse</b>: collapse.</p>
 
-<table>
+<table border="1" style="border-collapse: collapse;">
 <colgroup>
 <col style="width: 20%" />
 <col style="width: 79%" />
@@ -9615,7 +9616,7 @@ border-spacing property:</p>
 <p>The table on the left has <b>border-spacing</b>: 2px (default) while
 the one on the right has <b>border-spacing</b>: 8px.</p>
 
-<table>
+<table border="1" style="border-collapse: collapse;">
 <colgroup>
 <col style="width: 24%" />
 <col style="width: 75%" />
@@ -9660,7 +9661,7 @@ caption-side property:</p>
 <p>The table on the left has <b>caption-side</b>: top while the one on the
 right has <b>caption-side</b>: bottom.</p>
 
-<table>
+<table border="1" style="border-collapse: collapse;">
 <colgroup>
 <col style="width: 28%" />
 <col style="width: 71%" />
@@ -9686,7 +9687,7 @@ table.</td>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ch26">Chapter 26: Transitions</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<table>
+<table border="1" style="border-collapse: collapse;">
 <colgroup>
 <col style="width: 30%" />
 <col style="width: 69%" />
@@ -9860,7 +9861,7 @@ div: hover {
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Transition</h4>
 
-<table>
+<table border="1" style="border-collapse: collapse;">
   <colgroup>
     <col style="width: 21%" />
     <col style="width: 78%" />
@@ -10130,7 +10131,7 @@ increasing the amount of processing done by the GPU.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ch28">Chapter 28: 2D Transforms</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<table>
+<table border="1" style="border-collapse: collapse;">
 <colgroup>
 <col style="width: 24%" />
 <col style="width: 75%" />
@@ -10685,7 +10686,7 @@ is applied on hover to view the 6 faces of the cube.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ch30">Chapter 30: Filter Property</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<table>
+<table border="1" style="border-collapse: collapse;">
 <colgroup>
 <col style="width: 18%" />
 <col style="width: 81%" />
@@ -10904,7 +10905,7 @@ image will start to</td>
 
 <h4>Examples:</h4>
 
-<table>
+<table border="1" style="border-collapse: collapse;">
 <thead>
 <tr class="header">
 <th><b>Value<b></th>
@@ -11000,7 +11001,7 @@ other content is inserted by the user's typing or editing.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ch32">Chapter 32: box-shadow</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<table>
+<table border="1" style="border-collapse: collapse;">
 <colgroup>
 <col style="width: 27%" />
 <col style="width: 72%" />
@@ -11176,7 +11177,7 @@ target="_blank" rel="noopener noreferrer">Demo (jsFiddle):</a></p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ch33">Chapter 33: Shapes for Floats</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<table>
+<table border="1" style="border-collapse: collapse;">
 <colgroup>
 <col style="width: 26%" />
 <col style="width: 73%" />
@@ -11348,7 +11349,7 @@ flowing around.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ch34">Chapter 34: List Styles</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<table>
+<table border="1" style="border-collapse: collapse;">
 <thead>
 <tr class="header">
 <th><b>Value</b></th>
@@ -11454,7 +11455,7 @@ li {
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ch35">Chapter 35: Counters</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<table>
+<table border="1" style="border-collapse: collapse;">
 <colgroup>
 <col style="width: 13%" />
 <col style="width: 86%" />
@@ -12744,7 +12745,7 @@ easily extract sprites from a sprite sheet using CSS.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ch44">Chapter 44: Clipping and Masking</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<table>
+<table border="1" style="border-collapse: collapse;">
   <colgroup>
     <col style="width: 18%" />
     <col style="width: 81%" />
@@ -13183,7 +13184,7 @@ at the bottom of the image.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ch45">Chapter 45: Fragmentation</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<table>
+<table border="1" style="border-collapse: collapse;">
   <colgroup>
     <col style="width: 14%" />
     <col style="width: 85%" />
@@ -13295,7 +13296,7 @@ Model.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ch47">Chapter 47: Feature Queries</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<table>
+<table border="1" style="border-collapse: collapse;">
   <colgroup>
     <col style="width: 30%" />
     <col style="width: 69%" />
@@ -13912,7 +13913,7 @@ something like this:</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p><b>Prefix Browser(s)</b></p>
 
-<table>
+<table border="1" style="border-collapse: collapse;">
   <thead>
     <tr class="header">
       <th><b>Prefix</b> } <b>Browser(s)</b></th>
@@ -14271,4 +14272,3 @@ same animation, took <b>1.3ms</b> for rendering, <b>2.0ms</b> for painting.</p>
 <!-- 7/7/2024 Sun 8:52pm -->
 <!-- 7/8/2024 Mon 8:50am -->
 <!-- 7/14/2024 Sun 12:22am -->
-
