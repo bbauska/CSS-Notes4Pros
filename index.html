@@ -25,6 +25,7 @@
   <link rel="stylesheet" type="text/css" href="/css/styles.css">
 </head>
 <body>
+  <script src="./js/lazysizes.min.js" async=""></script>
   <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
@@ -1540,7 +1541,7 @@ target="_blank" rel="noopener noreferrer">Live Demo (jsBin)</a></p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~ 02. input focused, background blue (18) ~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <div style="load: right">
   <p><img src="./images/image002.png"
-    loading="lazy"
+  class="lazyload"
     align="right"
     width="50%"
     title="Input focused, background blue"
@@ -1561,7 +1562,7 @@ target="_blank" rel="noopener noreferrer">Live Demo (jsBin)</a></p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~ 03. :focus-within css pseudo-class (18) ~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="center" width="100%">
 <img src="./images/image003.png"
-  loading="lazy"
+  class="lazyload"
   style="width:100%"
   title=":focus-within CSS pseudo-class"
   alt=":focus-within CSS pseudo-class." />
@@ -2328,7 +2329,7 @@ size of 256 px × 256 px);</p>
 <!--~~~~~~~~~~~~~~~~~~~ 04. 256 x 256 image, circle, triangle and square (28) ~~~~~~~~~~~~~~~~~~-->
 <p align="left" width="100%">
 <img src="./images/image004.png"
-  loading="lazy"
+  class="lazyload"
   style="width:256px height:256px;"
   title="256 x 256 image, circle, triangle and square"
   alt="256 x 256 image, circle, triangle and square." />
@@ -2340,7 +2341,7 @@ background of our element:</p>
 <!--~~~~~~~~~~~~~~~~~~~~ 05. 50px x 50px; circle, triangle, and square (28) ~~~~~~~~~~~~~~~~~~~~-->
 <p align="left" width="100%">
 <img src="./images/image005.png"
-  loading="lazy"
+  class="lazyload"
   style="width:50px height:50px;"
   title="50px by 50px image; circle, triangle, and square"
   alt="50px by 50px image; circle, triangle, and square." />
@@ -2364,7 +2365,7 @@ image:</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~ 06. 200x200, circle, triangle and square (28) ~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left" width="100%">
 <img src="./images/image006.png"
-  loading="lazy"
+  class="lazyload"
   style="width:200px height:200px;"
   title="200 by 200; circle, triangle and square"
   alt="200 by 200; circle, triangle and square." />
@@ -2400,7 +2401,7 @@ your visible screen. For demonstration, we’re going to assume a 16 x 9 ratio.<
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 07. rectangle 16x9 (29) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left" width="100%">
 <img src="./images/image007.png"
-  loading="lazy"
+  class="lazyload"
   style="width:50%"
   title="Rectangle, 16 by 9"
   alt="Rectangle, 16 by 9." />
@@ -2428,7 +2429,7 @@ space filled with your background-color in this case:</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 09. egg in a frame (29) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left" width="100%">
 <img src="./images/image009.png"
-  loading="lazy"
+  class="lazyload"
   style="width:50%"
   title="Egg in a frame"
   alt="Egg in a frame." />
@@ -2450,7 +2451,7 @@ ratio a great part of your image could be cut off:</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 11. egg in a frame, #2 (30) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left" width="100%">
 <img src="./images/image011.png"
-  loading="lazy"
+  class="lazyload"
   style="width:50%"
   title="Egg in a frame, #2"
   alt="Egg in a frame, #2." />
@@ -2514,7 +2515,7 @@ div &gt; div::after {
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~ 12. example, contain & cover images (31) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left" width="100%">
 <img src="./images/image012.png"
-  loading="lazy"
+  class="lazyload"
   style="width:50%"
   title="Example, contain and cover images"
   alt="Example, contain and cover images." />
@@ -2665,7 +2666,7 @@ property has no effect.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~ 13. background-origin - 3 images (34) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left" width="100%">
 <img src="./images/image013.jpg"
-  loading="lazy"
+  class="lazyload"
   style="width:100%"
   title="no-background-origin (padding-box is default), background origin: 
     border-box, background-origin: content-box"
@@ -2876,7 +2877,7 @@ horizontally.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~ 14. cat repeat 7x repeat-y column (37) ~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left" width="100%">
 <img src="./images/image014.jpg"
-  loading="lazy"
+  class="lazyload"
   style="width:75%"
   title="Cat repeat 7x repeat-y furthest left column"
   alt="Cat repeat 7x repeat-y furthest left column." />
@@ -3099,7 +3100,7 @@ defined width.</p>
 <!--~~~~~~~~~~~~~ 15. this is a centered paragraph with jet on landing strip (42) ~~~~~~~~~~~~~~-->
 <p align="center" width="100%">
 <img src="./images/image015.jpg"
-  loading="lazy"
+  class="lazyload"
   style="width:100%"
   title="This is a centered paragraph with jet on landing strip"
   alt="This is a centered paragraph with jet on landing strip." />
@@ -3670,7 +3671,7 @@ the content to create this rectangle.</p>
 <!--~~~~~~~~~~~~~~~~~ 16. box-model: margin, border, padding & content (51) ~~~~~~~~~~~~~~~~~~~~-->
 <p align="left" width="100%">
 <img src="./images/image016.png"
-  loading="lazy"
+  class="lazyload"
   style="width:50%"
   title="Box-model: margin, border, padding &amp; content"
   alt="Box-model: margin, border, padding &amp; content." />
@@ -3713,7 +3714,7 @@ our generated box will look like this:</p>
 <!--~~~~~~~~~~ 17. generated box from border 5px, margin 50px, and padding 20px (52) ~~~~~~~~~~~-->
 <p align="left" width="100%">
 <img src="./images/image017.jpg"
-  loading="lazy"
+  class="lazyload"
   style="width:20%"
   title="Generated box from border 5px, margin 50px, and padding 20px"
   alt="Generated box from border 5px, margin 50px, and padding 20px." />
@@ -3741,7 +3742,7 @@ the previous element's content the new element should be positioned:</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~ 18. separate images with 150px gap (52) ~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left" width="100%">
 <img src="./images/image018.jpg"
-  loading="lazy"
+  class="lazyload"
   style="width:40%"
   title="Separate images with 150px gap of padding+border+margin"
   alt="Separate images with 150px gap of padding+border+margin." />
@@ -3756,7 +3757,7 @@ our two elements would now look like this:</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~ 19. Remove right margin from 1st image (52) ~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left" width="100%">
 <img src="./images/image019.jpg"
-  loading="lazy"
+  class="lazyload"
   style="width:40%"
   title="Remove right margin from 1st image"
   alt="Remove right margin from 1st image." />
@@ -3797,7 +3798,7 @@ property available:</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~ 20. content, padding, border, and margin (53) ~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left" width="100%">
 <img src="./images/image020.png"
-  loading="lazy"
+  class="lazyload"
   style="width:60%"
   title="content, padding, border, and margin"
   alt="content, padding, border, and margin." />
@@ -4186,7 +4187,7 @@ padding-left etc) can you write it as a shorthand, as below:</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~ 21a. padding: 25, 50, 75 100px (61) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left" width="100%">
 <img src="./images/image021a.png"
-  loading="lazy"
+  class="lazyload"
   style="width:15%"
   title="padding: 25, 50, 75, 100px"
   alt="padding: 25, 50, 75, 100px." />
@@ -4204,7 +4205,7 @@ padding-left etc) can you write it as a shorthand, as below:</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~ 21b. padding: 25, 50, 75, 50px (61) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left" width="100%">
 <img src="./images/image021b.png"
-  loading="lazy"
+  class="lazyload"
   style="width:15%"
   title="padding: 25, 50, 75, 50px"
   alt="padding: 25, 50, 75, 50px." />
@@ -4222,7 +4223,7 @@ padding-left etc) can you write it as a shorthand, as below:</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~ 21c. padding: 25, 50, 25, 50px (61) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left" width="100%">
 <img src="./images/image021c.png"
-  loading="lazy"
+  class="lazyload"
   style="width:15%"
   title="padding: 25, 50, 25, 50px"
   alt="padding: 25, 50, 25, 50px." />
@@ -4240,7 +4241,7 @@ padding-left etc) can you write it as a shorthand, as below:</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~ 21d. padding: 25, 25, 25, 25px (62) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left" width="100%">
 <img src="./images/image021d.png"
-  loading="lazy"
+  class="lazyload"
   style="width:15%"
   title="padding: 25, 25, 25, 25px"
   alt="padding: 25, 25, 25, 25px." />
@@ -4281,7 +4282,7 @@ and horizontal radius of that corner (for a maximum of 8 values).</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 25. border top left radius (63) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left" width="100%">
 <img src="./images/image025.jpg"
-  loading="lazy"
+  class="lazyload"
   style="width:60%"
   title="Border top left radius"
   alt="Border top left radius." />
@@ -4366,7 +4367,7 @@ one value.)</p>
 <!--~~~~~~~~~~ 26. border-style property sets the style of an element's border (64) ~~~~~~~~~~~~-->
 <p align="left" width="100%">
 <img src="./images/image026.png"
-  loading="lazy"
+  class="lazyload"
   style="width:60%"
   title="border-style property sets the style of an element's border"
   alt="border-style property sets the style of an element's border." />
@@ -4423,7 +4424,7 @@ highest priority (meaning in a conflict, the border would not show).</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 27. 3 div border examples (66) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left" width="100%">
 <img src="./images/image027.jpg"
-  loading="lazy"
+  class="lazyload"
   style="width:15%"
   title="3 div border examples"
   alt="3 div border examples." />
@@ -4516,7 +4517,7 @@ example in same page.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 28. border on all sides (67) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left" width="100%">
 <img src="./images/image028.png"
-  loading="lazy"
+  class="lazyload"
   style="width:35%"
   title="Border on ALL sides"
   alt="Border on ALL sides." />
@@ -4542,7 +4543,7 @@ bottom 5 colored gradient.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~ 29. bottom 5 colored gradient (68) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left" width="100%">
 <img src="./images/image029.png"
-  loading="lazy"
+  class="lazyload"
   style="width:35%"
   title="Bottom 5 colored gradient"
   alt="Bottom 5 colored gradient." />
@@ -4558,7 +4559,7 @@ on the top of the element.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~ 30. border-width: 5px 0px 0px 0px (68) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left" width="100%">
 <img src="./images/image030.png"
-  loading="lazy"
+  class="lazyload"
   style="width:35%"
   title="border-width: 5px 0px 0px 0px"
   alt="border-width: 5px 0px 0px 0px." />
@@ -4709,7 +4710,7 @@ element.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~ 31. outline-style's 8 options (70) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left" width="100%">
 <img src="./images/image031.png"
-  loading="lazy"
+  class="lazyload"
   style="width:50%"
   title="outline-style's 8 options"
   alt="outline-style's; 8 options." />
@@ -4791,7 +4792,7 @@ to overflowing it's container.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 32. div, overflow-wrap (72) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left" width="100%">
 <img src="./images/image032.jpg"
-  loading="lazy"
+  class="lazyload"
   style="width:75%"
   title="div, overflow-wrap"
   alt="div, overflow-wrap." />
@@ -4877,7 +4878,7 @@ axis.</p>
 <!--~~~~~~~~~~~~~~~~~~ 33. width 100, height 100 with overflow: scroll (73) ~~~~~~~~~~~~~~~~~~~~-->
 <p align="left" width="100%">
 <img src="./images/image033.jpg"
-  loading="lazy"
+  class="lazyload"
   style="width:10%"
   title="width: 100, height: 100 with overflow: scroll"
   alt="width: 100, height: 100 with overflow: scroll." />
@@ -4911,7 +4912,7 @@ environment. Printers may print overflowing content.</p>
 <!--~~~~~~~~~~~~~~~~~~~ 34. width 50, height 50 with overflow: visible (74) ~~~~~~~~~~~~~~~~~~~~-->
 <p align="left" width="100%">
 <img src="./images/image034.jpg"
-  loading="lazy"
+  class="lazyload"
   style="width:7%"
   title="width 50, height 50 with overflow: visible"
   alt="width 50, height 50 with overflow: visible." />
@@ -4949,7 +4950,7 @@ div {
 <!--~~~~~~~~~~~~~~ 35. 2 images; without overflow & with overflow: hidden (75) ~~~~~~~~~~~~~~~~~-->
 <p align="left" width="100%">
 <img src="./images/image035.jpg"
-  loading="lazy"
+  class="lazyload"
   style="width:65%"
   title="2 images; 1 without overflow & 1 with overflow: hidden"
   alt="2 images; 1 without overflow & 1 with overflow: hidden." />
@@ -5484,7 +5485,7 @@ massa. Fusce ac turpis quis ligula lacinia aliquet. <b>&lt;/p&gt;</b></code></pr
 <!--~~~~~~~~~~~~~~~~ 36. output from img float: left; margin-right: 1rem; (82) ~~~~~~~~~~~~~~~~~-->
 <p align="left" width="100%">
 <img src="./images/image036.jpg"
-  loading="lazy"
+  class="lazyload"
   style="width:75%"
   title="Output from img float: left; margin-right: 1rem;"
   alt="Output from img float: left; margin-right: 1rem;" />
@@ -5656,7 +5657,7 @@ The output of the following code will be;
 <!--~~~~~~~~~~~~~~~~~~~~~ 37. this is div 1 in blue and div 2 in red (85) ~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left" width="100%">
 <img src="./images/image037.jpg"
-  loading="lazy"
+  class="lazyload"
   style="width:75%"
   title="This is DIV 1 (in blue) and DIV 2 (in red)"
   alt="This is DIV 1 (in blue) and DIV 2 (in red)." />
@@ -5698,7 +5699,7 @@ p {
 <!--~~~~~~~~~~~~~~~~~~ 38. this is div 1 left blue and div 2 right red (86) ~~~~~~~~~~~~~~~~~~~~-->
 <p align="left" width="100%">
 <img src="./images/image038.jpg"
-  loading="lazy"
+  class="lazyload"
   style="width:75%"
   title="This is DIV 1 (left blue) and DIV 2 (right red)"
   alt="This is DIV 1 (left blue) and DIV 2 (right red)." />
@@ -8768,7 +8769,7 @@ div::before {
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~ 192. before, div element, after (131) ~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left" width="100%">
 <img src="./images/image192.png"
-  loading="lazy"
+  class="lazyload"
   style="width:15%"
   title="Before, div element, after"
   alt="Before, div element, after." />
@@ -9171,7 +9172,7 @@ text!<b>&lt;</b><b>/span</b><b>&gt;</b>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~ 195. this is some bolded text (137) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left" width="100%">
 <img src="./images/image195.png"
-  loading="lazy"
+  class="lazyload"
   style="width:25%"
   title="This is some bolded text"
   alt="This is some bolded text." />
@@ -9191,7 +9192,7 @@ it does not restrict the type of elements it may contain.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 196. hello world example (137) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left" width="100%">
 <img src="./images/image196.png"
-  loading="lazy"
+  class="lazyload"
   style="width:15%"
   title="Hello world! This is an example!"
   alt="Hello world! This is an example!" />
@@ -9259,7 +9260,7 @@ li {
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 198. 3 vertical rectangles (138) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left" width="100%">
 <img src="./images/image198.png"
-  loading="lazy"
+  class="lazyload"
   style="width:60%"
   title="3 vertical rectangles; First Element, Second Element, Third Element"
   alt="3 vertical rectangles; First Element, Second Element, Third Element." />
@@ -9443,7 +9444,7 @@ layout of a table.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~ 200. two tables, both set to width: 150px (143) ~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left" width="100%">
 <img src="./images/image200.jpg"
-  loading="lazy"
+  class="lazyload"
   style="width:45%"
   title="Two tables, both set to width: 150px"
   alt="Two tables, both set to width: 150px." />
@@ -9504,7 +9505,7 @@ empty-cells property:</p>
 <!--~~~~~~~~~ 201. two tables with different values set to empty-cells property (143) ~~~~~~~~~~-->
 <p align="left" width="100%">
 <img src="./images/image201.jpg"
-  loading="lazy"
+  class="lazyload"
   style="width:57%"
   title="Two tables with different values set to empty-cells property"
   alt="Two tables with different values set to empty-cells property." />
@@ -9562,7 +9563,7 @@ border-collapse property:</p>
 <!--~~~~~~~~~~~~ 202. two tables with diff values to the border-collapse property (144) ~~~~~~~~-->
 <p align="left" width="100%">
 <img src="./images/image202.jpg"
-  loading="lazy"
+  class="lazyload"
   style="width:57%"
   title="Two tables with different values set to the border-collapse property"
   alt="Two tables with different values set to the border-collapse property." />
@@ -9607,7 +9608,7 @@ border-spacing property:</p>
 <!--~~~~~~~~~~~~ 203. two tables with diff values to the border-spacing property (144) ~~~~~~~~~-->
 <p align="left" width="100%">
 <img src="./images/image203.jpg"
-  loading="lazy"
+  class="lazyload"
   style="width:60%"
   title="Two tables with diff values to the border-spacing property"
   alt="Two tables with diff values to the border-spacing property." />
@@ -9652,7 +9653,7 @@ caption-side property:</p>
 <!--~~~~~~~~~~~ 204. two tables with diff values set to caption-side property (144) ~~~~~~~~~~~~-->
 <p align="left" width="100%">
 <img src="./images/image204.jpg"
-  loading="lazy"
+  class="lazyload"
   style="width:57%"
   title="Two tables with diff values set to caption-side property"
   alt="Two tables with diff values set to caption-side property." />
@@ -9784,7 +9785,7 @@ used for custom and smooth transitions.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 205. cubic-bezier (146) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left" width="100%">
 <img src="./images/image205.jpg"
-  loading="lazy"
+  class="lazyload"
   style="width:44%"
   title="Cubic-bezier"
   alt="Cubic-bezier." />
@@ -9797,7 +9798,7 @@ target="_blank" rel="noopener noreferrer">Bézier curve</a>:</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 206. bézier curve (146) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left" width="100%">
 <img src="./images/image206.jpg"
-  loading="lazy"
+  class="lazyload"
   style="width:50%"
   title="Bézier curve"
   alt="Bézier curve." />
@@ -10336,7 +10337,7 @@ an axis rotate 15 degrees clockwise as shown in the following image:</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~ 207. Step 1 rotate, step 2 translation (154) ~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left" width="100%">
 <img src="./images/image207.jpg"
-  loading="lazy"
+  class="lazyload"
   style="width:75%"
   title="Step 1 rotate, step 2 translation"
   alt="Step 1 rotate, step 2 translation." />
@@ -10356,7 +10357,7 @@ example will be different to</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~ 208. step 1 translation, step 2 rotate (154) ~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left" width="100%">
 <img src="./images/image208.jpg"
-  loading="lazy"
+  class="lazyload"
   style="width:75%"
   title="Step 1 translation, step 2 rotate"
   alt="Step 1 translation, step 2 rotate." />
@@ -10470,7 +10471,7 @@ compass dial.</p>
 <!--~~~~~~~~~~~~~~~~~~~ 209. screenshot of element with no transform (156) ~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left" width="100%">
 <img src="./images/image209.jpg"
-  loading="lazy"
+  class="lazyload"
   style="width:17%"
   title="Screenshot of element with no transform"
   alt="Screenshot of element with no transform." />
@@ -10481,7 +10482,7 @@ compass dial.</p>
 <!--~~~~~~~~~~~~~~~~ 210. screenshot of element with only 2d transform (156) ~~~~~~~~~~~~~~~~~~~-->
 <p align="left" width="100%">
 <img src="./images/image210.jpg"
-  loading="lazy"
+  class="lazyload"
   style="width:25%"
   title="Screenshot of element with only 2D transform"
   alt="Screenshot of element with only 2D transform." />
@@ -10492,7 +10493,7 @@ compass dial.</p>
 <!--~~~~~~~~~~~~~~~~~~~ 211. screenshot of element with 3d transform (157) ~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left" width="100%">
 <img src="./images/image211.jpg"
-  loading="lazy"
+  class="lazyload"
   style="width:7%"
   title="Screenshot of element with 3D transform"
   alt="Screenshot of element with 3D transform." />
@@ -10553,7 +10554,7 @@ additional hover effect (CodePen)</a>.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~ 212. hover effect 3d with shadow (158) ~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left" width="100%">
 <img src="./images/image212.jpg"
-  loading="lazy"
+  class="lazyload"
   style="width:75%"
   title="Hover effect 3d with shadow"
   alt="Hover effect 3d with shadow." />
@@ -10777,7 +10778,7 @@ image will start to</td>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~ 214. donald duck a bit blurred (161) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left" width="100%">
 <img src="./images/image214.jpg"
-  loading="lazy"
+  class="lazyload"
   style="width:22%"
   title="Donald Duck, a bit blurred"
   alt="Donald Duck, a bit blurred." />
@@ -10803,7 +10804,7 @@ image will start to</td>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~ 215. my shadow always follows me (162) ~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left" width="100%">
 <img src="./images/image215.jpg"
-  loading="lazy"
+  class="lazyload"
   style="width:24%"
   title="My shadow always follows me"
   alt="My shadow always follows me." />
@@ -10827,7 +10828,7 @@ image will start to</td>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~ 216. donald duck, pink & blue (162) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left" width="100%">
 <img src="./images/image216.jpg"
-  loading="lazy"
+  class="lazyload"
   style="width:22%"
   title="Donald Duck in pink an light blue"
   alt="Donald Duck in pink an light blue." />
@@ -10853,7 +10854,7 @@ image will start to</td>
 <!--~~~~~~~~~~~~~~~~~~~~~~ 217. donald duck - black light - sorta (163) ~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left" width="100%">
 <img src="./images/image217.jpg"
-  loading="lazy"
+  class="lazyload"
   style="width:22%"
   title="Donald Duck - Black Light colors"
   alt="Donald Duck - Black Light colors." />
@@ -10880,7 +10881,7 @@ image will start to</td>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~ 218. turns from white to black (163) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left" width="100%">
 <img src="./images/image218.jpg"
-  loading="lazy"
+  class="lazyload"
   style="width:11%"
   title="Turns fro white to black"
   alt="Turns fro white to black." />
@@ -10897,7 +10898,7 @@ image will start to</td>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 219. cursor styling images (164) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left" width="100%">
 <img src="./images/image219.png"
-  loading="lazy"
+  class="lazyload"
   style="width:50%"
   title="Cursor styling images"
   alt="Cursor styling images." />
@@ -11090,7 +11091,7 @@ target="_blank" rel="noopener noreferrer">Demo (jsFiddle)</a>.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 220. blue rectangle (167) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left" width="100%">
 <img src="./images/image220.jpg"
-  loading="lazy"
+  class="lazyload"
   style="width:62%"
   title="Blue rectangle"
   alt="Blue rectangle." />
@@ -11136,7 +11137,7 @@ target="_blank" rel="noopener noreferrer">Demo (jsFiddle):</a></p>
 <!--~~~~~~~~~~~~~~ 221. light blue rectange within a silver/white rectangle (168) ~~~~~~~~~~~~~~-->
 <p align="left" width="100%">
 <img src="./images/image221.jpg"
-  loading="lazy"
+  class="lazyload"
   style="width:26%"
   title="Light blue rectange within a silvery white rectangle"
   alt="Light blue rectange within a silvery white rectangle." />
@@ -11169,7 +11170,7 @@ target="_blank" rel="noopener noreferrer">Demo (jsFiddle):</a></p>
 <!--~~~~~~~~~~~~~~~~~ 222. orange, gree, blue & yellow (ms shit colors) (169) ~~~~~~~~~~~~~~~~~~-->
 <p align="left" width="100%">
 <img src="./images/image222.jpg"
-  loading="lazy"
+  class="lazyload"
   style="width:61%"
   title="Orange, green, blue &amp; yellow (MS shit colors)"
   alt="Orange, green, blue &amp; yellow (MS shit colors)." />
@@ -11282,7 +11283,7 @@ wrapped around when shape-outside is used and when it is not used.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~ 223. output with shape-outside (171) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left" width="100%">
 <img src="./images/image223.jpg"
-  loading="lazy"
+  class="lazyload"
   style="width:33%"
   title="Output with shape-outside"
   alt="Output with shape-outside." />
@@ -11293,7 +11294,7 @@ wrapped around when shape-outside is used and when it is not used.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~ 224. output without shape-outside (171) ~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left" width="100%">
 <img src="./images/image224.jpg"
-  loading="lazy"
+  class="lazyload"
   style="width:33%"
   title="Output without shape-outside"
   alt="Output without shape-outside." />
@@ -11341,7 +11342,7 @@ flowing around.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~ 225. text between two red circles (172) ~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left" width="100%">
 <img src="./images/image225.jpg"
-  loading="lazy"
+  class="lazyload"
   style="width:33%"
   title="Text between 2 red circles"
   alt="Text between 2 red circles." />
@@ -11815,7 +11816,7 @@ highest specificity will apply to the element selected.</p>
 <!--~~~~~~~~~~~~~~~~~~~ 226. 3 rectangles; green, red & blue buttons (181) ~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left" width="100%">
 <img src="./images/image226.jpg"
-  loading="lazy"
+  class="lazyload"
   style="width:37%"
   title="3 rectangles in a row; green, red &amp; blue buttons"
   alt="3 rectangles in a row; green, red &amp; blue buttons." />
@@ -11945,7 +11946,7 @@ div {
 <!--~~~~~~~~~~~~~~~~~~ 227. animated screenshot of resizing in action (183) ~~~~~~~~~~~~~~~~~~~~-->
 <p align="left" width="100%">
 <img src="./images/image227.jpg"
-  loading="lazy"
+  class="lazyload"
   style="width:75%"
   title="Animated screenshot of the resizing in action"
   alt="Animated screenshot of the resizing in action." />
@@ -11962,7 +11963,7 @@ for one side:</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~ 228. example: trapezoid with borders (184) ~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left" width="100%">
 <img src="./images/image228.jpg"
-  loading="lazy"
+  class="lazyload"
   style="width:47%"
   title="Example: Trapezoid with borders"
   alt="Example: Trapezoid with borders." />
@@ -11996,7 +11997,7 @@ different colored borders.</p>
 <!--~~~~~~~~~~~~~~~~~~~~ 229. 4 colored square; black,red,blue,green (184) ~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left" width="100%">
 <img src="./images/image229.jpg"
-  loading="lazy"
+  class="lazyload"
   style="width:18%"
   title="4 colored square; black,red,blue,green"
   alt="4 colored square; black,red,blue,green." />
@@ -12011,7 +12012,7 @@ slightly to show how the triangle is being formed.</p>
 <!--~~~~~~~~~~~~~~~~~~~ 230. arrow pointing up with background shade (185) ~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left" width="100%">
 <img src="./images/image230.jpg"
-  loading="lazy"
+  class="lazyload"
   style="width:13%"
   title="Arrow pointing up with background shade"
   alt="Arrow pointing up with background shade." />
@@ -12026,7 +12027,7 @@ show a 50x50 pixel triangle.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~ 231. arrow pointing up - no shade (185) ~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left" width="100%">
 <img src="./images/image231.png"
-  loading="lazy"
+  class="lazyload"
   style="width:10%"
   title="Arrow pointing up - no shade"
   alt="Arrow pointing up - no shade." />
@@ -12046,7 +12047,7 @@ show a 50x50 pixel triangle.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~ 232. arrow pointing down - no shade (185) ~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left" width="100%">
 <img src="./images/image232.png"
-  loading="lazy"
+  class="lazyload"
   style="width:10%"
   title="Arrow pointing down - no shade"
   alt="Arrow pointing down - no shade." />
@@ -12066,7 +12067,7 @@ show a 50x50 pixel triangle.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~ 233. arrow pointing right - no shade (185) ~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left" width="100%">
 <img src="./images/image233.png"
-  loading="lazy"
+  class="lazyload"
   style="width:10%"
   title="Arrow pointing right - no shade"
   alt="Arrow pointing right - no shade." />
@@ -12086,7 +12087,7 @@ show a 50x50 pixel triangle.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~ 234. arrow pointing left - no shade (186) ~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left" width="100%">
 <img src="./images/image234.png"
-  loading="lazy"
+  class="lazyload"
   style="width:10%"
   title="Arrow pointing left - no shade"
   alt="Arrow pointing left - no shade." />
@@ -12108,7 +12109,7 @@ show a 50x50 pixel triangle.</p>
 <!--~~~~~~~~~~~~~~~~~~~~ 235. arrow pointing up/right - no shade (186) ~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left" width="100%">
 <img src="./images/image235.png"
-  loading="lazy"
+  class="lazyload"
   style="width:10%"
   title="Arrow pointing up/right - no shade"
   alt="Arrow pointing up/right - no shade." />
@@ -12127,7 +12128,7 @@ show a 50x50 pixel triangle.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~ 236. arrow pointing up/left - no shade (186) ~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left" width="100%">
 <img src="./images/image236.png"
-  loading="lazy"
+  class="lazyload"
   style="width:10%"
   title="Arrow pointing up/left - no shade"
   alt="Arrow pointing up/left - no shade." />
@@ -12146,7 +12147,7 @@ show a 50x50 pixel triangle.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~ 237. arrow pointing down/right - no shade (187) ~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left" width="100%">
 <img src="./images/image237.png"
-  loading="lazy"
+  class="lazyload"
   style="width:10%"
   title="Arrow pointing down/right - no shade"
   alt="Arrow pointing down/right - no shade." />
@@ -12165,7 +12166,7 @@ show a 50x50 pixel triangle.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~ 238. arrow pointing down/left - no shade (187) ~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left" width="100%">
 <img src="./images/image238.png"
-  loading="lazy"
+  class="lazyload"
   style="width:10%"
   title="Arrow pointing down/left - no shade"
   alt="Arrow pointing down/left - no shade." />
@@ -12190,7 +12191,7 @@ this element to 50%.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 239. circle (187) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left" width="100%">
 <img src="./images/image239.jpg"
-  loading="lazy"
+  class="lazyload"
   style="width:14%"
   title="Circle"
   alt="Circle." />
@@ -12217,7 +12218,7 @@ width and height.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~ 240. Ellipse - squished circle (188) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left" width="100%">
 <img src="./images/image240.jpg"
-  loading="lazy"
+  class="lazyload"
   style="width:10%"
   title="Ellipse - squished circle"
   alt="Ellipse - squished circle." />
@@ -12254,7 +12255,7 @@ pseudo-element. The bottom is rotated 20°, the top square is rotated
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 241. 8 point burst (188) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left" width="100%">
 <img src="./images/image241.png"
-  loading="lazy"
+  class="lazyload"
   style="width:7%"
   title="8 Point Burst"
   alt="8 Point Burst." />
@@ -12292,7 +12293,7 @@ pseudo-elements. The bottom is rotated 0°, the next square is rotated
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 242. 12 point burst (188) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left" width="100%">
 <img src="./images/image242.png"
-  loading="lazy"
+  class="lazyload"
   style="width:7%"
   title="12 Point Burst"
   alt="12 Point Burst." />
@@ -12333,7 +12334,7 @@ pixels each.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 243. square (190) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left" width="100%">
 <img src="./images/image243.png"
-  loading="lazy"
+  class="lazyload"
   style="width:10%"
   title="Square"
   alt="Square" />
@@ -12356,7 +12357,7 @@ pixels each.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 244. 3d red cube (190) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left" width="100%">
 <img src="./images/image244.jpg"
-  loading="lazy"
+  class="lazyload"
   style="width:20%"
   title="3d red cube"
   alt="3d red cube." />
@@ -12408,7 +12409,7 @@ transformation methods skew() and rotate() on pseudo elements.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 245. 3d red pyramid (191) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left" width="100%">
 <img src="./images/image245.jpg"
-  loading="lazy"
+  class="lazyload"
   style="width:20%"
   title="3d red pyramid"
   alt="3d red pyramid." />
@@ -12471,7 +12472,7 @@ laborum<b>&lt;/div&gt;</b>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~ 246. example; stack overflow (193) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left" width="100%">
 <img src="./images/image246.jpg"
-  loading="lazy"
+  class="lazyload"
   style="width:75%"
   title="Example: stack overflow"
   alt="Example: stack overflow." />
@@ -12506,7 +12507,7 @@ culpa qui officia deserunt mollit anim id est laborum
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~ 247. example: stack overflow (194) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left" width="100%">
 <img src="./images/image247.jpg"
-  loading="lazy"
+  class="lazyload"
   style="width:60%"
   title="Example: Stack Overflow"
   alt="Example: Stack Overflow." />
@@ -12703,7 +12704,7 @@ that can be extracted from it.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~ 248. example: image sprite sheet (198) ~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left" width="100%">
 <img src="./images/image248.jpg"
-  loading="lazy"
+  class="lazyload"
   style="width:17%"
   title="Example: Image sprite sheet"
   alt="Example: Image sprite sheet." />
@@ -12924,7 +12925,7 @@ circle(), polygon() or ellipse().</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 249. example; clip-path (200) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left" width="100%">
 <img src="./images/image249.jpg"
-  loading="lazy"
+  class="lazyload"
   style="width:33%"
   title="Example: clip-path"
   alt="Example: clip-path." />
@@ -12951,7 +12952,7 @@ will be opaque.</p>
 <!--~~~~~ 250. black and white luminance mask; opaque to transparent (right to left) (200) ~~~~~-->
 <p align="left" width="100%">
 <img src="./images/image250.jpg"
-  loading="lazy"
+  class="lazyload"
   style="width:33%"
   title="Black and white luminance mask; opaque to transparent (right to left)"
   alt="Black and white luminance mask; opaque to transparent (right to left)." />
@@ -12998,7 +12999,7 @@ transparent.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~ 251. output without the mask (201) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left" width="100%">
 <img src="./images/image251.jpg"
-  loading="lazy"
+  class="lazyload"
   style="width:20%"
   title="Output without the mask"
   alt="Output without the mask." />
@@ -13009,7 +13010,7 @@ transparent.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 252. output with the mask (201) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left" width="100%">
 <img src="./images/image252.jpg"
-  loading="lazy"
+  class="lazyload"
   style="width:20%"
   title="Output with the mask"
   alt="Output with the mask." />
@@ -13053,7 +13054,7 @@ rel="noopener noreferrer">View Demo (jsFiddle)</a>.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 253. teal colored circle (202) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left" width="100%">
 <img src="./images/image253.jpg"
-  loading="lazy"
+  class="lazyload"
   style="width:20%"
   title="Teal-colored circle"
   alt="Teal-colored circle." />
@@ -13091,7 +13092,7 @@ View Demo (jsFiddle)</a>.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~ 254. teal arrow pointing right (203) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left" width="100%">
 <img src="./images/image254.jpg"
-  loading="lazy"
+  class="lazyload"
   style="width:20%"
   title="Teal arrow pointing right"
   alt="Teal arrow pointing right." />
@@ -13119,7 +13120,7 @@ effect of a circle being cut out from the center of an image.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 255. image without mask (203) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left" width="100%">
 <img src="./images/image255.jpg"
-  loading="lazy"
+  class="lazyload"
   style="width:20%"
   title="Image without mask"
   alt="Image without mask." />
@@ -13130,7 +13131,7 @@ effect of a circle being cut out from the center of an image.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 256. image with mask (204) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left" width="100%">
 <img src="./images/image256.jpg"
-  loading="lazy"
+  class="lazyload"
   style="width:20%"
   title="Image with mask"
   alt="Image with mask." />
@@ -13165,7 +13166,7 @@ at the bottom of the image.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~ 257. image without the mask (204) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left" width="100%">
 <img src="./images/image257.jpg"
-  loading="lazy"
+  class="lazyload"
   style="width:40%"
   title="Image without the mask"
   alt="Image without the mask." />
@@ -13176,7 +13177,7 @@ at the bottom of the image.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 258. image with mask (205) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left" width="100%">
 <img src="./images/image258.jpg"
-  loading="lazy"
+  class="lazyload"
   style="width:40%"
   title="Image with mask"
   alt="Image with mask." />
@@ -13288,7 +13289,7 @@ Model.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~ 259. dom, cssom and render tree (207) ~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left" width="100%">
 <img src="./images/image259.png"
-  loading="lazy"
+  class="lazyload"
   style="width:75%"
   title="Document Object Model (DOM), CSS Object Model (CSS0M) and Render Tree"
   alt="Document Object Model (DOM), CSS Object Model (CSS0M) and Render Tree." />
@@ -13395,7 +13396,7 @@ of stacking contexts is organized as follows:</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~ 260. example; positioning and z-index (209) ~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left" width="100%">
 <img src="./images/image260.png"
-  loading="lazy"
+  class="lazyload"
   style="width:60%"
   title="Example; positioning and z-index"
   alt="Example; positioning and z-index." />
@@ -13521,7 +13522,7 @@ h1 {
 <!--~~~~~~~~~~~~~~~~~ 260. example; division elements #1-6 with z-index (211) ~~~~~~~~~~~~~~~~~~-->
 <p align="left" width="100%">
 <img src="./images/image260.jpg"
-  loading="lazy"
+  class="lazyload"
   style="width:60%"
   title="Example; division elements #1-6 with z-index"
   alt="Example; division elements #1-6 with z-index." />
@@ -13554,7 +13555,7 @@ target="_blank" rel="noopener noreferrer">Demo (Understanding z-index)</a>.</p>
 <!--~~~~~ 261. example; using the overflow property with a value different to visible (211) ~~~~-->
 <p align="left" width="100%">
 <img src="./images/image261.jpg"
-  loading="lazy"
+  class="lazyload"
   style="width:60%"
   title="Example; Using th overflow property with a value different to visible"
   alt="Example; Using th overflow property with a value different to visible." />
@@ -13776,7 +13777,7 @@ or video, Object-fit accepts the following five values:</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 263. original and object-fit: fill (217) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left" width="100%">
 <img src="./images/image263.png"
-  loading="lazy"
+  class="lazyload"
   style="width:60%"
   title="Original image and object-fit: fill"
   alt="Original image and object-fit: fill." />
@@ -13789,7 +13790,7 @@ image's original aspect ratio.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 265. original and object-fit: contain (217) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left" width="100%">
 <img src="./images/image265.png"
-  loading="lazy"
+  class="lazyload"
   style="width:60%"
   title="Original image and object-fit: contain"
   alt="Original image and object-fit: contain." />
@@ -13803,7 +13804,7 @@ the image's aspect ratio.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 266. original and object-fit: cover (217) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left" width="100%">
 <img src="./images/image266.png"
-  loading="lazy"
+  class="lazyload"
   style="width:60%"
   title="Original image and object-fit: cover"
   alt="Original image and object-fit: cover." />
@@ -13818,7 +13819,7 @@ preserved, but the image is cropped to the dimensions of the box.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 267. original image and object-fit: none (xxx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left" width="100%">
 <img src="./images/image267.png"
-  loading="lazy"
+  class="lazyload"
   style="width:70%"
   title="Original image and object-fit: none"
   alt="Original image and object-fit: none." />
@@ -13836,7 +13837,7 @@ whichever option results in a smaller image size.</p>
 <!--~~~~~~~~~~~~~~~~~~~ 268. original image and object-fit: scale-down (219) ~~~~~~~~~~~~~~~~~~~-->
 <p align="left" width="100%">
 <img src="./images/image268.png"
-  loading="lazy"
+  class="lazyload"
   style="width:70%"
   title="Original image and object-fit scale-down"
   alt="Original image and object-fit scale-down." />
@@ -14220,7 +14221,7 @@ for rendering 9.8ms for painting.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~ 267. test took 11.7ms to render (230) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left" width="100%">
 <img src="./images/image267.jpg"
-  loading="lazy"
+  class="lazyload"
   style="width:75%"
   title="Demo test took 11.7ms to render and 9.8ms to paint"
   alt="Demo test took 11.7ms to render and 9.8ms to paint." />
@@ -14248,7 +14249,7 @@ for rendering 9.8ms for painting.</p>
 <!--~~~~~~~~~~~~~~~~~~~~ 269. same as last but took 1.3ms to render (230) ~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left" width="100%">
 <img src="./images/image269.png"
-  loading="lazy"
+  class="lazyload"
   style="width:60%"
   title="Same demo but this one took 1.3ms to render and 2.0ms to paint"
   alt="Same demo but this one took 1.3ms to render and 2.0ms to paint." />
@@ -14272,3 +14273,4 @@ same animation, took <b>1.3ms</b> for rendering, <b>2.0ms</b> for painting.</p>
 <!-- 7/7/2024 Sun 8:52pm -->
 <!-- 7/8/2024 Mon 8:50am -->
 <!-- 7/14/2024 Sun 12:22am -->
+<!-- 7/18/2024 Thu 4:48pm -->
