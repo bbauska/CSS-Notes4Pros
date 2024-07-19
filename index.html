@@ -1831,33 +1831,27 @@ RGB and RGBa.
 HSL stands for hue, saturation, and lightness, and is also often called
 HLS:
 </p>
+
 <ul>
-<li>
-Hue is a degree on the color wheel (from 0 to 360).
-</li>
-<li>
-Saturation is a percentage between 0% and 100%.
-</li>
-<li>
-Lightness is also a percentage between 0% and 100%.
-</li>
+  <li>Hue is a degree on the color wheel (from 0 to 360).</li>
+  <li>Saturation is a percentage between 0% and 100%.</li>
+  <li>Lightness is also a percentage between 0% and 100%.</li>
 </ul>
-<p>
-HSLa allows you to add an additional alpha parameter between 0.0 and 1.0
-to define opacity.
-</p>
+
+<p>HSLa allows you to add an additional alpha parameter between 0.0 and 1.0
+to define opacity.</p>
+
 <pre><code>li a {
 <b>background-color</b>: hsl(120, 100&percnt;, 50&percnt;); /* green */
 }
 #p1 {
 <b>background-color</b>: hsla(120, 100&percnt;, 50&percnt;, .3); /* green with 30% opacity */
 }</code></pre>
-<h4>
-Interaction with background-image
-</h4>
-<p>
-The following statements are all equivalent:
-</p>
+
+<h4>Interaction with background-image</h4>
+
+<p>The following statements are all equivalent:</p>
+
 <pre><code>body {
   <b>background:</b> red;
   <b>background-image:</b> url (partiallytransparentimage.png);
@@ -1873,51 +1867,33 @@ body {
 body {
   <b>background:</b> red url (partiallytransparentimage.png);
 }</code></pre>
+
 <!-- page 24 -->
-<p>
-They will all lead to the red color being shown underneath the image,
+<p>They will all lead to the red color being shown underneath the image,
 where the parts of the image are transparent, or the image is not
-showing (perhaps as a result of background-repeat).
-</p>
-<p>
-Note that the following is not equivalent:
-</p>
+showing (perhaps as a result of background-repeat).</p>
+<p>Note that the following is not equivalent:</p>
+
 <pre><code>body {
   <b>background-image</b>: url(partiallytransparentimage.png);
   <b>background</b>: #ff0000;  /* red */
 }</code></pre>
-<p>
-Here, the value of background overrides your background-image.
-</p>
-<p>
-For more info on the background property, see Background Shorthand.
-</p>
+
+<p>Here, the value of background overrides your background-image.</p>
+<p>For more info on the background property, see Background Shorthand.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch5-2">
-Section 5.2: Background Gradients
-</h3>
+<h3 id="ch5-2">Section 5.2: Background Gradients</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>
-Gradients are new image types, added in CSS3. As an image, gradients are
-set with the background-image property, or the background shorthand.
-</p>
-<p>
-There are two types of gradient functions, linear and radial. Each type
-has a non-repeating variant and a repeating variant:
-</p>
+<p>Gradients are new image types, added in CSS3. As an image, gradients are
+set with the background-image property, or the background shorthand.</p>
+<p>There are two types of gradient functions, linear and radial. Each type
+has a non-repeating variant and a repeating variant:</p>
+
 <ul>
-<li>
-linear-gradient()
-</li>
-<li>
-repeating-linear-gradient()
-</li>
-<li>
-radial-gradient()
-</li>
-<li>
-repeating-radial-gradient()
-</li>
+  <li>linear-gradient()</li>
+  <li>repeating-linear-gradient()</li>
+  <li>radial-gradient()</li>
+  <li>repeating-radial-gradient()</li>
 </ul>
 
 <h4>linear-gradient()</h4>
@@ -3229,19 +3205,13 @@ HTML:
 </h4>
 <pre><code><b>&lt;div</b> class=&quot;vertical&quot;<b>&gt;</b>Vertical aligned text!<b>&lt;/div&gt;</b></code></pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch6-9">
-Section 6.9: Centering in relation to another item
-</h3>
+<h3 id="ch6-9">Section 6.9: Centering in relation to another item</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>
-We will see how to center content based on the height of a near element.
-</p>
-<p>
-Compatibility: IE8+, all other modern browsers.
-</p>
-<h4>
-HTML:
-</h4>
+<p>We will see how to center content based on the height of a near element.</p>
+<p>Compatibility: IE8+, all other modern browsers.</p>
+
+<h4>HTML:</h4>
+
 <pre><code><b>&lt;div</b> class=&quot;content&quot;<b>&gt;</b>
   <b>&lt;div</b> class=&quot;position-container&quot;<b>&gt;</b>
     <b>&lt;div</b> class=&quot;thumb&quot;<b>&gt;</b>
@@ -3255,9 +3225,9 @@ HTML:
     <b>&lt;/div&gt;</b>
   <b>&lt;/div&gt;</b>
 <b>&lt;/div&gt;</b></code></pre>
-<h4>
-CSS:
-</h4>
+
+<h4>CSS:</h4>
+
 <pre><code>.content &ast; {
   <b>box-sizing</b>: border-box;
 }
@@ -3294,21 +3264,15 @@ containers:</p>
     100%</b>, but it is not necessary if you have correct proportions.</li>
 </ul>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch6-10">
-Section 6.10: Ghost element technique (Michał Czernow's hack)
-</h3>
+<h3 id="ch6-10">Section 6.10: Ghost element technique (Michał Czernow's hack)</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>
-This technique works even when the container's dimensions are unknown.
-</p>
-<p>
-Set up a "ghost" element inside the container to be centered that is
+<p>This technique works even when the container's dimensions are unknown.</p>
+<p>Set up a "ghost" element inside the container to be centered that is
 100% height, then use <b>vertical-align</b>: middle on both that and the
-element to be centered.
-</p>
-<h4>
-CSS:
-</h4>
+element to be centered.</p>
+
+<h4>CSS:</h4>
+
 <pre><code>/* This parent can be any width and height */
 .block {
   <b>text-align</b>: center;
@@ -3337,63 +3301,47 @@ or by zeroing font-size in .parent and resetting it back
   <b>width</b>: 300px;
   <b>white-space</b>: normal; /* Resetting inherited nowrap behavior */
 }</code></pre>
-<h4>
-HTML:
-</h4>
+
+<h4>HTML:</h4>
+
 <pre><code><b>&lt;div</b> class=&quot;block&quot;<b>&gt;</b>
   <b>div</b> class=&quot;centered&quot;<b>&gt;&lt;/div&gt;</b>
 <b>&lt;/div&gt;</b></code></pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="6-11">
-Section 6.11: Centering vertically and horizontally without worrying
-about height or width
-</h3>
+<h3 id="6-11">Section 6.11: Centering vertically and horizontally without worrying
+about height or width</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>
 The following technique allows you to add your content to an HTML
 element and center it both horizontally and vertically <b>without
 worrying about its height or width</b>.
 </p>
-<h4>
-The outer container
-</h4>
+<h4>The outer container</h4>
+
 <ul>
-<li>
-should have <b>display</b>: table;
-</li>
+  <li>should have <b>display</b>: table;</li>
 </ul>
-<h4>
-The inner container
-</h4>
+
+<h4>The inner container</h4>
+
 <ul>
-<li>
-should have <b>display</b>: table-cell;
-</li>
-<li>
-should have <b>vertical-align</b>: middle;
-</li>
-<li>
-should have <b>text-align</b>: center;
-</li>
+  <li>should have <b>display</b>: table-cell;</li>
+  <li>should have <b>vertical-align</b>: middle;</li>
+  <li>should have <b>text-align</b>: center;</li>
 </ul>
-<h4>
-The content box:
-</h4>
+
+<h4>The content box:</h4>
+
 <ul>
-<li>
-should have <b>display</b>: inline-block;
-</li>
-<li>
-should re-adjust the horizontal text-alignment to eg. <b>text-align</b>:
-left; or <b>text-align</b>: right;, unless you want text to be centered
-</li>
+  <li>should have <b>display</b>: inline-block;</li>
+  <li>should re-adjust the horizontal text-alignment to eg. <b>text-align</b>:
+    left; or <b>text-align</b>: right;, unless you want text to be centered</li>
 </ul>
-<h4>
-Demo:
-</h4>
-<h4>
-HTML:
-</h4>
+
+<h4>Demo:</h4>
+
+<h4>HTML:</h4>
+
 <pre><code><b>&lt;div</b> class=&quot;outer-container&quot;<b>&gt;</b>
   <b>&lt;div</b> class=&quot;inner-container&quot;<b>&gt;</b>
     <b>&lt;div</b> class=&quot;centered-content&quot;<b>&gt;</b>
@@ -3401,9 +3349,9 @@ HTML:
     <b>&lt;/div&gt;</b>
   <b>&lt;/div&gt;</b>
 <b>&lt;/div&gt;</b></code></pre>
-<h4>
-CSS:
-</h4>
+
+<h4>CSS:</h4>
+
 <pre><code>body {
   <b>margin</b>: 0;
 }
@@ -6297,8 +6245,7 @@ predictably when the page layout must accommodate different, unknown
 screen sizes. A flex container expands items to fill available space and
 shrinks them to prevent overflow.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch16-1">Section 16.1: Dynamic Vertical and Horizontal Centering (alignitems, 
-justify-content)</h3>
+<h3 id="ch16-1">Section 16.1: Dynamic Vertical and Horizontal Centering (alignitems, justify-content)</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p><b>Simple Example (centering a single element)</b></p>
 
@@ -13403,7 +13350,7 @@ of stacking contexts is organized as follows:</p>
 </p>
 
 <ul>
-  <li>Root<ul>
+  <li>Root</li>
   <li>DIV #1</li>
   <li>DIV #2</li>
   <li>DIV #3</li>
