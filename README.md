@@ -1,12 +1,10 @@
 ---
 title: |
   CSS Notes for Professionals
+  CSS ® CSS-Notes4Pros.bauska.org
   by web@petercv.com, PDF https://goalkicker.com/CSSBook
 author: "bbauska"
-date last editted: "7/10/2024 Thu 1+pm"
-output: 
-  markdown:
-    with some style
+date last editted: "7/28/2024 Sun 3+pm"
 ---
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
